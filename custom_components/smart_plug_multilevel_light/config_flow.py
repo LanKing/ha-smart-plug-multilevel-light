@@ -1,0 +1,368 @@
+from __future__ import annotations
+
+from typing import Any
+
+import voluptuous as vol
+
+from homeassistant import config_entries
+from homeassistant.config_entries import ConfigFlowResult, OptionsFlow
+from homeassistant.const import ATTR_DEVICE_CLASS
+from homeassistant.core import callback
+from homeassistant.helpers import entity_registry as er, selector
+
+from .const import (
+    CONF_CURRENT_SENSOR,
+    CONF_MODES,
+    CONF_OUTLET,
+    CONF_POWER_CYCLE_DELAY,
+    CONF_POWER_SENSOR,
+    CONF_POWER_THRESHOLD,
+    DOMAIN,
+    MODE_CURRENT,
+    MODE_NAME,
+)
+
+
+def _device_class(hass, entity_id: str) -> str | None:
+    state = hass.states.get(entity_id)
+    if state is None:
+        return None
+    value = state.attributes.get(ATTR_DEVICE_CLASS)
+    return str(value) if value is not None else None
+
+
+def _device_id_for_entity(hass, entity_id: str) -> str | None:
+    registry = er.async_get(hass)
+    entry = registry.async_get(entity_id)
+    return entry.device_id if entry else None
+
+
+def _sibling_entities(hass, entity_id: str) -> list[str]:
+    """Return enabled entities belonging to the same HA device as entity_id."""
+    device_id = _device_id_for_entity(hass, entity_id)
+    if not device_id:
+        return []
+
+    registry = er.async_get(hass)
+    return [
+        item.entity_id
+        for item in er.async_entries_for_device(
+            registry, device_id, include_disabled_entities=False
+        )
+    ]
+
+
+def _metering_entities(hass, outlet: str) -> tuple[list[str], list[str]]:
+    siblings = _sibling_entities(hass, outlet)
+    powers = [
+        entity_id
+        for entity_id in siblings
+        if entity_id.startswith("sensor.")
+        and _device_class(hass, entity_id) == "power"
+    ]
+    currents = [
+        entity_id
+        for entity_id in siblings
+        if entity_id.startswith("sensor.")
+        and _device_class(hass, entity_id) == "current"
+    ]
+    return powers, currents
+
+
+def _candidate_outlets(hass) -> list[str]:
+    """Only switches whose device also exposes both power and current sensors."""
+    registry = er.async_get(hass)
+    result: list[str] = []
+
+    for item in registry.entities.values():
+        if not item.entity_id.startswith("switch.") or item.disabled:
+            continue
+        powers, currents = _metering_entities(hass, item.entity_id)
+        if powers and currents:
+            result.append(item.entity_id)
+
+    return sorted(result)
+
+
+def _outlet_schema(hass, default: str | None = None) -> vol.Schema:
+    candidates = _candidate_outlets(hass)
+    entity_cfg: dict[str, Any] = {"domain": "switch"}
+    if candidates:
+        entity_cfg["include_entities"] = candidates
+
+    key = vol.Required(CONF_OUTLET)
+    if default:
+        key = vol.Required(CONF_OUTLET, default=default)
+
+    return vol.Schema({key: selector.selector({"entity": entity_cfg})})
+
+
+def _current_value(hass, entity_id: str | None) -> float | None:
+    """Return the current sensor value for display in the config UI."""
+    if not entity_id:
+        return None
+    state = hass.states.get(entity_id)
+    if state is None or state.state in {"unknown", "unavailable"}:
+        return None
+    try:
+        return float(state.state)
+    except (TypeError, ValueError):
+        return None
+
+
+def _modes_selector(current_value: float | None = None):
+    current_description = (
+        f"Current measured current: {current_value:g} A"
+        if current_value is not None
+        else "Current measured current is unavailable"
+    )
+
+    return selector.selector(
+        {
+            "object": {
+                "multiple": True,
+                "label_field": MODE_NAME,
+                "description_field": MODE_CURRENT,
+                "fields": {
+                    MODE_NAME: {
+                        "label": "Mode name",
+                        "required": True,
+                        "selector": {"text": {}},
+                    },
+                    MODE_CURRENT: {
+                        "label": f"Current threshold — {current_description}",
+                        "required": True,
+                        "selector": {
+                            "number": {
+                                "min": 0,
+                                "max": 100,
+                                "step": 0.001,
+                                "unit_of_measurement": "A",
+                                "mode": "box",
+                            }
+                        },
+                    },
+                },
+            }
+        }
+    )
+
+
+def _settings_schema(
+    *,
+    hass,
+    power_entities: list[str],
+    current_entities: list[str],
+    defaults: dict[str, Any] | None = None,
+) -> vol.Schema:
+    defaults = defaults or {}
+
+    def entity_field(name: str, entities: list[str]):
+        kwargs: dict[str, Any] = {"domain": "sensor"}
+        if entities:
+            kwargs["include_entities"] = entities
+        value = defaults.get(name)
+        key = vol.Required(name, default=value) if value else vol.Required(name)
+        return key, selector.selector({"entity": kwargs})
+
+    power_key, power_selector = entity_field(CONF_POWER_SENSOR, power_entities)
+    current_key, current_selector = entity_field(CONF_CURRENT_SENSOR, current_entities)
+
+    modes_default = defaults.get(CONF_MODES, [])
+    selected_current_sensor = defaults.get(CONF_CURRENT_SENSOR)
+    measured_current = _current_value(hass, selected_current_sensor)
+
+    return vol.Schema(
+        {
+            vol.Required(
+                "name", default=defaults.get("name", "Светильник")
+            ): selector.TextSelector(),
+            power_key: power_selector,
+            current_key: current_selector,
+            vol.Required(
+                CONF_POWER_THRESHOLD,
+                default=defaults.get(CONF_POWER_THRESHOLD, 0.0),
+            ): selector.NumberSelector(
+                selector.NumberSelectorConfig(
+                    min=0,
+                    max=100,
+                    step=0.1,
+                    mode=selector.NumberSelectorMode.BOX,
+                )
+            ),
+            vol.Required(
+                CONF_POWER_CYCLE_DELAY,
+                default=defaults.get(CONF_POWER_CYCLE_DELAY, 0.7),
+            ): selector.NumberSelector(
+                selector.NumberSelectorConfig(
+                    min=0.1,
+                    max=10,
+                    step=0.1,
+                    unit_of_measurement="s",
+                    mode=selector.NumberSelectorMode.BOX,
+                )
+            ),
+            vol.Required(CONF_MODES, default=modes_default): _modes_selector(
+                measured_current
+            ),
+        }
+    )
+
+
+def _normalize_modes(raw_modes: Any) -> list[dict[str, Any]]:
+    """Validate and normalize the editable row list."""
+    if not isinstance(raw_modes, list):
+        return []
+
+    result: list[dict[str, Any]] = []
+    for row in raw_modes:
+        if not isinstance(row, dict):
+            continue
+        name = str(row.get(MODE_NAME, "")).strip()
+        if not name:
+            continue
+        try:
+            current = float(row[MODE_CURRENT])
+        except (KeyError, TypeError, ValueError):
+            continue
+        result.append({MODE_NAME: name, MODE_CURRENT: current})
+
+    return sorted(result, key=lambda mode: mode[MODE_CURRENT])
+
+
+class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+    """Handle a config flow for Smart Plug Multi-Level Light."""
+
+    VERSION = 2
+
+    def __init__(self) -> None:
+        self._outlet: str | None = None
+
+    async def async_step_user(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        if user_input is not None:
+            self._outlet = str(user_input[CONF_OUTLET])
+            return await self.async_step_settings()
+
+        return self.async_show_form(
+            step_id="user", data_schema=_outlet_schema(self.hass)
+        )
+
+    async def async_step_settings(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        assert self._outlet is not None
+        powers, currents = _metering_entities(self.hass, self._outlet)
+
+        if not powers or not currents:
+            return self.async_abort(reason="metering_entities_missing")
+
+        defaults: dict[str, Any] = {
+            CONF_POWER_SENSOR: powers[0] if len(powers) == 1 else None,
+            CONF_CURRENT_SENSOR: currents[0] if len(currents) == 1 else None,
+            CONF_MODES: [],
+        }
+
+        if user_input is not None:
+            modes = _normalize_modes(user_input.get(CONF_MODES))
+            errors: dict[str, str] = {}
+            if not modes:
+                errors[CONF_MODES] = "at_least_one_mode"
+            if errors:
+                defaults.update(user_input)
+                return self.async_show_form(
+                    step_id="settings",
+                    data_schema=_settings_schema(
+                        hass=self.hass,
+                        power_entities=powers,
+                        current_entities=currents,
+                        defaults=defaults,
+                    ),
+                    errors=errors,
+                )
+
+            title = str(user_input.pop("name"))
+            data = {
+                CONF_OUTLET: self._outlet,
+                **user_input,
+                CONF_MODES: modes,
+            }
+            return self.async_create_entry(title=title, data=data)
+
+        return self.async_show_form(
+            step_id="settings",
+            data_schema=_settings_schema(
+                hass=self.hass,
+                power_entities=powers,
+                current_entities=currents,
+                defaults=defaults,
+            ),
+        )
+
+    @staticmethod
+    @callback
+    def async_get_options_flow(
+        config_entry: config_entries.ConfigEntry,
+    ) -> OptionsFlow:
+        return SmartPlugMultiLevelLightOptionsFlow()
+
+
+class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
+    """Edit all mutable settings and the complete mode table on one page."""
+
+    async def async_step_init(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        current = {**self.config_entry.data, **self.config_entry.options}
+        outlet = str(current[CONF_OUTLET])
+        powers, currents = _metering_entities(self.hass, outlet)
+
+        configured_power = current.get(CONF_POWER_SENSOR)
+        configured_current = current.get(CONF_CURRENT_SENSOR)
+        if configured_power and configured_power not in powers:
+            powers.append(configured_power)
+        if configured_current and configured_current not in currents:
+            currents.append(configured_current)
+
+        defaults = {
+            "name": self.config_entry.title,
+            CONF_POWER_SENSOR: configured_power,
+            CONF_CURRENT_SENSOR: configured_current,
+            CONF_POWER_THRESHOLD: current.get(CONF_POWER_THRESHOLD, 0.0),
+            CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0.7),
+            CONF_MODES: current.get(CONF_MODES, []),
+        }
+
+        if user_input is not None:
+            modes = _normalize_modes(user_input.get(CONF_MODES))
+            if not modes:
+                defaults.update(user_input)
+                return self.async_show_form(
+                    step_id="init",
+                    data_schema=_settings_schema(
+                        hass=self.hass,
+                        power_entities=powers,
+                        current_entities=currents,
+                        defaults=defaults,
+                    ),
+                    errors={CONF_MODES: "at_least_one_mode"},
+                )
+
+            title = str(user_input.pop("name"))
+            self.hass.config_entries.async_update_entry(
+                self.config_entry, title=title
+            )
+            return self.async_create_entry(
+                data={**user_input, CONF_MODES: modes}
+            )
+
+        return self.async_show_form(
+            step_id="init",
+            data_schema=_settings_schema(
+                hass=self.hass,
+                power_entities=powers,
+                current_entities=currents,
+                defaults=defaults,
+            ),
+        )
