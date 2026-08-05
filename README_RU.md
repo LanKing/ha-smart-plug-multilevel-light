@@ -17,27 +17,55 @@ Helper для Home Assistant, который представляет физич
 
 ## Установка через HACS
 
-1. Открой **HACS → Integrations**.
-2. В меню выбери **Custom repositories**.
-3. Добавь `https://github.com/LanKing/ha-smart-plug-multilevel-light`.
-4. Категория: **Integration**.
-5. Установи **Smart Plug Multi-Level Light**.
-6. Перезапусти Home Assistant.
-7. Открой **Settings → Devices & services → Helpers → Create helper**.
-8. Выбери **Smart Plug Multi-Level Light** и настрой сущности и пороги.
+1. Откройте **HACS → Integrations**.
+2. В меню выберите **Custom repositories**.
+3. Добавьте `https://github.com/LanKing/ha-smart-plug-multilevel-light`.
+4. Выберите категорию **Integration**.
+5. Установите **Smart Plug Multi-Level Light**.
+6. Полностью перезапустите Home Assistant.
+7. Откройте **Settings → Devices & services → Helpers → Create helper**.
+8. Выберите **Smart Plug Multi-Level Light** и настройте сущности и пороги.
+
+## Установка без HACS
+
+1. Скачайте архив репозитория через **Code → Download ZIP** или скачайте последнюю версию из GitHub Releases.
+2. Распакуйте архив.
+3. Скопируйте папку:
+
+   ```text
+   custom_components/smart_plug_multilevel_light
+   ```
+
+   в каталог конфигурации Home Assistant:
+
+   ```text
+   /config/custom_components/smart_plug_multilevel_light
+   ```
+
+   В результате файл `manifest.json` должен находиться по адресу:
+
+   ```text
+   /config/custom_components/smart_plug_multilevel_light/manifest.json
+   ```
+
+4. Полностью перезапустите Home Assistant.
+5. Откройте **Settings → Devices & services → Helpers → Create helper**.
+6. Выберите **Smart Plug Multi-Level Light** и настройте сущности и пороги.
+
+При ручном обновлении замените содержимое папки `smart_plug_multilevel_light` файлами новой версии и снова полностью перезапустите Home Assistant. Папку с настройками Home Assistant удалять не требуется: параметры helper хранятся отдельно от файлов интеграции.
 
 ## Lovelace-карточка
 
 После загрузки первого helper интеграция сама раздаёт и регистрирует карточку. При стандартном режиме хранения ресурсов Dashboard вручную добавлять ничего не нужно.
 
-Добавь карточку:
+Добавьте карточку:
 
 ```yaml
 type: custom:smart-plug-multilevel-light-card
 entity: light.floor_lamp
 ```
 
-При явном использовании YAML-режима ресурсов добавь ресурс вручную:
+При явном использовании YAML-режима ресурсов добавьте ресурс вручную:
 
 ```yaml
 lovelace:
@@ -60,7 +88,9 @@ lovelace:
 
 ## Обновление
 
-Обнови интеграцию через HACS и перезапусти Home Assistant. URL карточки обновится автоматически, чтобы сбросить кеш браузера.
+Обновите интеграцию через HACS и полностью перезапустите Home Assistant. URL карточки обновится автоматически, чтобы сбросить кеш браузера.
+
+При ручной установке замените файлы интеграции новой версией и полностью перезапустите Home Assistant.
 
 ## Лицензия
 
