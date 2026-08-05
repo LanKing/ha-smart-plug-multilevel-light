@@ -27,9 +27,37 @@ The integration determines whether the lamp is on from power consumption and ide
 
 4. Select category **Integration**.
 5. Install **Smart Plug Multi-Level Light**.
-6. Restart Home Assistant.
+6. Fully restart Home Assistant.
 7. Open **Settings → Devices & services → Helpers → Create helper**.
 8. Select **Smart Plug Multi-Level Light** and configure the entities and thresholds.
+
+## Manual installation without HACS
+
+1. Download the repository archive using **Code → Download ZIP**, or download the latest package from GitHub Releases.
+2. Extract the archive.
+3. Copy this folder:
+
+   ```text
+   custom_components/smart_plug_multilevel_light
+   ```
+
+   into the Home Assistant configuration directory:
+
+   ```text
+   /config/custom_components/smart_plug_multilevel_light
+   ```
+
+   The final manifest path must be:
+
+   ```text
+   /config/custom_components/smart_plug_multilevel_light/manifest.json
+   ```
+
+4. Fully restart Home Assistant.
+5. Open **Settings → Devices & services → Helpers → Create helper**.
+6. Select **Smart Plug Multi-Level Light** and configure the entities and thresholds.
+
+For a manual update, replace the contents of the `smart_plug_multilevel_light` folder with the files from the new version and fully restart Home Assistant. Helper settings are stored separately, so the existing helper does not need to be removed.
 
 ## Lovelace card
 
@@ -76,7 +104,9 @@ A measured current of `0.028 A` is classified as **Low**.
 
 ## Updating
 
-Update through HACS and restart Home Assistant. The integration updates the registered card resource URL automatically to invalidate the browser cache.
+Update through HACS and fully restart Home Assistant. The integration updates the registered card resource URL automatically to invalidate the browser cache.
+
+For a manual installation, replace the integration files with the new version and fully restart Home Assistant.
 
 ## License
 
