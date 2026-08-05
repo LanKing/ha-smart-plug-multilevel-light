@@ -12,7 +12,7 @@ The integration determines whether the lamp is on from power consumption and ide
 - Exposes the mode as a percentage based on its position in the configured mode list.
 - Automatically sorts modes by current threshold.
 - Restarts a powered but physically switched-off lamp by cycling the smart plug.
-- Includes an optional Tile-based Lovelace card.
+- Includes a Tile-based Lovelace card and registers it automatically.
 - Does not draw OFF icon fallbacks; use `ha-mdi-off-fallback` for that.
 
 ## Installation with HACS
@@ -33,19 +33,9 @@ The integration determines whether the lamp is on from power consumption and ide
 
 ## Lovelace card
 
-After creating at least one helper, add this dashboard resource:
+The integration serves and registers the bundled card automatically after the first helper is loaded. No Dashboard resource needs to be added manually when Lovelace resources use the default storage mode.
 
-```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.0
-```
-
-Resource type:
-
-```text
-JavaScript Module
-```
-
-Then add the card:
+Add the card:
 
 ```yaml
 type: custom:smart-plug-multilevel-light-card
@@ -53,6 +43,15 @@ entity: light.floor_lamp
 ```
 
 The visual editor also supports changing the name, icon, mode label and percentage display.
+
+When Lovelace resources are explicitly managed in YAML mode, add this resource manually:
+
+```yaml
+lovelace:
+  resources:
+    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.1
+      type: module
+```
 
 ## How mode detection works
 
@@ -77,7 +76,7 @@ A measured current of `0.028 A` is classified as **Low**.
 
 ## Updating
 
-Update through HACS, restart Home Assistant, and refresh the browser frontend. When the card changes, update the query-string version in the resource URL to bypass the browser cache.
+Update through HACS and restart Home Assistant. The integration updates the registered card resource URL automatically to invalidate the browser cache.
 
 ## License
 
