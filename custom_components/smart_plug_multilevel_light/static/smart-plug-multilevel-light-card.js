@@ -1,3 +1,138 @@
+class SmartPlugMultiLevelLightCardEditor extends HTMLElement {
+  constructor() {
+    super();
+    this._hass = null;
+    this._config = null;
+    this._form = null;
+    this.attachShadow({ mode: "open" });
+  }
+
+  set hass(hass) {
+    this._hass = hass;
+    this._render();
+  }
+
+  setConfig(config) {
+    this._config = {
+      show_mode: true,
+      show_percentage: true,
+      always_show_icon_background: false,
+      icon_tap_action: { action: "more-info" },
+      ...config,
+    };
+    this._render();
+  }
+
+  _schema() {
+    return [
+      { name: "entity", required: true, selector: { entity: { domain: "light" } } },
+      {
+        type: "expandable",
+        name: "content",
+        title: "Content",
+        flatten: true,
+        schema: [
+          { name: "name", selector: { text: {} } },
+          {
+            name: "icon",
+            selector: { icon: {} },
+            context: { icon_entity: "entity" },
+          },
+          { name: "show_mode", selector: { boolean: {} } },
+          { name: "show_percentage", selector: { boolean: {} } },
+          { name: "always_show_icon_background", selector: { boolean: {} } },
+        ],
+      },
+      {
+        type: "expandable",
+        name: "interactions",
+        title: "Interactions",
+        flatten: true,
+        schema: [
+          {
+            name: "icon_tap_action",
+            selector: { ui_action: { default_action: "more-info" } },
+          },
+        ],
+      },
+    ];
+  }
+
+  _computeLabel(schema) {
+    return ({
+      entity: "Entity",
+      name: "Name",
+      icon: "Icon",
+      show_mode: "Show mode name",
+      show_percentage: "Show percentage",
+      always_show_icon_background: "Always show icon background",
+      icon_tap_action: "Additional icon action",
+    })[schema.name];
+  }
+
+  _computeHelper(schema) {
+    return ({
+      always_show_icon_background:
+        "Home Assistant normally shows the circular background only when Icon tap has a separate action. Enable this option to keep the background visible even when Icon tap is set to None.",
+    })[schema.name];
+  }
+
+  async _render() {
+    if (!this._hass || !this._config) return;
+
+    if (!this._form) {
+      this._form = document.createElement("ha-form");
+      this._form.addEventListener("value-changed", (event) => {
+        event.stopPropagation();
+        const config = { ...event.detail.value };
+        this._config = config;
+        this.dispatchEvent(new CustomEvent("config-changed", {
+          detail: { config },
+          bubbles: true,
+          composed: true,
+        }));
+      });
+      this.shadowRoot.replaceChildren(this._form);
+    }
+
+    this._form.hass = this._hass;
+    this._form.data = this._config;
+    this._form.schema = this._schema();
+    this._form.computeLabel = (schema) => this._computeLabel(schema);
+    this._form.computeHelper = (schema) => this._computeHelper(schema);
+
+    await this._form.updateComplete;
+    requestAnimationFrame(() => this._alignBooleanControls());
+  }
+
+  _allDeep(selector, root = this.shadowRoot) {
+    if (!root) return [];
+    const matches = [...root.querySelectorAll(selector)];
+    for (const element of root.querySelectorAll("*")) {
+      if (element.shadowRoot) {
+        matches.push(...this._allDeep(selector, element.shadowRoot));
+      }
+    }
+    return matches;
+  }
+
+  _alignBooleanControls() {
+    for (const selector of this._allDeep("ha-selector-boolean")) {
+      const formfield = selector.shadowRoot?.querySelector("ha-formfield");
+      if (!formfield) continue;
+      formfield.spaceBetween = false;
+      formfield.requestUpdate?.();
+    }
+  }
+}
+
+if (!customElements.get("smart-plug-multilevel-light-card-editor")) {
+  customElements.define(
+    "smart-plug-multilevel-light-card-editor",
+    SmartPlugMultiLevelLightCardEditor
+  );
+}
+
 class SmartPlugMultiLevelLightCard extends HTMLElement {
   constructor() {
     super();
@@ -17,60 +152,13 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
       entity: entity || "",
       show_mode: true,
       show_percentage: true,
+      always_show_icon_background: false,
       icon_tap_action: { action: "more-info" },
     };
   }
 
-  static getConfigForm() {
-    return {
-      schema: [
-        { name: "entity", required: true, selector: { entity: { domain: "light" } } },
-        {
-          type: "expandable",
-          name: "content",
-          title: "Content",
-          flatten: true,
-          schema: [
-            { name: "name", selector: { text: {} } },
-            {
-              name: "icon",
-              selector: { icon: {} },
-              context: { icon_entity: "entity" },
-            },
-            {
-              type: "grid", name: "", flatten: true, column_min_width: "180px",
-              schema: [
-                { name: "show_mode", selector: { boolean: {} } },
-                { name: "show_percentage", selector: { boolean: {} } },
-              ],
-            },
-          ],
-        },
-        {
-          type: "expandable",
-          name: "interactions",
-          title: "Interactions",
-          flatten: true,
-          schema: [
-            {
-              name: "icon_tap_action",
-              selector: { ui_action: { default_action: "more-info" } },
-            },
-          ],
-        },
-      ],
-      computeLabel: (schema) => ({
-        entity: "Entity",
-        name: "Name",
-        icon: "Icon",
-        show_mode: "Show mode name",
-        show_percentage: "Show percentage",
-        icon_tap_action: "Additional icon action",
-      })[schema.name],
-      assertConfig: (config) => {
-        if (!config.entity) throw new Error("Entity is required");
-      },
-    };
+  static getConfigElement() {
+    return document.createElement("smart-plug-multilevel-light-card-editor");
   }
 
   setConfig(config) {
@@ -78,6 +166,7 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
     this.config = {
       show_mode: true,
       show_percentage: true,
+      always_show_icon_background: false,
       icon_tap_action: { action: "more-info" },
       ...config,
     };
@@ -208,6 +297,32 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
     };
   }
 
+  _allDeep(selector, root) {
+    if (!root) return [];
+    const matches = [...root.querySelectorAll(selector)];
+    for (const element of root.querySelectorAll("*")) {
+      if (element.shadowRoot) {
+        matches.push(...this._allDeep(selector, element.shadowRoot));
+      }
+    }
+    return matches;
+  }
+
+  async _syncIconBackground(tile) {
+    await tile.updateComplete;
+    await new Promise((resolve) => requestAnimationFrame(resolve));
+
+    const forceBackground = this.config.always_show_icon_background === true;
+    for (const tileIcon of this._allDeep("ha-tile-icon", tile.shadowRoot)) {
+      const container = tileIcon.shadowRoot?.querySelector(".container");
+      if (!container) continue;
+      container.classList.toggle(
+        "background",
+        forceBackground || tileIcon.hasAttribute("interactive")
+      );
+    }
+  }
+
   async _syncTile() {
     if (!this.config || !this._hass) return;
 
@@ -216,6 +331,7 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
 
     tile.setConfig(this._nativeConfig(realState));
     tile.hass = this._visualHass(realState);
+    await this._syncIconBackground(tile);
   }
 }
 
@@ -240,6 +356,7 @@ if (!window.customCards.some((card) => card.type === "smart-plug-multilevel-ligh
           entity: entityId,
           show_mode: true,
           show_percentage: true,
+          always_show_icon_background: false,
           icon_tap_action: { action: "more-info" },
         },
       };
