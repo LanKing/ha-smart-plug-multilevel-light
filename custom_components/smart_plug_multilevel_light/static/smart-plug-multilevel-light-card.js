@@ -13,7 +13,12 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
       const state = hass?.states?.[id];
       return id.startsWith("light.") && state?.attributes?.configured_modes;
     });
-    return { entity: entity || "", show_mode: true, show_percentage: true };
+    return {
+      entity: entity || "",
+      show_mode: true,
+      show_percentage: true,
+      icon_tap_action: { action: "more-info" },
+    };
   }
 
   static getConfigForm() {
@@ -41,6 +46,18 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
             },
           ],
         },
+        {
+          type: "expandable",
+          name: "interactions",
+          title: "Interactions",
+          flatten: true,
+          schema: [
+            {
+              name: "icon_tap_action",
+              selector: { ui_action: { default_action: "more-info" } },
+            },
+          ],
+        },
       ],
       computeLabel: (schema) => ({
         entity: "Entity",
@@ -48,6 +65,7 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
         icon: "Icon",
         show_mode: "Show mode name",
         show_percentage: "Show percentage",
+        icon_tap_action: "Additional icon action",
       })[schema.name],
       assertConfig: (config) => {
         if (!config.entity) throw new Error("Entity is required");
@@ -57,7 +75,12 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
 
   setConfig(config) {
     if (!config?.entity) throw new Error("entity is required");
-    this.config = { show_mode: true, show_percentage: true, ...config };
+    this.config = {
+      show_mode: true,
+      show_percentage: true,
+      icon_tap_action: { action: "more-info" },
+      ...config,
+    };
     this._syncTile();
   }
 
@@ -102,9 +125,13 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
       entity: this.config.entity,
       tap_action: { action: "toggle" },
       hold_action: { action: "more-info" },
-      icon_tap_action: { action: "toggle" },
-      icon_hold_action: { action: "more-info" },
     };
+
+    const iconAction = this.config.icon_tap_action;
+    if (iconAction && iconAction.action !== "none") {
+      cfg.icon_tap_action = iconAction;
+    }
+
     if (this.config.name) cfg.name = this.config.name;
     if (this.config.icon) cfg.icon = this.config.icon;
     const stateContent = this._stateContent(state);
@@ -213,6 +240,7 @@ if (!window.customCards.some((card) => card.type === "smart-plug-multilevel-ligh
           entity: entityId,
           show_mode: true,
           show_percentage: true,
+          icon_tap_action: { action: "more-info" },
         },
       };
     },
