@@ -15,7 +15,7 @@ from .const import DOMAIN, PLATFORMS
 _LOGGER = logging.getLogger(__name__)
 
 _CARD_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-card.js"
-_CARD_URL = f"{_CARD_PATH}?v=0.6.1"
+_CARD_URL = f"{_CARD_PATH}?v=0.6.2"
 _CARD_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-card.js"
 _DATA_STATIC_REGISTERED = "static_registered"
 _DATA_RESOURCE_REGISTERED = "resource_registered"
