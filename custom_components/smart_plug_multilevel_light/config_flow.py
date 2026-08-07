@@ -13,10 +13,9 @@ from homeassistant.helpers import entity_registry as er, selector
 from .const import (
     CONF_CURRENT_SENSOR,
     CONF_MODES,
+    CONF_OFF_CURRENT_THRESHOLD,
     CONF_OUTLET,
     CONF_POWER_CYCLE_DELAY,
-    CONF_POWER_SENSOR,
-    CONF_POWER_THRESHOLD,
     DOMAIN,
     MODE_CURRENT,
     MODE_NAME,
@@ -52,33 +51,25 @@ def _sibling_entities(hass, entity_id: str) -> list[str]:
     ]
 
 
-def _metering_entities(hass, outlet: str) -> tuple[list[str], list[str]]:
+def _current_entities(hass, outlet: str) -> list[str]:
     siblings = _sibling_entities(hass, outlet)
-    powers = [
-        entity_id
-        for entity_id in siblings
-        if entity_id.startswith("sensor.")
-        and _device_class(hass, entity_id) == "power"
-    ]
-    currents = [
+    return [
         entity_id
         for entity_id in siblings
         if entity_id.startswith("sensor.")
         and _device_class(hass, entity_id) == "current"
     ]
-    return powers, currents
 
 
 def _candidate_outlets(hass) -> list[str]:
-    """Only switches whose device also exposes both power and current sensors."""
+    """Only switches whose device also exposes a current sensor."""
     registry = er.async_get(hass)
     result: list[str] = []
 
     for item in registry.entities.values():
         if not item.entity_id.startswith("switch.") or item.disabled:
             continue
-        powers, currents = _metering_entities(hass, item.entity_id)
-        if powers and currents:
+        if _current_entities(hass, item.entity_id):
             result.append(item.entity_id)
 
     return sorted(result)
@@ -151,42 +142,39 @@ def _modes_selector(current_value: float | None = None):
 def _settings_schema(
     *,
     hass,
-    power_entities: list[str],
     current_entities: list[str],
     defaults: dict[str, Any] | None = None,
 ) -> vol.Schema:
     defaults = defaults or {}
 
-    def entity_field(name: str, entities: list[str]):
-        kwargs: dict[str, Any] = {"domain": "sensor"}
-        if entities:
-            kwargs["include_entities"] = entities
-        value = defaults.get(name)
-        key = vol.Required(name, default=value) if value else vol.Required(name)
-        return key, selector.selector({"entity": kwargs})
-
-    power_key, power_selector = entity_field(CONF_POWER_SENSOR, power_entities)
-    current_key, current_selector = entity_field(CONF_CURRENT_SENSOR, current_entities)
+    kwargs: dict[str, Any] = {"domain": "sensor"}
+    if current_entities:
+        kwargs["include_entities"] = current_entities
+    configured_current = defaults.get(CONF_CURRENT_SENSOR)
+    current_key = (
+        vol.Required(CONF_CURRENT_SENSOR, default=configured_current)
+        if configured_current
+        else vol.Required(CONF_CURRENT_SENSOR)
+    )
 
     modes_default = defaults.get(CONF_MODES, [])
-    selected_current_sensor = defaults.get(CONF_CURRENT_SENSOR)
-    measured_current = _current_value(hass, selected_current_sensor)
+    measured_current = _current_value(hass, configured_current)
 
     return vol.Schema(
         {
             vol.Required(
                 "name", default=defaults.get("name", "Светильник")
             ): selector.TextSelector(),
-            power_key: power_selector,
-            current_key: current_selector,
+            current_key: selector.selector({"entity": kwargs}),
             vol.Required(
-                CONF_POWER_THRESHOLD,
-                default=defaults.get(CONF_POWER_THRESHOLD, 0.0),
+                CONF_OFF_CURRENT_THRESHOLD,
+                default=defaults.get(CONF_OFF_CURRENT_THRESHOLD, 0.005),
             ): selector.NumberSelector(
                 selector.NumberSelectorConfig(
                     min=0,
                     max=100,
-                    step=0.1,
+                    step=0.001,
+                    unit_of_measurement="A",
                     mode=selector.NumberSelectorMode.BOX,
                 )
             ),
@@ -233,7 +221,7 @@ def _normalize_modes(raw_modes: Any) -> list[dict[str, Any]]:
 class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Smart Plug Multi-Level Light."""
 
-    VERSION = 2
+    VERSION = 3
 
     def __init__(self) -> None:
         self._outlet: str | None = None
@@ -253,14 +241,14 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
         assert self._outlet is not None
-        powers, currents = _metering_entities(self.hass, self._outlet)
+        currents = _current_entities(self.hass, self._outlet)
 
-        if not powers or not currents:
-            return self.async_abort(reason="metering_entities_missing")
+        if not currents:
+            return self.async_abort(reason="current_sensor_missing")
 
         defaults: dict[str, Any] = {
-            CONF_POWER_SENSOR: powers[0] if len(powers) == 1 else None,
             CONF_CURRENT_SENSOR: currents[0] if len(currents) == 1 else None,
+            CONF_OFF_CURRENT_THRESHOLD: 0.005,
             CONF_MODES: [],
         }
 
@@ -275,7 +263,6 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
                     step_id="settings",
                     data_schema=_settings_schema(
                         hass=self.hass,
-                        power_entities=powers,
                         current_entities=currents,
                         defaults=defaults,
                     ),
@@ -294,7 +281,6 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
             step_id="settings",
             data_schema=_settings_schema(
                 hass=self.hass,
-                power_entities=powers,
                 current_entities=currents,
                 defaults=defaults,
             ),
@@ -316,20 +302,18 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
     ) -> ConfigFlowResult:
         current = {**self.config_entry.data, **self.config_entry.options}
         outlet = str(current[CONF_OUTLET])
-        powers, currents = _metering_entities(self.hass, outlet)
+        currents = _current_entities(self.hass, outlet)
 
-        configured_power = current.get(CONF_POWER_SENSOR)
         configured_current = current.get(CONF_CURRENT_SENSOR)
-        if configured_power and configured_power not in powers:
-            powers.append(configured_power)
         if configured_current and configured_current not in currents:
             currents.append(configured_current)
 
         defaults = {
             "name": self.config_entry.title,
-            CONF_POWER_SENSOR: configured_power,
             CONF_CURRENT_SENSOR: configured_current,
-            CONF_POWER_THRESHOLD: current.get(CONF_POWER_THRESHOLD, 0.0),
+            CONF_OFF_CURRENT_THRESHOLD: current.get(
+                CONF_OFF_CURRENT_THRESHOLD, 0.005
+            ),
             CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0.7),
             CONF_MODES: current.get(CONF_MODES, []),
         }
@@ -342,7 +326,6 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
                     step_id="init",
                     data_schema=_settings_schema(
                         hass=self.hass,
-                        power_entities=powers,
                         current_entities=currents,
                         defaults=defaults,
                     ),
@@ -361,7 +344,6 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
             step_id="init",
             data_schema=_settings_schema(
                 hass=self.hass,
-                power_entities=powers,
                 current_entities=currents,
                 defaults=defaults,
             ),
