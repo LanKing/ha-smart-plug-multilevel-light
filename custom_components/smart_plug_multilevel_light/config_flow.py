@@ -62,12 +62,14 @@ def _current_entities(hass, outlet: str) -> list[str]:
 
 
 def _candidate_outlets(hass) -> list[str]:
-    """Only switches whose device also exposes a current sensor."""
+    """Return primary switches whose device also exposes a current sensor."""
     registry = er.async_get(hass)
     result: list[str] = []
 
     for item in registry.entities.values():
         if not item.entity_id.startswith("switch.") or item.disabled:
+            continue
+        if item.entity_category is not None:
             continue
         if _current_entities(hass, item.entity_id):
             result.append(item.entity_id)
