@@ -15,20 +15,20 @@ from .const import DOMAIN, PLATFORMS
 
 _LOGGER = logging.getLogger(__name__)
 
-_VERSION = "0.6.12"
+_VERSION = "0.6.13"
 _CARD_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-card.js"
 _CARD_URL = f"{_CARD_PATH}?v={_VERSION}"
 _CARD_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-card.js"
-_CONFIG_UI_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-config.js"
+_CONFIG_UI_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-config-v2.js"
 _CONFIG_UI_URL = f"{_CONFIG_UI_PATH}?v={_VERSION}"
-_CONFIG_UI_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-config.js"
+_CONFIG_UI_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-config-v2.js"
 _DATA_STATIC_REGISTERED = "static_registered"
 _DATA_CONFIG_UI_REGISTERED = "config_ui_registered"
 _DATA_RESOURCE_REGISTERED = "resource_registered"
 
 
 async def async_ensure_frontend_assets(hass: HomeAssistant) -> None:
-    """Publish frontend files and load the config-flow selector module."""
+    """Publish frontend files and load the config-flow UI module."""
     domain_data = hass.data.setdefault(DOMAIN, {})
 
     if not domain_data.get(_DATA_STATIC_REGISTERED):
