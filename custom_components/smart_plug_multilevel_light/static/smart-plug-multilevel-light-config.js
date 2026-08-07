@@ -89,6 +89,8 @@ class SmartPlugModesEnhancer {
           .spml-label { font-size:14px; font-weight:500; color:var(--primary-text-color); }
           .spml-threshold-head { display:flex; align-items:center; justify-content:space-between; gap:16px; }
           .spml-measured { display:flex; align-items:center; justify-content:flex-end; gap:10px; color:var(--secondary-text-color); font-size:14px; text-align:right; }
+          .spml-measured-value { cursor:pointer; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:3px; }
+          .spml-measured-value.unavailable { cursor:default; text-decoration:none; }
           .spml-refresh { border:0; background:transparent; padding:4px 0; color:var(--primary-color); font:inherit; font-weight:500; cursor:pointer; }
           .spml-input-wrap { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:10px; }
           .spml-input {
@@ -150,6 +152,8 @@ class SmartPlugModesEnhancer {
 
       const refresh = () => {
         const value = currentInAmps(instance);
+        measuredNode.dataset.value = value === null ? "" : String(value);
+        measuredNode.classList.toggle("unavailable", value === null);
         measuredNode.textContent = value === null
           ? `${text(instance, "measured_current")}: ${text(instance, "unavailable")}`
           : `${text(instance, "measured_current")}: ${value.toFixed(3).replace(/0+$/, "").replace(/\.$/, "")} A`;
@@ -157,6 +161,16 @@ class SmartPlugModesEnhancer {
       refresh();
 
       body.querySelector(".spml-refresh")?.addEventListener("click", refresh);
+      measuredNode.addEventListener("click", () => {
+        const value = currentInAmps(instance);
+        if (value === null) return;
+        const normalized = Number(value.toFixed(3));
+        currentInput.value = String(normalized);
+        currentInput.dispatchEvent(new Event("input", { bubbles: true }));
+        currentInput.focus();
+        currentInput.select();
+        refresh();
+      });
 
       const close = () => { dialog.open = false; };
       footer.querySelector(".spml-cancel")?.addEventListener("click", close);
