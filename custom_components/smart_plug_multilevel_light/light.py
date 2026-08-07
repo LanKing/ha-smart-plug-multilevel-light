@@ -13,10 +13,9 @@ from homeassistant.helpers.event import async_track_state_change_event
 from .const import (
     CONF_CURRENT_SENSOR,
     CONF_MODES,
+    CONF_OFF_CURRENT_THRESHOLD,
     CONF_OUTLET,
     CONF_POWER_CYCLE_DELAY,
-    CONF_POWER_SENSOR,
-    CONF_POWER_THRESHOLD,
     DOMAIN,
     MODE_BRIGHTNESS,
     MODE_CURRENT,
@@ -55,10 +54,6 @@ class SmartPlugMultiLevelLight(LightEntity):
         return str(self._cfg[CONF_OUTLET])
 
     @property
-    def _power_sensor(self) -> str:
-        return str(self._cfg[CONF_POWER_SENSOR])
-
-    @property
     def _current_sensor(self) -> str:
         return str(self._cfg[CONF_CURRENT_SENSOR])
 
@@ -80,8 +75,8 @@ class SmartPlugMultiLevelLight(LightEntity):
         outlet_state = self.hass.states.get(self._outlet)
         if outlet_state is None or outlet_state.state != "on":
             return False
-        return self._float_state(self._power_sensor) > float(
-            self._cfg.get(CONF_POWER_THRESHOLD, 0.0)
+        return self._float_state(self._current_sensor) > float(
+            self._cfg.get(CONF_OFF_CURRENT_THRESHOLD, 0.005)
         )
 
     def _modes_with_brightness(self) -> list[dict[str, Any]]:
@@ -120,7 +115,6 @@ class SmartPlugMultiLevelLight(LightEntity):
             "mode": mode[MODE_NAME] if mode else "Off",
             "brightness_pct": int(mode[MODE_BRIGHTNESS]) if mode else 0,
             "measured_current": self._float_state(self._current_sensor),
-            "measured_power": self._float_state(self._power_sensor),
             "configured_modes": [
                 {
                     "name": item[MODE_NAME],
@@ -133,7 +127,7 @@ class SmartPlugMultiLevelLight(LightEntity):
 
     @property
     def available(self) -> bool:
-        for entity_id in (self._outlet, self._power_sensor, self._current_sensor):
+        for entity_id in (self._outlet, self._current_sensor):
             state = self.hass.states.get(entity_id)
             if state is None or state.state in {"unknown", "unavailable"}:
                 return False
@@ -152,7 +146,7 @@ class SmartPlugMultiLevelLight(LightEntity):
         await super().async_added_to_hass()
         self._unsubscribe = async_track_state_change_event(
             self.hass,
-            [self._outlet, self._power_sensor, self._current_sensor],
+            [self._outlet, self._current_sensor],
             self._handle_source_change,
         )
         self.async_on_remove(self._unsubscribe)
