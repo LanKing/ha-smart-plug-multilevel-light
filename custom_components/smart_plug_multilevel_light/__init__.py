@@ -9,13 +9,14 @@ from homeassistant.components.lovelace.const import LOVELACE_DATA, MODE_STORAGE
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_URL
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers.typing import ConfigType
 from homeassistant.setup import async_setup_component
 
 from .const import DOMAIN, PLATFORMS
 
 _LOGGER = logging.getLogger(__name__)
 
-_VERSION = "0.6.7"
+_VERSION = "0.6.8"
 _CARD_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-card.js"
 _CARD_URL = f"{_CARD_PATH}?v={_VERSION}"
 _CARD_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-card.js"
@@ -28,7 +29,7 @@ _DATA_RESOURCE_REGISTERED = "resource_registered"
 
 
 async def async_ensure_frontend_assets(hass: HomeAssistant) -> None:
-    """Publish frontend files and load the config-flow selector module."""
+    """Publish frontend files and register the config-flow enhancement module."""
     domain_data = hass.data.setdefault(DOMAIN, {})
 
     if not domain_data.get(_DATA_STATIC_REGISTERED):
@@ -49,6 +50,12 @@ async def async_ensure_frontend_assets(hass: HomeAssistant) -> None:
 
     add_extra_js_url(hass, _CONFIG_UI_URL)
     domain_data[_DATA_CONFIG_UI_REGISTERED] = True
+
+
+async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
+    """Set up integration-level frontend assets as early as possible."""
+    await async_ensure_frontend_assets(hass)
+    return True
 
 
 async def _async_register_card_resource(hass: HomeAssistant) -> None:
