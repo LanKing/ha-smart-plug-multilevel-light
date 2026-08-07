@@ -10,6 +10,7 @@ from homeassistant.const import ATTR_DEVICE_CLASS
 from homeassistant.core import callback
 from homeassistant.helpers import entity_registry as er, selector
 
+from . import async_ensure_frontend_assets
 from .const import (
     CONF_CURRENT_SENSOR,
     CONF_MODES,
@@ -20,6 +21,31 @@ from .const import (
     MODE_CURRENT,
     MODE_NAME,
 )
+
+
+if selector.SELECTORS.get("smart_plug_modes") is None:
+
+    @selector.SELECTORS.register("smart_plug_modes")
+    class SmartPlugModesSelector(selector.Selector):
+        """Selector rendered by the integration's frontend module."""
+
+        selector_type = "smart_plug_modes"
+        CONFIG_SCHEMA = selector.make_selector_config_schema(
+            {vol.Required(CONF_CURRENT_SENSOR): str}
+        )
+        DATA_SCHEMA = vol.Schema(
+            [
+                vol.Schema(
+                    {
+                        vol.Required(MODE_NAME): str,
+                        vol.Required(MODE_CURRENT): vol.Coerce(float),
+                    }
+                )
+            ]
+        )
+
+        def __call__(self, data: Any) -> list[dict[str, Any]]:
+            return self.DATA_SCHEMA(data)
 
 
 def _device_class(hass, entity_id: str) -> str | None:
@@ -90,60 +116,14 @@ def _outlet_schema(hass, default: str | None = None) -> vol.Schema:
     return vol.Schema({key: selector.selector({"entity": entity_cfg})})
 
 
-def _current_value(hass, entity_id: str | None) -> float | None:
-    """Return the current sensor value for display in the config UI."""
-    if not entity_id:
-        return None
-    state = hass.states.get(entity_id)
-    if state is None or state.state in {"unknown", "unavailable"}:
-        return None
-    try:
-        return float(state.state)
-    except (TypeError, ValueError):
-        return None
-
-
-def _modes_selector(current_value: float | None = None):
-    current_description = (
-        f"Current measured current: {current_value:g} A"
-        if current_value is not None
-        else "Current measured current is unavailable"
-    )
-
+def _modes_selector(current_sensor: str):
     return selector.selector(
-        {
-            "object": {
-                "multiple": True,
-                "label_field": MODE_NAME,
-                "description_field": MODE_CURRENT,
-                "fields": {
-                    MODE_NAME: {
-                        "label": "Mode name",
-                        "required": True,
-                        "selector": {"text": {}},
-                    },
-                    MODE_CURRENT: {
-                        "label": f"Current threshold — {current_description}",
-                        "required": True,
-                        "selector": {
-                            "number": {
-                                "min": 0,
-                                "max": 100,
-                                "step": 0.001,
-                                "unit_of_measurement": "A",
-                                "mode": "box",
-                            }
-                        },
-                    },
-                },
-            }
-        }
+        {"smart_plug_modes": {CONF_CURRENT_SENSOR: current_sensor}}
     )
 
 
 def _settings_schema(
     *,
-    hass,
     current_entities: list[str],
     defaults: dict[str, Any] | None = None,
 ) -> vol.Schema:
@@ -152,7 +132,11 @@ def _settings_schema(
     kwargs: dict[str, Any] = {"domain": "sensor"}
     if current_entities:
         kwargs["include_entities"] = current_entities
+
     configured_current = defaults.get(CONF_CURRENT_SENSOR)
+    if not configured_current and current_entities:
+        configured_current = current_entities[0]
+
     current_key = (
         vol.Required(CONF_CURRENT_SENSOR, default=configured_current)
         if configured_current
@@ -160,7 +144,6 @@ def _settings_schema(
     )
 
     modes_default = defaults.get(CONF_MODES, [])
-    measured_current = _current_value(hass, configured_current)
 
     return vol.Schema(
         {
@@ -180,10 +163,7 @@ def _settings_schema(
                     mode=selector.NumberSelectorMode.BOX,
                 )
             ),
-            vol.Required(
-                CONF_POWER_CYCLE_DELAY,
-                default=defaults.get(CONF_POWER_CYCLE_DELAY, 0.7),
-            ): selector.NumberSelector(
+            vol.Required(CONF_POWER_CYCLE_DELAY, default=defaults.get(CONF_POWER_CYCLE_DELAY, 0.7)): selector.NumberSelector(
                 selector.NumberSelectorConfig(
                     min=0.1,
                     max=10,
@@ -193,7 +173,7 @@ def _settings_schema(
                 )
             ),
             vol.Required(CONF_MODES, default=modes_default): _modes_selector(
-                measured_current
+                str(configured_current or "")
             ),
         }
     )
@@ -231,6 +211,8 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
     async def async_step_user(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
+        await async_ensure_frontend_assets(self.hass)
+
         if user_input is not None:
             self._outlet = str(user_input[CONF_OUTLET])
             return await self.async_step_settings()
@@ -242,6 +224,7 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
     async def async_step_settings(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
+        await async_ensure_frontend_assets(self.hass)
         assert self._outlet is not None
         currents = _current_entities(self.hass, self._outlet)
 
@@ -249,7 +232,7 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
             return self.async_abort(reason="current_sensor_missing")
 
         defaults: dict[str, Any] = {
-            CONF_CURRENT_SENSOR: currents[0] if len(currents) == 1 else None,
+            CONF_CURRENT_SENSOR: currents[0],
             CONF_OFF_CURRENT_THRESHOLD: 0.005,
             CONF_MODES: [],
         }
@@ -264,7 +247,6 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
                 return self.async_show_form(
                     step_id="settings",
                     data_schema=_settings_schema(
-                        hass=self.hass,
                         current_entities=currents,
                         defaults=defaults,
                     ),
@@ -282,7 +264,6 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
         return self.async_show_form(
             step_id="settings",
             data_schema=_settings_schema(
-                hass=self.hass,
                 current_entities=currents,
                 defaults=defaults,
             ),
@@ -302,6 +283,8 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
     async def async_step_init(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
+        await async_ensure_frontend_assets(self.hass)
+
         current = {**self.config_entry.data, **self.config_entry.options}
         outlet = str(current[CONF_OUTLET])
         currents = _current_entities(self.hass, outlet)
@@ -312,7 +295,7 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
 
         defaults = {
             "name": self.config_entry.title,
-            CONF_CURRENT_SENSOR: configured_current,
+            CONF_CURRENT_SENSOR: configured_current or (currents[0] if currents else None),
             CONF_OFF_CURRENT_THRESHOLD: current.get(
                 CONF_OFF_CURRENT_THRESHOLD, 0.005
             ),
@@ -327,7 +310,6 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
                 return self.async_show_form(
                     step_id="init",
                     data_schema=_settings_schema(
-                        hass=self.hass,
                         current_entities=currents,
                         defaults=defaults,
                     ),
@@ -345,7 +327,6 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
         return self.async_show_form(
             step_id="init",
             data_schema=_settings_schema(
-                hass=self.hass,
                 current_entities=currents,
                 defaults=defaults,
             ),
