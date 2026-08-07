@@ -27,9 +27,7 @@ class SmartPlugModesEnhancer {
       }
     };
 
-    const currentInAmps = (instance) => {
-      const entityId = findCurrentSensor(instance);
-      const state = entityId ? instance.hass?.states?.[entityId] : undefined;
+    const stateToAmps = (state) => {
       if (!state || ["unknown", "unavailable"].includes(state.state)) return null;
 
       const numeric = Number(state.state);
@@ -40,6 +38,28 @@ class SmartPlugModesEnhancer {
       if (unit === "µA" || unit === "uA") return numeric / 1000000;
       if (unit === "kA") return numeric * 1000;
       return numeric;
+    };
+
+    const currentInAmps = (instance) => {
+      const entityId = findCurrentSensor(instance);
+      return stateToAmps(entityId ? instance.hass?.states?.[entityId] : undefined);
+    };
+
+    const fetchCurrentInAmps = async (instance) => {
+      const entityId = findCurrentSensor(instance);
+      if (!entityId) return null;
+
+      try {
+        const states = await instance.hass?.callWS?.({ type: "get_states" });
+        const state = Array.isArray(states)
+          ? states.find((item) => item?.entity_id === entityId)
+          : undefined;
+        if (state) return stateToAmps(state);
+      } catch (_) {
+        // Fall back to the current frontend state below.
+      }
+
+      return currentInAmps(instance);
     };
 
     const isRu = (instance) => String(instance.hass?.language || "").toLowerCase().startsWith("ru");
@@ -92,6 +112,7 @@ class SmartPlugModesEnhancer {
           .spml-measured-value { cursor:pointer; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:3px; }
           .spml-measured-value.unavailable { cursor:default; text-decoration:none; }
           .spml-refresh { border:0; background:transparent; padding:4px 0; color:var(--primary-color); font:inherit; font-weight:500; cursor:pointer; }
+          .spml-refresh:disabled { opacity:.5; cursor:default; }
           .spml-input-wrap { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:10px; }
           .spml-input {
             box-sizing:border-box;
@@ -145,31 +166,48 @@ class SmartPlugModesEnhancer {
       const nameInput = body.querySelector(".spml-name");
       const currentInput = body.querySelector(".spml-current");
       const measuredNode = body.querySelector(".spml-measured-value");
+      const refreshButton = body.querySelector(".spml-refresh");
       const errorNode = body.querySelector(".spml-error");
 
       nameInput.value = existing?.name ?? "";
       currentInput.value = existing?.current ?? "";
 
-      const refresh = () => {
-        const value = currentInAmps(instance);
+      let measuredValue = null;
+
+      const renderMeasured = (value) => {
+        measuredValue = value;
         measuredNode.dataset.value = value === null ? "" : String(value);
         measuredNode.classList.toggle("unavailable", value === null);
         measuredNode.textContent = value === null
           ? `${text(instance, "measured_current")}: ${text(instance, "unavailable")}`
           : `${text(instance, "measured_current")}: ${value.toFixed(3).replace(/0+$/, "").replace(/\.$/, "")} A`;
       };
+
+      const refresh = async () => {
+        refreshButton.disabled = true;
+        try {
+          renderMeasured(await fetchCurrentInAmps(instance));
+        } finally {
+          refreshButton.disabled = false;
+        }
+      };
+
+      renderMeasured(currentInAmps(instance));
       refresh();
 
-      body.querySelector(".spml-refresh")?.addEventListener("click", refresh);
-      measuredNode.addEventListener("click", () => {
-        const value = currentInAmps(instance);
-        if (value === null) return;
-        const normalized = Number(value.toFixed(3));
+      refreshButton?.addEventListener("click", (event) => {
+        event.preventDefault();
+        refresh();
+      });
+
+      measuredNode.addEventListener("click", async () => {
+        await refresh();
+        if (measuredValue === null) return;
+        const normalized = Number(measuredValue.toFixed(3));
         currentInput.value = String(normalized);
         currentInput.dispatchEvent(new Event("input", { bubbles: true }));
         currentInput.focus();
         currentInput.select();
-        refresh();
       });
 
       const close = () => { dialog.open = false; };
