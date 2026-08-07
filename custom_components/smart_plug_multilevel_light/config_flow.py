@@ -23,31 +23,6 @@ from .const import (
 )
 
 
-if selector.SELECTORS.get("smart_plug_modes") is None:
-
-    @selector.SELECTORS.register("smart_plug_modes")
-    class SmartPlugModesSelector(selector.Selector):
-        """Selector rendered by the integration's frontend module."""
-
-        selector_type = "smart_plug_modes"
-        CONFIG_SCHEMA = selector.make_selector_config_schema(
-            {vol.Required(CONF_CURRENT_SENSOR): str}
-        )
-        DATA_SCHEMA = vol.Schema(
-            [
-                vol.Schema(
-                    {
-                        vol.Required(MODE_NAME): str,
-                        vol.Required(MODE_CURRENT): vol.Coerce(float),
-                    }
-                )
-            ]
-        )
-
-        def __call__(self, data: Any) -> list[dict[str, Any]]:
-            return self.DATA_SCHEMA(data)
-
-
 def _device_class(hass, entity_id: str) -> str | None:
     state = hass.states.get(entity_id)
     if state is None:
@@ -116,9 +91,41 @@ def _outlet_schema(hass, default: str | None = None) -> vol.Schema:
     return vol.Schema({key: selector.selector({"entity": entity_cfg})})
 
 
-def _modes_selector(current_sensor: str):
+def _modes_selector():
+    """Return a native object selector.
+
+    The bundled frontend module enhances its Add/Edit dialogs with a measured-current
+    display and Refresh button. If that module has not loaded yet, Home Assistant's
+    normal object editor remains fully functional instead of hiding the field.
+    """
     return selector.selector(
-        {"smart_plug_modes": {CONF_CURRENT_SENSOR: current_sensor}}
+        {
+            "object": {
+                "multiple": True,
+                "label_field": MODE_NAME,
+                "description_field": MODE_CURRENT,
+                "fields": {
+                    MODE_NAME: {
+                        "label": "Mode name",
+                        "required": True,
+                        "selector": {"text": {}},
+                    },
+                    MODE_CURRENT: {
+                        "label": "Current threshold",
+                        "required": True,
+                        "selector": {
+                            "number": {
+                                "min": 0,
+                                "max": 100,
+                                "step": 0.001,
+                                "unit_of_measurement": "A",
+                                "mode": "box",
+                            }
+                        },
+                    },
+                },
+            }
+        }
     )
 
 
@@ -163,7 +170,10 @@ def _settings_schema(
                     mode=selector.NumberSelectorMode.BOX,
                 )
             ),
-            vol.Required(CONF_POWER_CYCLE_DELAY, default=defaults.get(CONF_POWER_CYCLE_DELAY, 0.7)): selector.NumberSelector(
+            vol.Required(
+                CONF_POWER_CYCLE_DELAY,
+                default=defaults.get(CONF_POWER_CYCLE_DELAY, 0.7),
+            ): selector.NumberSelector(
                 selector.NumberSelectorConfig(
                     min=0.1,
                     max=10,
@@ -172,9 +182,7 @@ def _settings_schema(
                     mode=selector.NumberSelectorMode.BOX,
                 )
             ),
-            vol.Required(CONF_MODES, default=modes_default): _modes_selector(
-                str(configured_current or "")
-            ),
+            vol.Required(CONF_MODES, default=modes_default): _modes_selector(),
         }
     )
 
