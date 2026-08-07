@@ -155,7 +155,7 @@ class SmartPlugModesSelector extends HTMLElement {
   }
 
   _render() {
-    if (!this.shadowRoot || !this._selector) return;
+    if (!this.shadowRoot || !this._selector || this._dialog) return;
 
     const items = this._value
       .map(
@@ -304,6 +304,7 @@ class SmartPlugModesSelector extends HTMLElement {
     dialog.addEventListener("closed", () => {
       dialog.remove();
       if (this._dialog === dialog) this._dialog = null;
+      this._render();
     });
 
     dialog.open = true;
