@@ -109,7 +109,7 @@ custom_components/smart_plug_multilevel_light
 После установки через HACS или вручную выполните следующие шаги.
 
 1. **Полностью перезапустите Home Assistant.**
-2. Откройте **Settings → Devices & services → Helpers → Create helper**.
+2. Откройте **[Settings → Devices & services → Helpers](https://my.home-assistant.io/redirect/helpers/)** и нажмите **Create helper**.
 3. Выберите **Smart Plug Multi-Level Light**.
 4. Выберите умную розетку, к которой подключена лампа. В списке отображаются только розетки, у которых Home Assistant видит датчики мощности и тока в том же устройстве.
 5. На следующем шаге задайте параметры лампы:
@@ -142,9 +142,7 @@ custom_components/smart_plug_multilevel_light
 
 ## ⚙️ Создание и настройка helper
 
-После перезапуска откройте:
-
-**Settings → Devices & services → Helpers → Create helper → Smart Plug Multi-Level Light**
+После перезапуска откройте **[Settings → Devices & services → Helpers](https://my.home-assistant.io/redirect/helpers/)**, нажмите **Create helper** и выберите **Smart Plug Multi-Level Light**.
 
 ### Шаг 1. Выбор розетки
 
@@ -362,7 +360,7 @@ lovelace:
 
 Интеграция показывает только `switch`, устройство которого также предоставляет включённые датчики с `device_class: power` и `device_class: current`.
 
-Проверьте в **Settings → Devices & services → Entities**:
+Проверьте в **[Settings → Devices & services → Entities](https://my.home-assistant.io/redirect/entities/)**:
 
 - принадлежат ли три сущности одному устройству;
 - включены ли измерительные сущности;
@@ -387,7 +385,7 @@ lovelace:
 
 Автоматическая регистрация выполняется только после загрузки хотя бы одного настроенного helper и только в режиме ресурсов `storage`. Способ установки интеграции — через HACS или вручную — на это не влияет.
 
-Проверьте **Settings → Dashboards → Resources**. Там должен присутствовать URL:
+Проверьте **[Settings → Dashboards → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)**. Там должен присутствовать URL:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.3
@@ -404,14 +402,14 @@ lovelace:
 
 ## 🗑 Удаление
 
-1. Удалите все созданные helper **Smart Plug Multi-Level Light** через **Settings → Devices & services → Helpers**.
+1. Удалите все созданные helper **Smart Plug Multi-Level Light** через **[Settings → Devices & services → Helpers](https://my.home-assistant.io/redirect/helpers/)**.
 2. Удалите интеграцию через HACS либо вручную удалите папку:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Проверьте **Settings → Dashboards → Resources** и вручную удалите ресурс карточки, если он остался:
+3. Проверьте **[Settings → Dashboards → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)** и вручную удалите ресурс карточки, если он остался:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.3
