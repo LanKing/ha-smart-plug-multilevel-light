@@ -2,7 +2,7 @@
 
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
-<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.6.1-blue" alt="Version 0.6.1"></a>
+<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.6.3-blue" alt="Version 0.6.3"></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
 > Интеграция объединяет обычную лампу и умную розетку в одну сущность Home Assistant. Она определяет текущий режим яркости по потребляемому току, отображает его в карточке и позволяет включить лампу, выключенную собственной кнопкой, кратко отключив и снова подав питание через розетку.
@@ -103,6 +103,42 @@ custom_components/smart_plug_multilevel_light
 > Не копируйте внешнюю папку репозитория целиком в `custom_components`. Внутри `custom_components` должна находиться непосредственно папка `smart_plug_multilevel_light`.
 
 Карточка входит в состав интеграции, поэтому HACS для её установки не требуется. После ручного копирования файлов, перезапуска Home Assistant и создания первого helper интеграция публикует JavaScript-файл карточки и автоматически регистрирует его в Dashboard Resources при стандартном режиме `storage`. В YAML-режиме ресурсов карточку необходимо зарегистрировать вручную, как описано ниже.
+
+## 🚀 Быстрый старт после установки
+
+После установки через HACS или вручную выполните следующие шаги.
+
+1. **Полностью перезапустите Home Assistant.**
+2. Откройте **Settings → Devices & services → Helpers → Create helper**.
+3. Выберите **Smart Plug Multi-Level Light**.
+4. Выберите умную розетку, к которой подключена лампа. В списке отображаются только розетки, у которых Home Assistant видит датчики мощности и тока в том же устройстве.
+5. На следующем шаге задайте параметры лампы:
+   - **Name** — имя создаваемой сущности, например `Торшер`;
+   - **Power sensor** — датчик мощности розетки;
+   - **Current sensor** — датчик тока розетки;
+   - **Power threshold** — порог, ниже которого лампа считается выключенной; для начала можно оставить `0.0`;
+   - **Power cycle delay** — пауза между отключением и повторной подачей питания; по умолчанию `0.7 s`;
+   - **Brightness modes** — добавьте минимум один режим яркости и соответствующий ему ток.
+6. Для каждого режима переключите лампу её физической кнопкой, посмотрите текущее значение датчика тока и внесите его в **Brightness modes**. Например:
+
+   | Режим | Ток |
+   |---|---:|
+   | Dim | `0.020 A` |
+   | Low | `0.025 A` |
+   | Medium | `0.030 A` |
+   | High | `0.040 A` |
+
+7. Сохраните helper. Home Assistant создаст новую сущность `light`, например `light.torsher`.
+8. Откройте нужный Dashboard, включите режим редактирования и нажмите **Add card**.
+9. Выберите **Smart Plug Multi-Level Light**, укажите созданную сущность `light` и сохраните карточку.
+
+> В стандартном режиме ресурсов `storage` отдельно добавлять JavaScript-ресурс карточки не нужно: интеграция регистрирует его автоматически после загрузки первого настроенного helper. Если карточка не появилась в списке сразу, обновите страницу Home Assistant.
+
+После настройки проверьте три сценария:
+
+- выключение сущности `light` в Home Assistant должно отключать розетку;
+- включение при выключенной розетке должно подавать питание на лампу;
+- если розетка включена, но лампа была выключена собственной кнопкой, команда включения должна кратко отключить розетку, подождать **Power cycle delay** и включить её снова.
 
 ## ⚙️ Создание и настройка helper
 
@@ -227,6 +263,8 @@ entity: light.floor_lamp
 | `icon` | string | иконка сущности | переопределяет иконку |
 | `show_mode` | boolean | `true` | показывает название режима |
 | `show_percentage` | boolean | `true` | показывает условный процент |
+| `icon_tap_action` | action | `more-info` | дополнительное действие при нажатии на иконку |
+| `always_show_icon_background` | boolean | `false` | всегда показывает круглый фон иконки, даже если для `icon_tap_action` выбрано `None` |
 
 Полный пример:
 
@@ -237,9 +275,16 @@ name: Торшер
 icon: mdi:floor-lamp
 show_mode: true
 show_percentage: true
+icon_tap_action:
+  action: more-info
+always_show_icon_background: false
 ```
 
-Нажатие переключает лампу, удержание открывает окно **More info**. Цвет и визуальная интенсивность карточки меняются в зависимости от условного процента, но реальная сущность остаётся обычной ON/OFF-сущностью и не получает команды установки яркости.
+Нажатие на карточку переключает лампу, удержание открывает окно **More info**. Для иконки можно отдельно выбрать действие через **Interactions → Additional icon action**. По умолчанию это **More info**; при выборе **None** иконка перестаёт быть отдельной интерактивной зоной и Home Assistant скрывает круглый фон вокруг неё.
+
+Опция **Always show icon background** позволяет оставить круглый фон видимым постоянно. Это только визуальная настройка: если **Additional icon action** установлено в **None**, фон остаётся, но отдельного действия по нажатию на иконку нет.
+
+Цвет и визуальная интенсивность карточки меняются в зависимости от условного процента, но реальная сущность остаётся обычной ON/OFF-сущностью и не получает команды установки яркости.
 
 ### YAML-режим ресурсов Lovelace
 
@@ -256,7 +301,7 @@ Home Assistant не позволяет интеграции автоматиче
 lovelace:
   resource_mode: yaml
   resources:
-    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.1
+    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.3
       type: module
 ```
 
@@ -345,7 +390,7 @@ lovelace:
 Проверьте **Settings → Dashboards → Resources**. Там должен присутствовать URL:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.1
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.3
 ```
 
 В YAML-режиме добавьте ресурс вручную.
@@ -369,7 +414,7 @@ lovelace:
 3. Проверьте **Settings → Dashboards → Resources** и вручную удалите ресурс карточки, если он остался:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.1
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.6.3
 ```
 
 4. Полностью перезапустите Home Assistant.
