@@ -4,24 +4,23 @@
     "step": {
       "user": {
         "title": "Select a smart plug",
-        "description": "Only switches whose Home Assistant device exposes both power and current sensors are shown.",
+        "description": "Only switches whose Home Assistant device exposes a current sensor are shown.",
         "data": {
           "outlet": "Smart plug"
         }
       },
       "settings": {
         "title": "Configure light and modes",
-        "description": "Sensors are limited to the selected smart plug.",
+        "description": "The current sensor is limited to the selected smart plug.",
         "data": {
           "name": "Light name",
-          "power_sensor": "Power sensor",
           "current_sensor": "Current sensor",
-          "power_threshold": "Power threshold",
+          "off_current_threshold": "OFF current threshold",
           "power_cycle_delay": "Power-cycle delay",
           "modes": "Brightness modes"
         },
         "data_description": {
-          "power_threshold": "Power at or below the threshold is treated as OFF; usually leave it at 0 W.",
+          "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
           "modes": "All modes are edited on one page and automatically sorted by current."
         }
       }
@@ -30,7 +29,7 @@
       "at_least_one_mode": "Add at least one mode"
     },
     "abort": {
-      "metering_entities_missing": "No power and current sensors were found for the selected plug"
+      "current_sensor_missing": "No current sensor was found for the selected plug"
     }
   },
   "options": {
@@ -39,14 +38,13 @@
         "title": "Configure multi-level light",
         "data": {
           "name": "Light name",
-          "power_sensor": "Power sensor",
           "current_sensor": "Current sensor",
-          "power_threshold": "Power threshold",
+          "off_current_threshold": "OFF current threshold",
           "power_cycle_delay": "Power-cycle delay",
           "modes": "Brightness modes"
         },
         "data_description": {
-          "power_threshold": "Power at or below the threshold is treated as OFF; usually leave it at 0 W.",
+          "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
           "modes": "All modes are edited on one page and automatically sorted by current."
         }
       }
