@@ -40,7 +40,6 @@ class SmartPlugMultiLevelLightCardEditor extends HTMLElement {
           },
           { name: "show_mode", selector: { boolean: {} } },
           { name: "show_percentage", selector: { boolean: {} } },
-          { name: "always_show_icon_background", selector: { boolean: {} } },
         ],
       },
       {
@@ -53,6 +52,7 @@ class SmartPlugMultiLevelLightCardEditor extends HTMLElement {
             name: "icon_tap_action",
             selector: { ui_action: { default_action: "more-info" } },
           },
+          { name: "always_show_icon_background", selector: { boolean: {} } },
         ],
       },
     ];
@@ -66,14 +66,18 @@ class SmartPlugMultiLevelLightCardEditor extends HTMLElement {
       show_mode: "Show mode name",
       show_percentage: "Show percentage",
       always_show_icon_background: "Always show icon background",
-      icon_tap_action: "Additional icon action",
+      icon_tap_action: "Icon tap behavior",
     })[schema.name];
   }
 
   _computeHelper(schema) {
     return ({
+      show_mode:
+        "Shows the brightness mode name detected from the configured current thresholds, for example Dim, Low, Medium, or High.",
+      show_percentage:
+        "Shows a synthetic brightness percentage derived from the mode position. For four modes this is 25%, 50%, 75%, and 100%. It is not measured light output and does not control brightness.",
       always_show_icon_background:
-        "Home Assistant normally shows the circular background only when Icon tap has a separate action. Enable this option to keep the background visible even when Icon tap is set to None.",
+        "Home Assistant normally shows the circular icon background only when the icon has its own action. Enable this option to keep the background visible even when Icon tap behavior is set to Nothing.",
     })[schema.name];
   }
 
@@ -214,12 +218,8 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
       entity: this.config.entity,
       tap_action: { action: "toggle" },
       hold_action: { action: "more-info" },
+      icon_tap_action: this.config.icon_tap_action || { action: "more-info" },
     };
-
-    const iconAction = this.config.icon_tap_action;
-    if (iconAction && iconAction.action !== "none") {
-      cfg.icon_tap_action = iconAction;
-    }
 
     if (this.config.name) cfg.name = this.config.name;
     if (this.config.icon) cfg.icon = this.config.icon;
@@ -318,7 +318,7 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
       if (!container) continue;
       container.classList.toggle(
         "background",
-        forceBackground || tileIcon.hasAttribute("interactive")
+        forceBackground || tileIcon.interactive === true
       );
     }
   }
