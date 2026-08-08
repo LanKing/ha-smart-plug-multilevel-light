@@ -154,7 +154,7 @@ def _settings_schema(
     return vol.Schema(
         {
             vol.Required(
-                "name", default=defaults.get("name", "Светильник")
+                "name", default=defaults.get("name", "Light")
             ): selector.TextSelector(),
             current_key: selector.selector({"entity": kwargs}),
             vol.Required(
