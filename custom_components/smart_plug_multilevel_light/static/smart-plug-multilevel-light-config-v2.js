@@ -141,6 +141,7 @@
         .spml-editor{display:flex;flex-direction:column;gap:24px;min-width:0}
         .spml-field{display:flex;flex-direction:column;gap:8px}
         .spml-label{font-size:14px;font-weight:500;color:var(--primary-text-color)}
+        .spml-label.spml-invalid{color:var(--error-color)}
         .spml-threshold-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
         .spml-measured{color:var(--secondary-text-color);font-size:14px;text-align:right}
         .spml-input-wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px}
@@ -150,17 +151,16 @@
         .spml-helper{color:var(--secondary-text-color);font-size:12px;line-height:1.45}
         .spml-inline-action{border:0;background:transparent;padding:0;margin-inline-start:4px;color:var(--primary-color);font:inherit;font-size:12px;font-weight:500;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
         .spml-inline-action:disabled{opacity:.5;cursor:default}
-        .spml-error{min-height:18px;color:var(--error-color);font-size:12px}
       </style>
       <div class="spml-editor">
         <div class="spml-field">
-          <label class="spml-label" for="spml-name">${common(selector, "ui.common.name", "Name")}</label>
+          <label class="spml-label spml-name-label" for="spml-name">${common(selector, "ui.common.name", "Name")}</label>
           <input id="spml-name" class="spml-input spml-name" type="text" required autocomplete="off" />
           <div class="spml-helper">${modeNameHelp(selector)}</div>
         </div>
         <div class="spml-field">
           <div class="spml-threshold-head">
-            <label class="spml-label" for="spml-current">${custom(selector, "current_threshold", "Current threshold")}</label>
+            <label class="spml-label spml-current-label" for="spml-current">${custom(selector, "current_threshold", "Current threshold")}</label>
             <span class="spml-measured"></span>
           </div>
           <div class="spml-input-wrap">
@@ -172,7 +172,6 @@
             <button type="button" class="spml-inline-action">${common(selector, "ui.common.apply", "Set")}</button>
           </div>
         </div>
-        <div class="spml-error"></div>
       </div>`;
 
     const footer = document.createElement("ha-dialog-footer");
@@ -186,11 +185,21 @@
 
     const nameInput = body.querySelector(".spml-name");
     const currentInput = body.querySelector(".spml-current");
+    const nameLabel = body.querySelector(".spml-name-label");
+    const currentLabel = body.querySelector(".spml-current-label");
     const measured = body.querySelector(".spml-measured");
     const applyMeasured = body.querySelector(".spml-inline-action");
-    const error = body.querySelector(".spml-error");
     nameInput.value = existing.name ?? "";
     currentInput.value = existing.current ?? "";
+
+    const clearInvalid = (label) => label?.classList.remove("spml-invalid");
+    const markInvalid = (input, label) => {
+      label?.classList.add("spml-invalid");
+      input.focus();
+    };
+
+    nameInput.addEventListener("input", () => clearInvalid(nameLabel));
+    currentInput.addEventListener("input", () => clearInvalid(currentLabel));
 
     const entityId = findCurrentSensor(selector);
     let measuredValue = null;
@@ -230,20 +239,21 @@
     footer.querySelector(".spml-cancel")?.addEventListener("click", close);
 
     const save = () => {
-      error.textContent = "";
-      if (!nameInput.checkValidity()) {
-        error.textContent = nameInput.validationMessage;
-        nameInput.focus();
-        return;
-      }
-      if (!currentInput.checkValidity() || !Number.isFinite(Number(currentInput.value))) {
-        error.textContent = currentInput.validationMessage || custom(selector, "required_current", "Enter a valid current value");
-        currentInput.focus();
+      clearInvalid(nameLabel);
+      clearInvalid(currentLabel);
+
+      const name = String(nameInput.value || "").trim();
+      if (!name || !nameInput.checkValidity()) {
+        markInvalid(nameInput, nameLabel);
         return;
       }
 
-      const name = String(nameInput.value || "").trim();
       const current = Number(currentInput.value);
+      if (!currentInput.checkValidity() || !Number.isFinite(current)) {
+        markInvalid(currentInput, currentLabel);
+        return;
+      }
+
       const next = Array.isArray(selector.value) ? selector.value.slice() : [];
       const item = { name, current };
       if (editing) next[index] = item; else next.push(item);
