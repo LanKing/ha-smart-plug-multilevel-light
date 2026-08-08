@@ -21,7 +21,8 @@
         },
         "data_description": {
           "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
-          "modes": "All modes are edited on one page and automatically sorted by current."
+          "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Switch the lamp to the first brightness level and add it below, then switch to the next level and repeat until all modes are added, for example High, Medium, Low, and Dim."
         }
       }
     },
@@ -45,7 +46,8 @@
         },
         "data_description": {
           "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
-          "modes": "All modes are edited on one page and automatically sorted by current."
+          "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Switch the lamp to the first brightness level and add it below, then switch to the next level and repeat until all modes are added, for example High, Medium, Low, and Dim."
         }
       }
     },
