@@ -7,6 +7,12 @@
   "iot_class": "local_push",
   "documentation": "https://github.com/LanKing/ha-smart-plug-multilevel-light",
   "issue_tracker": "https://github.com/LanKing/ha-smart-plug-multilevel-light/issues",
-  "codeowners": ["@LanKing"],
-  "dependencies": ["frontend", "http", "lovelace"]
+  "codeowners": [
+    "@LanKing"
+  ],
+  "dependencies": [
+    "frontend",
+    "http",
+    "lovelace"
+  ]
 }
