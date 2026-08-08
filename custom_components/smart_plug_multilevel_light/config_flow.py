@@ -171,7 +171,7 @@ def _settings_schema(
             ),
             vol.Required(
                 CONF_POWER_CYCLE_DELAY,
-                default=defaults.get(CONF_POWER_CYCLE_DELAY, 0),
+                default=defaults.get(CONF_POWER_CYCLE_DELAY, 0.7),
             ): selector.NumberSelector(
                 selector.NumberSelectorConfig(
                     min=0,
@@ -241,7 +241,7 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
         defaults: dict[str, Any] = {
             CONF_CURRENT_SENSOR: currents[0],
             CONF_OFF_CURRENT_THRESHOLD: 0.005,
-            CONF_POWER_CYCLE_DELAY: 0,
+            CONF_POWER_CYCLE_DELAY: 0.7,
             CONF_MODES: [],
         }
 
@@ -307,7 +307,7 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
             CONF_OFF_CURRENT_THRESHOLD: current.get(
                 CONF_OFF_CURRENT_THRESHOLD, 0.005
             ),
-            CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0),
+            CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0.7),
             CONF_MODES: current.get(CONF_MODES, []),
         }
 
