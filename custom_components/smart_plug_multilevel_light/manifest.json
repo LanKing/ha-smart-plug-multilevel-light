@@ -1,7 +1,7 @@
 {
   "domain": "smart_plug_multilevel_light",
   "name": "Smart Plug Multi-Level Light",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "config_flow": true,
   "integration_type": "helper",
   "iot_class": "local_push",
