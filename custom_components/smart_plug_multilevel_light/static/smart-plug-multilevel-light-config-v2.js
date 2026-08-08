@@ -31,8 +31,10 @@
     return numeric;
   };
 
-  const custom = (selector, key, fallback = key) =>
-    window.SPML_I18N?.t(selector.hass, key) ?? fallback;
+  const custom = (selector, key, fallback = key) => {
+    const value = window.SPML_I18N?.t(selector.hass, key);
+    return !value || value === key ? fallback : value;
+  };
 
   const common = (selector, key, fallback) =>
     window.SPML_I18N?.common(selector.hass, key, fallback) ??
@@ -43,6 +45,13 @@
     selector.hass?.localize?.("state.default.unavailable") ||
     selector.hass?.localize?.("ui.common.unavailable") ||
     "unavailable";
+
+  const modeNameHelp = (selector) => {
+    const language = String(selector.hass?.language || "en").toLowerCase();
+    return language.startsWith("ru")
+      ? "Например: High, Medium, Low или Dim."
+      : "For example: High, Medium, Low, or Dim.";
+  };
 
   const openEditor = (selector, index = null) => {
     const editing = index !== null;
@@ -67,14 +76,15 @@
         .spml-input:focus{border:2px solid var(--primary-color);padding:0 15px}
         .spml-unit{color:var(--secondary-text-color);font-size:16px}
         .spml-helper{color:var(--secondary-text-color);font-size:12px;line-height:1.45}
-        .spml-use{align-self:flex-start;border:0;background:transparent;padding:0;color:var(--primary-color);font:inherit;font-size:13px;font-weight:500;cursor:pointer}
-        .spml-use:disabled{opacity:.5;cursor:default}
+        .spml-inline-action{border:0;background:transparent;padding:0;margin-inline-start:4px;color:var(--primary-color);font:inherit;font-size:12px;font-weight:500;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+        .spml-inline-action:disabled{opacity:.5;cursor:default}
         .spml-error{min-height:18px;color:var(--error-color);font-size:12px}
       </style>
       <div class="spml-editor">
         <div class="spml-field">
           <label class="spml-label" for="spml-name">${common(selector, "ui.common.name", "Name")}</label>
           <input id="spml-name" class="spml-input spml-name" type="text" required autocomplete="off" />
+          <div class="spml-helper">${modeNameHelp(selector)}</div>
         </div>
         <div class="spml-field">
           <div class="spml-threshold-head">
@@ -85,8 +95,10 @@
             <input id="spml-current" class="spml-input spml-current" type="number" min="0" step="0.001" required inputmode="decimal" />
             <span class="spml-unit">A</span>
           </div>
-          <div class="spml-helper">${custom(selector, "threshold_help", "We recommend setting the threshold about 10% below the measured current because lamp consumption can vary slightly between measurements.")}</div>
-          <button type="button" class="spml-use">${custom(selector, "use_measured", "Add measured −10%")}</button>
+          <div class="spml-helper">
+            ${custom(selector, "threshold_help", "We recommend setting the threshold about 10% below the measured current because lamp consumption can vary slightly between measurements.")}
+            <button type="button" class="spml-inline-action">${common(selector, "ui.common.apply", "Set")}</button>
+          </div>
         </div>
         <div class="spml-error"></div>
       </div>`;
@@ -103,7 +115,7 @@
     const nameInput = body.querySelector(".spml-name");
     const currentInput = body.querySelector(".spml-current");
     const measured = body.querySelector(".spml-measured");
-    const useMeasured = body.querySelector(".spml-use");
+    const applyMeasured = body.querySelector(".spml-inline-action");
     const error = body.querySelector(".spml-error");
     nameInput.value = existing.name ?? "";
     currentInput.value = existing.current ?? "";
@@ -114,7 +126,7 @@
 
     const renderMeasured = (state) => {
       measuredValue = stateToAmps(state);
-      useMeasured.disabled = measuredValue === null;
+      applyMeasured.disabled = measuredValue === null;
       measured.textContent = measuredValue === null
         ? `${custom(selector, "measured_current", "Measured current")}: ${unavailableText(selector)}`
         : `${custom(selector, "measured_current", "Measured current")}: ${measuredValue.toFixed(3).replace(/0+$/, "").replace(/\.$/, "")} A`;
@@ -127,7 +139,7 @@
       }, "state_changed").then((unsub) => { unsubscribe = unsub; }).catch(() => {});
     }
 
-    useMeasured.addEventListener("click", () => {
+    applyMeasured.addEventListener("click", () => {
       if (measuredValue === null) return;
       currentInput.value = String(Number((measuredValue * 0.9).toFixed(3)));
       currentInput.dispatchEvent(new Event("input", { bubbles: true }));
