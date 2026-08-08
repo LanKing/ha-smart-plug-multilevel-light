@@ -21,7 +21,7 @@ jobs:
       - name: Decode and prepare Home Assistant brand icons
         shell: bash
         run: |
-          base64 -d custom_components/smart_plug_multilevel_light/brand/icon-new.tmp > /tmp/icon.png
+          cat custom_components/smart_plug_multilevel_light/brand/icon-prefix.tmp custom_components/smart_plug_multilevel_light/brand/icon-new.tmp | base64 -d > /tmp/icon.png
           python - <<'PY'
           from PIL import Image
           import json
@@ -30,7 +30,8 @@ jobs:
           brand = Path('custom_components/smart_plug_multilevel_light/brand')
           src = Image.open('/tmp/icon.png').convert('RGB')
           if src.size != (256, 256):
-              src = src.resize((256, 256), Image.Resampling.LANCZOS)
+              raise RuntimeError(f'Unexpected staged icon size: {src.size}')
+
           src.save(brand / 'icon.png', format='PNG', optimize=True, compress_level=9)
           src.resize((512, 512), Image.Resampling.LANCZOS).save(
               brand / 'icon@2x.png', format='PNG', optimize=True, compress_level=9
