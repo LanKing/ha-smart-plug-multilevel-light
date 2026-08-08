@@ -53,6 +53,48 @@
       : "For example: High, Medium, Low, or Dim.";
   };
 
+  const ensureModesHelper = (selector) => {
+    if (!selector?.shadowRoot || !isModesSelector(selector) || !selector.helper) return;
+
+    let helper = selector.shadowRoot.querySelector(".spml-modes-helper");
+    if (!helper) {
+      helper = document.createElement("ha-input-helper-text");
+      helper.className = "spml-modes-helper";
+      const container = selector.shadowRoot.querySelector(".items-container");
+      if (container) container.insertAdjacentElement("afterend", helper);
+      else selector.shadowRoot.append(helper);
+    }
+    helper.textContent = selector.helper;
+  };
+
+  const walkShadowRoots = (root, callback) => {
+    if (!root?.querySelectorAll) return;
+    for (const selector of root.querySelectorAll("ha-selector-object")) callback(selector);
+    for (const element of root.querySelectorAll("*")) {
+      if (element.shadowRoot) walkShadowRoots(element.shadowRoot, callback);
+    }
+  };
+
+  const refreshModesHelpers = () => walkShadowRoots(document, ensureModesHelper);
+
+  customElements.whenDefined("ha-selector-object").then(() => {
+    const ctor = customElements.get("ha-selector-object");
+    const proto = ctor?.prototype;
+    if (proto && !proto.__spmlHelperPatched) {
+      const originalUpdated = proto.updated;
+      proto.updated = function (...args) {
+        const result = originalUpdated?.apply(this, args);
+        queueMicrotask(() => ensureModesHelper(this));
+        return result;
+      };
+      proto.__spmlHelperPatched = true;
+    }
+    refreshModesHelpers();
+    setTimeout(refreshModesHelpers, 100);
+    setTimeout(refreshModesHelpers, 500);
+    setTimeout(refreshModesHelpers, 1500);
+  });
+
   const openEditor = (selector, index = null) => {
     const editing = index !== null;
     const existing = editing && Array.isArray(selector.value) ? selector.value[index] || {} : {};
