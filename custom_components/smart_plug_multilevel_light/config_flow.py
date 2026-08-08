@@ -94,9 +94,8 @@ def _outlet_schema(hass, default: str | None = None) -> vol.Schema:
 def _modes_selector():
     """Return a native object selector.
 
-    The bundled frontend module enhances its Add/Edit dialogs with a measured-current
-    display and Refresh button. If that module has not loaded yet, Home Assistant's
-    normal object editor remains fully functional instead of hiding the field.
+    The bundled frontend module enhances its Add/Edit dialogs with live measured
+    current while Home Assistant's native object selector remains the fallback.
     """
     return selector.selector(
         {
@@ -172,10 +171,10 @@ def _settings_schema(
             ),
             vol.Required(
                 CONF_POWER_CYCLE_DELAY,
-                default=defaults.get(CONF_POWER_CYCLE_DELAY, 0.7),
+                default=defaults.get(CONF_POWER_CYCLE_DELAY, 0),
             ): selector.NumberSelector(
                 selector.NumberSelectorConfig(
-                    min=0.1,
+                    min=0,
                     max=10,
                     step=0.1,
                     unit_of_measurement="s",
@@ -242,6 +241,7 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
         defaults: dict[str, Any] = {
             CONF_CURRENT_SENSOR: currents[0],
             CONF_OFF_CURRENT_THRESHOLD: 0.005,
+            CONF_POWER_CYCLE_DELAY: 0,
             CONF_MODES: [],
         }
 
@@ -307,7 +307,7 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
             CONF_OFF_CURRENT_THRESHOLD: current.get(
                 CONF_OFF_CURRENT_THRESHOLD, 0.005
             ),
-            CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0.7),
+            CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0),
             CONF_MODES: current.get(CONF_MODES, []),
         }
 
