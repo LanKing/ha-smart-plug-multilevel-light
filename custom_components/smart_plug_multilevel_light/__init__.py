@@ -15,7 +15,7 @@ from .const import DOMAIN, PLATFORMS
 
 _LOGGER = logging.getLogger(__name__)
 
-_VERSION = "0.7.0"
+_VERSION = "0.7.1"
 _CARD_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-card.js"
 _CARD_URL = f"{_CARD_PATH}?v={_VERSION}"
 _CARD_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-card.js"
