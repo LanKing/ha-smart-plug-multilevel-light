@@ -182,6 +182,11 @@
     const iconButton = path.find((node) => node?.tagName?.toLowerCase?.() === "ha-icon-button");
     if (!button && !iconButton) return;
 
+    // Home Assistant's edit icon carries both `item` and `index`; the delete icon
+    // carries only `index`. Leave delete clicks untouched so HA's native
+    // _deleteItem handler removes the row instead of opening our editor.
+    if (iconButton && iconButton.item === undefined) return;
+
     event.preventDefault();
     event.stopImmediatePropagation();
 
