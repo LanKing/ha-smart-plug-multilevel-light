@@ -1,4 +1,6 @@
 (() => {
+  const DOMAIN = "smart_plug_multilevel_light";
+
   const isModesSelector = (selector) => {
     const object = selector?.selector?.object;
     return Boolean(
@@ -68,8 +70,21 @@
       .replace(/๑๐\s?%/g, "๑๕%");
   };
 
+  const getModesHelperText = (selector) => {
+    const localize = selector?.hass?.localize?.bind(selector.hass);
+    if (!localize) return "";
+    return (
+      localize(`component.${DOMAIN}.options.step.init.data_description.modes`) ||
+      localize(`component.${DOMAIN}.config.step.settings.data_description.modes`) ||
+      ""
+    );
+  };
+
   const ensureModesHelper = (selector) => {
-    if (!selector?.shadowRoot || !isModesSelector(selector) || !selector.helper) return;
+    if (!selector?.shadowRoot || !isModesSelector(selector)) return;
+
+    const text = getModesHelperText(selector);
+    if (!text) return;
 
     let helper = selector.shadowRoot.querySelector(".spml-modes-helper");
     if (!helper) {
@@ -79,7 +94,7 @@
       if (container) container.insertAdjacentElement("afterend", helper);
       else selector.shadowRoot.append(helper);
     }
-    helper.textContent = selector.helper;
+    helper.textContent = text;
   };
 
   const walkShadowRoots = (root, callback) => {
@@ -180,6 +195,7 @@
     const entityId = findCurrentSensor(selector);
     let measuredValue = null;
     let unsubscribe = null;
+    let closed = false;
 
     const renderMeasured = (state) => {
       measuredValue = stateToAmps(state);
@@ -193,7 +209,13 @@
     if (entityId && selector.hass?.connection?.subscribeEvents) {
       selector.hass.connection.subscribeEvents((event) => {
         if (event?.data?.entity_id === entityId) renderMeasured(event.data.new_state);
-      }, "state_changed").then((unsub) => { unsubscribe = unsub; }).catch(() => {});
+      }, "state_changed").then((unsub) => {
+        if (closed) {
+          try { unsub(); } catch (_) {}
+          return;
+        }
+        unsubscribe = unsub;
+      }).catch(() => {});
     }
 
     applyMeasured.addEventListener("click", () => {
@@ -235,6 +257,7 @@
       if (event.key === "Enter") { event.preventDefault(); save(); }
     });
     dialog.addEventListener("closed", () => {
+      closed = true;
       try { unsubscribe?.(); } catch (_) {}
       dialog.remove();
     }, { once: true });
@@ -251,9 +274,6 @@
     const iconButton = path.find((node) => node?.tagName?.toLowerCase?.() === "ha-icon-button");
     if (!button && !iconButton) return;
 
-    // Home Assistant's edit icon carries both `item` and `index`; the delete icon
-    // carries only `index`. Leave delete clicks untouched so HA's native
-    // _deleteItem handler removes the row instead of opening our editor.
     if (iconButton && iconButton.item === undefined) return;
 
     event.preventDefault();
