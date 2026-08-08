@@ -53,6 +53,21 @@
       : "For example: High, Medium, Low, or Dim.";
   };
 
+  const thresholdHelp = (selector) => {
+    const text = custom(
+      selector,
+      "threshold_help",
+      "We recommend setting the threshold about 15% below the measured current because lamp consumption can vary slightly between measurements."
+    );
+    return text
+      .replace(/10\s?%/g, "15%")
+      .replace(/۱۰\s?٪/g, "۱۵٪")
+      .replace(/١٠\s?٪/g, "١٥٪")
+      .replace(/१०\s?%/g, "१५%")
+      .replace(/১০\s?%/g, "১৫%")
+      .replace(/๑๐\s?%/g, "๑๕%");
+  };
+
   const ensureModesHelper = (selector) => {
     if (!selector?.shadowRoot || !isModesSelector(selector) || !selector.helper) return;
 
@@ -138,7 +153,7 @@
             <span class="spml-unit">A</span>
           </div>
           <div class="spml-helper">
-            ${custom(selector, "threshold_help", "We recommend setting the threshold about 10% below the measured current because lamp consumption can vary slightly between measurements.")}
+            ${thresholdHelp(selector)}
             <button type="button" class="spml-inline-action">${common(selector, "ui.common.apply", "Set")}</button>
           </div>
         </div>
@@ -183,7 +198,7 @@
 
     applyMeasured.addEventListener("click", () => {
       if (measuredValue === null) return;
-      currentInput.value = String(Number((measuredValue * 0.9).toFixed(3)));
+      currentInput.value = String(Number((measuredValue * 0.85).toFixed(3)));
       currentInput.dispatchEvent(new Event("input", { bubbles: true }));
       currentInput.focus();
       currentInput.select();
