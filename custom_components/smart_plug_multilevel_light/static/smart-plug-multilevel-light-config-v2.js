@@ -36,12 +36,16 @@
     const ru = {
       add_mode: "Добавить режим", edit_mode: "Изменить режим", mode_name: "Название режима",
       current_threshold: "Порог тока", measured_current: "Измеренный ток", unavailable: "недоступен",
+      threshold_helper: "Рекомендуем задавать порог примерно на 10% ниже измеренного тока: потребление лампы может немного меняться в зависимости от условий и момента измерения.",
+      use_measured_minus_10: "Добавить",
       cancel: "Отмена", add: "Добавить", save: "Сохранить",
       required_name: "Введите название режима", required_current: "Введите корректный ток"
     };
     const en = {
       add_mode: "Add mode", edit_mode: "Edit mode", mode_name: "Mode name",
       current_threshold: "Current threshold", measured_current: "Measured current", unavailable: "unavailable",
+      threshold_helper: "We recommend setting the threshold about 10% below the measured current, because the lamp's consumption can vary slightly between measurements and operating conditions.",
+      use_measured_minus_10: "Add",
       cancel: "Cancel", add: "Add", save: "Save",
       required_name: "Enter a mode name", required_current: "Enter a valid current"
     };
@@ -62,12 +66,14 @@
         .spml-field{display:flex;flex-direction:column;gap:8px}
         .spml-label{font-size:14px;font-weight:500;color:var(--primary-text-color)}
         .spml-threshold-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
-        .spml-measured{color:var(--secondary-text-color);font-size:14px;text-align:right;cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px}
-        .spml-measured.unavailable{cursor:default;text-decoration:none}
+        .spml-measured{color:var(--secondary-text-color);font-size:14px;text-align:right}
         .spml-input-wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px}
         .spml-input{box-sizing:border-box;width:100%;min-height:56px;padding:0 16px;border:1px solid var(--outline-color,var(--divider-color));border-radius:12px;background:var(--card-background-color);color:var(--primary-text-color);font:inherit;font-size:16px;outline:none}
         .spml-input:focus{border:2px solid var(--primary-color);padding:0 15px}
         .spml-unit{color:var(--secondary-text-color);font-size:16px}
+        .spml-helper{color:var(--secondary-text-color);font-size:12px;line-height:1.4}
+        .spml-use-measured{display:inline-block;margin-top:2px;color:var(--primary-color);font-size:13px;font-weight:500;text-decoration:none;cursor:pointer}
+        .spml-use-measured.disabled{color:var(--secondary-text-color);cursor:default;opacity:.6}
         .spml-error{min-height:18px;color:var(--error-color);font-size:12px}
       </style>
       <div class="spml-editor">
@@ -84,6 +90,8 @@
             <input id="spml-current" class="spml-input spml-current" type="number" min="0" step="0.001" inputmode="decimal" />
             <span class="spml-unit">A</span>
           </div>
+          <div class="spml-helper">${t(selector, "threshold_helper")}</div>
+          <a class="spml-use-measured" role="button" tabindex="0">${t(selector, "use_measured_minus_10")}</a>
         </div>
         <div class="spml-error"></div>
       </div>`;
@@ -100,6 +108,7 @@
     const nameInput = body.querySelector(".spml-name");
     const currentInput = body.querySelector(".spml-current");
     const measured = body.querySelector(".spml-measured");
+    const useMeasured = body.querySelector(".spml-use-measured");
     const error = body.querySelector(".spml-error");
     nameInput.value = existing.name ?? "";
     currentInput.value = existing.current ?? "";
@@ -110,10 +119,11 @@
 
     const renderMeasured = (state) => {
       measuredValue = stateToAmps(state);
-      measured.classList.toggle("unavailable", measuredValue === null);
       measured.textContent = measuredValue === null
         ? `${t(selector, "measured_current")}: ${t(selector, "unavailable")}`
         : `${t(selector, "measured_current")}: ${measuredValue.toFixed(3).replace(/0+$/, "").replace(/\.$/, "")} A`;
+      useMeasured.classList.toggle("disabled", measuredValue === null);
+      useMeasured.setAttribute("aria-disabled", measuredValue === null ? "true" : "false");
     };
 
     renderMeasured(entityId ? selector.hass?.states?.[entityId] : undefined);
@@ -123,11 +133,24 @@
       }, "state_changed").then((unsub) => { unsubscribe = unsub; }).catch(() => {});
     }
 
-    measured.addEventListener("click", () => {
+    const applyMeasuredMinus10 = () => {
       if (measuredValue === null) return;
-      currentInput.value = String(Number(measuredValue.toFixed(3)));
+      const recommended = Number((measuredValue * 0.9).toFixed(3));
+      currentInput.value = String(recommended);
+      currentInput.dispatchEvent(new Event("input", { bubbles: true }));
       currentInput.focus();
       currentInput.select();
+    };
+
+    useMeasured.addEventListener("click", (event) => {
+      event.preventDefault();
+      applyMeasuredMinus10();
+    });
+    useMeasured.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        applyMeasuredMinus10();
+      }
     });
 
     const close = () => { dialog.open = false; };
@@ -149,7 +172,7 @@
 
     footer.querySelector(".spml-save")?.addEventListener("click", save);
     body.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") { event.preventDefault(); save(); }
+      if (event.key === "Enter" && event.target !== useMeasured) { event.preventDefault(); save(); }
     });
     dialog.addEventListener("closed", () => {
       try { unsubscribe?.(); } catch (_) {}
