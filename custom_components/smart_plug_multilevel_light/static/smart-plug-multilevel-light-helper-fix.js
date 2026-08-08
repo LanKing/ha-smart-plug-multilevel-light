@@ -15,10 +15,6 @@
   const getModesHelperText = (selector) => {
     const localize = selector?.hass?.localize?.bind(selector.hass);
     if (!localize) return "";
-
-    // Options/config-flow translations are already loaded by Home Assistant before
-    // the form is rendered. Read the translated string directly instead of trying
-    // to stringify selector.helper, which is a Lit TemplateResult for data_description.
     return (
       localize(`component.${DOMAIN}.options.step.init.data_description.modes`) ||
       localize(`component.${DOMAIN}.config.step.settings.data_description.modes`) ||
@@ -32,16 +28,42 @@
     const text = getModesHelperText(selector);
     if (!text) return;
 
-    let helper = selector.shadowRoot.querySelector(".spml-modes-helper");
+    const root = selector.shadowRoot;
+    const label = root.querySelector("label");
+    const container = root.querySelector(".items-container");
+    if (!container) return;
+
+    let helper = root.querySelector(".spml-modes-helper");
+
+    // The main config UI may create a ha-input-helper-text below the Add button.
+    // Replace it with a plain block so it aligns exactly with the field heading.
+    if (helper && helper.tagName?.toLowerCase() !== "div") {
+      const replacement = document.createElement("div");
+      replacement.className = "spml-modes-helper";
+      helper.replaceWith(replacement);
+      helper = replacement;
+    }
+
     if (!helper) {
-      helper = document.createElement("ha-input-helper-text");
+      helper = document.createElement("div");
       helper.className = "spml-modes-helper";
-      const container = selector.shadowRoot.querySelector(".items-container");
-      if (container) container.insertAdjacentElement("afterend", helper);
-      else selector.shadowRoot.append(helper);
     }
 
     helper.textContent = text;
+    helper.style.cssText = [
+      "display:block",
+      "margin:0 0 12px 0",
+      "padding:0",
+      "color:var(--secondary-text-color)",
+      "font-size:12px",
+      "line-height:1.45",
+      "text-align:start",
+      "max-width:100%"
+    ].join(";");
+
+    // Requested layout: heading -> helper -> configured modes / Add button.
+    if (label) label.insertAdjacentElement("afterend", helper);
+    else container.insertAdjacentElement("beforebegin", helper);
   };
 
   const walk = (root) => {
