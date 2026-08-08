@@ -48,12 +48,8 @@
     selector.hass?.localize?.("ui.common.unavailable") ||
     "unavailable";
 
-  const modeNameHelp = (selector) => {
-    const language = String(selector.hass?.language || "en").toLowerCase();
-    return language.startsWith("ru")
-      ? "Например: High, Medium, Low или Dim."
-      : "For example: High, Medium, Low, or Dim.";
-  };
+  const modeNameHelp = (selector) =>
+    custom(selector, "mode_name_help", "For example: High, Medium, Low, or Dim.");
 
   const thresholdHelp = (selector) => {
     const text = custom(
@@ -63,6 +59,7 @@
     );
     return text
       .replace(/10\s?%/g, "15%")
+      .replace(/10\s?٪/g, "15٪")
       .replace(/۱۰\s?٪/g, "۱۵٪")
       .replace(/١٠\s?٪/g, "١٥٪")
       .replace(/१०\s?%/g, "१५%")
