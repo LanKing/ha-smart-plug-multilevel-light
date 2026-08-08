@@ -193,10 +193,7 @@
     currentInput.value = existing.current ?? "";
 
     const clearInvalid = (label) => label?.classList.remove("spml-invalid");
-    const markInvalid = (input, label) => {
-      label?.classList.add("spml-invalid");
-      input.focus();
-    };
+    const markInvalid = (label) => label?.classList.add("spml-invalid");
 
     nameInput.addEventListener("input", () => clearInvalid(nameLabel));
     currentInput.addEventListener("input", () => clearInvalid(currentLabel));
@@ -243,14 +240,21 @@
       clearInvalid(currentLabel);
 
       const name = String(nameInput.value || "").trim();
-      if (!name || !nameInput.checkValidity()) {
-        markInvalid(nameInput, nameLabel);
-        return;
-      }
-
       const current = Number(currentInput.value);
-      if (!currentInput.checkValidity() || !Number.isFinite(current)) {
-        markInvalid(currentInput, currentLabel);
+      const nameValid = Boolean(name) && nameInput.checkValidity();
+      const currentValid = currentInput.checkValidity() && Number.isFinite(current);
+
+      const invalidInputs = [];
+      if (!nameValid) {
+        markInvalid(nameLabel);
+        invalidInputs.push(nameInput);
+      }
+      if (!currentValid) {
+        markInvalid(currentLabel);
+        invalidInputs.push(currentInput);
+      }
+      if (invalidInputs.length) {
+        invalidInputs[0].focus();
         return;
       }
 
