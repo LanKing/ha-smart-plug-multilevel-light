@@ -1,1 +1,59 @@
-{"title":"Daugiapakopė šviesa per išmanųjį lizdą","config":{"step":{"user":{"title":"Pasirinkite išmanųjį lizdą","description":"Rodomi tik lizdai su srovės jutikliu.","data":{"outlet":"Išmanusis lizdas"}},"settings":{"title":"Konfigūruokite šviesą ir režimus","description":"Srovės jutiklis apribotas pasirinktu lizdu.","data":{"name":"Šviesos pavadinimas","current_sensor":"Srovės jutiklis","off_current_threshold":"OFF srovės slenkstis","power_cycle_delay":"Maitinimo ciklo delsa","modes":"Ryškumo režimai"},"data_description":{"off_current_threshold":"Srovė ties šiuo slenksčiu arba žemiau laikoma OFF.","modes":"Režimai automatiškai rūšiuojami pagal srovę."}}},"error":{"at_least_one_mode":"Pridėkite bent vieną režimą"},"abort":{"current_sensor_missing":"Pasirinktam lizdui nerastas srovės jutiklis"}},"options":{"step":{"init":{"title":"Konfigūruokite daugiapakopę šviesą","data":{"name":"Šviesos pavadinimas","current_sensor":"Srovės jutiklis","off_current_threshold":"OFF srovės slenkstis","power_cycle_delay":"Maitinimo ciklo delsa","modes":"Ryškumo režimai"},"data_description":{"off_current_threshold":"Srovė ties šiuo slenksčiu arba žemiau laikoma OFF.","modes":"Režimai automatiškai rūšiuojami pagal srovę."}}},"error":{"at_least_one_mode":"Pridėkite bent vieną režimą"}}}
+{
+  "title": "Daugiapakopė šviesa per išmanųjį lizdą",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pasirinkite išmanųjį lizdą",
+        "description": "Rodomi tik lizdai su srovės jutikliu.",
+        "data": {
+          "outlet": "Išmanusis lizdas"
+        }
+      },
+      "settings": {
+        "title": "Konfigūruokite šviesą ir režimus",
+        "data": {
+          "name": "Šviesos pavadinimas",
+          "current_sensor": "Srovės jutiklis",
+          "off_current_threshold": "OFF srovės slenkstis",
+          "power_cycle_delay": "Maitinimo ciklo delsa",
+          "modes": "Ryškumo režimai"
+        },
+        "data_description": {
+          "off_current_threshold": "Srovė ties šiuo slenksčiu arba žemiau laikoma OFF.",
+          "modes": "Pirmiausia išmokykite integraciją naujos lempos ryškumo režimų. Fiziniu lempos mygtuku pasirinkite kiekvieną lygį ir pridėkite jį žemiau, pavyzdžiui, High, Medium, Low ir Dim.",
+          "current_sensor": "Čia pasiekiami tik pasirinktam išmaniajam lizdui priklausantys srovės jutikliai.",
+          "power_cycle_delay": "Paprastai papildomo delsimo nereikia. Jei savo mygtuku išjungta lempa neįsijungia iš Home Assistant, nustatykite nedidelį delsą, pavyzdžiui, 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Pridėkite bent vieną režimą"
+    },
+    "abort": {
+      "current_sensor_missing": "Pasirinktam lizdui nerastas srovės jutiklis"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfigūruokite daugiapakopę šviesą",
+        "data": {
+          "name": "Šviesos pavadinimas",
+          "current_sensor": "Srovės jutiklis",
+          "off_current_threshold": "OFF srovės slenkstis",
+          "power_cycle_delay": "Maitinimo ciklo delsa",
+          "modes": "Ryškumo režimai"
+        },
+        "data_description": {
+          "off_current_threshold": "Srovė ties šiuo slenksčiu arba žemiau laikoma OFF.",
+          "modes": "Pirmiausia išmokykite integraciją naujos lempos ryškumo režimų. Fiziniu lempos mygtuku pasirinkite kiekvieną lygį ir pridėkite jį žemiau, pavyzdžiui, High, Medium, Low ir Dim.",
+          "current_sensor": "Čia pasiekiami tik pasirinktam išmaniajam lizdui priklausantys srovės jutikliai.",
+          "power_cycle_delay": "Paprastai papildomo delsimo nereikia. Jei savo mygtuku išjungta lempa neįsijungia iš Home Assistant, nustatykite nedidelį delsą, pavyzdžiui, 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Pridėkite bent vieną režimą"
+    }
+  }
+}

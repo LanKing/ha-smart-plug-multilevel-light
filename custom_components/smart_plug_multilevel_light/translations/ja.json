@@ -1,1 +1,59 @@
-{"title":"スマートプラグ多段階ライト","config":{"step":{"user":{"title":"スマートプラグを選択","description":"電流センサーを持つプラグのみ表示されます。","data":{"outlet":"スマートプラグ"}},"settings":{"title":"ライトとモードを設定","description":"電流センサーは選択したプラグに限定されます。","data":{"name":"ライト名","current_sensor":"電流センサー","off_current_threshold":"OFF 電流しきい値","power_cycle_delay":"電源サイクル遅延","modes":"明るさモード"},"data_description":{"off_current_threshold":"このしきい値以下の電流は OFF とみなされます。","modes":"モードは電流順に自動で並べ替えられます。"}}},"error":{"at_least_one_mode":"少なくとも1つのモードを追加してください"},"abort":{"current_sensor_missing":"選択したプラグの電流センサーが見つかりません"}},"options":{"step":{"init":{"title":"多段階ライトを設定","data":{"name":"ライト名","current_sensor":"電流センサー","off_current_threshold":"OFF 電流しきい値","power_cycle_delay":"電源サイクル遅延","modes":"明るさモード"},"data_description":{"off_current_threshold":"このしきい値以下の電流は OFF とみなされます。","modes":"モードは電流順に自動で並べ替えられます。"}}},"error":{"at_least_one_mode":"少なくとも1つのモードを追加してください"}}}
+{
+  "title": "スマートプラグ多段階ライト",
+  "config": {
+    "step": {
+      "user": {
+        "title": "スマートプラグを選択",
+        "description": "電流センサーを持つプラグのみ表示されます。",
+        "data": {
+          "outlet": "スマートプラグ"
+        }
+      },
+      "settings": {
+        "title": "ライトとモードを設定",
+        "data": {
+          "name": "ライト名",
+          "current_sensor": "電流センサー",
+          "off_current_threshold": "OFF 電流しきい値",
+          "power_cycle_delay": "電源サイクル遅延",
+          "modes": "明るさモード"
+        },
+        "data_description": {
+          "off_current_threshold": "このしきい値以下の電流は OFF とみなされます。",
+          "modes": "新しいランプでは、最初に明るさモードを統合に学習させます。ランプ本体の物理ボタンで各明るさレベルを選び、下に追加してください。例: High、Medium、Low、Dim。",
+          "current_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。",
+          "power_cycle_delay": "通常、追加の遅延は不要です。ランプ本体のボタンで消灯した後、Home Assistant から点灯できない場合は、0.7 秒などの短い遅延を設定してください。"
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "少なくとも1つのモードを追加してください"
+    },
+    "abort": {
+      "current_sensor_missing": "選択したプラグの電流センサーが見つかりません"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "多段階ライトを設定",
+        "data": {
+          "name": "ライト名",
+          "current_sensor": "電流センサー",
+          "off_current_threshold": "OFF 電流しきい値",
+          "power_cycle_delay": "電源サイクル遅延",
+          "modes": "明るさモード"
+        },
+        "data_description": {
+          "off_current_threshold": "このしきい値以下の電流は OFF とみなされます。",
+          "modes": "新しいランプでは、最初に明るさモードを統合に学習させます。ランプ本体の物理ボタンで各明るさレベルを選び、下に追加してください。例: High、Medium、Low、Dim。",
+          "current_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。",
+          "power_cycle_delay": "通常、追加の遅延は不要です。ランプ本体のボタンで消灯した後、Home Assistant から点灯できない場合は、0.7 秒などの短い遅延を設定してください。"
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "少なくとも1つのモードを追加してください"
+    }
+  }
+}

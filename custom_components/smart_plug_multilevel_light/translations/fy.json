@@ -1,1 +1,59 @@
-{"title":"Mearnivo-ljocht fia smartstekker","config":{"step":{"user":{"title":"Kies in smartstekker","description":"Allinnich stekkers mei in stroomsensor wurde toand.","data":{"outlet":"Smartstekker"}},"settings":{"title":"Stel ljocht en modi yn","description":"De stroomsensor is beheind ta de keazen stekker.","data":{"name":"Ljochtnamme","current_sensor":"Stroomsensor","off_current_threshold":"OFF-stroomdrompel","power_cycle_delay":"Fertraging by stroomsyklus","modes":"Helderheidsmodi"},"data_description":{"off_current_threshold":"Stroom op of ûnder dizze drompel wurdt as OFF beskôge.","modes":"Modi wurde automatysk op stroom sortearre."}}},"error":{"at_least_one_mode":"Foegje op syn minst ien modus ta"},"abort":{"current_sensor_missing":"Gjin stroomsensor fûn foar de keazen stekker"}},"options":{"step":{"init":{"title":"Stel mearnivo-ljocht yn","data":{"name":"Ljochtnamme","current_sensor":"Stroomsensor","off_current_threshold":"OFF-stroomdrompel","power_cycle_delay":"Fertraging by stroomsyklus","modes":"Helderheidsmodi"},"data_description":{"off_current_threshold":"Stroom op of ûnder dizze drompel wurdt as OFF beskôge.","modes":"Modi wurde automatysk op stroom sortearre."}}},"error":{"at_least_one_mode":"Foegje op syn minst ien modus ta"}}}
+{
+  "title": "Mearnivo-ljocht fia smartstekker",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kies in smartstekker",
+        "description": "Allinnich stekkers mei in stroomsensor wurde toand.",
+        "data": {
+          "outlet": "Smartstekker"
+        }
+      },
+      "settings": {
+        "title": "Stel ljocht en modi yn",
+        "data": {
+          "name": "Ljochtnamme",
+          "current_sensor": "Stroomsensor",
+          "off_current_threshold": "OFF-stroomdrompel",
+          "power_cycle_delay": "Fertraging by stroomsyklus",
+          "modes": "Helderheidsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Stroom op of ûnder dizze drompel wurdt as OFF beskôge.",
+          "modes": "Lear de yntegraasje earst de helderheidsmodi fan de nije lampe. Selektearje mei de fysike knop op de lampe elk nivo en foegje it hjirûnder ta, bygelyks High, Medium, Low en Dim.",
+          "current_sensor": "Hjir binne allinnich stroomsensors beskikber dy't by de selektearre smartstekker hearre.",
+          "power_cycle_delay": "Meastal is gjin ekstra fertraging nedich. As in lampe dy't mei de eigen knop útset is net oangiet fanút Home Assistant, stel dan in lytse fertraging yn, bygelyks 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Foegje op syn minst ien modus ta"
+    },
+    "abort": {
+      "current_sensor_missing": "Gjin stroomsensor fûn foar de keazen stekker"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Stel mearnivo-ljocht yn",
+        "data": {
+          "name": "Ljochtnamme",
+          "current_sensor": "Stroomsensor",
+          "off_current_threshold": "OFF-stroomdrompel",
+          "power_cycle_delay": "Fertraging by stroomsyklus",
+          "modes": "Helderheidsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Stroom op of ûnder dizze drompel wurdt as OFF beskôge.",
+          "modes": "Lear de yntegraasje earst de helderheidsmodi fan de nije lampe. Selektearje mei de fysike knop op de lampe elk nivo en foegje it hjirûnder ta, bygelyks High, Medium, Low en Dim.",
+          "current_sensor": "Hjir binne allinnich stroomsensors beskikber dy't by de selektearre smartstekker hearre.",
+          "power_cycle_delay": "Meastal is gjin ekstra fertraging nedich. As in lampe dy't mei de eigen knop útset is net oangiet fanút Home Assistant, stel dan in lytse fertraging yn, bygelyks 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Foegje op syn minst ien modus ta"
+    }
+  }
+}

@@ -1,1 +1,59 @@
-{"title":"Flernivåljus via smart uttag","config":{"step":{"user":{"title":"Välj ett smart uttag","description":"Endast uttag med strömsensor visas.","data":{"outlet":"Smart uttag"}},"settings":{"title":"Konfigurera ljus och lägen","description":"Strömsensorn är begränsad till det valda uttaget.","data":{"name":"Ljusnamn","current_sensor":"Strömsensor","off_current_threshold":"OFF-strömtröskel","power_cycle_delay":"Fördröjning för strömcykel","modes":"Ljusstyrkelägen"},"data_description":{"off_current_threshold":"Ström på eller under denna tröskel behandlas som OFF.","modes":"Lägen sorteras automatiskt efter ström."}}},"error":{"at_least_one_mode":"Lägg till minst ett läge"},"abort":{"current_sensor_missing":"Ingen strömsensor hittades för det valda uttaget"}},"options":{"step":{"init":{"title":"Konfigurera flernivåljus","data":{"name":"Ljusnamn","current_sensor":"Strömsensor","off_current_threshold":"OFF-strömtröskel","power_cycle_delay":"Fördröjning för strömcykel","modes":"Ljusstyrkelägen"},"data_description":{"off_current_threshold":"Ström på eller under denna tröskel behandlas som OFF.","modes":"Lägen sorteras automatiskt efter ström."}}},"error":{"at_least_one_mode":"Lägg till minst ett läge"}}}
+{
+  "title": "Flernivåljus via smart uttag",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Välj ett smart uttag",
+        "description": "Endast uttag med strömsensor visas.",
+        "data": {
+          "outlet": "Smart uttag"
+        }
+      },
+      "settings": {
+        "title": "Konfigurera ljus och lägen",
+        "data": {
+          "name": "Ljusnamn",
+          "current_sensor": "Strömsensor",
+          "off_current_threshold": "OFF-strömtröskel",
+          "power_cycle_delay": "Fördröjning för strömcykel",
+          "modes": "Ljusstyrkelägen"
+        },
+        "data_description": {
+          "off_current_threshold": "Ström på eller under denna tröskel behandlas som OFF.",
+          "modes": "Lär först integrationen den nya lampans ljusstyrkelägen. Använd lampans fysiska knapp för att välja varje nivå och lägg till den nedan, till exempel High, Medium, Low och Dim.",
+          "current_sensor": "Här är bara strömsensorer som tillhör den valda smarta kontakten tillgängliga.",
+          "power_cycle_delay": "Vanligtvis behövs ingen extra fördröjning. Om en lampa som stängts av med sin egen knapp inte tänds från Home Assistant, ställ in en liten fördröjning, till exempel 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Lägg till minst ett läge"
+    },
+    "abort": {
+      "current_sensor_missing": "Ingen strömsensor hittades för det valda uttaget"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfigurera flernivåljus",
+        "data": {
+          "name": "Ljusnamn",
+          "current_sensor": "Strömsensor",
+          "off_current_threshold": "OFF-strömtröskel",
+          "power_cycle_delay": "Fördröjning för strömcykel",
+          "modes": "Ljusstyrkelägen"
+        },
+        "data_description": {
+          "off_current_threshold": "Ström på eller under denna tröskel behandlas som OFF.",
+          "modes": "Lär först integrationen den nya lampans ljusstyrkelägen. Använd lampans fysiska knapp för att välja varje nivå och lägg till den nedan, till exempel High, Medium, Low och Dim.",
+          "current_sensor": "Här är bara strömsensorer som tillhör den valda smarta kontakten tillgängliga.",
+          "power_cycle_delay": "Vanligtvis behövs ingen extra fördröjning. Om en lampa som stängts av med sin egen knapp inte tänds från Home Assistant, ställ in en liten fördröjning, till exempel 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Lägg till minst ett läge"
+    }
+  }
+}

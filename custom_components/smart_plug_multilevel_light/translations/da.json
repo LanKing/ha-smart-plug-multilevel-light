@@ -1,1 +1,59 @@
-{"title":"Flerniveaulys via smart-stikkontakt","config":{"step":{"user":{"title":"Vælg en smart-stikkontakt","description":"Kun stikkontakter med en strømsensor vises.","data":{"outlet":"Smart-stikkontakt"}},"settings":{"title":"Konfigurer lys og tilstande","description":"Strømsensoren er begrænset til den valgte stikkontakt.","data":{"name":"Lysnavn","current_sensor":"Strømsensor","off_current_threshold":"OFF-strømtærskel","power_cycle_delay":"Forsinkelse ved strømafbrydelse","modes":"Lysstyrketilstande"},"data_description":{"off_current_threshold":"Strøm på eller under denne tærskel betragtes som OFF.","modes":"Tilstande sorteres automatisk efter strøm."}}},"error":{"at_least_one_mode":"Tilføj mindst én tilstand"},"abort":{"current_sensor_missing":"Der blev ikke fundet en strømsensor for den valgte stikkontakt"}},"options":{"step":{"init":{"title":"Konfigurer flerniveaulys","data":{"name":"Lysnavn","current_sensor":"Strømsensor","off_current_threshold":"OFF-strømtærskel","power_cycle_delay":"Forsinkelse ved strømafbrydelse","modes":"Lysstyrketilstande"},"data_description":{"off_current_threshold":"Strøm på eller under denne tærskel betragtes som OFF.","modes":"Tilstande sorteres automatisk efter strøm."}}},"error":{"at_least_one_mode":"Tilføj mindst én tilstand"}}}
+{
+  "title": "Flerniveaulys via smart-stikkontakt",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Vælg en smart-stikkontakt",
+        "description": "Kun stikkontakter med en strømsensor vises.",
+        "data": {
+          "outlet": "Smart-stikkontakt"
+        }
+      },
+      "settings": {
+        "title": "Konfigurer lys og tilstande",
+        "data": {
+          "name": "Lysnavn",
+          "current_sensor": "Strømsensor",
+          "off_current_threshold": "OFF-strømtærskel",
+          "power_cycle_delay": "Forsinkelse ved strømafbrydelse",
+          "modes": "Lysstyrketilstande"
+        },
+        "data_description": {
+          "off_current_threshold": "Strøm på eller under denne tærskel betragtes som OFF.",
+          "modes": "Lær først integrationen den nye lampes lysstyrketilstande. Brug lampens fysiske knap til at vælge hvert niveau og tilføj det nedenfor, f.eks. High, Medium, Low og Dim.",
+          "current_sensor": "Kun strømsensorer, der hører til den valgte smart-stikdåse, er tilgængelige her.",
+          "power_cycle_delay": "Normalt er der ikke behov for ekstra forsinkelse. Hvis en lampe, der er slukket med sin egen knap, ikke tænder fra Home Assistant, så indstil en lille forsinkelse, f.eks. 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Tilføj mindst én tilstand"
+    },
+    "abort": {
+      "current_sensor_missing": "Der blev ikke fundet en strømsensor for den valgte stikkontakt"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfigurer flerniveaulys",
+        "data": {
+          "name": "Lysnavn",
+          "current_sensor": "Strømsensor",
+          "off_current_threshold": "OFF-strømtærskel",
+          "power_cycle_delay": "Forsinkelse ved strømafbrydelse",
+          "modes": "Lysstyrketilstande"
+        },
+        "data_description": {
+          "off_current_threshold": "Strøm på eller under denne tærskel betragtes som OFF.",
+          "modes": "Lær først integrationen den nye lampes lysstyrketilstande. Brug lampens fysiske knap til at vælge hvert niveau og tilføj det nedenfor, f.eks. High, Medium, Low og Dim.",
+          "current_sensor": "Kun strømsensorer, der hører til den valgte smart-stikdåse, er tilgængelige her.",
+          "power_cycle_delay": "Normalt er der ikke behov for ekstra forsinkelse. Hvis en lampe, der er slukket med sin egen knap, ikke tænder fra Home Assistant, så indstil en lille forsinkelse, f.eks. 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Tilføj mindst én tilstand"
+    }
+  }
+}

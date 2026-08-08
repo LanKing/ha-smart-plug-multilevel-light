@@ -1,1 +1,59 @@
-{"title":"Többszintű fény okoskonnektoron keresztül","config":{"step":{"user":{"title":"Válasszon okoskonnektort","description":"Csak áramérzékelővel rendelkező konnektorok jelennek meg.","data":{"outlet":"Okoskonnektor"}},"settings":{"title":"Állítsa be a fényt és a módokat","description":"Az áramérzékelő a kiválasztott konnektorra korlátozódik.","data":{"name":"Fény neve","current_sensor":"Áramérzékelő","off_current_threshold":"OFF áramküszöb","power_cycle_delay":"Áramciklus késleltetése","modes":"Fényerőmódok"},"data_description":{"off_current_threshold":"Az ezen a küszöbön vagy alatta lévő áram OFF állapotnak számít.","modes":"A módok automatikusan áram szerint rendeződnek."}}},"error":{"at_least_one_mode":"Adjon hozzá legalább egy módot"},"abort":{"current_sensor_missing":"Nem található áramérzékelő a kiválasztott konnektorhoz"}},"options":{"step":{"init":{"title":"Többszintű fény beállítása","data":{"name":"Fény neve","current_sensor":"Áramérzékelő","off_current_threshold":"OFF áramküszöb","power_cycle_delay":"Áramciklus késleltetése","modes":"Fényerőmódok"},"data_description":{"off_current_threshold":"Az ezen a küszöbön vagy alatta lévő áram OFF állapotnak számít.","modes":"A módok automatikusan áram szerint rendeződnek."}}},"error":{"at_least_one_mode":"Adjon hozzá legalább egy módot"}}}
+{
+  "title": "Többszintű fény okoskonnektoron keresztül",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Válasszon okoskonnektort",
+        "description": "Csak áramérzékelővel rendelkező konnektorok jelennek meg.",
+        "data": {
+          "outlet": "Okoskonnektor"
+        }
+      },
+      "settings": {
+        "title": "Állítsa be a fényt és a módokat",
+        "data": {
+          "name": "Fény neve",
+          "current_sensor": "Áramérzékelő",
+          "off_current_threshold": "OFF áramküszöb",
+          "power_cycle_delay": "Áramciklus késleltetése",
+          "modes": "Fényerőmódok"
+        },
+        "data_description": {
+          "off_current_threshold": "Az ezen a küszöbön vagy alatta lévő áram OFF állapotnak számít.",
+          "modes": "Először tanítsa meg az integrációnak az új lámpa fényerőmódjait. A lámpa fizikai gombjával válassza ki az egyes szinteket, és adja hozzá őket lent, például High, Medium, Low és Dim.",
+          "current_sensor": "Itt csak a kiválasztott okoskonnektorhoz tartozó áramérzékelők érhetők el.",
+          "power_cycle_delay": "Általában nincs szükség további késleltetésre. Ha a saját gombjával kikapcsolt lámpa nem kapcsol be a Home Assistantból, állítson be kis késleltetést, például 0,7 s-ot."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Adjon hozzá legalább egy módot"
+    },
+    "abort": {
+      "current_sensor_missing": "Nem található áramérzékelő a kiválasztott konnektorhoz"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Többszintű fény beállítása",
+        "data": {
+          "name": "Fény neve",
+          "current_sensor": "Áramérzékelő",
+          "off_current_threshold": "OFF áramküszöb",
+          "power_cycle_delay": "Áramciklus késleltetése",
+          "modes": "Fényerőmódok"
+        },
+        "data_description": {
+          "off_current_threshold": "Az ezen a küszöbön vagy alatta lévő áram OFF állapotnak számít.",
+          "modes": "Először tanítsa meg az integrációnak az új lámpa fényerőmódjait. A lámpa fizikai gombjával válassza ki az egyes szinteket, és adja hozzá őket lent, például High, Medium, Low és Dim.",
+          "current_sensor": "Itt csak a kiválasztott okoskonnektorhoz tartozó áramérzékelők érhetők el.",
+          "power_cycle_delay": "Általában nincs szükség további késleltetésre. Ha a saját gombjával kikapcsolt lámpa nem kapcsol be a Home Assistantból, állítson be kis késleltetést, például 0,7 s-ot."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Adjon hozzá legalább egy módot"
+    }
+  }
+}

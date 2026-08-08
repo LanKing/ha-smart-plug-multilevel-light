@@ -1,1 +1,59 @@
-{"title":"Večstopenjska luč prek pametne vtičnice","config":{"step":{"user":{"title":"Izberite pametno vtičnico","description":"Prikazane so samo vtičnice s senzorjem toka.","data":{"outlet":"Pametna vtičnica"}},"settings":{"title":"Nastavite luč in načine","description":"Senzor toka je omejen na izbrano vtičnico.","data":{"name":"Ime luči","current_sensor":"Senzor toka","off_current_threshold":"Prag toka OFF","power_cycle_delay":"Zakasnitev cikla napajanja","modes":"Načini svetlosti"},"data_description":{"off_current_threshold":"Tok na tem pragu ali pod njim se šteje kot OFF.","modes":"Načini se samodejno razvrstijo po toku."}}},"error":{"at_least_one_mode":"Dodajte vsaj en način"},"abort":{"current_sensor_missing":"Za izbrano vtičnico ni bil najden senzor toka"}},"options":{"step":{"init":{"title":"Nastavite večstopenjsko luč","data":{"name":"Ime luči","current_sensor":"Senzor toka","off_current_threshold":"Prag toka OFF","power_cycle_delay":"Zakasnitev cikla napajanja","modes":"Načini svetlosti"},"data_description":{"off_current_threshold":"Tok na tem pragu ali pod njim se šteje kot OFF.","modes":"Načini se samodejno razvrstijo po toku."}}},"error":{"at_least_one_mode":"Dodajte vsaj en način"}}}
+{
+  "title": "Večstopenjska luč prek pametne vtičnice",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Izberite pametno vtičnico",
+        "description": "Prikazane so samo vtičnice s senzorjem toka.",
+        "data": {
+          "outlet": "Pametna vtičnica"
+        }
+      },
+      "settings": {
+        "title": "Nastavite luč in načine",
+        "data": {
+          "name": "Ime luči",
+          "current_sensor": "Senzor toka",
+          "off_current_threshold": "Prag toka OFF",
+          "power_cycle_delay": "Zakasnitev cikla napajanja",
+          "modes": "Načini svetlosti"
+        },
+        "data_description": {
+          "off_current_threshold": "Tok na tem pragu ali pod njim se šteje kot OFF.",
+          "modes": "Najprej integracijo naučite načine svetlosti nove svetilke. S fizičnim gumbom na svetilki izberite vsako raven in jo dodajte spodaj, na primer High, Medium, Low in Dim.",
+          "current_sensor": "Tukaj so na voljo samo senzorji toka, ki pripadajo izbrani pametni vtičnici.",
+          "power_cycle_delay": "Običajno dodatna zakasnitev ni potrebna. Če se svetilka, izklopljena z lastnim gumbom, ne vklopi iz Home Assistanta, nastavite majhno zakasnitev, na primer 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Dodajte vsaj en način"
+    },
+    "abort": {
+      "current_sensor_missing": "Za izbrano vtičnico ni bil najden senzor toka"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nastavite večstopenjsko luč",
+        "data": {
+          "name": "Ime luči",
+          "current_sensor": "Senzor toka",
+          "off_current_threshold": "Prag toka OFF",
+          "power_cycle_delay": "Zakasnitev cikla napajanja",
+          "modes": "Načini svetlosti"
+        },
+        "data_description": {
+          "off_current_threshold": "Tok na tem pragu ali pod njim se šteje kot OFF.",
+          "modes": "Najprej integracijo naučite načine svetlosti nove svetilke. S fizičnim gumbom na svetilki izberite vsako raven in jo dodajte spodaj, na primer High, Medium, Low in Dim.",
+          "current_sensor": "Tukaj so na voljo samo senzorji toka, ki pripadajo izbrani pametni vtičnici.",
+          "power_cycle_delay": "Običajno dodatna zakasnitev ni potrebna. Če se svetilka, izklopljena z lastnim gumbom, ne vklopi iz Home Assistanta, nastavite majhno zakasnitev, na primer 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Dodajte vsaj en način"
+    }
+  }
+}

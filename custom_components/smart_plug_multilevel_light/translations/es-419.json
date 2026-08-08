@@ -1,1 +1,59 @@
-{"title":"Luz multinivel mediante enchufe inteligente","config":{"step":{"user":{"title":"Selecciona un enchufe inteligente","description":"Solo se muestran enchufes con sensor de corriente.","data":{"outlet":"Enchufe inteligente"}},"settings":{"title":"Configura la luz y los modos","description":"El sensor de corriente se limita al enchufe seleccionado.","data":{"name":"Nombre de la luz","current_sensor":"Sensor de corriente","off_current_threshold":"Umbral de corriente OFF","power_cycle_delay":"Retardo del ciclo de energía","modes":"Modos de brillo"},"data_description":{"off_current_threshold":"La corriente igual o inferior a este umbral se considera OFF.","modes":"Los modos se ordenan automáticamente por corriente."}}},"error":{"at_least_one_mode":"Agrega al menos un modo"},"abort":{"current_sensor_missing":"No se encontró un sensor de corriente para el enchufe seleccionado"}},"options":{"step":{"init":{"title":"Configura la luz multinivel","data":{"name":"Nombre de la luz","current_sensor":"Sensor de corriente","off_current_threshold":"Umbral de corriente OFF","power_cycle_delay":"Retardo del ciclo de energía","modes":"Modos de brillo"},"data_description":{"off_current_threshold":"La corriente igual o inferior a este umbral se considera OFF.","modes":"Los modos se ordenan automáticamente por corriente."}}},"error":{"at_least_one_mode":"Agrega al menos un modo"}}}
+{
+  "title": "Luz multinivel mediante enchufe inteligente",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Selecciona un enchufe inteligente",
+        "description": "Solo se muestran enchufes con sensor de corriente.",
+        "data": {
+          "outlet": "Enchufe inteligente"
+        }
+      },
+      "settings": {
+        "title": "Configura la luz y los modos",
+        "data": {
+          "name": "Nombre de la luz",
+          "current_sensor": "Sensor de corriente",
+          "off_current_threshold": "Umbral de corriente OFF",
+          "power_cycle_delay": "Retardo del ciclo de energía",
+          "modes": "Modos de brillo"
+        },
+        "data_description": {
+          "off_current_threshold": "La corriente igual o inferior a este umbral se considera OFF.",
+          "modes": "Primero enseña a la integración los modos de brillo de la nueva lámpara. Usa el botón físico de la lámpara para seleccionar cada nivel y agregarlo abajo, por ejemplo High, Medium, Low y Dim.",
+          "current_sensor": "Aquí solo están disponibles los sensores de corriente que pertenecen al enchufe inteligente seleccionado.",
+          "power_cycle_delay": "Normalmente no se necesita ningún retraso adicional. Si una lámpara apagada con su propio botón no se enciende desde Home Assistant, configura un pequeño retraso, por ejemplo 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Agrega al menos un modo"
+    },
+    "abort": {
+      "current_sensor_missing": "No se encontró un sensor de corriente para el enchufe seleccionado"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configura la luz multinivel",
+        "data": {
+          "name": "Nombre de la luz",
+          "current_sensor": "Sensor de corriente",
+          "off_current_threshold": "Umbral de corriente OFF",
+          "power_cycle_delay": "Retardo del ciclo de energía",
+          "modes": "Modos de brillo"
+        },
+        "data_description": {
+          "off_current_threshold": "La corriente igual o inferior a este umbral se considera OFF.",
+          "modes": "Primero enseña a la integración los modos de brillo de la nueva lámpara. Usa el botón físico de la lámpara para seleccionar cada nivel y agregarlo abajo, por ejemplo High, Medium, Low y Dim.",
+          "current_sensor": "Aquí solo están disponibles los sensores de corriente que pertenecen al enchufe inteligente seleccionado.",
+          "power_cycle_delay": "Normalmente no se necesita ningún retraso adicional. Si una lámpara apagada con su propio botón no se enciende desde Home Assistant, configura un pequeño retraso, por ejemplo 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Agrega al menos un modo"
+    }
+  }
+}

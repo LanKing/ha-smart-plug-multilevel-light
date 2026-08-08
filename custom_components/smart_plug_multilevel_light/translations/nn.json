@@ -1,1 +1,59 @@
-{"title":"Fleirnivålys via smartkontakt","config":{"step":{"user":{"title":"Vel ein smartkontakt","description":"Berre kontaktar med straumsensor blir viste.","data":{"outlet":"Smartkontakt"}},"settings":{"title":"Konfigurer lys og modusar","description":"Straumsensoren er avgrensa til den valde kontakten.","data":{"name":"Lysnamn","current_sensor":"Straumsensor","off_current_threshold":"OFF-straumterskel","power_cycle_delay":"Forseinking for straumsyklus","modes":"Lysstyrkemodusar"},"data_description":{"off_current_threshold":"Straum på eller under denne terskelen blir rekna som OFF.","modes":"Modusar blir automatisk sorterte etter straum."}}},"error":{"at_least_one_mode":"Legg til minst éin modus"},"abort":{"current_sensor_missing":"Ingen straumsensor vart funnen for den valde kontakten"}},"options":{"step":{"init":{"title":"Konfigurer fleirnivålys","data":{"name":"Lysnamn","current_sensor":"Straumsensor","off_current_threshold":"OFF-straumterskel","power_cycle_delay":"Forseinking for straumsyklus","modes":"Lysstyrkemodusar"},"data_description":{"off_current_threshold":"Straum på eller under denne terskelen blir rekna som OFF.","modes":"Modusar blir automatisk sorterte etter straum."}}},"error":{"at_least_one_mode":"Legg til minst éin modus"}}}
+{
+  "title": "Fleirnivålys via smartkontakt",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Vel ein smartkontakt",
+        "description": "Berre kontaktar med straumsensor blir viste.",
+        "data": {
+          "outlet": "Smartkontakt"
+        }
+      },
+      "settings": {
+        "title": "Konfigurer lys og modusar",
+        "data": {
+          "name": "Lysnamn",
+          "current_sensor": "Straumsensor",
+          "off_current_threshold": "OFF-straumterskel",
+          "power_cycle_delay": "Forseinking for straumsyklus",
+          "modes": "Lysstyrkemodusar"
+        },
+        "data_description": {
+          "off_current_threshold": "Straum på eller under denne terskelen blir rekna som OFF.",
+          "modes": "Lær først integrasjonen lysstyrkemodusane til den nye lampa. Bruk den fysiske knappen på lampa til å velje kvart nivå og legg det til nedanfor, til dømes High, Medium, Low og Dim.",
+          "current_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her.",
+          "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Legg til minst éin modus"
+    },
+    "abort": {
+      "current_sensor_missing": "Ingen straumsensor vart funnen for den valde kontakten"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfigurer fleirnivålys",
+        "data": {
+          "name": "Lysnamn",
+          "current_sensor": "Straumsensor",
+          "off_current_threshold": "OFF-straumterskel",
+          "power_cycle_delay": "Forseinking for straumsyklus",
+          "modes": "Lysstyrkemodusar"
+        },
+        "data_description": {
+          "off_current_threshold": "Straum på eller under denne terskelen blir rekna som OFF.",
+          "modes": "Lær først integrasjonen lysstyrkemodusane til den nye lampa. Bruk den fysiske knappen på lampa til å velje kvart nivå og legg det til nedanfor, til dømes High, Medium, Low og Dim.",
+          "current_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her.",
+          "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Legg til minst éin modus"
+    }
+  }
+}

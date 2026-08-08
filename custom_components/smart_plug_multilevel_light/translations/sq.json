@@ -1,1 +1,59 @@
-{"title":"Dritë me shumë nivele përmes prizës inteligjente","config":{"step":{"user":{"title":"Zgjidhni një prizë inteligjente","description":"Shfaqen vetëm prizat me sensor rryme.","data":{"outlet":"Prizë inteligjente"}},"settings":{"title":"Konfiguroni dritën dhe modalitetet","description":"Sensori i rrymës kufizohet te priza e zgjedhur.","data":{"name":"Emri i dritës","current_sensor":"Sensori i rrymës","off_current_threshold":"Pragu i rrymës OFF","power_cycle_delay":"Vonesa e ciklit të energjisë","modes":"Modalitetet e ndriçimit"},"data_description":{"off_current_threshold":"Rryma në ose nën këtë prag konsiderohet OFF.","modes":"Modalitetet renditen automatikisht sipas rrymës."}}},"error":{"at_least_one_mode":"Shtoni të paktën një modalitet"},"abort":{"current_sensor_missing":"Nuk u gjet sensor rryme për prizën e zgjedhur"}},"options":{"step":{"init":{"title":"Konfiguroni dritën me shumë nivele","data":{"name":"Emri i dritës","current_sensor":"Sensori i rrymës","off_current_threshold":"Pragu i rrymës OFF","power_cycle_delay":"Vonesa e ciklit të energjisë","modes":"Modalitetet e ndriçimit"},"data_description":{"off_current_threshold":"Rryma në ose nën këtë prag konsiderohet OFF.","modes":"Modalitetet renditen automatikisht sipas rrymës."}}},"error":{"at_least_one_mode":"Shtoni të paktën një modalitet"}}}
+{
+  "title": "Dritë me shumë nivele përmes prizës inteligjente",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Zgjidhni një prizë inteligjente",
+        "description": "Shfaqen vetëm prizat me sensor rryme.",
+        "data": {
+          "outlet": "Prizë inteligjente"
+        }
+      },
+      "settings": {
+        "title": "Konfiguroni dritën dhe modalitetet",
+        "data": {
+          "name": "Emri i dritës",
+          "current_sensor": "Sensori i rrymës",
+          "off_current_threshold": "Pragu i rrymës OFF",
+          "power_cycle_delay": "Vonesa e ciklit të energjisë",
+          "modes": "Modalitetet e ndriçimit"
+        },
+        "data_description": {
+          "off_current_threshold": "Rryma në ose nën këtë prag konsiderohet OFF.",
+          "modes": "Fillimisht mësojini integrimit mënyrat e ndriçimit të llambës së re. Me butonin fizik të llambës zgjidhni çdo nivel dhe shtojeni më poshtë, p.sh. High, Medium, Low dhe Dim.",
+          "current_sensor": "Këtu janë të disponueshëm vetëm sensorët e rrymës që i përkasin prizës inteligjente të zgjedhur.",
+          "power_cycle_delay": "Zakonisht nuk nevojitet vonesë shtesë. Nëse një llambë e fikur me butonin e vet nuk ndizet nga Home Assistant, vendosni një vonesë të vogël, p.sh. 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Shtoni të paktën një modalitet"
+    },
+    "abort": {
+      "current_sensor_missing": "Nuk u gjet sensor rryme për prizën e zgjedhur"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfiguroni dritën me shumë nivele",
+        "data": {
+          "name": "Emri i dritës",
+          "current_sensor": "Sensori i rrymës",
+          "off_current_threshold": "Pragu i rrymës OFF",
+          "power_cycle_delay": "Vonesa e ciklit të energjisë",
+          "modes": "Modalitetet e ndriçimit"
+        },
+        "data_description": {
+          "off_current_threshold": "Rryma në ose nën këtë prag konsiderohet OFF.",
+          "modes": "Fillimisht mësojini integrimit mënyrat e ndriçimit të llambës së re. Me butonin fizik të llambës zgjidhni çdo nivel dhe shtojeni më poshtë, p.sh. High, Medium, Low dhe Dim.",
+          "current_sensor": "Këtu janë të disponueshëm vetëm sensorët e rrymës që i përkasin prizës inteligjente të zgjedhur.",
+          "power_cycle_delay": "Zakonisht nuk nevojitet vonesë shtesë. Nëse një llambë e fikur me butonin e vet nuk ndizet nga Home Assistant, vendosni një vonesë të vogël, p.sh. 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Shtoni të paktën një modalitet"
+    }
+  }
+}

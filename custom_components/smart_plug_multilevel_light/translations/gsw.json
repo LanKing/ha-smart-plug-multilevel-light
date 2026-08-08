@@ -1,1 +1,59 @@
-{"title":"Mehrstufigs Liecht über Smart-Steckdose","config":{"step":{"user":{"title":"Smart-Steckdose uswähle","description":"Es werded nur Steckdose mit Stromsensor aazeigt.","data":{"outlet":"Smart-Steckdose"}},"settings":{"title":"Liecht und Modi konfiguriere","description":"De Stromsensor isch uf d uswählti Steckdose beschränkt.","data":{"name":"Liechtname","current_sensor":"Stromsensor","off_current_threshold":"OFF-Stromschwälle","power_cycle_delay":"Verzögerig bim Stromzyklus","modes":"Helligkeitsmodi"},"data_description":{"off_current_threshold":"Strom uf oder under dere Schwälle gilt als OFF.","modes":"D Modi werded automatisch nach Strom sortiert."}}},"error":{"at_least_one_mode":"Mindeschtens en Modus hinzuefüege"},"abort":{"current_sensor_missing":"Für d uswählti Steckdose isch kei Stromsensor gfunde worde"}},"options":{"step":{"init":{"title":"Mehrstufigs Liecht konfiguriere","data":{"name":"Liechtname","current_sensor":"Stromsensor","off_current_threshold":"OFF-Stromschwälle","power_cycle_delay":"Verzögerig bim Stromzyklus","modes":"Helligkeitsmodi"},"data_description":{"off_current_threshold":"Strom uf oder under dere Schwälle gilt als OFF.","modes":"D Modi werded automatisch nach Strom sortiert."}}},"error":{"at_least_one_mode":"Mindeschtens en Modus hinzuefüege"}}}
+{
+  "title": "Mehrstufigs Liecht über Smart-Steckdose",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Smart-Steckdose uswähle",
+        "description": "Es werded nur Steckdose mit Stromsensor aazeigt.",
+        "data": {
+          "outlet": "Smart-Steckdose"
+        }
+      },
+      "settings": {
+        "title": "Liecht und Modi konfiguriere",
+        "data": {
+          "name": "Liechtname",
+          "current_sensor": "Stromsensor",
+          "off_current_threshold": "OFF-Stromschwälle",
+          "power_cycle_delay": "Verzögerig bim Stromzyklus",
+          "modes": "Helligkeitsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Strom uf oder under dere Schwälle gilt als OFF.",
+          "modes": "Lern zerscht d'Helligkeitsstufe vo de neue Lampe aa. Wähl mit em physische Chnopf vo de Lampe jedi Stufe und füeg si unde hinzu, zum Biispiel High, Medium, Low und Dim.",
+          "current_sensor": "Da sind nur Stromsensoren verfügbar, wo zur ausgewählten Smart-Steckdose ghöred.",
+          "power_cycle_delay": "Normalerwiis bruuchts kei zusätzligi Verzögerig. Wenn e Lampe, wo mit ihrem eigene Chnopf usgschaltet wurde, nöd über Home Assistant aagoht, stell e chliini Verzögerig ii, zum Biispiel 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Mindeschtens en Modus hinzuefüege"
+    },
+    "abort": {
+      "current_sensor_missing": "Für d uswählti Steckdose isch kei Stromsensor gfunde worde"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Mehrstufigs Liecht konfiguriere",
+        "data": {
+          "name": "Liechtname",
+          "current_sensor": "Stromsensor",
+          "off_current_threshold": "OFF-Stromschwälle",
+          "power_cycle_delay": "Verzögerig bim Stromzyklus",
+          "modes": "Helligkeitsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Strom uf oder under dere Schwälle gilt als OFF.",
+          "modes": "Lern zerscht d'Helligkeitsstufe vo de neue Lampe aa. Wähl mit em physische Chnopf vo de Lampe jedi Stufe und füeg si unde hinzu, zum Biispiel High, Medium, Low und Dim.",
+          "current_sensor": "Da sind nur Stromsensoren verfügbar, wo zur ausgewählten Smart-Steckdose ghöred.",
+          "power_cycle_delay": "Normalerwiis bruuchts kei zusätzligi Verzögerig. Wenn e Lampe, wo mit ihrem eigene Chnopf usgschaltet wurde, nöd über Home Assistant aagoht, stell e chliini Verzögerig ii, zum Biispiel 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Mindeschtens en Modus hinzuefüege"
+    }
+  }
+}

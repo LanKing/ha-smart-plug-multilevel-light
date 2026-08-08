@@ -1,1 +1,59 @@
-{"title":"Daudzlīmeņu gaisma caur viedo kontaktligzdu","config":{"step":{"user":{"title":"Izvēlieties viedo kontaktligzdu","description":"Tiek rādītas tikai kontaktligzdas ar strāvas sensoru.","data":{"outlet":"Viedā kontaktligzda"}},"settings":{"title":"Konfigurējiet gaismu un režīmus","description":"Strāvas sensors ir ierobežots līdz izvēlētajai kontaktligzdai.","data":{"name":"Gaismas nosaukums","current_sensor":"Strāvas sensors","off_current_threshold":"OFF strāvas slieksnis","power_cycle_delay":"Barošanas cikla aizkave","modes":"Spilgtuma režīmi"},"data_description":{"off_current_threshold":"Strāva pie šī sliekšņa vai zem tā tiek uzskatīta par OFF.","modes":"Režīmi tiek automātiski kārtoti pēc strāvas."}}},"error":{"at_least_one_mode":"Pievienojiet vismaz vienu režīmu"},"abort":{"current_sensor_missing":"Izvēlētajai kontaktligzdai nav atrasts strāvas sensors"}},"options":{"step":{"init":{"title":"Konfigurējiet daudzlīmeņu gaismu","data":{"name":"Gaismas nosaukums","current_sensor":"Strāvas sensors","off_current_threshold":"OFF strāvas slieksnis","power_cycle_delay":"Barošanas cikla aizkave","modes":"Spilgtuma režīmi"},"data_description":{"off_current_threshold":"Strāva pie šī sliekšņa vai zem tā tiek uzskatīta par OFF.","modes":"Režīmi tiek automātiski kārtoti pēc strāvas."}}},"error":{"at_least_one_mode":"Pievienojiet vismaz vienu režīmu"}}}
+{
+  "title": "Daudzlīmeņu gaisma caur viedo kontaktligzdu",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Izvēlieties viedo kontaktligzdu",
+        "description": "Tiek rādītas tikai kontaktligzdas ar strāvas sensoru.",
+        "data": {
+          "outlet": "Viedā kontaktligzda"
+        }
+      },
+      "settings": {
+        "title": "Konfigurējiet gaismu un režīmus",
+        "data": {
+          "name": "Gaismas nosaukums",
+          "current_sensor": "Strāvas sensors",
+          "off_current_threshold": "OFF strāvas slieksnis",
+          "power_cycle_delay": "Barošanas cikla aizkave",
+          "modes": "Spilgtuma režīmi"
+        },
+        "data_description": {
+          "off_current_threshold": "Strāva pie šī sliekšņa vai zem tā tiek uzskatīta par OFF.",
+          "modes": "Vispirms iemāciet integrācijai jaunās lampas spilgtuma režīmus. Ar lampas fizisko pogu izvēlieties katru līmeni un pievienojiet to zemāk, piemēram, High, Medium, Low un Dim.",
+          "current_sensor": "Šeit ir pieejami tikai izvēlētajai viedajai kontaktligzdai piederošie strāvas sensori.",
+          "power_cycle_delay": "Parasti papildu aizture nav nepieciešama. Ja lampa, kas izslēgta ar savu pogu, neieslēdzas no Home Assistant, iestatiet nelielu aizturi, piemēram, 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Pievienojiet vismaz vienu režīmu"
+    },
+    "abort": {
+      "current_sensor_missing": "Izvēlētajai kontaktligzdai nav atrasts strāvas sensors"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfigurējiet daudzlīmeņu gaismu",
+        "data": {
+          "name": "Gaismas nosaukums",
+          "current_sensor": "Strāvas sensors",
+          "off_current_threshold": "OFF strāvas slieksnis",
+          "power_cycle_delay": "Barošanas cikla aizkave",
+          "modes": "Spilgtuma režīmi"
+        },
+        "data_description": {
+          "off_current_threshold": "Strāva pie šī sliekšņa vai zem tā tiek uzskatīta par OFF.",
+          "modes": "Vispirms iemāciet integrācijai jaunās lampas spilgtuma režīmus. Ar lampas fizisko pogu izvēlieties katru līmeni un pievienojiet to zemāk, piemēram, High, Medium, Low un Dim.",
+          "current_sensor": "Šeit ir pieejami tikai izvēlētajai viedajai kontaktligzdai piederošie strāvas sensori.",
+          "power_cycle_delay": "Parasti papildu aizture nav nepieciešama. Ja lampa, kas izslēgta ar savu pogu, neieslēdzas no Home Assistant, iestatiet nelielu aizturi, piemēram, 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Pievienojiet vismaz vienu režīmu"
+    }
+  }
+}

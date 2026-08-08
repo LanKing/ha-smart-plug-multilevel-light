@@ -1,1 +1,59 @@
-{"title":"Meerniveaulicht via slimme stekker","config":{"step":{"user":{"title":"Selecteer een slimme stekker","description":"Alleen stekkers met een stroomsensor worden getoond.","data":{"outlet":"Slimme stekker"}},"settings":{"title":"Configureer licht en modi","description":"De stroomsensor is beperkt tot de geselecteerde stekker.","data":{"name":"Lichtnaam","current_sensor":"Stroomsensor","off_current_threshold":"OFF-stroomdrempel","power_cycle_delay":"Vertraging stroomcyclus","modes":"Helderheidsmodi"},"data_description":{"off_current_threshold":"Stroom op of onder deze drempel wordt als OFF beschouwd.","modes":"Modi worden automatisch op stroom gesorteerd."}}},"error":{"at_least_one_mode":"Voeg minimaal één modus toe"},"abort":{"current_sensor_missing":"Geen stroomsensor gevonden voor de geselecteerde stekker"}},"options":{"step":{"init":{"title":"Configureer meerniveaulicht","data":{"name":"Lichtnaam","current_sensor":"Stroomsensor","off_current_threshold":"OFF-stroomdrempel","power_cycle_delay":"Vertraging stroomcyclus","modes":"Helderheidsmodi"},"data_description":{"off_current_threshold":"Stroom op of onder deze drempel wordt als OFF beschouwd.","modes":"Modi worden automatisch op stroom gesorteerd."}}},"error":{"at_least_one_mode":"Voeg minimaal één modus toe"}}}
+{
+  "title": "Meerniveaulicht via slimme stekker",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Selecteer een slimme stekker",
+        "description": "Alleen stekkers met een stroomsensor worden getoond.",
+        "data": {
+          "outlet": "Slimme stekker"
+        }
+      },
+      "settings": {
+        "title": "Configureer licht en modi",
+        "data": {
+          "name": "Lichtnaam",
+          "current_sensor": "Stroomsensor",
+          "off_current_threshold": "OFF-stroomdrempel",
+          "power_cycle_delay": "Vertraging stroomcyclus",
+          "modes": "Helderheidsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Stroom op of onder deze drempel wordt als OFF beschouwd.",
+          "modes": "Leer de integratie eerst de helderheidsstanden van de nieuwe lamp. Selecteer met de fysieke knop op de lamp elk niveau en voeg het hieronder toe, bijvoorbeeld High, Medium, Low en Dim.",
+          "current_sensor": "Hier zijn alleen stroomsensoren beschikbaar die bij de geselecteerde slimme stekker horen.",
+          "power_cycle_delay": "Normaal is geen extra vertraging nodig. Als een lamp die met zijn eigen knop is uitgeschakeld niet via Home Assistant inschakelt, stel dan een kleine vertraging in, bijvoorbeeld 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Voeg minimaal één modus toe"
+    },
+    "abort": {
+      "current_sensor_missing": "Geen stroomsensor gevonden voor de geselecteerde stekker"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configureer meerniveaulicht",
+        "data": {
+          "name": "Lichtnaam",
+          "current_sensor": "Stroomsensor",
+          "off_current_threshold": "OFF-stroomdrempel",
+          "power_cycle_delay": "Vertraging stroomcyclus",
+          "modes": "Helderheidsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Stroom op of onder deze drempel wordt als OFF beschouwd.",
+          "modes": "Leer de integratie eerst de helderheidsstanden van de nieuwe lamp. Selecteer met de fysieke knop op de lamp elk niveau en voeg het hieronder toe, bijvoorbeeld High, Medium, Low en Dim.",
+          "current_sensor": "Hier zijn alleen stroomsensoren beschikbaar die bij de geselecteerde slimme stekker horen.",
+          "power_cycle_delay": "Normaal is geen extra vertraging nodig. Als een lamp die met zijn eigen knop is uitgeschakeld niet via Home Assistant inschakelt, stel dan een kleine vertraging in, bijvoorbeeld 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Voeg minimaal één modus toe"
+    }
+  }
+}

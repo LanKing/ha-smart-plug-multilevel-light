@@ -21,8 +21,8 @@
         "data_description": {
           "current_sensor": "Only current sensors belonging to the selected smart plug are available here.",
           "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
-          "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
-          "modes": "For a new lamp, first teach the integration its brightness modes. Manually use the physical button on the lamp to switch to the first brightness level and add it below. Then use the same button to switch to the next level and repeat until all modes are added, for example High, Medium, Low, and Dim."
+          "power_cycle_delay": "Usually no additional delay is needed. If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add it below, for example High, Medium, Low, and Dim."
         }
       }
     },
@@ -47,8 +47,8 @@
         "data_description": {
           "current_sensor": "Only current sensors belonging to the selected smart plug are available here.",
           "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
-          "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
-          "modes": "For a new lamp, first teach the integration its brightness modes. Manually use the physical button on the lamp to switch to the first brightness level and add it below. Then use the same button to switch to the next level and repeat until all modes are added, for example High, Medium, Low, and Dim."
+          "power_cycle_delay": "Usually no additional delay is needed. If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add it below, for example High, Medium, Low, and Dim."
         }
       }
     },

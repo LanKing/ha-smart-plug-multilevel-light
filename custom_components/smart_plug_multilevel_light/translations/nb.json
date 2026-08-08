@@ -1,1 +1,59 @@
-{"title":"Flernivålys via smartkontakt","config":{"step":{"user":{"title":"Velg en smartkontakt","description":"Bare kontakter med strømsensor vises.","data":{"outlet":"Smartkontakt"}},"settings":{"title":"Konfigurer lys og moduser","description":"Strømsensoren er begrenset til den valgte kontakten.","data":{"name":"Lysnavn","current_sensor":"Strømsensor","off_current_threshold":"OFF-strømterskel","power_cycle_delay":"Forsinkelse for strømsyklus","modes":"Lysstyrkemoduser"},"data_description":{"off_current_threshold":"Strøm på eller under denne terskelen behandles som OFF.","modes":"Moduser sorteres automatisk etter strøm."}}},"error":{"at_least_one_mode":"Legg til minst én modus"},"abort":{"current_sensor_missing":"Ingen strømsensor ble funnet for den valgte kontakten"}},"options":{"step":{"init":{"title":"Konfigurer flernivålys","data":{"name":"Lysnavn","current_sensor":"Strømsensor","off_current_threshold":"OFF-strømterskel","power_cycle_delay":"Forsinkelse for strømsyklus","modes":"Lysstyrkemoduser"},"data_description":{"off_current_threshold":"Strøm på eller under denne terskelen behandles som OFF.","modes":"Moduser sorteres automatisk etter strøm."}}},"error":{"at_least_one_mode":"Legg til minst én modus"}}}
+{
+  "title": "Flernivålys via smartkontakt",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Velg en smartkontakt",
+        "description": "Bare kontakter med strømsensor vises.",
+        "data": {
+          "outlet": "Smartkontakt"
+        }
+      },
+      "settings": {
+        "title": "Konfigurer lys og moduser",
+        "data": {
+          "name": "Lysnavn",
+          "current_sensor": "Strømsensor",
+          "off_current_threshold": "OFF-strømterskel",
+          "power_cycle_delay": "Forsinkelse for strømsyklus",
+          "modes": "Lysstyrkemoduser"
+        },
+        "data_description": {
+          "off_current_threshold": "Strøm på eller under denne terskelen behandles som OFF.",
+          "modes": "Lær først integrasjonen lysstyrkemodusene til den nye lampen. Bruk den fysiske knappen på lampen til å velge hvert nivå og legg det til nedenfor, for eksempel High, Medium, Low og Dim.",
+          "current_sensor": "Bare strømsensorer som tilhører den valgte smartpluggen er tilgjengelige her.",
+          "power_cycle_delay": "Vanligvis trengs ingen ekstra forsinkelse. Hvis en lampe som er slått av med sin egen knapp ikke slår seg på fra Home Assistant, sett en liten forsinkelse, for eksempel 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Legg til minst én modus"
+    },
+    "abort": {
+      "current_sensor_missing": "Ingen strømsensor ble funnet for den valgte kontakten"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfigurer flernivålys",
+        "data": {
+          "name": "Lysnavn",
+          "current_sensor": "Strømsensor",
+          "off_current_threshold": "OFF-strømterskel",
+          "power_cycle_delay": "Forsinkelse for strømsyklus",
+          "modes": "Lysstyrkemoduser"
+        },
+        "data_description": {
+          "off_current_threshold": "Strøm på eller under denne terskelen behandles som OFF.",
+          "modes": "Lær først integrasjonen lysstyrkemodusene til den nye lampen. Bruk den fysiske knappen på lampen til å velge hvert nivå og legg det til nedenfor, for eksempel High, Medium, Low og Dim.",
+          "current_sensor": "Bare strømsensorer som tilhører den valgte smartpluggen er tilgjengelige her.",
+          "power_cycle_delay": "Vanligvis trengs ingen ekstra forsinkelse. Hvis en lampe som er slått av med sin egen knapp ikke slår seg på fra Home Assistant, sett en liten forsinkelse, for eksempel 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Legg til minst én modus"
+    }
+  }
+}

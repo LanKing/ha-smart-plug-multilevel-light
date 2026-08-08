@@ -1,1 +1,59 @@
-{"title":"תאורה רב-שלבית דרך שקע חכם","config":{"step":{"user":{"title":"בחר שקע חכם","description":"מוצגים רק שקעים עם חיישן זרם.","data":{"outlet":"שקע חכם"}},"settings":{"title":"הגדר תאורה ומצבים","description":"חיישן הזרם מוגבל לשקע שנבחר.","data":{"name":"שם התאורה","current_sensor":"חיישן זרם","off_current_threshold":"סף זרם OFF","power_cycle_delay":"השהיית מחזור חשמל","modes":"מצבי בהירות"},"data_description":{"off_current_threshold":"זרם בערך זה או מתחתיו נחשב OFF.","modes":"המצבים ממוינים אוטומטית לפי הזרם."}}},"error":{"at_least_one_mode":"הוסף לפחות מצב אחד"},"abort":{"current_sensor_missing":"לא נמצא חיישן זרם עבור השקע שנבחר"}},"options":{"step":{"init":{"title":"הגדר תאורה רב-שלבית","data":{"name":"שם התאורה","current_sensor":"חיישן זרם","off_current_threshold":"סף זרם OFF","power_cycle_delay":"השהיית מחזור חשמל","modes":"מצבי בהירות"},"data_description":{"off_current_threshold":"זרם בערך זה או מתחתיו נחשב OFF.","modes":"המצבים ממוינים אוטומטית לפי הזרם."}}},"error":{"at_least_one_mode":"הוסף לפחות מצב אחד"}}}
+{
+  "title": "תאורה רב-שלבית דרך שקע חכם",
+  "config": {
+    "step": {
+      "user": {
+        "title": "בחר שקע חכם",
+        "description": "מוצגים רק שקעים עם חיישן זרם.",
+        "data": {
+          "outlet": "שקע חכם"
+        }
+      },
+      "settings": {
+        "title": "הגדר תאורה ומצבים",
+        "data": {
+          "name": "שם התאורה",
+          "current_sensor": "חיישן זרם",
+          "off_current_threshold": "סף זרם OFF",
+          "power_cycle_delay": "השהיית מחזור חשמל",
+          "modes": "מצבי בהירות"
+        },
+        "data_description": {
+          "off_current_threshold": "זרם בערך זה או מתחתיו נחשב OFF.",
+          "modes": "תחילה למד את האינטגרציה את מצבי הבהירות של המנורה החדשה. השתמש בכפתור הפיזי במנורה כדי לבחור כל רמה ולהוסיף אותה למטה, למשל High, Medium, Low ו-Dim.",
+          "current_sensor": "כאן זמינים רק חיישני זרם השייכים לשקע החכם שנבחר.",
+          "power_cycle_delay": "בדרך כלל אין צורך בהשהיה נוספת. אם מנורה שכובתה באמצעות הכפתור שלה לא נדלקת מ-Home Assistant, הגדר השהיה קצרה, למשל 0.7 שניות."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "הוסף לפחות מצב אחד"
+    },
+    "abort": {
+      "current_sensor_missing": "לא נמצא חיישן זרם עבור השקע שנבחר"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "הגדר תאורה רב-שלבית",
+        "data": {
+          "name": "שם התאורה",
+          "current_sensor": "חיישן זרם",
+          "off_current_threshold": "סף זרם OFF",
+          "power_cycle_delay": "השהיית מחזור חשמל",
+          "modes": "מצבי בהירות"
+        },
+        "data_description": {
+          "off_current_threshold": "זרם בערך זה או מתחתיו נחשב OFF.",
+          "modes": "תחילה למד את האינטגרציה את מצבי הבהירות של המנורה החדשה. השתמש בכפתור הפיזי במנורה כדי לבחור כל רמה ולהוסיף אותה למטה, למשל High, Medium, Low ו-Dim.",
+          "current_sensor": "כאן זמינים רק חיישני זרם השייכים לשקע החכם שנבחר.",
+          "power_cycle_delay": "בדרך כלל אין צורך בהשהיה נוספת. אם מנורה שכובתה באמצעות הכפתור שלה לא נדלקת מ-Home Assistant, הגדר השהיה קצרה, למשל 0.7 שניות."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "הוסף לפחות מצב אחד"
+    }
+  }
+}

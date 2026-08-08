@@ -1,1 +1,59 @@
-{"title":"Méistufeg Luucht iwwer Smart-Steckdous","config":{"step":{"user":{"title":"Smart-Steckdous auswielen","description":"Nëmme Steckdouse mat Stroumsensor ginn ugewisen.","data":{"outlet":"Smart-Steckdous"}},"settings":{"title":"Luucht a Modi konfiguréieren","description":"De Stroumsensor ass op déi ausgewielte Steckdous limitéiert.","data":{"name":"Numm vun der Luucht","current_sensor":"Stroumsensor","off_current_threshold":"OFF-Stroumschwell","power_cycle_delay":"Verzögerung vum Stroumzyklus","modes":"Hellegkeetsmodi"},"data_description":{"off_current_threshold":"Stroum op oder ënner dëser Schwell gëllt als OFF.","modes":"Modi ginn automatesch no Stroum sortéiert."}}},"error":{"at_least_one_mode":"Füügt op d'mannst ee Modus bäi"},"abort":{"current_sensor_missing":"Kee Stroumsensor fir déi ausgewielte Steckdous fonnt"}},"options":{"step":{"init":{"title":"Méistufeg Luucht konfiguréieren","data":{"name":"Numm vun der Luucht","current_sensor":"Stroumsensor","off_current_threshold":"OFF-Stroumschwell","power_cycle_delay":"Verzögerung vum Stroumzyklus","modes":"Hellegkeetsmodi"},"data_description":{"off_current_threshold":"Stroum op oder ënner dëser Schwell gëllt als OFF.","modes":"Modi ginn automatesch no Stroum sortéiert."}}},"error":{"at_least_one_mode":"Füügt op d'mannst ee Modus bäi"}}}
+{
+  "title": "Méistufeg Luucht iwwer Smart-Steckdous",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Smart-Steckdous auswielen",
+        "description": "Nëmme Steckdouse mat Stroumsensor ginn ugewisen.",
+        "data": {
+          "outlet": "Smart-Steckdous"
+        }
+      },
+      "settings": {
+        "title": "Luucht a Modi konfiguréieren",
+        "data": {
+          "name": "Numm vun der Luucht",
+          "current_sensor": "Stroumsensor",
+          "off_current_threshold": "OFF-Stroumschwell",
+          "power_cycle_delay": "Verzögerung vum Stroumzyklus",
+          "modes": "Hellegkeetsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Stroum op oder ënner dëser Schwell gëllt als OFF.",
+          "modes": "Léiert als éischt d'Hellegkeetsmodi vun der neier Luucht un. Wielt mam physesche Knäppchen op der Luucht all Niveau a füügt en hei drënner bäi, zum Beispill High, Medium, Low an Dim.",
+          "current_sensor": "Hei sinn nëmmen Stroumsensoren verfügbar, déi zu der ausgewielter Smart-Steckdous gehéieren.",
+          "power_cycle_delay": "Normalerweis ass keng zousätzlech Verzögerung néideg. Wann eng Luucht, déi mat hirem eegene Knäppchen ausgeschalt gouf, net aus Home Assistant uschalt, setzt eng kleng Verzögerung, zum Beispill 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Füügt op d'mannst ee Modus bäi"
+    },
+    "abort": {
+      "current_sensor_missing": "Kee Stroumsensor fir déi ausgewielte Steckdous fonnt"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Méistufeg Luucht konfiguréieren",
+        "data": {
+          "name": "Numm vun der Luucht",
+          "current_sensor": "Stroumsensor",
+          "off_current_threshold": "OFF-Stroumschwell",
+          "power_cycle_delay": "Verzögerung vum Stroumzyklus",
+          "modes": "Hellegkeetsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Stroum op oder ënner dëser Schwell gëllt als OFF.",
+          "modes": "Léiert als éischt d'Hellegkeetsmodi vun der neier Luucht un. Wielt mam physesche Knäppchen op der Luucht all Niveau a füügt en hei drënner bäi, zum Beispill High, Medium, Low an Dim.",
+          "current_sensor": "Hei sinn nëmmen Stroumsensoren verfügbar, déi zu der ausgewielter Smart-Steckdous gehéieren.",
+          "power_cycle_delay": "Normalerweis ass keng zousätzlech Verzögerung néideg. Wann eng Luucht, déi mat hirem eegene Knäppchen ausgeschalt gouf, net aus Home Assistant uschalt, setzt eng kleng Verzögerung, zum Beispill 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Füügt op d'mannst ee Modus bäi"
+    }
+  }
+}

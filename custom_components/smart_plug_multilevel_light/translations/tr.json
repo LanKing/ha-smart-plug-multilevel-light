@@ -1,1 +1,59 @@
-{"title":"Akıllı priz üzerinden çok seviyeli ışık","config":{"step":{"user":{"title":"Akıllı priz seçin","description":"Yalnızca akım sensörü bulunan prizler gösterilir.","data":{"outlet":"Akıllı priz"}},"settings":{"title":"Işığı ve modları yapılandırın","description":"Akım sensörü seçilen prizle sınırlıdır.","data":{"name":"Işık adı","current_sensor":"Akım sensörü","off_current_threshold":"OFF akım eşiği","power_cycle_delay":"Güç döngüsü gecikmesi","modes":"Parlaklık modları"},"data_description":{"off_current_threshold":"Bu eşikte veya altında olan akım OFF kabul edilir.","modes":"Modlar akıma göre otomatik sıralanır."}}},"error":{"at_least_one_mode":"En az bir mod ekleyin"},"abort":{"current_sensor_missing":"Seçilen priz için akım sensörü bulunamadı"}},"options":{"step":{"init":{"title":"Çok seviyeli ışığı yapılandırın","data":{"name":"Işık adı","current_sensor":"Akım sensörü","off_current_threshold":"OFF akım eşiği","power_cycle_delay":"Güç döngüsü gecikmesi","modes":"Parlaklık modları"},"data_description":{"off_current_threshold":"Bu eşikte veya altında olan akım OFF kabul edilir.","modes":"Modlar akıma göre otomatik sıralanır."}}},"error":{"at_least_one_mode":"En az bir mod ekleyin"}}}
+{
+  "title": "Akıllı priz üzerinden çok seviyeli ışık",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Akıllı priz seçin",
+        "description": "Yalnızca akım sensörü bulunan prizler gösterilir.",
+        "data": {
+          "outlet": "Akıllı priz"
+        }
+      },
+      "settings": {
+        "title": "Işığı ve modları yapılandırın",
+        "data": {
+          "name": "Işık adı",
+          "current_sensor": "Akım sensörü",
+          "off_current_threshold": "OFF akım eşiği",
+          "power_cycle_delay": "Güç döngüsü gecikmesi",
+          "modes": "Parlaklık modları"
+        },
+        "data_description": {
+          "off_current_threshold": "Bu eşikte veya altında olan akım OFF kabul edilir.",
+          "modes": "Önce entegrasyona yeni lambanın parlaklık modlarını öğretin. Lambanın fiziksel düğmesiyle her seviyeyi seçip aşağıya ekleyin, örneğin High, Medium, Low ve Dim.",
+          "current_sensor": "Burada yalnızca seçilen akıllı prize ait akım sensörleri kullanılabilir.",
+          "power_cycle_delay": "Genellikle ek gecikme gerekmez. Kendi düğmesiyle kapatılan bir lamba Home Assistant'tan açılmıyorsa küçük bir gecikme ayarlayın, örneğin 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "En az bir mod ekleyin"
+    },
+    "abort": {
+      "current_sensor_missing": "Seçilen priz için akım sensörü bulunamadı"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Çok seviyeli ışığı yapılandırın",
+        "data": {
+          "name": "Işık adı",
+          "current_sensor": "Akım sensörü",
+          "off_current_threshold": "OFF akım eşiği",
+          "power_cycle_delay": "Güç döngüsü gecikmesi",
+          "modes": "Parlaklık modları"
+        },
+        "data_description": {
+          "off_current_threshold": "Bu eşikte veya altında olan akım OFF kabul edilir.",
+          "modes": "Önce entegrasyona yeni lambanın parlaklık modlarını öğretin. Lambanın fiziksel düğmesiyle her seviyeyi seçip aşağıya ekleyin, örneğin High, Medium, Low ve Dim.",
+          "current_sensor": "Burada yalnızca seçilen akıllı prize ait akım sensörleri kullanılabilir.",
+          "power_cycle_delay": "Genellikle ek gecikme gerekmez. Kendi düğmesiyle kapatılan bir lamba Home Assistant'tan açılmıyorsa küçük bir gecikme ayarlayın, örneğin 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "En az bir mod ekleyin"
+    }
+  }
+}

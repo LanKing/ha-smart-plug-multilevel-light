@@ -1,1 +1,59 @@
-{"title":"اسمارٹ پلگ ملٹی لیول لائٹ","config":{"step":{"user":{"title":"اسمارٹ پلگ منتخب کریں","description":"صرف کرنٹ سینسر والے پلگ دکھائے جاتے ہیں۔","data":{"outlet":"اسمارٹ پلگ"}},"settings":{"title":"لائٹ اور موڈز ترتیب دیں","description":"کرنٹ سینسر منتخب پلگ تک محدود ہے۔","data":{"name":"لائٹ کا نام","current_sensor":"کرنٹ سینسر","off_current_threshold":"OFF کرنٹ حد","power_cycle_delay":"پاور سائیکل تاخیر","modes":"روشنائی کے موڈ"},"data_description":{"off_current_threshold":"اس حد پر یا اس سے کم کرنٹ کو OFF سمجھا جاتا ہے۔","modes":"موڈز کرنٹ کے مطابق خودکار طور پر ترتیب پاتے ہیں۔"}}},"error":{"at_least_one_mode":"کم از کم ایک موڈ شامل کریں"},"abort":{"current_sensor_missing":"منتخب پلگ کے لیے کرنٹ سینسر نہیں ملا"}},"options":{"step":{"init":{"title":"ملٹی لیول لائٹ ترتیب دیں","data":{"name":"لائٹ کا نام","current_sensor":"کرنٹ سینسر","off_current_threshold":"OFF کرنٹ حد","power_cycle_delay":"پاور سائیکل تاخیر","modes":"روشنائی کے موڈ"},"data_description":{"off_current_threshold":"اس حد پر یا اس سے کم کرنٹ کو OFF سمجھا جاتا ہے۔","modes":"موڈز کرنٹ کے مطابق خودکار طور پر ترتیب پاتے ہیں۔"}}},"error":{"at_least_one_mode":"کم از کم ایک موڈ شامل کریں"}}}
+{
+  "title": "اسمارٹ پلگ ملٹی لیول لائٹ",
+  "config": {
+    "step": {
+      "user": {
+        "title": "اسمارٹ پلگ منتخب کریں",
+        "description": "صرف کرنٹ سینسر والے پلگ دکھائے جاتے ہیں۔",
+        "data": {
+          "outlet": "اسمارٹ پلگ"
+        }
+      },
+      "settings": {
+        "title": "لائٹ اور موڈز ترتیب دیں",
+        "data": {
+          "name": "لائٹ کا نام",
+          "current_sensor": "کرنٹ سینسر",
+          "off_current_threshold": "OFF کرنٹ حد",
+          "power_cycle_delay": "پاور سائیکل تاخیر",
+          "modes": "روشنائی کے موڈ"
+        },
+        "data_description": {
+          "off_current_threshold": "اس حد پر یا اس سے کم کرنٹ کو OFF سمجھا جاتا ہے۔",
+          "modes": "پہلے انٹیگریشن کو نئے لیمپ کے برائٹنس موڈ سکھائیں۔ لیمپ کے فزیکل بٹن سے ہر سطح منتخب کریں اور نیچے شامل کریں، مثلاً High، Medium، Low اور Dim۔",
+          "current_sensor": "یہاں صرف منتخب اسمارٹ پلگ سے متعلق کرنٹ سینسر دستیاب ہیں۔",
+          "power_cycle_delay": "عام طور پر اضافی تاخیر کی ضرورت نہیں ہوتی۔ اگر اپنے بٹن سے بند کیا گیا لیمپ Home Assistant سے آن نہ ہو تو تھوڑی سی تاخیر مقرر کریں، مثلاً 0.7 s۔"
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "کم از کم ایک موڈ شامل کریں"
+    },
+    "abort": {
+      "current_sensor_missing": "منتخب پلگ کے لیے کرنٹ سینسر نہیں ملا"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "ملٹی لیول لائٹ ترتیب دیں",
+        "data": {
+          "name": "لائٹ کا نام",
+          "current_sensor": "کرنٹ سینسر",
+          "off_current_threshold": "OFF کرنٹ حد",
+          "power_cycle_delay": "پاور سائیکل تاخیر",
+          "modes": "روشنائی کے موڈ"
+        },
+        "data_description": {
+          "off_current_threshold": "اس حد پر یا اس سے کم کرنٹ کو OFF سمجھا جاتا ہے۔",
+          "modes": "پہلے انٹیگریشن کو نئے لیمپ کے برائٹنس موڈ سکھائیں۔ لیمپ کے فزیکل بٹن سے ہر سطح منتخب کریں اور نیچے شامل کریں، مثلاً High، Medium، Low اور Dim۔",
+          "current_sensor": "یہاں صرف منتخب اسمارٹ پلگ سے متعلق کرنٹ سینسر دستیاب ہیں۔",
+          "power_cycle_delay": "عام طور پر اضافی تاخیر کی ضرورت نہیں ہوتی۔ اگر اپنے بٹن سے بند کیا گیا لیمپ Home Assistant سے آن نہ ہو تو تھوڑی سی تاخیر مقرر کریں، مثلاً 0.7 s۔"
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "کم از کم ایک موڈ شامل کریں"
+    }
+  }
+}

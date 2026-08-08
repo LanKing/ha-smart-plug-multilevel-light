@@ -1,1 +1,59 @@
-{"title":"Slimprop-multivlaklig","config":{"step":{"user":{"title":"Kies 'n slimprop","description":"Slegs proppe met 'n stroomsensor word gewys.","data":{"outlet":"Slimprop"}},"settings":{"title":"Stel lig en modusse op","description":"Die stroomsensor is beperk tot die gekose prop.","data":{"name":"Lignaam","current_sensor":"Stroomsensor","off_current_threshold":"AF-stroomdrempel","power_cycle_delay":"Kragherlaai-vertraging","modes":"Helderheidsmodusse"},"data_description":{"off_current_threshold":"Stroom op of onder hierdie drempel word as AF beskou.","modes":"Modusse word outomaties volgens stroom gesorteer."}}},"error":{"at_least_one_mode":"Voeg minstens een modus by"},"abort":{"current_sensor_missing":"Geen stroomsensor is vir die gekose prop gevind nie"}},"options":{"step":{"init":{"title":"Stel multivlaklig op","data":{"name":"Lignaam","current_sensor":"Stroomsensor","off_current_threshold":"AF-stroomdrempel","power_cycle_delay":"Kragherlaai-vertraging","modes":"Helderheidsmodusse"},"data_description":{"off_current_threshold":"Stroom op of onder hierdie drempel word as AF beskou.","modes":"Modusse word outomaties volgens stroom gesorteer."}}},"error":{"at_least_one_mode":"Voeg minstens een modus by"}}}
+{
+  "title": "Slimprop-multivlaklig",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kies 'n slimprop",
+        "description": "Slegs proppe met 'n stroomsensor word gewys.",
+        "data": {
+          "outlet": "Slimprop"
+        }
+      },
+      "settings": {
+        "title": "Stel lig en modusse op",
+        "data": {
+          "name": "Lignaam",
+          "current_sensor": "Stroomsensor",
+          "off_current_threshold": "AF-stroomdrempel",
+          "power_cycle_delay": "Kragherlaai-vertraging",
+          "modes": "Helderheidsmodusse"
+        },
+        "data_description": {
+          "off_current_threshold": "Stroom op of onder hierdie drempel word as AF beskou.",
+          "modes": "Leer eers die helderheidsmodusse van 'n nuwe lamp. Gebruik die fisiese knoppie op die lamp om elke helderheidsvlak te kies en voeg dit hieronder by, byvoorbeeld High, Medium, Low en Dim.",
+          "current_sensor": "Slegs stroomsensors wat aan die gekose slimprop behoort, is hier beskikbaar.",
+          "power_cycle_delay": "Gewoonlik is geen ekstra vertraging nodig nie. As 'n lamp wat met sy eie knoppie afgeskakel is nie vanuit Home Assistant aanskakel nie, stel 'n klein vertraging in, byvoorbeeld 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Voeg minstens een modus by"
+    },
+    "abort": {
+      "current_sensor_missing": "Geen stroomsensor is vir die gekose prop gevind nie"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Stel multivlaklig op",
+        "data": {
+          "name": "Lignaam",
+          "current_sensor": "Stroomsensor",
+          "off_current_threshold": "AF-stroomdrempel",
+          "power_cycle_delay": "Kragherlaai-vertraging",
+          "modes": "Helderheidsmodusse"
+        },
+        "data_description": {
+          "off_current_threshold": "Stroom op of onder hierdie drempel word as AF beskou.",
+          "modes": "Leer eers die helderheidsmodusse van 'n nuwe lamp. Gebruik die fisiese knoppie op die lamp om elke helderheidsvlak te kies en voeg dit hieronder by, byvoorbeeld High, Medium, Low en Dim.",
+          "current_sensor": "Slegs stroomsensors wat aan die gekose slimprop behoort, is hier beskikbaar.",
+          "power_cycle_delay": "Gewoonlik is geen ekstra vertraging nodig nie. As 'n lamp wat met sy eie knoppie afgeskakel is nie vanuit Home Assistant aanskakel nie, stel 'n klein vertraging in, byvoorbeeld 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Voeg minstens een modus by"
+    }
+  }
+}

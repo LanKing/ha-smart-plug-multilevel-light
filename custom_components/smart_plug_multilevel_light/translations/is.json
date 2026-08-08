@@ -1,1 +1,59 @@
-{"title":"Fjölþrepa ljós í gegnum snjallinnstungu","config":{"step":{"user":{"title":"Veldu snjallinnstungu","description":"Aðeins innstungur með straumskynjara eru sýndar.","data":{"outlet":"Snjallinnstunga"}},"settings":{"title":"Stilltu ljós og stillingar","description":"Straumskynjarinn er takmarkaður við valda innstungu.","data":{"name":"Heiti ljóss","current_sensor":"Straumskynjari","off_current_threshold":"OFF-straumþröskuldur","power_cycle_delay":"Seinkun á aflræsingu","modes":"Birtustillingar"},"data_description":{"off_current_threshold":"Straumur við eða undir þessum þröskuldi telst OFF.","modes":"Stillingar raðast sjálfkrafa eftir straumi."}}},"error":{"at_least_one_mode":"Bættu við að minnsta kosti einni stillingu"},"abort":{"current_sensor_missing":"Enginn straumskynjari fannst fyrir valda innstungu"}},"options":{"step":{"init":{"title":"Stilltu fjölþrepa ljós","data":{"name":"Heiti ljóss","current_sensor":"Straumskynjari","off_current_threshold":"OFF-straumþröskuldur","power_cycle_delay":"Seinkun á aflræsingu","modes":"Birtustillingar"},"data_description":{"off_current_threshold":"Straumur við eða undir þessum þröskuldi telst OFF.","modes":"Stillingar raðast sjálfkrafa eftir straumi."}}},"error":{"at_least_one_mode":"Bættu við að minnsta kosti einni stillingu"}}}
+{
+  "title": "Fjölþrepa ljós í gegnum snjallinnstungu",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Veldu snjallinnstungu",
+        "description": "Aðeins innstungur með straumskynjara eru sýndar.",
+        "data": {
+          "outlet": "Snjallinnstunga"
+        }
+      },
+      "settings": {
+        "title": "Stilltu ljós og stillingar",
+        "data": {
+          "name": "Heiti ljóss",
+          "current_sensor": "Straumskynjari",
+          "off_current_threshold": "OFF-straumþröskuldur",
+          "power_cycle_delay": "Seinkun á aflræsingu",
+          "modes": "Birtustillingar"
+        },
+        "data_description": {
+          "off_current_threshold": "Straumur við eða undir þessum þröskuldi telst OFF.",
+          "modes": "Kenndu fyrst samþættingunni birtustillingar nýja lampans. Notaðu hnappinn á lampanum til að velja hvert stig og bættu því við hér fyrir neðan, til dæmis High, Medium, Low og Dim.",
+          "current_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir.",
+          "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Bættu við að minnsta kosti einni stillingu"
+    },
+    "abort": {
+      "current_sensor_missing": "Enginn straumskynjari fannst fyrir valda innstungu"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Stilltu fjölþrepa ljós",
+        "data": {
+          "name": "Heiti ljóss",
+          "current_sensor": "Straumskynjari",
+          "off_current_threshold": "OFF-straumþröskuldur",
+          "power_cycle_delay": "Seinkun á aflræsingu",
+          "modes": "Birtustillingar"
+        },
+        "data_description": {
+          "off_current_threshold": "Straumur við eða undir þessum þröskuldi telst OFF.",
+          "modes": "Kenndu fyrst samþættingunni birtustillingar nýja lampans. Notaðu hnappinn á lampanum til að velja hvert stig og bættu því við hér fyrir neðan, til dæmis High, Medium, Low og Dim.",
+          "current_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir.",
+          "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Bættu við að minnsta kosti einni stillingu"
+    }
+  }
+}

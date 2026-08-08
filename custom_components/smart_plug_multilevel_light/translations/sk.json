@@ -1,1 +1,59 @@
-{"title":"Viacúrovňové svetlo cez inteligentnú zásuvku","config":{"step":{"user":{"title":"Vyberte inteligentnú zásuvku","description":"Zobrazujú sa iba zásuvky so senzorom prúdu.","data":{"outlet":"Inteligentná zásuvka"}},"settings":{"title":"Nastavte svetlo a režimy","description":"Senzor prúdu je obmedzený na vybranú zásuvku.","data":{"name":"Názov svetla","current_sensor":"Senzor prúdu","off_current_threshold":"Prah prúdu pre OFF","power_cycle_delay":"Oneskorenie cyklu napájania","modes":"Režimy jasu"},"data_description":{"off_current_threshold":"Prúd na tomto prahu alebo nižší sa považuje za OFF.","modes":"Režimy sa automaticky zoradia podľa prúdu."}}},"error":{"at_least_one_mode":"Pridajte aspoň jeden režim"},"abort":{"current_sensor_missing":"Pre vybranú zásuvku nebol nájdený senzor prúdu"}},"options":{"step":{"init":{"title":"Nastavte viacúrovňové svetlo","data":{"name":"Názov svetla","current_sensor":"Senzor prúdu","off_current_threshold":"Prah prúdu pre OFF","power_cycle_delay":"Oneskorenie cyklu napájania","modes":"Režimy jasu"},"data_description":{"off_current_threshold":"Prúd na tomto prahu alebo nižší sa považuje za OFF.","modes":"Režimy sa automaticky zoradia podľa prúdu."}}},"error":{"at_least_one_mode":"Pridajte aspoň jeden režim"}}}
+{
+  "title": "Viacúrovňové svetlo cez inteligentnú zásuvku",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Vyberte inteligentnú zásuvku",
+        "description": "Zobrazujú sa iba zásuvky so senzorom prúdu.",
+        "data": {
+          "outlet": "Inteligentná zásuvka"
+        }
+      },
+      "settings": {
+        "title": "Nastavte svetlo a režimy",
+        "data": {
+          "name": "Názov svetla",
+          "current_sensor": "Senzor prúdu",
+          "off_current_threshold": "Prah prúdu pre OFF",
+          "power_cycle_delay": "Oneskorenie cyklu napájania",
+          "modes": "Režimy jasu"
+        },
+        "data_description": {
+          "off_current_threshold": "Prúd na tomto prahu alebo nižší sa považuje za OFF.",
+          "modes": "Najprv integráciu naučte režimy jasu novej lampy. Fyzickým tlačidlom na lampe vyberte každú úroveň a pridajte ju nižšie, napríklad High, Medium, Low a Dim.",
+          "current_sensor": "Tu sú dostupné iba snímače prúdu patriace k vybranej inteligentnej zásuvke.",
+          "power_cycle_delay": "Zvyčajne nie je potrebné žiadne ďalšie oneskorenie. Ak sa lampa vypnutá vlastným tlačidlom nezapne z Home Assistanta, nastavte malé oneskorenie, napríklad 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Pridajte aspoň jeden režim"
+    },
+    "abort": {
+      "current_sensor_missing": "Pre vybranú zásuvku nebol nájdený senzor prúdu"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nastavte viacúrovňové svetlo",
+        "data": {
+          "name": "Názov svetla",
+          "current_sensor": "Senzor prúdu",
+          "off_current_threshold": "Prah prúdu pre OFF",
+          "power_cycle_delay": "Oneskorenie cyklu napájania",
+          "modes": "Režimy jasu"
+        },
+        "data_description": {
+          "off_current_threshold": "Prúd na tomto prahu alebo nižší sa považuje za OFF.",
+          "modes": "Najprv integráciu naučte režimy jasu novej lampy. Fyzickým tlačidlom na lampe vyberte každú úroveň a pridajte ju nižšie, napríklad High, Medium, Low a Dim.",
+          "current_sensor": "Tu sú dostupné iba snímače prúdu patriace k vybranej inteligentnej zásuvke.",
+          "power_cycle_delay": "Zvyčajne nie je potrebné žiadne ďalšie oneskorenie. Ak sa lampa vypnutá vlastným tlačidlom nezapne z Home Assistanta, nastavte malé oneskorenie, napríklad 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Pridajte aspoň jeden režim"
+    }
+  }
+}

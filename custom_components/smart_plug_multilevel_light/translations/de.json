@@ -1,1 +1,59 @@
-{"title":"Mehrstufiges Licht über Smart-Steckdose","config":{"step":{"user":{"title":"Smart-Steckdose auswählen","description":"Es werden nur Steckdosen mit Stromsensor angezeigt.","data":{"outlet":"Smart-Steckdose"}},"settings":{"title":"Licht und Modi konfigurieren","description":"Der Stromsensor ist auf die ausgewählte Steckdose beschränkt.","data":{"name":"Lichtname","current_sensor":"Stromsensor","off_current_threshold":"OFF-Stromschwelle","power_cycle_delay":"Verzögerung beim Aus- und Einschalten","modes":"Helligkeitsmodi"},"data_description":{"off_current_threshold":"Strom auf oder unter dieser Schwelle gilt als OFF.","modes":"Die Modi werden automatisch nach Strom sortiert."}}},"error":{"at_least_one_mode":"Fügen Sie mindestens einen Modus hinzu"},"abort":{"current_sensor_missing":"Für die ausgewählte Steckdose wurde kein Stromsensor gefunden"}},"options":{"step":{"init":{"title":"Mehrstufiges Licht konfigurieren","data":{"name":"Lichtname","current_sensor":"Stromsensor","off_current_threshold":"OFF-Stromschwelle","power_cycle_delay":"Verzögerung beim Aus- und Einschalten","modes":"Helligkeitsmodi"},"data_description":{"off_current_threshold":"Strom auf oder unter dieser Schwelle gilt als OFF.","modes":"Die Modi werden automatisch nach Strom sortiert."}}},"error":{"at_least_one_mode":"Fügen Sie mindestens einen Modus hinzu"}}}
+{
+  "title": "Mehrstufiges Licht über Smart-Steckdose",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Smart-Steckdose auswählen",
+        "description": "Es werden nur Steckdosen mit Stromsensor angezeigt.",
+        "data": {
+          "outlet": "Smart-Steckdose"
+        }
+      },
+      "settings": {
+        "title": "Licht und Modi konfigurieren",
+        "data": {
+          "name": "Lichtname",
+          "current_sensor": "Stromsensor",
+          "off_current_threshold": "OFF-Stromschwelle",
+          "power_cycle_delay": "Verzögerung beim Aus- und Einschalten",
+          "modes": "Helligkeitsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Strom auf oder unter dieser Schwelle gilt als OFF.",
+          "modes": "Lernen Sie zuerst die Helligkeitsstufen der neuen Lampe an. Wählen Sie mit der physischen Taste der Lampe jede Stufe aus und fügen Sie sie unten hinzu, z. B. High, Medium, Low und Dim.",
+          "current_sensor": "Hier sind nur Stromsensoren verfügbar, die zur ausgewählten Smart-Steckdose gehören.",
+          "power_cycle_delay": "Normalerweise ist keine zusätzliche Verzögerung erforderlich. Wenn sich eine mit ihrer eigenen Taste ausgeschaltete Lampe nicht über Home Assistant einschalten lässt, stellen Sie eine kleine Verzögerung ein, z. B. 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Fügen Sie mindestens einen Modus hinzu"
+    },
+    "abort": {
+      "current_sensor_missing": "Für die ausgewählte Steckdose wurde kein Stromsensor gefunden"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Mehrstufiges Licht konfigurieren",
+        "data": {
+          "name": "Lichtname",
+          "current_sensor": "Stromsensor",
+          "off_current_threshold": "OFF-Stromschwelle",
+          "power_cycle_delay": "Verzögerung beim Aus- und Einschalten",
+          "modes": "Helligkeitsmodi"
+        },
+        "data_description": {
+          "off_current_threshold": "Strom auf oder unter dieser Schwelle gilt als OFF.",
+          "modes": "Lernen Sie zuerst die Helligkeitsstufen der neuen Lampe an. Wählen Sie mit der physischen Taste der Lampe jede Stufe aus und fügen Sie sie unten hinzu, z. B. High, Medium, Low und Dim.",
+          "current_sensor": "Hier sind nur Stromsensoren verfügbar, die zur ausgewählten Smart-Steckdose gehören.",
+          "power_cycle_delay": "Normalerweise ist keine zusätzliche Verzögerung erforderlich. Wenn sich eine mit ihrer eigenen Taste ausgeschaltete Lampe nicht über Home Assistant einschalten lässt, stellen Sie eine kleine Verzögerung ein, z. B. 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Fügen Sie mindestens einen Modus hinzu"
+    }
+  }
+}

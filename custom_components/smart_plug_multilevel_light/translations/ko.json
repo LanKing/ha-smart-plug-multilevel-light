@@ -1,1 +1,59 @@
-{"title":"스마트 플러그 다단계 조명","config":{"step":{"user":{"title":"스마트 플러그 선택","description":"전류 센서가 있는 플러그만 표시됩니다.","data":{"outlet":"스마트 플러그"}},"settings":{"title":"조명 및 모드 설정","description":"전류 센서는 선택한 플러그로 제한됩니다.","data":{"name":"조명 이름","current_sensor":"전류 센서","off_current_threshold":"OFF 전류 임계값","power_cycle_delay":"전원 재시작 지연","modes":"밝기 모드"},"data_description":{"off_current_threshold":"이 임계값 이하의 전류는 OFF로 간주됩니다.","modes":"모드는 전류에 따라 자동 정렬됩니다."}}},"error":{"at_least_one_mode":"모드를 하나 이상 추가하세요"},"abort":{"current_sensor_missing":"선택한 플러그의 전류 센서를 찾을 수 없습니다"}},"options":{"step":{"init":{"title":"다단계 조명 설정","data":{"name":"조명 이름","current_sensor":"전류 센서","off_current_threshold":"OFF 전류 임계값","power_cycle_delay":"전원 재시작 지연","modes":"밝기 모드"},"data_description":{"off_current_threshold":"이 임계값 이하의 전류는 OFF로 간주됩니다.","modes":"모드는 전류에 따라 자동 정렬됩니다."}}},"error":{"at_least_one_mode":"모드를 하나 이상 추가하세요"}}}
+{
+  "title": "스마트 플러그 다단계 조명",
+  "config": {
+    "step": {
+      "user": {
+        "title": "스마트 플러그 선택",
+        "description": "전류 센서가 있는 플러그만 표시됩니다.",
+        "data": {
+          "outlet": "스마트 플러그"
+        }
+      },
+      "settings": {
+        "title": "조명 및 모드 설정",
+        "data": {
+          "name": "조명 이름",
+          "current_sensor": "전류 센서",
+          "off_current_threshold": "OFF 전류 임계값",
+          "power_cycle_delay": "전원 재시작 지연",
+          "modes": "밝기 모드"
+        },
+        "data_description": {
+          "off_current_threshold": "이 임계값 이하의 전류는 OFF로 간주됩니다.",
+          "modes": "새 램프는 먼저 밝기 모드를 통합에 학습시켜야 합니다. 램프의 물리 버튼으로 각 밝기 단계를 선택해 아래에 추가하세요. 예: High, Medium, Low, Dim.",
+          "current_sensor": "여기에서는 선택한 스마트 플러그에 속한 전류 센서만 사용할 수 있습니다.",
+          "power_cycle_delay": "일반적으로 추가 지연은 필요하지 않습니다. 램프 자체 버튼으로 끈 뒤 Home Assistant에서 켜지지 않으면 0.7초와 같은 짧은 지연을 설정하세요."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "모드를 하나 이상 추가하세요"
+    },
+    "abort": {
+      "current_sensor_missing": "선택한 플러그의 전류 센서를 찾을 수 없습니다"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "다단계 조명 설정",
+        "data": {
+          "name": "조명 이름",
+          "current_sensor": "전류 센서",
+          "off_current_threshold": "OFF 전류 임계값",
+          "power_cycle_delay": "전원 재시작 지연",
+          "modes": "밝기 모드"
+        },
+        "data_description": {
+          "off_current_threshold": "이 임계값 이하의 전류는 OFF로 간주됩니다.",
+          "modes": "새 램프는 먼저 밝기 모드를 통합에 학습시켜야 합니다. 램프의 물리 버튼으로 각 밝기 단계를 선택해 아래에 추가하세요. 예: High, Medium, Low, Dim.",
+          "current_sensor": "여기에서는 선택한 스마트 플러그에 속한 전류 센서만 사용할 수 있습니다.",
+          "power_cycle_delay": "일반적으로 추가 지연은 필요하지 않습니다. 램프 자체 버튼으로 끈 뒤 Home Assistant에서 켜지지 않으면 0.7초와 같은 짧은 지연을 설정하세요."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "모드를 하나 이상 추가하세요"
+    }
+  }
+}

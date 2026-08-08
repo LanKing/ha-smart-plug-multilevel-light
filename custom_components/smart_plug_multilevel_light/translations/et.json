@@ -1,1 +1,59 @@
-{"title":"Mitmetasemeline valgus nutipistikuga","config":{"step":{"user":{"title":"Valige nutipistik","description":"Kuvatakse ainult vooluanduriga pistikud.","data":{"outlet":"Nutipistik"}},"settings":{"title":"Seadistage valgus ja režiimid","description":"Vooluandur on piiratud valitud pistikuga.","data":{"name":"Valguse nimi","current_sensor":"Vooluandur","off_current_threshold":"OFF-voolulävi","power_cycle_delay":"Toitetsükli viivitus","modes":"Heledusrežiimid"},"data_description":{"off_current_threshold":"Selle lävega võrdne või väiksem vool loetakse OFF-olekuks.","modes":"Režiimid sorditakse automaatselt voolu järgi."}}},"error":{"at_least_one_mode":"Lisage vähemalt üks režiim"},"abort":{"current_sensor_missing":"Valitud pistikule ei leitud vooluandurit"}},"options":{"step":{"init":{"title":"Seadistage mitmetasemeline valgus","data":{"name":"Valguse nimi","current_sensor":"Vooluandur","off_current_threshold":"OFF-voolulävi","power_cycle_delay":"Toitetsükli viivitus","modes":"Heledusrežiimid"},"data_description":{"off_current_threshold":"Selle lävega võrdne või väiksem vool loetakse OFF-olekuks.","modes":"Režiimid sorditakse automaatselt voolu järgi."}}},"error":{"at_least_one_mode":"Lisage vähemalt üks režiim"}}}
+{
+  "title": "Mitmetasemeline valgus nutipistikuga",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Valige nutipistik",
+        "description": "Kuvatakse ainult vooluanduriga pistikud.",
+        "data": {
+          "outlet": "Nutipistik"
+        }
+      },
+      "settings": {
+        "title": "Seadistage valgus ja režiimid",
+        "data": {
+          "name": "Valguse nimi",
+          "current_sensor": "Vooluandur",
+          "off_current_threshold": "OFF-voolulävi",
+          "power_cycle_delay": "Toitetsükli viivitus",
+          "modes": "Heledusrežiimid"
+        },
+        "data_description": {
+          "off_current_threshold": "Selle lävega võrdne või väiksem vool loetakse OFF-olekuks.",
+          "modes": "Kõigepealt õpetage integratsioonile uue lambi heledusrežiimid. Valige lambi füüsilise nupuga iga tase ja lisage see allpool, näiteks High, Medium, Low ja Dim.",
+          "current_sensor": "Siin on saadaval ainult valitud nutipistikule kuuluvad vooluandurid.",
+          "power_cycle_delay": "Tavaliselt pole lisaviivitust vaja. Kui oma nupust välja lülitatud lamp ei lülitu Home Assistantist sisse, määrake väike viivitus, näiteks 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Lisage vähemalt üks režiim"
+    },
+    "abort": {
+      "current_sensor_missing": "Valitud pistikule ei leitud vooluandurit"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Seadistage mitmetasemeline valgus",
+        "data": {
+          "name": "Valguse nimi",
+          "current_sensor": "Vooluandur",
+          "off_current_threshold": "OFF-voolulävi",
+          "power_cycle_delay": "Toitetsükli viivitus",
+          "modes": "Heledusrežiimid"
+        },
+        "data_description": {
+          "off_current_threshold": "Selle lävega võrdne või väiksem vool loetakse OFF-olekuks.",
+          "modes": "Kõigepealt õpetage integratsioonile uue lambi heledusrežiimid. Valige lambi füüsilise nupuga iga tase ja lisage see allpool, näiteks High, Medium, Low ja Dim.",
+          "current_sensor": "Siin on saadaval ainult valitud nutipistikule kuuluvad vooluandurid.",
+          "power_cycle_delay": "Tavaliselt pole lisaviivitust vaja. Kui oma nupust välja lülitatud lamp ei lülitu Home Assistantist sisse, määrake väike viivitus, näiteks 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Lisage vähemalt üks režiim"
+    }
+  }
+}

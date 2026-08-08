@@ -1,1 +1,59 @@
-{"title":"Smart Plug Multi-Level Light","config":{"step":{"user":{"title":"Select a smart plug","description":"Only plugs with a current sensor are shown.","data":{"outlet":"Smart plug"}},"settings":{"title":"Configure light and modes","description":"The current sensor is limited to the selected plug.","data":{"name":"Light name","current_sensor":"Current sensor","off_current_threshold":"OFF current threshold","power_cycle_delay":"Power-cycle delay","modes":"Brightness modes"},"data_description":{"off_current_threshold":"Current at or below this threshold is treated as OFF.","modes":"Modes are automatically sorted by current."}}},"error":{"at_least_one_mode":"Add at least one mode"},"abort":{"current_sensor_missing":"No current sensor was found for the selected plug"}},"options":{"step":{"init":{"title":"Configure multi-level light","data":{"name":"Light name","current_sensor":"Current sensor","off_current_threshold":"OFF current threshold","power_cycle_delay":"Power-cycle delay","modes":"Brightness modes"},"data_description":{"off_current_threshold":"Current at or below this threshold is treated as OFF.","modes":"Modes are automatically sorted by current."}}},"error":{"at_least_one_mode":"Add at least one mode"}}}
+{
+  "title": "Smart Plug Multi-Level Light",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Select a smart plug",
+        "description": "Only plugs with a current sensor are shown.",
+        "data": {
+          "outlet": "Smart plug"
+        }
+      },
+      "settings": {
+        "title": "Configure light and modes",
+        "data": {
+          "name": "Light name",
+          "current_sensor": "Current sensor",
+          "off_current_threshold": "OFF current threshold",
+          "power_cycle_delay": "Power-cycle delay",
+          "modes": "Brightness modes"
+        },
+        "data_description": {
+          "off_current_threshold": "Current at or below this threshold is treated as OFF.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add it below, for example High, Medium, Low, and Dim.",
+          "current_sensor": "Only current sensors belonging to the selected smart plug are available here.",
+          "power_cycle_delay": "Usually no additional delay is needed. If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Add at least one mode"
+    },
+    "abort": {
+      "current_sensor_missing": "No current sensor was found for the selected plug"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configure multi-level light",
+        "data": {
+          "name": "Light name",
+          "current_sensor": "Current sensor",
+          "off_current_threshold": "OFF current threshold",
+          "power_cycle_delay": "Power-cycle delay",
+          "modes": "Brightness modes"
+        },
+        "data_description": {
+          "off_current_threshold": "Current at or below this threshold is treated as OFF.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add it below, for example High, Medium, Low, and Dim.",
+          "current_sensor": "Only current sensors belonging to the selected smart plug are available here.",
+          "power_cycle_delay": "Usually no additional delay is needed. If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Add at least one mode"
+    }
+  }
+}

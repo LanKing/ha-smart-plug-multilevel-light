@@ -1,1 +1,59 @@
-{"title":"Maila anitzeko argia entxufe adimendunarekin","config":{"step":{"user":{"title":"Hautatu entxufe adimenduna","description":"Korronte-sentsorea duten entxufeak bakarrik erakusten dira.","data":{"outlet":"Entxufe adimenduna"}},"settings":{"title":"Konfiguratu argia eta moduak","description":"Korronte-sentsorea hautatutako entxufeari mugatuta dago.","data":{"name":"Argiaren izena","current_sensor":"Korronte-sentsorea","off_current_threshold":"OFF korronte-atalasea","power_cycle_delay":"Elikadura-zikloaren atzerapena","modes":"Distira-moduak"},"data_description":{"off_current_threshold":"Atalase honetan edo azpitik dagoen korrontea OFF gisa hartzen da.","modes":"Moduak automatikoki korrontearen arabera ordenatzen dira."}}},"error":{"at_least_one_mode":"Gehitu gutxienez modu bat"},"abort":{"current_sensor_missing":"Ez da korronte-sentsorerik aurkitu hautatutako entxufearentzat"}},"options":{"step":{"init":{"title":"Konfiguratu maila anitzeko argia","data":{"name":"Argiaren izena","current_sensor":"Korronte-sentsorea","off_current_threshold":"OFF korronte-atalasea","power_cycle_delay":"Elikadura-zikloaren atzerapena","modes":"Distira-moduak"},"data_description":{"off_current_threshold":"Atalase honetan edo azpitik dagoen korrontea OFF gisa hartzen da.","modes":"Moduak automatikoki korrontearen arabera ordenatzen dira."}}},"error":{"at_least_one_mode":"Gehitu gutxienez modu bat"}}}
+{
+  "title": "Maila anitzeko argia entxufe adimendunarekin",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Hautatu entxufe adimenduna",
+        "description": "Korronte-sentsorea duten entxufeak bakarrik erakusten dira.",
+        "data": {
+          "outlet": "Entxufe adimenduna"
+        }
+      },
+      "settings": {
+        "title": "Konfiguratu argia eta moduak",
+        "data": {
+          "name": "Argiaren izena",
+          "current_sensor": "Korronte-sentsorea",
+          "off_current_threshold": "OFF korronte-atalasea",
+          "power_cycle_delay": "Elikadura-zikloaren atzerapena",
+          "modes": "Distira-moduak"
+        },
+        "data_description": {
+          "off_current_threshold": "Atalase honetan edo azpitik dagoen korrontea OFF gisa hartzen da.",
+          "modes": "Lehenik, irakatsi integrazioari lanpara berriaren distira-moduak. Lanpararen botoi fisikoarekin hautatu maila bakoitza eta gehitu behean, adibidez High, Medium, Low eta Dim.",
+          "current_sensor": "Hemen hautatutako entxufe adimendunari dagozkion korronte-sentsoreak bakarrik daude erabilgarri.",
+          "power_cycle_delay": "Normalean ez da atzerapen gehigarririk behar. Bere botoiarekin itzalitako lanpara Home Assistant-etik pizten ez bada, ezarri atzerapen txiki bat, adibidez 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Gehitu gutxienez modu bat"
+    },
+    "abort": {
+      "current_sensor_missing": "Ez da korronte-sentsorerik aurkitu hautatutako entxufearentzat"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfiguratu maila anitzeko argia",
+        "data": {
+          "name": "Argiaren izena",
+          "current_sensor": "Korronte-sentsorea",
+          "off_current_threshold": "OFF korronte-atalasea",
+          "power_cycle_delay": "Elikadura-zikloaren atzerapena",
+          "modes": "Distira-moduak"
+        },
+        "data_description": {
+          "off_current_threshold": "Atalase honetan edo azpitik dagoen korrontea OFF gisa hartzen da.",
+          "modes": "Lehenik, irakatsi integrazioari lanpara berriaren distira-moduak. Lanpararen botoi fisikoarekin hautatu maila bakoitza eta gehitu behean, adibidez High, Medium, Low eta Dim.",
+          "current_sensor": "Hemen hautatutako entxufe adimendunari dagozkion korronte-sentsoreak bakarrik daude erabilgarri.",
+          "power_cycle_delay": "Normalean ez da atzerapen gehigarririk behar. Bere botoiarekin itzalitako lanpara Home Assistant-etik pizten ez bada, ezarri atzerapen txiki bat, adibidez 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Gehitu gutxienez modu bat"
+    }
+  }
+}

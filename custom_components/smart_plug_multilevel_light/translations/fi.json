@@ -1,1 +1,59 @@
-{"title":"Monitasoinen valo älypistorasian kautta","config":{"step":{"user":{"title":"Valitse älypistorasia","description":"Näytetään vain pistorasiat, joissa on virtatunnistin.","data":{"outlet":"Älypistorasia"}},"settings":{"title":"Määritä valo ja tilat","description":"Virtatunnistin rajataan valittuun pistorasiaan.","data":{"name":"Valon nimi","current_sensor":"Virtatunnistin","off_current_threshold":"OFF-virtakynnys","power_cycle_delay":"Virrankatkaisun viive","modes":"Kirkkaustilat"},"data_description":{"off_current_threshold":"Tämän kynnyksen suuruinen tai pienempi virta tulkitaan OFF-tilaksi.","modes":"Tilat lajitellaan automaattisesti virran mukaan."}}},"error":{"at_least_one_mode":"Lisää vähintään yksi tila"},"abort":{"current_sensor_missing":"Valitulle pistorasialle ei löytynyt virtatunnistinta"}},"options":{"step":{"init":{"title":"Määritä monitasoinen valo","data":{"name":"Valon nimi","current_sensor":"Virtatunnistin","off_current_threshold":"OFF-virtakynnys","power_cycle_delay":"Virrankatkaisun viive","modes":"Kirkkaustilat"},"data_description":{"off_current_threshold":"Tämän kynnyksen suuruinen tai pienempi virta tulkitaan OFF-tilaksi.","modes":"Tilat lajitellaan automaattisesti virran mukaan."}}},"error":{"at_least_one_mode":"Lisää vähintään yksi tila"}}}
+{
+  "title": "Monitasoinen valo älypistorasian kautta",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Valitse älypistorasia",
+        "description": "Näytetään vain pistorasiat, joissa on virtatunnistin.",
+        "data": {
+          "outlet": "Älypistorasia"
+        }
+      },
+      "settings": {
+        "title": "Määritä valo ja tilat",
+        "data": {
+          "name": "Valon nimi",
+          "current_sensor": "Virtatunnistin",
+          "off_current_threshold": "OFF-virtakynnys",
+          "power_cycle_delay": "Virrankatkaisun viive",
+          "modes": "Kirkkaustilat"
+        },
+        "data_description": {
+          "off_current_threshold": "Tämän kynnyksen suuruinen tai pienempi virta tulkitaan OFF-tilaksi.",
+          "modes": "Opeta ensin integraatiolle uuden lampun kirkkaustilat. Valitse lampun fyysisellä painikkeella jokainen taso ja lisää se alle, esimerkiksi High, Medium, Low ja Dim.",
+          "current_sensor": "Tässä ovat käytettävissä vain valittuun älypistorasiaan kuuluvat virta-anturit.",
+          "power_cycle_delay": "Yleensä lisäviivettä ei tarvita. Jos omasta painikkeestaan sammutettu lamppu ei syty Home Assistantista, aseta pieni viive, esimerkiksi 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Lisää vähintään yksi tila"
+    },
+    "abort": {
+      "current_sensor_missing": "Valitulle pistorasialle ei löytynyt virtatunnistinta"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Määritä monitasoinen valo",
+        "data": {
+          "name": "Valon nimi",
+          "current_sensor": "Virtatunnistin",
+          "off_current_threshold": "OFF-virtakynnys",
+          "power_cycle_delay": "Virrankatkaisun viive",
+          "modes": "Kirkkaustilat"
+        },
+        "data_description": {
+          "off_current_threshold": "Tämän kynnyksen suuruinen tai pienempi virta tulkitaan OFF-tilaksi.",
+          "modes": "Opeta ensin integraatiolle uuden lampun kirkkaustilat. Valitse lampun fyysisellä painikkeella jokainen taso ja lisää se alle, esimerkiksi High, Medium, Low ja Dim.",
+          "current_sensor": "Tässä ovat käytettävissä vain valittuun älypistorasiaan kuuluvat virta-anturit.",
+          "power_cycle_delay": "Yleensä lisäviivettä ei tarvita. Jos omasta painikkeestaan sammutettu lamppu ei syty Home Assistantista, aseta pieni viive, esimerkiksi 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Lisää vähintään yksi tila"
+    }
+  }
+}

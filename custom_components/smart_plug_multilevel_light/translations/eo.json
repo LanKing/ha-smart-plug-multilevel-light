@@ -1,1 +1,59 @@
-{"title":"Plurnivela lumo per inteligenta ingo","config":{"step":{"user":{"title":"Elektu inteligentan ingon","description":"Montriĝas nur ingoj kun kurentsensilo.","data":{"outlet":"Inteligenta ingo"}},"settings":{"title":"Agordu lumon kaj reĝimojn","description":"La kurentsensilo estas limigita al la elektita ingo.","data":{"name":"Lumnomo","current_sensor":"Kurentsensilo","off_current_threshold":"OFF-kurenta sojlo","power_cycle_delay":"Prokrasto de potencciklo","modes":"Helecaj reĝimoj"},"data_description":{"off_current_threshold":"Kurento je aŭ sub ĉi tiu sojlo estas konsiderata OFF.","modes":"Reĝimoj aŭtomate ordigas laŭ kurento."}}},"error":{"at_least_one_mode":"Aldonu almenaŭ unu reĝimon"},"abort":{"current_sensor_missing":"Neniu kurentsensilo estis trovita por la elektita ingo"}},"options":{"step":{"init":{"title":"Agordu plurnivelan lumon","data":{"name":"Lumnomo","current_sensor":"Kurentsensilo","off_current_threshold":"OFF-kurenta sojlo","power_cycle_delay":"Prokrasto de potencciklo","modes":"Helecaj reĝimoj"},"data_description":{"off_current_threshold":"Kurento je aŭ sub ĉi tiu sojlo estas konsiderata OFF.","modes":"Reĝimoj aŭtomate ordigas laŭ kurento."}}},"error":{"at_least_one_mode":"Aldonu almenaŭ unu reĝimon"}}}
+{
+  "title": "Plurnivela lumo per inteligenta ingo",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Elektu inteligentan ingon",
+        "description": "Montriĝas nur ingoj kun kurentsensilo.",
+        "data": {
+          "outlet": "Inteligenta ingo"
+        }
+      },
+      "settings": {
+        "title": "Agordu lumon kaj reĝimojn",
+        "data": {
+          "name": "Lumnomo",
+          "current_sensor": "Kurentsensilo",
+          "off_current_threshold": "OFF-kurenta sojlo",
+          "power_cycle_delay": "Prokrasto de potencciklo",
+          "modes": "Helecaj reĝimoj"
+        },
+        "data_description": {
+          "off_current_threshold": "Kurento je aŭ sub ĉi tiu sojlo estas konsiderata OFF.",
+          "modes": "Unue instruu al la integriĝo la brilreĝimojn de la nova lampo. Per la fizika butono de la lampo elektu ĉiun nivelon kaj aldonu ĝin sube, ekzemple High, Medium, Low kaj Dim.",
+          "current_sensor": "Ĉi tie disponeblas nur kurentosensiloj apartenantaj al la elektita inteligenta ingo.",
+          "power_cycle_delay": "Kutime ne necesas aldona prokrasto. Se lampo malŝaltita per sia propra butono ne ŝaltiĝas el Home Assistant, agordu malgrandan prokraston, ekzemple 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Aldonu almenaŭ unu reĝimon"
+    },
+    "abort": {
+      "current_sensor_missing": "Neniu kurentsensilo estis trovita por la elektita ingo"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Agordu plurnivelan lumon",
+        "data": {
+          "name": "Lumnomo",
+          "current_sensor": "Kurentsensilo",
+          "off_current_threshold": "OFF-kurenta sojlo",
+          "power_cycle_delay": "Prokrasto de potencciklo",
+          "modes": "Helecaj reĝimoj"
+        },
+        "data_description": {
+          "off_current_threshold": "Kurento je aŭ sub ĉi tiu sojlo estas konsiderata OFF.",
+          "modes": "Unue instruu al la integriĝo la brilreĝimojn de la nova lampo. Per la fizika butono de la lampo elektu ĉiun nivelon kaj aldonu ĝin sube, ekzemple High, Medium, Low kaj Dim.",
+          "current_sensor": "Ĉi tie disponeblas nur kurentosensiloj apartenantaj al la elektita inteligenta ingo.",
+          "power_cycle_delay": "Kutime ne necesas aldona prokrasto. Se lampo malŝaltita per sia propra butono ne ŝaltiĝas el Home Assistant, agordu malgrandan prokraston, ekzemple 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Aldonu almenaŭ unu reĝimon"
+    }
+  }
+}

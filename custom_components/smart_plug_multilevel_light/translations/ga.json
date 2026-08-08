@@ -1,1 +1,59 @@
-{"title":"Solas il-leibhéil trí shoicéad cliste","config":{"step":{"user":{"title":"Roghnaigh soicéad cliste","description":"Ní thaispeántar ach soicéid a bhfuil braiteoir srutha acu.","data":{"outlet":"Soicéad cliste"}},"settings":{"title":"Cumraigh an solas agus na módanna","description":"Tá an braiteoir srutha teoranta don soicéad roghnaithe.","data":{"name":"Ainm an tsolais","current_sensor":"Braiteoir srutha","off_current_threshold":"Tairseach srutha OFF","power_cycle_delay":"Moill timthrialla cumhachta","modes":"Módanna gile"},"data_description":{"off_current_threshold":"Meastar gur OFF é sruth ag an tairseach seo nó faoina bhun.","modes":"Sórtáiltear módanna go huathoibríoch de réir srutha."}}},"error":{"at_least_one_mode":"Cuir mód amháin ar a laghad leis"},"abort":{"current_sensor_missing":"Níor aimsíodh braiteoir srutha don soicéad roghnaithe"}},"options":{"step":{"init":{"title":"Cumraigh an solas il-leibhéil","data":{"name":"Ainm an tsolais","current_sensor":"Braiteoir srutha","off_current_threshold":"Tairseach srutha OFF","power_cycle_delay":"Moill timthrialla cumhachta","modes":"Módanna gile"},"data_description":{"off_current_threshold":"Meastar gur OFF é sruth ag an tairseach seo nó faoina bhun.","modes":"Sórtáiltear módanna go huathoibríoch de réir srutha."}}},"error":{"at_least_one_mode":"Cuir mód amháin ar a laghad leis"}}}
+{
+  "title": "Solas il-leibhéil trí shoicéad cliste",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Roghnaigh soicéad cliste",
+        "description": "Ní thaispeántar ach soicéid a bhfuil braiteoir srutha acu.",
+        "data": {
+          "outlet": "Soicéad cliste"
+        }
+      },
+      "settings": {
+        "title": "Cumraigh an solas agus na módanna",
+        "data": {
+          "name": "Ainm an tsolais",
+          "current_sensor": "Braiteoir srutha",
+          "off_current_threshold": "Tairseach srutha OFF",
+          "power_cycle_delay": "Moill timthrialla cumhachta",
+          "modes": "Módanna gile"
+        },
+        "data_description": {
+          "off_current_threshold": "Meastar gur OFF é sruth ag an tairseach seo nó faoina bhun.",
+          "modes": "Ar dtús múin modhanna gile an lampa nua don chomhtháthú. Úsáid cnaipe fisiciúil an lampa chun gach leibhéal a roghnú agus cuir leis thíos é, mar shampla High, Medium, Low agus Dim.",
+          "current_sensor": "Níl ar fáil anseo ach braiteoirí srutha a bhaineann leis an soicéad cliste roghnaithe.",
+          "power_cycle_delay": "De ghnáth ní bhíonn moill bhreise de dhíth. Mura lasann lampa a múchadh lena chnaipe féin ó Home Assistant, socraigh moill bheag, mar shampla 0.7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Cuir mód amháin ar a laghad leis"
+    },
+    "abort": {
+      "current_sensor_missing": "Níor aimsíodh braiteoir srutha don soicéad roghnaithe"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cumraigh an solas il-leibhéil",
+        "data": {
+          "name": "Ainm an tsolais",
+          "current_sensor": "Braiteoir srutha",
+          "off_current_threshold": "Tairseach srutha OFF",
+          "power_cycle_delay": "Moill timthrialla cumhachta",
+          "modes": "Módanna gile"
+        },
+        "data_description": {
+          "off_current_threshold": "Meastar gur OFF é sruth ag an tairseach seo nó faoina bhun.",
+          "modes": "Ar dtús múin modhanna gile an lampa nua don chomhtháthú. Úsáid cnaipe fisiciúil an lampa chun gach leibhéal a roghnú agus cuir leis thíos é, mar shampla High, Medium, Low agus Dim.",
+          "current_sensor": "Níl ar fáil anseo ach braiteoirí srutha a bhaineann leis an soicéad cliste roghnaithe.",
+          "power_cycle_delay": "De ghnáth ní bhíonn moill bhreise de dhíth. Mura lasann lampa a múchadh lena chnaipe féin ó Home Assistant, socraigh moill bheag, mar shampla 0.7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Cuir mód amháin ar a laghad leis"
+    }
+  }
+}

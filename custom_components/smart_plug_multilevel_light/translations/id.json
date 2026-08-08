@@ -1,1 +1,59 @@
-{"title":"Lampu multi-level melalui smart plug","config":{"step":{"user":{"title":"Pilih smart plug","description":"Hanya plug dengan sensor arus yang ditampilkan.","data":{"outlet":"Smart plug"}},"settings":{"title":"Konfigurasikan lampu dan mode","description":"Sensor arus dibatasi pada plug yang dipilih.","data":{"name":"Nama lampu","current_sensor":"Sensor arus","off_current_threshold":"Ambang arus OFF","power_cycle_delay":"Jeda siklus daya","modes":"Mode kecerahan"},"data_description":{"off_current_threshold":"Arus pada atau di bawah ambang ini dianggap OFF.","modes":"Mode diurutkan otomatis berdasarkan arus."}}},"error":{"at_least_one_mode":"Tambahkan setidaknya satu mode"},"abort":{"current_sensor_missing":"Sensor arus tidak ditemukan untuk plug yang dipilih"}},"options":{"step":{"init":{"title":"Konfigurasikan lampu multi-level","data":{"name":"Nama lampu","current_sensor":"Sensor arus","off_current_threshold":"Ambang arus OFF","power_cycle_delay":"Jeda siklus daya","modes":"Mode kecerahan"},"data_description":{"off_current_threshold":"Arus pada atau di bawah ambang ini dianggap OFF.","modes":"Mode diurutkan otomatis berdasarkan arus."}}},"error":{"at_least_one_mode":"Tambahkan setidaknya satu mode"}}}
+{
+  "title": "Lampu multi-level melalui smart plug",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pilih smart plug",
+        "description": "Hanya plug dengan sensor arus yang ditampilkan.",
+        "data": {
+          "outlet": "Smart plug"
+        }
+      },
+      "settings": {
+        "title": "Konfigurasikan lampu dan mode",
+        "data": {
+          "name": "Nama lampu",
+          "current_sensor": "Sensor arus",
+          "off_current_threshold": "Ambang arus OFF",
+          "power_cycle_delay": "Jeda siklus daya",
+          "modes": "Mode kecerahan"
+        },
+        "data_description": {
+          "off_current_threshold": "Arus pada atau di bawah ambang ini dianggap OFF.",
+          "modes": "Pertama, ajarkan mode kecerahan lampu baru ke integrasi. Gunakan tombol fisik pada lampu untuk memilih setiap tingkat dan tambahkan di bawah, misalnya High, Medium, Low, dan Dim.",
+          "current_sensor": "Hanya sensor arus milik smart plug yang dipilih yang tersedia di sini.",
+          "power_cycle_delay": "Biasanya tidak diperlukan penundaan tambahan. Jika lampu yang dimatikan dengan tombolnya sendiri tidak menyala dari Home Assistant, atur penundaan kecil, misalnya 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Tambahkan setidaknya satu mode"
+    },
+    "abort": {
+      "current_sensor_missing": "Sensor arus tidak ditemukan untuk plug yang dipilih"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfigurasikan lampu multi-level",
+        "data": {
+          "name": "Nama lampu",
+          "current_sensor": "Sensor arus",
+          "off_current_threshold": "Ambang arus OFF",
+          "power_cycle_delay": "Jeda siklus daya",
+          "modes": "Mode kecerahan"
+        },
+        "data_description": {
+          "off_current_threshold": "Arus pada atau di bawah ambang ini dianggap OFF.",
+          "modes": "Pertama, ajarkan mode kecerahan lampu baru ke integrasi. Gunakan tombol fisik pada lampu untuk memilih setiap tingkat dan tambahkan di bawah, misalnya High, Medium, Low, dan Dim.",
+          "current_sensor": "Hanya sensor arus milik smart plug yang dipilih yang tersedia di sini.",
+          "power_cycle_delay": "Biasanya tidak diperlukan penundaan tambahan. Jika lampu yang dimatikan dengan tombolnya sendiri tidak menyala dari Home Assistant, atur penundaan kecil, misalnya 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Tambahkan setidaknya satu mode"
+    }
+  }
+}

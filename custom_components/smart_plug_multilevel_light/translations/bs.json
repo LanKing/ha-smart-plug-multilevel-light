@@ -1,1 +1,59 @@
-{"title":"Višenivojsko svjetlo preko pametne utičnice","config":{"step":{"user":{"title":"Odaberite pametnu utičnicu","description":"Prikazuju se samo utičnice sa senzorom struje.","data":{"outlet":"Pametna utičnica"}},"settings":{"title":"Podesite svjetlo i režime","description":"Senzor struje je ograničen na odabranu utičnicu.","data":{"name":"Naziv svjetla","current_sensor":"Senzor struje","off_current_threshold":"Prag struje za OFF","power_cycle_delay":"Kašnjenje ponovnog napajanja","modes":"Režimi svjetline"},"data_description":{"off_current_threshold":"Struja na ili ispod ovog praga smatra se OFF.","modes":"Režimi se automatski sortiraju prema struji."}}},"error":{"at_least_one_mode":"Dodajte najmanje jedan režim"},"abort":{"current_sensor_missing":"Nije pronađen senzor struje za odabranu utičnicu"}},"options":{"step":{"init":{"title":"Podesite višenivojsko svjetlo","data":{"name":"Naziv svjetla","current_sensor":"Senzor struje","off_current_threshold":"Prag struje za OFF","power_cycle_delay":"Kašnjenje ponovnog napajanja","modes":"Režimi svjetline"},"data_description":{"off_current_threshold":"Struja na ili ispod ovog praga smatra se OFF.","modes":"Režimi se automatski sortiraju prema struji."}}},"error":{"at_least_one_mode":"Dodajte najmanje jedan režim"}}}
+{
+  "title": "Višenivojsko svjetlo preko pametne utičnice",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Odaberite pametnu utičnicu",
+        "description": "Prikazuju se samo utičnice sa senzorom struje.",
+        "data": {
+          "outlet": "Pametna utičnica"
+        }
+      },
+      "settings": {
+        "title": "Podesite svjetlo i režime",
+        "data": {
+          "name": "Naziv svjetla",
+          "current_sensor": "Senzor struje",
+          "off_current_threshold": "Prag struje za OFF",
+          "power_cycle_delay": "Kašnjenje ponovnog napajanja",
+          "modes": "Režimi svjetline"
+        },
+        "data_description": {
+          "off_current_threshold": "Struja na ili ispod ovog praga smatra se OFF.",
+          "modes": "Najprije naučite integraciju režimima svjetline nove lampe. Fizičkim dugmetom na lampi odaberite svaki nivo i dodajte ga ispod, na primjer High, Medium, Low i Dim.",
+          "current_sensor": "Ovdje su dostupni samo senzori struje koji pripadaju odabranoj pametnoj utičnici.",
+          "power_cycle_delay": "Obično nije potrebno dodatno kašnjenje. Ako se lampa ugašena vlastitim dugmetom ne uključi iz Home Assistanta, postavite malo kašnjenje, na primjer 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Dodajte najmanje jedan režim"
+    },
+    "abort": {
+      "current_sensor_missing": "Nije pronađen senzor struje za odabranu utičnicu"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Podesite višenivojsko svjetlo",
+        "data": {
+          "name": "Naziv svjetla",
+          "current_sensor": "Senzor struje",
+          "off_current_threshold": "Prag struje za OFF",
+          "power_cycle_delay": "Kašnjenje ponovnog napajanja",
+          "modes": "Režimi svjetline"
+        },
+        "data_description": {
+          "off_current_threshold": "Struja na ili ispod ovog praga smatra se OFF.",
+          "modes": "Najprije naučite integraciju režimima svjetline nove lampe. Fizičkim dugmetom na lampi odaberite svaki nivo i dodajte ga ispod, na primjer High, Medium, Low i Dim.",
+          "current_sensor": "Ovdje su dostupni samo senzori struje koji pripadaju odabranoj pametnoj utičnici.",
+          "power_cycle_delay": "Obično nije potrebno dodatno kašnjenje. Ako se lampa ugašena vlastitim dugmetom ne uključi iz Home Assistanta, postavite malo kašnjenje, na primjer 0,7 s."
+        }
+      }
+    },
+    "error": {
+      "at_least_one_mode": "Dodajte najmanje jedan režim"
+    }
+  }
+}
