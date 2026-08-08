@@ -1,0 +1,51 @@
+name: Apply selected integration icon
+
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-selected-icon.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install Pillow
+        run: python -m pip install --quiet pillow
+      - name: Decode and prepare Home Assistant brand icons
+        shell: bash
+        run: |
+          base64 -d custom_components/smart_plug_multilevel_light/brand/icon-new.tmp > /tmp/icon.png
+          python - <<'PY'
+          from PIL import Image
+          import json
+          from pathlib import Path
+
+          brand = Path('custom_components/smart_plug_multilevel_light/brand')
+          src = Image.open('/tmp/icon.png').convert('RGB')
+          if src.size != (256, 256):
+              src = src.resize((256, 256), Image.Resampling.LANCZOS)
+          src.save(brand / 'icon.png', format='PNG', optimize=True, compress_level=9)
+          src.resize((512, 512), Image.Resampling.LANCZOS).save(
+              brand / 'icon@2x.png', format='PNG', optimize=True, compress_level=9
+          )
+
+          manifest = Path('custom_components/smart_plug_multilevel_light/manifest.json')
+          data = json.loads(manifest.read_text())
+          data['version'] = '0.7.17'
+          manifest.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+          PY
+      - name: Commit selected icon
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add custom_components/smart_plug_multilevel_light/brand/icon.png custom_components/smart_plug_multilevel_light/brand/icon@2x.png custom_components/smart_plug_multilevel_light/manifest.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Use selected integration icon and bump to 0.7.17'
+          git push
