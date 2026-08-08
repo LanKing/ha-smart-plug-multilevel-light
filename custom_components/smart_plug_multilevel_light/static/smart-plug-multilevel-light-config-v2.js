@@ -70,6 +70,9 @@
       .replace(/๑๐\s?%/g, "๑๕%");
   };
 
+  const measuredActionText = (selector) =>
+    `${common(selector, "ui.common.apply", "Apply")} ${custom(selector, "measured_current", "measured current")} −15%`;
+
   const getModesHelperText = (selector) => {
     const localize = selector?.hass?.localize?.bind(selector.hass);
     if (!localize) return "";
@@ -149,7 +152,7 @@
         .spml-input:focus{border:2px solid var(--primary-color);padding:0 15px}
         .spml-unit{color:var(--secondary-text-color);font-size:16px}
         .spml-helper{color:var(--secondary-text-color);font-size:12px;line-height:1.45}
-        .spml-inline-action{border:0;background:transparent;padding:0;margin-inline-start:4px;color:var(--primary-color);font:inherit;font-size:12px;font-weight:500;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+        .spml-inline-action{border:0;background:transparent;padding:0;margin:0;color:var(--primary-color);font:inherit;font-size:12px;font-weight:500;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
         .spml-inline-action:disabled{opacity:.5;cursor:default}
       </style>
       <div class="spml-editor">
@@ -167,10 +170,7 @@
             <input id="spml-current" class="spml-input spml-current" type="number" min="0" step="0.001" required inputmode="decimal" />
             <span class="spml-unit">A</span>
           </div>
-          <div class="spml-helper">
-            ${thresholdHelp(selector)}
-            <button type="button" class="spml-inline-action">${common(selector, "ui.common.apply", "Set")}</button>
-          </div>
+          <div class="spml-helper">${thresholdHelp(selector)} <button type="button" class="spml-inline-action">${measuredActionText(selector)}</button></div>
         </div>
       </div>`;
 
