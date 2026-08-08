@@ -63,6 +63,22 @@
   observer.observe(document.documentElement, { childList: true, subtree: true });
 
   customElements.whenDefined("ha-selector-object").then(() => {
+    const ctor = customElements.get("ha-selector-object");
+    const proto = ctor?.prototype;
+
+    // config-v2 creates the helper and may write the raw helper object during every
+    // Lit update. Run this normalizer after that update so [object Object] can never
+    // overwrite the visible description again.
+    if (proto && !proto.__spmlHelperTextPatched) {
+      const previousUpdated = proto.updated;
+      proto.updated = function (...args) {
+        const result = previousUpdated?.apply(this, args);
+        queueMicrotask(() => patchSelector(this));
+        return result;
+      };
+      proto.__spmlHelperTextPatched = true;
+    }
+
     refresh();
     setTimeout(refresh, 100);
     setTimeout(refresh, 500);
