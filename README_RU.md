@@ -5,7 +5,7 @@
 <a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.6.4-blue" alt="Version 0.6.4"></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
-> Интеграция объединяет обычный светильник и умную розетку в одну сущность Home Assistant. Она определяет состояние и текущий режим яркости по потребляемому току, отображает в карточке и позволяет включить лампу, выключенную собственной кнопкой, кратко отключив и снова подав питание через розетку.
+> Интеграция объединяет светильник без цифрового управления и умную розетку в одну сущность Home Assistant. Она определяет состояние и текущий режим яркости по потребляемому току, отображает в карточке и позволяет включить лампу, выключенную собственной кнопкой, кратко отключив и снова подав питание через розетку.
  
 # 💡 Smart Plug Multi-Level Light
 
