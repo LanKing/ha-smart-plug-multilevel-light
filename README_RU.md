@@ -9,7 +9,7 @@
  
 # 💡 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](docs/ha-smart-plug-multilevel-light-card-modes-v2.png)
+![Пример режимов на карточке](docs/ha-smart-plug-multilevel-light-card-modes-v3.png)
 
 **✨ Возможности и особенности:**
 
