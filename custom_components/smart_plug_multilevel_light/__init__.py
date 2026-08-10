@@ -25,7 +25,7 @@ from .const import (
 
 _LOGGER = logging.getLogger(__name__)
 
-_VERSION = "0.9.3"
+_VERSION = "0.9.4"
 _CARD_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-card.js"
 _CARD_URL = f"{_CARD_PATH}?v={_VERSION}"
 _CARD_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-card.js"
@@ -94,9 +94,6 @@ async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             CONF_OUTLET: outlet,
             CONF_POWER_SENSOR: str(power_sensor),
             CONF_POWER_CYCLE_DELAY: merged.get(CONF_POWER_CYCLE_DELAY, 0.7),
-            # Previous versions used this field as a voting-window size. The
-            # semantics changed, so start existing helpers at three consecutive
-            # readings instead of carrying the old value across.
             CONF_POWER_HISTORY_SAMPLES: 3,
             CONF_ROUND_BRIGHTNESS_TO_5: merged.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
             CONF_MODES: modes,
