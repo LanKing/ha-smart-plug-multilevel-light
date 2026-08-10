@@ -12,16 +12,16 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.event import async_track_state_change_event
 
 from .const import (
-    CONF_CURRENT_HISTORY_SAMPLES,
-    CONF_CURRENT_SENSOR,
     CONF_MODES,
     CONF_OUTLET,
     CONF_POWER_CYCLE_DELAY,
+    CONF_POWER_HISTORY_SAMPLES,
+    CONF_POWER_SENSOR,
     CONF_ROUND_BRIGHTNESS_TO_5,
     DOMAIN,
     MODE_BRIGHTNESS,
-    MODE_CURRENT,
     MODE_NAME,
+    MODE_POWER,
 )
 
 
@@ -45,7 +45,7 @@ class SmartPlugMultiLevelLight(LightEntity):
         self._entry = entry
         self._attr_name = entry.title
         self._attr_unique_id = entry.entry_id
-        self._current_history: list[float] = []
+        self._power_history: list[float] = []
 
     @property
     def _cfg(self) -> dict[str, Any]:
@@ -56,13 +56,13 @@ class SmartPlugMultiLevelLight(LightEntity):
         return str(self._cfg[CONF_OUTLET])
 
     @property
-    def _current_sensor(self) -> str:
-        return str(self._cfg[CONF_CURRENT_SENSOR])
+    def _power_sensor(self) -> str:
+        return str(self._cfg[CONF_POWER_SENSOR])
 
     @property
     def _history_size(self) -> int:
         try:
-            value = int(self._cfg.get(CONF_CURRENT_HISTORY_SAMPLES, 5))
+            value = int(self._cfg.get(CONF_POWER_HISTORY_SAMPLES, 5))
         except (TypeError, ValueError):
             value = 5
         return max(1, min(100, value))
@@ -77,17 +77,17 @@ class SmartPlugMultiLevelLight(LightEntity):
             return 0.0
 
     @staticmethod
-    def _normalized_current(value: float) -> float:
-        """Normalize current to the 0.001 A resolution used by configuration."""
-        return round(float(value), 3)
+    def _normalized_power(value: float) -> float:
+        """Normalize power to the 0.1 W resolution used by configuration."""
+        return round(float(value), 1)
 
-    def _record_current(self, value: float) -> None:
-        value = self._normalized_current(value)
+    def _record_power(self, value: float) -> None:
+        value = self._normalized_power(value)
         if value <= 0:
-            self._current_history.clear()
+            self._power_history.clear()
             return
-        self._current_history.append(value)
-        self._current_history = self._current_history[-self._history_size :]
+        self._power_history.append(value)
+        self._power_history = self._power_history[-self._history_size :]
 
     @property
     def icon(self) -> str:
@@ -98,19 +98,19 @@ class SmartPlugMultiLevelLight(LightEntity):
         outlet_state = self.hass.states.get(self._outlet)
         if outlet_state is None or outlet_state.state != "on":
             return False
-        return self._float_state(self._current_sensor) > 0
+        return self._float_state(self._power_sensor) > 0
 
     @staticmethod
     def _estimated_brightness(
-        current: float,
-        max_current: float,
+        power: float,
+        max_power: float,
         round_to_5: bool,
     ) -> int:
-        """Estimate visual brightness from current draw."""
-        if max_current <= 0:
+        """Estimate visual brightness from power draw."""
+        if max_power <= 0:
             return 100
 
-        ratio = max(0.0, min(1.0, current / max_current))
+        ratio = max(0.0, min(1.0, power / max_power))
         estimated = ratio**3 * 100
 
         if round_to_5:
@@ -125,29 +125,29 @@ class SmartPlugMultiLevelLight(LightEntity):
         if not raw_modes:
             return []
 
-        modes = sorted(raw_modes, key=lambda mode: float(mode[MODE_CURRENT]))
-        max_current = float(modes[-1][MODE_CURRENT])
+        modes = sorted(raw_modes, key=lambda mode: float(mode[MODE_POWER]))
+        max_power = float(modes[-1][MODE_POWER])
         round_to_5 = bool(self._cfg.get(CONF_ROUND_BRIGHTNESS_TO_5, True))
         return [
             {
                 **mode,
                 MODE_BRIGHTNESS: self._estimated_brightness(
-                    float(mode[MODE_CURRENT]), max_current, round_to_5
+                    float(mode[MODE_POWER]), max_power, round_to_5
                 ),
             }
             for mode in modes
         ]
 
-    def _selected_current(self) -> float | None:
-        """Return the most frequent configured current in the recent sample window."""
+    def _selected_power(self) -> float | None:
+        """Return the most frequent configured power in the recent sample window."""
         configured = {
-            self._normalized_current(float(mode[MODE_CURRENT]))
+            self._normalized_power(float(mode[MODE_POWER]))
             for mode in self._cfg.get(CONF_MODES, [])
         }
         if not configured:
             return None
 
-        valid = [value for value in self._current_history if value in configured]
+        valid = [value for value in self._power_history if value in configured]
         if not valid:
             return None
 
@@ -164,12 +164,12 @@ class SmartPlugMultiLevelLight(LightEntity):
     def _mode(self) -> dict[str, Any] | None:
         if not self.is_on:
             return None
-        selected_current = self._selected_current()
-        if selected_current is None:
+        selected_power = self._selected_power()
+        if selected_power is None:
             return None
 
         for mode in self._modes_with_brightness():
-            if self._normalized_current(float(mode[MODE_CURRENT])) == selected_current:
+            if self._normalized_power(float(mode[MODE_POWER])) == selected_power:
                 return mode
         return None
 
@@ -178,21 +178,21 @@ class SmartPlugMultiLevelLight(LightEntity):
         mode = self._mode()
         modes = self._modes_with_brightness()
         configured = {
-            self._normalized_current(float(item[MODE_CURRENT])) for item in modes
+            self._normalized_power(float(item[MODE_POWER])) for item in modes
         }
-        valid_history = [value for value in self._current_history if value in configured]
+        valid_history = [value for value in self._power_history if value in configured]
         return {
             "mode": mode[MODE_NAME] if mode else "Off",
             "brightness_pct": int(mode[MODE_BRIGHTNESS]) if mode else 0,
-            "measured_current": self._float_state(self._current_sensor),
-            "current_history": list(self._current_history),
-            "valid_current_history": valid_history,
-            "current_history_samples": self._history_size,
-            "selected_current": self._selected_current(),
+            "measured_power": self._float_state(self._power_sensor),
+            "power_history": list(self._power_history),
+            "valid_power_history": valid_history,
+            "power_history_samples": self._history_size,
+            "selected_power": self._selected_power(),
             "configured_modes": [
                 {
                     "name": item[MODE_NAME],
-                    "current": float(item[MODE_CURRENT]),
+                    "power": float(item[MODE_POWER]),
                     "brightness_pct": int(item[MODE_BRIGHTNESS]),
                 }
                 for item in modes
@@ -201,7 +201,7 @@ class SmartPlugMultiLevelLight(LightEntity):
 
     @property
     def available(self) -> bool:
-        for entity_id in (self._outlet, self._current_sensor):
+        for entity_id in (self._outlet, self._power_sensor):
             state = self.hass.states.get(entity_id)
             if state is None or state.state in {"unknown", "unavailable"}:
                 return False
@@ -218,29 +218,29 @@ class SmartPlugMultiLevelLight(LightEntity):
 
     async def async_added_to_hass(self) -> None:
         await super().async_added_to_hass()
-        current = self._float_state(self._current_sensor)
+        power = self._float_state(self._power_sensor)
         outlet_state = self.hass.states.get(self._outlet)
-        if outlet_state is not None and outlet_state.state == "on" and current > 0:
-            self._record_current(current)
+        if outlet_state is not None and outlet_state.state == "on" and power > 0:
+            self._record_power(power)
 
         self.async_on_remove(
             async_track_state_change_event(
                 self.hass,
-                [self._outlet, self._current_sensor],
+                [self._outlet, self._power_sensor],
                 self._handle_source_change,
             )
         )
 
     async def _handle_source_change(self, event: Event) -> None:
         entity_id = event.data.get("entity_id")
-        if entity_id == self._current_sensor:
-            self._record_current(self._float_state(self._current_sensor))
+        if entity_id == self._power_sensor:
+            self._record_power(self._float_state(self._power_sensor))
         elif entity_id == self._outlet:
             outlet_state = self.hass.states.get(self._outlet)
             if outlet_state is None or outlet_state.state != "on":
-                self._current_history.clear()
+                self._power_history.clear()
             else:
-                self._record_current(self._float_state(self._current_sensor))
+                self._record_power(self._float_state(self._power_sensor))
         self.async_write_ha_state()
 
     async def async_turn_on(self, **kwargs: Any) -> None:
