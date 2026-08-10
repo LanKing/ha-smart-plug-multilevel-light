@@ -2,7 +2,7 @@
 
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
-<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.8.0-blue" alt="Version 0.8.0"></a>
+<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.9.2-blue" alt="Version 0.9.2"></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
 > Интеграция объединяет светильник без цифрового управления и умную розетку в одну сущность Home Assistant. Она определяет состояние и текущий режим яркости по потребляемой мощности, отображает в карточке и позволяет включить лампу, выключенную собственной кнопкой, кратко отключив и снова подав питание через розетку.
@@ -285,7 +285,7 @@ Home Assistant не позволяет интеграции автоматиче
 lovelace:
   resource_mode: yaml
   resources:
-    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.8.0
+    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.9.2
       type: module
 ```
 
@@ -375,7 +375,7 @@ lovelace:
 Проверьте **[Settings → Dashboards → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)**. Там должен присутствовать URL:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.8.0
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.9.2
 ```
 
 В YAML-режиме добавьте ресурс вручную.
@@ -399,7 +399,7 @@ lovelace:
 3. Проверьте **[Settings → Dashboards → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)** и вручную удалите ресурс карточки, если он остался:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.8.0
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.9.2
 ```
 
 4. Полностью перезапустите Home Assistant.
