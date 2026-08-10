@@ -12,10 +12,9 @@ from homeassistant.helpers import entity_registry as er, selector
 
 from . import async_ensure_frontend_assets
 from .const import (
+    CONF_CURRENT_HISTORY_SAMPLES,
     CONF_CURRENT_SENSOR,
-    CONF_CURRENT_STABILITY_SAMPLES,
     CONF_MODES,
-    CONF_OFF_CURRENT_THRESHOLD,
     CONF_OUTLET,
     CONF_POWER_CYCLE_DELAY,
     CONF_ROUND_BRIGHTNESS_TO_5,
@@ -94,11 +93,7 @@ def _outlet_schema(hass, default: str | None = None) -> vol.Schema:
 
 
 def _modes_selector():
-    """Return a native object selector.
-
-    The bundled frontend module enhances its Add/Edit dialogs with live measured
-    current while Home Assistant's native object selector remains the fallback.
-    """
+    """Return a native object selector enhanced by the bundled frontend UI."""
     return selector.selector(
         {
             "object": {
@@ -112,7 +107,7 @@ def _modes_selector():
                         "selector": {"text": {}},
                     },
                     MODE_CURRENT: {
-                        "label": "Current threshold",
+                        "label": "Current value",
                         "required": True,
                         "selector": {
                             "number": {
@@ -151,26 +146,12 @@ def _settings_schema(
         else vol.Required(CONF_CURRENT_SENSOR)
     )
 
-    modes_default = defaults.get(CONF_MODES, [])
-
     return vol.Schema(
         {
             vol.Required(
                 "name", default=defaults.get("name", "Light")
             ): selector.TextSelector(),
             current_key: selector.selector({"entity": kwargs}),
-            vol.Required(
-                CONF_OFF_CURRENT_THRESHOLD,
-                default=defaults.get(CONF_OFF_CURRENT_THRESHOLD, 0.005),
-            ): selector.NumberSelector(
-                selector.NumberSelectorConfig(
-                    min=0,
-                    max=100,
-                    step=0.001,
-                    unit_of_measurement="A",
-                    mode=selector.NumberSelectorMode.BOX,
-                )
-            ),
             vol.Required(
                 CONF_POWER_CYCLE_DELAY,
                 default=defaults.get(CONF_POWER_CYCLE_DELAY, 0.7),
@@ -184,12 +165,12 @@ def _settings_schema(
                 )
             ),
             vol.Required(
-                CONF_CURRENT_STABILITY_SAMPLES,
-                default=defaults.get(CONF_CURRENT_STABILITY_SAMPLES, 2),
+                CONF_CURRENT_HISTORY_SAMPLES,
+                default=defaults.get(CONF_CURRENT_HISTORY_SAMPLES, 5),
             ): selector.NumberSelector(
                 selector.NumberSelectorConfig(
-                    min=0,
-                    max=10,
+                    min=1,
+                    max=100,
                     step=1,
                     mode=selector.NumberSelectorMode.BOX,
                 )
@@ -198,7 +179,7 @@ def _settings_schema(
                 CONF_ROUND_BRIGHTNESS_TO_5,
                 default=defaults.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
             ): selector.BooleanSelector(),
-            vol.Required(CONF_MODES, default=modes_default): _modes_selector(),
+            vol.Required(CONF_MODES, default=defaults.get(CONF_MODES, [])): _modes_selector(),
         }
     )
 
@@ -216,7 +197,7 @@ def _normalize_modes(raw_modes: Any) -> list[dict[str, Any]]:
         if not name:
             continue
         try:
-            current = float(row[MODE_CURRENT])
+            current = round(float(row[MODE_CURRENT]), 3)
         except (KeyError, TypeError, ValueError):
             continue
         result.append({MODE_NAME: name, MODE_CURRENT: current})
@@ -227,7 +208,7 @@ def _normalize_modes(raw_modes: Any) -> list[dict[str, Any]]:
 class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Smart Plug Multi-Level Light."""
 
-    VERSION = 3
+    VERSION = 4
 
     def __init__(self) -> None:
         self._outlet: str | None = None
@@ -257,19 +238,15 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
 
         defaults: dict[str, Any] = {
             CONF_CURRENT_SENSOR: currents[0],
-            CONF_OFF_CURRENT_THRESHOLD: 0.005,
             CONF_POWER_CYCLE_DELAY: 0.7,
-            CONF_CURRENT_STABILITY_SAMPLES: 2,
+            CONF_CURRENT_HISTORY_SAMPLES: 5,
             CONF_ROUND_BRIGHTNESS_TO_5: True,
             CONF_MODES: [],
         }
 
         if user_input is not None:
             modes = _normalize_modes(user_input.get(CONF_MODES))
-            errors: dict[str, str] = {}
             if not modes:
-                errors[CONF_MODES] = "at_least_one_mode"
-            if errors:
                 defaults.update(user_input)
                 return self.async_show_form(
                     step_id="settings",
@@ -277,23 +254,18 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
                         current_entities=currents,
                         defaults=defaults,
                     ),
-                    errors=errors,
+                    errors={CONF_MODES: "at_least_one_mode"},
                 )
 
             title = str(user_input.pop("name"))
-            data = {
-                CONF_OUTLET: self._outlet,
-                **user_input,
-                CONF_MODES: modes,
-            }
-            return self.async_create_entry(title=title, data=data)
+            return self.async_create_entry(
+                title=title,
+                data={CONF_OUTLET: self._outlet, **user_input, CONF_MODES: modes},
+            )
 
         return self.async_show_form(
             step_id="settings",
-            data_schema=_settings_schema(
-                current_entities=currents,
-                defaults=defaults,
-            ),
+            data_schema=_settings_schema(current_entities=currents, defaults=defaults),
         )
 
     @staticmethod
@@ -323,16 +295,9 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
         defaults = {
             "name": self.config_entry.title,
             CONF_CURRENT_SENSOR: configured_current or (currents[0] if currents else None),
-            CONF_OFF_CURRENT_THRESHOLD: current.get(
-                CONF_OFF_CURRENT_THRESHOLD, 0.005
-            ),
             CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0.7),
-            CONF_CURRENT_STABILITY_SAMPLES: current.get(
-                CONF_CURRENT_STABILITY_SAMPLES, 2
-            ),
-            CONF_ROUND_BRIGHTNESS_TO_5: current.get(
-                CONF_ROUND_BRIGHTNESS_TO_5, True
-            ),
+            CONF_CURRENT_HISTORY_SAMPLES: current.get(CONF_CURRENT_HISTORY_SAMPLES, 5),
+            CONF_ROUND_BRIGHTNESS_TO_5: current.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
             CONF_MODES: current.get(CONF_MODES, []),
         }
 
@@ -353,14 +318,9 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
             self.hass.config_entries.async_update_entry(
                 self.config_entry, title=title
             )
-            return self.async_create_entry(
-                data={**user_input, CONF_MODES: modes}
-            )
+            return self.async_create_entry(data={**user_input, CONF_MODES: modes})
 
         return self.async_show_form(
             step_id="init",
-            data_schema=_settings_schema(
-                current_entities=currents,
-                defaults=defaults,
-            ),
+            data_schema=_settings_schema(current_entities=currents, defaults=defaults),
         )
