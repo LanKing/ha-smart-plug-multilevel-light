@@ -13,16 +13,15 @@ RAW_BASE = f"https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-
 
 EN_LABEL = "Recent power readings"
 EN_HELP = (
-    "Number of latest power readings used to determine the mode. The most frequent "
-    "reading is selected; if several readings are tied, the most recent one wins. "
-    "The selected reading is then evaluated against the configured mode thresholds. "
-    "Default is 5."
+    "Number of latest power readings used to determine the mode. Each reading is first "
+    "mapped to a configured mode threshold, then the most frequent mode wins; if several "
+    "modes are tied, the most recent one wins. Default is 5."
 )
 RU_LABEL = "Последние показания мощности"
 RU_HELP = (
     "Количество последних показаний мощности, используемых для определения режима. "
-    "Выбирается значение, встретившееся чаще всего; при равенстве побеждает самое "
-    "свежее. Затем выбранное значение сопоставляется с настроенными порогами режимов. "
+    "Каждое показание сначала сопоставляется с настроенными порогами режимов, затем "
+    "выбирается режим, встретившийся чаще всего; при равенстве побеждает самый свежий. "
     "По умолчанию — 5."
 )
 
