@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Smart-Steckdose auswählen",
-        "description": "Es werden nur Steckdosen mit Stromsensor angezeigt.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Smart-Steckdose"
         }
@@ -13,18 +13,18 @@
         "title": "Licht und Modi konfigurieren",
         "data": {
           "name": "Lichtname",
-          "current_sensor": "Stromsensor",
           "power_cycle_delay": "Verzögerung beim Aus- und Einschalten",
           "modes": "Helligkeitsmodi",
-          "round_brightness_to_5": "Helligkeit auf 5% runden",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Lernen Sie zuerst die Helligkeitsstufen der neuen Lampe an. Wählen Sie mit der physischen Taste der Lampe jede Stufe aus und fügen Sie sie unten hinzu, z. B. High, Medium, Low und Dim.",
-          "current_sensor": "Hier sind nur Stromsensoren verfügbar, die zur ausgewählten Smart-Steckdose gehören.",
           "power_cycle_delay": "Normalerweise ist keine zusätzliche Verzögerung erforderlich. Wenn sich eine mit ihrer eigenen Taste ausgeschaltete Lampe nicht über Home Assistant einschalten lässt, stellen Sie eine kleine Verzögerung ein, z. B. 0,7 s.",
-          "round_brightness_to_5": "Rundet die berechnete Helligkeit auf die nächsten 5 %. Deaktivieren, um ganze Prozentwerte ohne 5-%-Schritte zu verwenden.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Fügen Sie mindestens einen Modus hinzu"
     },
     "abort": {
-      "current_sensor_missing": "Für die ausgewählte Steckdose wurde kein Stromsensor gefunden"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Mehrstufiges Licht konfigurieren",
         "data": {
           "name": "Lichtname",
-          "current_sensor": "Stromsensor",
           "power_cycle_delay": "Verzögerung beim Aus- und Einschalten",
           "modes": "Helligkeitsmodi",
-          "round_brightness_to_5": "Helligkeit auf 5% runden",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Lernen Sie zuerst die Helligkeitsstufen der neuen Lampe an. Wählen Sie mit der physischen Taste der Lampe jede Stufe aus und fügen Sie sie unten hinzu, z. B. High, Medium, Low und Dim.",
-          "current_sensor": "Hier sind nur Stromsensoren verfügbar, die zur ausgewählten Smart-Steckdose gehören.",
           "power_cycle_delay": "Normalerweise ist keine zusätzliche Verzögerung erforderlich. Wenn sich eine mit ihrer eigenen Taste ausgeschaltete Lampe nicht über Home Assistant einschalten lässt, stellen Sie eine kleine Verzögerung ein, z. B. 0,7 s.",
-          "round_brightness_to_5": "Rundet die berechnete Helligkeit auf die nächsten 5 %. Deaktivieren, um ganze Prozentwerte ohne 5-%-Schritte zu verwenden.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

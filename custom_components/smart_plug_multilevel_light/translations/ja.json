@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "スマートプラグを選択",
-        "description": "電流センサーを持つプラグのみ表示されます。",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "スマートプラグ"
         }
@@ -13,18 +13,18 @@
         "title": "ライトとモードを設定",
         "data": {
           "name": "ライト名",
-          "current_sensor": "電流センサー",
           "power_cycle_delay": "電源サイクル遅延",
           "modes": "明るさモード",
-          "round_brightness_to_5": "明るさを5%単位に丸める",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "新しいランプでは、最初に明るさモードを統合に学習させます。ランプ本体の物理ボタンで各明るさレベルを選び、下に追加してください。例: High、Medium、Low、Dim。",
-          "current_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。",
           "power_cycle_delay": "通常、追加の遅延は不要です。ランプ本体のボタンで消灯した後、Home Assistant から点灯できない場合は、0.7 秒などの短い遅延を設定してください。",
-          "round_brightness_to_5": "計算された明るさを最も近い5%に丸めます。5%刻みを使わず整数パーセントを使用する場合は無効にします。",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "少なくとも1つのモードを追加してください"
     },
     "abort": {
-      "current_sensor_missing": "選択したプラグの電流センサーが見つかりません"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "多段階ライトを設定",
         "data": {
           "name": "ライト名",
-          "current_sensor": "電流センサー",
           "power_cycle_delay": "電源サイクル遅延",
           "modes": "明るさモード",
-          "round_brightness_to_5": "明るさを5%単位に丸める",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "新しいランプでは、最初に明るさモードを統合に学習させます。ランプ本体の物理ボタンで各明るさレベルを選び、下に追加してください。例: High、Medium、Low、Dim。",
-          "current_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。",
           "power_cycle_delay": "通常、追加の遅延は不要です。ランプ本体のボタンで消灯した後、Home Assistant から点灯できない場合は、0.7 秒などの短い遅延を設定してください。",
-          "round_brightness_to_5": "計算された明るさを最も近い5%に丸めます。5%刻みを使わず整数パーセントを使用する場合は無効にします。",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

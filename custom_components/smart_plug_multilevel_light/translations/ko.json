@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "스마트 플러그 선택",
-        "description": "전류 센서가 있는 플러그만 표시됩니다.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "스마트 플러그"
         }
@@ -13,18 +13,18 @@
         "title": "조명 및 모드 설정",
         "data": {
           "name": "조명 이름",
-          "current_sensor": "전류 센서",
           "power_cycle_delay": "전원 재시작 지연",
           "modes": "밝기 모드",
-          "round_brightness_to_5": "밝기를 5% 단위로 반올림",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "새 램프는 먼저 밝기 모드를 통합에 학습시켜야 합니다. 램프의 물리 버튼으로 각 밝기 단계를 선택해 아래에 추가하세요. 예: High, Medium, Low, Dim.",
-          "current_sensor": "여기에서는 선택한 스마트 플러그에 속한 전류 센서만 사용할 수 있습니다.",
           "power_cycle_delay": "일반적으로 추가 지연은 필요하지 않습니다. 램프 자체 버튼으로 끈 뒤 Home Assistant에서 켜지지 않으면 0.7초와 같은 짧은 지연을 설정하세요.",
-          "round_brightness_to_5": "계산된 밝기를 가장 가까운 5%로 반올림합니다. 5% 단계 없이 정수 퍼센트를 사용하려면 끄세요.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "모드를 하나 이상 추가하세요"
     },
     "abort": {
-      "current_sensor_missing": "선택한 플러그의 전류 센서를 찾을 수 없습니다"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "다단계 조명 설정",
         "data": {
           "name": "조명 이름",
-          "current_sensor": "전류 센서",
           "power_cycle_delay": "전원 재시작 지연",
           "modes": "밝기 모드",
-          "round_brightness_to_5": "밝기를 5% 단위로 반올림",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "새 램프는 먼저 밝기 모드를 통합에 학습시켜야 합니다. 램프의 물리 버튼으로 각 밝기 단계를 선택해 아래에 추가하세요. 예: High, Medium, Low, Dim.",
-          "current_sensor": "여기에서는 선택한 스마트 플러그에 속한 전류 센서만 사용할 수 있습니다.",
           "power_cycle_delay": "일반적으로 추가 지연은 필요하지 않습니다. 램프 자체 버튼으로 끈 뒤 Home Assistant에서 켜지지 않으면 0.7초와 같은 짧은 지연을 설정하세요.",
-          "round_brightness_to_5": "계산된 밝기를 가장 가까운 5%로 반올림합니다. 5% 단계 없이 정수 퍼센트를 사용하려면 끄세요.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

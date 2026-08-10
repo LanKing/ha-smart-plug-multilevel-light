@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "स्मार्ट प्लग चुनें",
-        "description": "केवल करंट सेंसर वाले प्लग दिखाए जाते हैं।",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "स्मार्ट प्लग"
         }
@@ -13,18 +13,18 @@
         "title": "लाइट और मोड कॉन्फ़िगर करें",
         "data": {
           "name": "लाइट का नाम",
-          "current_sensor": "करंट सेंसर",
           "power_cycle_delay": "पावर-साइकिल देरी",
           "modes": "ब्राइटनेस मोड",
-          "round_brightness_to_5": "ब्राइटनेस को 5% पर राउंड करें",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "पहले इंटीग्रेशन को नए लैंप के ब्राइटनेस मोड सिखाएँ। लैंप के भौतिक बटन से हर स्तर चुनें और नीचे जोड़ें, जैसे High, Medium, Low और Dim।",
-          "current_sensor": "यहाँ केवल चुने गए स्मार्ट प्लग से जुड़े करंट सेंसर उपलब्ध हैं।",
           "power_cycle_delay": "आमतौर पर अतिरिक्त देरी की जरूरत नहीं होती। यदि अपने बटन से बंद किया गया लैंप Home Assistant से चालू नहीं होता, तो थोड़ी देरी सेट करें, जैसे 0.7 s।",
-          "round_brightness_to_5": "गणना की गई ब्राइटनेस को निकटतम 5% पर राउंड करता है। 5% चरणों के बिना पूर्ण प्रतिशत उपयोग करने के लिए इसे बंद करें।",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "कम से कम एक मोड जोड़ें"
     },
     "abort": {
-      "current_sensor_missing": "चुने गए प्लग के लिए करंट सेंसर नहीं मिला"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "मल्टी-लेवल लाइट कॉन्फ़िगर करें",
         "data": {
           "name": "लाइट का नाम",
-          "current_sensor": "करंट सेंसर",
           "power_cycle_delay": "पावर-साइकिल देरी",
           "modes": "ब्राइटनेस मोड",
-          "round_brightness_to_5": "ब्राइटनेस को 5% पर राउंड करें",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "पहले इंटीग्रेशन को नए लैंप के ब्राइटनेस मोड सिखाएँ। लैंप के भौतिक बटन से हर स्तर चुनें और नीचे जोड़ें, जैसे High, Medium, Low और Dim।",
-          "current_sensor": "यहाँ केवल चुने गए स्मार्ट प्लग से जुड़े करंट सेंसर उपलब्ध हैं।",
           "power_cycle_delay": "आमतौर पर अतिरिक्त देरी की जरूरत नहीं होती। यदि अपने बटन से बंद किया गया लैंप Home Assistant से चालू नहीं होता, तो थोड़ी देरी सेट करें, जैसे 0.7 s।",
-          "round_brightness_to_5": "गणना की गई ब्राइटनेस को निकटतम 5% पर राउंड करता है। 5% चरणों के बिना पूर्ण प्रतिशत उपयोग करने के लिए इसे बंद करें।",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

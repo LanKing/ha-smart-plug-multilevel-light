@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "בחר שקע חכם",
-        "description": "מוצגים רק שקעים עם חיישן זרם.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "שקע חכם"
         }
@@ -13,18 +13,18 @@
         "title": "הגדר תאורה ומצבים",
         "data": {
           "name": "שם התאורה",
-          "current_sensor": "חיישן זרם",
           "power_cycle_delay": "השהיית מחזור חשמל",
           "modes": "מצבי בהירות",
-          "round_brightness_to_5": "עיגול בהירות ל-5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "תחילה למד את האינטגרציה את מצבי הבהירות של המנורה החדשה. השתמש בכפתור הפיזי במנורה כדי לבחור כל רמה ולהוסיף אותה למטה, למשל High, Medium, Low ו-Dim.",
-          "current_sensor": "כאן זמינים רק חיישני זרם השייכים לשקע החכם שנבחר.",
           "power_cycle_delay": "בדרך כלל אין צורך בהשהיה נוספת. אם מנורה שכובתה באמצעות הכפתור שלה לא נדלקת מ-Home Assistant, הגדר השהיה קצרה, למשל 0.7 שניות.",
-          "round_brightness_to_5": "מעגל את הבהירות המחושבת ל-5% הקרובים ביותר. השבת כדי להשתמש באחוזים שלמים ללא צעדים של 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "הוסף לפחות מצב אחד"
     },
     "abort": {
-      "current_sensor_missing": "לא נמצא חיישן זרם עבור השקע שנבחר"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "הגדר תאורה רב-שלבית",
         "data": {
           "name": "שם התאורה",
-          "current_sensor": "חיישן זרם",
           "power_cycle_delay": "השהיית מחזור חשמל",
           "modes": "מצבי בהירות",
-          "round_brightness_to_5": "עיגול בהירות ל-5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "תחילה למד את האינטגרציה את מצבי הבהירות של המנורה החדשה. השתמש בכפתור הפיזי במנורה כדי לבחור כל רמה ולהוסיף אותה למטה, למשל High, Medium, Low ו-Dim.",
-          "current_sensor": "כאן זמינים רק חיישני זרם השייכים לשקע החכם שנבחר.",
           "power_cycle_delay": "בדרך כלל אין צורך בהשהיה נוספת. אם מנורה שכובתה באמצעות הכפתור שלה לא נדלקת מ-Home Assistant, הגדר השהיה קצרה, למשל 0.7 שניות.",
-          "round_brightness_to_5": "מעגל את הבהירות המחושבת ל-5% הקרובים ביותר. השבת כדי להשתמש באחוזים שלמים ללא צעדים של 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

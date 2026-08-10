@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Pasirinkite išmanųjį lizdą",
-        "description": "Rodomi tik lizdai su srovės jutikliu.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Išmanusis lizdas"
         }
@@ -13,18 +13,18 @@
         "title": "Konfigūruokite šviesą ir režimus",
         "data": {
           "name": "Šviesos pavadinimas",
-          "current_sensor": "Srovės jutiklis",
           "power_cycle_delay": "Maitinimo ciklo delsa",
           "modes": "Ryškumo režimai",
-          "round_brightness_to_5": "Apvalinti ryškumą iki 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Pirmiausia išmokykite integraciją naujos lempos ryškumo režimų. Fiziniu lempos mygtuku pasirinkite kiekvieną lygį ir pridėkite jį žemiau, pavyzdžiui, High, Medium, Low ir Dim.",
-          "current_sensor": "Čia pasiekiami tik pasirinktam išmaniajam lizdui priklausantys srovės jutikliai.",
           "power_cycle_delay": "Paprastai papildomo delsimo nereikia. Jei savo mygtuku išjungta lempa neįsijungia iš Home Assistant, nustatykite nedidelį delsą, pavyzdžiui, 0,7 s.",
-          "round_brightness_to_5": "Apskaičiuotą ryškumą suapvalina iki artimiausių 5%. Išjunkite, jei norite naudoti sveikus procentus be 5% žingsnių.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Pridėkite bent vieną režimą"
     },
     "abort": {
-      "current_sensor_missing": "Pasirinktam lizdui nerastas srovės jutiklis"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Konfigūruokite daugiapakopę šviesą",
         "data": {
           "name": "Šviesos pavadinimas",
-          "current_sensor": "Srovės jutiklis",
           "power_cycle_delay": "Maitinimo ciklo delsa",
           "modes": "Ryškumo režimai",
-          "round_brightness_to_5": "Apvalinti ryškumą iki 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Pirmiausia išmokykite integraciją naujos lempos ryškumo režimų. Fiziniu lempos mygtuku pasirinkite kiekvieną lygį ir pridėkite jį žemiau, pavyzdžiui, High, Medium, Low ir Dim.",
-          "current_sensor": "Čia pasiekiami tik pasirinktam išmaniajam lizdui priklausantys srovės jutikliai.",
           "power_cycle_delay": "Paprastai papildomo delsimo nereikia. Jei savo mygtuku išjungta lempa neįsijungia iš Home Assistant, nustatykite nedidelį delsą, pavyzdžiui, 0,7 s.",
-          "round_brightness_to_5": "Apskaičiuotą ryškumą suapvalina iki artimiausių 5%. Išjunkite, jei norite naudoti sveikus procentus be 5% žingsnių.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

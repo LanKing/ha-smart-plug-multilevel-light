@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Kies in smartstekker",
-        "description": "Allinnich stekkers mei in stroomsensor wurde toand.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Smartstekker"
         }
@@ -13,18 +13,18 @@
         "title": "Stel ljocht en modi yn",
         "data": {
           "name": "Ljochtnamme",
-          "current_sensor": "Stroomsensor",
           "power_cycle_delay": "Fertraging by stroomsyklus",
           "modes": "Helderheidsmodi",
-          "round_brightness_to_5": "Helderheid ôfrûnje op 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Lear de yntegraasje earst de helderheidsmodi fan de nije lampe. Selektearje mei de fysike knop op de lampe elk nivo en foegje it hjirûnder ta, bygelyks High, Medium, Low en Dim.",
-          "current_sensor": "Hjir binne allinnich stroomsensors beskikber dy't by de selektearre smartstekker hearre.",
           "power_cycle_delay": "Meastal is gjin ekstra fertraging nedich. As in lampe dy't mei de eigen knop útset is net oangiet fanút Home Assistant, stel dan in lytse fertraging yn, bygelyks 0,7 s.",
-          "round_brightness_to_5": "Rûnet de berekkene helderheid ôf op de tichtstbye 5%. Skeakelje út foar hiele persintaazjes sûnder stappen fan 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Foegje op syn minst ien modus ta"
     },
     "abort": {
-      "current_sensor_missing": "Gjin stroomsensor fûn foar de keazen stekker"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Stel mearnivo-ljocht yn",
         "data": {
           "name": "Ljochtnamme",
-          "current_sensor": "Stroomsensor",
           "power_cycle_delay": "Fertraging by stroomsyklus",
           "modes": "Helderheidsmodi",
-          "round_brightness_to_5": "Helderheid ôfrûnje op 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Lear de yntegraasje earst de helderheidsmodi fan de nije lampe. Selektearje mei de fysike knop op de lampe elk nivo en foegje it hjirûnder ta, bygelyks High, Medium, Low en Dim.",
-          "current_sensor": "Hjir binne allinnich stroomsensors beskikber dy't by de selektearre smartstekker hearre.",
           "power_cycle_delay": "Meastal is gjin ekstra fertraging nedich. As in lampe dy't mei de eigen knop útset is net oangiet fanút Home Assistant, stel dan in lytse fertraging yn, bygelyks 0,7 s.",
-          "round_brightness_to_5": "Rûnet de berekkene helderheid ôf op de tichtstbye 5%. Skeakelje út foar hiele persintaazjes sûnder stappen fan 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

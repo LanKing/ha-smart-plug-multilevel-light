@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Selecteer een slimme stekker",
-        "description": "Alleen stekkers met een stroomsensor worden getoond.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Slimme stekker"
         }
@@ -13,18 +13,18 @@
         "title": "Configureer licht en modi",
         "data": {
           "name": "Lichtnaam",
-          "current_sensor": "Stroomsensor",
           "power_cycle_delay": "Vertraging stroomcyclus",
           "modes": "Helderheidsmodi",
-          "round_brightness_to_5": "Helderheid afronden op 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Leer de integratie eerst de helderheidsstanden van de nieuwe lamp. Selecteer met de fysieke knop op de lamp elk niveau en voeg het hieronder toe, bijvoorbeeld High, Medium, Low en Dim.",
-          "current_sensor": "Hier zijn alleen stroomsensoren beschikbaar die bij de geselecteerde slimme stekker horen.",
           "power_cycle_delay": "Normaal is geen extra vertraging nodig. Als een lamp die met zijn eigen knop is uitgeschakeld niet via Home Assistant inschakelt, stel dan een kleine vertraging in, bijvoorbeeld 0,7 s.",
-          "round_brightness_to_5": "Rondt de berekende helderheid af op de dichtstbijzijnde 5%. Schakel uit om hele percentages zonder stappen van 5% te gebruiken.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Voeg minimaal één modus toe"
     },
     "abort": {
-      "current_sensor_missing": "Geen stroomsensor gevonden voor de geselecteerde stekker"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Configureer meerniveaulicht",
         "data": {
           "name": "Lichtnaam",
-          "current_sensor": "Stroomsensor",
           "power_cycle_delay": "Vertraging stroomcyclus",
           "modes": "Helderheidsmodi",
-          "round_brightness_to_5": "Helderheid afronden op 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Leer de integratie eerst de helderheidsstanden van de nieuwe lamp. Selecteer met de fysieke knop op de lamp elk niveau en voeg het hieronder toe, bijvoorbeeld High, Medium, Low en Dim.",
-          "current_sensor": "Hier zijn alleen stroomsensoren beschikbaar die bij de geselecteerde slimme stekker horen.",
           "power_cycle_delay": "Normaal is geen extra vertraging nodig. Als een lamp die met zijn eigen knop is uitgeschakeld niet via Home Assistant inschakelt, stel dan een kleine vertraging in, bijvoorbeeld 0,7 s.",
-          "round_brightness_to_5": "Rondt de berekende helderheid af op de dichtstbijzijnde 5%. Schakel uit om hele percentages zonder stappen van 5% te gebruiken.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Roghnaigh soicéad cliste",
-        "description": "Ní thaispeántar ach soicéid a bhfuil braiteoir srutha acu.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Soicéad cliste"
         }
@@ -13,18 +13,18 @@
         "title": "Cumraigh an solas agus na módanna",
         "data": {
           "name": "Ainm an tsolais",
-          "current_sensor": "Braiteoir srutha",
           "power_cycle_delay": "Moill timthrialla cumhachta",
           "modes": "Módanna gile",
-          "round_brightness_to_5": "Slánaigh gile go 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Ar dtús múin modhanna gile an lampa nua don chomhtháthú. Úsáid cnaipe fisiciúil an lampa chun gach leibhéal a roghnú agus cuir leis thíos é, mar shampla High, Medium, Low agus Dim.",
-          "current_sensor": "Níl ar fáil anseo ach braiteoirí srutha a bhaineann leis an soicéad cliste roghnaithe.",
           "power_cycle_delay": "De ghnáth ní bhíonn moill bhreise de dhíth. Mura lasann lampa a múchadh lena chnaipe féin ó Home Assistant, socraigh moill bheag, mar shampla 0.7 s.",
-          "round_brightness_to_5": "Slánaíonn sé an gile ríofa go dtí an 5% is gaire. Díchumasaigh chun céatadáin iomlána a úsáid gan céimeanna 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Cuir mód amháin ar a laghad leis"
     },
     "abort": {
-      "current_sensor_missing": "Níor aimsíodh braiteoir srutha don soicéad roghnaithe"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Cumraigh an solas il-leibhéil",
         "data": {
           "name": "Ainm an tsolais",
-          "current_sensor": "Braiteoir srutha",
           "power_cycle_delay": "Moill timthrialla cumhachta",
           "modes": "Módanna gile",
-          "round_brightness_to_5": "Slánaigh gile go 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Ar dtús múin modhanna gile an lampa nua don chomhtháthú. Úsáid cnaipe fisiciúil an lampa chun gach leibhéal a roghnú agus cuir leis thíos é, mar shampla High, Medium, Low agus Dim.",
-          "current_sensor": "Níl ar fáil anseo ach braiteoirí srutha a bhaineann leis an soicéad cliste roghnaithe.",
           "power_cycle_delay": "De ghnáth ní bhíonn moill bhreise de dhíth. Mura lasann lampa a múchadh lena chnaipe féin ó Home Assistant, socraigh moill bheag, mar shampla 0.7 s.",
-          "round_brightness_to_5": "Slánaíonn sé an gile ríofa go dtí an 5% is gaire. Díchumasaigh chun céatadáin iomlána a úsáid gan céimeanna 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

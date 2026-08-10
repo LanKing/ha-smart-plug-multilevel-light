@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "ஸ்மார்ட் பிளக்கை தேர்ந்தெடுக்கவும்",
-        "description": "மின்னோட்ட சென்சர் உள்ள பிளக்குகள் மட்டுமே காட்டப்படும்.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "ஸ்மார்ட் பிளக்"
         }
@@ -13,18 +13,18 @@
         "title": "விளக்கு மற்றும் முறைகளை அமைக்கவும்",
         "data": {
           "name": "விளக்கின் பெயர்",
-          "current_sensor": "மின்னோட்ட சென்சர்",
           "power_cycle_delay": "மின் சுழற்சி தாமதம்",
           "modes": "ஒளிர்வு முறைகள்",
-          "round_brightness_to_5": "பிரகாசத்தை 5% ஆக வட்டமிடு",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "முதலில் புதிய விளக்கின் பிரகாச முறைகளை ஒருங்கிணைப்புக்கு கற்பிக்கவும். விளக்கின் இயற்பியல் பொத்தானைப் பயன்படுத்தி ஒவ்வொரு நிலையையும் தேர்ந்தெடுத்து கீழே சேர்க்கவும், உதாரணமாக High, Medium, Low, Dim.",
-          "current_sensor": "இங்கே தேர்ந்தெடுக்கப்பட்ட ஸ்மார்ட் பிளக்கைச் சேர்ந்த மின்னோட்ட சென்சார்கள் மட்டுமே கிடைக்கும்.",
           "power_cycle_delay": "பொதுவாக கூடுதல் தாமதம் தேவையில்லை. தனது சொந்த பொத்தானால் அணைக்கப்பட்ட விளக்கு Home Assistant-இல் இருந்து எரியவில்லை என்றால் 0.7 s போன்ற சிறிய தாமதத்தை அமைக்கவும்.",
-          "round_brightness_to_5": "கணக்கிடப்பட்ட பிரகாசத்தை அருகிலுள்ள 5%-க்கு வட்டமிடும். 5% படிகள் இல்லாமல் முழு சதவீதங்களை பயன்படுத்த இதை முடக்கவும்.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "குறைந்தது ஒரு முறையை சேர்க்கவும்"
     },
     "abort": {
-      "current_sensor_missing": "தேர்ந்தெடுத்த பிளக்கிற்கு மின்னோட்ட சென்சர் கிடைக்கவில்லை"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "பலநிலை விளக்கை அமைக்கவும்",
         "data": {
           "name": "விளக்கின் பெயர்",
-          "current_sensor": "மின்னோட்ட சென்சர்",
           "power_cycle_delay": "மின் சுழற்சி தாமதம்",
           "modes": "ஒளிர்வு முறைகள்",
-          "round_brightness_to_5": "பிரகாசத்தை 5% ஆக வட்டமிடு",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "முதலில் புதிய விளக்கின் பிரகாச முறைகளை ஒருங்கிணைப்புக்கு கற்பிக்கவும். விளக்கின் இயற்பியல் பொத்தானைப் பயன்படுத்தி ஒவ்வொரு நிலையையும் தேர்ந்தெடுத்து கீழே சேர்க்கவும், உதாரணமாக High, Medium, Low, Dim.",
-          "current_sensor": "இங்கே தேர்ந்தெடுக்கப்பட்ட ஸ்மார்ட் பிளக்கைச் சேர்ந்த மின்னோட்ட சென்சார்கள் மட்டுமே கிடைக்கும்.",
           "power_cycle_delay": "பொதுவாக கூடுதல் தாமதம் தேவையில்லை. தனது சொந்த பொத்தானால் அணைக்கப்பட்ட விளக்கு Home Assistant-இல் இருந்து எரியவில்லை என்றால் 0.7 s போன்ற சிறிய தாமதத்தை அமைக்கவும்.",
-          "round_brightness_to_5": "கணக்கிடப்பட்ட பிரகாசத்தை அருகிலுள்ள 5%-க்கு வட்டமிடும். 5% படிகள் இல்லாமல் முழு சதவீதங்களை பயன்படுத்த இதை முடக்கவும்.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

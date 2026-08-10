@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Επιλέξτε έξυπνη πρίζα",
-        "description": "Εμφανίζονται μόνο πρίζες με αισθητήρα ρεύματος.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Έξυπνη πρίζα"
         }
@@ -13,18 +13,18 @@
         "title": "Ρύθμιση φωτός και λειτουργιών",
         "data": {
           "name": "Όνομα φωτός",
-          "current_sensor": "Αισθητήρας ρεύματος",
           "power_cycle_delay": "Καθυστέρηση επανεκκίνησης τροφοδοσίας",
           "modes": "Λειτουργίες φωτεινότητας",
-          "round_brightness_to_5": "Στρογγυλοποίηση φωτεινότητας στο 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Πρώτα εκπαιδεύστε την ενσωμάτωση στις λειτουργίες φωτεινότητας της νέας λάμπας. Με το φυσικό κουμπί της λάμπας επιλέξτε κάθε επίπεδο και προσθέστε το παρακάτω, π.χ. High, Medium, Low και Dim.",
-          "current_sensor": "Εδώ είναι διαθέσιμοι μόνο οι αισθητήρες ρεύματος που ανήκουν στην επιλεγμένη έξυπνη πρίζα.",
           "power_cycle_delay": "Συνήθως δεν χρειάζεται πρόσθετη καθυστέρηση. Αν μια λάμπα που έκλεισε από το δικό της κουμπί δεν ανάβει από το Home Assistant, ορίστε μια μικρή καθυστέρηση, π.χ. 0,7 s.",
-          "round_brightness_to_5": "Στρογγυλοποιεί την υπολογισμένη φωτεινότητα στο πλησιέστερο 5%. Απενεργοποιήστε το για ακέραια ποσοστά χωρίς βήματα 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Προσθέστε τουλάχιστον μία λειτουργία"
     },
     "abort": {
-      "current_sensor_missing": "Δεν βρέθηκε αισθητήρας ρεύματος για την επιλεγμένη πρίζα"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Ρύθμιση φωτός πολλαπλών επιπέδων",
         "data": {
           "name": "Όνομα φωτός",
-          "current_sensor": "Αισθητήρας ρεύματος",
           "power_cycle_delay": "Καθυστέρηση επανεκκίνησης τροφοδοσίας",
           "modes": "Λειτουργίες φωτεινότητας",
-          "round_brightness_to_5": "Στρογγυλοποίηση φωτεινότητας στο 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Πρώτα εκπαιδεύστε την ενσωμάτωση στις λειτουργίες φωτεινότητας της νέας λάμπας. Με το φυσικό κουμπί της λάμπας επιλέξτε κάθε επίπεδο και προσθέστε το παρακάτω, π.χ. High, Medium, Low και Dim.",
-          "current_sensor": "Εδώ είναι διαθέσιμοι μόνο οι αισθητήρες ρεύματος που ανήκουν στην επιλεγμένη έξυπνη πρίζα.",
           "power_cycle_delay": "Συνήθως δεν χρειάζεται πρόσθετη καθυστέρηση. Αν μια λάμπα που έκλεισε από το δικό της κουμπί δεν ανάβει από το Home Assistant, ορίστε μια μικρή καθυστέρηση, π.χ. 0,7 s.",
-          "round_brightness_to_5": "Στρογγυλοποιεί την υπολογισμένη φωτεινότητα στο πλησιέστερο 5%. Απενεργοποιήστε το για ακέραια ποσοστά χωρίς βήματα 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

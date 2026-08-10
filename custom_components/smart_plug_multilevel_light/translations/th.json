@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "เลือกปลั๊กอัจฉริยะ",
-        "description": "แสดงเฉพาะปลั๊กที่มีเซนเซอร์กระแสไฟ",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "ปลั๊กอัจฉริยะ"
         }
@@ -13,18 +13,18 @@
         "title": "ตั้งค่าไฟและโหมด",
         "data": {
           "name": "ชื่อไฟ",
-          "current_sensor": "เซนเซอร์กระแสไฟ",
           "power_cycle_delay": "หน่วงรอบจ่ายไฟ",
           "modes": "โหมดความสว่าง",
-          "round_brightness_to_5": "ปัดความสว่างเป็นช่วง 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "สำหรับหลอดไฟใหม่ ให้สอนโหมดความสว่างแก่การผสานรวมก่อน ใช้ปุ่มจริงบนหลอดไฟเลือกแต่ละระดับแล้วเพิ่มด้านล่าง เช่น High, Medium, Low และ Dim",
-          "current_sensor": "ที่นี่จะแสดงเฉพาะเซ็นเซอร์กระแสที่เป็นของสมาร์ทปลั๊กที่เลือกเท่านั้น",
           "power_cycle_delay": "โดยปกติไม่จำเป็นต้องหน่วงเวลาเพิ่มเติม หากหลอดไฟที่ปิดด้วยปุ่มของตัวเองไม่เปิดจาก Home Assistant ให้ตั้งค่าหน่วงเวลาเล็กน้อย เช่น 0.7 s",
-          "round_brightness_to_5": "ปัดค่าความสว่างที่คำนวณได้เป็น 5% ที่ใกล้ที่สุด ปิดตัวเลือกนี้เพื่อใช้เปอร์เซ็นต์จำนวนเต็มโดยไม่มีขั้น 5%",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "เพิ่มอย่างน้อยหนึ่งโหมด"
     },
     "abort": {
-      "current_sensor_missing": "ไม่พบเซนเซอร์กระแสไฟสำหรับปลั๊กที่เลือก"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "ตั้งค่าไฟหลายระดับ",
         "data": {
           "name": "ชื่อไฟ",
-          "current_sensor": "เซนเซอร์กระแสไฟ",
           "power_cycle_delay": "หน่วงรอบจ่ายไฟ",
           "modes": "โหมดความสว่าง",
-          "round_brightness_to_5": "ปัดความสว่างเป็นช่วง 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "สำหรับหลอดไฟใหม่ ให้สอนโหมดความสว่างแก่การผสานรวมก่อน ใช้ปุ่มจริงบนหลอดไฟเลือกแต่ละระดับแล้วเพิ่มด้านล่าง เช่น High, Medium, Low และ Dim",
-          "current_sensor": "ที่นี่จะแสดงเฉพาะเซ็นเซอร์กระแสที่เป็นของสมาร์ทปลั๊กที่เลือกเท่านั้น",
           "power_cycle_delay": "โดยปกติไม่จำเป็นต้องหน่วงเวลาเพิ่มเติม หากหลอดไฟที่ปิดด้วยปุ่มของตัวเองไม่เปิดจาก Home Assistant ให้ตั้งค่าหน่วงเวลาเล็กน้อย เช่น 0.7 s",
-          "round_brightness_to_5": "ปัดค่าความสว่างที่คำนวณได้เป็น 5% ที่ใกล้ที่สุด ปิดตัวเลือกนี้เพื่อใช้เปอร์เซ็นต์จำนวนเต็มโดยไม่มีขั้น 5%",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Valige nutipistik",
-        "description": "Kuvatakse ainult vooluanduriga pistikud.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Nutipistik"
         }
@@ -13,18 +13,18 @@
         "title": "Seadistage valgus ja režiimid",
         "data": {
           "name": "Valguse nimi",
-          "current_sensor": "Vooluandur",
           "power_cycle_delay": "Toitetsükli viivitus",
           "modes": "Heledusrežiimid",
-          "round_brightness_to_5": "Ümarda heledus 5%-ni",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Kõigepealt õpetage integratsioonile uue lambi heledusrežiimid. Valige lambi füüsilise nupuga iga tase ja lisage see allpool, näiteks High, Medium, Low ja Dim.",
-          "current_sensor": "Siin on saadaval ainult valitud nutipistikule kuuluvad vooluandurid.",
           "power_cycle_delay": "Tavaliselt pole lisaviivitust vaja. Kui oma nupust välja lülitatud lamp ei lülitu Home Assistantist sisse, määrake väike viivitus, näiteks 0,7 s.",
-          "round_brightness_to_5": "Ümardab arvutatud heleduse lähima 5%-ni. Lülitage välja, et kasutada täisprotsente ilma 5% sammudeta.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Lisage vähemalt üks režiim"
     },
     "abort": {
-      "current_sensor_missing": "Valitud pistikule ei leitud vooluandurit"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Seadistage mitmetasemeline valgus",
         "data": {
           "name": "Valguse nimi",
-          "current_sensor": "Vooluandur",
           "power_cycle_delay": "Toitetsükli viivitus",
           "modes": "Heledusrežiimid",
-          "round_brightness_to_5": "Ümarda heledus 5%-ni",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Kõigepealt õpetage integratsioonile uue lambi heledusrežiimid. Valige lambi füüsilise nupuga iga tase ja lisage see allpool, näiteks High, Medium, Low ja Dim.",
-          "current_sensor": "Siin on saadaval ainult valitud nutipistikule kuuluvad vooluandurid.",
           "power_cycle_delay": "Tavaliselt pole lisaviivitust vaja. Kui oma nupust välja lülitatud lamp ei lülitu Home Assistantist sisse, määrake väike viivitus, näiteks 0,7 s.",
-          "round_brightness_to_5": "Ümardab arvutatud heleduse lähima 5%-ni. Lülitage välja, et kasutada täisprotsente ilma 5% sammudeta.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

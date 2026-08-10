@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Veldu snjallinnstungu",
-        "description": "Aðeins innstungur með straumskynjara eru sýndar.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Snjallinnstunga"
         }
@@ -13,18 +13,18 @@
         "title": "Stilltu ljós og stillingar",
         "data": {
           "name": "Heiti ljóss",
-          "current_sensor": "Straumskynjari",
           "power_cycle_delay": "Seinkun á aflræsingu",
           "modes": "Birtustillingar",
-          "round_brightness_to_5": "Námunda birtu að 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Kenndu fyrst samþættingunni birtustillingar nýja lampans. Notaðu hnappinn á lampanum til að velja hvert stig og bættu því við hér fyrir neðan, til dæmis High, Medium, Low og Dim.",
-          "current_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir.",
           "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s.",
-          "round_brightness_to_5": "Námundar reiknaða birtu að næstu 5%. Slökktu til að nota heil prósent án 5% skrefa.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Bættu við að minnsta kosti einni stillingu"
     },
     "abort": {
-      "current_sensor_missing": "Enginn straumskynjari fannst fyrir valda innstungu"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Stilltu fjölþrepa ljós",
         "data": {
           "name": "Heiti ljóss",
-          "current_sensor": "Straumskynjari",
           "power_cycle_delay": "Seinkun á aflræsingu",
           "modes": "Birtustillingar",
-          "round_brightness_to_5": "Námunda birtu að 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Kenndu fyrst samþættingunni birtustillingar nýja lampans. Notaðu hnappinn á lampanum til að velja hvert stig og bættu því við hér fyrir neðan, til dæmis High, Medium, Low og Dim.",
-          "current_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir.",
           "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s.",
-          "round_brightness_to_5": "Námundar reiknaða birtu að næstu 5%. Slökktu til að nota heil prósent án 5% skrefa.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

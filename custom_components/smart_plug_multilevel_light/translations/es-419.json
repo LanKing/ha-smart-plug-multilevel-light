@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Selecciona un enchufe inteligente",
-        "description": "Solo se muestran enchufes con sensor de corriente.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Enchufe inteligente"
         }
@@ -13,18 +13,18 @@
         "title": "Configura la luz y los modos",
         "data": {
           "name": "Nombre de la luz",
-          "current_sensor": "Sensor de corriente",
           "power_cycle_delay": "Retardo del ciclo de energía",
           "modes": "Modos de brillo",
-          "round_brightness_to_5": "Redondear brillo al 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Primero enseña a la integración los modos de brillo de la nueva lámpara. Usa el botón físico de la lámpara para seleccionar cada nivel y agregarlo abajo, por ejemplo High, Medium, Low y Dim.",
-          "current_sensor": "Aquí solo están disponibles los sensores de corriente que pertenecen al enchufe inteligente seleccionado.",
           "power_cycle_delay": "Normalmente no se necesita ningún retraso adicional. Si una lámpara apagada con su propio botón no se enciende desde Home Assistant, configura un pequeño retraso, por ejemplo 0,7 s.",
-          "round_brightness_to_5": "Redondea el brillo calculado al 5% más cercano. Desactívalo para usar porcentajes enteros sin pasos del 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Agrega al menos un modo"
     },
     "abort": {
-      "current_sensor_missing": "No se encontró un sensor de corriente para el enchufe seleccionado"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Configura la luz multinivel",
         "data": {
           "name": "Nombre de la luz",
-          "current_sensor": "Sensor de corriente",
           "power_cycle_delay": "Retardo del ciclo de energía",
           "modes": "Modos de brillo",
-          "round_brightness_to_5": "Redondear brillo al 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Primero enseña a la integración los modos de brillo de la nueva lámpara. Usa el botón físico de la lámpara para seleccionar cada nivel y agregarlo abajo, por ejemplo High, Medium, Low y Dim.",
-          "current_sensor": "Aquí solo están disponibles los sensores de corriente que pertenecen al enchufe inteligente seleccionado.",
           "power_cycle_delay": "Normalmente no se necesita ningún retraso adicional. Si una lámpara apagada con su propio botón no se enciende desde Home Assistant, configura un pequeño retraso, por ejemplo 0,7 s.",
-          "round_brightness_to_5": "Redondea el brillo calculado al 5% más cercano. Desactívalo para usar porcentajes enteros sin pasos del 5%.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

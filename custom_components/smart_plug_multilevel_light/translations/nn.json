@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Vel ein smartkontakt",
-        "description": "Berre kontaktar med straumsensor blir viste.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "Smartkontakt"
         }
@@ -13,18 +13,18 @@
         "title": "Konfigurer lys og modusar",
         "data": {
           "name": "Lysnamn",
-          "current_sensor": "Straumsensor",
           "power_cycle_delay": "Forseinking for straumsyklus",
           "modes": "Lysstyrkemodusar",
-          "round_brightness_to_5": "Rund lysstyrke til 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Lær først integrasjonen lysstyrkemodusane til den nye lampa. Bruk den fysiske knappen på lampa til å velje kvart nivå og legg det til nedanfor, til dømes High, Medium, Low og Dim.",
-          "current_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her.",
           "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s.",
-          "round_brightness_to_5": "Rundar berekna lysstyrke til næraste 5 %. Slå av for å bruke heile prosent utan steg på 5 %.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "Legg til minst éin modus"
     },
     "abort": {
-      "current_sensor_missing": "Ingen straumsensor vart funnen for den valde kontakten"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "Konfigurer fleirnivålys",
         "data": {
           "name": "Lysnamn",
-          "current_sensor": "Straumsensor",
           "power_cycle_delay": "Forseinking for straumsyklus",
           "modes": "Lysstyrkemodusar",
-          "round_brightness_to_5": "Rund lysstyrke til 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "Lær først integrasjonen lysstyrkemodusane til den nye lampa. Bruk den fysiske knappen på lampa til å velje kvart nivå og legg det til nedanfor, til dømes High, Medium, Low og Dim.",
-          "current_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her.",
           "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s.",
-          "round_brightness_to_5": "Rundar berekna lysstyrke til næraste 5 %. Slå av for å bruke heile prosent utan steg på 5 %.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "স্মার্ট প্লাগ নির্বাচন করুন",
-        "description": "শুধু কারেন্ট সেন্সরযুক্ত প্লাগ দেখানো হয়।",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "স্মার্ট প্লাগ"
         }
@@ -13,18 +13,18 @@
         "title": "লাইট ও মোড কনফিগার করুন",
         "data": {
           "name": "লাইটের নাম",
-          "current_sensor": "কারেন্ট সেন্সর",
           "power_cycle_delay": "পাওয়ার সাইকেল বিলম্ব",
           "modes": "উজ্জ্বলতার মোড",
-          "round_brightness_to_5": "উজ্জ্বলতা 5% ধাপে রাউন্ড করুন",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "নতুন ল্যাম্পের উজ্জ্বলতার মোডগুলো আগে ইন্টিগ্রেশনকে শেখান। ল্যাম্পের ফিজিক্যাল বোতাম দিয়ে প্রতিটি উজ্জ্বলতার স্তর নির্বাচন করে নিচে যোগ করুন, যেমন High, Medium, Low এবং Dim।",
-          "current_sensor": "এখানে শুধু নির্বাচিত স্মার্ট প্লাগের কারেন্ট সেন্সরগুলোই উপলভ্য।",
           "power_cycle_delay": "সাধারণত অতিরিক্ত বিলম্বের দরকার হয় না। ল্যাম্পের নিজস্ব বোতাম দিয়ে বন্ধ করার পর Home Assistant থেকে চালু না হলে ছোট একটি বিলম্ব দিন, যেমন 0.7 s।",
-          "round_brightness_to_5": "গণনা করা উজ্জ্বলতা নিকটতম 5%-এ রাউন্ড করে। 5% ধাপ ছাড়া পূর্ণ শতাংশ ব্যবহার করতে এটি বন্ধ করুন।",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "অন্তত একটি মোড যোগ করুন"
     },
     "abort": {
-      "current_sensor_missing": "নির্বাচিত প্লাগের জন্য কোনো কারেন্ট সেন্সর পাওয়া যায়নি"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "মাল্টি-লেভেল লাইট কনফিগার করুন",
         "data": {
           "name": "লাইটের নাম",
-          "current_sensor": "কারেন্ট সেন্সর",
           "power_cycle_delay": "পাওয়ার সাইকেল বিলম্ব",
           "modes": "উজ্জ্বলতার মোড",
-          "round_brightness_to_5": "উজ্জ্বলতা 5% ধাপে রাউন্ড করুন",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "নতুন ল্যাম্পের উজ্জ্বলতার মোডগুলো আগে ইন্টিগ্রেশনকে শেখান। ল্যাম্পের ফিজিক্যাল বোতাম দিয়ে প্রতিটি উজ্জ্বলতার স্তর নির্বাচন করে নিচে যোগ করুন, যেমন High, Medium, Low এবং Dim।",
-          "current_sensor": "এখানে শুধু নির্বাচিত স্মার্ট প্লাগের কারেন্ট সেন্সরগুলোই উপলভ্য।",
           "power_cycle_delay": "সাধারণত অতিরিক্ত বিলম্বের দরকার হয় না। ল্যাম্পের নিজস্ব বোতাম দিয়ে বন্ধ করার পর Home Assistant থেকে চালু না হলে ছোট একটি বিলম্ব দিন, যেমন 0.7 s।",
-          "round_brightness_to_5": "গণনা করা উজ্জ্বলতা নিকটতম 5%-এ রাউন্ড করে। 5% ধাপ ছাড়া পূর্ণ শতাংশ ব্যবহার করতে এটি বন্ধ করুন।",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },

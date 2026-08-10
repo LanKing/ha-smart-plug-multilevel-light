@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "پریز هوشمند را انتخاب کنید",
-        "description": "فقط پریزهایی که حسگر جریان دارند نمایش داده می‌شوند.",
+        "description": "Only switches whose Home Assistant device exposes a power sensor are shown.",
         "data": {
           "outlet": "پریز هوشمند"
         }
@@ -13,18 +13,18 @@
         "title": "نور و حالت‌ها را تنظیم کنید",
         "data": {
           "name": "نام نور",
-          "current_sensor": "حسگر جریان",
           "power_cycle_delay": "تأخیر چرخه برق",
           "modes": "حالت‌های روشنایی",
-          "round_brightness_to_5": "گرد کردن روشنایی به 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "ابتدا حالت‌های روشنایی چراغ جدید را به یکپارچه‌سازی آموزش دهید. با دکمه فیزیکی چراغ هر سطح را انتخاب و در پایین اضافه کنید، مثلاً High، Medium، Low و Dim.",
-          "current_sensor": "در اینجا فقط حسگرهای جریان متعلق به پریز هوشمند انتخاب‌شده در دسترس هستند.",
           "power_cycle_delay": "معمولاً نیازی به تأخیر اضافی نیست. اگر چراغی که با دکمه خودش خاموش شده از Home Assistant روشن نمی‌شود، یک تأخیر کوتاه، مثلاً ۰٫۷ ثانیه تنظیم کنید.",
-          "round_brightness_to_5": "روشنایی محاسبه‌شده را به نزدیک‌ترین 5% گرد می‌کند. برای استفاده از درصدهای صحیح بدون گام 5% آن را غیرفعال کنید.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
@@ -32,7 +32,7 @@
       "at_least_one_mode": "حداقل یک حالت اضافه کنید"
     },
     "abort": {
-      "current_sensor_missing": "برای پریز انتخاب‌شده حسگر جریان پیدا نشد"
+      "power_sensor_missing": "No power sensor was found for the selected plug"
     }
   },
   "options": {
@@ -41,18 +41,18 @@
         "title": "نور چندسطحی را تنظیم کنید",
         "data": {
           "name": "نام نور",
-          "current_sensor": "حسگر جریان",
           "power_cycle_delay": "تأخیر چرخه برق",
           "modes": "حالت‌های روشنایی",
-          "round_brightness_to_5": "گرد کردن روشنایی به 5%",
-          "current_history_samples": "Recent current readings"
+          "power_sensor": "Power sensor",
+          "round_brightness_to_5": "Round brightness to 5%",
+          "power_history_samples": "Recent power readings"
         },
         "data_description": {
           "modes": "ابتدا حالت‌های روشنایی چراغ جدید را به یکپارچه‌سازی آموزش دهید. با دکمه فیزیکی چراغ هر سطح را انتخاب و در پایین اضافه کنید، مثلاً High، Medium، Low و Dim.",
-          "current_sensor": "در اینجا فقط حسگرهای جریان متعلق به پریز هوشمند انتخاب‌شده در دسترس هستند.",
           "power_cycle_delay": "معمولاً نیازی به تأخیر اضافی نیست. اگر چراغی که با دکمه خودش خاموش شده از Home Assistant روشن نمی‌شود، یک تأخیر کوتاه، مثلاً ۰٫۷ ثانیه تنظیم کنید.",
-          "round_brightness_to_5": "روشنایی محاسبه‌شده را به نزدیک‌ترین 5% گرد می‌کند. برای استفاده از درصدهای صحیح بدون گام 5% آن را غیرفعال کنید.",
-          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
+          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
         }
       }
     },
