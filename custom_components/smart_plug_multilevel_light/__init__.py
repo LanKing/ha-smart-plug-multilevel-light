@@ -7,15 +7,25 @@ from homeassistant.components.frontend import add_extra_js_url
 from homeassistant.components.http import StaticPathConfig
 from homeassistant.components.lovelace.const import LOVELACE_DATA, MODE_STORAGE
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import CONF_URL
+from homeassistant.const import ATTR_DEVICE_CLASS, CONF_URL
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers import entity_registry as er
 from homeassistant.setup import async_setup_component
 
-from .const import DOMAIN, PLATFORMS
+from .const import (
+    CONF_CURRENT_HISTORY_SAMPLES,
+    CONF_CURRENT_SENSOR,
+    CONF_MODES,
+    CONF_OUTLET,
+    CONF_POWER_CYCLE_DELAY,
+    CONF_ROUND_BRIGHTNESS_TO_5,
+    DOMAIN,
+    PLATFORMS,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
-_VERSION = "0.7.24"
+_VERSION = "0.9.0"
 _CARD_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-card.js"
 _CARD_URL = f"{_CARD_PATH}?v={_VERSION}"
 _CARD_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-card.js"
@@ -31,6 +41,70 @@ _HELPER_FIX_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-lig
 _DATA_STATIC_REGISTERED = "static_registered"
 _DATA_CONFIG_UI_REGISTERED = "config_ui_registered"
 _DATA_RESOURCE_REGISTERED = "resource_registered"
+
+
+def _current_sensor_for_outlet(hass: HomeAssistant, outlet: str) -> str | None:
+    registry = er.async_get(hass)
+    outlet_entry = registry.async_get(outlet)
+    if outlet_entry is None or outlet_entry.device_id is None:
+        return None
+
+    for item in er.async_entries_for_device(
+        registry, outlet_entry.device_id, include_disabled_entities=False
+    ):
+        if not item.entity_id.startswith("sensor."):
+            continue
+        state = hass.states.get(item.entity_id)
+        if state is not None and state.attributes.get(ATTR_DEVICE_CLASS) == "current":
+            return item.entity_id
+    return None
+
+
+async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Migrate older helpers to the current-history schema."""
+    if entry.version >= 5:
+        return True
+    if entry.version not in {3, 4}:
+        _LOGGER.error("Unsupported config entry version %s", entry.version)
+        return False
+
+    merged = {**entry.data, **entry.options}
+    outlet = str(merged.get(CONF_OUTLET, ""))
+    if not outlet:
+        return False
+
+    current_sensor = merged.get(CONF_CURRENT_SENSOR)
+    modes = merged.get(CONF_MODES, [])
+
+    # Version 4 may be the short-lived power-based model. Its mode values cannot
+    # be converted to amperes, so switch back to the sibling current sensor and
+    # clear only those incompatible power modes.
+    if not current_sensor:
+        current_sensor = _current_sensor_for_outlet(hass, outlet)
+        modes = []
+
+    if not current_sensor:
+        _LOGGER.error(
+            "Could not migrate %s: no current sensor belongs to outlet %s",
+            entry.title,
+            outlet,
+        )
+        return False
+
+    hass.config_entries.async_update_entry(
+        entry,
+        data={
+            CONF_OUTLET: outlet,
+            CONF_CURRENT_SENSOR: str(current_sensor),
+            CONF_POWER_CYCLE_DELAY: merged.get(CONF_POWER_CYCLE_DELAY, 0.7),
+            CONF_CURRENT_HISTORY_SAMPLES: 5,
+            CONF_ROUND_BRIGHTNESS_TO_5: merged.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
+            CONF_MODES: modes,
+        },
+        options={},
+        version=5,
+    )
+    return True
 
 
 async def async_ensure_frontend_assets(hass: HomeAssistant) -> None:
