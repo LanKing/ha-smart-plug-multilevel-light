@@ -2,21 +2,18 @@
 from __future__ import annotations
 
 import re
-import subprocess
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PATH = ROOT / "README_RU.md"
 POWER_BASELINE = "0d32c707f3d5ec45fa9009a07a98ab7d2cd8964c"
+BASE_URL = f"https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/{POWER_BASELINE}/README_RU.md"
 
 
 def main() -> None:
-    text = subprocess.check_output(
-        ["git", "show", f"{POWER_BASELINE}:README_RU.md"],
-        cwd=ROOT,
-        text=True,
-        encoding="utf-8",
-    )
+    with urllib.request.urlopen(BASE_URL) as response:
+        text = response.read().decode("utf-8")
 
     text = text.replace("version-0.6.4-blue", "version-0.9.0-blue")
     text = text.replace("Version 0.6.4", "Version 0.9.0")
