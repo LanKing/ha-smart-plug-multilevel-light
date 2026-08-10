@@ -51,24 +51,8 @@
   const modeNameHelp = (selector) =>
     custom(selector, "mode_name_help", "For example: High, Medium, Low, or Dim.");
 
-  const thresholdHelp = (selector) => {
-    const text = custom(
-      selector,
-      "threshold_help",
-      "We recommend setting the threshold about 15% below the measured current because lamp consumption can vary slightly between measurements."
-    );
-    return text
-      .replace(/10\s?%/g, "15%")
-      .replace(/10\s?٪/g, "15٪")
-      .replace(/۱۰\s?٪/g, "۱۵٪")
-      .replace(/١٠\s?٪/g, "١٥٪")
-      .replace(/१०\s?%/g, "१५%")
-      .replace(/১০\s?%/g, "১৫%")
-      .replace(/๑๐\s?%/g, "๑๕%");
-  };
-
   const measuredActionText = (selector) =>
-    `${common(selector, "ui.common.apply", "Apply")} ${custom(selector, "measured_current", "measured current")} −15%`;
+    `${common(selector, "ui.common.apply", "Apply")} ${custom(selector, "measured_current", "measured current")}`;
 
   const getModesHelperText = (selector) => {
     const localize = selector?.hass?.localize?.bind(selector.hass);
@@ -82,10 +66,8 @@
 
   const ensureModesHelper = (selector) => {
     if (!selector?.shadowRoot || !isModesSelector(selector)) return;
-
     const text = getModesHelperText(selector);
     if (!text) return;
-
     let helper = selector.shadowRoot.querySelector(".spml-modes-helper");
     if (!helper) {
       helper = document.createElement("ha-input-helper-text");
@@ -129,10 +111,7 @@
     const editing = index !== null;
     const existing = editing && Array.isArray(selector.value) ? selector.value[index] || {} : {};
     const dialog = document.createElement("ha-dialog");
-    dialog.setAttribute(
-      "header-title",
-      common(selector, editing ? "ui.common.edit" : "ui.common.add", editing ? "Edit" : "Add")
-    );
+    dialog.setAttribute("header-title", common(selector, editing ? "ui.common.edit" : "ui.common.add", editing ? "Edit" : "Add"));
     dialog.setAttribute("prevent-scrim-close", "");
 
     const body = document.createElement("div");
@@ -160,14 +139,14 @@
         </div>
         <div class="spml-field">
           <div class="spml-threshold-head">
-            <label class="spml-label spml-current-label" for="spml-current">${custom(selector, "current_threshold", "Current threshold")}</label>
+            <label class="spml-label spml-current-label" for="spml-current">${custom(selector, "current_threshold", "Current value")}</label>
             <span class="spml-measured"></span>
           </div>
           <div class="spml-input-wrap">
             <input id="spml-current" class="spml-input spml-current" type="number" min="0" step="0.001" required inputmode="decimal" />
             <span class="spml-unit">A</span>
           </div>
-          <div class="spml-helper">${thresholdHelp(selector)} <button type="button" class="spml-inline-action">${measuredActionText(selector)}</button></div>
+          <div class="spml-helper"><button type="button" class="spml-inline-action">${measuredActionText(selector)}</button></div>
         </div>
       </div>`;
 
@@ -191,7 +170,6 @@
 
     const clearInvalid = (label) => label?.classList.remove("spml-invalid");
     const markInvalid = (label) => label?.classList.add("spml-invalid");
-
     nameInput.addEventListener("input", () => clearInvalid(nameLabel));
     currentInput.addEventListener("input", () => clearInvalid(currentLabel));
 
@@ -213,17 +191,14 @@
       selector.hass.connection.subscribeEvents((event) => {
         if (event?.data?.entity_id === entityId) renderMeasured(event.data.new_state);
       }, "state_changed").then((unsub) => {
-        if (closed) {
-          try { unsub(); } catch (_) {}
-          return;
-        }
+        if (closed) { try { unsub(); } catch (_) {} return; }
         unsubscribe = unsub;
       }).catch(() => {});
     }
 
     applyMeasured.addEventListener("click", () => {
       if (measuredValue === null) return;
-      currentInput.value = String(Number((measuredValue * 0.85).toFixed(3)));
+      currentInput.value = String(Number(measuredValue.toFixed(3)));
       currentInput.dispatchEvent(new Event("input", { bubbles: true }));
       currentInput.focus();
       currentInput.select();
@@ -235,28 +210,15 @@
     const save = () => {
       clearInvalid(nameLabel);
       clearInvalid(currentLabel);
-
       const name = String(nameInput.value || "").trim();
       const current = Number(currentInput.value);
-      const nameValid = Boolean(name) && nameInput.checkValidity();
-      const currentValid = currentInput.checkValidity() && Number.isFinite(current);
-
       const invalidInputs = [];
-      if (!nameValid) {
-        markInvalid(nameLabel);
-        invalidInputs.push(nameInput);
-      }
-      if (!currentValid) {
-        markInvalid(currentLabel);
-        invalidInputs.push(currentInput);
-      }
-      if (invalidInputs.length) {
-        invalidInputs[0].focus();
-        return;
-      }
+      if (!name || !nameInput.checkValidity()) { markInvalid(nameLabel); invalidInputs.push(nameInput); }
+      if (!currentInput.checkValidity() || !Number.isFinite(current)) { markInvalid(currentLabel); invalidInputs.push(currentInput); }
+      if (invalidInputs.length) { invalidInputs[0].focus(); return; }
 
       const next = Array.isArray(selector.value) ? selector.value.slice() : [];
-      const item = { name, current };
+      const item = { name, current: Number(current.toFixed(3)) };
       if (editing) next[index] = item; else next.push(item);
       next.sort((a, b) => Number(a.current) - Number(b.current));
       selector.dispatchEvent(new CustomEvent("value-changed", { detail: { value: next }, bubbles: true, composed: true }));
@@ -264,9 +226,7 @@
     };
 
     footer.querySelector(".spml-save")?.addEventListener("click", save);
-    body.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") { event.preventDefault(); save(); }
-    });
+    body.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); save(); } });
     dialog.addEventListener("closed", () => {
       closed = true;
       try { unsubscribe?.(); } catch (_) {}
@@ -280,20 +240,13 @@
     const path = event.composedPath?.() || [];
     const selector = path.find((node) => node?.tagName?.toLowerCase?.() === "ha-selector-object");
     if (!selector || !isModesSelector(selector)) return;
-
     const button = path.find((node) => node?.tagName?.toLowerCase?.() === "ha-button");
     const iconButton = path.find((node) => node?.tagName?.toLowerCase?.() === "ha-icon-button");
     if (!button && !iconButton) return;
-
     if (iconButton && iconButton.item === undefined) return;
-
     event.preventDefault();
     event.stopImmediatePropagation();
-
-    if (iconButton && Number.isInteger(Number(iconButton.index))) {
-      openEditor(selector, Number(iconButton.index));
-    } else if (button) {
-      openEditor(selector, null);
-    }
+    if (iconButton && Number.isInteger(Number(iconButton.index))) openEditor(selector, Number(iconButton.index));
+    else if (button) openEditor(selector, null);
   }, true);
 })();
