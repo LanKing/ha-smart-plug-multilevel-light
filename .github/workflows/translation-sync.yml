@@ -3,7 +3,6 @@ name: Translation sync
 on:
   push:
     paths:
-      - "scripts/sync_translations.py"
       - "scripts/sync_new_settings_translations.py"
       - "scripts/sync_readme_history.py"
       - "custom_components/smart_plug_multilevel_light/strings.json"
@@ -20,9 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Synchronize translations and Russian docs
         run: |
-          python scripts/sync_translations.py
           python scripts/sync_new_settings_translations.py
           python scripts/sync_readme_history.py
       - name: Commit synchronized files
