@@ -14,19 +14,17 @@
         "data": {
           "name": "ライト名",
           "current_sensor": "電流センサー",
-          "off_current_threshold": "OFF 電流しきい値",
           "power_cycle_delay": "電源サイクル遅延",
           "modes": "明るさモード",
-          "current_stability_samples": "電流安定化フィルター",
-          "round_brightness_to_5": "明るさを5%単位に丸める"
+          "round_brightness_to_5": "明るさを5%単位に丸める",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "このしきい値以下の電流は OFF とみなされます。",
           "modes": "新しいランプでは、最初に明るさモードを統合に学習させます。ランプ本体の物理ボタンで各明るさレベルを選び、下に追加してください。例: High、Medium、Low、Dim。",
           "current_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。",
           "power_cycle_delay": "通常、追加の遅延は不要です。ランプ本体のボタンで消灯した後、Home Assistant から点灯できない場合は、0.7 秒などの短い遅延を設定してください。",
-          "current_stability_samples": "検出した明るさモードを変更する前に、同じ新しい電流値がこの回数連続で報告される必要があります。ON/OFF は常に即時反映されます。0 で無効、既定値は 2 です。",
-          "round_brightness_to_5": "計算された明るさを最も近い5%に丸めます。5%刻みを使わず整数パーセントを使用する場合は無効にします。"
+          "round_brightness_to_5": "計算された明るさを最も近い5%に丸めます。5%刻みを使わず整数パーセントを使用する場合は無効にします。",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "ライト名",
           "current_sensor": "電流センサー",
-          "off_current_threshold": "OFF 電流しきい値",
           "power_cycle_delay": "電源サイクル遅延",
           "modes": "明るさモード",
-          "current_stability_samples": "電流安定化フィルター",
-          "round_brightness_to_5": "明るさを5%単位に丸める"
+          "round_brightness_to_5": "明るさを5%単位に丸める",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "このしきい値以下の電流は OFF とみなされます。",
           "modes": "新しいランプでは、最初に明るさモードを統合に学習させます。ランプ本体の物理ボタンで各明るさレベルを選び、下に追加してください。例: High、Medium、Low、Dim。",
           "current_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。",
           "power_cycle_delay": "通常、追加の遅延は不要です。ランプ本体のボタンで消灯した後、Home Assistant から点灯できない場合は、0.7 秒などの短い遅延を設定してください。",
-          "current_stability_samples": "検出した明るさモードを変更する前に、同じ新しい電流値がこの回数連続で報告される必要があります。ON/OFF は常に即時反映されます。0 で無効、既定値は 2 です。",
-          "round_brightness_to_5": "計算された明るさを最も近い5%に丸めます。5%刻みを使わず整数パーセントを使用する場合は無効にします。"
+          "round_brightness_to_5": "計算された明るさを最も近い5%に丸めます。5%刻みを使わず整数パーセントを使用する場合は無効にします。",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

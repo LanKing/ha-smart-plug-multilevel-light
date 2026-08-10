@@ -14,19 +14,17 @@
         "data": {
           "name": "Gaismas nosaukums",
           "current_sensor": "Strāvas sensors",
-          "off_current_threshold": "OFF strāvas slieksnis",
           "power_cycle_delay": "Barošanas cikla aizkave",
           "modes": "Spilgtuma režīmi",
-          "current_stability_samples": "Strāvas stabilitātes filtrs",
-          "round_brightness_to_5": "Noapaļot spilgtumu līdz 5%"
+          "round_brightness_to_5": "Noapaļot spilgtumu līdz 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Strāva pie šī sliekšņa vai zem tā tiek uzskatīta par OFF.",
           "modes": "Vispirms iemāciet integrācijai jaunās lampas spilgtuma režīmus. Ar lampas fizisko pogu izvēlieties katru līmeni un pievienojiet to zemāk, piemēram, High, Medium, Low un Dim.",
           "current_sensor": "Šeit ir pieejami tikai izvēlētajai viedajai kontaktligzdai piederošie strāvas sensori.",
           "power_cycle_delay": "Parasti papildu aizture nav nepieciešama. Ja lampa, kas izslēgta ar savu pogu, neieslēdzas no Home Assistant, iestatiet nelielu aizturi, piemēram, 0,7 s.",
-          "current_stability_samples": "Pirms spilgtuma režīma maiņas tai pašai jaunajai strāvas vērtībai jābūt saņemtai tik reižu pēc kārtas. ON/OFF tiek piemērots nekavējoties. 0 izslēdz filtru; noklusējums ir 2.",
-          "round_brightness_to_5": "Noapaļo aprēķināto spilgtumu līdz tuvākajiem 5%. Izslēdziet, lai izmantotu veselus procentus bez 5% soļiem."
+          "round_brightness_to_5": "Noapaļo aprēķināto spilgtumu līdz tuvākajiem 5%. Izslēdziet, lai izmantotu veselus procentus bez 5% soļiem.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Gaismas nosaukums",
           "current_sensor": "Strāvas sensors",
-          "off_current_threshold": "OFF strāvas slieksnis",
           "power_cycle_delay": "Barošanas cikla aizkave",
           "modes": "Spilgtuma režīmi",
-          "current_stability_samples": "Strāvas stabilitātes filtrs",
-          "round_brightness_to_5": "Noapaļot spilgtumu līdz 5%"
+          "round_brightness_to_5": "Noapaļot spilgtumu līdz 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Strāva pie šī sliekšņa vai zem tā tiek uzskatīta par OFF.",
           "modes": "Vispirms iemāciet integrācijai jaunās lampas spilgtuma režīmus. Ar lampas fizisko pogu izvēlieties katru līmeni un pievienojiet to zemāk, piemēram, High, Medium, Low un Dim.",
           "current_sensor": "Šeit ir pieejami tikai izvēlētajai viedajai kontaktligzdai piederošie strāvas sensori.",
           "power_cycle_delay": "Parasti papildu aizture nav nepieciešama. Ja lampa, kas izslēgta ar savu pogu, neieslēdzas no Home Assistant, iestatiet nelielu aizturi, piemēram, 0,7 s.",
-          "current_stability_samples": "Pirms spilgtuma režīma maiņas tai pašai jaunajai strāvas vērtībai jābūt saņemtai tik reižu pēc kārtas. ON/OFF tiek piemērots nekavējoties. 0 izslēdz filtru; noklusējums ir 2.",
-          "round_brightness_to_5": "Noapaļo aprēķināto spilgtumu līdz tuvākajiem 5%. Izslēdziet, lai izmantotu veselus procentus bez 5% soļiem."
+          "round_brightness_to_5": "Noapaļo aprēķināto spilgtumu līdz tuvākajiem 5%. Izslēdziet, lai izmantotu veselus procentus bez 5% soļiem.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

@@ -14,19 +14,17 @@
         "data": {
           "name": "Fény neve",
           "current_sensor": "Áramérzékelő",
-          "off_current_threshold": "OFF áramküszöb",
           "power_cycle_delay": "Áramciklus késleltetése",
           "modes": "Fényerőmódok",
-          "current_stability_samples": "Áramstabilitási szűrő",
-          "round_brightness_to_5": "Fényerő kerekítése 5%-ra"
+          "round_brightness_to_5": "Fényerő kerekítése 5%-ra",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Az ezen a küszöbön vagy alatta lévő áram OFF állapotnak számít.",
           "modes": "Először tanítsa meg az integrációnak az új lámpa fényerőmódjait. A lámpa fizikai gombjával válassza ki az egyes szinteket, és adja hozzá őket lent, például High, Medium, Low és Dim.",
           "current_sensor": "Itt csak a kiválasztott okoskonnektorhoz tartozó áramérzékelők érhetők el.",
           "power_cycle_delay": "Általában nincs szükség további késleltetésre. Ha a saját gombjával kikapcsolt lámpa nem kapcsol be a Home Assistantból, állítson be kis késleltetést, például 0,7 s-ot.",
-          "current_stability_samples": "A fényerőmód váltása előtt ugyanazt az új áramértéket ennyiszer kell egymás után jelenteni. Az ON/OFF azonnal érvényesül. A 0 kikapcsolja a szűrőt; az alapérték 2.",
-          "round_brightness_to_5": "A számított fényerőt a legközelebbi 5%-ra kerekíti. Kapcsolja ki egész százalékok használatához 5%-os lépések nélkül."
+          "round_brightness_to_5": "A számított fényerőt a legközelebbi 5%-ra kerekíti. Kapcsolja ki egész százalékok használatához 5%-os lépések nélkül.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Fény neve",
           "current_sensor": "Áramérzékelő",
-          "off_current_threshold": "OFF áramküszöb",
           "power_cycle_delay": "Áramciklus késleltetése",
           "modes": "Fényerőmódok",
-          "current_stability_samples": "Áramstabilitási szűrő",
-          "round_brightness_to_5": "Fényerő kerekítése 5%-ra"
+          "round_brightness_to_5": "Fényerő kerekítése 5%-ra",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Az ezen a küszöbön vagy alatta lévő áram OFF állapotnak számít.",
           "modes": "Először tanítsa meg az integrációnak az új lámpa fényerőmódjait. A lámpa fizikai gombjával válassza ki az egyes szinteket, és adja hozzá őket lent, például High, Medium, Low és Dim.",
           "current_sensor": "Itt csak a kiválasztott okoskonnektorhoz tartozó áramérzékelők érhetők el.",
           "power_cycle_delay": "Általában nincs szükség további késleltetésre. Ha a saját gombjával kikapcsolt lámpa nem kapcsol be a Home Assistantból, állítson be kis késleltetést, például 0,7 s-ot.",
-          "current_stability_samples": "A fényerőmód váltása előtt ugyanazt az új áramértéket ennyiszer kell egymás után jelenteni. Az ON/OFF azonnal érvényesül. A 0 kikapcsolja a szűrőt; az alapérték 2.",
-          "round_brightness_to_5": "A számított fényerőt a legközelebbi 5%-ra kerekíti. Kapcsolja ki egész százalékok használatához 5%-os lépések nélkül."
+          "round_brightness_to_5": "A számított fényerőt a legközelebbi 5%-ra kerekíti. Kapcsolja ki egész százalékok használatához 5%-os lépések nélkül.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

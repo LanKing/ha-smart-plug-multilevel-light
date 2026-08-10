@@ -14,19 +14,17 @@
         "data": {
           "name": "Όνομα φωτός",
           "current_sensor": "Αισθητήρας ρεύματος",
-          "off_current_threshold": "Όριο ρεύματος OFF",
           "power_cycle_delay": "Καθυστέρηση επανεκκίνησης τροφοδοσίας",
           "modes": "Λειτουργίες φωτεινότητας",
-          "current_stability_samples": "Φίλτρο σταθερότητας ρεύματος",
-          "round_brightness_to_5": "Στρογγυλοποίηση φωτεινότητας στο 5%"
+          "round_brightness_to_5": "Στρογγυλοποίηση φωτεινότητας στο 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Ρεύμα ίσο ή χαμηλότερο από αυτό το όριο θεωρείται OFF.",
           "modes": "Πρώτα εκπαιδεύστε την ενσωμάτωση στις λειτουργίες φωτεινότητας της νέας λάμπας. Με το φυσικό κουμπί της λάμπας επιλέξτε κάθε επίπεδο και προσθέστε το παρακάτω, π.χ. High, Medium, Low και Dim.",
           "current_sensor": "Εδώ είναι διαθέσιμοι μόνο οι αισθητήρες ρεύματος που ανήκουν στην επιλεγμένη έξυπνη πρίζα.",
           "power_cycle_delay": "Συνήθως δεν χρειάζεται πρόσθετη καθυστέρηση. Αν μια λάμπα που έκλεισε από το δικό της κουμπί δεν ανάβει από το Home Assistant, ορίστε μια μικρή καθυστέρηση, π.χ. 0,7 s.",
-          "current_stability_samples": "Απαιτεί η ίδια νέα τιμή ρεύματος να αναφερθεί τόσες φορές διαδοχικά πριν αλλάξει η λειτουργία φωτεινότητας. Τα ON/OFF εφαρμόζονται αμέσως. Το 0 απενεργοποιεί το φίλτρο· προεπιλογή 2.",
-          "round_brightness_to_5": "Στρογγυλοποιεί την υπολογισμένη φωτεινότητα στο πλησιέστερο 5%. Απενεργοποιήστε το για ακέραια ποσοστά χωρίς βήματα 5%."
+          "round_brightness_to_5": "Στρογγυλοποιεί την υπολογισμένη φωτεινότητα στο πλησιέστερο 5%. Απενεργοποιήστε το για ακέραια ποσοστά χωρίς βήματα 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Όνομα φωτός",
           "current_sensor": "Αισθητήρας ρεύματος",
-          "off_current_threshold": "Όριο ρεύματος OFF",
           "power_cycle_delay": "Καθυστέρηση επανεκκίνησης τροφοδοσίας",
           "modes": "Λειτουργίες φωτεινότητας",
-          "current_stability_samples": "Φίλτρο σταθερότητας ρεύματος",
-          "round_brightness_to_5": "Στρογγυλοποίηση φωτεινότητας στο 5%"
+          "round_brightness_to_5": "Στρογγυλοποίηση φωτεινότητας στο 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Ρεύμα ίσο ή χαμηλότερο από αυτό το όριο θεωρείται OFF.",
           "modes": "Πρώτα εκπαιδεύστε την ενσωμάτωση στις λειτουργίες φωτεινότητας της νέας λάμπας. Με το φυσικό κουμπί της λάμπας επιλέξτε κάθε επίπεδο και προσθέστε το παρακάτω, π.χ. High, Medium, Low και Dim.",
           "current_sensor": "Εδώ είναι διαθέσιμοι μόνο οι αισθητήρες ρεύματος που ανήκουν στην επιλεγμένη έξυπνη πρίζα.",
           "power_cycle_delay": "Συνήθως δεν χρειάζεται πρόσθετη καθυστέρηση. Αν μια λάμπα που έκλεισε από το δικό της κουμπί δεν ανάβει από το Home Assistant, ορίστε μια μικρή καθυστέρηση, π.χ. 0,7 s.",
-          "current_stability_samples": "Απαιτεί η ίδια νέα τιμή ρεύματος να αναφερθεί τόσες φορές διαδοχικά πριν αλλάξει η λειτουργία φωτεινότητας. Τα ON/OFF εφαρμόζονται αμέσως. Το 0 απενεργοποιεί το φίλτρο· προεπιλογή 2.",
-          "round_brightness_to_5": "Στρογγυλοποιεί την υπολογισμένη φωτεινότητα στο πλησιέστερο 5%. Απενεργοποιήστε το για ακέραια ποσοστά χωρίς βήματα 5%."
+          "round_brightness_to_5": "Στρογγυλοποιεί την υπολογισμένη φωτεινότητα στο πλησιέστερο 5%. Απενεργοποιήστε το για ακέραια ποσοστά χωρίς βήματα 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

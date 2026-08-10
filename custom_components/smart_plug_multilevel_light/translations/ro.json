@@ -14,19 +14,17 @@
         "data": {
           "name": "Numele luminii",
           "current_sensor": "Senzor de curent",
-          "off_current_threshold": "Prag de curent OFF",
           "power_cycle_delay": "Întârziere ciclu de alimentare",
           "modes": "Moduri de luminozitate",
-          "current_stability_samples": "Filtru de stabilitate a curentului",
-          "round_brightness_to_5": "Rotunjire luminozitate la 5%"
+          "round_brightness_to_5": "Rotunjire luminozitate la 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Curentul egal sau mai mic decât acest prag este considerat OFF.",
           "modes": "Mai întâi învățați integrarea modurile de luminozitate ale noii lămpi. Folosiți butonul fizic al lămpii pentru a selecta fiecare nivel și adăugați-l mai jos, de exemplu High, Medium, Low și Dim.",
           "current_sensor": "Aici sunt disponibili doar senzorii de curent care aparțin prizei inteligente selectate.",
           "power_cycle_delay": "De obicei nu este necesară nicio întârziere suplimentară. Dacă o lampă oprită cu propriul buton nu pornește din Home Assistant, setați o întârziere mică, de exemplu 0,7 s.",
-          "current_stability_samples": "Necesită ca aceeași valoare nouă a curentului să fie raportată de atâtea ori consecutiv înainte de schimbarea modului de luminozitate. ON/OFF se aplică imediat. 0 dezactivează filtrul; implicit este 2.",
-          "round_brightness_to_5": "Rotunjește luminozitatea calculată la cel mai apropiat 5%. Dezactivați pentru procente întregi fără pași de 5%."
+          "round_brightness_to_5": "Rotunjește luminozitatea calculată la cel mai apropiat 5%. Dezactivați pentru procente întregi fără pași de 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Numele luminii",
           "current_sensor": "Senzor de curent",
-          "off_current_threshold": "Prag de curent OFF",
           "power_cycle_delay": "Întârziere ciclu de alimentare",
           "modes": "Moduri de luminozitate",
-          "current_stability_samples": "Filtru de stabilitate a curentului",
-          "round_brightness_to_5": "Rotunjire luminozitate la 5%"
+          "round_brightness_to_5": "Rotunjire luminozitate la 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Curentul egal sau mai mic decât acest prag este considerat OFF.",
           "modes": "Mai întâi învățați integrarea modurile de luminozitate ale noii lămpi. Folosiți butonul fizic al lămpii pentru a selecta fiecare nivel și adăugați-l mai jos, de exemplu High, Medium, Low și Dim.",
           "current_sensor": "Aici sunt disponibili doar senzorii de curent care aparțin prizei inteligente selectate.",
           "power_cycle_delay": "De obicei nu este necesară nicio întârziere suplimentară. Dacă o lampă oprită cu propriul buton nu pornește din Home Assistant, setați o întârziere mică, de exemplu 0,7 s.",
-          "current_stability_samples": "Necesită ca aceeași valoare nouă a curentului să fie raportată de atâtea ori consecutiv înainte de schimbarea modului de luminozitate. ON/OFF se aplică imediat. 0 dezactivează filtrul; implicit este 2.",
-          "round_brightness_to_5": "Rotunjește luminozitatea calculată la cel mai apropiat 5%. Dezactivați pentru procente întregi fără pași de 5%."
+          "round_brightness_to_5": "Rotunjește luminozitatea calculată la cel mai apropiat 5%. Dezactivați pentru procente întregi fără pași de 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

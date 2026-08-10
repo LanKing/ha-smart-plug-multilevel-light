@@ -14,19 +14,17 @@
         "data": {
           "name": "灯光名称",
           "current_sensor": "电流传感器",
-          "off_current_threshold": "OFF 电流阈值",
           "power_cycle_delay": "电源循环延迟",
           "modes": "亮度模式",
-          "current_stability_samples": "电流稳定性过滤器",
-          "round_brightness_to_5": "亮度按5%取整"
+          "round_brightness_to_5": "亮度按5%取整",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "电流等于或低于此阈值时视为 OFF。",
           "modes": "对于新灯具，请先让集成学习其亮度模式。使用灯具上的实体按钮依次选择每个亮度级别并在下方添加，例如 High、Medium、Low 和 Dim。",
           "current_sensor": "此处仅提供属于所选智能插座的电流传感器。",
           "power_cycle_delay": "通常不需要额外延迟。如果使用灯具自身按钮关闭后无法从 Home Assistant 开启，请设置一个较短的延迟，例如 0.7 s。",
-          "current_stability_samples": "在更改检测到的亮度模式前，要求同一个新的电流值连续报告指定次数。ON/OFF 始终立即生效。0 表示禁用过滤器；默认值为 2。",
-          "round_brightness_to_5": "将计算出的亮度舍入到最接近的5%。关闭后可使用不按5%步进的整数百分比。"
+          "round_brightness_to_5": "将计算出的亮度舍入到最接近的5%。关闭后可使用不按5%步进的整数百分比。",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "灯光名称",
           "current_sensor": "电流传感器",
-          "off_current_threshold": "OFF 电流阈值",
           "power_cycle_delay": "电源循环延迟",
           "modes": "亮度模式",
-          "current_stability_samples": "电流稳定性过滤器",
-          "round_brightness_to_5": "亮度按5%取整"
+          "round_brightness_to_5": "亮度按5%取整",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "电流等于或低于此阈值时视为 OFF。",
           "modes": "对于新灯具，请先让集成学习其亮度模式。使用灯具上的实体按钮依次选择每个亮度级别并在下方添加，例如 High、Medium、Low 和 Dim。",
           "current_sensor": "此处仅提供属于所选智能插座的电流传感器。",
           "power_cycle_delay": "通常不需要额外延迟。如果使用灯具自身按钮关闭后无法从 Home Assistant 开启，请设置一个较短的延迟，例如 0.7 s。",
-          "current_stability_samples": "在更改检测到的亮度模式前，要求同一个新的电流值连续报告指定次数。ON/OFF 始终立即生效。0 表示禁用过滤器；默认值为 2。",
-          "round_brightness_to_5": "将计算出的亮度舍入到最接近的5%。关闭后可使用不按5%步进的整数百分比。"
+          "round_brightness_to_5": "将计算出的亮度舍入到最接近的5%。关闭后可使用不按5%步进的整数百分比。",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

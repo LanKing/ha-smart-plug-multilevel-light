@@ -14,19 +14,17 @@
         "data": {
           "name": "Ljochtnamme",
           "current_sensor": "Stroomsensor",
-          "off_current_threshold": "OFF-stroomdrompel",
           "power_cycle_delay": "Fertraging by stroomsyklus",
           "modes": "Helderheidsmodi",
-          "current_stability_samples": "Filter foar stroomstabiliteit",
-          "round_brightness_to_5": "Helderheid ôfrûnje op 5%"
+          "round_brightness_to_5": "Helderheid ôfrûnje op 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Stroom op of ûnder dizze drompel wurdt as OFF beskôge.",
           "modes": "Lear de yntegraasje earst de helderheidsmodi fan de nije lampe. Selektearje mei de fysike knop op de lampe elk nivo en foegje it hjirûnder ta, bygelyks High, Medium, Low en Dim.",
           "current_sensor": "Hjir binne allinnich stroomsensors beskikber dy't by de selektearre smartstekker hearre.",
           "power_cycle_delay": "Meastal is gjin ekstra fertraging nedich. As in lampe dy't mei de eigen knop útset is net oangiet fanút Home Assistant, stel dan in lytse fertraging yn, bygelyks 0,7 s.",
-          "current_stability_samples": "Fereasket dat deselde nije stroomwearde dit oantal kearen efterinoar rapportearre wurdt foardat de helderheidsmodus feroaret. ON/OFF wurdt daliks tapast. 0 skeakelt it filter út; standert is 2.",
-          "round_brightness_to_5": "Rûnet de berekkene helderheid ôf op de tichtstbye 5%. Skeakelje út foar hiele persintaazjes sûnder stappen fan 5%."
+          "round_brightness_to_5": "Rûnet de berekkene helderheid ôf op de tichtstbye 5%. Skeakelje út foar hiele persintaazjes sûnder stappen fan 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Ljochtnamme",
           "current_sensor": "Stroomsensor",
-          "off_current_threshold": "OFF-stroomdrompel",
           "power_cycle_delay": "Fertraging by stroomsyklus",
           "modes": "Helderheidsmodi",
-          "current_stability_samples": "Filter foar stroomstabiliteit",
-          "round_brightness_to_5": "Helderheid ôfrûnje op 5%"
+          "round_brightness_to_5": "Helderheid ôfrûnje op 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Stroom op of ûnder dizze drompel wurdt as OFF beskôge.",
           "modes": "Lear de yntegraasje earst de helderheidsmodi fan de nije lampe. Selektearje mei de fysike knop op de lampe elk nivo en foegje it hjirûnder ta, bygelyks High, Medium, Low en Dim.",
           "current_sensor": "Hjir binne allinnich stroomsensors beskikber dy't by de selektearre smartstekker hearre.",
           "power_cycle_delay": "Meastal is gjin ekstra fertraging nedich. As in lampe dy't mei de eigen knop útset is net oangiet fanút Home Assistant, stel dan in lytse fertraging yn, bygelyks 0,7 s.",
-          "current_stability_samples": "Fereasket dat deselde nije stroomwearde dit oantal kearen efterinoar rapportearre wurdt foardat de helderheidsmodus feroaret. ON/OFF wurdt daliks tapast. 0 skeakelt it filter út; standert is 2.",
-          "round_brightness_to_5": "Rûnet de berekkene helderheid ôf op de tichtstbye 5%. Skeakelje út foar hiele persintaazjes sûnder stappen fan 5%."
+          "round_brightness_to_5": "Rûnet de berekkene helderheid ôf op de tichtstbye 5%. Skeakelje út foar hiele persintaazjes sûnder stappen fan 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

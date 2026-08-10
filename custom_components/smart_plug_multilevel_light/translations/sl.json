@@ -14,19 +14,17 @@
         "data": {
           "name": "Ime luči",
           "current_sensor": "Senzor toka",
-          "off_current_threshold": "Prag toka OFF",
           "power_cycle_delay": "Zakasnitev cikla napajanja",
           "modes": "Načini svetlosti",
-          "current_stability_samples": "Filter stabilnosti toka",
-          "round_brightness_to_5": "Zaokroži svetlost na 5%"
+          "round_brightness_to_5": "Zaokroži svetlost na 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Tok na tem pragu ali pod njim se šteje kot OFF.",
           "modes": "Najprej integracijo naučite načine svetlosti nove svetilke. S fizičnim gumbom na svetilki izberite vsako raven in jo dodajte spodaj, na primer High, Medium, Low in Dim.",
           "current_sensor": "Tukaj so na voljo samo senzorji toka, ki pripadajo izbrani pametni vtičnici.",
           "power_cycle_delay": "Običajno dodatna zakasnitev ni potrebna. Če se svetilka, izklopljena z lastnim gumbom, ne vklopi iz Home Assistanta, nastavite majhno zakasnitev, na primer 0,7 s.",
-          "current_stability_samples": "Pred spremembo načina svetlosti mora biti ista nova vrednost toka sporočena tolikokrat zapored. ON/OFF se uporabi takoj. 0 izklopi filter; privzeto je 2.",
-          "round_brightness_to_5": "Zaokroži izračunano svetlost na najbližjih 5%. Izklopite za cele odstotke brez korakov po 5%."
+          "round_brightness_to_5": "Zaokroži izračunano svetlost na najbližjih 5%. Izklopite za cele odstotke brez korakov po 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Ime luči",
           "current_sensor": "Senzor toka",
-          "off_current_threshold": "Prag toka OFF",
           "power_cycle_delay": "Zakasnitev cikla napajanja",
           "modes": "Načini svetlosti",
-          "current_stability_samples": "Filter stabilnosti toka",
-          "round_brightness_to_5": "Zaokroži svetlost na 5%"
+          "round_brightness_to_5": "Zaokroži svetlost na 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Tok na tem pragu ali pod njim se šteje kot OFF.",
           "modes": "Najprej integracijo naučite načine svetlosti nove svetilke. S fizičnim gumbom na svetilki izberite vsako raven in jo dodajte spodaj, na primer High, Medium, Low in Dim.",
           "current_sensor": "Tukaj so na voljo samo senzorji toka, ki pripadajo izbrani pametni vtičnici.",
           "power_cycle_delay": "Običajno dodatna zakasnitev ni potrebna. Če se svetilka, izklopljena z lastnim gumbom, ne vklopi iz Home Assistanta, nastavite majhno zakasnitev, na primer 0,7 s.",
-          "current_stability_samples": "Pred spremembo načina svetlosti mora biti ista nova vrednost toka sporočena tolikokrat zapored. ON/OFF se uporabi takoj. 0 izklopi filter; privzeto je 2.",
-          "round_brightness_to_5": "Zaokroži izračunano svetlost na najbližjih 5%. Izklopite za cele odstotke brez korakov po 5%."
+          "round_brightness_to_5": "Zaokroži izračunano svetlost na najbližjih 5%. Izklopite za cele odstotke brez korakov po 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

@@ -14,19 +14,17 @@
         "data": {
           "name": "Назив светла",
           "current_sensor": "Сензор струје",
-          "off_current_threshold": "Праг струје за OFF",
           "power_cycle_delay": "Кашњење циклуса напајања",
           "modes": "Режими осветљености",
-          "current_stability_samples": "Филтер стабилности струје",
-          "round_brightness_to_5": "Заокружи осветљеност на 5%"
+          "round_brightness_to_5": "Заокружи осветљеност на 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Струја на или испод овог прага сматра се OFF.",
           "modes": "Прво научите интеграцију режимима осветљености нове лампе. Физичким дугметом на лампи изаберите сваки ниво и додајте га испод, на пример High, Medium, Low и Dim.",
           "current_sensor": "Овде су доступни само сензори струје који припадају изабраној паметној утичници.",
           "power_cycle_delay": "Обично није потребно додатно кашњење. Ако се лампа угашена сопственим дугметом не укључи из Home Assistant-а, подесите мало кашњење, на пример 0,7 s.",
-          "current_stability_samples": "Захтева да иста нова вредност струје буде пријављена оволико пута заредом пре промене режима осветљености. ON/OFF се примењују одмах. 0 искључује филтер; подразумевано је 2.",
-          "round_brightness_to_5": "Заокружује израчунату осветљеност на најближих 5%. Искључите за целе проценте без корака од 5%."
+          "round_brightness_to_5": "Заокружује израчунату осветљеност на најближих 5%. Искључите за целе проценте без корака од 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Назив светла",
           "current_sensor": "Сензор струје",
-          "off_current_threshold": "Праг струје за OFF",
           "power_cycle_delay": "Кашњење циклуса напајања",
           "modes": "Режими осветљености",
-          "current_stability_samples": "Филтер стабилности струје",
-          "round_brightness_to_5": "Заокружи осветљеност на 5%"
+          "round_brightness_to_5": "Заокружи осветљеност на 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Струја на или испод овог прага сматра се OFF.",
           "modes": "Прво научите интеграцију режимима осветљености нове лампе. Физичким дугметом на лампи изаберите сваки ниво и додајте га испод, на пример High, Medium, Low и Dim.",
           "current_sensor": "Овде су доступни само сензори струје који припадају изабраној паметној утичници.",
           "power_cycle_delay": "Обично није потребно додатно кашњење. Ако се лампа угашена сопственим дугметом не укључи из Home Assistant-а, подесите мало кашњење, на пример 0,7 s.",
-          "current_stability_samples": "Захтева да иста нова вредност струје буде пријављена оволико пута заредом пре промене режима осветљености. ON/OFF се примењују одмах. 0 искључује филтер; подразумевано је 2.",
-          "round_brightness_to_5": "Заокружује израчунату осветљеност на најближих 5%. Искључите за целе проценте без корака од 5%."
+          "round_brightness_to_5": "Заокружује израчунату осветљеност на најближих 5%. Искључите за целе проценте без корака од 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

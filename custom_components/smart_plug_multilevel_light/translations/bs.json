@@ -14,19 +14,17 @@
         "data": {
           "name": "Naziv svjetla",
           "current_sensor": "Senzor struje",
-          "off_current_threshold": "Prag struje za OFF",
           "power_cycle_delay": "Kašnjenje ponovnog napajanja",
           "modes": "Režimi svjetline",
-          "current_stability_samples": "Filter stabilnosti struje",
-          "round_brightness_to_5": "Zaokruži svjetlinu na 5%"
+          "round_brightness_to_5": "Zaokruži svjetlinu na 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Struja na ili ispod ovog praga smatra se OFF.",
           "modes": "Najprije naučite integraciju režimima svjetline nove lampe. Fizičkim dugmetom na lampi odaberite svaki nivo i dodajte ga ispod, na primjer High, Medium, Low i Dim.",
           "current_sensor": "Ovdje su dostupni samo senzori struje koji pripadaju odabranoj pametnoj utičnici.",
           "power_cycle_delay": "Obično nije potrebno dodatno kašnjenje. Ako se lampa ugašena vlastitim dugmetom ne uključi iz Home Assistanta, postavite malo kašnjenje, na primjer 0,7 s.",
-          "current_stability_samples": "Za promjenu režima svjetline ista nova vrijednost struje mora biti prijavljena ovoliko puta zaredom. ON/OFF se primjenjuju odmah. 0 isključuje filter; zadano je 2.",
-          "round_brightness_to_5": "Zaokružuje izračunatu svjetlinu na najbližih 5%. Isključite za cijele procente bez koraka od 5%."
+          "round_brightness_to_5": "Zaokružuje izračunatu svjetlinu na najbližih 5%. Isključite za cijele procente bez koraka od 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Naziv svjetla",
           "current_sensor": "Senzor struje",
-          "off_current_threshold": "Prag struje za OFF",
           "power_cycle_delay": "Kašnjenje ponovnog napajanja",
           "modes": "Režimi svjetline",
-          "current_stability_samples": "Filter stabilnosti struje",
-          "round_brightness_to_5": "Zaokruži svjetlinu na 5%"
+          "round_brightness_to_5": "Zaokruži svjetlinu na 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Struja na ili ispod ovog praga smatra se OFF.",
           "modes": "Najprije naučite integraciju režimima svjetline nove lampe. Fizičkim dugmetom na lampi odaberite svaki nivo i dodajte ga ispod, na primjer High, Medium, Low i Dim.",
           "current_sensor": "Ovdje su dostupni samo senzori struje koji pripadaju odabranoj pametnoj utičnici.",
           "power_cycle_delay": "Obično nije potrebno dodatno kašnjenje. Ako se lampa ugašena vlastitim dugmetom ne uključi iz Home Assistanta, postavite malo kašnjenje, na primjer 0,7 s.",
-          "current_stability_samples": "Za promjenu režima svjetline ista nova vrijednost struje mora biti prijavljena ovoliko puta zaredom. ON/OFF se primjenjuju odmah. 0 isključuje filter; zadano je 2.",
-          "round_brightness_to_5": "Zaokružuje izračunatu svjetlinu na najbližih 5%. Isključite za cijele procente bez koraka od 5%."
+          "round_brightness_to_5": "Zaokružuje izračunatu svjetlinu na najbližih 5%. Isključite za cijele procente bez koraka od 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

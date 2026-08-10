@@ -14,19 +14,17 @@
         "data": {
           "name": "Nom de la llum",
           "current_sensor": "Sensor de corrent",
-          "off_current_threshold": "Llindar de corrent OFF",
           "power_cycle_delay": "Retard del cicle d'alimentació",
           "modes": "Modes de brillantor",
-          "current_stability_samples": "Filtre d'estabilitat del corrent",
-          "round_brightness_to_5": "Arrodoneix la brillantor al 5%"
+          "round_brightness_to_5": "Arrodoneix la brillantor al 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "El corrent igual o inferior a aquest llindar es considera OFF.",
           "modes": "Primer ensenyeu a la integració els modes de brillantor del llum nou. Amb el botó físic del llum, seleccioneu cada nivell i afegiu-lo a continuació, per exemple High, Medium, Low i Dim.",
           "current_sensor": "Aquí només estan disponibles els sensors de corrent que pertanyen a l'endoll intel·ligent seleccionat.",
           "power_cycle_delay": "Normalment no cal cap retard addicional. Si un llum apagat amb el seu propi botó no s'encén des de Home Assistant, definiu un petit retard, per exemple 0,7 s.",
-          "current_stability_samples": "Exigeix que el mateix valor de corrent nou es notifiqui aquest nombre de vegades seguides abans de canviar el mode de brillantor. ON/OFF s'apliquen immediatament. 0 desactiva el filtre; el valor per defecte és 2.",
-          "round_brightness_to_5": "Arrodoneix la brillantor calculada al 5% més proper. Desactiveu-ho per utilitzar percentatges enters sense passos del 5%."
+          "round_brightness_to_5": "Arrodoneix la brillantor calculada al 5% més proper. Desactiveu-ho per utilitzar percentatges enters sense passos del 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Nom de la llum",
           "current_sensor": "Sensor de corrent",
-          "off_current_threshold": "Llindar de corrent OFF",
           "power_cycle_delay": "Retard del cicle d'alimentació",
           "modes": "Modes de brillantor",
-          "current_stability_samples": "Filtre d'estabilitat del corrent",
-          "round_brightness_to_5": "Arrodoneix la brillantor al 5%"
+          "round_brightness_to_5": "Arrodoneix la brillantor al 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "El corrent igual o inferior a aquest llindar es considera OFF.",
           "modes": "Primer ensenyeu a la integració els modes de brillantor del llum nou. Amb el botó físic del llum, seleccioneu cada nivell i afegiu-lo a continuació, per exemple High, Medium, Low i Dim.",
           "current_sensor": "Aquí només estan disponibles els sensors de corrent que pertanyen a l'endoll intel·ligent seleccionat.",
           "power_cycle_delay": "Normalment no cal cap retard addicional. Si un llum apagat amb el seu propi botó no s'encén des de Home Assistant, definiu un petit retard, per exemple 0,7 s.",
-          "current_stability_samples": "Exigeix que el mateix valor de corrent nou es notifiqui aquest nombre de vegades seguides abans de canviar el mode de brillantor. ON/OFF s'apliquen immediatament. 0 desactiva el filtre; el valor per defecte és 2.",
-          "round_brightness_to_5": "Arrodoneix la brillantor calculada al 5% més proper. Desactiveu-ho per utilitzar percentatges enters sense passos del 5%."
+          "round_brightness_to_5": "Arrodoneix la brillantor calculada al 5% més proper. Desactiveu-ho per utilitzar percentatges enters sense passos del 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

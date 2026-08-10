@@ -14,19 +14,17 @@
         "data": {
           "name": "Nazwa światła",
           "current_sensor": "Czujnik prądu",
-          "off_current_threshold": "Próg prądu OFF",
           "power_cycle_delay": "Opóźnienie cyklu zasilania",
           "modes": "Tryby jasności",
-          "current_stability_samples": "Filtr stabilności prądu",
-          "round_brightness_to_5": "Zaokrąglaj jasność do 5%"
+          "round_brightness_to_5": "Zaokrąglaj jasność do 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Prąd równy lub niższy od tego progu jest traktowany jako OFF.",
           "modes": "Najpierw naucz integrację trybów jasności nowej lampy. Fizycznym przyciskiem na lampie wybierz każdy poziom i dodaj go poniżej, np. High, Medium, Low i Dim.",
           "current_sensor": "Tutaj dostępne są tylko czujniki prądu należące do wybranego inteligentnego gniazdka.",
           "power_cycle_delay": "Zwykle dodatkowe opóźnienie nie jest potrzebne. Jeśli lampa wyłączona własnym przyciskiem nie włącza się z Home Assistant, ustaw niewielkie opóźnienie, np. 0,7 s.",
-          "current_stability_samples": "Wymaga, aby ta sama nowa wartość prądu została zgłoszona tyle razy z rzędu przed zmianą wykrytego trybu jasności. ON/OFF są stosowane natychmiast. 0 wyłącza filtr; domyślnie 2.",
-          "round_brightness_to_5": "Zaokrągla obliczoną jasność do najbliższych 5%. Wyłącz, aby używać pełnych procentów bez kroków co 5%."
+          "round_brightness_to_5": "Zaokrągla obliczoną jasność do najbliższych 5%. Wyłącz, aby używać pełnych procentów bez kroków co 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Nazwa światła",
           "current_sensor": "Czujnik prądu",
-          "off_current_threshold": "Próg prądu OFF",
           "power_cycle_delay": "Opóźnienie cyklu zasilania",
           "modes": "Tryby jasności",
-          "current_stability_samples": "Filtr stabilności prądu",
-          "round_brightness_to_5": "Zaokrąglaj jasność do 5%"
+          "round_brightness_to_5": "Zaokrąglaj jasność do 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Prąd równy lub niższy od tego progu jest traktowany jako OFF.",
           "modes": "Najpierw naucz integrację trybów jasności nowej lampy. Fizycznym przyciskiem na lampie wybierz każdy poziom i dodaj go poniżej, np. High, Medium, Low i Dim.",
           "current_sensor": "Tutaj dostępne są tylko czujniki prądu należące do wybranego inteligentnego gniazdka.",
           "power_cycle_delay": "Zwykle dodatkowe opóźnienie nie jest potrzebne. Jeśli lampa wyłączona własnym przyciskiem nie włącza się z Home Assistant, ustaw niewielkie opóźnienie, np. 0,7 s.",
-          "current_stability_samples": "Wymaga, aby ta sama nowa wartość prądu została zgłoszona tyle razy z rzędu przed zmianą wykrytego trybu jasności. ON/OFF są stosowane natychmiast. 0 wyłącza filtr; domyślnie 2.",
-          "round_brightness_to_5": "Zaokrągla obliczoną jasność do najbliższych 5%. Wyłącz, aby używać pełnych procentów bez kroków co 5%."
+          "round_brightness_to_5": "Zaokrągla obliczoną jasność do najbliższych 5%. Wyłącz, aby używać pełnych procentów bez kroków co 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

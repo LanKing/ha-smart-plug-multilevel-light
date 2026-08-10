@@ -14,19 +14,17 @@
         "data": {
           "name": "ნათურის სახელი",
           "current_sensor": "დენის სენსორი",
-          "off_current_threshold": "OFF დენის ზღვარი",
           "power_cycle_delay": "კვების ციკლის დაყოვნება",
           "modes": "სიკაშკაშის რეჟიმები",
-          "current_stability_samples": "დენის სტაბილურობის ფილტრი",
-          "round_brightness_to_5": "სიკაშკაშის დამრგვალება 5%-მდე"
+          "round_brightness_to_5": "სიკაშკაშის დამრგვალება 5%-მდე",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "ამ ზღვარზე ან მის ქვემოთ დენი ითვლება OFF მდგომარეობად.",
           "modes": "ჯერ ინტეგრაციას ასწავლეთ ახალი ნათურის სიკაშკაშის რეჟიმები. ნათურის ფიზიკური ღილაკით აირჩიეთ თითოეული დონე და დაამატეთ ქვემოთ, მაგალითად High, Medium, Low და Dim.",
           "current_sensor": "აქ ხელმისაწვდომია მხოლოდ არჩეულ ჭკვიან როზეტთან დაკავშირებული დენის სენსორები.",
           "power_cycle_delay": "ჩვეულებრივ დამატებითი დაყოვნება საჭირო არ არის. თუ საკუთარი ღილაკით გამორთული ნათურა Home Assistant-იდან არ ირთვება, დააყენეთ მცირე დაყოვნება, მაგალითად 0,7 s.",
-          "current_stability_samples": "სიკაშკაშის რეჟიმის შეცვლამდე იგივე ახალი დენის მნიშვნელობა ზედიზედ ამდენჯერ უნდა დაფიქსირდეს. ON/OFF დაუყოვნებლივ გამოიყენება. 0 თიშავს ფილტრს; ნაგულისხმევია 2.",
-          "round_brightness_to_5": "გამოთვლილ სიკაშკაშეს უახლოეს 5%-მდე ამრგვალებს. გამორთეთ მთელი პროცენტების გამოსაყენებლად 5%-იანი ნაბიჯების გარეშე."
+          "round_brightness_to_5": "გამოთვლილ სიკაშკაშეს უახლოეს 5%-მდე ამრგვალებს. გამორთეთ მთელი პროცენტების გამოსაყენებლად 5%-იანი ნაბიჯების გარეშე.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "ნათურის სახელი",
           "current_sensor": "დენის სენსორი",
-          "off_current_threshold": "OFF დენის ზღვარი",
           "power_cycle_delay": "კვების ციკლის დაყოვნება",
           "modes": "სიკაშკაშის რეჟიმები",
-          "current_stability_samples": "დენის სტაბილურობის ფილტრი",
-          "round_brightness_to_5": "სიკაშკაშის დამრგვალება 5%-მდე"
+          "round_brightness_to_5": "სიკაშკაშის დამრგვალება 5%-მდე",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "ამ ზღვარზე ან მის ქვემოთ დენი ითვლება OFF მდგომარეობად.",
           "modes": "ჯერ ინტეგრაციას ასწავლეთ ახალი ნათურის სიკაშკაშის რეჟიმები. ნათურის ფიზიკური ღილაკით აირჩიეთ თითოეული დონე და დაამატეთ ქვემოთ, მაგალითად High, Medium, Low და Dim.",
           "current_sensor": "აქ ხელმისაწვდომია მხოლოდ არჩეულ ჭკვიან როზეტთან დაკავშირებული დენის სენსორები.",
           "power_cycle_delay": "ჩვეულებრივ დამატებითი დაყოვნება საჭირო არ არის. თუ საკუთარი ღილაკით გამორთული ნათურა Home Assistant-იდან არ ირთვება, დააყენეთ მცირე დაყოვნება, მაგალითად 0,7 s.",
-          "current_stability_samples": "სიკაშკაშის რეჟიმის შეცვლამდე იგივე ახალი დენის მნიშვნელობა ზედიზედ ამდენჯერ უნდა დაფიქსირდეს. ON/OFF დაუყოვნებლივ გამოიყენება. 0 თიშავს ფილტრს; ნაგულისხმევია 2.",
-          "round_brightness_to_5": "გამოთვლილ სიკაშკაშეს უახლოეს 5%-მდე ამრგვალებს. გამორთეთ მთელი პროცენტების გამოსაყენებლად 5%-იანი ნაბიჯების გარეშე."
+          "round_brightness_to_5": "გამოთვლილ სიკაშკაშეს უახლოეს 5%-მდე ამრგვალებს. გამორთეთ მთელი პროცენტების გამოსაყენებლად 5%-იანი ნაბიჯების გარეშე.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

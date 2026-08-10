@@ -14,19 +14,17 @@
         "data": {
           "name": "లైట్ పేరు",
           "current_sensor": "కరెంట్ సెన్సర్",
-          "off_current_threshold": "OFF కరెంట్ పరిమితి",
           "power_cycle_delay": "పవర్ సైకిల్ ఆలస్యం",
           "modes": "ప్రకాశ మోడ్‌లు",
-          "current_stability_samples": "కరెంట్ స్థిరత్వ ఫిల్టర్",
-          "round_brightness_to_5": "బ్రైట్‌నెస్‌ను 5%కు రౌండ్ చేయి"
+          "round_brightness_to_5": "బ్రైట్‌నెస్‌ను 5%కు రౌండ్ చేయి",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "ఈ పరిమితి వద్ద లేదా దిగువ కరెంట్ OFFగా పరిగణించబడుతుంది.",
           "modes": "ముందుగా కొత్త ల్యాంప్ బ్రైట్‌నెస్ మోడ్‌లను ఇంటిగ్రేషన్‌కు నేర్పండి. ల్యాంప్‌పై ఉన్న భౌతిక బటన్‌తో ప్రతి స్థాయిని ఎంచుకుని క్రింద జోడించండి, ఉదాహరణకు High, Medium, Low, Dim.",
           "current_sensor": "ఇక్కడ ఎంచుకున్న స్మార్ట్ ప్లగ్‌కు చెందిన కరెంట్ సెన్సర్లు మాత్రమే అందుబాటులో ఉంటాయి.",
           "power_cycle_delay": "సాధారణంగా అదనపు ఆలస్యం అవసరం లేదు. తన బటన్‌తో ఆఫ్ చేసిన ల్యాంప్ Home Assistant నుండి ఆన్ కాకపోతే 0.7 s వంటి చిన్న ఆలస్యం సెట్ చేయండి.",
-          "current_stability_samples": "బ్రైట్‌నెస్ మోడ్ మార్చే ముందు అదే కొత్త కరెంట్ విలువ వరుసగా ఇన్ని సార్లు రిపోర్ట్ కావాలి. ON/OFF వెంటనే అమలవుతాయి. 0 ఫిల్టర్‌ను ఆపుతుంది; డిఫాల్ట్ 2.",
-          "round_brightness_to_5": "లెక్కించిన బ్రైట్‌నెస్‌ను సమీప 5%కు రౌండ్ చేస్తుంది. 5% దశలు లేకుండా పూర్తి శాతాలను ఉపయోగించడానికి దీన్ని ఆఫ్ చేయండి."
+          "round_brightness_to_5": "లెక్కించిన బ్రైట్‌నెస్‌ను సమీప 5%కు రౌండ్ చేస్తుంది. 5% దశలు లేకుండా పూర్తి శాతాలను ఉపయోగించడానికి దీన్ని ఆఫ్ చేయండి.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "లైట్ పేరు",
           "current_sensor": "కరెంట్ సెన్సర్",
-          "off_current_threshold": "OFF కరెంట్ పరిమితి",
           "power_cycle_delay": "పవర్ సైకిల్ ఆలస్యం",
           "modes": "ప్రకాశ మోడ్‌లు",
-          "current_stability_samples": "కరెంట్ స్థిరత్వ ఫిల్టర్",
-          "round_brightness_to_5": "బ్రైట్‌నెస్‌ను 5%కు రౌండ్ చేయి"
+          "round_brightness_to_5": "బ్రైట్‌నెస్‌ను 5%కు రౌండ్ చేయి",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "ఈ పరిమితి వద్ద లేదా దిగువ కరెంట్ OFFగా పరిగణించబడుతుంది.",
           "modes": "ముందుగా కొత్త ల్యాంప్ బ్రైట్‌నెస్ మోడ్‌లను ఇంటిగ్రేషన్‌కు నేర్పండి. ల్యాంప్‌పై ఉన్న భౌతిక బటన్‌తో ప్రతి స్థాయిని ఎంచుకుని క్రింద జోడించండి, ఉదాహరణకు High, Medium, Low, Dim.",
           "current_sensor": "ఇక్కడ ఎంచుకున్న స్మార్ట్ ప్లగ్‌కు చెందిన కరెంట్ సెన్సర్లు మాత్రమే అందుబాటులో ఉంటాయి.",
           "power_cycle_delay": "సాధారణంగా అదనపు ఆలస్యం అవసరం లేదు. తన బటన్‌తో ఆఫ్ చేసిన ల్యాంప్ Home Assistant నుండి ఆన్ కాకపోతే 0.7 s వంటి చిన్న ఆలస్యం సెట్ చేయండి.",
-          "current_stability_samples": "బ్రైట్‌నెస్ మోడ్ మార్చే ముందు అదే కొత్త కరెంట్ విలువ వరుసగా ఇన్ని సార్లు రిపోర్ట్ కావాలి. ON/OFF వెంటనే అమలవుతాయి. 0 ఫిల్టర్‌ను ఆపుతుంది; డిఫాల్ట్ 2.",
-          "round_brightness_to_5": "లెక్కించిన బ్రైట్‌నెస్‌ను సమీప 5%కు రౌండ్ చేస్తుంది. 5% దశలు లేకుండా పూర్తి శాతాలను ఉపయోగించడానికి దీన్ని ఆఫ్ చేయండి."
+          "round_brightness_to_5": "లెక్కించిన బ్రైట్‌నెస్‌ను సమీప 5%కు రౌండ్ చేస్తుంది. 5% దశలు లేకుండా పూర్తి శాతాలను ఉపయోగించడానికి దీన్ని ఆఫ్ చేయండి.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

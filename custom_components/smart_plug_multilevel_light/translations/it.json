@@ -14,19 +14,17 @@
         "data": {
           "name": "Nome della luce",
           "current_sensor": "Sensore di corrente",
-          "off_current_threshold": "Soglia di corrente OFF",
           "power_cycle_delay": "Ritardo ciclo alimentazione",
           "modes": "Modalità di luminosità",
-          "current_stability_samples": "Filtro stabilità corrente",
-          "round_brightness_to_5": "Arrotonda luminosità al 5%"
+          "round_brightness_to_5": "Arrotonda luminosità al 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "La corrente pari o inferiore a questa soglia è considerata OFF.",
           "modes": "Per prima cosa insegna all'integrazione le modalità di luminosità della nuova lampada. Usa il pulsante fisico della lampada per selezionare ogni livello e aggiungerlo qui sotto, ad esempio High, Medium, Low e Dim.",
           "current_sensor": "Qui sono disponibili solo i sensori di corrente appartenenti alla presa smart selezionata.",
           "power_cycle_delay": "Di solito non è necessario alcun ritardo aggiuntivo. Se una lampada spenta con il proprio pulsante non si accende da Home Assistant, imposta un piccolo ritardo, ad esempio 0,7 s.",
-          "current_stability_samples": "Richiede che lo stesso nuovo valore di corrente venga riportato questo numero di volte consecutive prima di cambiare la modalità di luminosità rilevata. ON/OFF vengono applicati immediatamente. 0 disattiva il filtro; il valore predefinito è 2.",
-          "round_brightness_to_5": "Arrotonda la luminosità calcolata al 5% più vicino. Disattiva per usare percentuali intere senza passi del 5%."
+          "round_brightness_to_5": "Arrotonda la luminosità calcolata al 5% più vicino. Disattiva per usare percentuali intere senza passi del 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Nome della luce",
           "current_sensor": "Sensore di corrente",
-          "off_current_threshold": "Soglia di corrente OFF",
           "power_cycle_delay": "Ritardo ciclo alimentazione",
           "modes": "Modalità di luminosità",
-          "current_stability_samples": "Filtro stabilità corrente",
-          "round_brightness_to_5": "Arrotonda luminosità al 5%"
+          "round_brightness_to_5": "Arrotonda luminosità al 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "La corrente pari o inferiore a questa soglia è considerata OFF.",
           "modes": "Per prima cosa insegna all'integrazione le modalità di luminosità della nuova lampada. Usa il pulsante fisico della lampada per selezionare ogni livello e aggiungerlo qui sotto, ad esempio High, Medium, Low e Dim.",
           "current_sensor": "Qui sono disponibili solo i sensori di corrente appartenenti alla presa smart selezionata.",
           "power_cycle_delay": "Di solito non è necessario alcun ritardo aggiuntivo. Se una lampada spenta con il proprio pulsante non si accende da Home Assistant, imposta un piccolo ritardo, ad esempio 0,7 s.",
-          "current_stability_samples": "Richiede che lo stesso nuovo valore di corrente venga riportato questo numero di volte consecutive prima di cambiare la modalità di luminosità rilevata. ON/OFF vengono applicati immediatamente. 0 disattiva il filtro; il valore predefinito è 2.",
-          "round_brightness_to_5": "Arrotonda la luminosità calcolata al 5% più vicino. Disattiva per usare percentuali intere senza passi del 5%."
+          "round_brightness_to_5": "Arrotonda la luminosità calcolata al 5% più vicino. Disattiva per usare percentuali intere senza passi del 5%.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

@@ -14,19 +14,17 @@
         "data": {
           "name": "Lysnavn",
           "current_sensor": "Strømsensor",
-          "off_current_threshold": "OFF-strømterskel",
           "power_cycle_delay": "Forsinkelse for strømsyklus",
           "modes": "Lysstyrkemoduser",
-          "current_stability_samples": "Filter for strømstabilitet",
-          "round_brightness_to_5": "Avrund lysstyrke til 5%"
+          "round_brightness_to_5": "Avrund lysstyrke til 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Strøm på eller under denne terskelen behandles som OFF.",
           "modes": "Lær først integrasjonen lysstyrkemodusene til den nye lampen. Bruk den fysiske knappen på lampen til å velge hvert nivå og legg det til nedenfor, for eksempel High, Medium, Low og Dim.",
           "current_sensor": "Bare strømsensorer som tilhører den valgte smartpluggen er tilgjengelige her.",
           "power_cycle_delay": "Vanligvis trengs ingen ekstra forsinkelse. Hvis en lampe som er slått av med sin egen knapp ikke slår seg på fra Home Assistant, sett en liten forsinkelse, for eksempel 0,7 s.",
-          "current_stability_samples": "Krever at den samme nye strømverdien rapporteres så mange ganger på rad før lysstyrkemodusen endres. ON/OFF brukes umiddelbart. 0 deaktiverer filteret; standard er 2.",
-          "round_brightness_to_5": "Avrunder beregnet lysstyrke til nærmeste 5 %. Deaktiver for å bruke hele prosenter uten trinn på 5 %."
+          "round_brightness_to_5": "Avrunder beregnet lysstyrke til nærmeste 5 %. Deaktiver for å bruke hele prosenter uten trinn på 5 %.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Lysnavn",
           "current_sensor": "Strømsensor",
-          "off_current_threshold": "OFF-strømterskel",
           "power_cycle_delay": "Forsinkelse for strømsyklus",
           "modes": "Lysstyrkemoduser",
-          "current_stability_samples": "Filter for strømstabilitet",
-          "round_brightness_to_5": "Avrund lysstyrke til 5%"
+          "round_brightness_to_5": "Avrund lysstyrke til 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Strøm på eller under denne terskelen behandles som OFF.",
           "modes": "Lær først integrasjonen lysstyrkemodusene til den nye lampen. Bruk den fysiske knappen på lampen til å velge hvert nivå og legg det til nedenfor, for eksempel High, Medium, Low og Dim.",
           "current_sensor": "Bare strømsensorer som tilhører den valgte smartpluggen er tilgjengelige her.",
           "power_cycle_delay": "Vanligvis trengs ingen ekstra forsinkelse. Hvis en lampe som er slått av med sin egen knapp ikke slår seg på fra Home Assistant, sett en liten forsinkelse, for eksempel 0,7 s.",
-          "current_stability_samples": "Krever at den samme nye strømverdien rapporteres så mange ganger på rad før lysstyrkemodusen endres. ON/OFF brukes umiddelbart. 0 deaktiverer filteret; standard er 2.",
-          "round_brightness_to_5": "Avrunder beregnet lysstyrke til nærmeste 5 %. Deaktiver for å bruke hele prosenter uten trinn på 5 %."
+          "round_brightness_to_5": "Avrunder beregnet lysstyrke til nærmeste 5 %. Deaktiver for å bruke hele prosenter uten trinn på 5 %.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

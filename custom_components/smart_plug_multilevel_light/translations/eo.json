@@ -14,19 +14,17 @@
         "data": {
           "name": "Lumnomo",
           "current_sensor": "Kurentsensilo",
-          "off_current_threshold": "OFF-kurenta sojlo",
           "power_cycle_delay": "Prokrasto de potencciklo",
           "modes": "Helecaj reĝimoj",
-          "current_stability_samples": "Filtrilo de kurenta stabileco",
-          "round_brightness_to_5": "Rondigi brilon al 5%"
+          "round_brightness_to_5": "Rondigi brilon al 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Kurento je aŭ sub ĉi tiu sojlo estas konsiderata OFF.",
           "modes": "Unue instruu al la integriĝo la brilreĝimojn de la nova lampo. Per la fizika butono de la lampo elektu ĉiun nivelon kaj aldonu ĝin sube, ekzemple High, Medium, Low kaj Dim.",
           "current_sensor": "Ĉi tie disponeblas nur kurentosensiloj apartenantaj al la elektita inteligenta ingo.",
           "power_cycle_delay": "Kutime ne necesas aldona prokrasto. Se lampo malŝaltita per sia propra butono ne ŝaltiĝas el Home Assistant, agordu malgrandan prokraston, ekzemple 0,7 s.",
-          "current_stability_samples": "Postulas ke la sama nova kurentvaloro estu raportita tiom da fojoj sinsekve antaŭ ŝanĝi la brilreĝimon. ON/OFF aplikiĝas tuj. 0 malŝaltas la filtrilon; defaŭlte estas 2.",
-          "round_brightness_to_5": "Rondigas la kalkulitan brilon al la plej proksima 5%. Malŝaltu por uzi tutajn procentojn sen 5%-paŝoj."
+          "round_brightness_to_5": "Rondigas la kalkulitan brilon al la plej proksima 5%. Malŝaltu por uzi tutajn procentojn sen 5%-paŝoj.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Lumnomo",
           "current_sensor": "Kurentsensilo",
-          "off_current_threshold": "OFF-kurenta sojlo",
           "power_cycle_delay": "Prokrasto de potencciklo",
           "modes": "Helecaj reĝimoj",
-          "current_stability_samples": "Filtrilo de kurenta stabileco",
-          "round_brightness_to_5": "Rondigi brilon al 5%"
+          "round_brightness_to_5": "Rondigi brilon al 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Kurento je aŭ sub ĉi tiu sojlo estas konsiderata OFF.",
           "modes": "Unue instruu al la integriĝo la brilreĝimojn de la nova lampo. Per la fizika butono de la lampo elektu ĉiun nivelon kaj aldonu ĝin sube, ekzemple High, Medium, Low kaj Dim.",
           "current_sensor": "Ĉi tie disponeblas nur kurentosensiloj apartenantaj al la elektita inteligenta ingo.",
           "power_cycle_delay": "Kutime ne necesas aldona prokrasto. Se lampo malŝaltita per sia propra butono ne ŝaltiĝas el Home Assistant, agordu malgrandan prokraston, ekzemple 0,7 s.",
-          "current_stability_samples": "Postulas ke la sama nova kurentvaloro estu raportita tiom da fojoj sinsekve antaŭ ŝanĝi la brilreĝimon. ON/OFF aplikiĝas tuj. 0 malŝaltas la filtrilon; defaŭlte estas 2.",
-          "round_brightness_to_5": "Rondigas la kalkulitan brilon al la plej proksima 5%. Malŝaltu por uzi tutajn procentojn sen 5%-paŝoj."
+          "round_brightness_to_5": "Rondigas la kalkulitan brilon al la plej proksima 5%. Malŝaltu por uzi tutajn procentojn sen 5%-paŝoj.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

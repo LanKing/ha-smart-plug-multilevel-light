@@ -14,19 +14,17 @@
         "data": {
           "name": "Valon nimi",
           "current_sensor": "Virtatunnistin",
-          "off_current_threshold": "OFF-virtakynnys",
           "power_cycle_delay": "Virrankatkaisun viive",
           "modes": "Kirkkaustilat",
-          "current_stability_samples": "Virran vakaussuodatin",
-          "round_brightness_to_5": "Pyöristä kirkkaus 5%:iin"
+          "round_brightness_to_5": "Pyöristä kirkkaus 5%:iin",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Tämän kynnyksen suuruinen tai pienempi virta tulkitaan OFF-tilaksi.",
           "modes": "Opeta ensin integraatiolle uuden lampun kirkkaustilat. Valitse lampun fyysisellä painikkeella jokainen taso ja lisää se alle, esimerkiksi High, Medium, Low ja Dim.",
           "current_sensor": "Tässä ovat käytettävissä vain valittuun älypistorasiaan kuuluvat virta-anturit.",
           "power_cycle_delay": "Yleensä lisäviivettä ei tarvita. Jos omasta painikkeestaan sammutettu lamppu ei syty Home Assistantista, aseta pieni viive, esimerkiksi 0,7 s.",
-          "current_stability_samples": "Sama uusi virta-arvo on raportoitava näin monta kertaa peräkkäin ennen kirkkaustilan vaihtamista. ON/OFF toteutetaan heti. 0 poistaa suodattimen käytöstä; oletus on 2.",
-          "round_brightness_to_5": "Pyöristää lasketun kirkkauden lähimpään 5 prosenttiin. Poista käytöstä, jos haluat kokonaiset prosentit ilman 5 % askelia."
+          "round_brightness_to_5": "Pyöristää lasketun kirkkauden lähimpään 5 prosenttiin. Poista käytöstä, jos haluat kokonaiset prosentit ilman 5 % askelia.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Valon nimi",
           "current_sensor": "Virtatunnistin",
-          "off_current_threshold": "OFF-virtakynnys",
           "power_cycle_delay": "Virrankatkaisun viive",
           "modes": "Kirkkaustilat",
-          "current_stability_samples": "Virran vakaussuodatin",
-          "round_brightness_to_5": "Pyöristä kirkkaus 5%:iin"
+          "round_brightness_to_5": "Pyöristä kirkkaus 5%:iin",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Tämän kynnyksen suuruinen tai pienempi virta tulkitaan OFF-tilaksi.",
           "modes": "Opeta ensin integraatiolle uuden lampun kirkkaustilat. Valitse lampun fyysisellä painikkeella jokainen taso ja lisää se alle, esimerkiksi High, Medium, Low ja Dim.",
           "current_sensor": "Tässä ovat käytettävissä vain valittuun älypistorasiaan kuuluvat virta-anturit.",
           "power_cycle_delay": "Yleensä lisäviivettä ei tarvita. Jos omasta painikkeestaan sammutettu lamppu ei syty Home Assistantista, aseta pieni viive, esimerkiksi 0,7 s.",
-          "current_stability_samples": "Sama uusi virta-arvo on raportoitava näin monta kertaa peräkkäin ennen kirkkaustilan vaihtamista. ON/OFF toteutetaan heti. 0 poistaa suodattimen käytöstä; oletus on 2.",
-          "round_brightness_to_5": "Pyöristää lasketun kirkkauden lähimpään 5 prosenttiin. Poista käytöstä, jos haluat kokonaiset prosentit ilman 5 % askelia."
+          "round_brightness_to_5": "Pyöristää lasketun kirkkauden lähimpään 5 prosenttiin. Poista käytöstä, jos haluat kokonaiset prosentit ilman 5 % askelia.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },

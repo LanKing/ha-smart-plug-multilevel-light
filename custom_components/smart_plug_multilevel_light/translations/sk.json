@@ -14,19 +14,17 @@
         "data": {
           "name": "Názov svetla",
           "current_sensor": "Senzor prúdu",
-          "off_current_threshold": "Prah prúdu pre OFF",
           "power_cycle_delay": "Oneskorenie cyklu napájania",
           "modes": "Režimy jasu",
-          "current_stability_samples": "Filter stability prúdu",
-          "round_brightness_to_5": "Zaokrúhľovať jas na 5%"
+          "round_brightness_to_5": "Zaokrúhľovať jas na 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Prúd na tomto prahu alebo nižší sa považuje za OFF.",
           "modes": "Najprv integráciu naučte režimy jasu novej lampy. Fyzickým tlačidlom na lampe vyberte každú úroveň a pridajte ju nižšie, napríklad High, Medium, Low a Dim.",
           "current_sensor": "Tu sú dostupné iba snímače prúdu patriace k vybranej inteligentnej zásuvke.",
           "power_cycle_delay": "Zvyčajne nie je potrebné žiadne ďalšie oneskorenie. Ak sa lampa vypnutá vlastným tlačidlom nezapne z Home Assistanta, nastavte malé oneskorenie, napríklad 0,7 s.",
-          "current_stability_samples": "Pred zmenou režimu jasu vyžaduje, aby bola rovnaká nová hodnota prúdu nahlásená toľkokrát za sebou. ON/OFF sa použije okamžite. 0 filter vypne; predvolené je 2.",
-          "round_brightness_to_5": "Zaokrúhli vypočítaný jas na najbližších 5 %. Vypnite pre celé percentá bez krokov po 5 %."
+          "round_brightness_to_5": "Zaokrúhli vypočítaný jas na najbližších 5 %. Vypnite pre celé percentá bez krokov po 5 %.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
@@ -44,19 +42,17 @@
         "data": {
           "name": "Názov svetla",
           "current_sensor": "Senzor prúdu",
-          "off_current_threshold": "Prah prúdu pre OFF",
           "power_cycle_delay": "Oneskorenie cyklu napájania",
           "modes": "Režimy jasu",
-          "current_stability_samples": "Filter stability prúdu",
-          "round_brightness_to_5": "Zaokrúhľovať jas na 5%"
+          "round_brightness_to_5": "Zaokrúhľovať jas na 5%",
+          "current_history_samples": "Recent current readings"
         },
         "data_description": {
-          "off_current_threshold": "Prúd na tomto prahu alebo nižší sa považuje za OFF.",
           "modes": "Najprv integráciu naučte režimy jasu novej lampy. Fyzickým tlačidlom na lampe vyberte každú úroveň a pridajte ju nižšie, napríklad High, Medium, Low a Dim.",
           "current_sensor": "Tu sú dostupné iba snímače prúdu patriace k vybranej inteligentnej zásuvke.",
           "power_cycle_delay": "Zvyčajne nie je potrebné žiadne ďalšie oneskorenie. Ak sa lampa vypnutá vlastným tlačidlom nezapne z Home Assistanta, nastavte malé oneskorenie, napríklad 0,7 s.",
-          "current_stability_samples": "Pred zmenou režimu jasu vyžaduje, aby bola rovnaká nová hodnota prúdu nahlásená toľkokrát za sebou. ON/OFF sa použije okamžite. 0 filter vypne; predvolené je 2.",
-          "round_brightness_to_5": "Zaokrúhli vypočítaný jas na najbližších 5 %. Vypnite pre celé percentá bez krokov po 5 %."
+          "round_brightness_to_5": "Zaokrúhli vypočítaný jas na najbližších 5 %. Vypnite pre celé percentá bez krokov po 5 %.",
+          "current_history_samples": "Number of latest current readings used to determine the mode. Readings that do not exactly match a configured mode value are ignored; among the remaining readings, the most frequent value wins. Default is 5."
         }
       }
     },
