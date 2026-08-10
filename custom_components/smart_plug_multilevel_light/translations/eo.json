@@ -24,7 +24,7 @@
           "power_cycle_delay": "Kutime ne necesas aldona prokrasto. Se lampo malŝaltita per sia propra butono ne ŝaltiĝas el Home Assistant, agordu malgrandan prokraston, ekzemple 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
+          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5."
         }
       }
     },
@@ -52,7 +52,7 @@
           "power_cycle_delay": "Kutime ne necesas aldona prokrasto. Se lampo malŝaltita per sia propra butono ne ŝaltiĝas el Home Assistant, agordu malgrandan prokraston, ekzemple 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5."
+          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5."
         }
       }
     },
