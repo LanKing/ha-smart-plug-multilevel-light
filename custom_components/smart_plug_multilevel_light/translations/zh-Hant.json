@@ -16,13 +16,17 @@
           "current_sensor": "電流感測器",
           "off_current_threshold": "OFF 電流閾值",
           "power_cycle_delay": "電源循環延遲",
-          "modes": "亮度模式"
+          "modes": "亮度模式",
+          "current_stability_samples": "電流穩定性過濾器",
+          "round_brightness_to_5": "亮度按5%取整"
         },
         "data_description": {
           "off_current_threshold": "電流等於或低於此閾值時視為 OFF。",
           "modes": "對於新燈具，請先讓整合學習其亮度模式。使用燈具上的實體按鈕依序選擇每個亮度級別並在下方新增，例如 High、Medium、Low 和 Dim。",
           "current_sensor": "此處僅提供屬於所選智慧插座的電流感測器。",
-          "power_cycle_delay": "通常不需要額外延遲。如果使用燈具本身的按鈕關閉後無法從 Home Assistant 開啟，請設定較短的延遲，例如 0.7 s。"
+          "power_cycle_delay": "通常不需要額外延遲。如果使用燈具本身的按鈕關閉後無法從 Home Assistant 開啟，請設定較短的延遲，例如 0.7 s。",
+          "current_stability_samples": "在變更偵測到的亮度模式前，要求同一個新的電流值連續回報指定次數。ON/OFF 一律立即生效。0 表示停用過濾器；預設值為 2。",
+          "round_brightness_to_5": "將計算出的亮度四捨五入到最接近的5%。關閉後可使用不按5%步進的整數百分比。"
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "電流感測器",
           "off_current_threshold": "OFF 電流閾值",
           "power_cycle_delay": "電源循環延遲",
-          "modes": "亮度模式"
+          "modes": "亮度模式",
+          "current_stability_samples": "電流穩定性過濾器",
+          "round_brightness_to_5": "亮度按5%取整"
         },
         "data_description": {
           "off_current_threshold": "電流等於或低於此閾值時視為 OFF。",
           "modes": "對於新燈具，請先讓整合學習其亮度模式。使用燈具上的實體按鈕依序選擇每個亮度級別並在下方新增，例如 High、Medium、Low 和 Dim。",
           "current_sensor": "此處僅提供屬於所選智慧插座的電流感測器。",
-          "power_cycle_delay": "通常不需要額外延遲。如果使用燈具本身的按鈕關閉後無法從 Home Assistant 開啟，請設定較短的延遲，例如 0.7 s。"
+          "power_cycle_delay": "通常不需要額外延遲。如果使用燈具本身的按鈕關閉後無法從 Home Assistant 開啟，請設定較短的延遲，例如 0.7 s。",
+          "current_stability_samples": "在變更偵測到的亮度模式前，要求同一個新的電流值連續回報指定次數。ON/OFF 一律立即生效。0 表示停用過濾器；預設值為 2。",
+          "round_brightness_to_5": "將計算出的亮度四捨五入到最接近的5%。關閉後可使用不按5%步進的整數百分比。"
         }
       }
     },

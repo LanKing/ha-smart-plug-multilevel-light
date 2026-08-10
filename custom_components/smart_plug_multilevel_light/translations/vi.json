@@ -16,13 +16,17 @@
           "current_sensor": "Cảm biến dòng điện",
           "off_current_threshold": "Ngưỡng dòng điện OFF",
           "power_cycle_delay": "Độ trễ chu kỳ nguồn",
-          "modes": "Chế độ độ sáng"
+          "modes": "Chế độ độ sáng",
+          "current_stability_samples": "Bộ lọc ổn định dòng điện",
+          "round_brightness_to_5": "Làm tròn độ sáng theo 5%"
         },
         "data_description": {
           "off_current_threshold": "Dòng điện bằng hoặc thấp hơn ngưỡng này được coi là OFF.",
           "modes": "Trước tiên hãy dạy tích hợp các chế độ độ sáng của đèn mới. Dùng nút vật lý trên đèn để chọn từng mức và thêm bên dưới, ví dụ High, Medium, Low và Dim.",
           "current_sensor": "Ở đây chỉ có các cảm biến dòng điện thuộc ổ cắm thông minh đã chọn.",
-          "power_cycle_delay": "Thông thường không cần thêm độ trễ. Nếu đèn đã tắt bằng nút riêng không bật từ Home Assistant, hãy đặt một độ trễ nhỏ, ví dụ 0,7 s."
+          "power_cycle_delay": "Thông thường không cần thêm độ trễ. Nếu đèn đã tắt bằng nút riêng không bật từ Home Assistant, hãy đặt một độ trễ nhỏ, ví dụ 0,7 s.",
+          "current_stability_samples": "Yêu cầu cùng một giá trị dòng điện mới được báo cáo liên tiếp số lần này trước khi đổi chế độ độ sáng. ON/OFF được áp dụng ngay lập tức. 0 tắt bộ lọc; mặc định là 2.",
+          "round_brightness_to_5": "Làm tròn độ sáng tính toán đến 5% gần nhất. Tắt để dùng phần trăm nguyên không theo bước 5%."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Cảm biến dòng điện",
           "off_current_threshold": "Ngưỡng dòng điện OFF",
           "power_cycle_delay": "Độ trễ chu kỳ nguồn",
-          "modes": "Chế độ độ sáng"
+          "modes": "Chế độ độ sáng",
+          "current_stability_samples": "Bộ lọc ổn định dòng điện",
+          "round_brightness_to_5": "Làm tròn độ sáng theo 5%"
         },
         "data_description": {
           "off_current_threshold": "Dòng điện bằng hoặc thấp hơn ngưỡng này được coi là OFF.",
           "modes": "Trước tiên hãy dạy tích hợp các chế độ độ sáng của đèn mới. Dùng nút vật lý trên đèn để chọn từng mức và thêm bên dưới, ví dụ High, Medium, Low và Dim.",
           "current_sensor": "Ở đây chỉ có các cảm biến dòng điện thuộc ổ cắm thông minh đã chọn.",
-          "power_cycle_delay": "Thông thường không cần thêm độ trễ. Nếu đèn đã tắt bằng nút riêng không bật từ Home Assistant, hãy đặt một độ trễ nhỏ, ví dụ 0,7 s."
+          "power_cycle_delay": "Thông thường không cần thêm độ trễ. Nếu đèn đã tắt bằng nút riêng không bật từ Home Assistant, hãy đặt một độ trễ nhỏ, ví dụ 0,7 s.",
+          "current_stability_samples": "Yêu cầu cùng một giá trị dòng điện mới được báo cáo liên tiếp số lần này trước khi đổi chế độ độ sáng. ON/OFF được áp dụng ngay lập tức. 0 tắt bộ lọc; mặc định là 2.",
+          "round_brightness_to_5": "Làm tròn độ sáng tính toán đến 5% gần nhất. Tắt để dùng phần trăm nguyên không theo bước 5%."
         }
       }
     },

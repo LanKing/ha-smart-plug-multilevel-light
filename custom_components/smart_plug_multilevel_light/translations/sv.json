@@ -16,13 +16,17 @@
           "current_sensor": "Strömsensor",
           "off_current_threshold": "OFF-strömtröskel",
           "power_cycle_delay": "Fördröjning för strömcykel",
-          "modes": "Ljusstyrkelägen"
+          "modes": "Ljusstyrkelägen",
+          "current_stability_samples": "Filter för strömstabilitet",
+          "round_brightness_to_5": "Avrunda ljusstyrka till 5%"
         },
         "data_description": {
           "off_current_threshold": "Ström på eller under denna tröskel behandlas som OFF.",
           "modes": "Lär först integrationen den nya lampans ljusstyrkelägen. Använd lampans fysiska knapp för att välja varje nivå och lägg till den nedan, till exempel High, Medium, Low och Dim.",
           "current_sensor": "Här är bara strömsensorer som tillhör den valda smarta kontakten tillgängliga.",
-          "power_cycle_delay": "Vanligtvis behövs ingen extra fördröjning. Om en lampa som stängts av med sin egen knapp inte tänds från Home Assistant, ställ in en liten fördröjning, till exempel 0,7 s."
+          "power_cycle_delay": "Vanligtvis behövs ingen extra fördröjning. Om en lampa som stängts av med sin egen knapp inte tänds från Home Assistant, ställ in en liten fördröjning, till exempel 0,7 s.",
+          "current_stability_samples": "Kräver att samma nya strömvärde rapporteras så här många gånger i rad innan ljusstyrkeläget ändras. ON/OFF tillämpas direkt. 0 inaktiverar filtret; standard är 2.",
+          "round_brightness_to_5": "Avrundar beräknad ljusstyrka till närmaste 5 %. Inaktivera för hela procent utan steg på 5 %."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Strömsensor",
           "off_current_threshold": "OFF-strömtröskel",
           "power_cycle_delay": "Fördröjning för strömcykel",
-          "modes": "Ljusstyrkelägen"
+          "modes": "Ljusstyrkelägen",
+          "current_stability_samples": "Filter för strömstabilitet",
+          "round_brightness_to_5": "Avrunda ljusstyrka till 5%"
         },
         "data_description": {
           "off_current_threshold": "Ström på eller under denna tröskel behandlas som OFF.",
           "modes": "Lär först integrationen den nya lampans ljusstyrkelägen. Använd lampans fysiska knapp för att välja varje nivå och lägg till den nedan, till exempel High, Medium, Low och Dim.",
           "current_sensor": "Här är bara strömsensorer som tillhör den valda smarta kontakten tillgängliga.",
-          "power_cycle_delay": "Vanligtvis behövs ingen extra fördröjning. Om en lampa som stängts av med sin egen knapp inte tänds från Home Assistant, ställ in en liten fördröjning, till exempel 0,7 s."
+          "power_cycle_delay": "Vanligtvis behövs ingen extra fördröjning. Om en lampa som stängts av med sin egen knapp inte tänds från Home Assistant, ställ in en liten fördröjning, till exempel 0,7 s.",
+          "current_stability_samples": "Kräver att samma nya strömvärde rapporteras så här många gånger i rad innan ljusstyrkeläget ändras. ON/OFF tillämpas direkt. 0 inaktiverar filtret; standard är 2.",
+          "round_brightness_to_5": "Avrundar beräknad ljusstyrka till närmaste 5 %. Inaktivera för hela procent utan steg på 5 %."
         }
       }
     },

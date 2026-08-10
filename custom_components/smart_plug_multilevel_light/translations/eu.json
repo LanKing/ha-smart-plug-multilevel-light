@@ -16,13 +16,17 @@
           "current_sensor": "Korronte-sentsorea",
           "off_current_threshold": "OFF korronte-atalasea",
           "power_cycle_delay": "Elikadura-zikloaren atzerapena",
-          "modes": "Distira-moduak"
+          "modes": "Distira-moduak",
+          "current_stability_samples": "Korronte-egonkortasunaren iragazkia",
+          "round_brightness_to_5": "Biribildu distira %5era"
         },
         "data_description": {
           "off_current_threshold": "Atalase honetan edo azpitik dagoen korrontea OFF gisa hartzen da.",
           "modes": "Lehenik, irakatsi integrazioari lanpara berriaren distira-moduak. Lanpararen botoi fisikoarekin hautatu maila bakoitza eta gehitu behean, adibidez High, Medium, Low eta Dim.",
           "current_sensor": "Hemen hautatutako entxufe adimendunari dagozkion korronte-sentsoreak bakarrik daude erabilgarri.",
-          "power_cycle_delay": "Normalean ez da atzerapen gehigarririk behar. Bere botoiarekin itzalitako lanpara Home Assistant-etik pizten ez bada, ezarri atzerapen txiki bat, adibidez 0,7 s."
+          "power_cycle_delay": "Normalean ez da atzerapen gehigarririk behar. Bere botoiarekin itzalitako lanpara Home Assistant-etik pizten ez bada, ezarri atzerapen txiki bat, adibidez 0,7 s.",
+          "current_stability_samples": "Distira modua aldatu aurretik korronte-balio berri bera jarraian horrenbeste aldiz jasotzea eskatzen du. ON/OFF berehala aplikatzen dira. 0-k iragazkia desgaitzen du; lehenetsia 2 da.",
+          "round_brightness_to_5": "Kalkulatutako distira hurbileneko %5era biribiltzen du. Desgaitu %5eko urratsik gabeko ehuneko osoak erabiltzeko."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Korronte-sentsorea",
           "off_current_threshold": "OFF korronte-atalasea",
           "power_cycle_delay": "Elikadura-zikloaren atzerapena",
-          "modes": "Distira-moduak"
+          "modes": "Distira-moduak",
+          "current_stability_samples": "Korronte-egonkortasunaren iragazkia",
+          "round_brightness_to_5": "Biribildu distira %5era"
         },
         "data_description": {
           "off_current_threshold": "Atalase honetan edo azpitik dagoen korrontea OFF gisa hartzen da.",
           "modes": "Lehenik, irakatsi integrazioari lanpara berriaren distira-moduak. Lanpararen botoi fisikoarekin hautatu maila bakoitza eta gehitu behean, adibidez High, Medium, Low eta Dim.",
           "current_sensor": "Hemen hautatutako entxufe adimendunari dagozkion korronte-sentsoreak bakarrik daude erabilgarri.",
-          "power_cycle_delay": "Normalean ez da atzerapen gehigarririk behar. Bere botoiarekin itzalitako lanpara Home Assistant-etik pizten ez bada, ezarri atzerapen txiki bat, adibidez 0,7 s."
+          "power_cycle_delay": "Normalean ez da atzerapen gehigarririk behar. Bere botoiarekin itzalitako lanpara Home Assistant-etik pizten ez bada, ezarri atzerapen txiki bat, adibidez 0,7 s.",
+          "current_stability_samples": "Distira modua aldatu aurretik korronte-balio berri bera jarraian horrenbeste aldiz jasotzea eskatzen du. ON/OFF berehala aplikatzen dira. 0-k iragazkia desgaitzen du; lehenetsia 2 da.",
+          "round_brightness_to_5": "Kalkulatutako distira hurbileneko %5era biribiltzen du. Desgaitu %5eko urratsik gabeko ehuneko osoak erabiltzeko."
         }
       }
     },

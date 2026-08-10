@@ -16,13 +16,17 @@
           "current_sensor": "Stroomsensor",
           "off_current_threshold": "AF-stroomdrempel",
           "power_cycle_delay": "Kragherlaai-vertraging",
-          "modes": "Helderheidsmodusse"
+          "modes": "Helderheidsmodusse",
+          "current_stability_samples": "Stroomstabiliteitsfilter",
+          "round_brightness_to_5": "Rond helderheid tot 5% af"
         },
         "data_description": {
           "off_current_threshold": "Stroom op of onder hierdie drempel word as AF beskou.",
           "modes": "Leer eers die helderheidsmodusse van 'n nuwe lamp. Gebruik die fisiese knoppie op die lamp om elke helderheidsvlak te kies en voeg dit hieronder by, byvoorbeeld High, Medium, Low en Dim.",
           "current_sensor": "Slegs stroomsensors wat aan die gekose slimprop behoort, is hier beskikbaar.",
-          "power_cycle_delay": "Gewoonlik is geen ekstra vertraging nodig nie. As 'n lamp wat met sy eie knoppie afgeskakel is nie vanuit Home Assistant aanskakel nie, stel 'n klein vertraging in, byvoorbeeld 0,7 s."
+          "power_cycle_delay": "Gewoonlik is geen ekstra vertraging nodig nie. As 'n lamp wat met sy eie knoppie afgeskakel is nie vanuit Home Assistant aanskakel nie, stel 'n klein vertraging in, byvoorbeeld 0,7 s.",
+          "current_stability_samples": "Vereis dieselfde veranderde stroomwaarde hierdie aantal kere agtermekaar voordat die helderheidsmodus verander. ON/OFF word onmiddellik toegepas. 0 deaktiveer die filter; verstek is 2.",
+          "round_brightness_to_5": "Rond die berekende helderheid tot die naaste 5% af. Deaktiveer om heel persentasies sonder 5%-stappe te gebruik."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Stroomsensor",
           "off_current_threshold": "AF-stroomdrempel",
           "power_cycle_delay": "Kragherlaai-vertraging",
-          "modes": "Helderheidsmodusse"
+          "modes": "Helderheidsmodusse",
+          "current_stability_samples": "Stroomstabiliteitsfilter",
+          "round_brightness_to_5": "Rond helderheid tot 5% af"
         },
         "data_description": {
           "off_current_threshold": "Stroom op of onder hierdie drempel word as AF beskou.",
           "modes": "Leer eers die helderheidsmodusse van 'n nuwe lamp. Gebruik die fisiese knoppie op die lamp om elke helderheidsvlak te kies en voeg dit hieronder by, byvoorbeeld High, Medium, Low en Dim.",
           "current_sensor": "Slegs stroomsensors wat aan die gekose slimprop behoort, is hier beskikbaar.",
-          "power_cycle_delay": "Gewoonlik is geen ekstra vertraging nodig nie. As 'n lamp wat met sy eie knoppie afgeskakel is nie vanuit Home Assistant aanskakel nie, stel 'n klein vertraging in, byvoorbeeld 0,7 s."
+          "power_cycle_delay": "Gewoonlik is geen ekstra vertraging nodig nie. As 'n lamp wat met sy eie knoppie afgeskakel is nie vanuit Home Assistant aanskakel nie, stel 'n klein vertraging in, byvoorbeeld 0,7 s.",
+          "current_stability_samples": "Vereis dieselfde veranderde stroomwaarde hierdie aantal kere agtermekaar voordat die helderheidsmodus verander. ON/OFF word onmiddellik toegepas. 0 deaktiveer die filter; verstek is 2.",
+          "round_brightness_to_5": "Rond die berekende helderheid tot die naaste 5% af. Deaktiveer om heel persentasies sonder 5%-stappe te gebruik."
         }
       }
     },

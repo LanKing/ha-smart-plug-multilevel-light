@@ -16,13 +16,17 @@
           "current_sensor": "Stromsensor",
           "off_current_threshold": "OFF-Stromschwelle",
           "power_cycle_delay": "Verzögerung beim Aus- und Einschalten",
-          "modes": "Helligkeitsmodi"
+          "modes": "Helligkeitsmodi",
+          "current_stability_samples": "Stromstabilitätsfilter",
+          "round_brightness_to_5": "Helligkeit auf 5% runden"
         },
         "data_description": {
           "off_current_threshold": "Strom auf oder unter dieser Schwelle gilt als OFF.",
           "modes": "Lernen Sie zuerst die Helligkeitsstufen der neuen Lampe an. Wählen Sie mit der physischen Taste der Lampe jede Stufe aus und fügen Sie sie unten hinzu, z. B. High, Medium, Low und Dim.",
           "current_sensor": "Hier sind nur Stromsensoren verfügbar, die zur ausgewählten Smart-Steckdose gehören.",
-          "power_cycle_delay": "Normalerweise ist keine zusätzliche Verzögerung erforderlich. Wenn sich eine mit ihrer eigenen Taste ausgeschaltete Lampe nicht über Home Assistant einschalten lässt, stellen Sie eine kleine Verzögerung ein, z. B. 0,7 s."
+          "power_cycle_delay": "Normalerweise ist keine zusätzliche Verzögerung erforderlich. Wenn sich eine mit ihrer eigenen Taste ausgeschaltete Lampe nicht über Home Assistant einschalten lässt, stellen Sie eine kleine Verzögerung ein, z. B. 0,7 s.",
+          "current_stability_samples": "Erfordert, dass derselbe neue Stromwert so oft hintereinander gemeldet wird, bevor der Helligkeitsmodus geändert wird. ON/OFF wird sofort übernommen. 0 deaktiviert den Filter; Standard ist 2.",
+          "round_brightness_to_5": "Rundet die berechnete Helligkeit auf die nächsten 5 %. Deaktivieren, um ganze Prozentwerte ohne 5-%-Schritte zu verwenden."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Stromsensor",
           "off_current_threshold": "OFF-Stromschwelle",
           "power_cycle_delay": "Verzögerung beim Aus- und Einschalten",
-          "modes": "Helligkeitsmodi"
+          "modes": "Helligkeitsmodi",
+          "current_stability_samples": "Stromstabilitätsfilter",
+          "round_brightness_to_5": "Helligkeit auf 5% runden"
         },
         "data_description": {
           "off_current_threshold": "Strom auf oder unter dieser Schwelle gilt als OFF.",
           "modes": "Lernen Sie zuerst die Helligkeitsstufen der neuen Lampe an. Wählen Sie mit der physischen Taste der Lampe jede Stufe aus und fügen Sie sie unten hinzu, z. B. High, Medium, Low und Dim.",
           "current_sensor": "Hier sind nur Stromsensoren verfügbar, die zur ausgewählten Smart-Steckdose gehören.",
-          "power_cycle_delay": "Normalerweise ist keine zusätzliche Verzögerung erforderlich. Wenn sich eine mit ihrer eigenen Taste ausgeschaltete Lampe nicht über Home Assistant einschalten lässt, stellen Sie eine kleine Verzögerung ein, z. B. 0,7 s."
+          "power_cycle_delay": "Normalerweise ist keine zusätzliche Verzögerung erforderlich. Wenn sich eine mit ihrer eigenen Taste ausgeschaltete Lampe nicht über Home Assistant einschalten lässt, stellen Sie eine kleine Verzögerung ein, z. B. 0,7 s.",
+          "current_stability_samples": "Erfordert, dass derselbe neue Stromwert so oft hintereinander gemeldet wird, bevor der Helligkeitsmodus geändert wird. ON/OFF wird sofort übernommen. 0 deaktiviert den Filter; Standard ist 2.",
+          "round_brightness_to_5": "Rundet die berechnete Helligkeit auf die nächsten 5 %. Deaktivieren, um ganze Prozentwerte ohne 5-%-Schritte zu verwenden."
         }
       }
     },

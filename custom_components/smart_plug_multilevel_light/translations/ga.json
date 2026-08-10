@@ -16,13 +16,17 @@
           "current_sensor": "Braiteoir srutha",
           "off_current_threshold": "Tairseach srutha OFF",
           "power_cycle_delay": "Moill timthrialla cumhachta",
-          "modes": "Módanna gile"
+          "modes": "Módanna gile",
+          "current_stability_samples": "Scagaire cobhsaíochta srutha",
+          "round_brightness_to_5": "Slánaigh gile go 5%"
         },
         "data_description": {
           "off_current_threshold": "Meastar gur OFF é sruth ag an tairseach seo nó faoina bhun.",
           "modes": "Ar dtús múin modhanna gile an lampa nua don chomhtháthú. Úsáid cnaipe fisiciúil an lampa chun gach leibhéal a roghnú agus cuir leis thíos é, mar shampla High, Medium, Low agus Dim.",
           "current_sensor": "Níl ar fáil anseo ach braiteoirí srutha a bhaineann leis an soicéad cliste roghnaithe.",
-          "power_cycle_delay": "De ghnáth ní bhíonn moill bhreise de dhíth. Mura lasann lampa a múchadh lena chnaipe féin ó Home Assistant, socraigh moill bheag, mar shampla 0.7 s."
+          "power_cycle_delay": "De ghnáth ní bhíonn moill bhreise de dhíth. Mura lasann lampa a múchadh lena chnaipe féin ó Home Assistant, socraigh moill bheag, mar shampla 0.7 s.",
+          "current_stability_samples": "Éilíonn sé go dtuairisceofar an luach srutha nua céanna an líon seo uaireanta as a chéile sula n-athraítear an mód gile. Cuirtear ON/OFF i bhfeidhm láithreach. Díchumasaíonn 0 an scagaire; is é 2 an réamhshocrú.",
+          "round_brightness_to_5": "Slánaíonn sé an gile ríofa go dtí an 5% is gaire. Díchumasaigh chun céatadáin iomlána a úsáid gan céimeanna 5%."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Braiteoir srutha",
           "off_current_threshold": "Tairseach srutha OFF",
           "power_cycle_delay": "Moill timthrialla cumhachta",
-          "modes": "Módanna gile"
+          "modes": "Módanna gile",
+          "current_stability_samples": "Scagaire cobhsaíochta srutha",
+          "round_brightness_to_5": "Slánaigh gile go 5%"
         },
         "data_description": {
           "off_current_threshold": "Meastar gur OFF é sruth ag an tairseach seo nó faoina bhun.",
           "modes": "Ar dtús múin modhanna gile an lampa nua don chomhtháthú. Úsáid cnaipe fisiciúil an lampa chun gach leibhéal a roghnú agus cuir leis thíos é, mar shampla High, Medium, Low agus Dim.",
           "current_sensor": "Níl ar fáil anseo ach braiteoirí srutha a bhaineann leis an soicéad cliste roghnaithe.",
-          "power_cycle_delay": "De ghnáth ní bhíonn moill bhreise de dhíth. Mura lasann lampa a múchadh lena chnaipe féin ó Home Assistant, socraigh moill bheag, mar shampla 0.7 s."
+          "power_cycle_delay": "De ghnáth ní bhíonn moill bhreise de dhíth. Mura lasann lampa a múchadh lena chnaipe féin ó Home Assistant, socraigh moill bheag, mar shampla 0.7 s.",
+          "current_stability_samples": "Éilíonn sé go dtuairisceofar an luach srutha nua céanna an líon seo uaireanta as a chéile sula n-athraítear an mód gile. Cuirtear ON/OFF i bhfeidhm láithreach. Díchumasaíonn 0 an scagaire; is é 2 an réamhshocrú.",
+          "round_brightness_to_5": "Slánaíonn sé an gile ríofa go dtí an 5% is gaire. Díchumasaigh chun céatadáin iomlána a úsáid gan céimeanna 5%."
         }
       }
     },

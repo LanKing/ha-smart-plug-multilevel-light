@@ -16,13 +16,17 @@
           "current_sensor": "Sensor de corrente",
           "off_current_threshold": "Limite de corrente OFF",
           "power_cycle_delay": "Atraso do ciclo de alimentação",
-          "modes": "Modos de brilho"
+          "modes": "Modos de brilho",
+          "current_stability_samples": "Filtro de estabilidade da corrente",
+          "round_brightness_to_5": "Arredondar brilho para 5%"
         },
         "data_description": {
           "off_current_threshold": "Corrente igual ou inferior a este limite é considerada OFF.",
           "modes": "Primeiro ensine à integração os modos de brilho da nova lâmpada. Use o botão físico da lâmpada para selecionar cada nível e adicioná-lo abaixo, por exemplo High, Medium, Low e Dim.",
           "current_sensor": "Aqui só estão disponíveis os sensores de corrente pertencentes à tomada inteligente selecionada.",
-          "power_cycle_delay": "Normalmente não é necessário qualquer atraso adicional. Se uma lâmpada desligada pelo próprio botão não ligar a partir do Home Assistant, defina um pequeno atraso, por exemplo 0,7 s."
+          "power_cycle_delay": "Normalmente não é necessário qualquer atraso adicional. Se uma lâmpada desligada pelo próprio botão não ligar a partir do Home Assistant, defina um pequeno atraso, por exemplo 0,7 s.",
+          "current_stability_samples": "Exige que o mesmo novo valor de corrente seja comunicado este número de vezes seguidas antes de alterar o modo de brilho detetado. ON/OFF são aplicados imediatamente. 0 desativa o filtro; o valor predefinido é 2.",
+          "round_brightness_to_5": "Arredonda o brilho calculado para os 5% mais próximos. Desative para usar percentagens inteiras sem passos de 5%."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Sensor de corrente",
           "off_current_threshold": "Limite de corrente OFF",
           "power_cycle_delay": "Atraso do ciclo de alimentação",
-          "modes": "Modos de brilho"
+          "modes": "Modos de brilho",
+          "current_stability_samples": "Filtro de estabilidade da corrente",
+          "round_brightness_to_5": "Arredondar brilho para 5%"
         },
         "data_description": {
           "off_current_threshold": "Corrente igual ou inferior a este limite é considerada OFF.",
           "modes": "Primeiro ensine à integração os modos de brilho da nova lâmpada. Use o botão físico da lâmpada para selecionar cada nível e adicioná-lo abaixo, por exemplo High, Medium, Low e Dim.",
           "current_sensor": "Aqui só estão disponíveis os sensores de corrente pertencentes à tomada inteligente selecionada.",
-          "power_cycle_delay": "Normalmente não é necessário qualquer atraso adicional. Se uma lâmpada desligada pelo próprio botão não ligar a partir do Home Assistant, defina um pequeno atraso, por exemplo 0,7 s."
+          "power_cycle_delay": "Normalmente não é necessário qualquer atraso adicional. Se uma lâmpada desligada pelo próprio botão não ligar a partir do Home Assistant, defina um pequeno atraso, por exemplo 0,7 s.",
+          "current_stability_samples": "Exige que o mesmo novo valor de corrente seja comunicado este número de vezes seguidas antes de alterar o modo de brilho detetado. ON/OFF são aplicados imediatamente. 0 desativa o filtro; o valor predefinido é 2.",
+          "round_brightness_to_5": "Arredonda o brilho calculado para os 5% mais próximos. Desative para usar percentagens inteiras sem passos de 5%."
         }
       }
     },

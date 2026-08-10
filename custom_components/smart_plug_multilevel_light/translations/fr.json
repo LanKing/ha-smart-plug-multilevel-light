@@ -16,13 +16,17 @@
           "current_sensor": "Capteur de courant",
           "off_current_threshold": "Seuil de courant OFF",
           "power_cycle_delay": "Délai du cycle d’alimentation",
-          "modes": "Modes de luminosité"
+          "modes": "Modes de luminosité",
+          "current_stability_samples": "Filtre de stabilité du courant",
+          "round_brightness_to_5": "Arrondir la luminosité à 5%"
         },
         "data_description": {
           "off_current_threshold": "Un courant égal ou inférieur à ce seuil est considéré comme OFF.",
           "modes": "Commencez par apprendre à l'intégration les modes de luminosité de la nouvelle lampe. Utilisez le bouton physique de la lampe pour sélectionner chaque niveau et l'ajouter ci-dessous, par exemple High, Medium, Low et Dim.",
           "current_sensor": "Seuls les capteurs de courant appartenant à la prise intelligente sélectionnée sont disponibles ici.",
-          "power_cycle_delay": "En général, aucun délai supplémentaire n'est nécessaire. Si une lampe éteinte avec son propre bouton ne s'allume pas depuis Home Assistant, définissez un petit délai, par exemple 0,7 s."
+          "power_cycle_delay": "En général, aucun délai supplémentaire n'est nécessaire. Si une lampe éteinte avec son propre bouton ne s'allume pas depuis Home Assistant, définissez un petit délai, par exemple 0,7 s.",
+          "current_stability_samples": "Exige que la même nouvelle valeur de courant soit signalée ce nombre de fois de suite avant de changer le mode de luminosité détecté. ON/OFF sont appliqués immédiatement. 0 désactive le filtre ; la valeur par défaut est 2.",
+          "round_brightness_to_5": "Arrondit la luminosité calculée au multiple de 5 % le plus proche. Désactivez cette option pour utiliser des pourcentages entiers sans pas de 5 %."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Capteur de courant",
           "off_current_threshold": "Seuil de courant OFF",
           "power_cycle_delay": "Délai du cycle d’alimentation",
-          "modes": "Modes de luminosité"
+          "modes": "Modes de luminosité",
+          "current_stability_samples": "Filtre de stabilité du courant",
+          "round_brightness_to_5": "Arrondir la luminosité à 5%"
         },
         "data_description": {
           "off_current_threshold": "Un courant égal ou inférieur à ce seuil est considéré comme OFF.",
           "modes": "Commencez par apprendre à l'intégration les modes de luminosité de la nouvelle lampe. Utilisez le bouton physique de la lampe pour sélectionner chaque niveau et l'ajouter ci-dessous, par exemple High, Medium, Low et Dim.",
           "current_sensor": "Seuls les capteurs de courant appartenant à la prise intelligente sélectionnée sont disponibles ici.",
-          "power_cycle_delay": "En général, aucun délai supplémentaire n'est nécessaire. Si une lampe éteinte avec son propre bouton ne s'allume pas depuis Home Assistant, définissez un petit délai, par exemple 0,7 s."
+          "power_cycle_delay": "En général, aucun délai supplémentaire n'est nécessaire. Si une lampe éteinte avec son propre bouton ne s'allume pas depuis Home Assistant, définissez un petit délai, par exemple 0,7 s.",
+          "current_stability_samples": "Exige que la même nouvelle valeur de courant soit signalée ce nombre de fois de suite avant de changer le mode de luminosité détecté. ON/OFF sont appliqués immédiatement. 0 désactive le filtre ; la valeur par défaut est 2.",
+          "round_brightness_to_5": "Arrondit la luminosité calculée au multiple de 5 % le plus proche. Désactivez cette option pour utiliser des pourcentages entiers sans pas de 5 %."
         }
       }
     },

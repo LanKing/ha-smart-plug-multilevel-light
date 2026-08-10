@@ -16,13 +16,17 @@
           "current_sensor": "Synhwyrydd cerrynt",
           "off_current_threshold": "Trothwy cerrynt OFF",
           "power_cycle_delay": "Oedi cylch pŵer",
-          "modes": "Moddau disgleirdeb"
+          "modes": "Moddau disgleirdeb",
+          "current_stability_samples": "Hidlydd sefydlogrwydd cerrynt",
+          "round_brightness_to_5": "Talgrynnu disgleirdeb i 5%"
         },
         "data_description": {
           "off_current_threshold": "Ystyrir cerrynt ar y trothwy hwn neu'n is yn OFF.",
           "modes": "Yn gyntaf dysgwch foddau disgleirdeb y lamp newydd i'r integreiddiad. Defnyddiwch fotwm corfforol y lamp i ddewis pob lefel a'i hychwanegu isod, er enghraifft High, Medium, Low a Dim.",
           "current_sensor": "Dim ond synwyryddion cerrynt sy'n perthyn i'r plwg clyfar a ddewiswyd sydd ar gael yma.",
-          "power_cycle_delay": "Fel arfer nid oes angen oedi ychwanegol. Os nad yw lamp a ddiffoddwyd â'i botwm ei hun yn troi ymlaen o Home Assistant, gosodwch oedi bach, er enghraifft 0.7 s."
+          "power_cycle_delay": "Fel arfer nid oes angen oedi ychwanegol. Os nad yw lamp a ddiffoddwyd â'i botwm ei hun yn troi ymlaen o Home Assistant, gosodwch oedi bach, er enghraifft 0.7 s.",
+          "current_stability_samples": "Mae'n gofyn i'r un gwerth cerrynt newydd gael ei adrodd y nifer hwn o weithiau yn olynol cyn newid y modd disgleirdeb. Mae ON/OFF yn cael eu cymhwyso ar unwaith. Mae 0 yn analluogi'r hidlydd; y rhagosodiad yw 2.",
+          "round_brightness_to_5": "Talgrynna'r disgleirdeb a gyfrifwyd i'r 5% agosaf. Analluogwch i ddefnyddio canrannau cyfan heb gamau 5%."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Synhwyrydd cerrynt",
           "off_current_threshold": "Trothwy cerrynt OFF",
           "power_cycle_delay": "Oedi cylch pŵer",
-          "modes": "Moddau disgleirdeb"
+          "modes": "Moddau disgleirdeb",
+          "current_stability_samples": "Hidlydd sefydlogrwydd cerrynt",
+          "round_brightness_to_5": "Talgrynnu disgleirdeb i 5%"
         },
         "data_description": {
           "off_current_threshold": "Ystyrir cerrynt ar y trothwy hwn neu'n is yn OFF.",
           "modes": "Yn gyntaf dysgwch foddau disgleirdeb y lamp newydd i'r integreiddiad. Defnyddiwch fotwm corfforol y lamp i ddewis pob lefel a'i hychwanegu isod, er enghraifft High, Medium, Low a Dim.",
           "current_sensor": "Dim ond synwyryddion cerrynt sy'n perthyn i'r plwg clyfar a ddewiswyd sydd ar gael yma.",
-          "power_cycle_delay": "Fel arfer nid oes angen oedi ychwanegol. Os nad yw lamp a ddiffoddwyd â'i botwm ei hun yn troi ymlaen o Home Assistant, gosodwch oedi bach, er enghraifft 0.7 s."
+          "power_cycle_delay": "Fel arfer nid oes angen oedi ychwanegol. Os nad yw lamp a ddiffoddwyd â'i botwm ei hun yn troi ymlaen o Home Assistant, gosodwch oedi bach, er enghraifft 0.7 s.",
+          "current_stability_samples": "Mae'n gofyn i'r un gwerth cerrynt newydd gael ei adrodd y nifer hwn o weithiau yn olynol cyn newid y modd disgleirdeb. Mae ON/OFF yn cael eu cymhwyso ar unwaith. Mae 0 yn analluogi'r hidlydd; y rhagosodiad yw 2.",
+          "round_brightness_to_5": "Talgrynna'r disgleirdeb a gyfrifwyd i'r 5% agosaf. Analluogwch i ddefnyddio canrannau cyfan heb gamau 5%."
         }
       }
     },

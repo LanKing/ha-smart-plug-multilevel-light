@@ -16,13 +16,17 @@
           "current_sensor": "Sensori i rrymës",
           "off_current_threshold": "Pragu i rrymës OFF",
           "power_cycle_delay": "Vonesa e ciklit të energjisë",
-          "modes": "Modalitetet e ndriçimit"
+          "modes": "Modalitetet e ndriçimit",
+          "current_stability_samples": "Filtri i stabilitetit të rrymës",
+          "round_brightness_to_5": "Rrumbullakos ndriçimin në 5%"
         },
         "data_description": {
           "off_current_threshold": "Rryma në ose nën këtë prag konsiderohet OFF.",
           "modes": "Fillimisht mësojini integrimit mënyrat e ndriçimit të llambës së re. Me butonin fizik të llambës zgjidhni çdo nivel dhe shtojeni më poshtë, p.sh. High, Medium, Low dhe Dim.",
           "current_sensor": "Këtu janë të disponueshëm vetëm sensorët e rrymës që i përkasin prizës inteligjente të zgjedhur.",
-          "power_cycle_delay": "Zakonisht nuk nevojitet vonesë shtesë. Nëse një llambë e fikur me butonin e vet nuk ndizet nga Home Assistant, vendosni një vonesë të vogël, p.sh. 0,7 s."
+          "power_cycle_delay": "Zakonisht nuk nevojitet vonesë shtesë. Nëse një llambë e fikur me butonin e vet nuk ndizet nga Home Assistant, vendosni një vonesë të vogël, p.sh. 0,7 s.",
+          "current_stability_samples": "Kërkon që e njëjta vlerë e re e rrymës të raportohet kaq herë radhazi para ndryshimit të modalitetit të ndriçimit. ON/OFF zbatohen menjëherë. 0 çaktivizon filtrin; parazgjedhja është 2.",
+          "round_brightness_to_5": "Rrumbullakos ndriçimin e llogaritur në 5% më të afërt. Çaktivizojeni për përqindje të plota pa hapa 5%."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Sensori i rrymës",
           "off_current_threshold": "Pragu i rrymës OFF",
           "power_cycle_delay": "Vonesa e ciklit të energjisë",
-          "modes": "Modalitetet e ndriçimit"
+          "modes": "Modalitetet e ndriçimit",
+          "current_stability_samples": "Filtri i stabilitetit të rrymës",
+          "round_brightness_to_5": "Rrumbullakos ndriçimin në 5%"
         },
         "data_description": {
           "off_current_threshold": "Rryma në ose nën këtë prag konsiderohet OFF.",
           "modes": "Fillimisht mësojini integrimit mënyrat e ndriçimit të llambës së re. Me butonin fizik të llambës zgjidhni çdo nivel dhe shtojeni më poshtë, p.sh. High, Medium, Low dhe Dim.",
           "current_sensor": "Këtu janë të disponueshëm vetëm sensorët e rrymës që i përkasin prizës inteligjente të zgjedhur.",
-          "power_cycle_delay": "Zakonisht nuk nevojitet vonesë shtesë. Nëse një llambë e fikur me butonin e vet nuk ndizet nga Home Assistant, vendosni një vonesë të vogël, p.sh. 0,7 s."
+          "power_cycle_delay": "Zakonisht nuk nevojitet vonesë shtesë. Nëse një llambë e fikur me butonin e vet nuk ndizet nga Home Assistant, vendosni një vonesë të vogël, p.sh. 0,7 s.",
+          "current_stability_samples": "Kërkon që e njëjta vlerë e re e rrymës të raportohet kaq herë radhazi para ndryshimit të modalitetit të ndriçimit. ON/OFF zbatohen menjëherë. 0 çaktivizon filtrin; parazgjedhja është 2.",
+          "round_brightness_to_5": "Rrumbullakos ndriçimin e llogaritur në 5% më të afërt. Çaktivizojeni për përqindje të plota pa hapa 5%."
         }
       }
     },

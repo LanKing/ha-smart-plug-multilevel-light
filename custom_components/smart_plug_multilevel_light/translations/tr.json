@@ -16,13 +16,17 @@
           "current_sensor": "Akım sensörü",
           "off_current_threshold": "OFF akım eşiği",
           "power_cycle_delay": "Güç döngüsü gecikmesi",
-          "modes": "Parlaklık modları"
+          "modes": "Parlaklık modları",
+          "current_stability_samples": "Akım kararlılığı filtresi",
+          "round_brightness_to_5": "Parlaklığı %5'e yuvarla"
         },
         "data_description": {
           "off_current_threshold": "Bu eşikte veya altında olan akım OFF kabul edilir.",
           "modes": "Önce entegrasyona yeni lambanın parlaklık modlarını öğretin. Lambanın fiziksel düğmesiyle her seviyeyi seçip aşağıya ekleyin, örneğin High, Medium, Low ve Dim.",
           "current_sensor": "Burada yalnızca seçilen akıllı prize ait akım sensörleri kullanılabilir.",
-          "power_cycle_delay": "Genellikle ek gecikme gerekmez. Kendi düğmesiyle kapatılan bir lamba Home Assistant'tan açılmıyorsa küçük bir gecikme ayarlayın, örneğin 0,7 s."
+          "power_cycle_delay": "Genellikle ek gecikme gerekmez. Kendi düğmesiyle kapatılan bir lamba Home Assistant'tan açılmıyorsa küçük bir gecikme ayarlayın, örneğin 0,7 s.",
+          "current_stability_samples": "Algılanan parlaklık modu değişmeden önce aynı yeni akım değerinin bu kadar kez art arda raporlanmasını gerektirir. ON/OFF hemen uygulanır. 0 filtreyi kapatır; varsayılan 2'dir.",
+          "round_brightness_to_5": "Hesaplanan parlaklığı en yakın %5'e yuvarlar. %5 adımları olmadan tam yüzdeler kullanmak için kapatın."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Akım sensörü",
           "off_current_threshold": "OFF akım eşiği",
           "power_cycle_delay": "Güç döngüsü gecikmesi",
-          "modes": "Parlaklık modları"
+          "modes": "Parlaklık modları",
+          "current_stability_samples": "Akım kararlılığı filtresi",
+          "round_brightness_to_5": "Parlaklığı %5'e yuvarla"
         },
         "data_description": {
           "off_current_threshold": "Bu eşikte veya altında olan akım OFF kabul edilir.",
           "modes": "Önce entegrasyona yeni lambanın parlaklık modlarını öğretin. Lambanın fiziksel düğmesiyle her seviyeyi seçip aşağıya ekleyin, örneğin High, Medium, Low ve Dim.",
           "current_sensor": "Burada yalnızca seçilen akıllı prize ait akım sensörleri kullanılabilir.",
-          "power_cycle_delay": "Genellikle ek gecikme gerekmez. Kendi düğmesiyle kapatılan bir lamba Home Assistant'tan açılmıyorsa küçük bir gecikme ayarlayın, örneğin 0,7 s."
+          "power_cycle_delay": "Genellikle ek gecikme gerekmez. Kendi düğmesiyle kapatılan bir lamba Home Assistant'tan açılmıyorsa küçük bir gecikme ayarlayın, örneğin 0,7 s.",
+          "current_stability_samples": "Algılanan parlaklık modu değişmeden önce aynı yeni akım değerinin bu kadar kez art arda raporlanmasını gerektirir. ON/OFF hemen uygulanır. 0 filtreyi kapatır; varsayılan 2'dir.",
+          "round_brightness_to_5": "Hesaplanan parlaklığı en yakın %5'e yuvarlar. %5 adımları olmadan tam yüzdeler kullanmak için kapatın."
         }
       }
     },

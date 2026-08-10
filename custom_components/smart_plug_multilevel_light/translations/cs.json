@@ -16,13 +16,17 @@
           "current_sensor": "Senzor proudu",
           "off_current_threshold": "Prah proudu pro OFF",
           "power_cycle_delay": "Prodleva restartu napájení",
-          "modes": "Režimy jasu"
+          "modes": "Režimy jasu",
+          "current_stability_samples": "Filtr stability proudu",
+          "round_brightness_to_5": "Zaokrouhlovat jas na 5%"
         },
         "data_description": {
           "off_current_threshold": "Proud na této hodnotě nebo nižší se považuje za OFF.",
           "modes": "Nejprve integraci naučte režimy jasu nové lampy. Fyzickým tlačítkem na lampě vyberte jednotlivé úrovně a přidejte je níže, například High, Medium, Low a Dim.",
           "current_sensor": "Zde jsou dostupné pouze snímače proudu patřící k vybrané chytré zásuvce.",
-          "power_cycle_delay": "Obvykle není potřeba žádné další zpoždění. Pokud se lampa vypnutá vlastním tlačítkem nezapne z Home Assistantu, nastavte malé zpoždění, například 0,7 s."
+          "power_cycle_delay": "Obvykle není potřeba žádné další zpoždění. Pokud se lampa vypnutá vlastním tlačítkem nezapne z Home Assistantu, nastavte malé zpoždění, například 0,7 s.",
+          "current_stability_samples": "Před změnou režimu jasu vyžaduje, aby byla stejná nová hodnota proudu nahlášena tolikrát za sebou. ON/OFF se použije okamžitě. 0 filtr vypne; výchozí hodnota je 2.",
+          "round_brightness_to_5": "Zaokrouhlí vypočtený jas na nejbližších 5 %. Vypněte pro použití celých procent bez kroků po 5 %."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Senzor proudu",
           "off_current_threshold": "Prah proudu pro OFF",
           "power_cycle_delay": "Prodleva restartu napájení",
-          "modes": "Režimy jasu"
+          "modes": "Režimy jasu",
+          "current_stability_samples": "Filtr stability proudu",
+          "round_brightness_to_5": "Zaokrouhlovat jas na 5%"
         },
         "data_description": {
           "off_current_threshold": "Proud na této hodnotě nebo nižší se považuje za OFF.",
           "modes": "Nejprve integraci naučte režimy jasu nové lampy. Fyzickým tlačítkem na lampě vyberte jednotlivé úrovně a přidejte je níže, například High, Medium, Low a Dim.",
           "current_sensor": "Zde jsou dostupné pouze snímače proudu patřící k vybrané chytré zásuvce.",
-          "power_cycle_delay": "Obvykle není potřeba žádné další zpoždění. Pokud se lampa vypnutá vlastním tlačítkem nezapne z Home Assistantu, nastavte malé zpoždění, například 0,7 s."
+          "power_cycle_delay": "Obvykle není potřeba žádné další zpoždění. Pokud se lampa vypnutá vlastním tlačítkem nezapne z Home Assistantu, nastavte malé zpoždění, například 0,7 s.",
+          "current_stability_samples": "Před změnou režimu jasu vyžaduje, aby byla stejná nová hodnota proudu nahlášena tolikrát za sebou. ON/OFF se použije okamžitě. 0 filtr vypne; výchozí hodnota je 2.",
+          "round_brightness_to_5": "Zaokrouhlí vypočtený jas na nejbližších 5 %. Vypněte pro použití celých procent bez kroků po 5 %."
         }
       }
     },

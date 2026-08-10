@@ -16,13 +16,17 @@
           "current_sensor": "Sensor arus",
           "off_current_threshold": "Ambang arus OFF",
           "power_cycle_delay": "Jeda siklus daya",
-          "modes": "Mode kecerahan"
+          "modes": "Mode kecerahan",
+          "current_stability_samples": "Filter kestabilan arus",
+          "round_brightness_to_5": "Bulatkan kecerahan ke 5%"
         },
         "data_description": {
           "off_current_threshold": "Arus pada atau di bawah ambang ini dianggap OFF.",
           "modes": "Pertama, ajarkan mode kecerahan lampu baru ke integrasi. Gunakan tombol fisik pada lampu untuk memilih setiap tingkat dan tambahkan di bawah, misalnya High, Medium, Low, dan Dim.",
           "current_sensor": "Hanya sensor arus milik smart plug yang dipilih yang tersedia di sini.",
-          "power_cycle_delay": "Biasanya tidak diperlukan penundaan tambahan. Jika lampu yang dimatikan dengan tombolnya sendiri tidak menyala dari Home Assistant, atur penundaan kecil, misalnya 0,7 s."
+          "power_cycle_delay": "Biasanya tidak diperlukan penundaan tambahan. Jika lampu yang dimatikan dengan tombolnya sendiri tidak menyala dari Home Assistant, atur penundaan kecil, misalnya 0,7 s.",
+          "current_stability_samples": "Memerlukan nilai arus baru yang sama dilaporkan sebanyak ini berturut-turut sebelum mode kecerahan berubah. ON/OFF diterapkan segera. 0 menonaktifkan filter; bawaan 2.",
+          "round_brightness_to_5": "Membulatkan kecerahan yang dihitung ke 5% terdekat. Nonaktifkan untuk menggunakan persentase bulat tanpa langkah 5%."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Sensor arus",
           "off_current_threshold": "Ambang arus OFF",
           "power_cycle_delay": "Jeda siklus daya",
-          "modes": "Mode kecerahan"
+          "modes": "Mode kecerahan",
+          "current_stability_samples": "Filter kestabilan arus",
+          "round_brightness_to_5": "Bulatkan kecerahan ke 5%"
         },
         "data_description": {
           "off_current_threshold": "Arus pada atau di bawah ambang ini dianggap OFF.",
           "modes": "Pertama, ajarkan mode kecerahan lampu baru ke integrasi. Gunakan tombol fisik pada lampu untuk memilih setiap tingkat dan tambahkan di bawah, misalnya High, Medium, Low, dan Dim.",
           "current_sensor": "Hanya sensor arus milik smart plug yang dipilih yang tersedia di sini.",
-          "power_cycle_delay": "Biasanya tidak diperlukan penundaan tambahan. Jika lampu yang dimatikan dengan tombolnya sendiri tidak menyala dari Home Assistant, atur penundaan kecil, misalnya 0,7 s."
+          "power_cycle_delay": "Biasanya tidak diperlukan penundaan tambahan. Jika lampu yang dimatikan dengan tombolnya sendiri tidak menyala dari Home Assistant, atur penundaan kecil, misalnya 0,7 s.",
+          "current_stability_samples": "Memerlukan nilai arus baru yang sama dilaporkan sebanyak ini berturut-turut sebelum mode kecerahan berubah. ON/OFF diterapkan segera. 0 menonaktifkan filter; bawaan 2.",
+          "round_brightness_to_5": "Membulatkan kecerahan yang dihitung ke 5% terdekat. Nonaktifkan untuk menggunakan persentase bulat tanpa langkah 5%."
         }
       }
     },

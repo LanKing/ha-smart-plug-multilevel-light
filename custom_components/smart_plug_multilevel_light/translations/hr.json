@@ -16,13 +16,17 @@
           "current_sensor": "Senzor struje",
           "off_current_threshold": "Prag struje za OFF",
           "power_cycle_delay": "Odgoda ciklusa napajanja",
-          "modes": "Načini svjetline"
+          "modes": "Načini svjetline",
+          "current_stability_samples": "Filtar stabilnosti struje",
+          "round_brightness_to_5": "Zaokruži svjetlinu na 5%"
         },
         "data_description": {
           "off_current_threshold": "Struja na ili ispod ovog praga smatra se OFF.",
           "modes": "Najprije naučite integraciju načinima svjetline nove svjetiljke. Fizičkim gumbom na svjetiljci odaberite svaku razinu i dodajte je ispod, primjerice High, Medium, Low i Dim.",
           "current_sensor": "Ovdje su dostupni samo senzori struje koji pripadaju odabranoj pametnoj utičnici.",
-          "power_cycle_delay": "Obično nije potrebna dodatna odgoda. Ako se svjetiljka ugašena vlastitim gumbom ne uključi iz Home Assistanta, postavite malu odgodu, primjerice 0,7 s."
+          "power_cycle_delay": "Obično nije potrebna dodatna odgoda. Ako se svjetiljka ugašena vlastitim gumbom ne uključi iz Home Assistanta, postavite malu odgodu, primjerice 0,7 s.",
+          "current_stability_samples": "Za promjenu načina svjetline ista nova vrijednost struje mora biti prijavljena ovoliko puta zaredom. ON/OFF se primjenjuju odmah. 0 isključuje filtar; zadano je 2.",
+          "round_brightness_to_5": "Zaokružuje izračunatu svjetlinu na najbližih 5%. Isključite za cijele postotke bez koraka od 5%."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Senzor struje",
           "off_current_threshold": "Prag struje za OFF",
           "power_cycle_delay": "Odgoda ciklusa napajanja",
-          "modes": "Načini svjetline"
+          "modes": "Načini svjetline",
+          "current_stability_samples": "Filtar stabilnosti struje",
+          "round_brightness_to_5": "Zaokruži svjetlinu na 5%"
         },
         "data_description": {
           "off_current_threshold": "Struja na ili ispod ovog praga smatra se OFF.",
           "modes": "Najprije naučite integraciju načinima svjetline nove svjetiljke. Fizičkim gumbom na svjetiljci odaberite svaku razinu i dodajte je ispod, primjerice High, Medium, Low i Dim.",
           "current_sensor": "Ovdje su dostupni samo senzori struje koji pripadaju odabranoj pametnoj utičnici.",
-          "power_cycle_delay": "Obično nije potrebna dodatna odgoda. Ako se svjetiljka ugašena vlastitim gumbom ne uključi iz Home Assistanta, postavite malu odgodu, primjerice 0,7 s."
+          "power_cycle_delay": "Obično nije potrebna dodatna odgoda. Ako se svjetiljka ugašena vlastitim gumbom ne uključi iz Home Assistanta, postavite malu odgodu, primjerice 0,7 s.",
+          "current_stability_samples": "Za promjenu načina svjetline ista nova vrijednost struje mora biti prijavljena ovoliko puta zaredom. ON/OFF se primjenjuju odmah. 0 isključuje filtar; zadano je 2.",
+          "round_brightness_to_5": "Zaokružuje izračunatu svjetlinu na najbližih 5%. Isključite za cijele postotke bez koraka od 5%."
         }
       }
     },

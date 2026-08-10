@@ -16,13 +16,17 @@
           "current_sensor": "Straumskynjari",
           "off_current_threshold": "OFF-straumþröskuldur",
           "power_cycle_delay": "Seinkun á aflræsingu",
-          "modes": "Birtustillingar"
+          "modes": "Birtustillingar",
+          "current_stability_samples": "Straumstöðugleikasía",
+          "round_brightness_to_5": "Námunda birtu að 5%"
         },
         "data_description": {
           "off_current_threshold": "Straumur við eða undir þessum þröskuldi telst OFF.",
           "modes": "Kenndu fyrst samþættingunni birtustillingar nýja lampans. Notaðu hnappinn á lampanum til að velja hvert stig og bættu því við hér fyrir neðan, til dæmis High, Medium, Low og Dim.",
           "current_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir.",
-          "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s."
+          "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s.",
+          "current_stability_samples": "Krefst þess að sama nýja straumgildi berist svona oft í röð áður en birtustilling breytist. ON/OFF gildir strax. 0 slekkur á síunni; sjálfgefið er 2.",
+          "round_brightness_to_5": "Námundar reiknaða birtu að næstu 5%. Slökktu til að nota heil prósent án 5% skrefa."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Straumskynjari",
           "off_current_threshold": "OFF-straumþröskuldur",
           "power_cycle_delay": "Seinkun á aflræsingu",
-          "modes": "Birtustillingar"
+          "modes": "Birtustillingar",
+          "current_stability_samples": "Straumstöðugleikasía",
+          "round_brightness_to_5": "Námunda birtu að 5%"
         },
         "data_description": {
           "off_current_threshold": "Straumur við eða undir þessum þröskuldi telst OFF.",
           "modes": "Kenndu fyrst samþættingunni birtustillingar nýja lampans. Notaðu hnappinn á lampanum til að velja hvert stig og bættu því við hér fyrir neðan, til dæmis High, Medium, Low og Dim.",
           "current_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir.",
-          "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s."
+          "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s.",
+          "current_stability_samples": "Krefst þess að sama nýja straumgildi berist svona oft í röð áður en birtustilling breytist. ON/OFF gildir strax. 0 slekkur á síunni; sjálfgefið er 2.",
+          "round_brightness_to_5": "Námundar reiknaða birtu að næstu 5%. Slökktu til að nota heil prósent án 5% skrefa."
         }
       }
     },

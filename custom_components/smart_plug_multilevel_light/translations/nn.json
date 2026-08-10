@@ -16,13 +16,17 @@
           "current_sensor": "Straumsensor",
           "off_current_threshold": "OFF-straumterskel",
           "power_cycle_delay": "Forseinking for straumsyklus",
-          "modes": "Lysstyrkemodusar"
+          "modes": "Lysstyrkemodusar",
+          "current_stability_samples": "Filter for straumstabilitet",
+          "round_brightness_to_5": "Rund lysstyrke til 5%"
         },
         "data_description": {
           "off_current_threshold": "Straum på eller under denne terskelen blir rekna som OFF.",
           "modes": "Lær først integrasjonen lysstyrkemodusane til den nye lampa. Bruk den fysiske knappen på lampa til å velje kvart nivå og legg det til nedanfor, til dømes High, Medium, Low og Dim.",
           "current_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her.",
-          "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s."
+          "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s.",
+          "current_stability_samples": "Krev at den same nye straumverdien blir rapportert så mange gonger på rad før lysstyrkemodusen blir endra. ON/OFF blir brukt med ein gong. 0 slår av filteret; standard er 2.",
+          "round_brightness_to_5": "Rundar berekna lysstyrke til næraste 5 %. Slå av for å bruke heile prosent utan steg på 5 %."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Straumsensor",
           "off_current_threshold": "OFF-straumterskel",
           "power_cycle_delay": "Forseinking for straumsyklus",
-          "modes": "Lysstyrkemodusar"
+          "modes": "Lysstyrkemodusar",
+          "current_stability_samples": "Filter for straumstabilitet",
+          "round_brightness_to_5": "Rund lysstyrke til 5%"
         },
         "data_description": {
           "off_current_threshold": "Straum på eller under denne terskelen blir rekna som OFF.",
           "modes": "Lær først integrasjonen lysstyrkemodusane til den nye lampa. Bruk den fysiske knappen på lampa til å velje kvart nivå og legg det til nedanfor, til dømes High, Medium, Low og Dim.",
           "current_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her.",
-          "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s."
+          "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s.",
+          "current_stability_samples": "Krev at den same nye straumverdien blir rapportert så mange gonger på rad før lysstyrkemodusen blir endra. ON/OFF blir brukt med ein gong. 0 slår av filteret; standard er 2.",
+          "round_brightness_to_5": "Rundar berekna lysstyrke til næraste 5 %. Slå av for å bruke heile prosent utan steg på 5 %."
         }
       }
     },

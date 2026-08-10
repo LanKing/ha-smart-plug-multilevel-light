@@ -16,13 +16,17 @@
           "current_sensor": "Vooluandur",
           "off_current_threshold": "OFF-voolulävi",
           "power_cycle_delay": "Toitetsükli viivitus",
-          "modes": "Heledusrežiimid"
+          "modes": "Heledusrežiimid",
+          "current_stability_samples": "Voolu stabiilsusfilter",
+          "round_brightness_to_5": "Ümarda heledus 5%-ni"
         },
         "data_description": {
           "off_current_threshold": "Selle lävega võrdne või väiksem vool loetakse OFF-olekuks.",
           "modes": "Kõigepealt õpetage integratsioonile uue lambi heledusrežiimid. Valige lambi füüsilise nupuga iga tase ja lisage see allpool, näiteks High, Medium, Low ja Dim.",
           "current_sensor": "Siin on saadaval ainult valitud nutipistikule kuuluvad vooluandurid.",
-          "power_cycle_delay": "Tavaliselt pole lisaviivitust vaja. Kui oma nupust välja lülitatud lamp ei lülitu Home Assistantist sisse, määrake väike viivitus, näiteks 0,7 s."
+          "power_cycle_delay": "Tavaliselt pole lisaviivitust vaja. Kui oma nupust välja lülitatud lamp ei lülitu Home Assistantist sisse, määrake väike viivitus, näiteks 0,7 s.",
+          "current_stability_samples": "Enne heledusrežiimi muutmist peab sama uus vooluväärtus saabuma nii mitu korda järjest. ON/OFF rakendub kohe. 0 lülitab filtri välja; vaikimisi on 2.",
+          "round_brightness_to_5": "Ümardab arvutatud heleduse lähima 5%-ni. Lülitage välja, et kasutada täisprotsente ilma 5% sammudeta."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Vooluandur",
           "off_current_threshold": "OFF-voolulävi",
           "power_cycle_delay": "Toitetsükli viivitus",
-          "modes": "Heledusrežiimid"
+          "modes": "Heledusrežiimid",
+          "current_stability_samples": "Voolu stabiilsusfilter",
+          "round_brightness_to_5": "Ümarda heledus 5%-ni"
         },
         "data_description": {
           "off_current_threshold": "Selle lävega võrdne või väiksem vool loetakse OFF-olekuks.",
           "modes": "Kõigepealt õpetage integratsioonile uue lambi heledusrežiimid. Valige lambi füüsilise nupuga iga tase ja lisage see allpool, näiteks High, Medium, Low ja Dim.",
           "current_sensor": "Siin on saadaval ainult valitud nutipistikule kuuluvad vooluandurid.",
-          "power_cycle_delay": "Tavaliselt pole lisaviivitust vaja. Kui oma nupust välja lülitatud lamp ei lülitu Home Assistantist sisse, määrake väike viivitus, näiteks 0,7 s."
+          "power_cycle_delay": "Tavaliselt pole lisaviivitust vaja. Kui oma nupust välja lülitatud lamp ei lülitu Home Assistantist sisse, määrake väike viivitus, näiteks 0,7 s.",
+          "current_stability_samples": "Enne heledusrežiimi muutmist peab sama uus vooluväärtus saabuma nii mitu korda järjest. ON/OFF rakendub kohe. 0 lülitab filtri välja; vaikimisi on 2.",
+          "round_brightness_to_5": "Ümardab arvutatud heleduse lähima 5%-ni. Lülitage välja, et kasutada täisprotsente ilma 5% sammudeta."
         }
       }
     },

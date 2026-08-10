@@ -16,13 +16,17 @@
           "current_sensor": "Current sensor",
           "off_current_threshold": "OFF current threshold",
           "power_cycle_delay": "Power-cycle delay",
-          "modes": "Brightness modes"
+          "modes": "Brightness modes",
+          "current_stability_samples": "Current stability filter",
+          "round_brightness_to_5": "Round brightness to 5%"
         },
         "data_description": {
           "current_sensor": "Only current sensors belonging to the selected smart plug are available here.",
           "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
           "power_cycle_delay": "Usually no additional delay is needed. If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
-          "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add it below, for example High, Medium, Low, and Dim."
+          "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add it below, for example High, Medium, Low, and Dim.",
+          "current_stability_samples": "Requires the same changed current value this many times in a row before changing the detected brightness mode. ON/OFF are applied immediately. 0 disables the filter; the default is 2.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable this to use whole percentages without 5% steps."
         }
       }
     },
@@ -42,13 +46,17 @@
           "current_sensor": "Current sensor",
           "off_current_threshold": "OFF current threshold",
           "power_cycle_delay": "Power-cycle delay",
-          "modes": "Brightness modes"
+          "modes": "Brightness modes",
+          "current_stability_samples": "Current stability filter",
+          "round_brightness_to_5": "Round brightness to 5%"
         },
         "data_description": {
           "current_sensor": "Only current sensors belonging to the selected smart plug are available here.",
           "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
           "power_cycle_delay": "Usually no additional delay is needed. If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
-          "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add it below, for example High, Medium, Low, and Dim."
+          "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add it below, for example High, Medium, Low, and Dim.",
+          "current_stability_samples": "Requires the same changed current value this many times in a row before changing the detected brightness mode. ON/OFF are applied immediately. 0 disables the filter; the default is 2.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable this to use whole percentages without 5% steps."
         }
       }
     },
