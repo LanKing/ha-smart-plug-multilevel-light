@@ -208,7 +208,7 @@ def _normalize_modes(raw_modes: Any) -> list[dict[str, Any]]:
 class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Smart Plug Multi-Level Light."""
 
-    VERSION = 6
+    VERSION = 7
 
     def __init__(self) -> None:
         self._outlet: str | None = None
