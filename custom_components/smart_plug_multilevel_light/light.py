@@ -80,15 +80,18 @@ class SmartPlugMultiLevelLight(LightEntity):
         )
 
     @staticmethod
-    def _estimated_brightness(current: float, max_current: float) -> int:
-        """Estimate visual brightness from current draw, rounded to 5%."""
-        if max_current <= 0:
+    def _estimated_brightness(
+        current: float, min_current: float, max_current: float
+    ) -> int:
+        """Estimate visual brightness across the configured current range."""
+        current_range = max_current - min_current
+        if current_range <= 0:
             return 100
 
-        ratio = max(0.0, min(1.0, current / max_current))
-        estimated = ratio**3 * 100
+        ratio = max(0.0, min(1.0, (current - min_current) / current_range))
+        estimated = 10 + ratio * 90
         rounded = 5 * int(estimated / 5 + 0.5)
-        return max(5, min(100, rounded))
+        return max(10, min(100, rounded))
 
     def _modes_with_brightness(self) -> list[dict[str, Any]]:
         raw_modes = self._cfg.get(CONF_MODES, [])
@@ -96,12 +99,13 @@ class SmartPlugMultiLevelLight(LightEntity):
             return []
 
         modes = sorted(raw_modes, key=lambda mode: float(mode[MODE_CURRENT]))
+        min_current = float(modes[0][MODE_CURRENT])
         max_current = float(modes[-1][MODE_CURRENT])
         return [
             {
                 **mode,
                 MODE_BRIGHTNESS: self._estimated_brightness(
-                    float(mode[MODE_CURRENT]), max_current
+                    float(mode[MODE_CURRENT]), min_current, max_current
                 ),
             }
             for mode in modes
