@@ -5,9 +5,11 @@ on:
     paths:
       - "scripts/sync_translations.py"
       - "scripts/sync_new_settings_translations.py"
+      - "scripts/sync_readme_history.py"
       - "custom_components/smart_plug_multilevel_light/strings.json"
       - "custom_components/smart_plug_multilevel_light/translations/**"
       - "custom_components/smart_plug_multilevel_light/static/smart-plug-multilevel-light-locales.js"
+      - "README_RU.md"
   workflow_dispatch:
 
 permissions:
@@ -18,18 +20,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Synchronize translations
+      - name: Synchronize translations and Russian docs
         run: |
           python scripts/sync_translations.py
           python scripts/sync_new_settings_translations.py
-      - name: Commit synchronized translations
+          python scripts/sync_readme_history.py
+      - name: Commit synchronized files
         run: |
           if git diff --quiet; then
-            echo "Translations are already synchronized."
+            echo "Translations and docs are already synchronized."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add custom_components/smart_plug_multilevel_light/translations custom_components/smart_plug_multilevel_light/static/smart-plug-multilevel-light-locales.js
-          git commit -m "Synchronize translations"
+          git add custom_components/smart_plug_multilevel_light/translations custom_components/smart_plug_multilevel_light/static/smart-plug-multilevel-light-locales.js README_RU.md
+          git commit -m "Synchronize translations and Russian docs"
           git push
