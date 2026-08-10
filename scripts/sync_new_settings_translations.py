@@ -11,18 +11,17 @@ LOCALES_JS = ROOT / "custom_components" / "smart_plug_multilevel_light" / "stati
 POWER_BASELINE = "0d32c707f3d5ec45fa9009a07a98ab7d2cd8964c"
 RAW_BASE = f"https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/{POWER_BASELINE}"
 
-EN_LABEL = "Recent power readings"
+EN_LABEL = "Consecutive readings to switch"
 EN_HELP = (
-    "Number of latest power readings used to determine the mode. Each reading is first "
-    "mapped to a configured mode threshold, then the most frequent mode wins; if several "
-    "modes are tied, the most recent one wins. Default is 5."
+    "Number of consecutive power readings that must map to the same new mode before "
+    "the integration switches modes. Until then, the current mode is kept unchanged. "
+    "Default is 3."
 )
-RU_LABEL = "Последние показания мощности"
+RU_LABEL = "Показаний подряд для переключения"
 RU_HELP = (
-    "Количество последних показаний мощности, используемых для определения режима. "
-    "Каждое показание сначала сопоставляется с настроенными порогами режимов, затем "
-    "выбирается режим, встретившийся чаще всего; при равенстве побеждает самый свежий. "
-    "По умолчанию — 5."
+    "Количество последовательных показаний мощности, которые должны соответствовать "
+    "одному и тому же новому режиму, прежде чем интеграция переключит режим. До этого "
+    "текущий режим сохраняется без изменений. По умолчанию — 3."
 )
 
 
