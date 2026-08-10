@@ -2,13 +2,14 @@
 from __future__ import annotations
 
 import json
-import subprocess
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TRANSLATIONS = ROOT / "custom_components" / "smart_plug_multilevel_light" / "translations"
 LOCALES_JS = ROOT / "custom_components" / "smart_plug_multilevel_light" / "static" / "smart-plug-multilevel-light-locales.js"
 POWER_BASELINE = "0d32c707f3d5ec45fa9009a07a98ab7d2cd8964c"
+RAW_BASE = f"https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/{POWER_BASELINE}"
 
 EN_LABEL = "Recent power readings"
 EN_HELP = (
@@ -26,13 +27,9 @@ RU_HELP = (
 )
 
 
-def git_show(path: str) -> str:
-    return subprocess.check_output(
-        ["git", "show", f"{POWER_BASELINE}:{path}"],
-        cwd=ROOT,
-        text=True,
-        encoding="utf-8",
-    )
+def fetch_baseline(path: str) -> str:
+    with urllib.request.urlopen(f"{RAW_BASE}/{path}") as response:
+        return response.read().decode("utf-8")
 
 
 def patch_step(step: dict, locale: str) -> None:
@@ -49,7 +46,7 @@ def main() -> None:
 
     for path in files:
         relative = path.relative_to(ROOT).as_posix()
-        doc = json.loads(git_show(relative))
+        doc = json.loads(fetch_baseline(relative))
         locale = path.stem
         patch_step(doc["config"]["step"]["settings"], locale)
         patch_step(doc["options"]["step"]["init"], locale)
@@ -59,7 +56,7 @@ def main() -> None:
         )
 
     locales_relative = LOCALES_JS.relative_to(ROOT).as_posix()
-    LOCALES_JS.write_text(git_show(locales_relative), encoding="utf-8")
+    LOCALES_JS.write_text(fetch_baseline(locales_relative), encoding="utf-8")
 
 
 if __name__ == "__main__":
