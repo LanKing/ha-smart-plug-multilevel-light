@@ -13,15 +13,16 @@ RAW_BASE = f"https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-
 
 EN_LABEL = "Consecutive readings to switch"
 EN_HELP = (
-    "Number of consecutive power readings that must map to the same new mode before "
-    "the integration switches modes. Until then, the current mode is kept unchanged. "
-    "Default is 3."
+    "Number of consecutive one-second power samples that must map to the same new mode "
+    "before the integration switches modes. State changes are sampled immediately as "
+    "well. Until confirmation, the current mode is kept unchanged. Default is 3."
 )
 RU_LABEL = "Показаний подряд для переключения"
 RU_HELP = (
-    "Количество последовательных показаний мощности, которые должны соответствовать "
-    "одному и тому же новому режиму, прежде чем интеграция переключит режим. До этого "
-    "текущий режим сохраняется без изменений. По умолчанию — 3."
+    "Количество последовательных секундных замеров мощности, которые должны "
+    "соответствовать одному и тому же новому режиму, прежде чем интеграция переключит "
+    "режим. Изменения состояния также фиксируются сразу. До подтверждения текущий режим "
+    "сохраняется без изменений. По умолчанию — 3."
 )
 
 
