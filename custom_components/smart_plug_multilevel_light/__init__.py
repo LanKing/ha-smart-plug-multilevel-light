@@ -13,11 +13,11 @@ from homeassistant.helpers import entity_registry as er
 from homeassistant.setup import async_setup_component
 
 from .const import (
-    CONF_CURRENT_HISTORY_SAMPLES,
-    CONF_CURRENT_SENSOR,
     CONF_MODES,
     CONF_OUTLET,
     CONF_POWER_CYCLE_DELAY,
+    CONF_POWER_HISTORY_SAMPLES,
+    CONF_POWER_SENSOR,
     CONF_ROUND_BRIGHTNESS_TO_5,
     DOMAIN,
     PLATFORMS,
@@ -43,7 +43,7 @@ _DATA_CONFIG_UI_REGISTERED = "config_ui_registered"
 _DATA_RESOURCE_REGISTERED = "resource_registered"
 
 
-def _current_sensor_for_outlet(hass: HomeAssistant, outlet: str) -> str | None:
+def _power_sensor_for_outlet(hass: HomeAssistant, outlet: str) -> str | None:
     registry = er.async_get(hass)
     outlet_entry = registry.async_get(outlet)
     if outlet_entry is None or outlet_entry.device_id is None:
@@ -55,16 +55,16 @@ def _current_sensor_for_outlet(hass: HomeAssistant, outlet: str) -> str | None:
         if not item.entity_id.startswith("sensor."):
             continue
         state = hass.states.get(item.entity_id)
-        if state is not None and state.attributes.get(ATTR_DEVICE_CLASS) == "current":
+        if state is not None and state.attributes.get(ATTR_DEVICE_CLASS) == "power":
             return item.entity_id
     return None
 
 
 async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Migrate older helpers to the current-history schema."""
-    if entry.version >= 5:
+    """Migrate older helpers to the exact-power history schema."""
+    if entry.version >= 6:
         return True
-    if entry.version not in {3, 4}:
+    if entry.version not in {3, 4, 5}:
         _LOGGER.error("Unsupported config entry version %s", entry.version)
         return False
 
@@ -73,19 +73,18 @@ async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if not outlet:
         return False
 
-    current_sensor = merged.get(CONF_CURRENT_SENSOR)
+    power_sensor = merged.get(CONF_POWER_SENSOR)
     modes = merged.get(CONF_MODES, [])
 
-    # Version 4 may be the short-lived power-based model. Its mode values cannot
-    # be converted to amperes, so switch back to the sibling current sensor and
-    # clear only those incompatible power modes.
-    if not current_sensor:
-        current_sensor = _current_sensor_for_outlet(hass, outlet)
+    # Version 4 is the previous power-based model, so its power sensor and mode
+    # values can be retained. Current-based versions cannot be converted to W.
+    if not power_sensor:
+        power_sensor = _power_sensor_for_outlet(hass, outlet)
         modes = []
 
-    if not current_sensor:
+    if not power_sensor:
         _LOGGER.error(
-            "Could not migrate %s: no current sensor belongs to outlet %s",
+            "Could not migrate %s: no power sensor belongs to outlet %s",
             entry.title,
             outlet,
         )
@@ -95,14 +94,14 @@ async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         entry,
         data={
             CONF_OUTLET: outlet,
-            CONF_CURRENT_SENSOR: str(current_sensor),
+            CONF_POWER_SENSOR: str(power_sensor),
             CONF_POWER_CYCLE_DELAY: merged.get(CONF_POWER_CYCLE_DELAY, 0.7),
-            CONF_CURRENT_HISTORY_SAMPLES: 5,
+            CONF_POWER_HISTORY_SAMPLES: merged.get(CONF_POWER_HISTORY_SAMPLES, 5),
             CONF_ROUND_BRIGHTNESS_TO_5: merged.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
             CONF_MODES: modes,
         },
         options={},
-        version=5,
+        version=6,
     )
     return True
 
