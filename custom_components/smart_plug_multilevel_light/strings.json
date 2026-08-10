@@ -24,8 +24,8 @@
           "current_sensor": "Only current sensors belonging to the selected smart plug are available here.",
           "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
           "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
-          "current_stability_samples": "Filters unstable or coarse current readings so a single sample does not switch the detected brightness mode. A changed current is accepted only after the same value is reported this many times in a row. ON and OFF are always applied immediately. Set 0 to disable the filter; 2 is recommended by default.",
-          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5% (for example, 42% becomes 40%). Disable this to use whole percentages without 5% steps.",
+          "current_stability_samples": "Requires the same changed current value this many times in a row before changing the detected brightness mode. ON/OFF are applied immediately. 0 disables the filter; the default is 2.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable this to use whole percentages without 5% steps.",
           "modes": "For a new lamp, first teach the integration its brightness modes. Manually use the physical button on the lamp to switch to the first brightness level and add it below. Then use the same button to switch to the next level and repeat until all modes are added, for example High, Medium, Low, and Dim."
         }
       }
@@ -54,8 +54,8 @@
           "current_sensor": "Only current sensors belonging to the selected smart plug are available here.",
           "off_current_threshold": "Current at or below this threshold is treated as OFF. A small value such as 0.005 A helps ignore idle measurement noise.",
           "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
-          "current_stability_samples": "Filters unstable or coarse current readings so a single sample does not switch the detected brightness mode. A changed current is accepted only after the same value is reported this many times in a row. ON and OFF are always applied immediately. Set 0 to disable the filter; 2 is recommended by default.",
-          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5% (for example, 42% becomes 40%). Disable this to use whole percentages without 5% steps.",
+          "current_stability_samples": "Requires the same changed current value this many times in a row before changing the detected brightness mode. ON/OFF are applied immediately. 0 disables the filter; the default is 2.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable this to use whole percentages without 5% steps.",
           "modes": "For a new lamp, first teach the integration its brightness modes. Manually use the physical button on the lamp to switch to the first brightness level and add it below. Then use the same button to switch to the next level and repeat until all modes are added, for example High, Medium, Low, and Dim."
         }
       }
