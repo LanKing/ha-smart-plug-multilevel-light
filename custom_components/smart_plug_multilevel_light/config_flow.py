@@ -13,10 +13,12 @@ from homeassistant.helpers import entity_registry as er, selector
 from . import async_ensure_frontend_assets
 from .const import (
     CONF_CURRENT_SENSOR,
+    CONF_CURRENT_STABILITY_SAMPLES,
     CONF_MODES,
     CONF_OFF_CURRENT_THRESHOLD,
     CONF_OUTLET,
     CONF_POWER_CYCLE_DELAY,
+    CONF_ROUND_BRIGHTNESS_TO_5,
     DOMAIN,
     MODE_CURRENT,
     MODE_NAME,
@@ -181,6 +183,21 @@ def _settings_schema(
                     mode=selector.NumberSelectorMode.BOX,
                 )
             ),
+            vol.Required(
+                CONF_CURRENT_STABILITY_SAMPLES,
+                default=defaults.get(CONF_CURRENT_STABILITY_SAMPLES, 2),
+            ): selector.NumberSelector(
+                selector.NumberSelectorConfig(
+                    min=0,
+                    max=10,
+                    step=1,
+                    mode=selector.NumberSelectorMode.BOX,
+                )
+            ),
+            vol.Required(
+                CONF_ROUND_BRIGHTNESS_TO_5,
+                default=defaults.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
+            ): selector.BooleanSelector(),
             vol.Required(CONF_MODES, default=modes_default): _modes_selector(),
         }
     )
@@ -242,6 +259,8 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
             CONF_CURRENT_SENSOR: currents[0],
             CONF_OFF_CURRENT_THRESHOLD: 0.005,
             CONF_POWER_CYCLE_DELAY: 0.7,
+            CONF_CURRENT_STABILITY_SAMPLES: 2,
+            CONF_ROUND_BRIGHTNESS_TO_5: True,
             CONF_MODES: [],
         }
 
@@ -308,6 +327,12 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
                 CONF_OFF_CURRENT_THRESHOLD, 0.005
             ),
             CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0.7),
+            CONF_CURRENT_STABILITY_SAMPLES: current.get(
+                CONF_CURRENT_STABILITY_SAMPLES, 2
+            ),
+            CONF_ROUND_BRIGHTNESS_TO_5: current.get(
+                CONF_ROUND_BRIGHTNESS_TO_5, True
+            ),
             CONF_MODES: current.get(CONF_MODES, []),
         }
 
