@@ -76,17 +76,11 @@ class SmartPlugMultiLevelLight(LightEntity):
         except (TypeError, ValueError):
             return 0.0
 
-    @staticmethod
-    def _normalized_power(value: float) -> float:
-        """Normalize power to the 0.1 W resolution used by configuration."""
-        return round(float(value), 1)
-
     def _record_power(self, value: float) -> None:
-        value = self._normalized_power(value)
         if value <= 0:
             self._power_history.clear()
             return
-        self._power_history.append(value)
+        self._power_history.append(float(value))
         self._power_history = self._power_history[-self._history_size :]
 
     @property
@@ -138,57 +132,61 @@ class SmartPlugMultiLevelLight(LightEntity):
             for mode in modes
         ]
 
-    def _selected_power(self) -> float | None:
-        """Return the most frequent configured power in the recent sample window."""
-        configured = {
-            self._normalized_power(float(mode[MODE_POWER]))
-            for mode in self._cfg.get(CONF_MODES, [])
-        }
-        if not configured:
+    @staticmethod
+    def _mode_index_for_power(power: float, modes: list[dict[str, Any]]) -> int | None:
+        if power <= 0 or not modes:
             return None
 
-        valid = [value for value in self._power_history if value in configured]
-        if not valid:
+        selected = 0
+        for index, mode in enumerate(modes):
+            if power < float(mode[MODE_POWER]):
+                break
+            selected = index
+        return selected
+
+    def _history_mode_indices(self, modes: list[dict[str, Any]]) -> list[int]:
+        return [
+            index
+            for value in self._power_history
+            if (index := self._mode_index_for_power(value, modes)) is not None
+        ]
+
+    def _selected_mode_index(self, modes: list[dict[str, Any]]) -> int | None:
+        """Return the most frequent threshold-mapped mode in the recent window."""
+        indices = self._history_mode_indices(modes)
+        if not indices:
             return None
 
-        counts = Counter(valid)
+        counts = Counter(indices)
         highest_count = max(counts.values())
-        winners = {value for value, count in counts.items() if count == highest_count}
+        winners = {index for index, count in counts.items() if count == highest_count}
 
-        # On a tie prefer the value seen most recently in the window.
-        for value in reversed(valid):
-            if value in winners:
-                return value
+        # On a tie prefer the mode produced by the most recent reading.
+        for index in reversed(indices):
+            if index in winners:
+                return index
         return None
 
     def _mode(self) -> dict[str, Any] | None:
         if not self.is_on:
             return None
-        selected_power = self._selected_power()
-        if selected_power is None:
-            return None
-
-        for mode in self._modes_with_brightness():
-            if self._normalized_power(float(mode[MODE_POWER])) == selected_power:
-                return mode
-        return None
+        modes = self._modes_with_brightness()
+        index = self._selected_mode_index(modes)
+        return modes[index] if index is not None else None
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
         mode = self._mode()
         modes = self._modes_with_brightness()
-        configured = {
-            self._normalized_power(float(item[MODE_POWER])) for item in modes
-        }
-        valid_history = [value for value in self._power_history if value in configured]
+        indices = self._history_mode_indices(modes)
         return {
             "mode": mode[MODE_NAME] if mode else "Off",
             "brightness_pct": int(mode[MODE_BRIGHTNESS]) if mode else 0,
             "measured_power": self._float_state(self._power_sensor),
             "power_history": list(self._power_history),
-            "valid_power_history": valid_history,
+            "power_history_modes": [modes[index][MODE_NAME] for index in indices],
             "power_history_samples": self._history_size,
-            "selected_power": self._selected_power(),
+            "selected_power_mode": mode[MODE_NAME] if mode else None,
             "configured_modes": [
                 {
                     "name": item[MODE_NAME],
