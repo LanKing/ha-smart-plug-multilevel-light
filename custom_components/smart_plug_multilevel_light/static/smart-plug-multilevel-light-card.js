@@ -199,11 +199,34 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
     return cfg;
   }
 
+  _visualBrightnessPct(pct) {
+    const value = Math.max(0, Math.min(100, Number(pct) || 0));
+    const anchors = [
+      [0, 0],
+      [15, 15],
+      [25, 30],
+      [40, 50],
+      [100, 100],
+    ];
+
+    for (let index = 1; index < anchors.length; index += 1) {
+      const [x1, y1] = anchors[index];
+      if (value > x1) continue;
+      const [x0, y0] = anchors[index - 1];
+      const span = x1 - x0;
+      if (span <= 0) return y1;
+      const ratio = (value - x0) / span;
+      return y0 + ratio * (y1 - y0);
+    }
+
+    return 100;
+  }
+
   _visualState(realState) {
     if (!realState) return realState;
     const isOn = realState.state === "on";
     const pct = Math.max(0, Math.min(100, Number(realState.attributes.brightness_pct ?? 0)));
-    const visualPct = isOn ? 40 + 0.6 * pct : 0;
+    const visualPct = isOn ? this._visualBrightnessPct(pct) : 0;
     const brightness = isOn ? Math.max(1, Math.round(visualPct * 255 / 100)) : undefined;
     const t = visualPct / 100;
     const scale = 0.10 + 0.90 * t;
