@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import asyncio
-from collections import Counter
 from typing import Any
 
 from homeassistant.components.light import ColorMode, LightEntity
@@ -49,6 +48,7 @@ class SmartPlugMultiLevelLight(LightEntity):
         self._attr_name = entry.title
         self._attr_unique_id = entry.entry_id
         self._power_history: list[float] = []
+        self._selected_mode_index_value: int | None = None
 
     @property
     def _cfg(self) -> dict[str, Any]:
@@ -65,9 +65,9 @@ class SmartPlugMultiLevelLight(LightEntity):
     @property
     def _history_size(self) -> int:
         try:
-            value = int(self._cfg.get(CONF_POWER_HISTORY_SAMPLES, 5))
+            value = int(self._cfg.get(CONF_POWER_HISTORY_SAMPLES, 3))
         except (TypeError, ValueError):
-            value = 5
+            value = 3
         return max(1, min(100, value))
 
     def _float_state(self, entity_id: str) -> float:
@@ -79,12 +79,52 @@ class SmartPlugMultiLevelLight(LightEntity):
         except (TypeError, ValueError):
             return 0.0
 
+    @staticmethod
+    def _mode_index_for_power(
+        power: float,
+        modes: list[dict[str, Any]],
+    ) -> int | None:
+        if power <= 0 or not modes:
+            return None
+
+        selected = 0
+        for index, mode in enumerate(modes):
+            if power < float(mode[MODE_POWER]):
+                break
+            selected = index
+        return selected
+
     def _record_power(self, value: float) -> None:
         if value <= 0:
             self._power_history.clear()
+            self._selected_mode_index_value = None
             return
+
         self._power_history.append(float(value))
         self._power_history = self._power_history[-self._history_size :]
+
+        modes = self._modes_with_brightness()
+        candidate = self._mode_index_for_power(value, modes)
+        if candidate is None:
+            return
+
+        # Establish an initial mode immediately. Once a mode is known, only switch
+        # after N consecutive readings all map to the same different mode.
+        if self._selected_mode_index_value is None:
+            self._selected_mode_index_value = candidate
+            return
+
+        if candidate == self._selected_mode_index_value:
+            return
+
+        if len(self._power_history) < self._history_size:
+            return
+
+        recent_modes = [
+            self._mode_index_for_power(item, modes) for item in self._power_history
+        ]
+        if all(index == candidate for index in recent_modes):
+            self._selected_mode_index_value = candidate
 
     @property
     def icon(self) -> str:
@@ -135,21 +175,6 @@ class SmartPlugMultiLevelLight(LightEntity):
             for mode in modes
         ]
 
-    @staticmethod
-    def _mode_index_for_power(
-        power: float,
-        modes: list[dict[str, Any]],
-    ) -> int | None:
-        if power <= 0 or not modes:
-            return None
-
-        selected = 0
-        for index, mode in enumerate(modes):
-            if power < float(mode[MODE_POWER]):
-                break
-            selected = index
-        return selected
-
     def _history_mode_indices(self, modes: list[dict[str, Any]]) -> list[int]:
         return [
             index
@@ -157,28 +182,14 @@ class SmartPlugMultiLevelLight(LightEntity):
             if (index := self._mode_index_for_power(value, modes)) is not None
         ]
 
-    def _selected_mode_index(self, modes: list[dict[str, Any]]) -> int | None:
-        """Return the most frequent threshold-mapped mode in the recent window."""
-        indices = self._history_mode_indices(modes)
-        if not indices:
-            return None
-
-        counts = Counter(indices)
-        highest_count = max(counts.values())
-        winners = {index for index, count in counts.items() if count == highest_count}
-
-        # On a tie prefer the mode produced by the most recent reading.
-        for index in reversed(indices):
-            if index in winners:
-                return index
-        return None
-
     def _mode(self) -> dict[str, Any] | None:
         if not self.is_on:
             return None
         modes = self._modes_with_brightness()
-        index = self._selected_mode_index(modes)
-        return modes[index] if index is not None else None
+        index = self._selected_mode_index_value
+        if index is None or index >= len(modes):
+            return None
+        return modes[index]
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
@@ -250,6 +261,7 @@ class SmartPlugMultiLevelLight(LightEntity):
             outlet_state = self.hass.states.get(self._outlet)
             if outlet_state is None or outlet_state.state != "on":
                 self._power_history.clear()
+                self._selected_mode_index_value = None
             else:
                 self._record_power(self._float_state(self._power_sensor))
         self.async_write_ha_state()
