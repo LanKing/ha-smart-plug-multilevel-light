@@ -6,30 +6,30 @@
     return Boolean(
       object?.multiple &&
       object?.label_field === "name" &&
-      object?.description_field === "current" &&
+      object?.description_field === "power" &&
       object?.fields?.name &&
-      object?.fields?.current
+      object?.fields?.power
     );
   };
 
-  const findCurrentSensor = (selector) => {
+  const findPowerSensor = (selector) => {
     try {
       const selectorHost = selector.getRootNode()?.host;
       const formHost = selectorHost?.getRootNode?.()?.host;
-      return String(formHost?.data?.current_sensor || "");
+      return String(formHost?.data?.power_sensor || "");
     } catch (_) {
       return "";
     }
   };
 
-  const stateToAmps = (state) => {
+  const stateToWatts = (state) => {
     if (!state || ["unknown", "unavailable"].includes(state.state)) return null;
     const numeric = Number(state.state);
     if (!Number.isFinite(numeric)) return null;
-    const unit = String(state.attributes?.unit_of_measurement || "A").trim();
-    if (unit === "mA") return numeric / 1000;
-    if (unit === "µA" || unit === "uA") return numeric / 1000000;
-    if (unit === "kA") return numeric * 1000;
+    const unit = String(state.attributes?.unit_of_measurement || "W").trim();
+    if (unit === "mW") return numeric / 1000;
+    if (unit === "kW") return numeric * 1000;
+    if (unit === "MW") return numeric * 1000000;
     return numeric;
   };
 
@@ -51,8 +51,15 @@
   const modeNameHelp = (selector) =>
     custom(selector, "mode_name_help", "For example: High, Medium, Low, or Dim.");
 
+  const thresholdHelp = (selector) =>
+    custom(
+      selector,
+      "threshold_help",
+      "We recommend setting the threshold about 15% below the measured power because lamp consumption can vary slightly between measurements."
+    );
+
   const measuredActionText = (selector) =>
-    `${common(selector, "ui.common.apply", "Apply")} ${custom(selector, "measured_current", "measured current")}`;
+    `${common(selector, "ui.common.apply", "Apply")} ${custom(selector, "measured_power", "measured power")} −15%`;
 
   const getModesHelperText = (selector) => {
     const localize = selector?.hass?.localize?.bind(selector.hass);
@@ -111,7 +118,10 @@
     const editing = index !== null;
     const existing = editing && Array.isArray(selector.value) ? selector.value[index] || {} : {};
     const dialog = document.createElement("ha-dialog");
-    dialog.setAttribute("header-title", common(selector, editing ? "ui.common.edit" : "ui.common.add", editing ? "Edit" : "Add"));
+    dialog.setAttribute(
+      "header-title",
+      common(selector, editing ? "ui.common.edit" : "ui.common.add", editing ? "Edit" : "Add")
+    );
     dialog.setAttribute("prevent-scrim-close", "");
 
     const body = document.createElement("div");
@@ -139,14 +149,14 @@
         </div>
         <div class="spml-field">
           <div class="spml-threshold-head">
-            <label class="spml-label spml-current-label" for="spml-current">${custom(selector, "current_threshold", "Current value")}</label>
+            <label class="spml-label spml-power-label" for="spml-power">${custom(selector, "power_threshold", "Power threshold")}</label>
             <span class="spml-measured"></span>
           </div>
           <div class="spml-input-wrap">
-            <input id="spml-current" class="spml-input spml-current" type="number" min="0" step="0.001" required inputmode="decimal" />
-            <span class="spml-unit">A</span>
+            <input id="spml-power" class="spml-input spml-power" type="number" min="0" step="0.1" required inputmode="decimal" />
+            <span class="spml-unit">W</span>
           </div>
-          <div class="spml-helper"><button type="button" class="spml-inline-action">${measuredActionText(selector)}</button></div>
+          <div class="spml-helper">${thresholdHelp(selector)} <button type="button" class="spml-inline-action">${measuredActionText(selector)}</button></div>
         </div>
       </div>`;
 
@@ -160,30 +170,31 @@
     document.body.append(dialog);
 
     const nameInput = body.querySelector(".spml-name");
-    const currentInput = body.querySelector(".spml-current");
+    const powerInput = body.querySelector(".spml-power");
     const nameLabel = body.querySelector(".spml-name-label");
-    const currentLabel = body.querySelector(".spml-current-label");
+    const powerLabel = body.querySelector(".spml-power-label");
     const measured = body.querySelector(".spml-measured");
     const applyMeasured = body.querySelector(".spml-inline-action");
     nameInput.value = existing.name ?? "";
-    currentInput.value = existing.current ?? "";
+    powerInput.value = existing.power ?? "";
 
     const clearInvalid = (label) => label?.classList.remove("spml-invalid");
     const markInvalid = (label) => label?.classList.add("spml-invalid");
-    nameInput.addEventListener("input", () => clearInvalid(nameLabel));
-    currentInput.addEventListener("input", () => clearInvalid(currentLabel));
 
-    const entityId = findCurrentSensor(selector);
+    nameInput.addEventListener("input", () => clearInvalid(nameLabel));
+    powerInput.addEventListener("input", () => clearInvalid(powerLabel));
+
+    const entityId = findPowerSensor(selector);
     let measuredValue = null;
     let unsubscribe = null;
     let closed = false;
 
     const renderMeasured = (state) => {
-      measuredValue = stateToAmps(state);
+      measuredValue = stateToWatts(state);
       applyMeasured.disabled = measuredValue === null;
       measured.textContent = measuredValue === null
-        ? `${custom(selector, "measured_current", "Measured current")}: ${unavailableText(selector)}`
-        : `${custom(selector, "measured_current", "Measured current")}: ${measuredValue.toFixed(3).replace(/0+$/, "").replace(/\.$/, "")} A`;
+        ? `${custom(selector, "measured_power", "Measured power")}: ${unavailableText(selector)}`
+        : `${custom(selector, "measured_power", "Measured power")}: ${measuredValue.toFixed(2).replace(/0+$/, "").replace(/\.$/, "")} W`;
     };
 
     renderMeasured(entityId ? selector.hass?.states?.[entityId] : undefined);
@@ -191,17 +202,20 @@
       selector.hass.connection.subscribeEvents((event) => {
         if (event?.data?.entity_id === entityId) renderMeasured(event.data.new_state);
       }, "state_changed").then((unsub) => {
-        if (closed) { try { unsub(); } catch (_) {} return; }
+        if (closed) {
+          try { unsub(); } catch (_) {}
+          return;
+        }
         unsubscribe = unsub;
       }).catch(() => {});
     }
 
     applyMeasured.addEventListener("click", () => {
       if (measuredValue === null) return;
-      currentInput.value = String(Number(measuredValue.toFixed(3)));
-      currentInput.dispatchEvent(new Event("input", { bubbles: true }));
-      currentInput.focus();
-      currentInput.select();
+      powerInput.value = String(Number((measuredValue * 0.85).toFixed(2)));
+      powerInput.dispatchEvent(new Event("input", { bubbles: true }));
+      powerInput.focus();
+      powerInput.select();
     });
 
     const close = () => { dialog.open = false; };
@@ -209,24 +223,39 @@
 
     const save = () => {
       clearInvalid(nameLabel);
-      clearInvalid(currentLabel);
+      clearInvalid(powerLabel);
+
       const name = String(nameInput.value || "").trim();
-      const current = Number(currentInput.value);
+      const power = Number(powerInput.value);
+      const nameValid = Boolean(name) && nameInput.checkValidity();
+      const powerValid = powerInput.checkValidity() && Number.isFinite(power);
+
       const invalidInputs = [];
-      if (!name || !nameInput.checkValidity()) { markInvalid(nameLabel); invalidInputs.push(nameInput); }
-      if (!currentInput.checkValidity() || !Number.isFinite(current)) { markInvalid(currentLabel); invalidInputs.push(currentInput); }
-      if (invalidInputs.length) { invalidInputs[0].focus(); return; }
+      if (!nameValid) {
+        markInvalid(nameLabel);
+        invalidInputs.push(nameInput);
+      }
+      if (!powerValid) {
+        markInvalid(powerLabel);
+        invalidInputs.push(powerInput);
+      }
+      if (invalidInputs.length) {
+        invalidInputs[0].focus();
+        return;
+      }
 
       const next = Array.isArray(selector.value) ? selector.value.slice() : [];
-      const item = { name, current: Number(current.toFixed(3)) };
+      const item = { name, power };
       if (editing) next[index] = item; else next.push(item);
-      next.sort((a, b) => Number(a.current) - Number(b.current));
+      next.sort((a, b) => Number(a.power) - Number(b.power));
       selector.dispatchEvent(new CustomEvent("value-changed", { detail: { value: next }, bubbles: true, composed: true }));
       close();
     };
 
     footer.querySelector(".spml-save")?.addEventListener("click", save);
-    body.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); save(); } });
+    body.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") { event.preventDefault(); save(); }
+    });
     dialog.addEventListener("closed", () => {
       closed = true;
       try { unsubscribe?.(); } catch (_) {}
@@ -240,13 +269,20 @@
     const path = event.composedPath?.() || [];
     const selector = path.find((node) => node?.tagName?.toLowerCase?.() === "ha-selector-object");
     if (!selector || !isModesSelector(selector)) return;
+
     const button = path.find((node) => node?.tagName?.toLowerCase?.() === "ha-button");
     const iconButton = path.find((node) => node?.tagName?.toLowerCase?.() === "ha-icon-button");
     if (!button && !iconButton) return;
+
     if (iconButton && iconButton.item === undefined) return;
+
     event.preventDefault();
     event.stopImmediatePropagation();
-    if (iconButton && Number.isInteger(Number(iconButton.index))) openEditor(selector, Number(iconButton.index));
-    else if (button) openEditor(selector, null);
+
+    if (iconButton && Number.isInteger(Number(iconButton.index))) {
+      openEditor(selector, Number(iconButton.index));
+    } else if (button) {
+      openEditor(selector, null);
+    }
   }, true);
 })();
