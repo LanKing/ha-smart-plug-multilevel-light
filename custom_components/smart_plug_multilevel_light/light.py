@@ -9,7 +9,10 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import Event, HomeAssistant
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.event import async_track_state_change_event
+from homeassistant.helpers.event import (
+    async_track_state_change_event,
+    async_track_state_report_event,
+)
 
 from .const import (
     CONF_MODES,
@@ -220,6 +223,13 @@ class SmartPlugMultiLevelLight(LightEntity):
                 self._handle_source_change,
             )
         )
+        self.async_on_remove(
+            async_track_state_report_event(
+                self.hass,
+                self._power_sensor,
+                self._handle_power_report,
+            )
+        )
 
     async def _handle_source_change(self, event: Event) -> None:
         entity_id = event.data.get("entity_id")
@@ -231,6 +241,11 @@ class SmartPlugMultiLevelLight(LightEntity):
                 self._power_history.clear()
             else:
                 self._record_power(self._float_state(self._power_sensor))
+        self.async_write_ha_state()
+
+    async def _handle_power_report(self, event: Event) -> None:
+        """Record repeated writes of an unchanged power sensor state."""
+        self._record_power(self._float_state(self._power_sensor))
         self.async_write_ha_state()
 
     async def async_turn_on(self, **kwargs: Any) -> None:
