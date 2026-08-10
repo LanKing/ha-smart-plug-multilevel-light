@@ -24,7 +24,7 @@
           "power_cycle_delay": "معمولاً نیازی به تأخیر اضافی نیست. اگر چراغی که با دکمه خودش خاموش شده از Home Assistant روشن نمی‌شود، یک تأخیر کوتاه، مثلاً ۰٫۷ ثانیه تنظیم کنید.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of consecutive power readings that must map to the same new mode before the integration switches modes. Until then, the current mode is kept unchanged. Default is 3."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 3."
         }
       }
     },
@@ -52,7 +52,7 @@
           "power_cycle_delay": "معمولاً نیازی به تأخیر اضافی نیست. اگر چراغی که با دکمه خودش خاموش شده از Home Assistant روشن نمی‌شود، یک تأخیر کوتاه، مثلاً ۰٫۷ ثانیه تنظیم کنید.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of consecutive power readings that must map to the same new mode before the integration switches modes. Until then, the current mode is kept unchanged. Default is 3."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 3."
         }
       }
     },
