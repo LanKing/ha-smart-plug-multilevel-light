@@ -83,6 +83,21 @@ class SmartPlugMultiLevelLight(LightEntity):
         self._power_history.append(float(value))
         self._power_history = self._power_history[-self._history_size :]
 
+    def _selected_power(self) -> float | None:
+        """Return the most frequent value in the recent power window."""
+        if not self._power_history:
+            return None
+
+        counts = Counter(self._power_history)
+        highest_count = max(counts.values())
+        winners = {value for value, count in counts.items() if count == highest_count}
+
+        # On a tie prefer the value seen most recently in the window.
+        for value in reversed(self._power_history):
+            if value in winners:
+                return value
+        return None
+
     @property
     def icon(self) -> str:
         return "mdi:lightbulb-multiple" if self.is_on else "mdi:lightbulb-multiple-off"
@@ -133,60 +148,37 @@ class SmartPlugMultiLevelLight(LightEntity):
         ]
 
     @staticmethod
-    def _mode_index_for_power(power: float, modes: list[dict[str, Any]]) -> int | None:
-        if power <= 0 or not modes:
+    def _mode_for_power(
+        power: float | None,
+        modes: list[dict[str, Any]],
+    ) -> dict[str, Any] | None:
+        if power is None or power <= 0 or not modes:
             return None
 
-        selected = 0
-        for index, mode in enumerate(modes):
+        selected = modes[0]
+        for mode in modes:
             if power < float(mode[MODE_POWER]):
                 break
-            selected = index
+            selected = mode
         return selected
-
-    def _history_mode_indices(self, modes: list[dict[str, Any]]) -> list[int]:
-        return [
-            index
-            for value in self._power_history
-            if (index := self._mode_index_for_power(value, modes)) is not None
-        ]
-
-    def _selected_mode_index(self, modes: list[dict[str, Any]]) -> int | None:
-        """Return the most frequent threshold-mapped mode in the recent window."""
-        indices = self._history_mode_indices(modes)
-        if not indices:
-            return None
-
-        counts = Counter(indices)
-        highest_count = max(counts.values())
-        winners = {index for index, count in counts.items() if count == highest_count}
-
-        # On a tie prefer the mode produced by the most recent reading.
-        for index in reversed(indices):
-            if index in winners:
-                return index
-        return None
 
     def _mode(self) -> dict[str, Any] | None:
         if not self.is_on:
             return None
-        modes = self._modes_with_brightness()
-        index = self._selected_mode_index(modes)
-        return modes[index] if index is not None else None
+        return self._mode_for_power(self._selected_power(), self._modes_with_brightness())
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
         mode = self._mode()
         modes = self._modes_with_brightness()
-        indices = self._history_mode_indices(modes)
+        selected_power = self._selected_power()
         return {
             "mode": mode[MODE_NAME] if mode else "Off",
             "brightness_pct": int(mode[MODE_BRIGHTNESS]) if mode else 0,
             "measured_power": self._float_state(self._power_sensor),
             "power_history": list(self._power_history),
-            "power_history_modes": [modes[index][MODE_NAME] for index in indices],
             "power_history_samples": self._history_size,
-            "selected_power_mode": mode[MODE_NAME] if mode else None,
+            "selected_power": selected_power,
             "configured_modes": [
                 {
                     "name": item[MODE_NAME],
