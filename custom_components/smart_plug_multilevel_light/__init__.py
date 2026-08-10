@@ -25,7 +25,7 @@ from .const import (
 
 _LOGGER = logging.getLogger(__name__)
 
-_VERSION = "0.9.2"
+_VERSION = "0.9.3"
 _CARD_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-card.js"
 _CARD_URL = f"{_CARD_PATH}?v={_VERSION}"
 _CARD_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-card.js"
@@ -61,10 +61,10 @@ def _power_sensor_for_outlet(hass: HomeAssistant, outlet: str) -> str | None:
 
 
 async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Migrate older helpers to the exact-power history schema."""
-    if entry.version >= 6:
+    """Migrate older helpers to the current power-mode confirmation schema."""
+    if entry.version >= 7:
         return True
-    if entry.version not in {3, 4, 5}:
+    if entry.version not in {3, 4, 5, 6}:
         _LOGGER.error("Unsupported config entry version %s", entry.version)
         return False
 
@@ -76,8 +76,6 @@ async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     power_sensor = merged.get(CONF_POWER_SENSOR)
     modes = merged.get(CONF_MODES, [])
 
-    # Version 4 is the previous power-based model, so its power sensor and mode
-    # values can be retained. Current-based versions cannot be converted to W.
     if not power_sensor:
         power_sensor = _power_sensor_for_outlet(hass, outlet)
         modes = []
@@ -96,12 +94,15 @@ async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             CONF_OUTLET: outlet,
             CONF_POWER_SENSOR: str(power_sensor),
             CONF_POWER_CYCLE_DELAY: merged.get(CONF_POWER_CYCLE_DELAY, 0.7),
-            CONF_POWER_HISTORY_SAMPLES: merged.get(CONF_POWER_HISTORY_SAMPLES, 5),
+            # Previous versions used this field as a voting-window size. The
+            # semantics changed, so start existing helpers at three consecutive
+            # readings instead of carrying the old value across.
+            CONF_POWER_HISTORY_SAMPLES: 3,
             CONF_ROUND_BRIGHTNESS_TO_5: merged.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
             CONF_MODES: modes,
         },
         options={},
-        version=6,
+        version=7,
     )
     return True
 
