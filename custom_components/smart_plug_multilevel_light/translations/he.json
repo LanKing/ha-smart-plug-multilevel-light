@@ -17,14 +17,14 @@
           "modes": "מצבי בהירות",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5%",
-          "power_history_samples": "Recent power readings"
+          "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
           "modes": "תחילה למד את האינטגרציה את מצבי הבהירות של המנורה החדשה. השתמש בכפתור הפיזי במנורה כדי לבחור כל רמה ולהוסיף אותה למטה, למשל High, Medium, Low ו-Dim.",
           "power_cycle_delay": "בדרך כלל אין צורך בהשהיה נוספת. אם מנורה שכובתה באמצעות הכפתור שלה לא נדלקת מ-Home Assistant, הגדר השהיה קצרה, למשל 0.7 שניות.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5."
+          "power_history_samples": "Number of consecutive power readings that must map to the same new mode before the integration switches modes. Until then, the current mode is kept unchanged. Default is 3."
         }
       }
     },
@@ -45,14 +45,14 @@
           "modes": "מצבי בהירות",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5%",
-          "power_history_samples": "Recent power readings"
+          "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
           "modes": "תחילה למד את האינטגרציה את מצבי הבהירות של המנורה החדשה. השתמש בכפתור הפיזי במנורה כדי לבחור כל רמה ולהוסיף אותה למטה, למשל High, Medium, Low ו-Dim.",
           "power_cycle_delay": "בדרך כלל אין צורך בהשהיה נוספת. אם מנורה שכובתה באמצעות הכפתור שלה לא נדלקת מ-Home Assistant, הגדר השהיה קצרה, למשל 0.7 שניות.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5."
+          "power_history_samples": "Number of consecutive power readings that must map to the same new mode before the integration switches modes. Until then, the current mode is kept unchanged. Default is 3."
         }
       }
     },

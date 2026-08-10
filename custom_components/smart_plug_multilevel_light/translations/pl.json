@@ -17,14 +17,14 @@
           "modes": "Tryby jasności",
           "power_sensor": "Czujnik mocy",
           "round_brightness_to_5": "Zaokrąglaj jasność do 5%",
-          "power_history_samples": "Recent power readings"
+          "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
           "modes": "Najpierw naucz integrację trybów jasności nowej lampy. Fizycznym przyciskiem na lampie wybierz każdy poziom i dodaj go poniżej, np. High, Medium, Low i Dim.",
           "power_cycle_delay": "Zwykle dodatkowe opóźnienie nie jest potrzebne. Jeśli lampa wyłączona własnym przyciskiem nie włącza się z Home Assistant, ustaw niewielkie opóźnienie, np. 0,7 s.",
           "power_sensor": "Dostępne są tu tylko czujniki mocy należące do wybranego inteligentnego gniazdka.",
           "round_brightness_to_5": "Zaokrągla obliczoną jasność do najbliższych 5%. Wyłącz, aby używać pełnych procentów bez kroku 5%.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5."
+          "power_history_samples": "Number of consecutive power readings that must map to the same new mode before the integration switches modes. Until then, the current mode is kept unchanged. Default is 3."
         }
       }
     },
@@ -45,14 +45,14 @@
           "modes": "Tryby jasności",
           "power_sensor": "Czujnik mocy",
           "round_brightness_to_5": "Zaokrąglaj jasność do 5%",
-          "power_history_samples": "Recent power readings"
+          "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
           "modes": "Najpierw naucz integrację trybów jasności nowej lampy. Fizycznym przyciskiem na lampie wybierz każdy poziom i dodaj go poniżej, np. High, Medium, Low i Dim.",
           "power_cycle_delay": "Zwykle dodatkowe opóźnienie nie jest potrzebne. Jeśli lampa wyłączona własnym przyciskiem nie włącza się z Home Assistant, ustaw niewielkie opóźnienie, np. 0,7 s.",
           "power_sensor": "Dostępne są tu tylko czujniki mocy należące do wybranego inteligentnego gniazdka.",
           "round_brightness_to_5": "Zaokrągla obliczoną jasność do najbliższych 5%. Wyłącz, aby używać pełnych procentów bez kroku 5%.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5."
+          "power_history_samples": "Number of consecutive power readings that must map to the same new mode before the integration switches modes. Until then, the current mode is kept unchanged. Default is 3."
         }
       }
     },

@@ -17,14 +17,14 @@
           "modes": "Modes de luminosité",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5%",
-          "power_history_samples": "Recent power readings"
+          "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
           "modes": "Commencez par apprendre à l'intégration les modes de luminosité de la nouvelle lampe. Utilisez le bouton physique de la lampe pour sélectionner chaque niveau et l'ajouter ci-dessous, par exemple High, Medium, Low et Dim.",
           "power_cycle_delay": "En général, aucun délai supplémentaire n'est nécessaire. Si une lampe éteinte avec son propre bouton ne s'allume pas depuis Home Assistant, définissez un petit délai, par exemple 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5."
+          "power_history_samples": "Number of consecutive power readings that must map to the same new mode before the integration switches modes. Until then, the current mode is kept unchanged. Default is 3."
         }
       }
     },
@@ -45,14 +45,14 @@
           "modes": "Modes de luminosité",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5%",
-          "power_history_samples": "Recent power readings"
+          "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
           "modes": "Commencez par apprendre à l'intégration les modes de luminosité de la nouvelle lampe. Utilisez le bouton physique de la lampe pour sélectionner chaque niveau et l'ajouter ci-dessous, par exemple High, Medium, Low et Dim.",
           "power_cycle_delay": "En général, aucun délai supplémentaire n'est nécessaire. Si une lampe éteinte avec son propre bouton ne s'allume pas depuis Home Assistant, définissez un petit délai, par exemple 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5."
+          "power_history_samples": "Number of consecutive power readings that must map to the same new mode before the integration switches modes. Until then, the current mode is kept unchanged. Default is 3."
         }
       }
     },
