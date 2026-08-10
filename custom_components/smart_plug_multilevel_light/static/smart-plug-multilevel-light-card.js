@@ -200,26 +200,8 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
   }
 
   _visualBrightnessPct(pct) {
-    const value = Math.max(0, Math.min(100, Number(pct) || 0));
-    const anchors = [
-      [0, 0],
-      [15, 15],
-      [25, 30],
-      [40, 50],
-      [100, 100],
-    ];
-
-    for (let index = 1; index < anchors.length; index += 1) {
-      const [x1, y1] = anchors[index];
-      if (value > x1) continue;
-      const [x0, y0] = anchors[index - 1];
-      const span = x1 - x0;
-      if (span <= 0) return y1;
-      const ratio = (value - x0) / span;
-      return y0 + ratio * (y1 - y0);
-    }
-
-    return 100;
+    const value = Math.max(0, Math.min(100, Number(pct) || 0)) / 100;
+    return Math.pow(value, 1.6) * 100;
   }
 
   _visualState(realState) {
@@ -229,7 +211,7 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
     const visualPct = isOn ? this._visualBrightnessPct(pct) : 0;
     const brightness = isOn ? Math.max(1, Math.round(visualPct * 255 / 100)) : undefined;
     const t = visualPct / 100;
-    const scale = 0.10 + 0.90 * t;
+    const scale = t;
     const baseRgb = [255, 137, 14];
     const visualRgb = baseRgb.map((channel) => Math.max(1, Math.round(channel * scale)));
     const rgbToHs = ([r8, g8, b8]) => {
