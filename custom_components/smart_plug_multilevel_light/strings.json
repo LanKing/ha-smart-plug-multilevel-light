@@ -22,7 +22,7 @@
         "data_description": {
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable this to use whole percentages without 5% steps.",
           "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add its power threshold below, for example High, Medium, Low, and Dim."
         }
@@ -50,7 +50,7 @@
         "data_description": {
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
-          "power_history_samples": "Number of latest power readings used to determine the mode. The most frequent reading is selected; if several readings are tied, the most recent one wins. The selected reading is then evaluated against the configured mode thresholds. Default is 5.",
+          "power_history_samples": "Number of latest power readings used to determine the mode. Each reading is first mapped to a configured mode threshold, then the most frequent mode wins; if several modes are tied, the most recent one wins. Default is 5.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable this to use whole percentages without 5% steps.",
           "modes": "For a new lamp, first teach the integration its brightness modes. Use the physical button on the lamp to select each brightness level and add its power threshold below, for example High, Medium, Low, and Dim."
         }
