@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+from datetime import timedelta
 from typing import Any
 
 from homeassistant.components.light import ColorMode, LightEntity
@@ -10,7 +11,7 @@ from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.event import (
     async_track_state_change_event,
-    async_track_state_report_event,
+    async_track_time_interval,
 )
 
 from .const import (
@@ -25,6 +26,8 @@ from .const import (
     MODE_NAME,
     MODE_POWER,
 )
+
+_POWER_SAMPLE_INTERVAL = timedelta(seconds=1)
 
 
 async def async_setup_entry(
@@ -108,8 +111,6 @@ class SmartPlugMultiLevelLight(LightEntity):
         if candidate is None:
             return
 
-        # Establish an initial mode immediately. Once a mode is known, only switch
-        # after N consecutive readings all map to the same different mode.
         if self._selected_mode_index_value is None:
             self._selected_mode_index_value = candidate
             return
@@ -125,6 +126,14 @@ class SmartPlugMultiLevelLight(LightEntity):
         ]
         if all(index == candidate for index in recent_modes):
             self._selected_mode_index_value = candidate
+
+    def _sample_current_power(self) -> None:
+        outlet_state = self.hass.states.get(self._outlet)
+        if outlet_state is None or outlet_state.state != "on":
+            self._power_history.clear()
+            self._selected_mode_index_value = None
+            return
+        self._record_power(self._float_state(self._power_sensor))
 
     @property
     def icon(self) -> str:
@@ -203,6 +212,7 @@ class SmartPlugMultiLevelLight(LightEntity):
             "power_history": list(self._power_history),
             "power_history_modes": [modes[index][MODE_NAME] for index in indices],
             "power_history_samples": self._history_size,
+            "power_sample_interval_seconds": int(_POWER_SAMPLE_INTERVAL.total_seconds()),
             "selected_power_mode": mode[MODE_NAME] if mode else None,
             "configured_modes": [
                 {
@@ -233,10 +243,7 @@ class SmartPlugMultiLevelLight(LightEntity):
 
     async def async_added_to_hass(self) -> None:
         await super().async_added_to_hass()
-        power = self._float_state(self._power_sensor)
-        outlet_state = self.hass.states.get(self._outlet)
-        if outlet_state is not None and outlet_state.state == "on" and power > 0:
-            self._record_power(power)
+        self._sample_current_power()
 
         self.async_on_remove(
             async_track_state_change_event(
@@ -246,29 +253,20 @@ class SmartPlugMultiLevelLight(LightEntity):
             )
         )
         self.async_on_remove(
-            async_track_state_report_event(
+            async_track_time_interval(
                 self.hass,
-                self._power_sensor,
-                self._handle_power_report,
+                self._handle_periodic_sample,
+                _POWER_SAMPLE_INTERVAL,
             )
         )
 
     async def _handle_source_change(self, event: Event) -> None:
-        entity_id = event.data.get("entity_id")
-        if entity_id == self._power_sensor:
-            self._record_power(self._float_state(self._power_sensor))
-        elif entity_id == self._outlet:
-            outlet_state = self.hass.states.get(self._outlet)
-            if outlet_state is None or outlet_state.state != "on":
-                self._power_history.clear()
-                self._selected_mode_index_value = None
-            else:
-                self._record_power(self._float_state(self._power_sensor))
+        self._sample_current_power()
         self.async_write_ha_state()
 
-    async def _handle_power_report(self, event: Event) -> None:
-        """Record repeated writes of an unchanged power sensor state."""
-        self._record_power(self._float_state(self._power_sensor))
+    def _handle_periodic_sample(self, now) -> None:
+        """Sample the current Home Assistant power state once per second."""
+        self._sample_current_power()
         self.async_write_ha_state()
 
     async def async_turn_on(self, **kwargs: Any) -> None:
