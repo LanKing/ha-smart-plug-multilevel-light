@@ -199,8 +199,8 @@
     const renderCurrentPower = (state) => {
       const value = stateToWatts(state);
       currentPower.textContent = value === null
-        ? `${custom(selector, "measured_power", "Current moment power")}: —`
-        : `${custom(selector, "measured_power", "Current moment power")}: ${formatWatts(value)} W`;
+        ? `${custom(selector, "current_moment_power", "Current moment power")}: —`
+        : `${custom(selector, "current_moment_power", "Current moment power")}: ${formatWatts(value)} W`;
     };
 
     renderCurrentPower(entityId ? selector.hass?.states?.[entityId] : undefined);
