@@ -22,7 +22,7 @@
         "data_description": {
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 3.",
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable this to use whole percentages without 5% steps.",
           "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold."
         }
@@ -50,7 +50,7 @@
         "data_description": {
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "power_cycle_delay": "Usually no additional delay is needed. On some plugs, however, the power-off interval may be too short for the lamp to fully lose power. If a lamp that was switched off with its own button does not turn on from Home Assistant, set a small delay here, for example 0.7 s.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 3.",
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable this to use whole percentages without 5% steps.",
           "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold."
         }
