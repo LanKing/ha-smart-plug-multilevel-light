@@ -152,12 +152,12 @@ class SmartPlugMultiLevelLight(LightEntity):
         max_power: float,
         round_to_5: bool,
     ) -> int:
-        """Estimate visual brightness from power draw."""
+        """Estimate visual brightness linearly from power draw."""
         if max_power <= 0:
             return 100
 
         ratio = max(0.0, min(1.0, power / max_power))
-        estimated = ratio**3 * 100
+        estimated = ratio * 100
 
         if round_to_5:
             rounded = 5 * int(estimated / 5 + 0.5)
