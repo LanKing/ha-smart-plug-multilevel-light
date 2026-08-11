@@ -74,7 +74,7 @@
     helper.textContent = text;
     helper.style.cssText = [
       "display:block",
-      "margin:0 0 12px 0",
+      "margin:0 0 16px 0",
       "padding:0",
       "color:var(--secondary-text-color)",
       "font-size:12px",
@@ -85,6 +85,9 @@
 
     if (label) label.insertAdjacentElement("afterend", helper);
     else container.insertAdjacentElement("beforebegin", helper);
+
+    const addMeasuresRow = root.querySelector(".spml-add-measures-row");
+    if (addMeasuresRow) addMeasuresRow.style.marginBottom = "16px";
 
     alignHelperTexts(formRootForSelector(selector));
   };
