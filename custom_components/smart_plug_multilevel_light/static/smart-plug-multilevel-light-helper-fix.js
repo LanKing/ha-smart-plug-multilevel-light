@@ -6,9 +6,9 @@
     return Boolean(
       object?.multiple &&
       object?.label_field === "name" &&
-      object?.description_field === "current" &&
+      object?.description_field === "power" &&
       object?.fields?.name &&
-      object?.fields?.current
+      object?.fields?.power
     );
   };
 
@@ -20,6 +20,28 @@
       localize(`component.${DOMAIN}.config.step.settings.data_description.modes`) ||
       ""
     );
+  };
+
+  const formRootForSelector = (selector) => {
+    try {
+      const selectorHost = selector.getRootNode()?.host;
+      return selectorHost?.getRootNode?.() || null;
+    } catch (_) {
+      return null;
+    }
+  };
+
+  const alignHelperTexts = (root) => {
+    if (!root?.querySelectorAll) return;
+
+    for (const helper of root.querySelectorAll("ha-input-helper-text")) {
+      helper.style.paddingLeft = "0";
+      helper.style.paddingInlineStart = "0";
+    }
+
+    for (const element of root.querySelectorAll("*")) {
+      if (element.shadowRoot) alignHelperTexts(element.shadowRoot);
+    }
   };
 
   const patchSelector = (selector) => {
@@ -35,8 +57,8 @@
 
     let helper = root.querySelector(".spml-modes-helper");
 
-    // The main config UI may create a ha-input-helper-text below the Add button.
-    // Replace it with a plain block so it aligns exactly with the field heading.
+    // Keep the Brightness modes helper as a plain block so it aligns exactly
+    // with the field heading instead of inheriting Home Assistant's 16 px helper indent.
     if (helper && helper.tagName?.toLowerCase() !== "div") {
       const replacement = document.createElement("div");
       replacement.className = "spml-modes-helper";
@@ -61,9 +83,10 @@
       "max-width:100%"
     ].join(";");
 
-    // Requested layout: heading -> helper -> configured modes / Add button.
     if (label) label.insertAdjacentElement("afterend", helper);
     else container.insertAdjacentElement("beforebegin", helper);
+
+    alignHelperTexts(formRootForSelector(selector));
   };
 
   const walk = (root) => {
