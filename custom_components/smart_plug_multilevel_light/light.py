@@ -97,10 +97,15 @@ class SmartPlugMultiLevelLight(LightEntity):
             selected = index
         return selected
 
+    def _prime_high_mode(self) -> None:
+        """Start from the highest configured mode until measurements confirm another one."""
+        self._power_history.clear()
+        modes = self._modes_with_brightness()
+        self._selected_mode_index_value = len(modes) - 1 if modes else None
+
     def _record_power(self, value: float) -> None:
         if value <= 0:
-            self._power_history.clear()
-            self._selected_mode_index_value = None
+            self._prime_high_mode()
             return
 
         self._power_history.append(float(value))
@@ -243,6 +248,9 @@ class SmartPlugMultiLevelLight(LightEntity):
 
     async def async_added_to_hass(self) -> None:
         await super().async_added_to_hass()
+        outlet_state = self.hass.states.get(self._outlet)
+        if outlet_state is not None and outlet_state.state == "on":
+            self._prime_high_mode()
         self._sample_current_power()
 
         self.async_on_remove(
@@ -261,6 +269,10 @@ class SmartPlugMultiLevelLight(LightEntity):
         )
 
     async def _handle_source_change(self, event: Event) -> None:
+        if event.data.get("entity_id") == self._outlet:
+            new_state = event.data.get("new_state")
+            if new_state is not None and new_state.state == "on":
+                self._prime_high_mode()
         self._sample_current_power()
         self.async_write_ha_state()
 
