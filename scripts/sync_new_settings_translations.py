@@ -82,6 +82,8 @@ def patch_step(step: dict, locale: str) -> None:
     descriptions["power_history_samples"] = RU_HELP if locale == "ru" else EN_HELP
     data["round_brightness_to_5"] = RU_ROUND_LABEL if locale == "ru" else EN_ROUND_LABEL
     descriptions["round_brightness_to_5"] = RU_ROUND_HELP if locale == "ru" else EN_ROUND_HELP
+    current_modes_label = str(data.get("modes", "Brightness modes")).lstrip("🔅 ")
+    data["modes"] = f"🔅 {current_modes_label}"
     descriptions["modes"] = RU_MODES_HELP if locale == "ru" else EN_MODES_HELP
 
 
