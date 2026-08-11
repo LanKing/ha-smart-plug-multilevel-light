@@ -41,6 +41,9 @@
     return numeric;
   };
 
+  const formatWatts = (value) =>
+    Number(value).toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
+
   const custom = (selector, key, fallback = key) => {
     const value = window.SPML_I18N?.t(selector.hass, key);
     return !value || value === key ? fallback : value;
@@ -124,6 +127,8 @@
         .spml-field{display:flex;flex-direction:column;gap:8px}
         .spml-label{font-size:14px;font-weight:500;color:var(--primary-text-color)}
         .spml-label.spml-invalid{color:var(--error-color)}
+        .spml-threshold-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+        .spml-current{color:var(--secondary-text-color);font-size:12px;text-align:right}
         .spml-input-wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px}
         .spml-input{box-sizing:border-box;width:100%;min-height:56px;padding:0 16px;border:1px solid var(--outline-color,var(--divider-color));border-radius:12px;background:var(--card-background-color);color:var(--primary-text-color);font:inherit;font-size:16px;outline:none}
         .spml-input:focus{border:2px solid var(--primary-color);padding:0 15px}
@@ -141,7 +146,10 @@
           <div class="spml-helper">${modeNameHelp(selector)}</div>
         </div>
         <div class="spml-field">
-          <label class="spml-label spml-power-label" for="spml-power">${custom(selector, "power_threshold", "Power threshold")}</label>
+          <div class="spml-threshold-head">
+            <label class="spml-label spml-power-label" for="spml-power">${custom(selector, "power_threshold", "Power threshold")}</label>
+            <span class="spml-current"></span>
+          </div>
           <div class="spml-input-wrap">
             <input id="spml-power" class="spml-input spml-power" type="number" min="0" step="0.1" required inputmode="decimal" />
             <span class="spml-unit">W</span>
@@ -168,6 +176,7 @@
     const powerInput = body.querySelector(".spml-power");
     const nameLabel = body.querySelector(".spml-name-label");
     const powerLabel = body.querySelector(".spml-power-label");
+    const currentPower = body.querySelector(".spml-current");
     const testStatus = body.querySelector(".spml-test-status");
     const testAction = body.querySelector(".spml-test-action");
     const applyMeasured = body.querySelector(".spml-apply");
@@ -185,6 +194,27 @@
     let measuredValue = null;
     let closed = false;
     let testRun = 0;
+    let unsubscribe = null;
+
+    const renderCurrentPower = (state) => {
+      const value = stateToWatts(state);
+      currentPower.textContent = value === null
+        ? `${custom(selector, "measured_power", "Current moment power")}: —`
+        : `${custom(selector, "measured_power", "Current moment power")}: ${formatWatts(value)} W`;
+    };
+
+    renderCurrentPower(entityId ? selector.hass?.states?.[entityId] : undefined);
+    if (entityId && selector.hass?.connection?.subscribeEvents) {
+      selector.hass.connection.subscribeEvents((event) => {
+        if (event?.data?.entity_id === entityId) renderCurrentPower(event.data.new_state);
+      }, "state_changed").then((unsub) => {
+        if (closed) {
+          try { unsub(); } catch (_) {}
+          return;
+        }
+        unsubscribe = unsub;
+      }).catch(() => {});
+    }
 
     const close = () => { dialog.open = false; };
     footer.querySelector(".spml-cancel")?.addEventListener("click", close);
@@ -231,19 +261,26 @@
       applyMeasured.hidden = true;
       repeatTest.hidden = true;
       testStatus.classList.remove("spml-test-result");
-      testStatus.textContent = custom(selector, "testing_wait", "Testing, wait…");
 
       const samples = [];
       const sampleCount = findSampleCount(selector);
-      for (let i = 0; i < sampleCount; i += 1) {
-        if (closed || run !== testRun) return;
+      while (!closed && run === testRun && samples.length < sampleCount) {
         const value = stateToWatts(entityId ? selector.hass?.states?.[entityId] : undefined);
-        if (value !== null && value > 0) samples.push(value);
-        if (i < sampleCount - 1) await sleep(1000);
+        if (value !== null && value > 0) {
+          samples.push(value);
+        } else {
+          samples.length = 0;
+        }
+
+        const formattedSamples = samples.map(formatWatts).join(", ");
+        testStatus.textContent = `${custom(selector, "testing_wait", "Testing, wait")} [${formattedSamples}]`;
+
+        if (samples.length >= sampleCount) break;
+        await sleep(1000);
       }
       if (closed || run !== testRun) return;
 
-      if (samples.length !== sampleCount) {
+      if (!samples.length) {
         testStatus.textContent = custom(selector, "power_test_unavailable", "Power measurement is unavailable. Check the light and repeat the test.");
         repeatTest.hidden = false;
         testAction.disabled = false;
@@ -251,9 +288,8 @@
       }
 
       measuredValue = Math.min(...samples);
-      const formatted = measuredValue.toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
       testStatus.classList.add("spml-test-result");
-      testStatus.textContent = `${custom(selector, "measured_result", "Measured")}: ${formatted} W`;
+      testStatus.textContent = `${custom(selector, "measured_result", "Measured")}: ${formatWatts(measuredValue)} W`;
       applyMeasured.hidden = false;
       repeatTest.hidden = false;
       testAction.disabled = false;
@@ -275,6 +311,7 @@
     dialog.addEventListener("closed", () => {
       closed = true;
       testRun += 1;
+      try { unsubscribe?.(); } catch (_) {}
       dialog.remove();
     }, { once: true });
     dialog.open = true;
