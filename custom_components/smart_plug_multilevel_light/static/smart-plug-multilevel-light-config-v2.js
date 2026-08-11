@@ -22,15 +22,6 @@
     }
   };
 
-  const findFormRoot = (selector) => {
-    try {
-      const selectorHost = selector.getRootNode()?.host;
-      return selectorHost?.getRootNode?.() || null;
-    } catch (_) {
-      return null;
-    }
-  };
-
   const findPowerSensor = (selector) => String(findFormData(selector)?.power_sensor || "");
 
   const findSampleCount = (selector) => {
@@ -76,23 +67,8 @@
     );
   };
 
-  const findRoundSelectorHost = (selector) => {
-    const visit = (root) => {
-      if (!root?.querySelectorAll) return null;
-      for (const element of root.querySelectorAll("*")) {
-        if (element.shadowRoot?.querySelector?.("ha-selector-boolean")) return element;
-        if (element.shadowRoot) {
-          const nested = visit(element.shadowRoot);
-          if (nested) return nested;
-        }
-      }
-      return null;
-    };
-    return visit(findFormRoot(selector));
-  };
-
   const getDebugElement = (selector) =>
-    findFormRoot(selector)?.querySelector?.(".spml-debug-measures") || null;
+    selector?.shadowRoot?.querySelector?.(".spml-debug-measures") || null;
 
   const renderDebugSamples = (selector) => {
     if (!selector?.shadowRoot || !isModesSelector(selector)) return;
@@ -107,7 +83,7 @@
       : [];
     samples.push(value === null ? "—" : formatWatts(value));
     selector.__spmlDebugSamples = samples.slice(-maxItems);
-    debug.textContent = `${custom(selector, "last_measures_debug", "Last measures (debug)")}: [${selector.__spmlDebugSamples.join(", ")}]`;
+    debug.textContent = `${custom(selector, "last_measures_debug", "🐞 Last measures")}: [${selector.__spmlDebugSamples.join(", ")}]`;
   };
 
   const ensureModesHelper = (selector) => {
@@ -125,14 +101,25 @@
     }
     helper.textContent = text;
 
-    const roundSelectorHost = findRoundSelectorHost(selector);
-    if (roundSelectorHost) {
+    let row = selector.shadowRoot.querySelector(".spml-add-measures-row");
+    let addButton = row?.querySelector("ha-button") || selector.shadowRoot.querySelector("ha-button");
+    if (addButton) {
+      if (!row) {
+        row = document.createElement("div");
+        row.className = "spml-add-measures-row";
+        row.style.cssText = "display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;";
+        addButton.insertAdjacentElement("beforebegin", row);
+        row.append(addButton);
+      }
+
       let debug = getDebugElement(selector);
       if (!debug) {
         debug = document.createElement("div");
         debug.className = "spml-debug-measures";
-        debug.style.cssText = "margin-top:12px;color:var(--primary-text-color);font-size:14px;line-height:1.5;font-weight:400;";
-        roundSelectorHost.insertAdjacentElement("afterend", debug);
+        debug.style.cssText = "margin-left:auto;color:var(--primary-text-color);font-size:14px;line-height:1.5;font-weight:400;text-align:right;white-space:nowrap;";
+        row.append(debug);
+      } else if (debug.parentElement !== row) {
+        row.append(debug);
       }
     }
 
@@ -176,11 +163,6 @@
     setTimeout(refreshModesHelpers, 100);
     setTimeout(refreshModesHelpers, 500);
     setTimeout(refreshModesHelpers, 1500);
-  });
-
-  customElements.whenDefined("ha-selector-boolean").then(() => {
-    refreshModesHelpers();
-    setTimeout(refreshModesHelpers, 100);
   });
 
   const openEditor = (selector, index = null) => {
