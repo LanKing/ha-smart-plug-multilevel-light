@@ -16,15 +16,15 @@
           "power_cycle_delay": "மின் சுழற்சி தாமதம்",
           "modes": "ஒளிர்வு முறைகள்",
           "power_sensor": "Power sensor",
-          "round_brightness_to_5": "Round brightness to 5%",
+          "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
           "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "பொதுவாக கூடுதல் தாமதம் தேவையில்லை. தனது சொந்த பொத்தானால் அணைக்கப்பட்ட விளக்கு Home Assistant-இல் இருந்து எரியவில்லை என்றால் 0.7 s போன்ற சிறிய தாமதத்தை அமைக்கவும்.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
-          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 3."
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner. Disabled by default.",
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -44,15 +44,15 @@
           "power_cycle_delay": "மின் சுழற்சி தாமதம்",
           "modes": "ஒளிர்வு முறைகள்",
           "power_sensor": "Power sensor",
-          "round_brightness_to_5": "Round brightness to 5%",
+          "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
           "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "பொதுவாக கூடுதல் தாமதம் தேவையில்லை. தனது சொந்த பொத்தானால் அணைக்கப்பட்ட விளக்கு Home Assistant-இல் இருந்து எரியவில்லை என்றால் 0.7 s போன்ற சிறிய தாமதத்தை அமைக்கவும்.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
-          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 3."
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner. Disabled by default.",
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
