@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import urllib.request
 from pathlib import Path
 
@@ -25,6 +26,34 @@ RU_HELP = (
     "сохраняется без изменений. По умолчанию — 3."
 )
 
+EN_MODES_HELP = (
+    "For a new lamp, first teach the integration its brightness modes. Add a mode, enable "
+    "that preset on the light fixture, and use the stable power test in the mode editor to "
+    "measure and apply its power threshold."
+)
+RU_MODES_HELP = (
+    "Для нового светильника сначала задайте режимы яркости. Добавьте режим, включите "
+    "соответствующий пресет на светильнике и используйте тест стабильной мощности в "
+    "редакторе режима, чтобы измерить и применить его порог мощности."
+)
+
+EN_FRONTEND = {
+    "stable_power_prompt": "Please enable the preset on your light fixture and press",
+    "test_stable_power": "Test stable power",
+    "testing_wait": "Testing, wait…",
+    "measured_result": "Measured",
+    "repeat_test": "Repeat test",
+    "power_test_unavailable": "Power measurement is unavailable. Check the light and repeat the test.",
+}
+RU_FRONTEND = {
+    "stable_power_prompt": "Включите нужный режим на светильнике и нажмите",
+    "test_stable_power": "Проверить стабильную мощность",
+    "testing_wait": "Проверка, подождите…",
+    "measured_result": "Измерено",
+    "repeat_test": "Повторить тест",
+    "power_test_unavailable": "Не удалось измерить мощность. Проверьте светильник и повторите тест.",
+}
+
 
 def fetch_baseline(path: str) -> str:
     with urllib.request.urlopen(f"{RAW_BASE}/{path}") as response:
@@ -36,6 +65,22 @@ def patch_step(step: dict, locale: str) -> None:
     descriptions = step.setdefault("data_description", {})
     data["power_history_samples"] = RU_LABEL if locale == "ru" else EN_LABEL
     descriptions["power_history_samples"] = RU_HELP if locale == "ru" else EN_HELP
+    descriptions["modes"] = RU_MODES_HELP if locale == "ru" else EN_MODES_HELP
+
+
+def js_string(value: str) -> str:
+    return json.dumps(value, ensure_ascii=False)
+
+
+def patch_frontend_locales(text: str, locales: list[str]) -> str:
+    for locale in locales:
+        values = RU_FRONTEND if locale == "ru" else EN_FRONTEND
+        additions = "".join(f"{key}:{js_string(value)}," for key, value in values.items())
+        pattern = re.compile(rf'(^\s*(?:"{re.escape(locale)}"|{re.escape(locale)}):\{{)', re.MULTILINE)
+        text, count = pattern.subn(lambda match: match.group(1) + additions, text, count=1)
+        if count != 1:
+            raise SystemExit(f"Could not patch frontend locale {locale}")
+    return text
 
 
 def main() -> None:
@@ -43,6 +88,7 @@ def main() -> None:
     if len(files) != 64:
         raise SystemExit(f"Expected 64 translation files, found {len(files)}")
 
+    locales = [path.stem for path in files]
     for path in files:
         relative = path.relative_to(ROOT).as_posix()
         doc = json.loads(fetch_baseline(relative))
@@ -55,7 +101,11 @@ def main() -> None:
         )
 
     locales_relative = LOCALES_JS.relative_to(ROOT).as_posix()
-    LOCALES_JS.write_text(fetch_baseline(locales_relative), encoding="utf-8")
+    locales_text = fetch_baseline(locales_relative)
+    LOCALES_JS.write_text(
+        patch_frontend_locales(locales_text, locales),
+        encoding="utf-8",
+    )
 
 
 if __name__ == "__main__":
