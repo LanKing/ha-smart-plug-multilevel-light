@@ -25,8 +25,8 @@
   const findPowerSensor = (selector) => String(findFormData(selector)?.power_sensor || "");
 
   const findSampleCount = (selector) => {
-    const value = Number(findFormData(selector)?.power_history_samples ?? 3);
-    if (!Number.isFinite(value)) return 3;
+    const value = Number(findFormData(selector)?.power_history_samples ?? 5);
+    if (!Number.isFinite(value)) return 5;
     return Math.max(1, Math.min(100, Math.round(value)));
   };
 
@@ -67,10 +67,27 @@
     );
   };
 
+  const renderDebugSamples = (selector) => {
+    if (!selector?.shadowRoot || !isModesSelector(selector)) return;
+    const debug = selector.shadowRoot.querySelector(".spml-debug-measures");
+    if (!debug) return;
+
+    const entityId = findPowerSensor(selector);
+    const value = stateToWatts(entityId ? selector.hass?.states?.[entityId] : undefined);
+    const maxItems = findSampleCount(selector);
+    const samples = Array.isArray(selector.__spmlDebugSamples)
+      ? selector.__spmlDebugSamples
+      : [];
+    samples.push(value === null ? "—" : formatWatts(value));
+    selector.__spmlDebugSamples = samples.slice(-maxItems);
+    debug.textContent = `${custom(selector, "last_measures_debug", "Last measures (debug)")}: [${selector.__spmlDebugSamples.join(", ")}]`;
+  };
+
   const ensureModesHelper = (selector) => {
     if (!selector?.shadowRoot || !isModesSelector(selector)) return;
     const text = getModesHelperText(selector);
     if (!text) return;
+
     let helper = selector.shadowRoot.querySelector(".spml-modes-helper");
     if (!helper) {
       helper = document.createElement("ha-input-helper-text");
@@ -80,6 +97,27 @@
       else selector.shadowRoot.append(helper);
     }
     helper.textContent = text;
+
+    let debug = selector.shadowRoot.querySelector(".spml-debug-measures");
+    if (!debug) {
+      debug = document.createElement("div");
+      debug.className = "spml-debug-measures";
+      debug.style.cssText = "margin-top:6px;color:var(--secondary-text-color);font-size:12px;line-height:1.45;";
+      helper.insertAdjacentElement("afterend", debug);
+    }
+
+    if (!selector.__spmlDebugTimer) {
+      selector.__spmlDebugSamples = [];
+      renderDebugSamples(selector);
+      selector.__spmlDebugTimer = setInterval(() => {
+        if (!selector.isConnected) {
+          clearInterval(selector.__spmlDebugTimer);
+          selector.__spmlDebugTimer = null;
+          return;
+        }
+        renderDebugSamples(selector);
+      }, 1000);
+    }
   };
 
   const walkShadowRoots = (root, callback) => {
