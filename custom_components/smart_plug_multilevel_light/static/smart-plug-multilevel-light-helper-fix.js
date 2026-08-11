@@ -85,7 +85,8 @@
       const power = powers[index];
       if (!Number.isFinite(power)) return;
       const pct = brightnessForPower(power, maxPower, roundTo5);
-      description.textContent = `${formatNumber(power)} W · ${pct}%`;
+      const nextText = `${formatNumber(power)} W · ${pct}%`;
+      if (description.textContent !== nextText) description.textContent = nextText;
     });
   };
 
@@ -121,7 +122,7 @@
       helper.className = "spml-modes-helper";
     }
 
-    helper.textContent = text;
+    if (helper.textContent !== text) helper.textContent = text;
     helper.style.cssText = [
       "display:block",
       "margin:0 0 16px 0",
