@@ -15,9 +15,9 @@ def main() -> None:
     with urllib.request.urlopen(BASE_URL) as response:
         text = response.read().decode("utf-8")
 
-    text = text.replace("version-0.8.0-blue", "version-0.10.1-blue")
-    text = text.replace("Version 0.8.0", "Version 0.10.1")
-    text = text.replace("?v=0.8.0", "?v=0.10.1")
+    text = text.replace("version-0.8.0-blue", "version-0.10.2-blue")
+    text = text.replace("Version 0.8.0", "Version 0.10.2")
+    text = text.replace("?v=0.8.0", "?v=0.10.2")
 
     text = text.replace(
         "* Автоматически определяет текущий режим работы светильника по фактически измеренной мощности;",
