@@ -21,9 +21,9 @@
         },
         "data_description": {
           "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "Genellikle ek gecikme gerekmez. Kendi düğmesiyle kapatılan bir lamba Home Assistant'tan açılmıyorsa küçük bir gecikme ayarlayın, örneğin 0,7 s.",
+          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
-          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner. Disabled by default.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
           "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
@@ -49,9 +49,9 @@
         },
         "data_description": {
           "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "Genellikle ek gecikme gerekmez. Kendi düğmesiyle kapatılan bir lamba Home Assistant'tan açılmıyorsa küçük bir gecikme ayarlayın, örneğin 0,7 s.",
+          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
-          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner. Disabled by default.",
+          "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
           "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
