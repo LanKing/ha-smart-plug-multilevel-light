@@ -40,17 +40,19 @@ RU_MODES_HELP = (
 EN_FRONTEND = {
     "stable_power_prompt": "Please enable the preset on your light fixture and press",
     "test_stable_power": "Test stable power",
-    "testing_wait": "Testing, wait…",
+    "testing_wait": "Testing, wait",
     "measured_result": "Measured",
     "repeat_test": "Repeat test",
+    "current_moment_power": "Current moment power",
     "power_test_unavailable": "Power measurement is unavailable. Check the light and repeat the test.",
 }
 RU_FRONTEND = {
     "stable_power_prompt": "Включите нужный режим на светильнике и нажмите",
     "test_stable_power": "Проверить стабильную мощность",
-    "testing_wait": "Проверка, подождите…",
+    "testing_wait": "Проверка, подождите",
     "measured_result": "Измерено",
     "repeat_test": "Повторить тест",
+    "current_moment_power": "Текущая мощность",
     "power_test_unavailable": "Не удалось измерить мощность. Проверьте светильник и повторите тест.",
 }
 
