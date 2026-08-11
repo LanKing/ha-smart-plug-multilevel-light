@@ -67,9 +67,22 @@
     );
   };
 
+  const findRoundSelector = (selector) => {
+    try {
+      const selectorHost = selector.getRootNode()?.host;
+      const formRoot = selectorHost?.getRootNode?.();
+      return formRoot?.querySelector?.("ha-selector-boolean") || null;
+    } catch (_) {
+      return null;
+    }
+  };
+
+  const getDebugElement = (selector) =>
+    findRoundSelector(selector)?.shadowRoot?.querySelector(".spml-debug-measures") || null;
+
   const renderDebugSamples = (selector) => {
     if (!selector?.shadowRoot || !isModesSelector(selector)) return;
-    const debug = selector.shadowRoot.querySelector(".spml-debug-measures");
+    const debug = getDebugElement(selector);
     if (!debug) return;
 
     const entityId = findPowerSensor(selector);
@@ -93,20 +106,23 @@
       helper = document.createElement("ha-input-helper-text");
       helper.className = "spml-modes-helper";
       const container = selector.shadowRoot.querySelector(".items-container");
-      if (container) container.insertAdjacentElement("afterend", helper);
-      else selector.shadowRoot.append(helper);
+      if (container) container.insertAdjacentElement("beforebegin", helper);
+      else selector.shadowRoot.prepend(helper);
     }
     helper.textContent = text;
 
-    let debug = selector.shadowRoot.querySelector(".spml-debug-measures");
-    if (!debug) {
-      debug = document.createElement("div");
-      debug.className = "spml-debug-measures";
-      debug.style.cssText = "margin-top:6px;color:var(--secondary-text-color);font-size:12px;line-height:1.45;";
-      helper.insertAdjacentElement("afterend", debug);
+    const roundSelector = findRoundSelector(selector);
+    if (roundSelector?.shadowRoot) {
+      let debug = roundSelector.shadowRoot.querySelector(".spml-debug-measures");
+      if (!debug) {
+        debug = document.createElement("div");
+        debug.className = "spml-debug-measures";
+        debug.style.cssText = "margin-top:12px;color:var(--primary-text-color);font-size:14px;line-height:1.5;font-weight:400;";
+        roundSelector.shadowRoot.append(debug);
+      }
     }
 
-    if (!selector.__spmlDebugTimer) {
+    if (!selector.__spmlDebugTimer && getDebugElement(selector)) {
       selector.__spmlDebugSamples = [];
       renderDebugSamples(selector);
       selector.__spmlDebugTimer = setInterval(() => {
@@ -146,6 +162,11 @@
     setTimeout(refreshModesHelpers, 100);
     setTimeout(refreshModesHelpers, 500);
     setTimeout(refreshModesHelpers, 1500);
+  });
+
+  customElements.whenDefined("ha-selector-boolean").then(() => {
+    refreshModesHelpers();
+    setTimeout(refreshModesHelpers, 100);
   });
 
   const openEditor = (selector, index = null) => {
