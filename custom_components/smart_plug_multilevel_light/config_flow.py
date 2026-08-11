@@ -175,11 +175,11 @@ def _settings_schema(
                     mode=selector.NumberSelectorMode.BOX,
                 )
             ),
+            vol.Required(CONF_MODES, default=defaults.get(CONF_MODES, [])): _modes_selector(),
             vol.Required(
                 CONF_ROUND_BRIGHTNESS_TO_5,
                 default=defaults.get(CONF_ROUND_BRIGHTNESS_TO_5, False),
             ): selector.BooleanSelector(),
-            vol.Required(CONF_MODES, default=defaults.get(CONF_MODES, [])): _modes_selector(),
         }
     )
 
