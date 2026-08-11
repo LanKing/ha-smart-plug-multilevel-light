@@ -177,7 +177,7 @@ def _settings_schema(
             ),
             vol.Required(
                 CONF_ROUND_BRIGHTNESS_TO_5,
-                default=defaults.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
+                default=defaults.get(CONF_ROUND_BRIGHTNESS_TO_5, False),
             ): selector.BooleanSelector(),
             vol.Required(CONF_MODES, default=defaults.get(CONF_MODES, [])): _modes_selector(),
         }
@@ -240,7 +240,7 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
             CONF_POWER_SENSOR: powers[0],
             CONF_POWER_CYCLE_DELAY: 0.7,
             CONF_POWER_HISTORY_SAMPLES: 5,
-            CONF_ROUND_BRIGHTNESS_TO_5: True,
+            CONF_ROUND_BRIGHTNESS_TO_5: False,
             CONF_MODES: [],
         }
 
@@ -297,7 +297,7 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
             CONF_POWER_SENSOR: configured_power or (powers[0] if powers else None),
             CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0.7),
             CONF_POWER_HISTORY_SAMPLES: current.get(CONF_POWER_HISTORY_SAMPLES, 5),
-            CONF_ROUND_BRIGHTNESS_TO_5: current.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
+            CONF_ROUND_BRIGHTNESS_TO_5: current.get(CONF_ROUND_BRIGHTNESS_TO_5, False),
             CONF_MODES: current.get(CONF_MODES, []),
         }
 
