@@ -25,7 +25,7 @@ from .const import (
 
 _LOGGER = logging.getLogger(__name__)
 
-_VERSION = "0.9.8"
+_VERSION = "0.9.9"
 _CARD_PATH = f"/api/{DOMAIN}/smart-plug-multilevel-light-card.js"
 _CARD_URL = f"{_CARD_PATH}?v={_VERSION}"
 _CARD_FILE = Path(__file__).parent / "static" / "smart-plug-multilevel-light-card.js"
@@ -94,8 +94,8 @@ async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             CONF_OUTLET: outlet,
             CONF_POWER_SENSOR: str(power_sensor),
             CONF_POWER_CYCLE_DELAY: merged.get(CONF_POWER_CYCLE_DELAY, 0.7),
-            CONF_POWER_HISTORY_SAMPLES: 3,
-            CONF_ROUND_BRIGHTNESS_TO_5: merged.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
+            CONF_POWER_HISTORY_SAMPLES: 5,
+            CONF_ROUND_BRIGHTNESS_TO_5: merged.get(CONF_ROUND_BRIGHTNESS_TO_5, False),
             CONF_MODES: modes,
         },
         options={},
