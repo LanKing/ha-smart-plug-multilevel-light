@@ -6,7 +6,7 @@ from typing import Any
 
 from homeassistant.components.light import ColorMode, LightEntity
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.core import Event, HomeAssistant
+from homeassistant.core import Event, HomeAssistant, callback
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.event import (
@@ -264,6 +264,7 @@ class SmartPlugMultiLevelLight(LightEntity):
         self._sample_current_power()
         self.async_write_ha_state()
 
+    @callback
     def _handle_periodic_sample(self, now) -> None:
         """Sample the current Home Assistant power state once per second."""
         self._sample_current_power()
