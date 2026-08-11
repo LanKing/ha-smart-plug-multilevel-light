@@ -173,7 +173,7 @@ class SmartPlugMultiLevelLight(LightEntity):
 
         modes = sorted(raw_modes, key=lambda mode: float(mode[MODE_POWER]))
         max_power = float(modes[-1][MODE_POWER])
-        round_to_5 = bool(self._cfg.get(CONF_ROUND_BRIGHTNESS_TO_5, True))
+        round_to_5 = bool(self._cfg.get(CONF_ROUND_BRIGHTNESS_TO_5, False))
         return [
             {
                 **mode,
