@@ -16,14 +16,25 @@ EN_LABEL = "Consecutive readings to switch"
 EN_HELP = (
     "Number of consecutive one-second power samples that must map to the same new mode "
     "before the integration switches modes. State changes are sampled immediately as "
-    "well. Until confirmation, the current mode is kept unchanged. Default is 3."
+    "well. Until confirmation, the current mode is kept unchanged. Default is 5."
 )
 RU_LABEL = "Показаний подряд для переключения"
 RU_HELP = (
     "Количество последовательных секундных замеров мощности, которые должны "
     "соответствовать одному и тому же новому режиму, прежде чем интеграция переключит "
     "режим. Изменения состояния также фиксируются сразу. До подтверждения текущий режим "
-    "сохраняется без изменений. По умолчанию — 3."
+    "сохраняется без изменений. По умолчанию — 5."
+)
+
+EN_ROUND_LABEL = "Round brightness to 5% (may look nicer)"
+EN_ROUND_HELP = (
+    "Rounds calculated brightness to the nearest 5%. This can make displayed percentages "
+    "look cleaner. Disabled by default."
+)
+RU_ROUND_LABEL = "Округлять яркость до 5% (может выглядеть аккуратнее)"
+RU_ROUND_HELP = (
+    "Округляет рассчитанную яркость до ближайших 5%. Это может сделать отображаемые "
+    "проценты аккуратнее. По умолчанию выключено."
 )
 
 EN_MODES_HELP = (
@@ -44,6 +55,7 @@ EN_FRONTEND = {
     "measured_result": "Measured",
     "repeat_test": "Repeat test",
     "current_moment_power": "Current moment power",
+    "last_measures_debug": "Last measures (debug)",
     "power_test_unavailable": "Power measurement is unavailable. Check the light and repeat the test.",
 }
 RU_FRONTEND = {
@@ -53,6 +65,7 @@ RU_FRONTEND = {
     "measured_result": "Измерено",
     "repeat_test": "Повторить тест",
     "current_moment_power": "Текущая мощность",
+    "last_measures_debug": "Последние измерения (отладка)",
     "power_test_unavailable": "Не удалось измерить мощность. Проверьте светильник и повторите тест.",
 }
 
@@ -67,6 +80,8 @@ def patch_step(step: dict, locale: str) -> None:
     descriptions = step.setdefault("data_description", {})
     data["power_history_samples"] = RU_LABEL if locale == "ru" else EN_LABEL
     descriptions["power_history_samples"] = RU_HELP if locale == "ru" else EN_HELP
+    data["round_brightness_to_5"] = RU_ROUND_LABEL if locale == "ru" else EN_ROUND_LABEL
+    descriptions["round_brightness_to_5"] = RU_ROUND_HELP if locale == "ru" else EN_ROUND_HELP
     descriptions["modes"] = RU_MODES_HELP if locale == "ru" else EN_MODES_HELP
 
 
