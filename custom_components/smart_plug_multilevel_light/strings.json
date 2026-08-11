@@ -17,7 +17,7 @@
           "power_cycle_delay": "Power-cycle delay",
           "power_history_samples": "Consecutive readings to switch",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
-          "modes": "Brightness modes"
+          "modes": "🔅 Brightness modes"
         },
         "data_description": {
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
@@ -45,7 +45,7 @@
           "power_cycle_delay": "Power-cycle delay",
           "power_history_samples": "Consecutive readings to switch",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
-          "modes": "Brightness modes"
+          "modes": "🔅 Brightness modes"
         },
         "data_description": {
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
