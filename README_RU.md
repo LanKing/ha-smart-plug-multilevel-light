@@ -2,7 +2,7 @@
 
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
-<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.9.6-blue" alt="Version 0.9.6"></a>
+<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.9.7-blue" alt="Version 0.9.7"></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
 > Интеграция объединяет светильник без цифрового управления и умную розетку в одну сущность Home Assistant. Она определяет состояние и текущий режим яркости по потребляемой мощности, отображает в карточке и позволяет включить лампу, выключенную собственной кнопкой, кратко отключив и снова подав питание через розетку.
@@ -183,6 +183,8 @@ custom_components/smart_plug_multilevel_light
 
 Текущее значение датчика мощности фиксируется интеграцией раз в секунду, а изменения состояния датчика обрабатываются сразу. Каждый замер отдельно сопоставляется с обычной пороговой логикой: используется максимальный настроенный порог, который меньше или равен этому значению. Первый определённый режим принимается сразу. После этого интеграция сохраняет текущий режим и переключает его только тогда, когда последние **N** последовательных замеров все соответствуют одному и тому же другому режиму. **N** задаётся параметром **Consecutive readings to switch** и по умолчанию равно `3`. Поэтому режим подтверждается даже в том случае, когда датчик Home Assistant длительное время остаётся на одном и том же значении и не создаёт новых событий изменения состояния.
 
+В редакторе режима есть тест стабильной мощности. После запуска он показывает собираемые показания в реальном времени, например `Testing, wait [4, 5, 4, 5, 4]`, и завершает тест после получения настроенного количества последовательных валидных замеров. Результат можно применить кнопкой **Apply**: значение подставляется в поле мощности, после чего модальное окно сохраняется, если его валидатор проходит.
+
 Яркость режима рассчитывается линейно относительно максимального настроенного порога мощности: `brightness = power / max_power × 100`. Например, при максимуме `6 W` режимы `1 / 3 / 4 / 6 W` соответствуют примерно `17 / 50 / 67 / 100%` до опционального округления до 5%.
 
 ## 🔌 Как определяется состояние
@@ -287,7 +289,7 @@ Home Assistant не позволяет интеграции автоматиче
 lovelace:
   resource_mode: yaml
   resources:
-    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.9.6
+    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.9.7
       type: module
 ```
 
@@ -377,7 +379,7 @@ lovelace:
 Проверьте **[Settings → Dashboards → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)**. Там должен присутствовать URL:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.9.6
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.9.7
 ```
 
 В YAML-режиме добавьте ресурс вручную.
@@ -401,7 +403,7 @@ lovelace:
 3. Проверьте **[Settings → Dashboards → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)** и вручную удалите ресурс карточки, если он остался:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.9.6
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.9.7
 ```
 
 4. Полностью перезапустите Home Assistant.
