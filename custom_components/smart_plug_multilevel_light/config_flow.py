@@ -166,7 +166,7 @@ def _settings_schema(
             ),
             vol.Required(
                 CONF_POWER_HISTORY_SAMPLES,
-                default=defaults.get(CONF_POWER_HISTORY_SAMPLES, 3),
+                default=defaults.get(CONF_POWER_HISTORY_SAMPLES, 5),
             ): selector.NumberSelector(
                 selector.NumberSelectorConfig(
                     min=1,
@@ -239,7 +239,7 @@ class SmartPlugMultiLevelLightConfigFlow(config_entries.ConfigFlow, domain=DOMAI
         defaults: dict[str, Any] = {
             CONF_POWER_SENSOR: powers[0],
             CONF_POWER_CYCLE_DELAY: 0.7,
-            CONF_POWER_HISTORY_SAMPLES: 3,
+            CONF_POWER_HISTORY_SAMPLES: 5,
             CONF_ROUND_BRIGHTNESS_TO_5: True,
             CONF_MODES: [],
         }
@@ -296,7 +296,7 @@ class SmartPlugMultiLevelLightOptionsFlow(OptionsFlow):
             "name": self.config_entry.title,
             CONF_POWER_SENSOR: configured_power or (powers[0] if powers else None),
             CONF_POWER_CYCLE_DELAY: current.get(CONF_POWER_CYCLE_DELAY, 0.7),
-            CONF_POWER_HISTORY_SAMPLES: current.get(CONF_POWER_HISTORY_SAMPLES, 3),
+            CONF_POWER_HISTORY_SAMPLES: current.get(CONF_POWER_HISTORY_SAMPLES, 5),
             CONF_ROUND_BRIGHTNESS_TO_5: current.get(CONF_ROUND_BRIGHTNESS_TO_5, True),
             CONF_MODES: current.get(CONF_MODES, []),
         }
