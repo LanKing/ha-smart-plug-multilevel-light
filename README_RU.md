@@ -2,7 +2,7 @@
 
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
-<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.10.3-blue" alt="Version 0.10.3"></a>
+<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.10.4-blue" alt="Version 0.10.4"></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
 > Интеграция объединяет светильник без цифрового управления и умную розетку в одну сущность Home Assistant. Она определяет состояние и текущий режим яркости по потребляемой мощности, отображает в карточке и позволяет включить лампу, выключенную собственной кнопкой, кратко отключив и снова подав питание через розетку.
@@ -170,7 +170,7 @@ custom_components/smart_plug_multilevel_light
 4. Когда будет получено настроенное число одинаковых значений подряд, нажмите **Apply** — мощность подставится в поле, а модальное окно сохранится, если остальные поля валидны.
 5. Повторите для остальных режимов.
 
-Справа от поля мощности также отображается **Current moment power**, а под списком режимов — постоянно обновляемый стек `Last measures (debug)`.
+Справа от поля мощности также отображается **Current moment power**, а в строке с кнопкой **Add** — постоянно обновляемый стек `🐞 Last measures`.
 
 Пример:
 
@@ -185,7 +185,7 @@ custom_components/smart_plug_multilevel_light
 
 В редакторе режима есть тест стабильной мощности. После запуска он показывает текущую непрерывную последовательность одинаковых показаний, например `Testing, wait [5, 5, 5]`. При изменении значения последовательность начинается заново. Тест завершается после получения **N** одинаковых значений подряд. Результат можно применить кнопкой **Apply**: значение подставляется в поле мощности, после чего модальное окно сохраняется, если его валидатор проходит.
 
-Под списком режимов постоянно отображается отладочный стек последних секундных измерений мощности в формате `Last measures (debug): [a, b, c, ...]`. Размер стека соответствует значению **Consecutive readings to switch**.
+В строке с кнопкой **Add** справа постоянно отображается стек последних секундных измерений мощности в формате `🐞 Last measures: [a, b, c, ...]`. Размер стека соответствует значению **Consecutive readings to switch**.
 
 Яркость режима рассчитывается линейно относительно максимального настроенного порога мощности: `brightness = power / max_power × 100`. Например, при максимуме `6 W` режимы `1 / 3 / 4 / 6 W` соответствуют примерно `17 / 50 / 67 / 100%`. Опциональное округление до 5% по умолчанию выключено.
 
@@ -291,7 +291,7 @@ Home Assistant не позволяет интеграции автоматиче
 lovelace:
   resource_mode: yaml
   resources:
-    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.3
+    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.4
       type: module
 ```
 
@@ -372,7 +372,7 @@ lovelace:
 
 ### Определяется неправильный режим
 
-Проверьте `Last measures (debug)` в настройках и атрибуты `power_history`, `power_history_modes`, `power_sample_interval_seconds` и `selected_power_mode`. `power_history` показывает последние зафиксированные значения мощности, `power_history_modes` — режим для каждого из них по настроенным порогам, `power_sample_interval_seconds` — интервал периодической фиксации, а `selected_power_mode` — текущий подтверждённый режим.
+Проверьте `🐞 Last measures` в настройках и атрибуты `power_history`, `power_history_modes`, `power_sample_interval_seconds` и `selected_power_mode`. `power_history` показывает последние зафиксированные значения мощности, `power_history_modes` — режим для каждого из них по настроенным порогам, `power_sample_interval_seconds` — интервал периодической фиксации, а `selected_power_mode` — текущий подтверждённый режим.
 
 ### Карточка не появилась в списке
 
@@ -381,7 +381,7 @@ lovelace:
 Проверьте **[Settings → Dashboards → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)**. Там должен присутствовать URL:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.3
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.4
 ```
 
 В YAML-режиме добавьте ресурс вручную.
@@ -405,7 +405,7 @@ lovelace:
 3. Проверьте **[Settings → Dashboards → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)** и вручную удалите ресурс карточки, если он остался:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.3
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.4
 ```
 
 4. Полностью перезапустите Home Assistant.
