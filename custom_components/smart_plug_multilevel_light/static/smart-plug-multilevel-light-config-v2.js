@@ -76,8 +76,20 @@
     );
   };
 
-  const findRoundSelector = (selector) =>
-    findFormRoot(selector)?.querySelector?.("ha-selector-boolean") || null;
+  const findRoundSelectorHost = (selector) => {
+    const visit = (root) => {
+      if (!root?.querySelectorAll) return null;
+      for (const element of root.querySelectorAll("*")) {
+        if (element.shadowRoot?.querySelector?.("ha-selector-boolean")) return element;
+        if (element.shadowRoot) {
+          const nested = visit(element.shadowRoot);
+          if (nested) return nested;
+        }
+      }
+      return null;
+    };
+    return visit(findFormRoot(selector));
+  };
 
   const getDebugElement = (selector) =>
     findFormRoot(selector)?.querySelector?.(".spml-debug-measures") || null;
@@ -113,14 +125,14 @@
     }
     helper.textContent = text;
 
-    const roundSelector = findRoundSelector(selector);
-    if (roundSelector) {
+    const roundSelectorHost = findRoundSelectorHost(selector);
+    if (roundSelectorHost) {
       let debug = getDebugElement(selector);
       if (!debug) {
         debug = document.createElement("div");
         debug.className = "spml-debug-measures";
         debug.style.cssText = "margin-top:12px;color:var(--primary-text-color);font-size:14px;line-height:1.5;font-weight:400;";
-        roundSelector.insertAdjacentElement("afterend", debug);
+        roundSelectorHost.insertAdjacentElement("afterend", debug);
       }
     }
 
