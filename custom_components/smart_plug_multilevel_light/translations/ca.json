@@ -14,7 +14,7 @@
         "data": {
           "name": "Nom de la llum",
           "power_cycle_delay": "Retard del cicle d'alimentació",
-          "modes": "Modes de brillantor",
+          "modes": "🔅 Modes de brillantor",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "Nom de la llum",
           "power_cycle_delay": "Retard del cicle d'alimentació",
-          "modes": "Modes de brillantor",
+          "modes": "🔅 Modes de brillantor",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

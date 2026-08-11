@@ -14,7 +14,7 @@
         "data": {
           "name": "Lysnavn",
           "power_cycle_delay": "Forsinkelse for strømsyklus",
-          "modes": "Lysstyrkemoduser",
+          "modes": "🔅 Lysstyrkemoduser",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "Lysnavn",
           "power_cycle_delay": "Forsinkelse for strømsyklus",
-          "modes": "Lysstyrkemoduser",
+          "modes": "🔅 Lysstyrkemoduser",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

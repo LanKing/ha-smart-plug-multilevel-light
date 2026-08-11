@@ -14,7 +14,7 @@
         "data": {
           "name": "Nom de l’éclairage",
           "power_cycle_delay": "Délai du cycle d’alimentation",
-          "modes": "Modes de luminosité",
+          "modes": "🔅 Modes de luminosité",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "Nom de l’éclairage",
           "power_cycle_delay": "Délai du cycle d’alimentation",
-          "modes": "Modes de luminosité",
+          "modes": "🔅 Modes de luminosité",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

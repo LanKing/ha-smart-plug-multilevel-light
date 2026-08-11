@@ -14,7 +14,7 @@
         "data": {
           "name": "Nombre de la luz",
           "power_cycle_delay": "Retardo del ciclo de energía",
-          "modes": "Modos de brillo",
+          "modes": "🔅 Modos de brillo",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "Nombre de la luz",
           "power_cycle_delay": "Retardo del ciclo de energía",
-          "modes": "Modos de brillo",
+          "modes": "🔅 Modos de brillo",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

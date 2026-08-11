@@ -14,7 +14,7 @@
         "data": {
           "name": "ലൈറ്റിന്റെ പേര്",
           "power_cycle_delay": "പവർ സൈക്കിൾ വൈകൽ",
-          "modes": "പ്രകാശനില മോഡുകൾ",
+          "modes": "🔅 പ്രകാശനില മോഡുകൾ",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "ലൈറ്റിന്റെ പേര്",
           "power_cycle_delay": "പവർ സൈക്കിൾ വൈകൽ",
-          "modes": "പ്രകാശനില മോഡുകൾ",
+          "modes": "🔅 പ്രകാശനില മോഡുകൾ",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

@@ -14,7 +14,7 @@
         "data": {
           "name": "Numele luminii",
           "power_cycle_delay": "Întârziere ciclu de alimentare",
-          "modes": "Moduri de luminozitate",
+          "modes": "🔅 Moduri de luminozitate",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "Numele luminii",
           "power_cycle_delay": "Întârziere ciclu de alimentare",
-          "modes": "Moduri de luminozitate",
+          "modes": "🔅 Moduri de luminozitate",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

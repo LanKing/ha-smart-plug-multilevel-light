@@ -14,7 +14,7 @@
         "data": {
           "name": "Nazwa światła",
           "power_cycle_delay": "Opóźnienie cyklu zasilania",
-          "modes": "Tryby jasności",
+          "modes": "🔅 Tryby jasności",
           "power_sensor": "Czujnik mocy",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "Nazwa światła",
           "power_cycle_delay": "Opóźnienie cyklu zasilania",
-          "modes": "Tryby jasności",
+          "modes": "🔅 Tryby jasności",
           "power_sensor": "Czujnik mocy",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

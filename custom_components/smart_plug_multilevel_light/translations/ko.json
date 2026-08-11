@@ -14,7 +14,7 @@
         "data": {
           "name": "조명 이름",
           "power_cycle_delay": "전원 재시작 지연",
-          "modes": "밝기 모드",
+          "modes": "🔅 밝기 모드",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "조명 이름",
           "power_cycle_delay": "전원 재시작 지연",
-          "modes": "밝기 모드",
+          "modes": "🔅 밝기 모드",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

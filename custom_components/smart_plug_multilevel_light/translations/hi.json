@@ -14,7 +14,7 @@
         "data": {
           "name": "लाइट का नाम",
           "power_cycle_delay": "पावर-साइकिल देरी",
-          "modes": "ब्राइटनेस मोड",
+          "modes": "🔅 ब्राइटनेस मोड",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "लाइट का नाम",
           "power_cycle_delay": "पावर-साइकिल देरी",
-          "modes": "ब्राइटनेस मोड",
+          "modes": "🔅 ब्राइटनेस मोड",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

@@ -14,7 +14,7 @@
         "data": {
           "name": "Լույսի անուն",
           "power_cycle_delay": "Սնուցման ցիկլի ուշացում",
-          "modes": "Պայծառության ռեժիմներ",
+          "modes": "🔅 Պայծառության ռեժիմներ",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "Լույսի անուն",
           "power_cycle_delay": "Սնուցման ցիկլի ուշացում",
-          "modes": "Պայծառության ռեժիմներ",
+          "modes": "🔅 Պայծառության ռեժիմներ",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"

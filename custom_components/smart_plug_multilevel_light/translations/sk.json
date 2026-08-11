@@ -14,7 +14,7 @@
         "data": {
           "name": "Názov svetla",
           "power_cycle_delay": "Oneskorenie cyklu napájania",
-          "modes": "Režimy jasu",
+          "modes": "🔅 Režimy jasu",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
@@ -42,7 +42,7 @@
         "data": {
           "name": "Názov svetla",
           "power_cycle_delay": "Oneskorenie cyklu napájania",
-          "modes": "Režimy jasu",
+          "modes": "🔅 Režimy jasu",
           "power_sensor": "Power sensor",
           "round_brightness_to_5": "Round brightness to 5% (may look nicer)",
           "power_history_samples": "Consecutive readings to switch"
