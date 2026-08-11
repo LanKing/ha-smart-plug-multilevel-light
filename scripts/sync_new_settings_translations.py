@@ -64,7 +64,7 @@ EN_FRONTEND = {
     "measured_result": "Measured",
     "repeat_test": "Repeat test",
     "current_moment_power": "Current moment power",
-    "last_measures_debug": "Last measures (debug)",
+    "last_measures_debug": "🐞 Last measures",
     "power_test_unavailable": "Power measurement is unavailable. Check the light and repeat the test.",
 }
 RU_FRONTEND = {
@@ -74,7 +74,7 @@ RU_FRONTEND = {
     "measured_result": "Измерено",
     "repeat_test": "Повторить тест",
     "current_moment_power": "Текущая мощность",
-    "last_measures_debug": "Последние измерения (отладка)",
+    "last_measures_debug": "🐞 Последние измерения",
     "power_test_unavailable": "Не удалось измерить мощность. Проверьте светильник и повторите тест.",
 }
 
