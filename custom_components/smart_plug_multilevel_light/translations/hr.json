@@ -20,7 +20,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "Najprije naučite integraciju načinima svjetline nove svjetiljke. Fizičkim gumbom na svjetiljci odaberite svaku razinu i dodajte je ispod, primjerice High, Medium, Low i Dim.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "Obično nije potrebna dodatna odgoda. Ako se svjetiljka ugašena vlastitim gumbom ne uključi iz Home Assistanta, postavite malu odgodu, primjerice 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
@@ -48,7 +48,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "Najprije naučite integraciju načinima svjetline nove svjetiljke. Fizičkim gumbom na svjetiljci odaberite svaku razinu i dodajte je ispod, primjerice High, Medium, Low i Dim.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "Obično nije potrebna dodatna odgoda. Ako se svjetiljka ugašena vlastitim gumbom ne uključi iz Home Assistanta, postavite malu odgodu, primjerice 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",

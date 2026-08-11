@@ -20,7 +20,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "Leer eers die helderheidsmodusse van 'n nuwe lamp. Gebruik die fisiese knoppie op die lamp om elke helderheidsvlak te kies en voeg dit hieronder by, byvoorbeeld High, Medium, Low en Dim.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "Gewoonlik is geen ekstra vertraging nodig nie. As 'n lamp wat met sy eie knoppie afgeskakel is nie vanuit Home Assistant aanskakel nie, stel 'n klein vertraging in, byvoorbeeld 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
@@ -48,7 +48,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "Leer eers die helderheidsmodusse van 'n nuwe lamp. Gebruik die fisiese knoppie op die lamp om elke helderheidsvlak te kies en voeg dit hieronder by, byvoorbeeld High, Medium, Low en Dim.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "Gewoonlik is geen ekstra vertraging nodig nie. As 'n lamp wat met sy eie knoppie afgeskakel is nie vanuit Home Assistant aanskakel nie, stel 'n klein vertraging in, byvoorbeeld 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",

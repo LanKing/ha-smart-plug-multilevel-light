@@ -20,7 +20,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "Primeiro ensine à integração os modos de brilho da nova lâmpada. Use o botão físico da lâmpada para selecionar cada nível e adicioná-lo abaixo, por exemplo High, Medium, Low e Dim.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "Normalmente não é necessário atraso adicional. Se uma lâmpada desligada pelo próprio botão não ligar pelo Home Assistant, defina um pequeno atraso, por exemplo 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
@@ -48,7 +48,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "Primeiro ensine à integração os modos de brilho da nova lâmpada. Use o botão físico da lâmpada para selecionar cada nível e adicioná-lo abaixo, por exemplo High, Medium, Low e Dim.",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "Normalmente não é necessário atraso adicional. Se uma lâmpada desligada pelo próprio botão não ligar pelo Home Assistant, defina um pequeno atraso, por exemplo 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",

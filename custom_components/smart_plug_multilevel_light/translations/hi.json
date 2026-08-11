@@ -20,7 +20,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "पहले इंटीग्रेशन को नए लैंप के ब्राइटनेस मोड सिखाएँ। लैंप के भौतिक बटन से हर स्तर चुनें और नीचे जोड़ें, जैसे High, Medium, Low और Dim।",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "आमतौर पर अतिरिक्त देरी की जरूरत नहीं होती। यदि अपने बटन से बंद किया गया लैंप Home Assistant से चालू नहीं होता, तो थोड़ी देरी सेट करें, जैसे 0.7 s।",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
@@ -48,7 +48,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "पहले इंटीग्रेशन को नए लैंप के ब्राइटनेस मोड सिखाएँ। लैंप के भौतिक बटन से हर स्तर चुनें और नीचे जोड़ें, जैसे High, Medium, Low और Dim।",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "आमतौर पर अतिरिक्त देरी की जरूरत नहीं होती। यदि अपने बटन से बंद किया गया लैंप Home Assistant से चालू नहीं होता, तो थोड़ी देरी सेट करें, जैसे 0.7 s।",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",

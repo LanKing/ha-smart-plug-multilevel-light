@@ -20,7 +20,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "নতুন ল্যাম্পের উজ্জ্বলতার মোডগুলো আগে ইন্টিগ্রেশনকে শেখান। ল্যাম্পের ফিজিক্যাল বোতাম দিয়ে প্রতিটি উজ্জ্বলতার স্তর নির্বাচন করে নিচে যোগ করুন, যেমন High, Medium, Low এবং Dim।",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "সাধারণত অতিরিক্ত বিলম্বের দরকার হয় না। ল্যাম্পের নিজস্ব বোতাম দিয়ে বন্ধ করার পর Home Assistant থেকে চালু না হলে ছোট একটি বিলম্ব দিন, যেমন 0.7 s।",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
@@ -48,7 +48,7 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "নতুন ল্যাম্পের উজ্জ্বলতার মোডগুলো আগে ইন্টিগ্রেশনকে শেখান। ল্যাম্পের ফিজিক্যাল বোতাম দিয়ে প্রতিটি উজ্জ্বলতার স্তর নির্বাচন করে নিচে যোগ করুন, যেমন High, Medium, Low এবং Dim।",
+          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
           "power_cycle_delay": "সাধারণত অতিরিক্ত বিলম্বের দরকার হয় না। ল্যাম্পের নিজস্ব বোতাম দিয়ে বন্ধ করার পর Home Assistant থেকে চালু না হলে ছোট একটি বিলম্ব দিন, যেমন 0.7 s।",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. Disable to use whole percentages without 5% steps.",
