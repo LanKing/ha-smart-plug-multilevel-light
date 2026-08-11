@@ -68,9 +68,9 @@ class SmartPlugMultiLevelLight(LightEntity):
     @property
     def _history_size(self) -> int:
         try:
-            value = int(self._cfg.get(CONF_POWER_HISTORY_SAMPLES, 3))
+            value = int(self._cfg.get(CONF_POWER_HISTORY_SAMPLES, 5))
         except (TypeError, ValueError):
-            value = 3
+            value = 5
         return max(1, min(100, value))
 
     def _float_state(self, entity_id: str) -> float:
