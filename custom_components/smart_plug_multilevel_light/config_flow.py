@@ -152,6 +152,22 @@ def _settings_schema(
                 "name", default=defaults.get("name", "Light")
             ): selector.TextSelector(),
             power_key: selector.selector({"entity": kwargs}),
+            vol.Required(CONF_MODES, default=defaults.get(CONF_MODES, [])): _modes_selector(),
+            vol.Required(
+                CONF_ROUND_BRIGHTNESS_TO_5,
+                default=defaults.get(CONF_ROUND_BRIGHTNESS_TO_5, False),
+            ): selector.BooleanSelector(),
+            vol.Required(
+                CONF_POWER_HISTORY_SAMPLES,
+                default=defaults.get(CONF_POWER_HISTORY_SAMPLES, 5),
+            ): selector.NumberSelector(
+                selector.NumberSelectorConfig(
+                    min=1,
+                    max=100,
+                    step=1,
+                    mode=selector.NumberSelectorMode.BOX,
+                )
+            ),
             vol.Required(
                 CONF_POWER_CYCLE_DELAY,
                 default=defaults.get(CONF_POWER_CYCLE_DELAY, 0.7),
@@ -164,22 +180,6 @@ def _settings_schema(
                     mode=selector.NumberSelectorMode.BOX,
                 )
             ),
-            vol.Required(
-                CONF_POWER_HISTORY_SAMPLES,
-                default=defaults.get(CONF_POWER_HISTORY_SAMPLES, 5),
-            ): selector.NumberSelector(
-                selector.NumberSelectorConfig(
-                    min=1,
-                    max=100,
-                    step=1,
-                    mode=selector.NumberSelectorMode.BOX,
-                )
-            ),
-            vol.Required(CONF_MODES, default=defaults.get(CONF_MODES, [])): _modes_selector(),
-            vol.Required(
-                CONF_ROUND_BRIGHTNESS_TO_5,
-                default=defaults.get(CONF_ROUND_BRIGHTNESS_TO_5, False),
-            ): selector.BooleanSelector(),
         }
     )
 
