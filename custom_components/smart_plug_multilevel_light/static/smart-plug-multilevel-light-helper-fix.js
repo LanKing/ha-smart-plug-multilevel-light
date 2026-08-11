@@ -22,6 +22,15 @@
     );
   };
 
+  const formHostForSelector = (selector) => {
+    try {
+      const selectorHost = selector.getRootNode()?.host;
+      return selectorHost?.getRootNode?.()?.host || null;
+    } catch (_) {
+      return null;
+    }
+  };
+
   const formRootForSelector = (selector) => {
     try {
       const selectorHost = selector.getRootNode()?.host;
@@ -29,6 +38,19 @@
     } catch (_) {
       return null;
     }
+  };
+
+  const formatNumber = (value) =>
+    Number(value).toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
+
+  const brightnessForPower = (power, maxPower, roundTo5) => {
+    if (!(maxPower > 0)) return 100;
+    const ratio = Math.max(0, Math.min(1, power / maxPower));
+    const estimated = ratio * 100;
+    if (roundTo5) {
+      return Math.max(5, Math.min(100, 5 * Math.floor(estimated / 5 + 0.5)));
+    }
+    return Math.max(1, Math.min(100, Math.floor(estimated + 0.5)));
   };
 
   const alignHelperTexts = (root) => {
@@ -44,6 +66,36 @@
     }
   };
 
+  const decorateModeRows = (selector) => {
+    const root = selector?.shadowRoot;
+    const modes = Array.isArray(selector?.value) ? selector.value : [];
+    if (!root || !modes.length) return;
+
+    const descriptions = [...root.querySelectorAll(".description")];
+    if (!descriptions.length) return;
+
+    const powers = modes.map((mode) => Number(mode?.power));
+    const validPowers = powers.filter(Number.isFinite);
+    if (!validPowers.length) return;
+
+    const maxPower = Math.max(...validPowers);
+    const roundTo5 = Boolean(formHostForSelector(selector)?.data?.round_brightness_to_5);
+
+    descriptions.forEach((description, index) => {
+      const power = powers[index];
+      if (!Number.isFinite(power)) return;
+      const pct = brightnessForPower(power, maxPower, roundTo5);
+      description.textContent = `${formatNumber(power)} W · ${pct}%`;
+    });
+  };
+
+  const patchDebugMeasures = (selector) => {
+    const debug = selector?.shadowRoot?.querySelector?.(".spml-debug-measures");
+    if (!debug) return;
+    const text = String(debug.textContent || "").trim();
+    if (text && !text.endsWith(" W")) debug.textContent = `${text} W`;
+  };
+
   const patchSelector = (selector) => {
     if (!selector?.shadowRoot || !isModesSelector(selector)) return;
 
@@ -57,8 +109,6 @@
 
     let helper = root.querySelector(".spml-modes-helper");
 
-    // Keep the Brightness modes helper as a plain block so it aligns exactly
-    // with the field heading instead of inheriting Home Assistant's 16 px helper indent.
     if (helper && helper.tagName?.toLowerCase() !== "div") {
       const replacement = document.createElement("div");
       replacement.className = "spml-modes-helper";
@@ -90,6 +140,8 @@
     if (addMeasuresRow) addMeasuresRow.style.marginBottom = "16px";
 
     alignHelperTexts(formRootForSelector(selector));
+    decorateModeRows(selector);
+    patchDebugMeasures(selector);
   };
 
   const walk = (root) => {
@@ -100,9 +152,18 @@
     }
   };
 
-  const refresh = () => walk(document);
-  const observer = new MutationObserver(() => queueMicrotask(refresh));
-  observer.observe(document.documentElement, { childList: true, subtree: true });
+  let refreshQueued = false;
+  const refresh = () => {
+    if (refreshQueued) return;
+    refreshQueued = true;
+    queueMicrotask(() => {
+      refreshQueued = false;
+      walk(document);
+    });
+  };
+
+  const observer = new MutationObserver(refresh);
+  observer.observe(document.documentElement, { childList: true, subtree: true, characterData: true });
 
   customElements.whenDefined("ha-selector-object").then(() => {
     const ctor = customElements.get("ha-selector-object");
