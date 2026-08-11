@@ -264,11 +264,19 @@
 
       const samples = [];
       const sampleCount = findSampleCount(selector);
+      let stableValue = null;
       while (!closed && run === testRun && samples.length < sampleCount) {
         const value = stateToWatts(entityId ? selector.hass?.states?.[entityId] : undefined);
         if (value !== null && value > 0) {
-          samples.push(value);
+          if (stableValue === value) {
+            samples.push(value);
+          } else {
+            stableValue = value;
+            samples.length = 0;
+            samples.push(value);
+          }
         } else {
+          stableValue = null;
           samples.length = 0;
         }
 
@@ -280,14 +288,14 @@
       }
       if (closed || run !== testRun) return;
 
-      if (!samples.length) {
+      if (!samples.length || stableValue === null) {
         testStatus.textContent = custom(selector, "power_test_unavailable", "Power measurement is unavailable. Check the light and repeat the test.");
         repeatTest.hidden = false;
         testAction.disabled = false;
         return;
       }
 
-      measuredValue = Math.min(...samples);
+      measuredValue = stableValue;
       testStatus.classList.add("spml-test-result");
       testStatus.textContent = `${custom(selector, "measured_result", "Measured")}: ${formatWatts(measuredValue)} W`;
       applyMeasured.hidden = false;
