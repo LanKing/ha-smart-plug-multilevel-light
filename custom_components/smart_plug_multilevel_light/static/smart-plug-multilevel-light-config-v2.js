@@ -22,6 +22,15 @@
     }
   };
 
+  const findFormRoot = (selector) => {
+    try {
+      const selectorHost = selector.getRootNode()?.host;
+      return selectorHost?.getRootNode?.() || null;
+    } catch (_) {
+      return null;
+    }
+  };
+
   const findPowerSensor = (selector) => String(findFormData(selector)?.power_sensor || "");
 
   const findSampleCount = (selector) => {
@@ -67,18 +76,11 @@
     );
   };
 
-  const findRoundSelector = (selector) => {
-    try {
-      const selectorHost = selector.getRootNode()?.host;
-      const formRoot = selectorHost?.getRootNode?.();
-      return formRoot?.querySelector?.("ha-selector-boolean") || null;
-    } catch (_) {
-      return null;
-    }
-  };
+  const findRoundSelector = (selector) =>
+    findFormRoot(selector)?.querySelector?.("ha-selector-boolean") || null;
 
   const getDebugElement = (selector) =>
-    findRoundSelector(selector)?.shadowRoot?.querySelector(".spml-debug-measures") || null;
+    findFormRoot(selector)?.querySelector?.(".spml-debug-measures") || null;
 
   const renderDebugSamples = (selector) => {
     if (!selector?.shadowRoot || !isModesSelector(selector)) return;
@@ -112,13 +114,13 @@
     helper.textContent = text;
 
     const roundSelector = findRoundSelector(selector);
-    if (roundSelector?.shadowRoot) {
-      let debug = roundSelector.shadowRoot.querySelector(".spml-debug-measures");
+    if (roundSelector) {
+      let debug = getDebugElement(selector);
       if (!debug) {
         debug = document.createElement("div");
         debug.className = "spml-debug-measures";
         debug.style.cssText = "margin-top:12px;color:var(--primary-text-color);font-size:14px;line-height:1.5;font-weight:400;";
-        roundSelector.shadowRoot.append(debug);
+        roundSelector.insertAdjacentElement("afterend", debug);
       }
     }
 
