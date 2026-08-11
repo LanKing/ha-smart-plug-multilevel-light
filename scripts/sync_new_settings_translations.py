@@ -26,15 +26,24 @@ RU_HELP = (
     "сохраняется без изменений. По умолчанию — 5."
 )
 
+EN_DELAY_HELP = (
+    "If a lamp switched off with its own button does not turn on from Home Assistant, "
+    "set a small delay, for example 0.7 s."
+)
+RU_DELAY_HELP = (
+    "Если лампа, выключенная собственной кнопкой, не включается из Home Assistant, "
+    "задайте небольшую задержку, например 0,7 с."
+)
+
 EN_ROUND_LABEL = "Round brightness to 5% (may look nicer)"
 EN_ROUND_HELP = (
     "Rounds calculated brightness to the nearest 5%. This can make displayed percentages "
-    "look cleaner. Disabled by default."
+    "look cleaner."
 )
 RU_ROUND_LABEL = "Округлять яркость до 5% (может выглядеть аккуратнее)"
 RU_ROUND_HELP = (
     "Округляет рассчитанную яркость до ближайших 5%. Это может сделать отображаемые "
-    "проценты аккуратнее. По умолчанию выключено."
+    "проценты аккуратнее."
 )
 
 EN_MODES_HELP = (
@@ -78,6 +87,7 @@ def fetch_baseline(path: str) -> str:
 def patch_step(step: dict, locale: str) -> None:
     data = step.setdefault("data", {})
     descriptions = step.setdefault("data_description", {})
+    descriptions["power_cycle_delay"] = RU_DELAY_HELP if locale == "ru" else EN_DELAY_HELP
     data["power_history_samples"] = RU_LABEL if locale == "ru" else EN_LABEL
     descriptions["power_history_samples"] = RU_HELP if locale == "ru" else EN_HELP
     data["round_brightness_to_5"] = RU_ROUND_LABEL if locale == "ru" else EN_ROUND_LABEL
