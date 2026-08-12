@@ -63,7 +63,7 @@
 
 Пока репозиторий не включён в стандартный каталог HACS, добавьте его как пользовательский:
 
-Попробуйте [установить по ссылке](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Если в вашем HA такой режим поддерживается, нажмите Add в открывшемся окне после чего пропустите все подпункты ниже и переходите сразу к [установке интеграции](#hacs-integration-download). 
+Вначале [попробуйте установить по ссылке](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Если в вашем HA такой режим поддерживается, нажмите Add в открывшемся окне после чего пропустите все подпункты ниже и переходите сразу к [установке интеграции](#hacs-integration-download). Если же не получилось, выполните следующие пункты: 
 
 1. Откройте **HACS → Integrations**.
 2. Откройте меню в правом верхнем углу и выберите **Custom repositories**.
