@@ -56,14 +56,11 @@
 
 ℹ️ [Что такое HACS и как его установить?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ru.md)
 
-
-
+Вначале [попробуйте добавить репозиторий по ссылке](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Если в вашем HA такой режим поддерживается, нажмите **Add** в открывшемся окне после чего в нижнем правом углу нажмите кнопку **Download**. Если у вас получилось, установка завершена и дальнейшие пункты установки можно пропустить. Переходите сразу к разделу [быстрый старт](#getting-started). 
 
 #### 1. Добавление репозитория
 
 Пока репозиторий не включён в стандартный каталог HACS, добавьте его как пользовательский:
-
-Вначале [попробуйте установить по ссылке](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Если в вашем HA такой режим поддерживается, нажмите Add в открывшемся окне после чего пропустите все подпункты ниже и переходите сразу к [установке интеграции](#hacs-integration-download). Если же не получилось, выполните следующие пункты: 
 
 1. Откройте **HACS → Integrations**.
 2. Откройте меню в правом верхнем углу и выберите **Custom repositories**.
@@ -77,7 +74,6 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 
 > Добавление репозитория только делает интеграцию доступной в HACS. Для установки необходимо отдельно открыть её карточку и нажать **Download**.
 
-<a id="hacs-integration-download"></a>
 #### 2. Установка интеграции
 
 1. Найдите в HACS: `Smart Plug Multi-Level Light`.
@@ -113,7 +109,7 @@ custom_components/smart_plug_multilevel_light
 
 Карточка входит в состав интеграции, поэтому HACS для её установки не требуется. После ручного копирования файлов, перезапуска Home Assistant и создания первого helper интеграция публикует JavaScript-файл карточки и автоматически регистрирует его в Dashboard Resources при стандартном режиме `storage`. В YAML-режиме ресурсов карточку необходимо зарегистрировать вручную, как описано ниже.
 
-
+<a id="getting-started"></a>
 ## 🚀 Быстрый старт после установки
 
 1. Откройте **[Settings → Devices & services → Helpers](https://my.home-assistant.io/redirect/helpers/)** и нажмите **Create helper**.
