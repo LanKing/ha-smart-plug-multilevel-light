@@ -83,7 +83,7 @@
       : [];
     samples.push(value === null ? "—" : formatWatts(value));
     selector.__spmlDebugSamples = samples.slice(-maxItems);
-    debug.textContent = `${custom(selector, "last_measures_debug", "🐞 Last measures")}: [${selector.__spmlDebugSamples.join(", ")}]`;
+    debug.textContent = `${custom(selector, "last_measures_debug", "🐞 Last measures")}: [${selector.__spmlDebugSamples.join(", ")}] W`;
   };
 
   const ensureModesHelper = (selector) => {
