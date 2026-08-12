@@ -90,13 +90,6 @@
     });
   };
 
-  const patchDebugMeasures = (selector) => {
-    const debug = selector?.shadowRoot?.querySelector?.(".spml-debug-measures");
-    if (!debug) return;
-    const text = String(debug.textContent || "").trim();
-    if (text && !text.endsWith(" W")) debug.textContent = `${text} W`;
-  };
-
   const patchSelector = (selector) => {
     if (!selector?.shadowRoot || !isModesSelector(selector)) return;
 
@@ -142,7 +135,6 @@
 
     alignHelperTexts(formRootForSelector(selector));
     decorateModeRows(selector);
-    patchDebugMeasures(selector);
   };
 
   const walk = (root) => {
