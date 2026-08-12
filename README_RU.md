@@ -56,9 +56,14 @@
 
 ℹ️ [Что такое HACS и как его установить?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ru.md)
 
+
+
+
 #### 1. Добавление репозитория
 
 Пока репозиторий не включён в стандартный каталог HACS, добавьте его как пользовательский:
+
+Попробуйте [установить по ссылке](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Если в вашем HA такой режим поддерживается, нажмите Add в открывшемся окне после чего пропустите все подпункты ниже и переходите сразу к [установке интеграции](#hacs-integration-download). 
 
 1. Откройте **HACS → Integrations**.
 2. Откройте меню в правом верхнем углу и выберите **Custom repositories**.
@@ -72,6 +77,7 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 
 > Добавление репозитория только делает интеграцию доступной в HACS. Для установки необходимо отдельно открыть её карточку и нажать **Download**.
 
+<a id="hacs-integration-download"></a>
 #### 2. Установка интеграции
 
 1. Найдите в HACS: `Smart Plug Multi-Level Light`.
