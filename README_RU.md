@@ -56,9 +56,10 @@
 
 ℹ️ [Что такое HACS и как его установить?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ru.md)
 
-> 🚀 [Попробуйте добавить репозиторий по ссылке](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). 
-> Если в вашем HA такой режим поддерживается, нажмите **Add** в открывшемся окне после чего в нижнем правом углу нажмите кнопку **Download**. 
-> Если у вас получилось, установка завершена и дальнейшие пункты установки можно пропустить. Переходите сразу к разделу [быстрый старт](#getting-started). 
+
+#### 🚀 Вариант очень быстрой установки
+[Попробуйте добавить репозиторий по ссылке](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Если в вашем HA такой режим поддерживается и у вас получилось, нажмите **Add** в открывшемся окне после чего в нижнем правом углу нажмите кнопку **Download**. 
+Если всё получилось, установка завершена и дальнейшие пункты установки можно пропустить. Переходите сразу к разделу [быстрый старт](#getting-started). 
 
 #### 1. Добавление репозитория
 
