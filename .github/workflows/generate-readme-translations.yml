@@ -49,22 +49,26 @@ jobs:
         working-directory: .readme-translator
         run: |
           python - <<'PY'
+          import re
           from pathlib import Path
 
           path = Path("src/lib.ts")
           text = path.read_text(encoding="utf-8")
-          old = """  await Promise.all(
-            unique.map(async (value) => {
-              translated.set(value, await translateFn(value))
-            }),
-          )"""
-          new = """  for (const value of unique) {
+          pattern = re.compile(
+              r"  await Promise\.all\(\s*"
+              r"unique\.map\(async \(value\) => \{\s*"
+              r"translated\.set\(value, await translateFn\(value\)\)\s*"
+              r"\}\),\s*"
+              r"\)"
+          )
+          replacement = """  for (const value of unique) {
             translated.set(value, await translateFn(value))
             await new Promise((resolve) => setTimeout(resolve, 150))
           }"""
-          if old not in text:
+          text, count = pattern.subn(replacement, text, count=1)
+          if count != 1:
               raise SystemExit("Could not patch translator request scheduling")
-          path.write_text(text.replace(old, new), encoding="utf-8")
+          path.write_text(text, encoding="utf-8")
           PY
 
       - name: Generate translations from Russian README
