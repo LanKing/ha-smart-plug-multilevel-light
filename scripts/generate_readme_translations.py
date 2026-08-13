@@ -10,10 +10,12 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import os
 import re
 import subprocess
 import sys
 import time
+from difflib import SequenceMatcher
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -214,6 +216,121 @@ def finalize(
     return text.rstrip() + "\n"
 
 
+
+def plain_for_qa(text: str) -> str:
+    """Reduce Markdown to comparable prose for round-trip quality checks."""
+    text = re.sub(r"```[\s\S]*?```", " ", text)
+    text = re.sub(r"!\[[^\]]*\]\([^)]+\)", " ", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"[#*_>\u0060~|=-]+", " ", text)
+    return re.sub(r"\s+", " ", text).strip().lower()
+
+
+def qa_chunks(text: str, limit: int = 3500) -> list[str]:
+    words = text.split()
+    chunks: list[str] = []
+    current: list[str] = []
+    length = 0
+    for word in words:
+        extra = len(word) + (1 if current else 0)
+        if current and length + extra > limit:
+            chunks.append(" ".join(current))
+            current = []
+            length = 0
+        current.append(word)
+        length += extra
+    if current:
+        chunks.append(" ".join(current))
+    return chunks
+
+
+def protected_signature(text: str) -> dict[str, object]:
+    return {
+        "URLs": sorted(re.findall(r"https?://[^\s)>\"']+", text)),
+        "inline code": sorted(re.findall(r"\u0060([^\u0060\n]+)\u0060", text)),
+        "numbers": sorted(re.findall(r"(?<!\w)\d+(?:[.,]\d+)?%?", text)),
+        "code fences": text.count("```"),
+        "headings": len(re.findall(r"^#{1,6}\s", text, re.MULTILINE)),
+        "details blocks": text.count("<details>"),
+    }
+
+
+def record_round_trip_quality(
+    locale: str,
+    source: str,
+    translated: str,
+    back_translated: str,
+) -> None:
+    source_plain = plain_for_qa(source)
+    back_plain = plain_for_qa(back_translated)
+    similarity = SequenceMatcher(None, source_plain, back_plain).ratio()
+
+    source_signature = protected_signature(source)
+    translated_signature = protected_signature(translated)
+    critical = [
+        label
+        for label in source_signature
+        if source_signature[label] != translated_signature[label]
+    ]
+    severity = "critical" if critical else ("review" if similarity < 0.55 else "passed")
+    message = (
+        f"README translation QA {locale}: {severity}; "
+        f"round-trip similarity {similarity:.1%}"
+    )
+    if critical:
+        message += f"; protected content differs: {', '.join(critical)}"
+    print(message)
+    if severity != "passed":
+        print(f"::warning title=README translation QA ({locale})::{message}")
+
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        path = Path(summary_path)
+        if not path.exists() or path.stat().st_size == 0:
+            path.write_text(
+                "## README round-trip translation QA\n\n"
+                "| Locale | Result | Similarity | Protected differences |\n"
+                "|---|---:|---:|---|\n",
+                encoding="utf-8",
+            )
+        with path.open("a", encoding="utf-8") as summary:
+            summary.write(
+                f"| {locale} | {severity} | {similarity:.1%} | "
+                f"{', '.join(critical) if critical else '—'} |\n"
+            )
+
+
+def run_round_trip_qa(
+    locale: str,
+    source: str,
+    translated: str,
+    translator_dir: Path,
+) -> None:
+    qa_source = translator_dir / "readme-backtranslation-source.md"
+    qa_source.write_text(
+        "\n\n".join(qa_chunks(plain_for_qa(translated))) + "\n",
+        encoding="utf-8",
+    )
+    qa_result = translator_dir / "readme-backtranslation-source.ru.md"
+    qa_result.unlink(missing_ok=True)
+    run(
+        "npm",
+        "start",
+        "--",
+        "--lang=ru",
+        "--files=readme-backtranslation-source.md",
+        "--incremental=false",
+        "--commit=false",
+        "--push=false",
+        cwd=translator_dir,
+    )
+    if not qa_result.exists():
+        raise RuntimeError(f"Back translator did not create {qa_result}")
+    back_translated = HASH_RE.sub("", qa_result.read_text(encoding="utf-8"))
+    record_round_trip_quality(locale, source, translated, back_translated)
+    qa_result.unlink(missing_ok=True)
+
 def translate_one(
     locale: str,
     provider_locale: str,
@@ -240,12 +357,15 @@ def translate_one(
         f"--lang={provider_locale}",
         "--files=readme-translation-source.md",
         "--incremental=false",
+        "--commit=false",
+        "--push=false",
         cwd=translator_dir,
     )
     if not translated_path.exists():
         raise RuntimeError(f"Translator did not create {translated_path}")
 
     translated = translated_path.read_text(encoding="utf-8")
+    run_round_trip_qa(locale, source_text, translated, translator_dir)
     target.write_text(
         finalize(translated, locale, placeholders, switchers),
         encoding="utf-8",
