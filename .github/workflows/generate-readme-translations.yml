@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/generate-readme-translations.yml"
+      - "scripts/generate_readme_translations.py"
   workflow_dispatch:
     inputs:
       overwrite:
