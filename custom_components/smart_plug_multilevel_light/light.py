@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 from datetime import timedelta
+from time import monotonic
 from typing import Any
 
 from homeassistant.components.light import ColorMode, LightEntity
@@ -28,6 +29,7 @@ from .const import (
 )
 
 _POWER_SAMPLE_INTERVAL = timedelta(seconds=1)
+_POWER_SAMPLE_INTERVAL_SECONDS = _POWER_SAMPLE_INTERVAL.total_seconds()
 
 
 async def async_setup_entry(
@@ -52,6 +54,7 @@ class SmartPlugMultiLevelLight(LightEntity):
         self._attr_unique_id = entry.entry_id
         self._power_history: list[float] = []
         self._selected_mode_index_value: int | None = None
+        self._last_power_event_sample_at: float | None = None
 
     @property
     def _cfg(self) -> dict[str, Any]:
@@ -269,16 +272,30 @@ class SmartPlugMultiLevelLight(LightEntity):
         )
 
     async def _handle_source_change(self, event: Event) -> None:
-        if event.data.get("entity_id") == self._outlet:
+        entity_id = event.data.get("entity_id")
+        if entity_id == self._outlet:
             new_state = event.data.get("new_state")
             if new_state is not None and new_state.state == "on":
                 self._prime_high_mode()
+            else:
+                self._power_history.clear()
+                self._selected_mode_index_value = None
+            self.async_write_ha_state()
+            return
+
         self._sample_current_power()
+        self._last_power_event_sample_at = monotonic()
         self.async_write_ha_state()
 
     @callback
     def _handle_periodic_sample(self, now) -> None:
         """Sample the current Home Assistant power state once per second."""
+        if (
+            self._last_power_event_sample_at is not None
+            and monotonic() - self._last_power_event_sample_at
+            < _POWER_SAMPLE_INTERVAL_SECONDS
+        ):
+            return
         self._sample_current_power()
         self.async_write_ha_state()
 

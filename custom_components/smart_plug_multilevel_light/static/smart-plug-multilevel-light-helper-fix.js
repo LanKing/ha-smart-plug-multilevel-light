@@ -1,6 +1,6 @@
 (() => {
   const DOMAIN = "smart_plug_multilevel_light";
-  const DEBUG_TIMER_OWNER = "spml-helper-fix-0.10.7";
+  const DEBUG_TIMER_OWNER = "spml-helper-fix-0.10.8";
 
   const isModesSelector = (selector) => {
     const object = selector?.selector?.object;

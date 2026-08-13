@@ -333,6 +333,7 @@
         } else {
           stableValue = null;
           samples.length = 0;
+          break;
         }
 
         const formattedSamples = samples.map(formatWatts).join(", ");
