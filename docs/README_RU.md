@@ -1,15 +1,15 @@
-<sub>🇺🇸&nbsp;<a href="README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a></sub>
+<sub>🇺🇸&nbsp;<a href="../README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a></sub>
 
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
-<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.10.5-blue" alt="Version 0.10.5"></a>
-<a href="LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
+<a href="../custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.10.5-blue" alt="Version 0.10.5"></a>
+<a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
 > Интеграция объединяет светильник без цифрового управления и умную розетку в одну сущность Home Assistant. Она определяет состояние и текущий режим яркости по потребляемой мощности, отображает их в карточке и позволяет включить лампу, выключенную собственной кнопкой, кратко отключив и снова подав питание через розетку.
  
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Возможности и особенности:**
 
@@ -119,12 +119,12 @@ custom_components/smart_plug_multilevel_light
 4. На следующем шаге задайте параметры лампы:
    - **Название светильника** — имя создаваемой сущности, например `FloorLamp`;
    - **Датчик мощности** — датчик мощности розетки;
-5. **🔅 Режимы яркости** — добавьте минимум один режим яркости (нажмите кнопку добавления)<br />
-<img src="docs/modes-edit.png" width="50%"/><br />
+5. В разделе **🔅 Режимы яркости** добавьте минимум один режим яркости, нажав **Добавить**.<br />
+<img src="modes-edit.png" width="50%"/><br />
 Переключите лампу её физической кнопкой, впишите название режима и запустите **Проверить стабильную мощность**. После получения стабильного значения нажмите **Применить**.
 
 6. После добавления первого режима добавьте остальные режимы, повторяя эти действия. У вас должно получиться что-то вроде:<br />
-<img src="docs/modes-list.png" width="50%"/>
+<img src="modes-list.png" width="50%"/>
 7. Сохраните вспомогательный объект. Home Assistant создаст новую сущность `light`, например `light.FloorLamp`.
 
 ### 🧩 Lovelace-карточка
@@ -290,4 +290,4 @@ lovelace:
 
 ## 📄 Лицензия
 
-Проект распространяется по лицензии [MIT](LICENSE).
+Проект распространяется по лицензии [MIT](../LICENSE).
