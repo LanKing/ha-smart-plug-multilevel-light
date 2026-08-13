@@ -1,12 +1,12 @@
 {
   "domain": "smart_plug_multilevel_light",
   "name": "Smart Plug Multi-Level Light",
-  "version": "0.10.9",
+  "codeowners": ["@LanKing"],
   "config_flow": true,
+  "dependencies": ["frontend", "http", "lovelace"],
+  "documentation": "https://github.com/LanKing/ha-smart-plug-multilevel-light",
   "integration_type": "helper",
   "iot_class": "local_push",
-  "documentation": "https://github.com/LanKing/ha-smart-plug-multilevel-light",
   "issue_tracker": "https://github.com/LanKing/ha-smart-plug-multilevel-light/issues",
-  "codeowners": ["@LanKing"],
-  "dependencies": ["frontend", "http", "lovelace"]
+  "version": "0.10.9"
 }
