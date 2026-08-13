@@ -80,7 +80,7 @@ T = {
 
 
 def patch_file(path: Path, locale: str) -> bool:
-    current_sensor, power_delay, modes, _ = T[locale]
+    power_sensor, power_delay, modes, _ = T[locale]
     data = json.loads(path.read_text(encoding="utf-8"))
     changed = False
 
@@ -90,10 +90,11 @@ def patch_file(path: Path, locale: str) -> bool:
         changed = True
     desc = settings.setdefault("data_description", {})
     desired = {
-        "current_sensor": current_sensor,
+        "power_sensor": power_sensor,
         "power_cycle_delay": power_delay,
         "modes": modes,
     }
+    desc.pop("current_sensor", None)
     for key, value in desired.items():
         if desc.get(key) != value:
             desc[key] = value
@@ -101,6 +102,7 @@ def patch_file(path: Path, locale: str) -> bool:
 
     init = data.setdefault("options", {}).setdefault("step", {}).setdefault("init", {})
     desc = init.setdefault("data_description", {})
+    desc.pop("current_sensor", None)
     for key, value in desired.items():
         if desc.get(key) != value:
             desc[key] = value
