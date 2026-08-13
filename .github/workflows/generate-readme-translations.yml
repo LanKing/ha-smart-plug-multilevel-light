@@ -17,7 +17,7 @@ permissions:
 
 concurrency:
   group: readme-translations
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   generate:
@@ -61,9 +61,15 @@ jobs:
               r"\}\),\s*"
               r"\)"
           )
-          replacement = """  for (const value of unique) {
-            translated.set(value, await translateFn(value))
-            await new Promise((resolve) => setTimeout(resolve, 150))
+          replacement = """  const batchSize = 10
+          for (let index = 0; index < unique.length; index += batchSize) {
+            const batch = unique.slice(index, index + batchSize)
+            await Promise.all(
+              batch.map(async (value) => {
+                translated.set(value, await translateFn(value))
+              }),
+            )
+            await new Promise((resolve) => setTimeout(resolve, 200))
           }"""
           text, count = pattern.subn(replacement, text, count=1)
           if count != 1:
