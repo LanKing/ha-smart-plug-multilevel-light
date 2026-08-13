@@ -292,4 +292,5 @@ lovelace:
 
 Проект распространяется по лицензии [MIT](../LICENSE).
 
-> [🏠 Познакомьтесь с другими моими решениями для Home Assistant](https://github.com/LanKing/ha-tools/blob/main/docs/README_ru.md)
+## 🏠 Понравилось решение?
+Посмотрите <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ru.md">другие мои продукты для Home Assistant</a>
