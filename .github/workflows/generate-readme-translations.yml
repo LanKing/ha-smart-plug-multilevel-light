@@ -1,0 +1,80 @@
+name: Generate README translations
+
+on:
+  push:
+    paths:
+      - ".github/workflows/generate-readme-translations.yml"
+  workflow_dispatch:
+    inputs:
+      overwrite:
+        description: Regenerate existing translations
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-translations
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout pinned Markdown translator
+        uses: actions/checkout@v4
+        with:
+          repository: ikhsan3adi/markdown-translator
+          ref: 629de65807486cf6ad68605cd03728da7cc90fbd
+          path: .readme-translator
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install translator dependencies
+        working-directory: .readme-translator
+        run: npm ci
+
+      - name: Limit translation requests to sequential execution
+        working-directory: .readme-translator
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("src/lib.ts")
+          text = path.read_text(encoding="utf-8")
+          old = """  await Promise.all(
+            unique.map(async (value) => {
+              translated.set(value, await translateFn(value))
+            }),
+          )"""
+          new = """  for (const value of unique) {
+            translated.set(value, await translateFn(value))
+            await new Promise((resolve) => setTimeout(resolve, 150))
+          }"""
+          if old not in text:
+              raise SystemExit("Could not patch translator request scheduling")
+          path.write_text(text.replace(old, new), encoding="utf-8")
+          PY
+
+      - name: Generate translations from Russian README
+        env:
+          OVERWRITE: ${{ inputs.overwrite }}
+        run: |
+          args=()
+          if [ "$OVERWRITE" = "true" ]; then
+            args+=(--overwrite)
+          fi
+          python scripts/generate_readme_translations.py \
+            --translator-dir .readme-translator \
+            "${args[@]}"
