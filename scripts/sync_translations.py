@@ -10,6 +10,7 @@ TRANSLATIONS = ROOT / "custom_components" / "smart_plug_multilevel_light" / "tra
 LOCALES_JS = ROOT / "custom_components" / "smart_plug_multilevel_light" / "static" / "smart-plug-multilevel-light-locales.js"
 
 # Keep these four user-facing strings synchronized in every supported locale.
+# Obsolete description keys are removed so every locale matches strings.json.
 # They intentionally stay concise; High/Medium/Low/Dim are mode-name examples and remain unchanged.
 T = {
     "af": ("Slegs stroomsensors wat aan die gekose slimprop behoort, is hier beskikbaar.", "Gewoonlik is geen ekstra vertraging nodig nie. As 'n lamp wat met sy eie knoppie afgeskakel is nie vanuit Home Assistant aanskakel nie, stel 'n klein vertraging in, byvoorbeeld 0,7 s.", "Leer eers die helderheidsmodusse van 'n nuwe lamp. Gebruik die fisiese knoppie op die lamp om elke helderheidsvlak te kies en voeg dit hieronder by, byvoorbeeld High, Medium, Low en Dim.", "Byvoorbeeld: High, Medium, Low of Dim."),
