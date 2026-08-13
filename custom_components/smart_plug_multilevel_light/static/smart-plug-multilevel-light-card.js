@@ -195,7 +195,15 @@ class SmartPlugMultiLevelLightCard extends HTMLElement {
     if (this.config.name) cfg.name = this.config.name;
     if (this.config.icon) cfg.icon = this.config.icon;
     const stateContent = this._stateContent(state);
-    if (stateContent) cfg.state_content = stateContent;
+    if (stateContent) {
+      cfg.state_content = stateContent;
+    } else if (
+      state?.state === "on" &&
+      this.config.show_mode === false &&
+      this.config.show_percentage === false
+    ) {
+      cfg.hide_state = true;
+    }
     return cfg;
   }
 
