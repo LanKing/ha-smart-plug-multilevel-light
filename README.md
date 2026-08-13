@@ -1,3 +1,6 @@
+> [!TIP]
+> This is a test TIP alert.
+
 <sub>🇷🇺&nbsp;<a href="docs/README_RU.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a></sub>
 
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
