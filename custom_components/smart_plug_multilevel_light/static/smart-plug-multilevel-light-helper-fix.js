@@ -1,5 +1,6 @@
 (() => {
   const DOMAIN = "smart_plug_multilevel_light";
+  const DEBUG_TIMER_OWNER = "spml-helper-fix-0.10.7";
 
   const isModesSelector = (selector) => {
     const object = selector?.selector?.object;
@@ -40,8 +41,30 @@
     }
   };
 
+  const formDataForSelector = (selector) => formHostForSelector(selector)?.data || {};
+
   const formatNumber = (value) =>
     Number(value).toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
+
+  const stateToWatts = (state) => {
+    if (!state || ["unknown", "unavailable"].includes(state.state)) return null;
+    const numeric = Number(state.state);
+    if (!Number.isFinite(numeric)) return null;
+    const unit = String(state.attributes?.unit_of_measurement || "W").trim();
+    if (unit === "mW") return numeric / 1000;
+    if (unit === "kW") return numeric * 1000;
+    if (unit === "MW") return numeric * 1000000;
+    return numeric;
+  };
+
+  const findSampleCount = (selector) => {
+    const value = Number(formDataForSelector(selector)?.power_history_samples ?? 5);
+    if (!Number.isFinite(value)) return 5;
+    return Math.max(1, Math.min(100, Math.round(value)));
+  };
+
+  const findPowerSensor = (selector) =>
+    String(formDataForSelector(selector)?.power_sensor || "");
 
   const brightnessForPower = (power, maxPower, roundTo5) => {
     if (!(maxPower > 0)) return 100;
@@ -79,7 +102,7 @@
     if (!validPowers.length) return;
 
     const maxPower = Math.max(...validPowers);
-    const roundTo5 = Boolean(formHostForSelector(selector)?.data?.round_brightness_to_5);
+    const roundTo5 = Boolean(formDataForSelector(selector)?.round_brightness_to_5);
 
     descriptions.forEach((description, index) => {
       const power = powers[index];
@@ -88,6 +111,52 @@
       const nextText = `${formatNumber(power)} W · ${pct}%`;
       if (description.textContent !== nextText) description.textContent = nextText;
     });
+  };
+
+  const renderDebugSamples = (selector) => {
+    const debug = selector?.shadowRoot?.querySelector?.(".spml-debug-measures");
+    if (!debug) return;
+
+    const entityId = findPowerSensor(selector);
+    const value = stateToWatts(entityId ? selector.hass?.states?.[entityId] : undefined);
+    const maxItems = findSampleCount(selector);
+    const samples = Array.isArray(selector.__spmlDebugSamples)
+      ? selector.__spmlDebugSamples
+      : [];
+
+    samples.push(value === null ? "—" : formatNumber(value));
+    selector.__spmlDebugSamples = samples.slice(-maxItems);
+
+    const label = window.SPML_I18N?.t(selector.hass, "last_measures_debug") || "🐞 Last measures";
+    debug.textContent = `${label}: [${selector.__spmlDebugSamples.join(", ")}] W`;
+  };
+
+  const ensureDebugTimer = (selector) => {
+    const debug = selector?.shadowRoot?.querySelector?.(".spml-debug-measures");
+    if (!debug) return;
+
+    if (
+      selector.__spmlDebugTimer &&
+      selector.__spmlDebugTimerOwner !== DEBUG_TIMER_OWNER
+    ) {
+      clearInterval(selector.__spmlDebugTimer);
+      selector.__spmlDebugTimer = null;
+    }
+
+    if (selector.__spmlDebugTimer) return;
+
+    selector.__spmlDebugTimerOwner = DEBUG_TIMER_OWNER;
+    selector.__spmlDebugSamples = [];
+    renderDebugSamples(selector);
+    selector.__spmlDebugTimer = setInterval(() => {
+      if (!selector.isConnected) {
+        clearInterval(selector.__spmlDebugTimer);
+        selector.__spmlDebugTimer = null;
+        selector.__spmlDebugTimerOwner = null;
+        return;
+      }
+      renderDebugSamples(selector);
+    }, 1000);
   };
 
   const patchSelector = (selector) => {
@@ -135,6 +204,7 @@
 
     alignHelperTexts(formRootForSelector(selector));
     decorateModeRows(selector);
+    ensureDebugTimer(selector);
   };
 
   const walk = (root) => {
@@ -156,7 +226,11 @@
   };
 
   const observer = new MutationObserver(refresh);
-  observer.observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+    characterData: true,
+  });
 
   customElements.whenDefined("ha-selector-object").then(() => {
     const ctor = customElements.get("ha-selector-object");
