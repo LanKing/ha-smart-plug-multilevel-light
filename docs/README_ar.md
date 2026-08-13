@@ -1,0 +1,361 @@
+<sub>🇺🇸&nbsp;<a href="../README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a>&nbsp;|</sub> <sub>🇺🇦&nbsp;<a href="README_uk.md">У⁠к⁠р⁠а⁠ї⁠н⁠с⁠ь⁠к⁠а</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="README_ru.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="README_af.md">A⁠f⁠r⁠i⁠k⁠a⁠a⁠n⁠s</a>&nbsp;|</sub> <sub>🇧🇬&nbsp;<a href="README_bg.md">Б⁠ъ⁠л⁠г⁠а⁠р⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="README_bn.md">বাং⁠লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="README_bs.md">B⁠o⁠s⁠a⁠n⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="README_ca.md">C⁠a⁠t⁠a⁠l⁠à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="README_cs.md">Č⁠e⁠š⁠t⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>cy&nbsp;<a href="README_cy.md">C⁠y⁠m⁠r⁠a⁠e⁠g</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="README_da.md">D⁠a⁠n⁠s⁠k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="README_de.md">D⁠e⁠u⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇬🇷&nbsp;<a href="README_el.md">Ε⁠λ⁠λ⁠η⁠ν⁠ι⁠κ⁠ά</a>&nbsp;|</sub> <sub>eo&nbsp;<a href="README_eo.md">E⁠s⁠p⁠e⁠r⁠a⁠n⁠t⁠o</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="README_es.md">E⁠s⁠p⁠a⁠ñ⁠o⁠l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="README_et.md">E⁠e⁠s⁠t⁠i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="README_eu.md">E⁠u⁠s⁠k⁠a⁠r⁠a</a>&nbsp;|</sub> <sub>🇮🇷&nbsp;<a href="README_fa.md">ف⁠ا⁠ر⁠س⁠ی</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="README_fi.md">S⁠u⁠o⁠m⁠i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="README_fy.md">F⁠r⁠y⁠s⁠k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="README_fr.md">F⁠r⁠a⁠n⁠ç⁠a⁠i⁠s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="README_ga.md">G⁠a⁠e⁠i⁠l⁠g⁠e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="README_gl.md">G⁠a⁠l⁠e⁠g⁠o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="README_gsw.md">S⁠c⁠h⁠w⁠i⁠i⁠z⁠e⁠r⁠d⁠ü⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="README_he.md">ע⁠ב⁠ר⁠י⁠ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_hi.md">हि⁠न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="README_hr.md">H⁠r⁠v⁠a⁠t⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="README_hu.md">M⁠a⁠g⁠y⁠a⁠r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="README_hy.md">Հ⁠ա⁠յ⁠ե⁠ր⁠ե⁠ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="README_id.md">I⁠n⁠d⁠o⁠n⁠e⁠s⁠i⁠a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="README_is.md">Í⁠s⁠l⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="README_it.md">I⁠t⁠a⁠l⁠i⁠a⁠n⁠o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="README_ja.md">日⁠本⁠語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="README_ka.md">K⁠a⁠r⁠t⁠u⁠l⁠i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="README_ko.md">한⁠국⁠어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="README_lb.md">L⁠ë⁠t⁠z⁠e⁠b⁠u⁠e⁠r⁠g⁠e⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="README_lt.md">L⁠i⁠e⁠t⁠u⁠v⁠i⁠ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="README_lv.md">L⁠a⁠t⁠v⁠i⁠e⁠š⁠u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="README_mk.md">М⁠а⁠к⁠е⁠д⁠о⁠н⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ml.md">മ⁠ല⁠യാ⁠ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nb.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠B⁠o⁠k⁠m⁠å⁠l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="README_nl.md">N⁠e⁠d⁠e⁠r⁠l⁠a⁠n⁠d⁠s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nn.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠N⁠y⁠n⁠o⁠r⁠s⁠k</a>&nbsp;|</sub> <sub>🇵🇱&nbsp;<a href="README_pl.md">P⁠o⁠l⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="README_pt.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="README_pt-BR.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s⁠&nbsp;⁠(⁠B⁠R⁠)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="README_ro.md">R⁠o⁠m⁠â⁠n⁠ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="README_sk.md">S⁠l⁠o⁠v⁠e⁠n⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="README_sl.md">S⁠l⁠o⁠v⁠e⁠n⁠š⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="README_sq.md">S⁠h⁠q⁠i⁠p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr.md">С⁠р⁠п⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr-Latn.md">S⁠r⁠p⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="README_sv.md">S⁠v⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ta.md">த⁠மி⁠ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_te.md">తె⁠లు⁠గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="README_th.md">ภ⁠า⁠ษ⁠า⁠ไ⁠ท⁠ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="README_tr.md">T⁠ü⁠r⁠k⁠ç⁠e</a>&nbsp;|</sub> <sub>🇵🇰&nbsp;<a href="README_ur.md">اُ⁠ر⁠دُ⁠و</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="README_vi.md">T⁠i⁠ế⁠n⁠g⁠&nbsp;⁠V⁠i⁠ệ⁠t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="README_zh-Hans.md">简⁠体⁠中⁠文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="README_zh-Hant.md">繁⁠體⁠中⁠文</a></sub>
+
+<a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a> <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a> <a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
+
+> يجمع التكامل بين وحدة إضاءة لا يتم التحكم فيها رقميًا ومقبسًا ذكيًا في كيان مساعد منزلي واحد. فهو يحدد الحالة ووضع السطوع الحالي بناءً على استهلاك الطاقة، ويعرضهما في بطاقة ويسمح لك بتشغيل المصباح الذي تم إيقاف تشغيله بواسطة الزر الخاص به عن طريق إيقاف تشغيل الطاقة لفترة وجيزة وإعادة توصيلها عبر المنفذ.
+
+# 🔌 ضوء ذكي متعدد المستويات
+
+![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+
+**✨ المميزات والميزات:**
+
+* يقوم بإنشاء كيان مساعد منزلي أصلي`light`متوافق مع عمليات التشغيل الآلي والبرامج النصية وواجهة HA القياسية؛
+* يقوم بتشغيل المصباح بشكل صحيح بغض النظر عن كيفية إيقاف تشغيله: إذا تم إيقاف تشغيل الطاقة من خلال المقبس الذكي، فسيتم تشغيله ببساطة؛ إذا تم إيقاف تشغيل المصباح باستخدام الزر الخاص به أثناء تشغيل المقبس، فإنه يقوم بإجراء دورة من إلغاء الطاقة وتشغيله مرة أخرى؛
+* يحدد تلقائيًا وضع التشغيل الحالي للمصباح بناءً على الطاقة المستقرة المقاسة فعليًا؛
+* يحتوي على مكون بسيط يقوم فيه المستخدم بتسمية الأوضاع التي يدعمها مصباحه بشكل تسلسلي، ويتعلم النظام من خلال تحديد الطاقة المستقرة في كل وضع؛
+* أثناء الإعداد الأول، تتم قراءة الطاقة في الوقت الحقيقي: يجب على المستخدم فقط تحويل الضوء إلى الوضع التالي والضغط على زر التعلم؛
+* نجح في تصفية قراءات الطاقة غير المستقرة، مما يمنع التغييرات الفوضوية للمؤشر الموجود على البطاقة عندما "تقفز" الطاقة في وضع واحد (وحتى تتزامن مع الوضع التالي)؛
+* يدعم عددًا عشوائيًا من الأوضاع؛
+* تم إنشاء البطاقة فوق بطاقة Home Assistant Tile Card القياسية، مع الحفاظ على هندستها وخلفيتها وتأثيرات التمرير والأحجام والطباعة والإجراءات القياسية؛
+* في البطاقة، يتم ترميز السطوع الحالي بصريًا من خلال كثافة اللون؛
+* يحسب السطوع خطيا بالنسبة إلى الطاقة القصوى؛ يمكن تمكين تقريب السطوع المحسوب إلى 5% لعرض أكثر دقة للنسب المئوية؛
+* يتيح لك تخصيص المعلمات المعروضة ومظهر البطاقة بمرونة؛
+* يتيح لك تحديد مستشعر الطاقة المرتبط بالقابس الذكي المحدد فقط؛
+* يسمح لك بضبط تأخير دورة إلغاء الطاقة للتشغيل الصحيح مع نماذج مختلفة من المصابيح والمقابس؛
+* يتيح لك ضبط حد الطاقة الذي يعتبر المصباح عنده مطفأ؛
+* تمت ترجمة الواجهة لـ 64 لغة للمساعد المنزلي.
+
+## 🗜 تحضير الحديد
+
+سوف تحتاج إلى:
+
+1. مقبس ذكي يجب أن يوفر التحكم في الطاقة (المفتاح) وقياس الطاقة (المستشعر مع فئة\_الجهاز: الطاقة) إلى HA. يجب أن ينتمي كلا الكيانين إلى نفس الجهاز وأن يتم تمكينهما.
+2. ضوء سخيف يعمل تلقائيًا بمجرد توصيله ويحتوي على إعدادات سطوع متعددة للاستمتاع الكامل.
+
+> لقد استخدمت المقبس[تويا TS011F (في حالة جيرير)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). سأقول أنه في بداية التجارب، لم تكن سلسلة مآخذ Girier مناسبة بسبب القياسات غير الدقيقة، ولكن هذا النموذج كان مناسبًا، على الرغم من أنه كان أيضًا في حالة Girier.
+
+### 👨‍🔬 إعداد مهم قمت بتطبيقه على المنفذ الخاص بي:
+
+> لا يقوم المقبس الخاص بي تلقائيًا بإبلاغ القراءات إلى HA ويسمح فقط بالاستقصاء في فترة زمنية محددة. افتراضيا كان 60 ثانية. من الضروري ضبط هذا الفاصل الزمني على ثانية واحدة، وإلا فسوف تنتظر وقتًا طويلاً جدًا حتى تظهر شاشة تبديل الوضع.
+
+هذا الوصف مناسب فقط لأصحاب المقابس المتصلة عبر Z2M. يجب على المستخدمين الآخرين ضبط معدل التحديث ضمن التكوين الخاص بهم:
+
+1. يفتح**مساعد منزلي → Zigbee2MQTT**. إذا لم يكن Zigbee2MQTT موجودًا في القائمة الجانبية، فافتحه**الإعدادات ← التطبيقات ← Zigbee2MQTT ← فتح واجهة الويب**.
+2. اذهب إلى القسم**الأجهزة**.
+3. حدد المنفذ المطلوب.
+4. افتح علامة التبويب**الإعدادات (محددة)**.
+5. التغييرات**الفاصل الزمني لاستقصاء القياس**في 1 ثانية.
+
+<a id="installation"></a>
+
+## 📦 التثبيت
+
+### 🛍 التثبيت عن طريق HACS
+
+ℹ️[ما هو HACS وكيفية تثبيته؟](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ar.md)
+
+🚀[حاول إضافة مستودع على الرابط](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). إذا كان HA الخاص بك يدعم هذه الطريقة، فانقر فوق**يضيف**في النافذة التي تفتح، ثم الزر**تحميل**في الزاوية اليمنى السفلى. إذا تم التثبيت بنجاح، يمكنك تخطي الخطوات الإضافية. انتقل مباشرة إلى القسم[بداية سريعة](#getting-started).
+
+#### 1. إضافة مستودع
+
+على الرغم من عدم تضمين المستودع في دليل HACS القياسي، قم بإضافته كمستودع مخصص:
+
+1. يفتح**HACS → التكامل**.
+2. افتح القائمة في الزاوية اليمنى العليا واختر**المستودعات المخصصة**.
+3. يضيف:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. اختر النوع**اندماج**واضغط**يضيف**.
+
+> تؤدي إضافة مستودع إلى جعل التكامل متاحًا في HACS فقط. للتثبيت، تحتاج إلى فتح بطاقتها بشكل منفصل والنقر عليها**تحميل**.
+
+#### 2. تركيب التكامل
+
+1. البحث في HACS:`Smart Plug Multi-Level Light`.
+2. افتح التكامل وانقر**تحميل**.
+3. بعد التثبيت، أعد تشغيل Home Assistant بالكامل.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 التثبيت بدون HACS
+
+1. في صفحة المستودع، انقر فوق**الكود → تنزيل ZIP**.
+2. قم بفك ضغط الأرشيف.
+3. انسخ المجلد:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+إلى دليل تكوين Home Assistant:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+المسار النهائي للملف`manifest.json`يجب أن يبدو مثل هذا:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. أعد تشغيل Home Assistant بالكامل.
+
+> لا تقم بنسخ مجلد المستودع الخارجي بأكمله إلى`custom_components`. داخل`custom_components`يجب أن يكون المجلد موجودا مباشرة`smart_plug_multilevel_light`.
+
+يتم تضمين البطاقة في التكامل، لذلك لا يلزم تثبيت HACS. بعد نسخ الملفات يدويًا، وإعادة تشغيل Home Assistant، وإنشاء كائن المساعد الأول، ينشر التكامل ملف بطاقة JavaScript ويسجله تلقائيًا مع موارد اللوحة في الوضع القياسي`storage`. في وضع موارد YAML، يجب تسجيل البطاقة يدويًا، كما هو موضح أدناه.
+
+<a id="getting-started"></a>
+
+## 🚀 بداية سريعة بعد التثبيت
+
+### 🛠 التكوين
+
+1. يفت&#x62D;**[الإعدادات ← الأجهزة والخدمات ← الملحقات](https://my.home-assistant.io/redirect/helpers/)**&#x648;اضغط**إنشاء كائن مساعد**.
+
+2. يختار**المكونات الذكية متعددة المستويات الخفيفة**.
+
+3. حدد القابس الذكي الذي يتصل به المصباح. تعرض القائمة فقط المنافذ التي يرى فيها Home Assistant مستشعر الطاقة في نفس الجهاز.
+
+4. في الخطوة التالية، قم بتعيين معلمات المصباح:
+   * **اسم الإضاءة (Light name)**— اسم الكيان الذي يتم إنشاؤه، على سبيل المثال`FloorLamp`;
+   * **Power sensor**- مستشعر طاقة المقبس؛
+
+5. في القسم**ZUI003Z**قم بإضافة وضع سطوع واحد على الأقل عن طريق النقر**يضيف**.<br /> <img src="modes-edit.png" width="50%"/><br />قم بتبديل المصباح بزره الفعلي، وأدخل اسم الوضع وابدأ**Test stable power**. بعد الحصول على قيمة ثابتة، اضغط على**يتقدم**.
+
+6. بعد إضافة الوضع الأول، قم بإضافة الأوضاع المتبقية من خلال تكرار هذه الخطوات. يجب أن ينتهي بك الأمر بشيء مثل:<br />
+   <img src="modes-list.png" width="50%"/>
+
+7. احفظ الكائن المساعد. سيقوم Home Assistant بإنشاء كيان جديد`light`، على سبيل المثال`light.FloorLamp`.
+
+### 🧩 بطاقة لافليس
+
+1. افتح اللوحة المطلوبة، وقم بتشغيل وضع التحرير وانقر فوق**أضف بطاقة**.
+2. يختار**المكونات الذكية متعددة المستويات الخفيفة**، حدد الكيان الذي تم إنشاؤه`light`وحفظ البطاقة.
+
+إذا لم تكن البطاقة من بين البطاقات المتوفرة، فمن المحتمل أنك تستخدمها[وضع YAML لموارد Lovelace](#yaml-lovelace-mode).
+
+### 🎨 مؤثرات بصرية
+
+#### الإعدادات في البطاقة
+
+افتح اللوحة التي توجد بها البطاقة، وانتقل إلى وضع التحرير وانقر**يحرر**على البطاقة المطلوبة
+
+فتح القسم**المحتوى (Content)**، سترى الإعدادات المتاحة:
+
+* **إظهار اسم الوضع (Show mode name)**— يُظهر أو يخفي اسم الوضع الحالي: على سبيل المثال، Dim، أو Low، أو Medium، أو High.
+* **إظهار النسبة المئوية (Show percentage)**— يعرض أو يخفي السطوع المحسوب كنسبة مئوية.
+
+فتح القسم**التفاعلات (Interactions)**، سوف ترى:
+
+* **إظهار خلفية الأيقونة دائمًا (Always show icon background)**— يحتفظ بالخلفية المستديرة حول الأيقونة، حتى إذا تم تعطيل إجراء منفصل لها.
+
+> 🚫 بالمناسبة، إذا كنت مثلي تستخدم أيقونة بطاقة غير قياسية وعند إيقاف تشغيلها لا يتم شطبها بصريًا، فإنني أوصي بمكوني الإضافي الآخر -[Mdi معطلة احتياطية](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_ar.md)مما يحل هذه المشكلة الجمالية.
+
+#### تقريب السطوع حتى 5%
+
+يفت&#x62D;**[الإعدادات ← الأجهزة والخدمات ← الملحقات](https://my.home-assistant.io/redirect/helpers/)**، ابحث عن الكائن المساعد الذي تم إنشاؤه مسبقًا**المكونات الذكية متعددة المستويات الخفيفة**وافتح إعداداته. تشغيل أو إيقاف**Round brightness to 5% (may look nicer)**.
+
+عند تمكين الإعداد، يتم تقريب النسبة المئوية المحسوبة إلى أقرب 5%، على سبيل المثال: 33% → 35%، 67% → 65%.
+
+يؤثر التقريب فقط على النسبة المئوية المعروضة والكثافة المرئية للبطاقة. لا يتغير تعريف الوضع وتشغيل المصباح. بشكل افتراضي، يتم تعطيل التقريب.
+
+## 🧩 بطاقة لافليس بالتفصيل
+
+الخيارات المتاحة:
+
+| المعلمة | اكتب | الافتراضي | الوجهة |
+|---|---|---:|---|
+|`entity`| سلسلة | واجب | الكيان الذي تم إنشاؤه بواسطة التكامل |
+|`name`| سلسلة | اسم الكيان | يتجاوز الاسم الموجود في البطاقة |
+|`icon`| سلسلة | أيقونة الكيان | يعيد تعريف الأيقونة |
+|`show_mode`| منطقية |`true`| يظهر اسم الوضع |
+|`show_percentage`| منطقية |`true`| يظهر الفائدة المشروطة |
+|`icon_tap_action`| عمل |`more-info`| إجراء إضافي عند الضغط على الأيقونة |
+|`always_show_icon_background`| منطقية |`false`| يظهر دائمًا الخلفية المستديرة للأيقونة، حتى لو كانت`icon_tap_action`تم تحديد "لا" |
+
+المثال الكامل:
+
+```yaml
+type: custom:smart-plug-multilevel-light-card
+entity: light.floor_lamp
+name: Торшер
+icon: mdi:floor-lamp
+show_mode: true
+show_percentage: true
+icon_tap_action:
+  action: more-info
+always_show_icon_background: false
+```
+
+<a id="yaml-lovelace-mode"></a>
+
+### وضع YAML لموارد Lovelace
+
+> على الأرجح، لم يتم تمكين هذا الوضع لديك. إذا لم تكن هناك مشاكل وكانت البطاقة تعمل، تخطي هذه الخطوة.
+
+إذا كان لديك`configuration.yaml`تعيين صراحة:
+
+```yaml
+lovelace:
+  resource_mode: yaml
+```
+
+لا يسمح Home Assistant للتكامل بتغيير قائمة الموارد تلقائيًا. في هذه الحالة، أضف المورد يدويًا:
+
+```yaml
+lovelace:
+  resource_mode: yaml
+  resources:
+    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
+      type: module
+```
+
+بعد التغيير، أعد تشغيل موارد Lovelace أو أعد تشغيل Home Assistant.
+
+<a id="troubleshooting"></a>
+
+## 🧯 استكشاف الأخطاء وإصلاحها
+
+<details>
+<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<br />
+
+**السبب المحتمل:**&#x644;م يتم إعادة تشغيل المسار غير الصحيح أو Home Assistant.
+
+التحقق من توفر الملف:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+ثم قم بإعادة تشغيل Home Assistant بالكامل وتحقق من السجل بحثًا عن الأخطاء`smart_plug_multilevel_light`.
+
+<hr />
+</details>
+
+<details>
+<summary><b>❓Список розеток пуст</b></summary>
+<br />
+
+التكامل يظهر الكائنات فقط`switch`المرتبطة بالأجهزة التي توفر أيضًا مستشعرًا مضمنًا`device_class: power`.
+
+تحقق ف&#x64A;**[الإعدادات → الأجهزة والخدمات → الكائنات](https://my.home-assistant.io/redirect/entities/)**:
+
+* هل ينتمون`switch`وجهاز استشعار الطاقة لجهاز واحد؟
+* هل تم تشغيل مستشعر الطاقة؟
+* هل تم تحديده بشكل صحيح؟`device_class`?
+* هل لها حالة عددية؟
+
+<hr />
+</details>
+
+<details>
+<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<br />
+
+بعد تحديد منفذ، يقوم التكامل بإعادة التحقق من وجود مستشعر الطاقة. يحدث الخطأ إذا تمت إزالة المستشعر أو تعطيله أو نقله إلى جهاز آخر أو توقف وجوده`device_class: power`.
+
+<hr />
+</details>
+
+<details>
+<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<br />
+
+تحقق من قيمة مستشعر الطاقة. يعتبر المصباح الظاهري مطفأ عندما`0 W`; عندما تكون إيجابية، ينبغي تعريفها على أنها`on`.
+
+<hr />
+</details>
+
+<details>
+<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<br />
+
+تأكد من ظهور مستشعر الطاقة المحدد بالفعل`0 W`، عندما يتم إطفاء المصباح بواسطة الزر الخاص به.
+
+<hr />
+</details>
+
+<details>
+<summary><b>❓Определяется неправильный режим</b></summary>
+<br />
+
+يفحص**🐞 Last measures**في الإعدادات والصفات`power_history`,`power_history_modes`,`power_sample_interval_seconds`و`selected_power_mode`.`power_history`يظهر آخر قيم الطاقة المسجلة،`power_history_modes`— الوضع لكل واحد منهم وفقًا للعتبات التي تم تكوينها،`power_sample_interval_seconds`هي فترة التثبيت الدوري، و`selected_power_mode`- الوضع المؤكد الحالي.
+
+<hr />
+</details>
+
+<details>
+<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<br />
+
+وهذا هو السلوك المتوقع. ولمنع تقلبات الطاقة قصيرة المدى من التسبب في تبديل زائف، لا يغير التكامل الوضع إلا بعد أن تتوافق عدة قراءات متتالية مع نفس الوضع الجديد.
+
+يتم تحديد العدد المطلوب من القراءات بواسطة المعلمة**Consecutive readings to switch**والافتراضيات ل`5`. يتم إجراء القياسات الدورية مرة واحدة في الثانية، وتتم معالجة التغييرات في حالة المستشعر على الفور. إذا كانت القيمة أثناء الاختبار تتوافق مع وضع مختلف، فسيبدأ العد التنازلي مرة أخرى.
+
+وحتى التأكيد، يحافظ التكامل على الوضع السابق. بفضل هذا، لا تقوم البطاقة بالتبديل بين الأوضاع بسبب القيم المتوسطة التي تحدث عند تبديل المصباح أو تثبيت قوته أو التقلبات الصغيرة في قراءات المستشعر.
+
+يؤدي تقليل عدد القراءات إلى تسريع عرض الوضع الجديد، ولكنه يجعل الكشف أكثر حساسية لتقلبات الطاقة.
+
+<hr />
+</details>
+
+<details>
+<summary><b>❓Карточка не появилась в списке</b></summary>
+<br />
+
+يحدث التسجيل التلقائي فقط بعد تحميل كائن مساعد واحد على الأقل تم تكوينه وفي وضع الموارد فقط`storage`. ولا تؤثر طريقة تثبيت التكامل - عبر HACS أو يدويًا - على ذلك.
+
+يفح&#x635;**[الإعدادات → اللوحات → ⋮ → الموارد](https://my.home-assistant.io/redirect/lovelace_resources/)**. يجب أن يكون عنوان URL هناك:
+
+```text
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
+```
+
+في وضع YAML[إضافة الموارد يدويا](#yaml-lovelace-mode).
+
+<hr />
+</details>
+
+<details>
+<summary><b>❓После обновления отображается старая карточка</b></summary>
+<br />
+
+1. أعد تشغيل Home Assistant بالكامل.
+2. قم بتحديث الصفحة لمسح ذاكرة التخزين المؤقت للمتصفح الخاص بك.
+3. تحقق من رقم الإصدار في عنوان URL لمورد اللوحة.
+4. في تطبيق الهاتف المحمول، أغلق الواجهة بالكامل وأعد فتحها.
+
+<hr />
+</details>
+
+## 🗑 إزالة
+
+1. احذف كافة الكائنات المساعدة التي تم إنشاؤها**المكونات الذكية متعددة المستويات الخفيفة**خلا&#x644;**[الإعدادات ← الأجهزة والخدمات ← الملحقات](https://my.home-assistant.io/redirect/helpers/)**.
+2. قم بإزالة التكامل عبر HACS أو احذف المجلد يدويًا:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+3. يفح&#x635;**[الإعدادات → اللوحات → ⋮ → الموارد](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x648;حذف مورد البطاقة يدويًا إذا بقي:
+
+```text
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
+```
+
+4. أعد تشغيل Home Assistant بالكامل.
+5. إذا لزم الأمر، قم بتحديث الصفحة لمسح ذاكرة التخزين المؤقت للواجهة.
+
+## 📄 الترخيص
+
+يتم توزيع المشروع بموجب ترخيص[مع](../LICENSE).
+
+<br />
+
+> \[!نصيحة]**هل أعجبك الحل؟**&#x627;نظر 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ar.md">منتجاتي الأخرى لمساعد المنزل</a>
