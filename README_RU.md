@@ -121,10 +121,11 @@ custom_components/smart_plug_multilevel_light
    - **Power sensor** — датчик мощности розетки;
 5. **Brightness modes** — добавьте минимум один режим яркости (нажмите кнопку добавления)
 Переключите лампу её физической кнопкой, впишите название режима и запустите **Test stable power**. После получения стабильного значения нажмите **Apply**.
-![Редактирование режима](docs/modes-edit-v2.png)
+<img src="docs/modes-edit-v2.png" width="50%"/>
 
 После добавления первого режима добавьте все последующие повторив действия. У вас должно получиться что-то вроде:
-![Список режимов](docs/modes-list-v2.png)
+
+<img src="docs/modes-list-v2.png" width="50%"/>
 
 6. Сохраните helper. Home Assistant создаст новую сущность `light`, например `light.FloorLamp`.
 
