@@ -53,7 +53,7 @@ LANGUAGES = [
     ("ga", "ga", "Irish"),
     ("gl", "gl", "Galician"),
     ("gsw", "de", "Swiss German"),
-    ("he", "he", "Hebrew"),
+    ("he", "iw", "Hebrew"),
     ("hi", "hi", "Hindi"),
     ("hr", "hr", "Croatian"),
     ("hu", "hu", "Hungarian"),
@@ -248,10 +248,15 @@ def qa_chunks(text: str, limit: int = 3500) -> list[str]:
 
 def protected_signature(text: str) -> dict[str, object]:
     text = HASH_RE.sub("", text).replace("\\&", "&")
+    number_text = re.sub(r"https?://[^\s)>\"\']+", "", text)
+    numbers = sorted(
+        value.replace(",", ".")
+        for value in re.findall(r"(?<!\w)\d+(?:[.,]\d+)?%?", number_text)
+    )
     return {
         "URLs": sorted(re.findall(r"https?://[^\s)>\"']+", text)),
         "inline code": sorted(re.findall(r"\u0060([^\u0060\n]+)\u0060", text)),
-        "numbers": sorted(re.findall(r"(?<!\w)\d+(?:[.,]\d+)?%?", text)),
+        "numbers": numbers,
         "code fences": text.count("```"),
         "headings": len(re.findall(r"^#{1,6}\s", text, re.MULTILINE)),
         "details blocks": text.count("<details>"),
