@@ -29,7 +29,7 @@
 * Allows only a power sensor belonging to the selected smart plug to be chosen;
 * Allows the power-cycle delay to be configured for different lamp and plug models;
 * Allows the power threshold below which the lamp is considered off to be configured;
-* Localizes the interface for 64 Home Assistant locales.
+* The interface is localized for 64 Home Assistant locales.
 
 
 ## 🗜 Hardware setup
