@@ -45,7 +45,7 @@ jobs:
         working-directory: .readme-translator
         run: npm ci
 
-      - name: Limit translation requests to sequential execution
+      - name: Limit translation requests to controlled batches
         working-directory: .readme-translator
         run: |
           python - <<'PY'
@@ -61,7 +61,7 @@ jobs:
               r"\}\),\s*"
               r"\)"
           )
-          replacement = """  const batchSize = 10
+          replacement = """  const batchSize = 25
           for (let index = 0; index < unique.length; index += batchSize) {
             const batch = unique.slice(index, index + batchSize)
             await Promise.all(
