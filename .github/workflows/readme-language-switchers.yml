@@ -1,0 +1,34 @@
+name: README language switchers
+
+on:
+  push:
+    paths:
+      - "scripts/sync_readme_language_switchers.py"
+      - ".github/workflows/readme-language-switchers.yml"
+      - "docs/README_ru.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Synchronize language switchers
+        run: python scripts/sync_readme_language_switchers.py
+      - name: Commit synchronized README files
+        run: |
+          if git diff --quiet; then
+            echo "README language switchers are already synchronized."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md docs/README_*.md
+          git commit -m "Synchronize README language switchers"
+          git pull --rebase
+          git push
