@@ -3,7 +3,9 @@ name: UI translation sync
 on:
   push:
     paths:
+      - ".github/workflows/ui-translation-sync.yml"
       - "scripts/sync_new_settings_translations.py"
+      - "scripts/sync_translations.py"
       - "custom_components/smart_plug_multilevel_light/strings.json"
       - "custom_components/smart_plug_multilevel_light/translations/**"
       - "custom_components/smart_plug_multilevel_light/static/smart-plug-multilevel-light-locales.js"
@@ -19,8 +21,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Synchronize UI translations
+      - name: Restore the complete UI translation baseline
         run: python scripts/sync_new_settings_translations.py
+      - name: Apply localized UI text
+        run: python scripts/sync_translations.py
       - name: Commit synchronized files
         run: |
           if git diff --quiet; then
