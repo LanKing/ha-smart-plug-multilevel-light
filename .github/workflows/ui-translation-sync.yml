@@ -1,0 +1,35 @@
+name: UI translation sync
+
+on:
+  push:
+    paths:
+      - "scripts/sync_new_settings_translations.py"
+      - "custom_components/smart_plug_multilevel_light/strings.json"
+      - "custom_components/smart_plug_multilevel_light/translations/**"
+      - "custom_components/smart_plug_multilevel_light/static/smart-plug-multilevel-light-locales.js"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Synchronize UI translations
+        run: python scripts/sync_new_settings_translations.py
+      - name: Commit synchronized files
+        run: |
+          if git diff --quiet; then
+            echo "UI translations are already synchronized."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add custom_components/smart_plug_multilevel_light/translations custom_components/smart_plug_multilevel_light/static/smart-plug-multilevel-light-locales.js
+          git commit -m "Synchronize UI translations"
+          git pull --rebase
+          git push
