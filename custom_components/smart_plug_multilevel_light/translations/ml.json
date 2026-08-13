@@ -20,11 +20,12 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "ആദ്യം പുതിയ ലാമ്പിന്റെ ബ്രൈറ്റ്നസ് മോഡുകൾ ഇന്റഗ്രേഷനെ പഠിപ്പിക്കുക. ലാമ്പിലെ ഫിസിക്കൽ ബട്ടൺ ഉപയോഗിച്ച് ഓരോ ലെവലും തിരഞ്ഞെടുത്ത് താഴെ ചേർക്കുക, ഉദാഹരണത്തിന് High, Medium, Low, Dim.",
+          "power_cycle_delay": "സാധാരണയായി അധിക വൈകൽ ആവശ്യമില്ല. സ്വന്തം ബട്ടൺ ഉപയോഗിച്ച് ഓഫ് ചെയ്ത ലാമ്പ് Home Assistant-ൽ നിന്ന് ഓൺ ആകുന്നില്ലെങ്കിൽ 0.7 s പോലുള്ള ചെറിയ വൈകൽ സജ്ജമാക്കുക.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
+          "current_sensor": "തിരഞ്ഞെടുത്ത സ്മാർട്ട് പ്ലഗിനോടു ബന്ധപ്പെട്ട കറന്റ് സെൻസറുകൾ മാത്രമാണ് ഇവിടെ ലഭ്യമാകുന്നത്."
         }
       }
     },
@@ -48,11 +49,12 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "ആദ്യം പുതിയ ലാമ്പിന്റെ ബ്രൈറ്റ്നസ് മോഡുകൾ ഇന്റഗ്രേഷനെ പഠിപ്പിക്കുക. ലാമ്പിലെ ഫിസിക്കൽ ബട്ടൺ ഉപയോഗിച്ച് ഓരോ ലെവലും തിരഞ്ഞെടുത്ത് താഴെ ചേർക്കുക, ഉദാഹരണത്തിന് High, Medium, Low, Dim.",
+          "power_cycle_delay": "സാധാരണയായി അധിക വൈകൽ ആവശ്യമില്ല. സ്വന്തം ബട്ടൺ ഉപയോഗിച്ച് ഓഫ് ചെയ്ത ലാമ്പ് Home Assistant-ൽ നിന്ന് ഓൺ ആകുന്നില്ലെങ്കിൽ 0.7 s പോലുള്ള ചെറിയ വൈകൽ സജ്ജമാക്കുക.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
+          "current_sensor": "തിരഞ്ഞെടുത്ത സ്മാർട്ട് പ്ലഗിനോടു ബന്ധപ്പെട്ട കറന്റ് സെൻസറുകൾ മാത്രമാണ് ഇവിടെ ലഭ്യമാകുന്നത്."
         }
       }
     },

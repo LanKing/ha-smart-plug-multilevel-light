@@ -20,11 +20,12 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "Vispirms iemāciet integrācijai jaunās lampas spilgtuma režīmus. Ar lampas fizisko pogu izvēlieties katru līmeni un pievienojiet to zemāk, piemēram, High, Medium, Low un Dim.",
+          "power_cycle_delay": "Parasti papildu aizture nav nepieciešama. Ja lampa, kas izslēgta ar savu pogu, neieslēdzas no Home Assistant, iestatiet nelielu aizturi, piemēram, 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
+          "current_sensor": "Šeit ir pieejami tikai izvēlētajai viedajai kontaktligzdai piederošie strāvas sensori."
         }
       }
     },
@@ -48,11 +49,12 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "Vispirms iemāciet integrācijai jaunās lampas spilgtuma režīmus. Ar lampas fizisko pogu izvēlieties katru līmeni un pievienojiet to zemāk, piemēram, High, Medium, Low un Dim.",
+          "power_cycle_delay": "Parasti papildu aizture nav nepieciešama. Ja lampa, kas izslēgta ar savu pogu, neieslēdzas no Home Assistant, iestatiet nelielu aizturi, piemēram, 0,7 s.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
+          "current_sensor": "Šeit ir pieejami tikai izvēlētajai viedajai kontaktligzdai piederošie strāvas sensori."
         }
       }
     },

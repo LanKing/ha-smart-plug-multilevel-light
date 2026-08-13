@@ -20,11 +20,12 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "முதலில் புதிய விளக்கின் பிரகாச முறைகளை ஒருங்கிணைப்புக்கு கற்பிக்கவும். விளக்கின் இயற்பியல் பொத்தானைப் பயன்படுத்தி ஒவ்வொரு நிலையையும் தேர்ந்தெடுத்து கீழே சேர்க்கவும், உதாரணமாக High, Medium, Low, Dim.",
+          "power_cycle_delay": "பொதுவாக கூடுதல் தாமதம் தேவையில்லை. தனது சொந்த பொத்தானால் அணைக்கப்பட்ட விளக்கு Home Assistant-இல் இருந்து எரியவில்லை என்றால் 0.7 s போன்ற சிறிய தாமதத்தை அமைக்கவும்.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
+          "current_sensor": "இங்கே தேர்ந்தெடுக்கப்பட்ட ஸ்மார்ட் பிளக்கைச் சேர்ந்த மின்னோட்ட சென்சார்கள் மட்டுமே கிடைக்கும்."
         }
       }
     },
@@ -48,11 +49,12 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "முதலில் புதிய விளக்கின் பிரகாச முறைகளை ஒருங்கிணைப்புக்கு கற்பிக்கவும். விளக்கின் இயற்பியல் பொத்தானைப் பயன்படுத்தி ஒவ்வொரு நிலையையும் தேர்ந்தெடுத்து கீழே சேர்க்கவும், உதாரணமாக High, Medium, Low, Dim.",
+          "power_cycle_delay": "பொதுவாக கூடுதல் தாமதம் தேவையில்லை. தனது சொந்த பொத்தானால் அணைக்கப்பட்ட விளக்கு Home Assistant-இல் இருந்து எரியவில்லை என்றால் 0.7 s போன்ற சிறிய தாமதத்தை அமைக்கவும்.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
+          "current_sensor": "இங்கே தேர்ந்தெடுக்கப்பட்ட ஸ்மார்ட் பிளக்கைச் சேர்ந்த மின்னோட்ட சென்சார்கள் மட்டுமே கிடைக்கும்."
         }
       }
     },

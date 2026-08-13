@@ -20,11 +20,12 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "새 램프는 먼저 밝기 모드를 통합에 학습시켜야 합니다. 램프의 물리 버튼으로 각 밝기 단계를 선택해 아래에 추가하세요. 예: High, Medium, Low, Dim.",
+          "power_cycle_delay": "일반적으로 추가 지연은 필요하지 않습니다. 램프 자체 버튼으로 끈 뒤 Home Assistant에서 켜지지 않으면 0.7초와 같은 짧은 지연을 설정하세요.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
+          "current_sensor": "여기에서는 선택한 스마트 플러그에 속한 전류 센서만 사용할 수 있습니다."
         }
       }
     },
@@ -48,11 +49,12 @@
           "power_history_samples": "Consecutive readings to switch"
         },
         "data_description": {
-          "modes": "For a new lamp, first teach the integration its brightness modes. Add a mode, enable that preset on the light fixture, and use the stable power test in the mode editor to measure and apply its power threshold.",
-          "power_cycle_delay": "If a lamp switched off with its own button does not turn on from Home Assistant, set a small delay, for example 0.7 s.",
+          "modes": "새 램프는 먼저 밝기 모드를 통합에 학습시켜야 합니다. 램프의 물리 버튼으로 각 밝기 단계를 선택해 아래에 추가하세요. 예: High, Medium, Low, Dim.",
+          "power_cycle_delay": "일반적으로 추가 지연은 필요하지 않습니다. 램프 자체 버튼으로 끈 뒤 Home Assistant에서 켜지지 않으면 0.7초와 같은 짧은 지연을 설정하세요.",
           "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
+          "current_sensor": "여기에서는 선택한 스마트 플러그에 속한 전류 센서만 사용할 수 있습니다."
         }
       }
     },
