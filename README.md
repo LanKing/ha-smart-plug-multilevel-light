@@ -5,7 +5,8 @@
 
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
-<a href="custom_components/smart_plug_multilevel_light/manifest.json"><img src="https://img.shields.io/badge/version-0.10.5-blue" alt="Version 0.10.5"></a>
+<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a>
+<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&cacheSeconds=300" alt="Downloads"></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
 > This integration combines a lamp without digital controls and a smart plug into a single Home Assistant entity. It determines the lamp's state and current brightness mode from power consumption, displays them in a card, and can turn on a lamp that was switched off with its own button by briefly cutting and restoring power through the smart plug.
@@ -214,7 +215,7 @@ Home Assistant does not allow the integration to modify the resource list automa
 lovelace:
   resource_mode: yaml
   resources:
-    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.5
+    - url: /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
       type: module
 ```
 
@@ -269,7 +270,7 @@ Automatic registration occurs only after at least one configured helper has been
 Check **[Settings → Dashboards → ⋮ → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)**. The following URL must be present:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.5
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
 In YAML mode, [add the resource manually](#yaml-lovelace-mode).
@@ -293,7 +294,7 @@ In YAML mode, [add the resource manually](#yaml-lovelace-mode).
 3. Check **[Settings → Dashboards → ⋮ → Resources](https://my.home-assistant.io/redirect/lovelace_resources/)** and manually remove the card resource if it remains:
 
 ```text
-/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.5
+/api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
 4. Fully restart Home Assistant.
