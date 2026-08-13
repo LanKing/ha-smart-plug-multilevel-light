@@ -1,58 +1,32 @@
-name: Create initial HACS release
+name: Attach HACS release archive
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/release-asset.yml
+  release:
+    types: [published]
 
 permissions:
   contents: write
 
 jobs:
-  release:
+  upload:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout release tag
         uses: actions/checkout@v4
-
-      - name: Read integration version
-        id: version
-        run: |
-          version="$(jq -r '.version' custom_components/smart_plug_multilevel_light/manifest.json)"
-          echo "tag=v$version" >> "$GITHUB_OUTPUT"
+        with:
+          ref: ${{ github.event.release.tag_name }}
 
       - name: Build HACS archive
         run: |
           cd custom_components/smart_plug_multilevel_light
           zip -r "$GITHUB_WORKSPACE/smart-plug-multilevel-light.zip" .
 
-      - name: Publish GitHub release
+      - name: Upload HACS archive
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ steps.version.outputs.tag }}
         run: |
-          cat > "$RUNNER_TEMP/release-notes.md" <<'EOF'
-          ## First HACS release
-
-          Smart Plug Multi-Level Light is now distributed as a versioned HACS release.
-
-          ### Highlights
-
-          - Creates a native Home Assistant `light` entity from a smart plug and a non-smart multi-level lamp.
-          - Detects the lamp state and brightness mode from measured power consumption.
-          - Filters unstable measurements using consecutive readings before confirming a new mode.
-          - Includes a custom Lovelace card with mode and percentage display.
-          - Supports localized configuration for Home Assistant locales.
-
-          ### Installation
-
-          Add the repository to HACS as an **Integration**, then select **Download**.
-          EOF
-
-          gh release create "$TAG" \
+          gh release upload \
+            "${{ github.event.release.tag_name }}" \
             "smart-plug-multilevel-light.zip" \
-            --target "$GITHUB_SHA" \
-            --title "$TAG — First HACS release" \
-            --notes-file "$RUNNER_TEMP/release-notes.md"
+            --clobber
