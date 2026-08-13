@@ -1,8 +1,5 @@
 <sub>🇺🇦&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_uk.md">У⁠к⁠р⁠а⁠ї⁠н⁠с⁠ь⁠к⁠а</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ru.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_af.md">A⁠f⁠r⁠i⁠k⁠a⁠a⁠n⁠s</a>&nbsp;|</sub> <sub>🇸🇦&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ar.md">ا⁠ل⁠ع⁠ر⁠ب⁠ي⁠ة</a>&nbsp;|</sub> <sub>🇧🇬&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_bg.md">Б⁠ъ⁠л⁠г⁠а⁠р⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_bn.md">বাং⁠লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_bs.md">B⁠o⁠s⁠a⁠n⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ca.md">C⁠a⁠t⁠a⁠l⁠à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_cs.md">Č⁠e⁠š⁠t⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>cy&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_cy.md">C⁠y⁠m⁠r⁠a⁠e⁠g</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_da.md">D⁠a⁠n⁠s⁠k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_de.md">D⁠e⁠u⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇬🇷&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_el.md">Ε⁠λ⁠λ⁠η⁠ν⁠ι⁠κ⁠ά</a>&nbsp;|</sub> <sub>eo&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_eo.md">E⁠s⁠p⁠e⁠r⁠a⁠n⁠t⁠o</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_es.md">E⁠s⁠p⁠a⁠ñ⁠o⁠l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_et.md">E⁠e⁠s⁠t⁠i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_eu.md">E⁠u⁠s⁠k⁠a⁠r⁠a</a>&nbsp;|</sub> <sub>🇮🇷&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_fa.md">ف⁠ا⁠ر⁠س⁠ی</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_fi.md">S⁠u⁠o⁠m⁠i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_fy.md">F⁠r⁠y⁠s⁠k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_fr.md">F⁠r⁠a⁠n⁠ç⁠a⁠i⁠s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ga.md">G⁠a⁠e⁠i⁠l⁠g⁠e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_gl.md">G⁠a⁠l⁠e⁠g⁠o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_gsw.md">S⁠c⁠h⁠w⁠i⁠i⁠z⁠e⁠r⁠d⁠ü⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_he.md">ע⁠ב⁠ר⁠י⁠ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_hi.md">हि⁠न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_hr.md">H⁠r⁠v⁠a⁠t⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_hu.md">M⁠a⁠g⁠y⁠a⁠r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_hy.md">Հ⁠ա⁠յ⁠ե⁠ր⁠ե⁠ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_id.md">I⁠n⁠d⁠o⁠n⁠e⁠s⁠i⁠a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_is.md">Í⁠s⁠l⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_it.md">I⁠t⁠a⁠l⁠i⁠a⁠n⁠o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ja.md">日⁠本⁠語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ka.md">K⁠a⁠r⁠t⁠u⁠l⁠i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ko.md">한⁠국⁠어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_lb.md">L⁠ë⁠t⁠z⁠e⁠b⁠u⁠e⁠r⁠g⁠e⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_lt.md">L⁠i⁠e⁠t⁠u⁠v⁠i⁠ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_lv.md">L⁠a⁠t⁠v⁠i⁠e⁠š⁠u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_mk.md">М⁠а⁠к⁠е⁠д⁠о⁠н⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ml.md">മ⁠ല⁠യാ⁠ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_nb.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠B⁠o⁠k⁠m⁠å⁠l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_nl.md">N⁠e⁠d⁠e⁠r⁠l⁠a⁠n⁠d⁠s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_nn.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠N⁠y⁠n⁠o⁠r⁠s⁠k</a>&nbsp;|</sub> <sub>🇵🇱&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_pl.md">P⁠o⁠l⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_pt.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_pt-BR.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s⁠&nbsp;⁠(⁠B⁠R⁠)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ro.md">R⁠o⁠m⁠â⁠n⁠ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_sk.md">S⁠l⁠o⁠v⁠e⁠n⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_sl.md">S⁠l⁠o⁠v⁠e⁠n⁠š⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_sq.md">S⁠h⁠q⁠i⁠p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_sr.md">С⁠р⁠п⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_sr-Latn.md">S⁠r⁠p⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_sv.md">S⁠v⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ta.md">த⁠மி⁠ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_te.md">తె⁠లు⁠గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_th.md">ภ⁠า⁠ษ⁠า⁠ไ⁠ท⁠ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_tr.md">T⁠ü⁠r⁠k⁠ç⁠e</a>&nbsp;|</sub> <sub>🇵🇰&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_ur.md">اُ⁠ر⁠دُ⁠و</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_vi.md">T⁠i⁠ế⁠n⁠g⁠&nbsp;⁠V⁠i⁠ệ⁠t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_zh-Hans.md">简⁠体⁠中⁠文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/docs/README_zh-Hant.md">繁⁠體⁠中⁠文</a></sub>
 
-> [!TIP]
-> This is a test TIP alert.
-
 
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
@@ -225,7 +222,9 @@ After making the change, reload the Lovelace resources or restart Home Assistant
 <a id="troubleshooting"></a>
 ## 🧯 Troubleshooting
 
-### The integration does not appear in the helper list
+<details>
+<summary><b>❓The integration does not appear in the helper list</b></summary>
+<br />
 
 **Likely cause:** the path is incorrect or Home Assistant was not restarted.
 
@@ -236,8 +235,12 @@ Check that this file exists:
 ```
 
 Then fully restart Home Assistant and check the logs for `smart_plug_multilevel_light` errors.
+<hr />
+</details>
 
-### The plug list is empty
+<details>
+<summary><b>❓The plug list is empty</b></summary>
+<br />
 
 The integration shows only `switch` entities associated with devices that also expose an enabled sensor with `device_class: power`.
 
@@ -247,24 +250,58 @@ Check under **[Settings → Devices & services → Entities](https://my.home-ass
 - Is the power sensor enabled?
 - Is its `device_class` set correctly?
 - Does it have a numeric state?
+<hr />
+</details>
 
-### Creation stops with a missing power sensor message
+<details>
+<summary><b>❓Creation stops with a missing power sensor message</b></summary>
+<br />
 
 After you select a plug, the integration checks for a power sensor again. The error occurs if the sensor was removed, disabled, moved to another device, or no longer has `device_class: power`.
+<hr />
+</details>
 
-### The lamp is shown as Off while the plug is on
+<details>
+<summary><b>❓The lamp is shown as Off while the plug is on</b></summary>
+<br />
 
 Check the power sensor value. The virtual lamp is considered off at `0 W`; with a positive value, it should be detected as `on`.
+<hr />
+</details>
 
-### The lamp is shown as On while it is physically off
+<details>
+<summary><b>❓The lamp is shown as On while it is physically off</b></summary>
+<br />
 
 Make sure the selected power sensor actually reports `0 W` when the lamp is switched off with its own button.
+<hr />
+</details>
 
-### The wrong mode is detected
+<details>
+<summary><b>❓The wrong mode is detected</b></summary>
+<br />
 
 Check **🐞 Last measures** in the settings and the `power_history`, `power_history_modes`, `power_sample_interval_seconds`, and `selected_power_mode` attributes. `power_history` contains the most recent recorded power values, `power_history_modes` contains the mode assigned to each value using the configured thresholds, `power_sample_interval_seconds` is the periodic sampling interval, and `selected_power_mode` is the currently confirmed mode.
+<hr />
+</details>
 
-### The card does not appear in the list
+<details>
+<summary><b>❓Mode changes are not displayed immediately</b></summary>
+<br />
+
+This is expected. To prevent brief power fluctuations from causing false mode changes, the integration changes the mode only after several consecutive readings correspond to the same new mode.
+
+The required number of readings is configured with **Consecutive readings to switch** and defaults to `5`. Periodic samples are taken once per second, while sensor state changes are processed immediately. If a reading maps to a different mode during confirmation, the count starts over.
+
+Until the new mode is confirmed, the integration keeps the previous mode. This prevents the card from jumping between modes because of intermediate values produced while the lamp changes modes, its power draw stabilizes, or the sensor reading fluctuates slightly.
+
+Reducing the number of readings makes the new mode appear sooner but also makes detection more sensitive to power fluctuations.
+<hr />
+</details>
+
+<details>
+<summary><b>❓The card does not appear in the list</b></summary>
+<br />
 
 Automatic registration occurs only after at least one configured helper has been loaded and only when resources use `storage` mode. It does not matter whether the integration was installed through HACS or manually.
 
@@ -275,13 +312,19 @@ Check **[Settings → Dashboards → ⋮ → Resources](https://my.home-assistan
 ```
 
 In YAML mode, [add the resource manually](#yaml-lovelace-mode).
+<hr />
+</details>
 
-### The old card is still displayed after an update
+<details>
+<summary><b>❓The old card is still displayed after an update</b></summary>
+<br />
 
 1. Fully restart Home Assistant.
 2. Reload the page while clearing the browser cache.
 3. Check the version number in the dashboard resource URL.
 4. In the mobile app, fully close and reopen the frontend.
+<hr />
+</details>
 
 ## 🗑 Removal
 
@@ -305,3 +348,8 @@ In YAML mode, [add the resource manually](#yaml-lovelace-mode).
 ## 📄 License
 
 This project is distributed under the [MIT License](LICENSE).
+
+<br />
+
+> [!TIP]
+> **Like this solution?** Take a look at 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/README.md">my other Home Assistant products</a>
