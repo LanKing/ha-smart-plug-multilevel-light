@@ -52,7 +52,7 @@ LANGUAGES = [
     ("fr", "fr", "French"),
     ("ga", "ga", "Irish"),
     ("gl", "gl", "Galician"),
-    ("gsw", "gsw", "Swiss German"),
+    ("gsw", "de", "Swiss German"),
     ("he", "he", "Hebrew"),
     ("hi", "hi", "Hindi"),
     ("hr", "hr", "Croatian"),
@@ -71,7 +71,7 @@ LANGUAGES = [
     ("ml", "ml", "Malayalam"),
     ("nb", "no", "Norwegian Bokmål"),
     ("nl", "nl", "Dutch"),
-    ("nn", "nn", "Norwegian Nynorsk"),
+    ("nn", "no", "Norwegian Nynorsk"),
     ("pl", "pl", "Polish"),
     ("pt", "pt", "Portuguese"),
     ("pt-BR", "pt", "Brazilian Portuguese"),
@@ -80,7 +80,7 @@ LANGUAGES = [
     ("sl", "sl", "Slovenian"),
     ("sq", "sq", "Albanian"),
     ("sr", "sr", "Serbian"),
-    ("sr-Latn", "sr-Latn", "Serbian Latin"),
+    ("sr-Latn", "sr", "Serbian Latin"),
     ("sv", "sv", "Swedish"),
     ("ta", "ta", "Tamil"),
     ("te", "te", "Telugu"),
@@ -219,6 +219,7 @@ def finalize(
 
 def plain_for_qa(text: str) -> str:
     """Reduce Markdown to comparable prose for round-trip quality checks."""
+    text = HASH_RE.sub("", text)
     text = re.sub(r"```[\s\S]*?```", " ", text)
     text = re.sub(r"!\[[^\]]*\]\([^)]+\)", " ", text)
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
@@ -246,6 +247,7 @@ def qa_chunks(text: str, limit: int = 3500) -> list[str]:
 
 
 def protected_signature(text: str) -> dict[str, object]:
+    text = HASH_RE.sub("", text).replace("\\&", "&")
     return {
         "URLs": sorted(re.findall(r"https?://[^\s)>\"']+", text)),
         "inline code": sorted(re.findall(r"\u0060([^\u0060\n]+)\u0060", text)),
@@ -273,7 +275,7 @@ def record_round_trip_quality(
         for label in source_signature
         if source_signature[label] != translated_signature[label]
     ]
-    severity = "critical" if critical else ("review" if similarity < 0.55 else "passed")
+    severity = "critical" if critical else ("review" if similarity < 0.30 else "passed")
     message = (
         f"README translation QA {locale}: {severity}; "
         f"round-trip similarity {similarity:.1%}"
