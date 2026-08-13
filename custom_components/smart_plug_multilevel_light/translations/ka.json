@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "ჯერ ინტეგრაციას ასწავლეთ ახალი ნათურის სიკაშკაშის რეჟიმები. ნათურის ფიზიკური ღილაკით აირჩიეთ თითოეული დონე და დაამატეთ ქვემოთ, მაგალითად High, Medium, Low და Dim.",
           "power_cycle_delay": "ჩვეულებრივ დამატებითი დაყოვნება საჭირო არ არის. თუ საკუთარი ღილაკით გამორთული ნათურა Home Assistant-იდან არ ირთვება, დააყენეთ მცირე დაყოვნება, მაგალითად 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "აქ ხელმისაწვდომია მხოლოდ არჩეულ ჭკვიან როზეტთან დაკავშირებული დენის სენსორები.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "აქ ხელმისაწვდომია მხოლოდ არჩეულ ჭკვიან როზეტთან დაკავშირებული დენის სენსორები."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "ჯერ ინტეგრაციას ასწავლეთ ახალი ნათურის სიკაშკაშის რეჟიმები. ნათურის ფიზიკური ღილაკით აირჩიეთ თითოეული დონე და დაამატეთ ქვემოთ, მაგალითად High, Medium, Low და Dim.",
           "power_cycle_delay": "ჩვეულებრივ დამატებითი დაყოვნება საჭირო არ არის. თუ საკუთარი ღილაკით გამორთული ნათურა Home Assistant-იდან არ ირთვება, დააყენეთ მცირე დაყოვნება, მაგალითად 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "აქ ხელმისაწვდომია მხოლოდ არჩეულ ჭკვიან როზეტთან დაკავშირებული დენის სენსორები.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "აქ ხელმისაწვდომია მხოლოდ არჩეულ ჭკვიან როზეტთან დაკავშირებული დენის სენსორები."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Trước tiên hãy dạy tích hợp các chế độ độ sáng của đèn mới. Dùng nút vật lý trên đèn để chọn từng mức và thêm bên dưới, ví dụ High, Medium, Low và Dim.",
           "power_cycle_delay": "Thông thường không cần thêm độ trễ. Nếu đèn đã tắt bằng nút riêng không bật từ Home Assistant, hãy đặt một độ trễ nhỏ, ví dụ 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Ở đây chỉ có các cảm biến dòng điện thuộc ổ cắm thông minh đã chọn.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Ở đây chỉ có các cảm biến dòng điện thuộc ổ cắm thông minh đã chọn."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Trước tiên hãy dạy tích hợp các chế độ độ sáng của đèn mới. Dùng nút vật lý trên đèn để chọn từng mức và thêm bên dưới, ví dụ High, Medium, Low và Dim.",
           "power_cycle_delay": "Thông thường không cần thêm độ trễ. Nếu đèn đã tắt bằng nút riêng không bật từ Home Assistant, hãy đặt một độ trễ nhỏ, ví dụ 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Ở đây chỉ có các cảm biến dòng điện thuộc ổ cắm thông minh đã chọn.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Ở đây chỉ có các cảm biến dòng điện thuộc ổ cắm thông minh đã chọn."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

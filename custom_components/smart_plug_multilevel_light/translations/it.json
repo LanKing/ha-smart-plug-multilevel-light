@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Per prima cosa insegna all'integrazione le modalità di luminosità della nuova lampada. Usa il pulsante fisico della lampada per selezionare ogni livello e aggiungerlo qui sotto, ad esempio High, Medium, Low e Dim.",
           "power_cycle_delay": "Di solito non è necessario alcun ritardo aggiuntivo. Se una lampada spenta con il proprio pulsante non si accende da Home Assistant, imposta un piccolo ritardo, ad esempio 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Qui sono disponibili solo i sensori di corrente appartenenti alla presa smart selezionata.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Qui sono disponibili solo i sensori di corrente appartenenti alla presa smart selezionata."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Per prima cosa insegna all'integrazione le modalità di luminosità della nuova lampada. Usa il pulsante fisico della lampada per selezionare ogni livello e aggiungerlo qui sotto, ad esempio High, Medium, Low e Dim.",
           "power_cycle_delay": "Di solito non è necessario alcun ritardo aggiuntivo. Se una lampada spenta con il proprio pulsante non si accende da Home Assistant, imposta un piccolo ritardo, ad esempio 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Qui sono disponibili solo i sensori di corrente appartenenti alla presa smart selezionata.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Qui sono disponibili solo i sensori di corrente appartenenti alla presa smart selezionata."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

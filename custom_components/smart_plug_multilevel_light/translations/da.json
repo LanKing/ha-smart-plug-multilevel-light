@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Lær først integrationen den nye lampes lysstyrketilstande. Brug lampens fysiske knap til at vælge hvert niveau og tilføj det nedenfor, f.eks. High, Medium, Low og Dim.",
           "power_cycle_delay": "Normalt er der ikke behov for ekstra forsinkelse. Hvis en lampe, der er slukket med sin egen knap, ikke tænder fra Home Assistant, så indstil en lille forsinkelse, f.eks. 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Kun strømsensorer, der hører til den valgte smart-stikdåse, er tilgængelige her.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Kun strømsensorer, der hører til den valgte smart-stikdåse, er tilgængelige her."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Lær først integrationen den nye lampes lysstyrketilstande. Brug lampens fysiske knap til at vælge hvert niveau og tilføj det nedenfor, f.eks. High, Medium, Low og Dim.",
           "power_cycle_delay": "Normalt er der ikke behov for ekstra forsinkelse. Hvis en lampe, der er slukket med sin egen knap, ikke tænder fra Home Assistant, så indstil en lille forsinkelse, f.eks. 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Kun strømsensorer, der hører til den valgte smart-stikdåse, er tilgængelige her.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Kun strømsensorer, der hører til den valgte smart-stikdåse, er tilgængelige her."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

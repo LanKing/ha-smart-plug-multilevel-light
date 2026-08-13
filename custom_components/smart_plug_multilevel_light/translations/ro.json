@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Mai întâi învățați integrarea modurile de luminozitate ale noii lămpi. Folosiți butonul fizic al lămpii pentru a selecta fiecare nivel și adăugați-l mai jos, de exemplu High, Medium, Low și Dim.",
           "power_cycle_delay": "De obicei nu este necesară nicio întârziere suplimentară. Dacă o lampă oprită cu propriul buton nu pornește din Home Assistant, setați o întârziere mică, de exemplu 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Aici sunt disponibili doar senzorii de curent care aparțin prizei inteligente selectate.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Aici sunt disponibili doar senzorii de curent care aparțin prizei inteligente selectate."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Mai întâi învățați integrarea modurile de luminozitate ale noii lămpi. Folosiți butonul fizic al lămpii pentru a selecta fiecare nivel și adăugați-l mai jos, de exemplu High, Medium, Low și Dim.",
           "power_cycle_delay": "De obicei nu este necesară nicio întârziere suplimentară. Dacă o lampă oprită cu propriul buton nu pornește din Home Assistant, setați o întârziere mică, de exemplu 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Aici sunt disponibili doar senzorii de curent care aparțin prizei inteligente selectate.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Aici sunt disponibili doar senzorii de curent care aparțin prizei inteligente selectate."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

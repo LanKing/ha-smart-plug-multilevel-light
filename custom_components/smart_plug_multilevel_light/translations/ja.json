@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "新しいランプでは、最初に明るさモードを統合に学習させます。ランプ本体の物理ボタンで各明るさレベルを選び、下に追加してください。例: High、Medium、Low、Dim。",
           "power_cycle_delay": "通常、追加の遅延は不要です。ランプ本体のボタンで消灯した後、Home Assistant から点灯できない場合は、0.7 秒などの短い遅延を設定してください。",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "新しいランプでは、最初に明るさモードを統合に学習させます。ランプ本体の物理ボタンで各明るさレベルを選び、下に追加してください。例: High、Medium、Low、Dim。",
           "power_cycle_delay": "通常、追加の遅延は不要です。ランプ本体のボタンで消灯した後、Home Assistant から点灯できない場合は、0.7 秒などの短い遅延を設定してください。",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "ここでは、選択したスマートプラグに属する電流センサーのみ利用できます。"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

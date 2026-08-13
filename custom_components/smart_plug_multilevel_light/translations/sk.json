@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Najprv integráciu naučte režimy jasu novej lampy. Fyzickým tlačidlom na lampe vyberte každú úroveň a pridajte ju nižšie, napríklad High, Medium, Low a Dim.",
           "power_cycle_delay": "Zvyčajne nie je potrebné žiadne ďalšie oneskorenie. Ak sa lampa vypnutá vlastným tlačidlom nezapne z Home Assistanta, nastavte malé oneskorenie, napríklad 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Tu sú dostupné iba snímače prúdu patriace k vybranej inteligentnej zásuvke.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Tu sú dostupné iba snímače prúdu patriace k vybranej inteligentnej zásuvke."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Najprv integráciu naučte režimy jasu novej lampy. Fyzickým tlačidlom na lampe vyberte každú úroveň a pridajte ju nižšie, napríklad High, Medium, Low a Dim.",
           "power_cycle_delay": "Zvyčajne nie je potrebné žiadne ďalšie oneskorenie. Ak sa lampa vypnutá vlastným tlačidlom nezapne z Home Assistanta, nastavte malé oneskorenie, napríklad 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Tu sú dostupné iba snímače prúdu patriace k vybranej inteligentnej zásuvke.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Tu sú dostupné iba snímače prúdu patriace k vybranej inteligentnej zásuvke."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

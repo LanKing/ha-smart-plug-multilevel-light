@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Először tanítsa meg az integrációnak az új lámpa fényerőmódjait. A lámpa fizikai gombjával válassza ki az egyes szinteket, és adja hozzá őket lent, például High, Medium, Low és Dim.",
           "power_cycle_delay": "Általában nincs szükség további késleltetésre. Ha a saját gombjával kikapcsolt lámpa nem kapcsol be a Home Assistantból, állítson be kis késleltetést, például 0,7 s-ot.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Itt csak a kiválasztott okoskonnektorhoz tartozó áramérzékelők érhetők el.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Itt csak a kiválasztott okoskonnektorhoz tartozó áramérzékelők érhetők el."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Először tanítsa meg az integrációnak az új lámpa fényerőmódjait. A lámpa fizikai gombjával válassza ki az egyes szinteket, és adja hozzá őket lent, például High, Medium, Low és Dim.",
           "power_cycle_delay": "Általában nincs szükség további késleltetésre. Ha a saját gombjával kikapcsolt lámpa nem kapcsol be a Home Assistantból, állítson be kis késleltetést, például 0,7 s-ot.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Itt csak a kiválasztott okoskonnektorhoz tartozó áramérzékelők érhetők el.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Itt csak a kiválasztott okoskonnektorhoz tartozó áramérzékelők érhetők el."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "ముందుగా కొత్త ల్యాంప్ బ్రైట్‌నెస్ మోడ్‌లను ఇంటిగ్రేషన్‌కు నేర్పండి. ల్యాంప్‌పై ఉన్న భౌతిక బటన్‌తో ప్రతి స్థాయిని ఎంచుకుని క్రింద జోడించండి, ఉదాహరణకు High, Medium, Low, Dim.",
           "power_cycle_delay": "సాధారణంగా అదనపు ఆలస్యం అవసరం లేదు. తన బటన్‌తో ఆఫ్ చేసిన ల్యాంప్ Home Assistant నుండి ఆన్ కాకపోతే 0.7 s వంటి చిన్న ఆలస్యం సెట్ చేయండి.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "ఇక్కడ ఎంచుకున్న స్మార్ట్ ప్లగ్‌కు చెందిన కరెంట్ సెన్సర్లు మాత్రమే అందుబాటులో ఉంటాయి.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "ఇక్కడ ఎంచుకున్న స్మార్ట్ ప్లగ్‌కు చెందిన కరెంట్ సెన్సర్లు మాత్రమే అందుబాటులో ఉంటాయి."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "ముందుగా కొత్త ల్యాంప్ బ్రైట్‌నెస్ మోడ్‌లను ఇంటిగ్రేషన్‌కు నేర్పండి. ల్యాంప్‌పై ఉన్న భౌతిక బటన్‌తో ప్రతి స్థాయిని ఎంచుకుని క్రింద జోడించండి, ఉదాహరణకు High, Medium, Low, Dim.",
           "power_cycle_delay": "సాధారణంగా అదనపు ఆలస్యం అవసరం లేదు. తన బటన్‌తో ఆఫ్ చేసిన ల్యాంప్ Home Assistant నుండి ఆన్ కాకపోతే 0.7 s వంటి చిన్న ఆలస్యం సెట్ చేయండి.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "ఇక్కడ ఎంచుకున్న స్మార్ట్ ప్లగ్‌కు చెందిన కరెంట్ సెన్సర్లు మాత్రమే అందుబాటులో ఉంటాయి.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "ఇక్కడ ఎంచుకున్న స్మార్ట్ ప్లగ్‌కు చెందిన కరెంట్ సెన్సర్లు మాత్రమే అందుబాటులో ఉంటాయి."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

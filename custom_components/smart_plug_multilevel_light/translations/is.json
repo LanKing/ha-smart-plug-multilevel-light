@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Kenndu fyrst samþættingunni birtustillingar nýja lampans. Notaðu hnappinn á lampanum til að velja hvert stig og bættu því við hér fyrir neðan, til dæmis High, Medium, Low og Dim.",
           "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Kenndu fyrst samþættingunni birtustillingar nýja lampans. Notaðu hnappinn á lampanum til að velja hvert stig og bættu því við hér fyrir neðan, til dæmis High, Medium, Low og Dim.",
           "power_cycle_delay": "Venjulega þarf enga viðbótartöf. Ef lampi sem slökkt var á með eigin hnappi kviknar ekki úr Home Assistant skaltu stilla litla töf, til dæmis 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Hér eru aðeins straumskynjarar sem tilheyra valda snjalltenglinum tiltækir."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Lern zerscht d'Helligkeitsstufe vo de neue Lampe aa. Wähl mit em physische Chnopf vo de Lampe jedi Stufe und füeg si unde hinzu, zum Biispiel High, Medium, Low und Dim.",
           "power_cycle_delay": "Normalerwiis bruuchts kei zusätzligi Verzögerig. Wenn e Lampe, wo mit ihrem eigene Chnopf usgschaltet wurde, nöd über Home Assistant aagoht, stell e chliini Verzögerig ii, zum Biispiel 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Da sind nur Stromsensoren verfügbar, wo zur ausgewählten Smart-Steckdose ghöred.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Da sind nur Stromsensoren verfügbar, wo zur ausgewählten Smart-Steckdose ghöred."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Lern zerscht d'Helligkeitsstufe vo de neue Lampe aa. Wähl mit em physische Chnopf vo de Lampe jedi Stufe und füeg si unde hinzu, zum Biispiel High, Medium, Low und Dim.",
           "power_cycle_delay": "Normalerwiis bruuchts kei zusätzligi Verzögerig. Wenn e Lampe, wo mit ihrem eigene Chnopf usgschaltet wurde, nöd über Home Assistant aagoht, stell e chliini Verzögerig ii, zum Biispiel 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Da sind nur Stromsensoren verfügbar, wo zur ausgewählten Smart-Steckdose ghöred.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Da sind nur Stromsensoren verfügbar, wo zur ausgewählten Smart-Steckdose ghöred."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

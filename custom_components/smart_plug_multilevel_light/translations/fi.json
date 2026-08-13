@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Opeta ensin integraatiolle uuden lampun kirkkaustilat. Valitse lampun fyysisellä painikkeella jokainen taso ja lisää se alle, esimerkiksi High, Medium, Low ja Dim.",
           "power_cycle_delay": "Yleensä lisäviivettä ei tarvita. Jos omasta painikkeestaan sammutettu lamppu ei syty Home Assistantista, aseta pieni viive, esimerkiksi 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Tässä ovat käytettävissä vain valittuun älypistorasiaan kuuluvat virta-anturit.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Tässä ovat käytettävissä vain valittuun älypistorasiaan kuuluvat virta-anturit."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Opeta ensin integraatiolle uuden lampun kirkkaustilat. Valitse lampun fyysisellä painikkeella jokainen taso ja lisää se alle, esimerkiksi High, Medium, Low ja Dim.",
           "power_cycle_delay": "Yleensä lisäviivettä ei tarvita. Jos omasta painikkeestaan sammutettu lamppu ei syty Home Assistantista, aseta pieni viive, esimerkiksi 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Tässä ovat käytettävissä vain valittuun älypistorasiaan kuuluvat virta-anturit.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Tässä ovat käytettävissä vain valittuun älypistorasiaan kuuluvat virta-anturit."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

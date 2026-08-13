@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Lær først integrasjonen lysstyrkemodusane til den nye lampa. Bruk den fysiske knappen på lampa til å velje kvart nivå og legg det til nedanfor, til dømes High, Medium, Low og Dim.",
           "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Lær først integrasjonen lysstyrkemodusane til den nye lampa. Bruk den fysiske knappen på lampa til å velje kvart nivå og legg det til nedanfor, til dømes High, Medium, Low og Dim.",
           "power_cycle_delay": "Vanlegvis trengst inga ekstra forseinking. Dersom ei lampe som er slått av med sin eigen knapp ikkje slår seg på frå Home Assistant, set ei lita forseinking, til dømes 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Berre straumsensorar som høyrer til den valde smartpluggen er tilgjengelege her."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

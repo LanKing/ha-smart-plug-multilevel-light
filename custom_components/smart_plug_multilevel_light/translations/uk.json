@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Для нової лампи спочатку навчіть інтеграцію її режимам яскравості. Фізичною кнопкою на лампі вибирайте кожен рівень і додавайте його нижче, наприклад High, Medium, Low і Dim.",
           "power_cycle_delay": "Зазвичай додаткова затримка не потрібна. Якщо лампа, вимкнена власною кнопкою, не вмикається з Home Assistant, задайте невелику затримку, наприклад 0,7 с.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Тут доступні лише датчики струму, що належать вибраній розумній розетці.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Тут доступні лише датчики струму, що належать вибраній розумній розетці."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Для нової лампи спочатку навчіть інтеграцію її режимам яскравості. Фізичною кнопкою на лампі вибирайте кожен рівень і додавайте його нижче, наприклад High, Medium, Low і Dim.",
           "power_cycle_delay": "Зазвичай додаткова затримка не потрібна. Якщо лампа, вимкнена власною кнопкою, не вмикається з Home Assistant, задайте невелику затримку, наприклад 0,7 с.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Тут доступні лише датчики струму, що належать вибраній розумній розетці.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Тут доступні лише датчики струму, що належать вибраній розумній розетці."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

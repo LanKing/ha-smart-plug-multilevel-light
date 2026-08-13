@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Yn gyntaf dysgwch foddau disgleirdeb y lamp newydd i'r integreiddiad. Defnyddiwch fotwm corfforol y lamp i ddewis pob lefel a'i hychwanegu isod, er enghraifft High, Medium, Low a Dim.",
           "power_cycle_delay": "Fel arfer nid oes angen oedi ychwanegol. Os nad yw lamp a ddiffoddwyd â'i botwm ei hun yn troi ymlaen o Home Assistant, gosodwch oedi bach, er enghraifft 0.7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Dim ond synwyryddion cerrynt sy'n perthyn i'r plwg clyfar a ddewiswyd sydd ar gael yma.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Dim ond synwyryddion cerrynt sy'n perthyn i'r plwg clyfar a ddewiswyd sydd ar gael yma."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Yn gyntaf dysgwch foddau disgleirdeb y lamp newydd i'r integreiddiad. Defnyddiwch fotwm corfforol y lamp i ddewis pob lefel a'i hychwanegu isod, er enghraifft High, Medium, Low a Dim.",
           "power_cycle_delay": "Fel arfer nid oes angen oedi ychwanegol. Os nad yw lamp a ddiffoddwyd â'i botwm ei hun yn troi ymlaen o Home Assistant, gosodwch oedi bach, er enghraifft 0.7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Dim ond synwyryddion cerrynt sy'n perthyn i'r plwg clyfar a ddewiswyd sydd ar gael yma.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Dim ond synwyryddion cerrynt sy'n perthyn i'r plwg clyfar a ddewiswyd sydd ar gael yma."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

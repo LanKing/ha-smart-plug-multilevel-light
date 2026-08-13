@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "پہلے انٹیگریشن کو نئے لیمپ کے برائٹنس موڈ سکھائیں۔ لیمپ کے فزیکل بٹن سے ہر سطح منتخب کریں اور نیچے شامل کریں، مثلاً High، Medium، Low اور Dim۔",
           "power_cycle_delay": "عام طور پر اضافی تاخیر کی ضرورت نہیں ہوتی۔ اگر اپنے بٹن سے بند کیا گیا لیمپ Home Assistant سے آن نہ ہو تو تھوڑی سی تاخیر مقرر کریں، مثلاً 0.7 s۔",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "یہاں صرف منتخب اسمارٹ پلگ سے متعلق کرنٹ سینسر دستیاب ہیں۔",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "یہاں صرف منتخب اسمارٹ پلگ سے متعلق کرنٹ سینسر دستیاب ہیں۔"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "پہلے انٹیگریشن کو نئے لیمپ کے برائٹنس موڈ سکھائیں۔ لیمپ کے فزیکل بٹن سے ہر سطح منتخب کریں اور نیچے شامل کریں، مثلاً High، Medium، Low اور Dim۔",
           "power_cycle_delay": "عام طور پر اضافی تاخیر کی ضرورت نہیں ہوتی۔ اگر اپنے بٹن سے بند کیا گیا لیمپ Home Assistant سے آن نہ ہو تو تھوڑی سی تاخیر مقرر کریں، مثلاً 0.7 s۔",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "یہاں صرف منتخب اسمارٹ پلگ سے متعلق کرنٹ سینسر دستیاب ہیں۔",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "یہاں صرف منتخب اسمارٹ پلگ سے متعلق کرنٹ سینسر دستیاب ہیں۔"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

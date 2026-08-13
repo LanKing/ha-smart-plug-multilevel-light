@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Prvo naučite integraciju režimima osvetljenosti nove lampe. Fizičkim dugmetom na lampi izaberite svaki nivo i dodajte ga ispod, na primer High, Medium, Low i Dim.",
           "power_cycle_delay": "Obično nije potrebno dodatno kašnjenje. Ako se lampa ugašena sopstvenim dugmetom ne uključi iz Home Assistant-a, podesite malo kašnjenje, na primer 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Ovde su dostupni samo senzori struje koji pripadaju izabranoj pametnoj utičnici.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Ovde su dostupni samo senzori struje koji pripadaju izabranoj pametnoj utičnici."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Prvo naučite integraciju režimima osvetljenosti nove lampe. Fizičkim dugmetom na lampi izaberite svaki nivo i dodajte ga ispod, na primer High, Medium, Low i Dim.",
           "power_cycle_delay": "Obično nije potrebno dodatno kašnjenje. Ako se lampa ugašena sopstvenim dugmetom ne uključi iz Home Assistant-a, podesite malo kašnjenje, na primer 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Ovde su dostupni samo senzori struje koji pripadaju izabranoj pametnoj utičnici.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Ovde su dostupni samo senzori struje koji pripadaju izabranoj pametnoj utičnici."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Lehenik, irakatsi integrazioari lanpara berriaren distira-moduak. Lanpararen botoi fisikoarekin hautatu maila bakoitza eta gehitu behean, adibidez High, Medium, Low eta Dim.",
           "power_cycle_delay": "Normalean ez da atzerapen gehigarririk behar. Bere botoiarekin itzalitako lanpara Home Assistant-etik pizten ez bada, ezarri atzerapen txiki bat, adibidez 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Hemen hautatutako entxufe adimendunari dagozkion korronte-sentsoreak bakarrik daude erabilgarri.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Hemen hautatutako entxufe adimendunari dagozkion korronte-sentsoreak bakarrik daude erabilgarri."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Lehenik, irakatsi integrazioari lanpara berriaren distira-moduak. Lanpararen botoi fisikoarekin hautatu maila bakoitza eta gehitu behean, adibidez High, Medium, Low eta Dim.",
           "power_cycle_delay": "Normalean ez da atzerapen gehigarririk behar. Bere botoiarekin itzalitako lanpara Home Assistant-etik pizten ez bada, ezarri atzerapen txiki bat, adibidez 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Hemen hautatutako entxufe adimendunari dagozkion korronte-sentsoreak bakarrik daude erabilgarri.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Hemen hautatutako entxufe adimendunari dagozkion korronte-sentsoreak bakarrik daude erabilgarri."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

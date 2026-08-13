@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "สำหรับหลอดไฟใหม่ ให้สอนโหมดความสว่างแก่การผสานรวมก่อน ใช้ปุ่มจริงบนหลอดไฟเลือกแต่ละระดับแล้วเพิ่มด้านล่าง เช่น High, Medium, Low และ Dim",
           "power_cycle_delay": "โดยปกติไม่จำเป็นต้องหน่วงเวลาเพิ่มเติม หากหลอดไฟที่ปิดด้วยปุ่มของตัวเองไม่เปิดจาก Home Assistant ให้ตั้งค่าหน่วงเวลาเล็กน้อย เช่น 0.7 s",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "ที่นี่จะแสดงเฉพาะเซ็นเซอร์กระแสที่เป็นของสมาร์ทปลั๊กที่เลือกเท่านั้น",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "ที่นี่จะแสดงเฉพาะเซ็นเซอร์กระแสที่เป็นของสมาร์ทปลั๊กที่เลือกเท่านั้น"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "สำหรับหลอดไฟใหม่ ให้สอนโหมดความสว่างแก่การผสานรวมก่อน ใช้ปุ่มจริงบนหลอดไฟเลือกแต่ละระดับแล้วเพิ่มด้านล่าง เช่น High, Medium, Low และ Dim",
           "power_cycle_delay": "โดยปกติไม่จำเป็นต้องหน่วงเวลาเพิ่มเติม หากหลอดไฟที่ปิดด้วยปุ่มของตัวเองไม่เปิดจาก Home Assistant ให้ตั้งค่าหน่วงเวลาเล็กน้อย เช่น 0.7 s",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "ที่นี่จะแสดงเฉพาะเซ็นเซอร์กระแสที่เป็นของสมาร์ทปลั๊กที่เลือกเท่านั้น",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "ที่นี่จะแสดงเฉพาะเซ็นเซอร์กระแสที่เป็นของสมาร์ทปลั๊กที่เลือกเท่านั้น"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

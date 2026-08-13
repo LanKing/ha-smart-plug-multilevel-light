@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Primer ensenyeu a la integració els modes de brillantor del llum nou. Amb el botó físic del llum, seleccioneu cada nivell i afegiu-lo a continuació, per exemple High, Medium, Low i Dim.",
           "power_cycle_delay": "Normalment no cal cap retard addicional. Si un llum apagat amb el seu propi botó no s'encén des de Home Assistant, definiu un petit retard, per exemple 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Aquí només estan disponibles els sensors de corrent que pertanyen a l'endoll intel·ligent seleccionat.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Aquí només estan disponibles els sensors de corrent que pertanyen a l'endoll intel·ligent seleccionat."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Primer ensenyeu a la integració els modes de brillantor del llum nou. Amb el botó físic del llum, seleccioneu cada nivell i afegiu-lo a continuació, per exemple High, Medium, Low i Dim.",
           "power_cycle_delay": "Normalment no cal cap retard addicional. Si un llum apagat amb el seu propi botó no s'encén des de Home Assistant, definiu un petit retard, per exemple 0,7 s.",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Aquí només estan disponibles els sensors de corrent que pertanyen a l'endoll intel·ligent seleccionat.",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Aquí només estan disponibles els sensors de corrent que pertanyen a l'endoll intel·ligent seleccionat."
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

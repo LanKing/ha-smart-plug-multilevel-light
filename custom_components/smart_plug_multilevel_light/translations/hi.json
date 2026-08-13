@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "पहले इंटीग्रेशन को नए लैंप के ब्राइटनेस मोड सिखाएँ। लैंप के भौतिक बटन से हर स्तर चुनें और नीचे जोड़ें, जैसे High, Medium, Low और Dim।",
           "power_cycle_delay": "आमतौर पर अतिरिक्त देरी की जरूरत नहीं होती। यदि अपने बटन से बंद किया गया लैंप Home Assistant से चालू नहीं होता, तो थोड़ी देरी सेट करें, जैसे 0.7 s।",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "यहाँ केवल चुने गए स्मार्ट प्लग से जुड़े करंट सेंसर उपलब्ध हैं।",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "यहाँ केवल चुने गए स्मार्ट प्लग से जुड़े करंट सेंसर उपलब्ध हैं।"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "पहले इंटीग्रेशन को नए लैंप के ब्राइटनेस मोड सिखाएँ। लैंप के भौतिक बटन से हर स्तर चुनें और नीचे जोड़ें, जैसे High, Medium, Low और Dim।",
           "power_cycle_delay": "आमतौर पर अतिरिक्त देरी की जरूरत नहीं होती। यदि अपने बटन से बंद किया गया लैंप Home Assistant से चालू नहीं होता, तो थोड़ी देरी सेट करें, जैसे 0.7 s।",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "यहाँ केवल चुने गए स्मार्ट प्लग से जुड़े करंट सेंसर उपलब्ध हैं।",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "यहाँ केवल चुने गए स्मार्ट प्लग से जुड़े करंट सेंसर उपलब्ध हैं।"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },

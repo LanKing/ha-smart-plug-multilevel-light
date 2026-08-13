@@ -22,10 +22,9 @@
         "data_description": {
           "modes": "Նախ ինտեգրմանը սովորեցրեք նոր լամպի պայծառության ռեժիմները։ Լամպի ֆիզիկական կոճակով ընտրեք յուրաքանչյուր մակարդակը և ավելացրեք ստորև, օրինակ՝ High, Medium, Low և Dim։",
           "power_cycle_delay": "Սովորաբար լրացուցիչ ուշացում պետք չէ։ Եթե իր կոճակով անջատված լամպը Home Assistant-ից չի միանում, սահմանեք փոքր ուշացում, օրինակ՝ 0.7 վրկ։",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Այստեղ հասանելի են միայն ընտրված խելացի վարդակին պատկանող հոսանքի սենսորները։",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Այստեղ հասանելի են միայն ընտրված խելացի վարդակին պատկանող հոսանքի սենսորները։"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
@@ -51,10 +50,9 @@
         "data_description": {
           "modes": "Նախ ինտեգրմանը սովորեցրեք նոր լամպի պայծառության ռեժիմները։ Լամպի ֆիզիկական կոճակով ընտրեք յուրաքանչյուր մակարդակը և ավելացրեք ստորև, օրինակ՝ High, Medium, Low և Dim։",
           "power_cycle_delay": "Սովորաբար լրացուցիչ ուշացում պետք չէ։ Եթե իր կոճակով անջատված լամպը Home Assistant-ից չի միանում, սահմանեք փոքր ուշացում, օրինակ՝ 0.7 վրկ։",
-          "power_sensor": "Only power sensors belonging to the selected smart plug are available here.",
+          "power_sensor": "Այստեղ հասանելի են միայն ընտրված խելացի վարդակին պատկանող հոսանքի սենսորները։",
           "round_brightness_to_5": "Rounds calculated brightness to the nearest 5%. This can make displayed percentages look cleaner.",
-          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5.",
-          "current_sensor": "Այստեղ հասանելի են միայն ընտրված խելացի վարդակին պատկանող հոսանքի սենսորները։"
+          "power_history_samples": "Number of consecutive one-second power samples that must map to the same new mode before the integration switches modes. State changes are sampled immediately as well. Until confirmation, the current mode is kept unchanged. Default is 5."
         }
       }
     },
