@@ -124,7 +124,7 @@ custom_components/smart_plug_multilevel_light
 ![Редактирование режима](docs/modes-edit.png)
 
 После добавления первого режима добавьте все последующие повторив действия. У вас должно получиться что-то вроде:
-![Список режимов](docs/modes-edit.png)
+![Список режимов](docs/modes-list.png)
 6. Сохраните helper. Home Assistant создаст новую сущность `light`, например `light.FloorLamp`.
 
 ### 🧩 Lovelace-карточка
