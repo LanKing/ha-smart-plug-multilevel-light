@@ -310,4 +310,5 @@ lovelace:
 
 <br />
 
+> [!TIP]
 > **Понравилось решение?** Посмотрите 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ru.md">другие мои продукты для Home Assistant</a>
