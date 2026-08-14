@@ -10,7 +10,7 @@
 
 **✨ Ezaugarriak eta ezaugarriak:**
 
-* Etxeko Laguntzailea jatorrizko entitate bat sortzen du`light`automatizazioekin, scriptekin eta HA interfaze estandarrekin bateragarria;
+* Etxeko Laguntzailea jatorrizko entitate bat sortzen du `light`automatizazioekin, scriptekin eta HA interfaze estandarrekin bateragarria;
 * Lanpara behar bezala pizten du nola itzali zen kontuan hartu gabe: entxufe adimendunaren bidez itzaltzen bazen, besterik gabe pizten du; entxufea piztuta zegoen bitartean lanpara bere botoiarekin itzali bazen, desaktibatu eta berriro pizteko ziklo bat egiten du;
 * Automatikoki zehazten du lanpararen egungo funtzionamendu-modua benetan neurtutako potentzia egonkorrean oinarrituta;
 * Konfiguratzaile sinple bat du, non erabiltzaileak bere lanparak onartzen dituen moduak sekuentzialki izendatzen ditu, eta sistemak modu bakoitzean potentzia egonkorra zehaztuz ikasten du;
@@ -33,7 +33,7 @@ Behar izango duzu:
 1. Entxufe adimenduna, potentzia kontrola (etengailua) eta potentzia neurtzea (dispositibo\_klasea: potentzia duen sentsorea) HAri. Bi entitateak gailu berekoak izan behar dira eta gaituta egon behar dute.
 2. Entxufatuta dagoenean automatikoki pizten den argi ergel bat eta distira-ezarpen anitz dituena erabat gozatzeko.
 
-> Entxufe bat erabili nuen[Tuya TS011F (Girier kasuan)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Esango dut esperimentuen hasieran Girier-en entxufeak ez zirela kabitzen neurketa okerrak zirela medio, baina eredu honek bai, Girier kasuan ere izan bazen ere.
+> Entxufe bat erabili nuen [Tuya TS011F (Girier kasuan)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Esango dut esperimentuen hasieran Girier-en entxufeak ez zirela kabitzen neurketa okerrak zirela medio, baina eredu honek bai, Girier kasuan ere izan bazen ere.
 
 ### 👨‍🔬 Nire saltokian aplikatu dudan ezarpen garrantzitsua:
 
@@ -41,11 +41,11 @@ Behar izango duzu:
 
 Deskribapen hau Z2M bidez konektatutako entxufeen jabeentzat bakarrik da garrantzitsua. Beste erabiltzaile batzuek freskatze-abiadura egokitu beharko lukete beren konfigurazioaren barruan:
 
-1. Ireki**Etxeko Laguntzailea → Zigbee2MQTT**. Zigbee2MQTT alboko menuan ez badago, ireki**Ezarpenak > Aplikazioak > Zigbee2MQTT > Ireki web interfazea**.
-2. Joan atalera**Gailuak**.
+1. Ireki **Etxeko Laguntzailea → Zigbee2MQTT**. Zigbee2MQTT alboko menuan ez badago, ireki **Ezarpenak > Aplikazioak > Zigbee2MQTT > Ireki web interfazea**.
+2. Joan atalera **Gailuak**.
 3. Aukeratu behar den irteera.
-4. Ireki fitxa**Ezarpenak (zehatzak)**.
-5. Aldaketak**Neurketa galdeketaren tartea**1 s.
+4. Ireki fitxa **Ezarpenak (zehatzak)**.
+5. Aldaketak **Neurketa galdeketaren tartea** 1 s.
 
 <a id="installation"></a>
 
@@ -53,37 +53,37 @@ Deskribapen hau Z2M bidez konektatutako entxufeen jabeentzat bakarrik da garrant
 
 ### 🛍 Instalazioa HACS bidez
 
-ℹ️[Zer da HACS eta nola instalatu?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_eu.md)
+ℹ️ [Zer da HACS eta nola instalatu?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_eu.md)
 
-🚀[Saiatu biltegi bat gehitzen estekan](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Zure HAk metodo hau onartzen badu, egin klik**Gehitu**irekitzen den leihoan, eta gero botoia**Deskargatu**beheko eskuineko izkinan. Instalazioa behar bezala amaitu bada, urrats gehiago salta ditzakezu. Saltatu zuzenean atalera[hasiera azkarra](#getting-started).
+🚀 [Saiatu biltegi bat gehitzen estekan](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Zure HAk metodo hau onartzen badu, egin klik **Gehitu** irekitzen den leihoan, eta gero botoia **Deskargatu** beheko eskuineko izkinan. Instalazioa behar bezala amaitu bada, urrats gehiago salta ditzakezu. Saltatu zuzenean atalera [hasiera azkarra](#getting-started).
 
 #### 1. Biltegi bat gehitzea
 
 Biltegia HACS direktorioa estandarrean sartuta ez dagoen arren, gehitu pertsonalizatu gisa:
 
-1. Ireki**HACS → Integrazioak**.
-2. Ireki goiko eskuineko izkinan dagoen menua eta hautatu**Biltegi pertsonalizatuak**.
+1. Ireki **HACS → Integrazioak**.
+2. Ireki goiko eskuineko izkinan dagoen menua eta hautatu **Biltegi pertsonalizatuak**.
 3. Gehitu:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Hautatu mota**Integrazioa**eta sakatu**Gehitu**.
+4. Hautatu mota **Integrazioa** eta sakatu **Gehitu**.
 
-> Biltegi bat gehitzeak HACS-en integrazioa soilik eskaintzen du. Instalatzeko, bereizita ireki behar duzu bere txartela eta egin klik**Deskargatu**.
+> Biltegi bat gehitzeak HACS-en integrazioa soilik eskaintzen du. Instalatzeko, bereizita ireki behar duzu bere txartela eta egin klik **Deskargatu**.
 
 #### 2. Integrazioaren instalazioa
 
-1. Bilatu HACS-en:`Smart Plug Multi-Level Light`.
-2. Ireki integrazioa eta egin klik**Deskargatu**.
+1. Bilatu HACS-en: `Smart Plug Multi-Level Light`.
+2. Ireki integrazioa eta egin klik **Deskargatu**.
 3. Instalatu ondoren, berrabiarazi Home Assistant guztiz.
 
 <a id="manual-installation"></a>
 
 ### 🧑‍💻 HACSrik gabeko instalazioa
 
-1. Biltegiaren orrian, egin klik**Kodea → Deskargatu ZIP**.
+1. Biltegiaren orrian, egin klik **Kodea → Deskargatu ZIP**.
 2. Deskonprimitu artxiboa.
 3. Kopiatu karpeta:
 
@@ -97,7 +97,7 @@ Home Assistant konfigurazio direktoriora:
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Fitxategiaren azken bidea`manifest.json`itxura hau izan beharko luke:
+Fitxategiaren azken bidea `manifest.json` itxura hau izan beharko luke:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
@@ -105,9 +105,9 @@ Fitxategiaren azken bidea`manifest.json`itxura hau izan beharko luke:
 
 4. Erabat berrabiarazi Home Assistant.
 
-> Ez kopiatu kanpoko biltegiaren karpeta osoa`custom_components`. Barruan`custom_components`karpeta zuzenean kokatu behar da`smart_plug_multilevel_light`.
+> Ez kopiatu kanpoko biltegiaren karpeta osoa `custom_components`. Barruan `custom_components` karpeta zuzenean kokatu behar da `smart_plug_multilevel_light`.
 
-Txartela integrazioan sartzen da, beraz, HACS ez da beharrezkoa instalatzeko. Fitxategiak eskuz kopiatu, Home Assistant berrabiarazi eta lehen laguntzaile objektua sortu ondoren, integrazioak JavaScript txartelaren fitxategia argitaratzen du eta automatikoki erregistratzen du paneleko baliabideekin modu estandarrean.`storage`. YAML baliabide moduan, txartela eskuz erregistratu behar da, behean azaltzen den moduan.
+Txartela integrazioan sartzen da, beraz, HACS ez da beharrezkoa instalatzeko. Fitxategiak eskuz kopiatu, Home Assistant berrabiarazi eta lehen laguntzaile objektua sortu ondoren, integrazioak JavaScript txartelaren fitxategia argitaratzen du eta automatikoki erregistratzen du paneleko baliabideekin modu estandarrean. `storage`. YAML baliabide moduan, txartela eskuz erregistratu behar da, behean azaltzen den moduan.
 
 <a id="getting-started"></a>
 
@@ -115,50 +115,51 @@ Txartela integrazioan sartzen da, beraz, HACS ez da beharrezkoa instalatzeko. Fi
 
 ### 🛠 Konfigurazioa
 
-1. Irek&#x69;**[Ezarpenak > Gailuak eta zerbitzuak > Osagarriak](https://my.home-assistant.io/redirect/helpers/)**&#x65;ta sakatu**Sortu Laguntza-objektua**.
+1. Ireki **[Ezarpenak > Gailuak eta zerbitzuak > Osagarriak](https://my.home-assistant.io/redirect/helpers/)** eta sakatu **Sortu Laguntza-objektua**.
 
-2. Hautatu**Entxufe adimenduna maila anitzeko argia**.
+2. Hautatu **Entxufe adimenduna maila anitzeko argia**.
 
 3. Hautatu lanpara konektatuta dagoen entxufe adimenduna. Zerrendak Home Assistant-ek gailu berean potentzia sentsore bat ikusten duen saltokietan bakarrik erakusten du.
 
 4. Hurrengo urratsean, ezarri lanpara-parametroak:
-   * **Argiaren izena (Light name)**— Sortzen ari den entitatearen izena, adibidez`FloorLamp`;
-   * **Power sensor**- entxufearen potentzia sentsorea;
+   * **Argiaren izena (Light name)** — Sortzen ari den entitatearen izena, adibidez `FloorLamp`;
+   * **Power sensor** - entxufearen potentzia sentsorea;
 
-5. atalean**ZUI003Z**gehitu gutxienez distira modu bat klik eginez**Gehitu**.<br /> <img src="modes-edit.png" width="50%"/><br />Aldatu lanpara bere botoi fisikoarekin, sartu moduaren izena eta hasi**Test stable power**. Balio egonkorra lortu ondoren, sakatu**Aplikatu**.
+5. atalean **ZUI003Z** gehitu gutxienez distira modu bat klik eginez **Gehitu**.<br /> <img src="modes-edit.png" width="50%"/><br />
+   Aldatu lanpara bere botoi fisikoarekin, sartu moduaren izena eta hasi **Test stable power**. Balio egonkorra lortu ondoren, sakatu **Aplikatu**.
 
 6. Lehenengo modua gehitu ondoren, gehitu gainerako moduak urrats hauek errepikatuz. Horrelako zerbait lortu beharko zenuke:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Gorde laguntzailea objektua. Home Assistant-ek entitate berri bat sortuko du`light`, Adibidez`light.FloorLamp`.
+7. Gorde laguntzailea objektua. Home Assistant-ek entitate berri bat sortuko du `light`, Adibidez `light.FloorLamp`.
 
 ### 🧩 Lovelace txartela
 
-1. Ireki nahi duzun panela, aktibatu editatzeko modua eta egin klik**Gehitu txartel bat**.
-2. Hautatu**Entxufe adimenduna maila anitzeko argia**, zehaztu sortu den entitatea`light`eta gorde txartela.
+1. Ireki nahi duzun panela, aktibatu editatzeko modua eta egin klik **Gehitu txartel bat**.
+2. Hautatu **Entxufe adimenduna maila anitzeko argia**, zehaztu sortu den entitatea `light` eta gorde txartela.
 
-Txartela erabilgarri daudenen artean ez badago, baliteke erabiltzen ari zara[Lovelace baliabidea YAML modua](#yaml-lovelace-mode).
+Txartela erabilgarri daudenen artean ez badago, baliteke erabiltzen ari zara [Lovelace baliabidea YAML modua](#yaml-lovelace-mode).
 
 ### 🎨 Ikusmen efektuak
 
 #### Ezarpenak txartelan
 
-Ireki txartela dagoen panela, joan edizio modura eta egin klik**Editatu**nahi duzun txartelan.
+Ireki txartela dagoen panela, joan edizio modura eta egin klik **Editatu** nahi duzun txartelan.
 
-Atala irekitzea**Edukia (Content)**, erabilgarri dauden ezarpenak ikusiko dituzu:
+Atala irekitzea **Edukia (Content)**, erabilgarri dauden ezarpenak ikusiko dituzu:
 
-* **Erakutsi moduaren izena (Show mode name)**— uneko moduaren izena erakusten edo ezkutatzen du: adibidez, Iluna, Baxua, Ertaina edo Altua.
-* **Erakutsi ehunekoa (Show percentage)**— kalkulatutako distira ehuneko gisa erakusten edo ezkutatzen du.
+* **Erakutsi moduaren izena (Show mode name)** — uneko moduaren izena erakusten edo ezkutatzen du: adibidez, Iluna, Baxua, Ertaina edo Altua.
+* **Erakutsi ehunekoa (Show percentage)** — kalkulatutako distira ehuneko gisa erakusten edo ezkutatzen du.
 
-Atala irekitzea**Elkarreraginak (Interactions)**, ikusiko duzu:
+Atala irekitzea **Elkarreraginak (Interactions)**, ikusiko duzu:
 
-* **Erakutsi beti ikonoaren atzeko planoa (Always show icon background)**— ikonoaren inguruko atzeko plano biribila mantentzen du, nahiz eta horretarako ekintza bereizi bat desgaituta egon.
+* **Erakutsi beti ikonoaren atzeko planoa (Always show icon background)** — ikonoaren inguruko atzeko plano biribila mantentzen du, nahiz eta horretarako ekintza bereizi bat desgaituta egon.
 
-> 🚫 Bide batez, nik bezala, estandarra ez den txartelaren ikono bat erabiltzen baduzu eta itzalita dagoenean ez badago bisualki markatuta, nire beste plugina gomendatzen dizut -[Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_eu.md), arazo estetiko hau konpontzen duena.
+> 🚫 Bide batez, nik bezala, estandarra ez den txartelaren ikono bat erabiltzen baduzu eta itzalita dagoenean ez badago bisualki markatuta, nire beste plugina gomendatzen dizut - [Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_eu.md), arazo estetiko hau konpontzen duena.
 
 #### Distira % 5era biribiltzen da
 
-Irek&#x69;**[Ezarpenak > Gailuak eta zerbitzuak > Osagarriak](https://my.home-assistant.io/redirect/helpers/)**, aurkitu lehenago sortutako objektu laguntzailea**Entxufe adimenduna maila anitzeko argia**eta ireki bere ezarpenak. Piztu edo itzali**Round brightness to 5% (may look nicer)**.
+Ireki **[Ezarpenak > Gailuak eta zerbitzuak > Osagarriak](https://my.home-assistant.io/redirect/helpers/)**, aurkitu lehenago sortutako objektu laguntzailea **Entxufe adimenduna maila anitzeko argia** eta ireki bere ezarpenak. Piztu edo itzali **Round brightness to 5% (may look nicer)**.
 
 Ezarpena gaituta dagoenean, kalkulatutako ehunekoa %5 hurbilenera biribiltzen da, adibidez: %33 → %35, %67 → %65.
 
@@ -170,13 +171,13 @@ Eskuragarri dauden aukerak:
 
 | Parametroa | Mota | Lehenetsia | Helmuga |
 |---|---|---:|---|
-|`entity`| katea | derrigorrezkoa | integrazioaren bidez sortutako entitatea |
-|`name`| katea | entitatearen izena | txartelaren izena gainidazten du |
-|`icon`| katea | entitatearen ikonoa | ikonoa birdefinitzen du |
-|`show_mode`| boolearra |`true`| moduaren izena erakusten du |
-|`show_percentage`| boolearra |`true`| baldintzapeko interesa erakusten du |
-|`icon_tap_action`| ekintza |`more-info`| ekintza gehigarria | ikonoa sakatzean
-|`always_show_icon_background`| boolearra |`false`| ikonoaren hondo biribila erakusten du beti, nahiz eta`icon_tap_action`"Ez" hautatua |
+| `entity` | katea | derrigorrezkoa | integrazioaren bidez sortutako entitatea |
+| `name` | katea | entitatearen izena | txartelaren izena gainidazten du |
+| `icon` | katea | entitatearen ikonoa | ikonoa birdefinitzen du |
+| `show_mode` | boolearra | `true` | moduaren izena erakusten du |
+| `show_percentage` | boolearra | `true` | baldintzapeko interesa erakusten du |
+| `icon_tap_action` | ekintza | `more-info` | ekintza gehigarria | ikonoa sakatzean
+| `always_show_icon_background` | boolearra | `false` | ikonoaren hondo biribila erakusten du beti, nahiz eta `icon_tap_action` "Ez" hautatua |
 
 Adibide osoa:
 
@@ -198,7 +199,7 @@ always_show_icon_background: false
 
 > Seguruenik, ez duzu modu hau gaituta. Arazorik ez badago eta txartelak funtzionatzen badu, saltatu urrats hau.
 
-baduzu`configuration.yaml`esplizituki ezarri:
+baduzu `configuration.yaml` esplizituki ezarri:
 
 ```yaml
 lovelace:
@@ -225,7 +226,7 @@ Aldaketa egin ondoren, berrabiarazi Lovelace baliabideak edo berrabiarazi Home A
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Litekeena da kausa:**&#x62;ide okerra edo Home Assistant ez da berrabiarazi.
+**Litekeena da kausa:** bide okerra edo Home Assistant ez da berrabiarazi.
 
 Egiaztatu fitxategien erabilgarritasuna:
 
@@ -233,7 +234,7 @@ Egiaztatu fitxategien erabilgarritasuna:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Ondoren, berrabiarazi guztiz Home Assistant eta egiaztatu erregistroan akatsik dagoen`smart_plug_multilevel_light`.
+Ondoren, berrabiarazi guztiz Home Assistant eta egiaztatu erregistroan akatsik dagoen `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -242,13 +243,13 @@ Ondoren, berrabiarazi guztiz Home Assistant eta egiaztatu erregistroan akatsik d
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-Integrazioak objektuak soilik erakusten ditu`switch`barne sentsore bat ere eskaintzen duten gailuekin lotuta`device_class: power`.
+Integrazioak objektuak soilik erakusten ditu `switch`barne sentsore bat ere eskaintzen duten gailuekin lotuta `device_class: power`.
 
-Check i&#x6E;**[Ezarpenak → Gailuak eta zerbitzuak → Objektuak](https://my.home-assistant.io/redirect/entities/)**:
+Check in **[Ezarpenak → Gailuak eta zerbitzuak → Objektuak](https://my.home-assistant.io/redirect/entities/)**:
 
-* Ea dagokie`switch`eta potentzia sentsore bat gailu baterako?
+* Ea dagokie `switch` eta potentzia sentsore bat gailu baterako?
 * Piztuta al dago potentzia-sentsorea?
-* Ondo zehazten al da?`device_class`?
+* Ondo zehazten al da? `device_class`?
 * Zenbakizko egoerarik al du?
 
 <hr />
@@ -258,7 +259,7 @@ Check i&#x6E;**[Ezarpenak → Gailuak eta zerbitzuak → Objektuak](https://my.h
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Entxufe bat hautatu ondoren, integrazioak potentzia sentsore baten presentzia berriro egiaztatzen du. Errorea gertatzen da sentsorea kendu, desgaitu, beste gailu batera eraman edo edukitzeari utzi bazaio.`device_class: power`.
+Entxufe bat hautatu ondoren, integrazioak potentzia sentsore baten presentzia berriro egiaztatzen du. Errorea gertatzen da sentsorea kendu, desgaitu, beste gailu batera eraman edo edukitzeari utzi bazaio. `device_class: power`.
 
 <hr />
 </details>
@@ -267,7 +268,7 @@ Entxufe bat hautatu ondoren, integrazioak potentzia sentsore baten presentzia be
 <summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
 <br />
 
-Egiaztatu potentzia-sentsorearen balioa. Lanpara birtuala itzalita dagoela jotzen da`0 W`; positiboa denean, honela definitu behar da`on`.
+Egiaztatu potentzia-sentsorearen balioa. Lanpara birtuala itzalita dagoela jotzen da `0 W`; positiboa denean, honela definitu behar da `on`.
 
 <hr />
 </details>
@@ -276,7 +277,7 @@ Egiaztatu potentzia-sentsorearen balioa. Lanpara birtuala itzalita dagoela jotze
 <summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
 <br />
 
-Egiaztatu hautatutako potentzia-sentsoreak benetan erakusten duela`0 W`, lanpara bere botoiarekin itzaltzen denean.
+Egiaztatu hautatutako potentzia-sentsoreak benetan erakusten duela `0 W`, lanpara bere botoiarekin itzaltzen denean.
 
 <hr />
 </details>
@@ -285,7 +286,7 @@ Egiaztatu hautatutako potentzia-sentsoreak benetan erakusten duela`0 W`, lanpara
 <summary><b>❓Определяется неправильный режим</b></summary>
 <br />
 
-Egiaztatu**🐞 Last measures**ezarpenetan eta atributuetan`power_history`,`power_history_modes`,`power_sample_interval_seconds`Eta`selected_power_mode`.`power_history`erregistratutako azken potentzia-balioak erakusten ditu,`power_history_modes`— horietako bakoitzaren modua konfiguratutako atalaseen arabera,`power_sample_interval_seconds`finkapen periodikoaren tartea da, eta`selected_power_mode`— uneko baieztatutako modua.
+Egiaztatu **🐞 Last measures** ezarpenetan eta atributuetan `power_history`, `power_history_modes`, `power_sample_interval_seconds` Eta `selected_power_mode`. `power_history` erregistratutako azken potentzia-balioak erakusten ditu, `power_history_modes` — horietako bakoitzaren modua konfiguratutako atalaseen arabera, `power_sample_interval_seconds` finkapen periodikoaren tartea da, eta `selected_power_mode` — uneko baieztatutako modua.
 
 <hr />
 </details>
@@ -296,7 +297,7 @@ Egiaztatu**🐞 Last measures**ezarpenetan eta atributuetan`power_history`,`powe
 
 Espero den jokabidea da. Epe laburreko potentzia-gorabeherek etenaldi faltsuak eragin ez ditzaten, integrazioak modua aldatzen du jarraian hainbat irakurketa modu berri berari dagozkion ondoren bakarrik.
 
-Beharrezko irakurketa kopurua parametroak ezartzen du**Consecutive readings to switch**eta lehenespenez`5`. Aldizkako neurketak segundoan behin egiten dira, eta sentsorearen egoeraren aldaketak berehala prozesatzen dira. Probetan zehar balioa beste modu bati badagokio, atzerako kontaketa berriro hasiko da.
+Beharrezko irakurketa kopurua parametroak ezartzen du **Consecutive readings to switch** eta lehenespenez `5`. Aldizkako neurketak segundoan behin egiten dira, eta sentsorearen egoeraren aldaketak berehala prozesatzen dira. Probetan zehar balioa beste modu bati badagokio, atzerako kontaketa berriro hasiko da.
 
 Berrespena arte, integrazioak aurreko moduari eusten dio. Horri esker, txartela ez da modu batetik bestera aldatzen lanpara piztean, potentzia egonkortzean edo sentsoreen irakurketetan gertatzen diren tarteko balioengatik.
 
@@ -309,15 +310,15 @@ Irakurketa-kopurua murrizteak modu berriaren bistaratzea bizkortzen du, baina de
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Erregistro automatikoa gutxienez konfiguratutako objektu laguntzaile bat kargatu ondoren eta baliabide moduan soilik gertatzen da`storage`. Integrazioa instalatzeko metodoak -HACS bidez edo eskuz- ez du horretan eragiten.
+Erregistro automatikoa gutxienez konfiguratutako objektu laguntzaile bat kargatu ondoren eta baliabide moduan soilik gertatzen da `storage`. Integrazioa instalatzeko metodoak -HACS bidez edo eskuz- ez du horretan eragiten.
 
-Egiaztat&#x75;**[Ezarpenak → Panelak → ⋮ → Baliabideak](https://my.home-assistant.io/redirect/lovelace_resources/)**. URLak hor egon behar du:
+Egiaztatu **[Ezarpenak → Panelak → ⋮ → Baliabideak](https://my.home-assistant.io/redirect/lovelace_resources/)**. URLak hor egon behar du:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-YAML moduan[gehitu baliabidea eskuz](#yaml-lovelace-mode).
+YAML moduan [gehitu baliabidea eskuz](#yaml-lovelace-mode).
 
 <hr />
 </details>
@@ -336,14 +337,14 @@ YAML moduan[gehitu baliabidea eskuz](#yaml-lovelace-mode).
 
 ## 🗑Kendu
 
-1. Ezabatu sortutako objektu laguntzaile guztiak**Entxufe adimenduna maila anitzeko argia**bide&#x7A;**[Ezarpenak > Gailuak eta zerbitzuak > Osagarriak](https://my.home-assistant.io/redirect/helpers/)**.
+1. Ezabatu sortutako objektu laguntzaile guztiak **Entxufe adimenduna maila anitzeko argia** bidez **[Ezarpenak > Gailuak eta zerbitzuak > Osagarriak](https://my.home-assistant.io/redirect/helpers/)**.
 2. Kendu integrazioa HACS bidez edo eskuz ezabatu karpeta:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Egiaztat&#x75;**[Ezarpenak → Panelak → ⋮ → Baliabideak](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x65;ta eskuz ezabatu txartelaren baliabidea geratzen bada:
+3. Egiaztatu **[Ezarpenak → Panelak → ⋮ → Baliabideak](https://my.home-assistant.io/redirect/lovelace_resources/)** eta eskuz ezabatu txartelaren baliabidea geratzen bada:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +355,9 @@ YAML moduan[gehitu baliabidea eskuz](#yaml-lovelace-mode).
 
 ## 📄 Lizentzia
 
-Proiektua lizentziapean banatzen da[EKIN](../LICENSE).
+Proiektua lizentziapean banatzen da [EKIN](../LICENSE).
 
 <br />
 
-> \[!AHOLKUA]**Gustatu al zaizu irtenbidea?**&#x42;egira 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_eu.md">Nire beste produktuak Home Assistant-erako</a>
+> \[!AHOLKUA]
+> **Gustatu al zaizu irtenbidea?** Begira 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_eu.md">Nire beste produktuak Home Assistant-erako</a>
