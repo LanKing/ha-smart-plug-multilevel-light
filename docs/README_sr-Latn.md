@@ -176,7 +176,7 @@ custom_components/smart_plug_multilevel_light
 | `show_mode` | boolean | `true` | prikazuje naziv režima |
 | `show_percentage` | boolean | `true` | pokazuje sintetički procenat |
 | `icon_tap_action` | action | `more-info` | dodatna radnja kada se dodirne ikona |
-| `always_show_icon_background` | boolean | `false` | uvek prikazuje pozadinu kružne ikone, čak i kada je ZKSKNONEKKSZ izabran za ZKSKICONTAPACTIONKKSZ |
+| `always_show_icon_background` | boolean | `false` | uvek prikazuje pozadinu kružne ikone, čak i kada je None izabran za icon_tap_action |
 
 Цео пример:
 
@@ -359,4 +359,4 @@ Ovaj projekat se distribuira pod licencom [MIT](../LICENSE).
 <br />
 
 > [!TIP]
-> **Sviđa vam se ovo rešenje?** Pogledajte 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sr-Latn.md">moji drugi ZKSKHOMEASSISTANTKKSZ proizvodi</a>
+> **Sviđa vam se ovo rešenje?** Pogledajte 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sr-Latn.md">moji drugi Home Assistant proizvodi</a>
