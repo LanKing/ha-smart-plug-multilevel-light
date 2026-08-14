@@ -1,18 +1,19 @@
 <sub>🇺🇸&nbsp;<a href="../README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a>&nbsp;|</sub> <sub>🇺🇦&nbsp;<a href="README_uk.md">У⁠к⁠р⁠а⁠ї⁠н⁠с⁠ь⁠к⁠а</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="README_ru.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="README_af.md">A⁠f⁠r⁠i⁠k⁠a⁠a⁠n⁠s</a>&nbsp;|</sub> <sub>🇸🇦&nbsp;<a href="README_ar.md">ا⁠ل⁠ع⁠ر⁠ب⁠ي⁠ة</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="README_bn.md">বাং⁠লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="README_bs.md">B⁠o⁠s⁠a⁠n⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="README_ca.md">C⁠a⁠t⁠a⁠l⁠à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="README_cs.md">Č⁠e⁠š⁠t⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>cy&nbsp;<a href="README_cy.md">C⁠y⁠m⁠r⁠a⁠e⁠g</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="README_da.md">D⁠a⁠n⁠s⁠k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="README_de.md">D⁠e⁠u⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇬🇷&nbsp;<a href="README_el.md">Ε⁠λ⁠λ⁠η⁠ν⁠ι⁠κ⁠ά</a>&nbsp;|</sub> <sub>eo&nbsp;<a href="README_eo.md">E⁠s⁠p⁠e⁠r⁠a⁠n⁠t⁠o</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="README_es.md">E⁠s⁠p⁠a⁠ñ⁠o⁠l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="README_et.md">E⁠e⁠s⁠t⁠i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="README_eu.md">E⁠u⁠s⁠k⁠a⁠r⁠a</a>&nbsp;|</sub> <sub>🇮🇷&nbsp;<a href="README_fa.md">ف⁠ا⁠ر⁠س⁠ی</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="README_fi.md">S⁠u⁠o⁠m⁠i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="README_fy.md">F⁠r⁠y⁠s⁠k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="README_fr.md">F⁠r⁠a⁠n⁠ç⁠a⁠i⁠s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="README_ga.md">G⁠a⁠e⁠i⁠l⁠g⁠e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="README_gl.md">G⁠a⁠l⁠e⁠g⁠o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="README_gsw.md">S⁠c⁠h⁠w⁠i⁠i⁠z⁠e⁠r⁠d⁠ü⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="README_he.md">ע⁠ב⁠ר⁠י⁠ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_hi.md">हि⁠न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="README_hr.md">H⁠r⁠v⁠a⁠t⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="README_hu.md">M⁠a⁠g⁠y⁠a⁠r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="README_hy.md">Հ⁠ա⁠յ⁠ե⁠ր⁠ե⁠ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="README_id.md">I⁠n⁠d⁠o⁠n⁠e⁠s⁠i⁠a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="README_is.md">Í⁠s⁠l⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="README_it.md">I⁠t⁠a⁠l⁠i⁠a⁠n⁠o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="README_ja.md">日⁠本⁠語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="README_ka.md">K⁠a⁠r⁠t⁠u⁠l⁠i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="README_ko.md">한⁠국⁠어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="README_lb.md">L⁠ë⁠t⁠z⁠e⁠b⁠u⁠e⁠r⁠g⁠e⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="README_lt.md">L⁠i⁠e⁠t⁠u⁠v⁠i⁠ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="README_lv.md">L⁠a⁠t⁠v⁠i⁠e⁠š⁠u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="README_mk.md">М⁠а⁠к⁠е⁠д⁠о⁠н⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ml.md">മ⁠ല⁠യാ⁠ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nb.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠B⁠o⁠k⁠m⁠å⁠l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="README_nl.md">N⁠e⁠d⁠e⁠r⁠l⁠a⁠n⁠d⁠s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nn.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠N⁠y⁠n⁠o⁠r⁠s⁠k</a>&nbsp;|</sub> <sub>🇵🇱&nbsp;<a href="README_pl.md">P⁠o⁠l⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="README_pt.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="README_pt-BR.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s⁠&nbsp;⁠(⁠B⁠R⁠)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="README_ro.md">R⁠o⁠m⁠â⁠n⁠ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="README_sk.md">S⁠l⁠o⁠v⁠e⁠n⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="README_sl.md">S⁠l⁠o⁠v⁠e⁠n⁠š⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="README_sq.md">S⁠h⁠q⁠i⁠p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr.md">С⁠р⁠п⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr-Latn.md">S⁠r⁠p⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="README_sv.md">S⁠v⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ta.md">த⁠மி⁠ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_te.md">తె⁠లు⁠గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="README_th.md">ภ⁠า⁠ษ⁠า⁠ไ⁠ท⁠ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="README_tr.md">T⁠ü⁠r⁠k⁠ç⁠e</a>&nbsp;|</sub> <sub>🇵🇰&nbsp;<a href="README_ur.md">اُ⁠ر⁠دُ⁠و</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="README_vi.md">T⁠i⁠ế⁠n⁠g⁠&nbsp;⁠V⁠i⁠ệ⁠t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="README_zh-Hans.md">简⁠体⁠中⁠文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="README_zh-Hant.md">繁⁠體⁠中⁠文</a></sub>
 
+<!-- markdown-translator:f30c10bb91a0f6587cd22ee0c70aa5e504b1807979a245dd1c91d57aadca6019 -->
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a> <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a> <a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
-> Интеграцията съчетава осветително тяло без цифрово управление и интелигентен щепсел в един обект Home Assistant. Той определя състоянието и текущия режим на яркост въз основа на консумацията на енергия, показва ги в карта и ви позволява да включите лампа, изключена от собствен бутон, като изключите за кратко и подадете отново захранването през контакта.
+> Интеграцията съчетава нецифрова контролна лампа и интелигентен щепсел в едно цяло Home Assistant. Той определя състоянието и текущия режим на яркост въз основа на консумацията на енергия, показва ги в карта и ви позволява да включите лампа, изключена от собствен бутон, като изключите за кратко и подадете отново захранването през контакта.
 
-# 🔌 Многостепенна светлина с интелигентен щепсел
+# 🔌 Smart Plug Multi-Level Light
 
 ![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Характеристики и функции:**
 
-* Създава собствен обект Home Assistant `light`съвместим с автоматизации, скриптове и стандартен HA интерфейс;
+* Създава обикновен обект Home Assistant `light`съвместим с автоматизации, скриптове и стандартен HA интерфейс;
 * Правилно включва лампата, независимо от това как е била изключена: ако захранването е било изключено през интелигентния контакт, той просто я включва; ако лампата е била изключена със собствен бутон, докато контактът е бил включен, тя извършва цикъл на изключване и повторно включване;
-* Автоматично определя текущия режим на работа на лампата на база реално измерена стабилна мощност;
+* Автоматично определя текущия режим на работа на лампата на база реално измерената стабилна мощност;
 * Има прост конфигуратор, в който потребителят последователно назовава режимите, поддържани от неговата лампа, и системата се учи, като определя стабилната мощност във всеки режим;
 * По време на първата настройка мощността се отчита в реално време: потребителят трябва само да превключи светлината на следващия режим и да натисне бутона за обучение;
 * Успешно филтрира нестабилните показания на мощността, предотвратявайки хаотичните промени на индикатора на картата, когато мощността "скача" в рамките на един режим (и дори съвпада със следващия режим);
@@ -24,7 +25,7 @@
 * Позволява ви да изберете само сензора за мощност, свързан с избрания интелигентен щепсел;
 * Позволява да регулирате забавянето на цикъла на изключване за правилна работа с различни модели лампи и контакти;
 * Позволява ви да зададете прага на мощността, под който лампата се счита за изключена;
-* Интерфейсът е локализиран за 64 локализации на Home Assistant.
+* Интерфейсът е локализиран за 64 езика Home Assistant.
 
 ## 🗜 Приготвяне на желязо
 
@@ -41,7 +42,7 @@
 
 Това описание е приложимо само за собствениците на гнезда, свързани чрез Z2M. Други потребители трябва да коригират честотата на опресняване в своята конфигурация:
 
-1. Отворете **Домашен асистент → Zigbee2MQTT**. Ако Zigbee2MQTT не е в страничното меню, отворете **Настройки → Приложения → Zigbee2MQTT → Отворен уеб интерфейс**.
+1. Отворете **Home Assistant → Zigbee2MQTT**. Ако Zigbee2MQTT липсва в страничното меню, отворено **Настройки → Приложения → Zigbee2MQTT → Отворете уеб интерфейса**.
 2. Отидете в раздел **Устройства**.
 3. Изберете необходимия изход.
 4. Отворете раздела **Настройки (специфични)**.
@@ -53,13 +54,13 @@
 
 ### 🛍 Инсталиране чрез HACS
 
-ℹ️ [Какво е HACS и как да го инсталирате?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_bg.md)
+ℹ️ [какво стана HACS и как да го инсталирам?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_bg.md)
 
-🚀 [Опитайте да добавите хранилище на връзката](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Ако вашата HA поддържа този метод, щракнете **Добавете** в прозореца, който се отваря, и след това бутона **Изтегляне** в долния десен ъгъл. Ако инсталацията е завършена успешно, можете да пропуснете следващите стъпки. Преминете направо към раздела [бърз старт](#getting-started).
+🚀 [Опитайте да добавите хранилище на връзката](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Ако вашата HA поддържа този метод, щракнете **Добавете** в прозореца, който се отваря, и след това бутона **Изтегляне** в долния десен ъгъл. Ако инсталацията е завършена успешно, можете да пропуснете следващите стъпки. Преминете направо към раздела [бърз старт](#getting-started).
 
 #### 1. Добавяне на хранилище
 
-Докато хранилището не е включено в стандартната HACS директория, добавете го като персонализирано:
+Хранилището все още не е включено в стандартната директория HACS, добавете го като потребителски:
 
 1. Отворете **HACS → Интеграции**.
 2. Отворете менюто в горния десен ъгъл и изберете **Персонализирани хранилища**.
@@ -75,13 +76,13 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 
 #### 2. Инсталиране на интеграция
 
-1. Найдите в HACS: `Smart Plug Multi-Level Light`.
+1. Намерете в HACS: Smart Plug Multi-Level Light.
 2. Отворете интеграцията и щракнете **Изтегляне**.
-3. След инсталирането рестартирайте напълно Home Assistant.
+3. След инсталацията рестартирайте напълно Home Assistant.
 
 <a id="manual-installation"></a>
 
-### 🧑‍💻 Установка без HACS
+### 🧑‍💻 Монтаж без HACS
 
 1. На странице репозитория нажмите **Код → Изтегляне на ZIP**.
 2. Разопаковайте архива.
@@ -91,7 +92,7 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 custom_components/smart_plug_multilevel_light
 ```
 
-към конфигурационната директория на Home Assistant:
+в каталог конфигурации Home Assistant:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
@@ -107,7 +108,7 @@ custom_components/smart_plug_multilevel_light
 
 > Не копирайте цялата папка на външното хранилище в `custom_components`. Вътре `custom_components` папката трябва да се намира директно `smart_plug_multilevel_light`.
 
-Картата е включена в интеграцията, така че не е необходимо HACS да я инсталира. След ръчно копиране на файловете, рестартиране на Home Assistant и създаване на първия помощен обект, интеграцията публикува файла на JavaScript картата и автоматично го регистрира с ресурсите на панела в стандартен режим `storage`. В режим на ресурс YAML картата трябва да се регистрира ръчно, както е описано по-долу.
+Картата е част от интеграцията, така че HACS не е необходимо за монтаж. След ръчно копиране на файлове, рестартиране Home Assistant и създаване на първия спомагателен обект, интеграцията публикува файла на картата на JavaScript и автоматично го регистрира с ресурсите на панела в стандартен режим `storage`. В режим на ресурс YAML картата трябва да се регистрира ръчно, както е описано по-долу.
 
 <a id="getting-started"></a>
 
@@ -117,9 +118,9 @@ custom_components/smart_plug_multilevel_light
 
 1. Отворете **[Настройки → Устройства и услуги → Аксесоари](https://my.home-assistant.io/redirect/helpers/)** и натиснете **Създаване на помощен обект**.
 
-2. Изберете **Интелигентна щепселна многостепенна светлина**.
+2. Изберете **Smart Plug Multi-Level Light**.
 
-3. Изберете интелигентния щепсел, към който е свързана лампата. Списъкът показва само контакти, където Home Assistant вижда сензор за мощност в същото устройство.
+3. Изберете интелигентния щепсел, към който е свързана лампата. Списъкът показва само гнезда, които имат Home Assistant вижда сензора за мощност в същото устройство.
 
 4. В следващата стъпка задайте параметрите на лампата:
    * **Име на светлината (Light name)** — например името на създавания обект `FloorLamp`;
@@ -136,7 +137,7 @@ custom_components/smart_plug_multilevel_light
 ### 🧩 Lovelace картичка
 
 1. Отворете желания панел, включете режима за редактиране и щракнете **Добавяне на карта**.
-2. Изберете **Интелигентна щепселна многостепенна светлина**, посочете създадения обект `light` и запазете картата.
+2. Изберете **Smart Plug Multi-Level Light**, посочете създадения обект `light` и запазете картата.
 
 Ако картата не е сред наличните, може да използвате [Ресурс на Lovelace YAML режим](#yaml-lovelace-mode).
 
@@ -159,7 +160,7 @@ custom_components/smart_plug_multilevel_light
 
 #### Закръгляване на яркостта до 5%
 
-Отворете **[Настройки → Устройства и услуги → Аксесоари](https://my.home-assistant.io/redirect/helpers/)**, намерете помощния обект, създаден по-рано **Интелигентна щепселна многостепенна светлина** и отворете настройките му. Включване или изключване **Round brightness to 5% (may look nicer)**.
+Отворете **[Настройки → Устройства и услуги → Аксесоари](https://my.home-assistant.io/redirect/helpers/)**, намерете създадения по-рано помощен обект **Smart Plug Multi-Level Light** и отворете настройките му. Включване или изключване **Round brightness to 5% (may look nicer)**.
 
 Когато настройката е активирана, изчисленият процент се закръгля до най-близките 5%, например: 33% → 35%, 67% → 65%.
 
@@ -206,7 +207,7 @@ lovelace:
   resource_mode: yaml
 ```
 
-Home Assistant не позволява интеграцията да променя автоматично списъка с ресурси. В този случай добавете ресурса ръчно:
+Home Assistant не позволява на интеграцията автоматично да променя списъка с ресурси. В този случай добавете ресурса ръчно:
 
 ```yaml
 lovelace:
@@ -216,7 +217,7 @@ lovelace:
       type: module
 ```
 
-След промяната рестартирайте ресурсите на Lovelace или рестартирайте Home Assistant.
+След промяната презаредете ресурсите на Lovelace или рестартирайте Home Assistant.
 
 <a id="troubleshooting"></a>
 
@@ -226,7 +227,7 @@ lovelace:
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Вероятна причина:** неправилен път или Home Assistant не е рестартиран.
+**Вероятна причина:** грешен начин или Home Assistant не беше рестартиран.
 
 Проверете за наличност на файла:
 
@@ -234,7 +235,7 @@ lovelace:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-След това направете пълен рестарт на Home Assistant и проверете регистъра за грешки `smart_plug_multilevel_light`.
+След това направете твърд рестарт Home Assistant и проверете дневника за грешки `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -259,7 +260,7 @@ lovelace:
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-След като изберете контакт, интеграцията проверява отново за наличието на сензор за мощност. Грешката възниква, ако сензорът е премахнат, деактивиран, преместен на друго устройство или е престанал да има `device_class: power`.
+След като изберете контакт, интеграцията проверява отново за наличие на сензор за мощност. Грешката възниква, ако сензорът е премахнат, деактивиран, преместен на друго устройство или вече не е такъв `device_class: power`.
 
 <hr />
 </details>
@@ -310,7 +311,7 @@ lovelace:
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Автоматичната регистрация се извършва само след зареждане на поне един конфигуриран помощен обект и само в ресурсен режим `storage`. Методът на инсталиране на интеграцията - чрез HACS или ръчно - не влияе на това.
+Автоматичната регистрация се извършва само след зареждане на поне един конфигуриран помощен обект и само в ресурсен режим `storage`. Методът за инсталиране на интеграция е чрез HACS или ръчно - това няма ефект.
 
 Проверете **[Настройки → Панели → ⋮ → Ресурси](https://my.home-assistant.io/redirect/lovelace_resources/)**. URL адресът трябва да е там:
 
@@ -337,7 +338,7 @@ lovelace:
 
 ## 🗑 Премахване
 
-1. Изтрийте всички създадени помощни обекти **Интелигентна щепселна многостепенна светлина** чрез **[Настройки → Устройства и услуги → Аксесоари](https://my.home-assistant.io/redirect/helpers/)**.
+1. Изтрийте всички създадени помощни обекти **Smart Plug Multi-Level Light** чрез **[Настройки → Устройства и услуги → Аксесоари](https://my.home-assistant.io/redirect/helpers/)**.
 2. Премахнете интеграцията чрез HACS или ръчно изтрийте папката:
 
 ```text
@@ -355,9 +356,9 @@ lovelace:
 
 ## 📄 Лицензия
 
-Проектът се разпространява под лиценз [СЪС](../LICENSE).
+Проектът се разпространява под лиценз [MIT](../LICENSE).
 
 <br />
 
-> \[!СЪВЕТ]
-> **Хареса ли ви решението?** Вижте 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_bg.md">другите ми продукти за домашен асистент</a>
+> [!TIP]
+> **Хареса ли ви решението?** Вижте 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_bg.md">другите ми продукти за Home Assistant</a>
