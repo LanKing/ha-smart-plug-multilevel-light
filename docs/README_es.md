@@ -170,15 +170,15 @@ El redondeo sólo afecta al porcentaje mostrado y la intensidad visual de la tar
 
 Opciones disponibles:
 
-| Parámetro | Tipo | Predeterminado | Destino |
+| Parámetro | Tipo | Valor predeterminado | Descripción |
 |---|---|---:|---|
-| `entity` | cadena | obligatorio | entidad creada por integración |
-| `name` | cadena | nombre de la entidad | anula el nombre en la tarjeta |
-| `icon` | cadena | icono de entidad | redefine el icono |
+| `entity` | cadena | obligatorio | entidad creada por la integración |
+| `name` | cadena | nombre de la entidad | sustituye el nombre mostrado en la tarjeta |
+| `icon` | cadena | icono de la entidad | sustituye el icono |
 | `show_mode` | booleano | `true` | muestra el nombre del modo |
-| `show_percentage` | booleano | `true` | muestra interés condicional |
-| `icon_tap_action` | acción | `more-info` | acción adicional al hacer clic en el icono |
-| `always_show_icon_background` | booleano | `false` | siempre muestra el fondo redondo del icono, incluso si es para `icon_tap_action` "No" seleccionado |
+| `show_percentage` | booleano | `true` | muestra el porcentaje sintético |
+| `icon_tap_action` | acción | `more-info` | acción adicional al tocar el icono |
+| `always_show_icon_background` | booleano | `false` | muestra siempre el fondo circular del icono, incluso si se selecciona `None` para `icon_tap_action` |
 
 Ejemplo completo:
 
@@ -224,7 +224,7 @@ Después del cambio, recarga los recursos de Lovelace o reinicia Home Assistant.
 ## 🧯 Solución de problemas
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓La integración no aparece en la lista de ayudantes</b></summary>
 <br />
 
 **Causa probable:** camino equivocado o Home Assistant no se reinició.
@@ -241,7 +241,7 @@ Luego haz un reinicio completo Home Assistant y verifique el registro en busca d
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓La lista de enchufes está vacía</b></summary>
 <br />
 
 La integración solo muestra objetos `switch`asociado con dispositivos que también proporcionan un sensor incluido con `device_class: power`.
@@ -257,7 +257,7 @@ Registrarse **[Configuración → Dispositivos y servicios → Objetos](https://
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓La creación se detiene con un mensaje de que falta el sensor de potencia</b></summary>
 <br />
 
 Después de seleccionar una toma de corriente, la integración vuelve a comprobar la presencia de un sensor de potencia. El error ocurre si el sensor se ha quitado, desactivado, movido a otro dispositivo o ya no tiene `device_class: power`.
@@ -266,7 +266,7 @@ Después de seleccionar una toma de corriente, la integración vuelve a comproba
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓La lámpara aparece como «Apagada» aunque el enchufe está encendido</b></summary>
 <br />
 
 Verifique el valor del sensor de potencia. La lámpara virtual se considera apagada cuando `0 W`; cuando es positivo, debe definirse como `on`.
@@ -275,7 +275,7 @@ Verifique el valor del sensor de potencia. La lámpara virtual se considera apag
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓La lámpara aparece como «Encendida» aunque está físicamente apagada</b></summary>
 <br />
 
 Compruebe que el sensor de potencia seleccionado realmente muestre `0 W`, cuando la lámpara se apaga mediante su propio botón.
@@ -284,7 +284,7 @@ Compruebe que el sensor de potencia seleccionado realmente muestre `0 W`, cuando
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Se detecta un modo incorrecto</b></summary>
 <br />
 
 Controlar **🐞 Last measures** en configuraciones y atributos `power_history`, `power_history_modes`, `power_sample_interval_seconds` Y `selected_power_mode`. `power_history` muestra los últimos valores de potencia registrados, `power_history_modes` — modo para cada uno de ellos según los umbrales configurados, `power_sample_interval_seconds` es el intervalo de fijación periódica, y `selected_power_mode` — modo confirmado actual.
@@ -293,7 +293,7 @@ Controlar **🐞 Last measures** en configuraciones y atributos `power_history`,
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Los cambios de modo no se muestran de inmediato</b></summary>
 <br />
 
 Este es el comportamiento esperado. Para evitar que las fluctuaciones de energía a corto plazo causen conmutaciones espurias, la integración cambia de modo solo después de que varias lecturas consecutivas correspondan al mismo modo nuevo.
@@ -308,7 +308,7 @@ Reducir el número de lecturas acelera la visualización del nuevo modo, pero ha
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓La tarjeta no aparece en la lista</b></summary>
 <br />
 
 El registro automático ocurre solo después de cargar al menos un objeto auxiliar configurado y solo en modo de recursos `storage`. El método de instalación de integración es a través de HACS o manualmente, esto no tiene ningún efecto.
@@ -325,7 +325,7 @@ En modo YAML [agregar recurso manualmente](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Después de actualizar se sigue mostrando la tarjeta anterior</b></summary>
 <br />
 
 1. reiniciar completamente Home Assistant.
@@ -356,9 +356,9 @@ En modo YAML [agregar recurso manualmente](#yaml-lovelace-mode).
 
 ## 📄 Licencia
 
-El proyecto se distribuye bajo licencia. [MIT](../LICENSE).
+Este proyecto se distribuye bajo la [licencia MIT](../LICENSE).
 
 <br />
 
 > [!TIP]
-> **¿Te gustó la solución?** Mira 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_es.md">mis otros productos para Home Assistant</a>
+> **¿Te gusta esta solución?** Descubre 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_es.md">mis otros productos para Home Assistant</a>
