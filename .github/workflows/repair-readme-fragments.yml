@@ -200,7 +200,7 @@ jobs:
                   f'<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_{code}.md">'
                   f"{footer[4]}</a>\n"
               )
-              footer_start = text.rfind("\\n## ")
+              footer_start = text.rfind("\n## ")
               if footer_start < 0:
                   raise RuntimeError(f"Final section not found in {path}")
               text = text[:footer_start + 1] + footer_block
