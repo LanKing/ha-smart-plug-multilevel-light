@@ -1,30 +1,31 @@
 <sub>🇺🇸&nbsp;<a href="../README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a>&nbsp;|</sub> <sub>🇺🇦&nbsp;<a href="README_uk.md">У⁠к⁠р⁠а⁠ї⁠н⁠с⁠ь⁠к⁠а</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="README_ru.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="README_af.md">A⁠f⁠r⁠i⁠k⁠a⁠a⁠n⁠s</a>&nbsp;|</sub> <sub>🇸🇦&nbsp;<a href="README_ar.md">ا⁠ل⁠ع⁠ر⁠ب⁠ي⁠ة</a>&nbsp;|</sub> <sub>🇧🇬&nbsp;<a href="README_bg.md">Б⁠ъ⁠л⁠г⁠а⁠р⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="README_bn.md">বাং⁠লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="README_bs.md">B⁠o⁠s⁠a⁠n⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="README_ca.md">C⁠a⁠t⁠a⁠l⁠à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="README_cs.md">Č⁠e⁠š⁠t⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>cy&nbsp;<a href="README_cy.md">C⁠y⁠m⁠r⁠a⁠e⁠g</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="README_da.md">D⁠a⁠n⁠s⁠k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="README_de.md">D⁠e⁠u⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>eo&nbsp;<a href="README_eo.md">E⁠s⁠p⁠e⁠r⁠a⁠n⁠t⁠o</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="README_es.md">E⁠s⁠p⁠a⁠ñ⁠o⁠l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="README_et.md">E⁠e⁠s⁠t⁠i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="README_eu.md">E⁠u⁠s⁠k⁠a⁠r⁠a</a>&nbsp;|</sub> <sub>🇮🇷&nbsp;<a href="README_fa.md">ف⁠ا⁠ر⁠س⁠ی</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="README_fi.md">S⁠u⁠o⁠m⁠i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="README_fy.md">F⁠r⁠y⁠s⁠k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="README_fr.md">F⁠r⁠a⁠n⁠ç⁠a⁠i⁠s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="README_ga.md">G⁠a⁠e⁠i⁠l⁠g⁠e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="README_gl.md">G⁠a⁠l⁠e⁠g⁠o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="README_gsw.md">S⁠c⁠h⁠w⁠i⁠i⁠z⁠e⁠r⁠d⁠ü⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="README_he.md">ע⁠ב⁠ר⁠י⁠ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_hi.md">हि⁠न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="README_hr.md">H⁠r⁠v⁠a⁠t⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="README_hu.md">M⁠a⁠g⁠y⁠a⁠r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="README_hy.md">Հ⁠ա⁠յ⁠ե⁠ր⁠ե⁠ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="README_id.md">I⁠n⁠d⁠o⁠n⁠e⁠s⁠i⁠a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="README_is.md">Í⁠s⁠l⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="README_it.md">I⁠t⁠a⁠l⁠i⁠a⁠n⁠o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="README_ja.md">日⁠本⁠語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="README_ka.md">K⁠a⁠r⁠t⁠u⁠l⁠i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="README_ko.md">한⁠국⁠어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="README_lb.md">L⁠ë⁠t⁠z⁠e⁠b⁠u⁠e⁠r⁠g⁠e⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="README_lt.md">L⁠i⁠e⁠t⁠u⁠v⁠i⁠ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="README_lv.md">L⁠a⁠t⁠v⁠i⁠e⁠š⁠u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="README_mk.md">М⁠а⁠к⁠е⁠д⁠о⁠н⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ml.md">മ⁠ല⁠യാ⁠ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nb.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠B⁠o⁠k⁠m⁠å⁠l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="README_nl.md">N⁠e⁠d⁠e⁠r⁠l⁠a⁠n⁠d⁠s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nn.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠N⁠y⁠n⁠o⁠r⁠s⁠k</a>&nbsp;|</sub> <sub>🇵🇱&nbsp;<a href="README_pl.md">P⁠o⁠l⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="README_pt.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="README_pt-BR.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s⁠&nbsp;⁠(⁠B⁠R⁠)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="README_ro.md">R⁠o⁠m⁠â⁠n⁠ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="README_sk.md">S⁠l⁠o⁠v⁠e⁠n⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="README_sl.md">S⁠l⁠o⁠v⁠e⁠n⁠š⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="README_sq.md">S⁠h⁠q⁠i⁠p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr.md">С⁠р⁠п⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr-Latn.md">S⁠r⁠p⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="README_sv.md">S⁠v⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ta.md">த⁠மி⁠ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_te.md">తె⁠లు⁠గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="README_th.md">ภ⁠า⁠ษ⁠า⁠ไ⁠ท⁠ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="README_tr.md">T⁠ü⁠r⁠k⁠ç⁠e</a>&nbsp;|</sub> <sub>🇵🇰&nbsp;<a href="README_ur.md">اُ⁠ر⁠دُ⁠و</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="README_vi.md">T⁠i⁠ế⁠n⁠g⁠&nbsp;⁠V⁠i⁠ệ⁠t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="README_zh-Hans.md">简⁠体⁠中⁠文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="README_zh-Hant.md">繁⁠體⁠中⁠文</a></sub>
 
+<!-- markdown-translator:f30c10bb91a0f6587cd22ee0c70aa5e504b1807979a245dd1c91d57aadca6019 -->
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a> <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a> <a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
-> Η ενσωμάτωση συνδυάζει ένα μη ψηφιακά ελεγχόμενο φωτιστικό και ένα έξυπνο βύσμα σε μία οντότητα Home Assistant. Καθορίζει την κατάσταση και την τρέχουσα λειτουργία φωτεινότητας με βάση την κατανάλωση ενέργειας, τις εμφανίζει σε μια κάρτα και σας επιτρέπει να ανάψετε μια λάμπα που σβήνει με το δικό της κουμπί, σβήνοντας για λίγο και επαναφέροντας την τροφοδοσία μέσω της πρίζας.
+> Η ενσωμάτωση συνδυάζει μια μη ψηφιακή λυχνία ελέγχου και ένα έξυπνο βύσμα σε μια οντότητα Home Assistant. Καθορίζει την κατάσταση και την τρέχουσα λειτουργία φωτεινότητας με βάση την κατανάλωση ενέργειας, τις εμφανίζει σε μια κάρτα και σας επιτρέπει να ανάψετε μια λάμπα που σβήνει με το δικό της κουμπί, σβήνοντας για λίγο και επαναφέροντας την τροφοδοσία μέσω της πρίζας.
 
-# 🔌 Έξυπνο βύσμα πολλαπλών επιπέδων φωτός
+# 🔌 Smart Plug Multi-Level Light
 
 ![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Χαρακτηριστικά και χαρακτηριστικά:**
 
-* Δημιουργεί μια εγγενή οντότητα Home Assistant `light`συμβατό με αυτοματισμούς, σενάρια και τυπική διεπαφή HA.
+* Δημιουργεί μια κανονική οντότητα Home Assistant `light`συμβατό με αυτοματισμούς, σενάρια και τυπική διεπαφή HA.
 * Ανάβει σωστά τη λάμπα ανεξάρτητα από το πώς ήταν απενεργοποιημένη: εάν η τροφοδοσία ήταν απενεργοποιημένη μέσω της έξυπνης πρίζας, απλά την ανάβει. Εάν η λάμπα σβήνει με το δικό της κουμπί ενώ η πρίζα ήταν ανοιχτή, εκτελεί έναν κύκλο απενεργοποίησης και ανάβει ξανά.
 * Προσδιορίζει αυτόματα τον τρέχοντα τρόπο λειτουργίας της λάμπας με βάση την πραγματικά μετρούμενη σταθερή ισχύ.
 * Διαθέτει έναν απλό διαμορφωτή στον οποίο ο χρήστης ονομάζει διαδοχικά τις λειτουργίες που υποστηρίζονται από τη λάμπα του και το σύστημα μαθαίνει προσδιορίζοντας τη σταθερή ισχύ σε κάθε λειτουργία.
 * Κατά την πρώτη ρύθμιση, η ισχύς διαβάζεται σε πραγματικό χρόνο: ο χρήστης πρέπει μόνο να αλλάξει το φως στην επόμενη λειτουργία και να πατήσει το κουμπί εκμάθησης.
 * Φιλτράρει επιτυχώς τις ασταθείς ενδείξεις ισχύος, αποτρέποντας χαοτικές αλλαγές της ένδειξης στην κάρτα όταν η ισχύς "πηδά" σε μία λειτουργία (και ακόμη και συμπίπτει με την επόμενη λειτουργία).
 * Υποστηρίζει έναν αυθαίρετο αριθμό τρόπων λειτουργίας.
-* Η κάρτα είναι χτισμένη πάνω από την τυπική κάρτα πλακιδίων Home Assistant, διατηρώντας τη γεωμετρία, το φόντο, τα εφέ αιώρησης, τα μεγέθη, την τυπογραφία και τις τυπικές ενέργειες.
+* Η κάρτα είναι χτισμένη πάνω από την τυπική Home Assistant Κάρτα πλακιδίων που διατηρεί τη γεωμετρία, το φόντο, τα εφέ αιώρησης, τα μεγέθη, την τυπογραφία και τις τυπικές ενέργειες.
 * Στην κάρτα, η τρέχουσα φωτεινότητα κωδικοποιείται οπτικά από την ένταση του χρώματος.
 * Υπολογίζει τη φωτεινότητα γραμμικά σε σχέση με τη μέγιστη ισχύ. μπορεί να ενεργοποιηθεί η στρογγυλοποίηση της υπολογιζόμενης φωτεινότητας στο 5% για πιο ακριβή εμφάνιση των ποσοστών.
 * Σας επιτρέπει να προσαρμόσετε ευέλικτα τις εμφανιζόμενες παραμέτρους και την εμφάνιση της κάρτας.
 * Σας επιτρέπει να επιλέξετε μόνο τον αισθητήρα ισχύος που σχετίζεται με το επιλεγμένο έξυπνο βύσμα.
 * Σας επιτρέπει να προσαρμόσετε την καθυστέρηση του κύκλου απενεργοποίησης για σωστή λειτουργία με διαφορετικά μοντέλα λαμπτήρων και πριζών.
 * Σας επιτρέπει να ορίσετε το όριο ισχύος κάτω από το οποίο η λάμπα θεωρείται σβηστή.
-* Η διεπαφή έχει προσαρμοστεί για 64 τοπικές ρυθμίσεις του Home Assistant.
+* Η διεπαφή προσαρμοσμένη για 64 τοπικές ρυθμίσεις Home Assistant.
 
 ## 🗜 Προετοιμασία σιδήρου
 
@@ -41,7 +42,7 @@
 
 Αυτή η περιγραφή είναι σχετική μόνο για τους κατόχους πριζών που συνδέονται μέσω Z2M. Οι άλλοι χρήστες θα πρέπει να προσαρμόσουν τον ρυθμό ανανέωσης στη διαμόρφωσή τους:
 
-1. Ανοιχτό **Home Assistant → Zigbee2MQTT**. Εάν το Zigbee2MQTT δεν βρίσκεται στο πλαϊνό μενού, ανοίξτε **Ρυθμίσεις → Εφαρμογές → Zigbee2MQTT → Άνοιγμα διεπαφής ιστού**.
+1. Ανοιχτό **Home Assistant → Zigbee2MQTT**. Αν Zigbee2MQTT λείπει στο πλαϊνό μενού, ανοιχτό **Ρυθμίσεις → Εφαρμογές → Zigbee2MQTT → Άνοιγμα διεπαφής ιστού**.
 2. Μεταβείτε στην ενότητα **Συσκευές**.
 3. Επιλέξτε την επιθυμητή πρίζα.
 4. Ανοίξτε την καρτέλα **Ρυθμίσεις (συγκεκριμένες)**.
@@ -53,13 +54,13 @@
 
 ### 🛍 Εγκατάσταση μέσω HACS
 
-ℹ️ [Τι είναι το HACS και πώς να το εγκαταστήσετε;](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_el.md)
+ℹ️ [Τι έγινε HACS και πώς να το εγκαταστήσω;](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_el.md)
 
-🚀 [Δοκιμάστε να προσθέσετε ένα αποθετήριο στον σύνδεσμο](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Εάν το HA σας υποστηρίζει αυτήν τη μέθοδο, κάντε κλικ **Προσθέτω** στο παράθυρο που ανοίγει και μετά το κουμπί **Λήψη** στην κάτω δεξιά γωνία. Εάν η εγκατάσταση ολοκληρώθηκε με επιτυχία, μπορείτε να παραλείψετε περαιτέρω βήματα. Μετάβαση κατευθείαν στην ενότητα [γρήγορη εκκίνηση](#getting-started).
+🚀 [Δοκιμάστε να προσθέσετε ένα αποθετήριο στον σύνδεσμο](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Εάν το HA σας υποστηρίζει αυτήν τη μέθοδο, κάντε κλικ **Προσθέτω** στο παράθυρο που ανοίγει και μετά το κουμπί **Λήψη** στην κάτω δεξιά γωνία. Εάν η εγκατάσταση ολοκληρώθηκε με επιτυχία, μπορείτε να παραλείψετε περαιτέρω βήματα. Μετάβαση κατευθείαν στην ενότητα [γρήγορη εκκίνηση](#getting-started).
 
 #### 1. Προσθήκη αποθετηρίου
 
-Ενώ το αποθετήριο δεν περιλαμβάνεται στον τυπικό κατάλογο HACS, προσθέστε το ως προσαρμοσμένο:
+Το αποθετήριο δεν περιλαμβάνεται ακόμη στον τυπικό κατάλογο HACS, προσθέστε το ως προσαρμοσμένο:
 
 1. Ανοιχτό **HACS → Ενσωματώσεις**.
 2. Ανοίξτε το μενού στην επάνω δεξιά γωνία και επιλέξτε **Προσαρμοσμένα αποθετήρια**.
@@ -75,9 +76,9 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 
 #### 2. Εγκατάσταση ολοκλήρωσης
 
-1. Αναζήτηση στο HACS: `Smart Plug Multi-Level Light`.
+1. Βρείτε μέσα HACS: Smart Plug Multi-Level Light.
 2. Ανοίξτε την ενσωμάτωση και κάντε κλικ **Λήψη**.
-3. Μετά την εγκατάσταση, επανεκκινήστε πλήρως το Home Assistant.
+3. Μετά την εγκατάσταση, επανεκκινήστε πλήρως Home Assistant.
 
 <a id="manual-installation"></a>
 
@@ -91,23 +92,23 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 custom_components/smart_plug_multilevel_light
 ```
 
-στον κατάλογο διαμόρφωσης του Home Assistant:
+στον κατάλογο διαμόρφωσης Home Assistant:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Τελική διαδρομή αρχείου `manifest.json` θα πρέπει να μοιάζει με αυτό:
+Τελική διαδρομή αρχείου `manifest.json` πρέπει να μοιάζει με αυτό:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-4. Επανεκκινήστε πλήρως το Home Assistant.
+4. Πλήρης επανεκκίνηση Home Assistant.
 
 > Μην αντιγράψετε ολόκληρο τον φάκελο του εξωτερικού αποθετηρίου `custom_components`. Μέσα `custom_components` ο φάκελος πρέπει να βρίσκεται απευθείας `smart_plug_multilevel_light`.
 
-Η κάρτα περιλαμβάνεται στην ενσωμάτωση, επομένως δεν απαιτείται η εγκατάσταση της HACS. Μετά τη μη αυτόματη αντιγραφή των αρχείων, την επανεκκίνηση του Home Assistant και τη δημιουργία του πρώτου βοηθητικού αντικειμένου, η ενοποίηση δημοσιεύει το αρχείο της κάρτας JavaScript και το καταχωρεί αυτόματα με πόρους πίνακα σε τυπική λειτουργία `storage`. Στη λειτουργία πόρων YAML, η κάρτα πρέπει να καταχωρηθεί χειροκίνητα, όπως περιγράφεται παρακάτω.
+Η κάρτα είναι μέρος της ολοκλήρωσης, έτσι HACS δεν απαιτείται για την εγκατάσταση. Μετά την μη αυτόματη αντιγραφή αρχείων, επανεκκίνηση Home Assistant και δημιουργώντας το πρώτο βοηθητικό αντικείμενο, η ενοποίηση δημοσιεύει το αρχείο της κάρτας JavaScript και το καταχωρεί αυτόματα στους πόρους του πίνακα σε τυπική λειτουργία `storage`. Στη λειτουργία πόρων YAML, η κάρτα πρέπει να καταχωρηθεί χειροκίνητα, όπως περιγράφεται παρακάτω.
 
 <a id="getting-started"></a>
 
@@ -117,26 +118,26 @@ custom_components/smart_plug_multilevel_light
 
 1. Ανοιχτό **[Ρυθμίσεις → Συσκευές και υπηρεσίες → Αξεσουάρ](https://my.home-assistant.io/redirect/helpers/)** και πατήστε **Δημιουργία αντικειμένου βοήθειας**.
 
-2. Επιλέγω **Έξυπνο βύσμα πολλαπλών επιπέδων φωτός**.
+2. Επιλέγω **Smart Plug Multi-Level Light**.
 
-3. Επιλέξτε το έξυπνο βύσμα στο οποίο είναι συνδεδεμένη η λάμπα. Η λίστα εμφανίζει μόνο τις πρίζες όπου το Home Assistant βλέπει έναν αισθητήρα ισχύος στην ίδια συσκευή.
+3. Επιλέξτε το έξυπνο βύσμα στο οποίο είναι συνδεδεμένη η λάμπα. Η λίστα εμφανίζει μόνο υποδοχές που έχουν Home Assistant βλέπει τον αισθητήρα ισχύος στην ίδια συσκευή.
 
 4. Στο επόμενο βήμα, ορίστε τις παραμέτρους της λάμπας:
    * **Όνομα φωτός (Light name)** — το όνομα της οντότητας που δημιουργείται, για παράδειγμα `FloorLamp`;
    * **Power sensor** - αισθητήρας ισχύος πρίζας
 
-5. Στην ενότητα **ZUI003Z** προσθέστε τουλάχιστον μία λειτουργία φωτεινότητας κάνοντας κλικ **Προσθέτω**.<br /> <img src="modes-edit.png" width="50%"/><br />
+5. Στην ενότητα **🔅 Λειτουργίες φωτεινότητας (🔅 Brightness modes)** προσθέστε τουλάχιστον μία λειτουργία φωτεινότητας κάνοντας κλικ **Προσθέτω**.<br /> <img src="modes-edit.png" width="50%"/><br />
    Αλλάξτε τη λάμπα με το φυσικό της κουμπί, πληκτρολογήστε το όνομα της λειτουργίας και ξεκινήστε **Test stable power**. Αφού λάβετε μια σταθερή τιμή, πατήστε **Εφαρμόζω**.
 
 6. Αφού προσθέσετε την πρώτη λειτουργία, προσθέστε τις υπόλοιπες λειτουργίες επαναλαμβάνοντας αυτά τα βήματα. Θα πρέπει να καταλήξετε με κάτι σαν:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Αποθηκεύστε το αντικείμενο βοήθειας. Το Home Assistant θα δημιουργήσει μια νέα οντότητα `light`, Για παράδειγμα `light.FloorLamp`.
+7. Αποθηκεύστε το αντικείμενο βοήθειας. Home Assistant θα δημιουργήσει μια νέα οντότητα `light`, Για παράδειγμα `light.FloorLamp`.
 
 ### 🧩 Κάρτα Lovelace
 
 1. Ανοίξτε τον πίνακα που θέλετε, ενεργοποιήστε τη λειτουργία επεξεργασίας και κάντε κλικ **Προσθέστε μια κάρτα**.
-2. Επιλέγω **Έξυπνο βύσμα πολλαπλών επιπέδων φωτός**, καθορίστε την οντότητα που δημιουργήθηκε `light` και αποθηκεύστε την κάρτα.
+2. Επιλέγω **Smart Plug Multi-Level Light**, καθορίστε την οντότητα που δημιουργήθηκε `light` και αποθηκεύστε την κάρτα.
 
 Εάν η κάρτα δεν είναι μεταξύ των διαθέσιμων, μπορεί να χρησιμοποιείτε [Λειτουργία YAML πόρων Lovelace](#yaml-lovelace-mode).
 
@@ -159,7 +160,7 @@ custom_components/smart_plug_multilevel_light
 
 #### Στρογγυλοποίηση φωτεινότητας έως 5%
 
-Ανοιχτό **[Ρυθμίσεις → Συσκευές και υπηρεσίες → Αξεσουάρ](https://my.home-assistant.io/redirect/helpers/)**, βρείτε το αντικείμενο βοήθειας που δημιουργήθηκε νωρίτερα **Έξυπνο βύσμα πολλαπλών επιπέδων φωτός** και ανοίξτε τις ρυθμίσεις του. Ενεργοποιήστε ή απενεργοποιήστε **Round brightness to 5% (may look nicer)**.
+Ανοιχτό **[Ρυθμίσεις → Συσκευές και υπηρεσίες → Αξεσουάρ](https://my.home-assistant.io/redirect/helpers/)**, βρείτε το αντικείμενο βοήθειας που δημιουργήθηκε νωρίτερα **Smart Plug Multi-Level Light** και ανοίξτε τις ρυθμίσεις του. Ενεργοποιήστε ή απενεργοποιήστε **Round brightness to 5% (may look nicer)**.
 
 Όταν η ρύθμιση είναι ενεργοποιημένη, το υπολογιζόμενο ποσοστό στρογγυλοποιείται στο πλησιέστερο 5%, για παράδειγμα: 33% → 35%, 67% → 65%.
 
@@ -206,7 +207,7 @@ lovelace:
   resource_mode: yaml
 ```
 
-Το Home Assistant δεν επιτρέπει στην ενσωμάτωση να αλλάζει αυτόματα τη λίστα των πόρων. Σε αυτήν την περίπτωση, προσθέστε τον πόρο μη αυτόματα:
+Home Assistant δεν επιτρέπει στην ενοποίηση να αλλάζει αυτόματα τη λίστα των πόρων. Σε αυτήν την περίπτωση, προσθέστε τον πόρο μη αυτόματα:
 
 ```yaml
 lovelace:
@@ -216,7 +217,7 @@ lovelace:
       type: module
 ```
 
-Μετά την αλλαγή, επανεκκινήστε τους πόρους Lovelace ή επανεκκινήστε το Home Assistant.
+Μετά την αλλαγή, φορτώστε ξανά τους πόρους Lovelace ή κάντε επανεκκίνηση Home Assistant.
 
 <a id="troubleshooting"></a>
 
@@ -226,7 +227,7 @@ lovelace:
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Πιθανή αιτία:** λανθασμένη διαδρομή ή δεν έγινε επανεκκίνηση του Home Assistant.
+**Πιθανή αιτία:** λάθος τρόπο ή Home Assistant δεν επανεκκινήθηκε.
 
 Ελέγξτε για διαθεσιμότητα αρχείων:
 
@@ -234,7 +235,7 @@ lovelace:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Στη συνέχεια, κάντε μια πλήρη επανεκκίνηση του Home Assistant και ελέγξτε το αρχείο καταγραφής για σφάλματα `smart_plug_multilevel_light`.
+Στη συνέχεια, κάντε μια σκληρή επανεκκίνηση Home Assistant και ελέγξτε το αρχείο καταγραφής για σφάλματα `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -259,7 +260,7 @@ lovelace:
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Αφού επιλέξετε μια πρίζα, η ενσωμάτωση ελέγχει ξανά για την παρουσία αισθητήρα ισχύος. Το σφάλμα παρουσιάζεται εάν ο αισθητήρας έχει αφαιρεθεί, απενεργοποιηθεί, μετακινηθεί σε άλλη συσκευή ή έχει πάψει να έχει `device_class: power`.
+Αφού επιλέξετε μια πρίζα, η ενσωμάτωση ελέγχει ξανά για την παρουσία αισθητήρα ισχύος. Το σφάλμα παρουσιάζεται εάν ο αισθητήρας έχει αφαιρεθεί, απενεργοποιηθεί, μετακινηθεί σε άλλη συσκευή ή δεν έχει πλέον `device_class: power`.
 
 <hr />
 </details>
@@ -310,7 +311,7 @@ lovelace:
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Η αυτόματη εγγραφή πραγματοποιείται μόνο μετά τη φόρτωση τουλάχιστον ενός διαμορφωμένου βοηθητικού αντικειμένου και μόνο σε λειτουργία πόρων `storage`. Η μέθοδος εγκατάστασης της ενοποίησης - μέσω HACS ή χειροκίνητα - δεν επηρεάζει αυτό.
+Η αυτόματη εγγραφή πραγματοποιείται μόνο μετά τη φόρτωση τουλάχιστον ενός διαμορφωμένου βοηθητικού αντικειμένου και μόνο σε λειτουργία πόρων `storage`. Η μέθοδος εγκατάστασης ολοκλήρωσης είναι μέσω HACS ή χειροκίνητα - αυτό δεν έχει κανένα αποτέλεσμα.
 
 Ελεγχος **[Ρυθμίσεις → Πίνακες → ⋮ → Πόροι](https://my.home-assistant.io/redirect/lovelace_resources/)**. Η διεύθυνση URL πρέπει να είναι εκεί:
 
@@ -327,7 +328,7 @@ lovelace:
 <summary><b>❓После обновления отображается старая карточка</b></summary>
 <br />
 
-1. Επανεκκινήστε πλήρως το Home Assistant.
+1. Πλήρης επανεκκίνηση Home Assistant.
 2. Ανανεώστε τη σελίδα για να διαγράψετε την προσωρινή μνήμη του προγράμματος περιήγησής σας.
 3. Ελέγξτε τον αριθμό έκδοσης στη διεύθυνση URL του πόρου του πίνακα.
 4. Στην εφαρμογή για κινητά, κλείστε τελείως και ανοίξτε ξανά τη διεπαφή.
@@ -337,8 +338,8 @@ lovelace:
 
 ## 🗑 Αφαίρεση
 
-1. Διαγράψτε όλα τα δημιουργημένα βοηθητικά αντικείμενα **Έξυπνο βύσμα πολλαπλών επιπέδων φωτός** διά μέσου **[Ρυθμίσεις → Συσκευές και υπηρεσίες → Αξεσουάρ](https://my.home-assistant.io/redirect/helpers/)**.
-2. Καταργήστε την ενοποίηση μέσω HACS ή διαγράψτε μη αυτόματα το φάκελο:
+1. Διαγράψτε όλα τα δημιουργημένα βοηθητικά αντικείμενα **Smart Plug Multi-Level Light** διά μέσου **[Ρυθμίσεις → Συσκευές και υπηρεσίες → Αξεσουάρ](https://my.home-assistant.io/redirect/helpers/)**.
+2. Καταργήστε την ενσωμάτωση μέσω HACS ή διαγράψτε χειροκίνητα το φάκελο:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
@@ -350,14 +351,14 @@ lovelace:
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-4. Επανεκκινήστε πλήρως το Home Assistant.
+4. Πλήρης επανεκκίνηση Home Assistant.
 5. Εάν είναι απαραίτητο, ανανεώστε τη σελίδα για να διαγράψετε την κρυφή μνήμη της διεπαφής.
 
 ## 📄 Άδεια
 
-Το έργο διανέμεται κατόπιν άδειας [ΜΕ](../LICENSE).
+Το έργο διανέμεται κατόπιν άδειας [MIT](../LICENSE).
 
 <br />
 
-> \[!ΑΚΡΟ]
-> **Σας άρεσε η λύση;** Κοίτα 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_el.md">τα άλλα προϊόντα μου για το Home Assistant</a>
+> [!TIP]
+> **Σας άρεσε η λύση;** Κοίτα 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_el.md">τα άλλα προϊόντα μου για Home Assistant</a>
