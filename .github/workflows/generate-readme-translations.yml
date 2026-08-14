@@ -22,6 +22,7 @@ concurrency:
 
 jobs:
   generate:
+    if: false # Disabled: machine translation provider must not be used
     runs-on: ubuntu-latest
     timeout-minutes: 360
     steps:
@@ -84,7 +85,7 @@ jobs:
 
       - name: Generate translations from Russian README
         env:
-          OVERWRITE: true
+          OVERWRITE: ${{ inputs.overwrite }}
         run: |
           args=()
           if [ "$OVERWRITE" = "true" ]; then
