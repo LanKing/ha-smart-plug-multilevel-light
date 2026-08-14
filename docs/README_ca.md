@@ -32,7 +32,7 @@
 Necessitareu:
 
 1. Un endoll intel·ligent que hauria de proporcionar control de potència (interruptor) i mesura de potència (sensor amb device\_class: power) a l'HA. Les dues entitats han de pertànyer al mateix dispositiu i estar habilitades.
-2. Una llum ximple que s'encén automàticament un cop connectat i té múltiples paràmetres de brillantor per gaudir-ne completament.
+2. Una làmpada tonta que s'encén automàticament quan rep alimentació i que, idealment, té diversos modes de brillantor.
 
 > Vaig fer servir un endoll [Tuya TS011F (en el cas Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Diré que a l'inici dels experiments, la sèrie de preses Girier no encaixava a causa de mesures inexactes, però aquest model sí, tot i que també va ser en el cas Girier.
 

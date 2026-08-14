@@ -31,7 +31,7 @@
 Je hebt nodig:
 
 1. Een slim stopcontact dat stroomregeling (schakelaar) en stroommeting (sensor met device\_class: power) aan de HA moet leveren. Beide entiteiten moeten tot hetzelfde apparaat behoren en zijn ingeschakeld.
-2. Een grappig lampje dat automatisch aangaat zodra de stekker in het stopcontact zit en meerdere helderheidsinstellingen heeft voor optimaal genot.
+2. Een domme lamp die automatisch inschakelt zodra hij stroom krijgt en die bij voorkeur meerdere helderheidsstanden heeft.
 
 > Ik heb een stopcontact gebruikt[Tuya TS011F (in Girier-koffer)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Ik zal zeggen dat aan het begin van de experimenten de Girier-serie stopcontacten niet paste vanwege onnauwkeurige metingen, maar dit model wel, hoewel dit ook in het geval van Girier het geval was.
 

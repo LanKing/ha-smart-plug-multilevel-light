@@ -31,7 +31,7 @@
 Potrebovali boste:
 
 1. Pametna vtičnica, ki bi morala zagotavljati nadzor moči (stikalo) in merjenje moči (senzor z device\_class: power) za HA. Obe entiteti morata pripadati isti napravi in ​​morata biti omogočeni.
-2. Neumna lučka, ki se samodejno vklopi, ko je priključena, in ima več nastavitev svetlosti za popoln užitek.
+2. Neumna svetilka, ki se ob priklopu napajanja samodejno vklopi in ima po možnosti več načinov svetlosti.
 
 > Uporabil sem vtičnico[Tuya TS011F (v ohišju Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Rekel bom, da na začetku poskusov serija vtičnic Girier ni ustrezala zaradi netočnih meritev, vendar je ta model uspel, čeprav je bil tudi v primeru Girier.
 

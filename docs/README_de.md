@@ -32,7 +32,7 @@
 Sie benötigen:
 
 1. Eine intelligente Steckdose, die dem HA Stromsteuerung (Schalter) und Strommessung (Sensor mit Geräteklasse: Leistung) ermöglichen soll. Beide Entitäten müssen zum selben Gerät gehören und aktiviert sein.
-2. Ein lustiges Licht, das sich nach dem Anschließen automatisch einschaltet und über mehrere Helligkeitseinstellungen für vollen Genuss verfügt.
+2. Eine dumme Lampe, die sich automatisch einschaltet, sobald sie Strom bekommt, und idealerweise mehrere Helligkeitsstufen hat.
 
 > Ich habe eine Steckdose verwendet [Tuya TS011F (im Girier-Gehäuse)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Ich muss sagen, dass zu Beginn der Experimente die Girier-Steckdosenserie aufgrund ungenauer Messungen nicht passte, dieses Modell jedoch schon, obwohl es auch im Girier-Gehäuse war.
 

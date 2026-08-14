@@ -32,7 +32,7 @@
 Du skal bruge:
 
 1. Et smart stik, der skal give strømstyring (switch) og effektmåling (sensor med device\_class: power) til HA. Begge enheder skal tilhøre den samme enhed og være aktiveret.
-2. Et fjollet lys, der tænder automatisk, når det er tilsluttet og har flere lysstyrkeindstillinger for fuld nydelse.
+2. En dum lampe, der tænder automatisk, når den får strøm, og som helst har flere lysstyrkeniveauer.
 
 > Jeg brugte en stikkontakt [Tuya TS011F (i Girier-etui)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Jeg vil sige, at i begyndelsen af ​​forsøgene passede Girier-serien af ​​fatninger ikke på grund af unøjagtige mål, men det gjorde denne model, selvom den også var i Girier-sagen.
 

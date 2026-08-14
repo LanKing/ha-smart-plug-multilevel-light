@@ -31,7 +31,7 @@
 Du behöver:
 
 1. Ett smart uttag som ska ge effektkontroll (switch) och effektmätning (sensor med device\_class: power) till HA. Båda enheterna måste tillhöra samma enhet och vara aktiverade.
-2. En dum lampa som tänds automatiskt när den är ansluten och har flera ljusstyrkainställningar för fullständig njutning.
+2. En dum lampa som tänds automatiskt när den får ström och som helst har flera ljusstyrkelägen.
 
 > Jag använde ett uttag[Tuya TS011F (i Girier-fodral)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Jag kommer att säga att i början av experimenten passade inte Girier-serien av uttag på grund av felaktiga mätningar, men den här modellen gjorde det, även om det också var i Girier-fallet.
 

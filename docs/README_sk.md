@@ -31,7 +31,7 @@
 Budete potrebovať:
 
 1. Inteligentná zásuvka, ktorá by mala poskytovať ovládanie výkonu (spínač) a meranie výkonu (snímač s triedou\_zariadenia: výkon) do HA. Obe entity musia patriť do rovnakého zariadenia a musia byť povolené.
-2. Hlúpe svetlo, ktoré sa automaticky zapne po pripojení a má viacero nastavení jasu pre úplný pôžitok.
+2. Hlúpa lampa, ktorá sa po privedení napájania automaticky zapne a ideálne má niekoľko režimov jasu.
 
 > Použil som zásuvku[Tuya TS011F (v puzdre Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Poviem, že na začiatku experimentov nesedela séria zásuviek Girier pre nepresné merania, ale tento model áno, hoci bol aj v prípade Girier.
 

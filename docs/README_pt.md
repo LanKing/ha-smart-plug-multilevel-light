@@ -31,7 +31,7 @@
 Você precisará de:
 
 1. Um soquete inteligente que deve fornecer controle de energia (switch) e medição de energia (sensor com device\_class: power) para o HA. Ambas as entidades devem pertencer ao mesmo dispositivo e estar habilitadas.
-2. Uma luz boba que acende automaticamente quando conectada e possui várias configurações de brilho para diversão completa.
+2. Uma lâmpada burra que se liga automaticamente quando recebe alimentação e que, idealmente, tem vários modos de brilho.
 
 > Eu usei uma tomada[Tuya TS011F (no caso Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Direi que no início dos experimentos a série de soquetes Girier não cabia devido a medições imprecisas, mas este modelo sim, embora também estivesse no caso Girier.
 

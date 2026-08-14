@@ -31,7 +31,7 @@
 Avrai bisogno di:
 
 1. Una presa intelligente che dovrebbe fornire il controllo dell'alimentazione (interruttore) e la misurazione della potenza (sensore con device\_class: power) all'HA. Entrambe le entità devono appartenere allo stesso dispositivo ed essere abilitate.
-2. Una luce stupida che si accende automaticamente una volta collegata e ha più impostazioni di luminosità per un divertimento completo.
+2. Una lampada stupida che si accende automaticamente quando riceve alimentazione e che, idealmente, dispone di più modalità di luminosità.
 
 > Ho usato una presa[Tuya TS011F (nella custodia Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Dirò che all'inizio degli esperimenti le prese della serie Girier non si adattavano a causa di misurazioni imprecise, ma questo modello sì, sebbene fosse anche nel caso Girier.
 

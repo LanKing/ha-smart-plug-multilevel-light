@@ -32,7 +32,7 @@
 Jy sal nodig hê:
 
 1. 'n Slim sok wat kragbeheer (skakelaar) en kragmeting (sensor met device\_class: krag) aan die HA moet verskaf. Albei entiteite moet aan dieselfde toestel behoort en geaktiveer wees.
-2. 'n Dwaas lig wat outomaties aanskakel sodra dit ingeprop is en verskeie helderheidinstellings het vir volledige genot.
+2. 'n Dom lamp wat outomaties aanskakel wanneer krag voorsien word en verkieslik verskeie helderheidsmodusse het.
 
 > Ek het 'n sok gebruik [Tuya TS011F (in Girier geval)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Ek sal sê aan die begin van die eksperimente het die Girier-reeks voetstukke nie gepas nie as gevolg van onakkurate metings, maar hierdie model het wel, hoewel dit ook in die Girier-geval was.
 

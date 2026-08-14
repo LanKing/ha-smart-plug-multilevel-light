@@ -31,7 +31,7 @@
 Szükséged lesz:
 
 1. Egy intelligens aljzat, amelynek teljesítményszabályozást (kapcsolót) és teljesítménymérést (eszközosztályú érzékelő: teljesítmény) kell biztosítania a HA számára. Mindkét entitásnak ugyanahhoz az eszközhöz kell tartoznia, és engedélyezve kell lennie.
-2. Egy ostoba lámpa, amely a csatlakoztatás után automatikusan bekapcsol, és többféle fényerő-beállítással rendelkezik a teljes élvezet érdekében.
+2. Egy buta lámpa, amely áramot kapva automatikusan bekapcsol, és ideális esetben több fényerőmóddal rendelkezik.
 
 > Aljzatot használtam[Tuya TS011F (Girier tokban)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Elmondom, hogy a kísérletek elején a Girier sorozatú foglalatok pontatlan mérések miatt nem illeszkedtek, de ez a modell igen, bár a Girier-esetben is.
 

@@ -32,7 +32,7 @@
 Vi bezonos:
 
 1. Inteligenta ingo, kiu devus provizi potencan kontrolon (ŝaltilo) kaj potenco-mezuradon (sensilo kun device\_class: potenco) al la HA. Ambaŭ estaĵoj devas aparteni al la sama aparato kaj esti ebligitaj.
-2. Malsaĝa lumo, kiu ŝaltas aŭtomate unufoje enŝovita kaj havas plurajn brilajn agordojn por kompleta ĝuo.
+2. Stulta lampo, kiu aŭtomate ŝaltiĝas kiam ĝi ricevas kurenton kaj, ideale, havas plurajn brilreĝimojn.
 
 > Mi uzis ingon [Tuya TS011F (en Girier-kazo)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Mi diros, ke komence de la eksperimentoj, la serio de ingoj Girier ne konvenis pro malprecizaj mezuradoj, sed ĉi tiu modelo faris, kvankam ĝi estis ankaŭ en la kazo Girier.
 

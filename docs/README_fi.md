@@ -32,7 +32,7 @@
 Tarvitset:
 
 1. Älykäs pistorasia, jonka pitäisi tarjota tehonsäätöä (kytkin) ja tehonmittausta (anturi, jonka laiteluokka: teho) HA:lle. Molempien entiteettien on kuuluttava samaan laitteeseen ja oltava käytössä.
-2. Tyhmä valo, joka syttyy automaattisesti, kun se kytketään, ja jossa on useita kirkkausasetuksia täydellistä nautintoa varten.
+2. Tyhmä lamppu, joka syttyy automaattisesti saatuaan virtaa ja jossa on mieluiten useita kirkkaustiloja.
 
 > Käytin pistorasiaa [Tuya TS011F (Giier-kotelossa)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Sanon, että kokeiden alussa Girier-sarjan pistorasiat eivät sopineet epätarkkojen mittausten vuoksi, mutta tämä malli sopi, vaikka se oli myös Girierin tapauksessa.
 

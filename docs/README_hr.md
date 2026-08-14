@@ -31,7 +31,7 @@
 Trebat će vam:
 
 1. Pametna utičnica koja bi trebala osigurati kontrolu napajanja (prekidač) i mjerenje snage (senzor s device\_class: snaga) za HA. Oba entiteta moraju pripadati istom uređaju i biti omogućena.
-2. Glupo svjetlo koje se uključuje automatski nakon uključivanja i ima višestruke postavke svjetline za potpuni užitak.
+2. Glupa lampa koja se automatski uključuje kada dobije napajanje i, idealno, ima nekoliko načina svjetline.
 
 > Koristio sam utičnicu[Tuya TS011F (u kućištu Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Reći ću da na početku eksperimenata Girier serija utičnica nije odgovarala zbog netočnih mjerenja, ali ovaj model jest, iako je također bio u Girier kućištu.
 

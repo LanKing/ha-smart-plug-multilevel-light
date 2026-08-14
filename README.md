@@ -37,7 +37,7 @@
 You will need:
 
 1. A smart plug that exposes power control (`switch`) and power measurement (`sensor` with `device_class: power`) to HA. Both entities must belong to the same device and be enabled.
-2. A non-smart lamp that turns on automatically when power is supplied and, ideally, has several brightness modes.
+2. A dumb lamp that turns on automatically when power is supplied and, ideally, has several brightness modes.
 
 > I used a [Tuya TS011F plug (in a Girier enclosure)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). At the start of my experiments, several Girier plugs were unsuitable because their measurements were inaccurate, but this model worked even though it also came in a Girier enclosure.
 

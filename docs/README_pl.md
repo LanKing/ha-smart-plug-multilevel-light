@@ -35,7 +35,7 @@
 Potrzebujesz:
 
 1. Inteligentnego gniazdka udostępniającego w HA sterowanie zasilaniem (`switch`) oraz pomiar mocy (`sensor` z `device_class: power`). Obie encje muszą należeć do tego samego urządzenia i być włączone.
-2. Zwykłej lampy, która włącza się automatycznie po podaniu zasilania i najlepiej ma kilka trybów jasności.
+2. Głupiej lampy, która włącza się automatycznie po podaniu zasilania i najlepiej ma kilka trybów jasności.
 
 > Użyłem gniazdka [Tuya TS011F (w obudowie Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Na początku testów kilka gniazdek Girier nie sprawdziło się z powodu niedokładnych pomiarów, ale ten model działał prawidłowo, mimo że również znajdował się w obudowie Girier.
 

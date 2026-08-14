@@ -31,7 +31,7 @@
 Du trenger:
 
 1. En smart stikkontakt som skal gi effektkontroll (bryter) og effektmåling (sensor med device\_class: power) til HA. Begge enhetene må tilhøre samme enhet og være aktivert.
-2. Et dumt lys som slår seg på automatisk når den er koblet til og har flere lysstyrkeinnstillinger for full nytelse.
+2. Ei dum lampe som slår seg på automatisk når ho får straum, og som helst har fleire lysstyrkenivå.
 
 > Jeg brukte en stikkontakt[Tuya TS011F (i Girier-etui)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Jeg vil si at i begynnelsen av forsøkene passet ikke Girier-serien med stikkontakter på grunn av unøyaktige mål, men denne modellen gjorde det, selv om den også var i Girier-saken.
 

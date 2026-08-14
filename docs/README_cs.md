@@ -32,7 +32,7 @@
 Budete potřebovat:
 
 1. Chytrá zásuvka, která by měla zajišťovat ovládání výkonu (spínač) a měření výkonu (snímač s třídou\_zařízení: napájení) HA. Obě entity musí patřit ke stejnému zařízení a být povoleny.
-2. Hloupé světlo, které se automaticky zapne po připojení a má několik nastavení jasu pro úplný požitek.
+2. Hloupá lampa, která se po přivedení napájení automaticky zapne a ideálně má několik režimů jasu.
 
 > Použil jsem zásuvku [Tuya TS011F (v pouzdře Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Řeknu, že na začátku experimentů řada patic Girier kvůli nepřesnému měření neseděla, ale tento model ano, ačkoliv byl také v pouzdru Girier.
 

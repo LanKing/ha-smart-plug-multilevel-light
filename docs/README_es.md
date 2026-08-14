@@ -32,7 +32,7 @@
 Necesitarás:
 
 1. Un enchufe inteligente que debe proporcionar control de energía (interruptor) y medición de energía (sensor con clase\_dispositivo: energía) al HA. Ambas entidades deben pertenecer al mismo dispositivo y estar habilitadas.
-2. Una luz divertida que se enciende automáticamente una vez enchufada y tiene múltiples configuraciones de brillo para disfrutar por completo.
+2. Una lámpara tonta que se enciende automáticamente al recibir alimentación y que, idealmente, tiene varios modos de brillo.
 
 > usé un enchufe [Tuya TS011F (en caso Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Diré que al inicio de los experimentos la serie de enchufes Girier no encajaba por mediciones inexactas, pero este modelo sí, aunque también lo fue en el caso Girier.
 
