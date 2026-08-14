@@ -181,21 +181,21 @@ jobs:
                   f"| `always_show_icon_background` | boolean | `false` | {table[13]} |",
               ]
               table_block = "\n".join(rows) + "\n"
-              table_start = text.find("\\n|")
-              code_start = text.find("\\n\`\`\`yaml", table_start)
+              table_start = text.find("\n|")
+              code_start = text.find("\n```yaml", table_start)
               if table_start < 0 or code_start < 0:
                   raise RuntimeError(f"Parameter table boundaries not found in {path}")
               between = text[table_start + 1:code_start].rstrip()
-              blocks = between.split("\\n\\n")
+              blocks = between.split("\n\n")
               if len(blocks) < 2:
                   raise RuntimeError(f"Full-example label not found after table in {path}")
               example_label = blocks[-1]
               text = (
                   text[:table_start + 1]
                   + table_block
-                  + "\\n"
+                  + "\n"
                   + example_label
-                  + "\\n"
+                  + "\n"
                   + text[code_start:]
               )
 
