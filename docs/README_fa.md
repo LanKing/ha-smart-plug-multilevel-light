@@ -1,30 +1,31 @@
 <sub>🇺🇸&nbsp;<a href="../README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a>&nbsp;|</sub> <sub>🇺🇦&nbsp;<a href="README_uk.md">У⁠к⁠р⁠а⁠ї⁠н⁠с⁠ь⁠к⁠а</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="README_ru.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="README_af.md">A⁠f⁠r⁠i⁠k⁠a⁠a⁠n⁠s</a>&nbsp;|</sub> <sub>🇸🇦&nbsp;<a href="README_ar.md">ا⁠ل⁠ع⁠ر⁠ب⁠ي⁠ة</a>&nbsp;|</sub> <sub>🇧🇬&nbsp;<a href="README_bg.md">Б⁠ъ⁠л⁠г⁠а⁠р⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="README_bn.md">বাং⁠লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="README_bs.md">B⁠o⁠s⁠a⁠n⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="README_ca.md">C⁠a⁠t⁠a⁠l⁠à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="README_cs.md">Č⁠e⁠š⁠t⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>cy&nbsp;<a href="README_cy.md">C⁠y⁠m⁠r⁠a⁠e⁠g</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="README_da.md">D⁠a⁠n⁠s⁠k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="README_de.md">D⁠e⁠u⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇬🇷&nbsp;<a href="README_el.md">Ε⁠λ⁠λ⁠η⁠ν⁠ι⁠κ⁠ά</a>&nbsp;|</sub> <sub>eo&nbsp;<a href="README_eo.md">E⁠s⁠p⁠e⁠r⁠a⁠n⁠t⁠o</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="README_es.md">E⁠s⁠p⁠a⁠ñ⁠o⁠l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="README_et.md">E⁠e⁠s⁠t⁠i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="README_eu.md">E⁠u⁠s⁠k⁠a⁠r⁠a</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="README_fi.md">S⁠u⁠o⁠m⁠i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="README_fy.md">F⁠r⁠y⁠s⁠k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="README_fr.md">F⁠r⁠a⁠n⁠ç⁠a⁠i⁠s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="README_ga.md">G⁠a⁠e⁠i⁠l⁠g⁠e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="README_gl.md">G⁠a⁠l⁠e⁠g⁠o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="README_gsw.md">S⁠c⁠h⁠w⁠i⁠i⁠z⁠e⁠r⁠d⁠ü⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="README_he.md">ע⁠ב⁠ר⁠י⁠ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_hi.md">हि⁠न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="README_hr.md">H⁠r⁠v⁠a⁠t⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="README_hu.md">M⁠a⁠g⁠y⁠a⁠r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="README_hy.md">Հ⁠ա⁠յ⁠ե⁠ր⁠ե⁠ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="README_id.md">I⁠n⁠d⁠o⁠n⁠e⁠s⁠i⁠a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="README_is.md">Í⁠s⁠l⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="README_it.md">I⁠t⁠a⁠l⁠i⁠a⁠n⁠o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="README_ja.md">日⁠本⁠語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="README_ka.md">K⁠a⁠r⁠t⁠u⁠l⁠i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="README_ko.md">한⁠국⁠어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="README_lb.md">L⁠ë⁠t⁠z⁠e⁠b⁠u⁠e⁠r⁠g⁠e⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="README_lt.md">L⁠i⁠e⁠t⁠u⁠v⁠i⁠ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="README_lv.md">L⁠a⁠t⁠v⁠i⁠e⁠š⁠u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="README_mk.md">М⁠а⁠к⁠е⁠д⁠о⁠н⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ml.md">മ⁠ല⁠യാ⁠ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nb.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠B⁠o⁠k⁠m⁠å⁠l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="README_nl.md">N⁠e⁠d⁠e⁠r⁠l⁠a⁠n⁠d⁠s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nn.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠N⁠y⁠n⁠o⁠r⁠s⁠k</a>&nbsp;|</sub> <sub>🇵🇱&nbsp;<a href="README_pl.md">P⁠o⁠l⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="README_pt.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="README_pt-BR.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s⁠&nbsp;⁠(⁠B⁠R⁠)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="README_ro.md">R⁠o⁠m⁠â⁠n⁠ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="README_sk.md">S⁠l⁠o⁠v⁠e⁠n⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="README_sl.md">S⁠l⁠o⁠v⁠e⁠n⁠š⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="README_sq.md">S⁠h⁠q⁠i⁠p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr.md">С⁠р⁠п⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr-Latn.md">S⁠r⁠p⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="README_sv.md">S⁠v⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ta.md">த⁠மி⁠ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_te.md">తె⁠లు⁠గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="README_th.md">ภ⁠า⁠ษ⁠า⁠ไ⁠ท⁠ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="README_tr.md">T⁠ü⁠r⁠k⁠ç⁠e</a>&nbsp;|</sub> <sub>🇵🇰&nbsp;<a href="README_ur.md">اُ⁠ر⁠دُ⁠و</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="README_vi.md">T⁠i⁠ế⁠n⁠g⁠&nbsp;⁠V⁠i⁠ệ⁠t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="README_zh-Hans.md">简⁠体⁠中⁠文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="README_zh-Hant.md">繁⁠體⁠中⁠文</a></sub>
 
+<!-- markdown-translator:f30c10bb91a0f6587cd22ee0c70aa5e504b1807979a245dd1c91d57aadca6019 -->
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a> <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a> <a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
-> این ادغام یک چراغ غیر دیجیتال کنترل شده و یک دوشاخه هوشمند را در یک نهاد Home Assistant ترکیب می کند. وضعیت و حالت روشنایی فعلی را بر اساس مصرف انرژی تعیین می کند، آنها را در یک کارت نمایش می دهد و به شما امکان می دهد با خاموش کردن کوتاه مدت و استفاده مجدد برق از طریق پریز، لامپی را که با دکمه خودش خاموش می شود روشن کنید.
+> یکپارچه سازی یک چراغ کنترل غیر دیجیتال و یک دوشاخه هوشمند را در یک موجودیت ترکیب می کند Home Assistant. وضعیت و حالت روشنایی فعلی را بر اساس مصرف انرژی تعیین می کند، آنها را در یک کارت نمایش می دهد و به شما امکان می دهد با خاموش کردن کوتاه مدت و استفاده مجدد برق از طریق پریز، لامپی را که با دکمه خودش خاموش می شود روشن کنید.
 
-# 🔌 چراغ چند سطحی دوشاخه هوشمند
+# 🔌 Smart Plug Multi-Level Light
 
 ![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ ویژگی ها و ویژگی ها:**
 
-* یک موجودیت بومی Home Assistant ایجاد می کند `light`سازگار با اتوماسیون ها، اسکریپت ها و رابط استاندارد HA.
+* یک موجودیت منظم ایجاد می کند Home Assistant `light`سازگار با اتوماسیون ها، اسکریپت ها و رابط استاندارد HA.
 * لامپ را بدون توجه به نحوه خاموش شدن به درستی روشن می کند: اگر برق از طریق سوکت هوشمند خاموش شود، به سادگی آن را روشن می کند. اگر لامپ با دکمه خود خاموش شود در حالی که سوکت روشن است، چرخه ای از خاموش کردن و روشن شدن دوباره انجام می دهد.
 * به طور خودکار حالت عملکرد فعلی لامپ را بر اساس قدرت پایدار اندازه گیری شده واقعی تعیین می کند.
 * این یک پیکربندی ساده دارد که در آن کاربر به طور متوالی حالت های پشتیبانی شده توسط لامپ خود را نام می برد و سیستم با تعیین توان پایدار در هر حالت یاد می گیرد.
 * در اولین تنظیم، قدرت به صورت بلادرنگ خوانده می شود: کاربر فقط باید نور را به حالت بعدی تغییر دهد و دکمه یادگیری را فشار دهد.
 * خوانش های ناپایدار توان را با موفقیت فیلتر می کند و از تغییرات آشفته نشانگر روی کارت هنگام "پرش" برق در یک حالت (و حتی همزمان با حالت بعدی) جلوگیری می کند.
 * پشتیبانی از تعداد دلخواه از حالت.
-* این کارت بر روی کارت استاندارد کاشی دستیار خانگی ساخته شده است و هندسه، پس‌زمینه، جلوه‌های شناور، اندازه‌ها، تایپوگرافی و اقدامات استاندارد آن را حفظ می‌کند.
+* کارت بر روی کارت استاندارد ساخته شده است Home Assistant کارت کاشی با حفظ هندسه، پس‌زمینه، جلوه‌های شناور، اندازه‌ها، تایپوگرافی و اقدامات استاندارد.
 * در کارت، روشنایی فعلی به صورت بصری با شدت رنگ کدگذاری می شود.
 * روشنایی را به صورت خطی نسبت به حداکثر توان محاسبه می کند. گرد کردن روشنایی محاسبه شده به 5٪ را می توان برای نمایش دقیق تر درصدها فعال کرد.
 * به شما امکان می دهد پارامترهای نمایش داده شده و ظاهر کارت را به طور انعطاف پذیر سفارشی کنید.
 * به شما امکان می دهد فقط سنسور قدرت مربوط به دوشاخه هوشمند انتخاب شده را انتخاب کنید.
 * به شما امکان می دهد تا تاخیر چرخه قطع انرژی را برای عملکرد صحیح با مدل های مختلف لامپ و پریز تنظیم کنید.
 * به شما امکان می دهد آستانه قدرتی را که زیر آن لامپ خاموش در نظر گرفته می شود تنظیم کنید.
-* این رابط برای 64 منطقه Home Assistant بومی سازی شده است.
+* رابط برای 64 منطقه بومی سازی شده است Home Assistant.
 
 ## 🗜 تهیه آهن
 
@@ -39,9 +40,9 @@
 
 > سوکت من به طور خودکار قرائت ها را به HA گزارش نمی کند و فقط در یک بازه زمانی مشخص امکان نظرسنجی را می دهد. به طور پیش فرض 60 ثانیه بود. لازم است این فاصله را روی 1 ثانیه تنظیم کنید، در غیر این صورت مدت زیادی منتظر خواهید بود تا نمایشگر تغییر حالت ظاهر شود.
 
-این توضیحات فقط برای دارندگان سوکت های متصل از طریق Z2M مرتبط است. سایر کاربران باید نرخ تجدید را در پیکربندی خود تنظیم کنند:
+این توضیحات فقط برای دارندگان سوکت هایی که از طریق آن وصل شده اند مرتبط است Z2M. سایر کاربران باید نرخ تجدید را در پیکربندی خود تنظیم کنند:
 
-1. باز کنید **دستیار خانه → Zigbee2MQTT**. اگر Zigbee2MQTT در منوی کناری نیست، باز کنید **تنظیمات → برنامه ها → Zigbee2MQTT → رابط وب باز کنید**.
+1. باز کنید **Home Assistant → Zigbee2MQTT**. اگر Zigbee2MQTT در منوی کناری وجود ندارد، باز کنید **تنظیمات → برنامه ها → Zigbee2MQTT → رابط وب را باز کنید**.
 2. به بخش بروید **دستگاه ها**.
 3. پریز مورد نیاز را انتخاب کنید.
 4. برگه را باز کنید **تنظیمات (ویژه)**.
@@ -53,13 +54,13 @@
 
 ### 🛍 نصب از طریق HACS
 
-ℹ️ [HACS چیست و چگونه آن را نصب کنیم؟](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_fa.md)
+ℹ️ [چه اتفاقی افتاده HACS و چگونه آن را نصب کنیم؟](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_fa.md)
 
-🚀 [سعی کنید یک مخزن در پیوند اضافه کنید](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). اگر HA شما از این روش پشتیبانی می کند، کلیک کنید **اضافه کنید** در پنجره ای که باز می شود و سپس دکمه **دانلود کنید** در گوشه پایین سمت راست اگر نصب با موفقیت انجام شد، می توانید مراحل بعدی را رد کنید. مستقیم به بخش پرش کنید [شروع سریع](#getting-started).
+🚀 [سعی کنید یک مخزن در پیوند اضافه کنید](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). اگر HA شما از این روش پشتیبانی می کند، کلیک کنید **اضافه کنید** در پنجره ای که باز می شود و سپس دکمه **دانلود کنید** در گوشه پایین سمت راست اگر نصب با موفقیت انجام شد، می توانید مراحل بعدی را رد کنید. مستقیم به بخش پرش کنید [شروع سریع](#getting-started).
 
 #### 1. اضافه کردن یک مخزن
 
-در حالی که مخزن در دایرکتوری استاندارد HACS گنجانده نشده است، آن را به صورت سفارشی اضافه کنید:
+مخزن هنوز در فهرست استاندارد گنجانده نشده است HACS، آن را به صورت سفارشی اضافه کنید:
 
 1. باز کنید **HACS → ادغام ها**.
 2. منوی گوشه سمت راست بالا را باز کرده و انتخاب کنید **مخازن سفارشی**.
@@ -71,13 +72,13 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 
 4. نوع را انتخاب کنید **یکپارچه سازی** و فشار دهید **اضافه کنید**.
 
-> افزودن یک مخزن فقط یکپارچه سازی را در HACS در دسترس قرار می دهد. برای نصب باید کارت آن را جداگانه باز کنید و کلیک کنید **دانلود کنید**.
+> افزودن یک مخزن فقط باعث می شود که ادغام در آن موجود باشد HACS. برای نصب باید کارت آن را جداگانه باز کنید و کلیک کنید **دانلود کنید**.
 
 #### 2. نصب ادغام
 
-1. جستجو در HACS: `Smart Plug Multi-Level Light`.
+1. پیدا کنید HACS: Smart Plug Multi-Level Light.
 2. ادغام را باز کرده و کلیک کنید **دانلود کنید**.
-3. پس از نصب، Home Assistant را به طور کامل راه اندازی مجدد کنید.
+3. پس از نصب، به طور کامل راه اندازی مجدد کنید Home Assistant.
 
 <a id="manual-installation"></a>
 
@@ -103,11 +104,11 @@ custom_components/smart_plug_multilevel_light
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-4. Home Assistant را به طور کامل راه اندازی مجدد کنید.
+4. به طور کامل راه اندازی مجدد Home Assistant.
 
 > کل پوشه مخزن خارجی را در آن کپی نکنید `custom_components`. داخل `custom_components` پوشه باید مستقیماً قرار گیرد `smart_plug_multilevel_light`.
 
-کارت در ادغام گنجانده شده است، بنابراین HACS برای نصب آن لازم نیست. پس از کپی دستی فایل ها، راه اندازی مجدد Home Assistant و ایجاد اولین شی کمکی، ادغام فایل کارت جاوا اسکریپت را منتشر می کند و به طور خودکار آن را با منابع پانل در حالت استاندارد ثبت می کند. `storage`. در حالت منبع YAML، کارت باید به صورت دستی ثبت شود، همانطور که در زیر توضیح داده شده است.
+کارت بخشی از ادغام است، بنابراین HACS برای نصب لازم نیست پس از کپی دستی فایل ها، راه اندازی مجدد Home Assistant و با ایجاد اولین شی کمکی، ادغام فایل کارت جاوا اسکریپت را منتشر می کند و به طور خودکار آن را با منابع پانل در حالت استاندارد ثبت می کند. `storage`. در حالت منبع YAML، کارت باید به صورت دستی ثبت شود، همانطور که در زیر توضیح داده شده است.
 
 <a id="getting-started"></a>
 
@@ -117,26 +118,26 @@ custom_components/smart_plug_multilevel_light
 
 1. باز کنید **[تنظیمات → دستگاه ها و خدمات → لوازم جانبی](https://my.home-assistant.io/redirect/helpers/)** و فشار دهید **شی Helper ایجاد کنید**.
 
-2. انتخاب کنید **چراغ چند سطحی دوشاخه هوشمند**.
+2. انتخاب کنید **Smart Plug Multi-Level Light**.
 
-3. دوشاخه هوشمندی که لامپ به آن وصل است را انتخاب کنید. این لیست فقط پریزهایی را نشان می دهد که در آن ها «دستیار خانگی» حسگر قدرت را در همان دستگاه می بیند.
+3. دوشاخه هوشمندی که لامپ به آن وصل است را انتخاب کنید. لیست فقط سوکت هایی را نشان می دهد که دارای آن هستند Home Assistant سنسور قدرت را در همان دستگاه می بیند.
 
 4. در مرحله بعد، پارامترهای لامپ را تنظیم کنید:
    * **نام نور (Light name)** - برای مثال، نام نهاد در حال ایجاد `FloorLamp`;
    * **Power sensor** - سنسور قدرت سوکت؛
 
-5. در بخش **ZUI003Z** با کلیک کردن، حداقل یک حالت روشنایی اضافه کنید **اضافه کنید**.<br /> <img src="modes-edit.png" width="50%"/><br />
+5. در بخش **🔅 حالت‌های روشنایی (🔅 Brightness modes)** با کلیک کردن، حداقل یک حالت روشنایی اضافه کنید **اضافه کنید**.<br /> <img src="modes-edit.png" width="50%"/><br />
    لامپ را با دکمه فیزیکی آن تغییر دهید، نام حالت را وارد کنید و شروع کنید **Test stable power**. پس از به دست آوردن یک مقدار پایدار، فشار دهید **درخواست کنید**.
 
 6. پس از افزودن حالت اول، با تکرار این مراحل، حالت های باقی مانده را اضافه کنید. شما باید با چیزی شبیه به:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. شی کمک کننده را ذخیره کنید. Home Assistant موجودیت جدیدی ایجاد خواهد کرد `light`، به عنوان مثال `light.FloorLamp`.
+7. شی کمک کننده را ذخیره کنید. Home Assistant یک موجودیت جدید ایجاد خواهد کرد `light`، به عنوان مثال `light.FloorLamp`.
 
 ### 🧩 کارت لاولیس
 
 1. پنل مورد نظر را باز کرده، حالت ویرایش را روشن کرده و کلیک کنید **یک کارت اضافه کنید**.
-2. انتخاب کنید **چراغ چند سطحی دوشاخه هوشمند**، موجودیت ایجاد شده را مشخص کنید `light` و کارت را ذخیره کنید.
+2. انتخاب کنید **Smart Plug Multi-Level Light**، موجودیت ایجاد شده را مشخص کنید `light` و کارت را ذخیره کنید.
 
 اگر کارت در بین کارت های موجود نیست، ممکن است از آن استفاده کنید [حالت YAML منبع Lovelace](#yaml-lovelace-mode).
 
@@ -159,7 +160,7 @@ custom_components/smart_plug_multilevel_light
 
 #### گرد کردن روشنایی تا 5٪
 
-باز کنید **[تنظیمات → دستگاه ها و خدمات → لوازم جانبی](https://my.home-assistant.io/redirect/helpers/)**، شی کمکی را که قبلا ایجاد شده است بیابید **چراغ چند سطحی دوشاخه هوشمند** و تنظیمات آن را باز کنید. روشن یا خاموش کنید **Round brightness to 5% (may look nicer)**.
+باز کنید **[تنظیمات → دستگاه ها و خدمات → لوازم جانبی](https://my.home-assistant.io/redirect/helpers/)**، شی کمکی را که قبلا ایجاد شده است بیابید **Smart Plug Multi-Level Light** و تنظیمات آن را باز کنید. روشن یا خاموش کنید **Round brightness to 5% (may look nicer)**.
 
 هنگامی که تنظیم فعال است، درصد محاسبه شده به نزدیکترین 5٪ گرد می شود، به عنوان مثال: 33٪ → 35٪، 67٪ → 65٪.
 
@@ -216,7 +217,7 @@ lovelace:
       type: module
 ```
 
-پس از تغییر، منابع Lovelace را راه اندازی مجدد کنید یا Home Assistant را راه اندازی مجدد کنید.
+پس از تغییر، منابع Lovelace را دوباره بارگیری کنید یا دوباره راه اندازی کنید Home Assistant.
 
 <a id="troubleshooting"></a>
 
@@ -226,7 +227,7 @@ lovelace:
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**علت احتمالی:** مسیر نادرست است یا «دستیار خانگی» راه‌اندازی مجدد نشد.
+**علت احتمالی:** راه اشتباه یا Home Assistant دوباره راه اندازی نشد
 
 بررسی در دسترس بودن فایل:
 
@@ -234,7 +235,7 @@ lovelace:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-سپس Home Assistant را مجدداً کامل کنید و گزارش را برای وجود خطا بررسی کنید `smart_plug_multilevel_light`.
+سپس یک راه اندازی مجدد سخت انجام دهید Home Assistant و لاگ را برای وجود خطا بررسی کنید `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -259,7 +260,7 @@ lovelace:
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-پس از انتخاب یک پریز، ادغام مجدداً وجود سنسور قدرت را بررسی می کند. این خطا در صورتی رخ می دهد که حسگر حذف شده باشد، غیرفعال شده باشد، به دستگاه دیگری منتقل شده باشد یا دیگر وجود نداشته باشد. `device_class: power`.
+پس از انتخاب یک پریز، ادغام مجدداً وجود سنسور قدرت را بررسی می کند. این خطا در صورتی رخ می دهد که سنسور حذف شده باشد، غیرفعال شده باشد، به دستگاه دیگری منتقل شده باشد یا دیگر نداشته باشد `device_class: power`.
 
 <hr />
 </details>
@@ -310,7 +311,7 @@ lovelace:
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-ثبت خودکار فقط پس از بارگیری حداقل یک شی کمکی پیکربندی شده و فقط در حالت منبع رخ می دهد `storage`. روش نصب ادغام - از طریق HACS یا دستی - بر این تأثیر نمی گذارد.
+ثبت خودکار فقط پس از بارگیری حداقل یک شی کمکی پیکربندی شده و فقط در حالت منبع رخ می دهد `storage`. روش نصب ادغام از طریق است HACS یا به صورت دستی - این هیچ تاثیری ندارد.
 
 بررسی کنید **[تنظیمات → پانل ها → ⋮ → منابع](https://my.home-assistant.io/redirect/lovelace_resources/)**. URL باید آنجا باشد:
 
@@ -327,7 +328,7 @@ lovelace:
 <summary><b>❓После обновления отображается старая карточка</b></summary>
 <br />
 
-1. Home Assistant را به طور کامل راه اندازی مجدد کنید.
+1. به طور کامل راه اندازی مجدد Home Assistant.
 2. برای پاک کردن کش مرورگر خود، صفحه را بازخوانی کنید.
 3. شماره نسخه را در URL منبع پنل بررسی کنید.
 4. در اپلیکیشن موبایل، رابط را کاملا ببندید و دوباره باز کنید.
@@ -337,8 +338,8 @@ lovelace:
 
 ## 🗑 حذف
 
-1. تمام اشیاء کمکی ایجاد شده را حذف کنید **چراغ چند سطحی دوشاخه هوشمند** از طریق **[تنظیمات → دستگاه ها و خدمات → لوازم جانبی](https://my.home-assistant.io/redirect/helpers/)**.
-2. ادغام را از طریق HACS حذف کنید یا به صورت دستی پوشه را حذف کنید:
+1. تمام اشیاء کمکی ایجاد شده را حذف کنید **Smart Plug Multi-Level Light** از طریق **[تنظیمات → دستگاه ها و خدمات → لوازم جانبی](https://my.home-assistant.io/redirect/helpers/)**.
+2. حذف ادغام از طریق HACS یا به صورت دستی پوشه را حذف کنید:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
@@ -350,14 +351,14 @@ lovelace:
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-4. Home Assistant را به طور کامل راه اندازی مجدد کنید.
+4. به طور کامل راه اندازی مجدد Home Assistant.
 5. در صورت لزوم، صفحه را بازخوانی کنید تا حافظه پنهان رابط پاک شود.
 
 ## 📄 مجوز
 
-پروژه تحت لیسانس توزیع می شود [با](../LICENSE).
+پروژه تحت لیسانس توزیع می شود [MIT](../LICENSE).
 
 <br />
 
-> \[!نکته]
+> [!TIP]
 > **راه حل را دوست داشتید؟** 🏠 نگاه کنید <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_fa.md">محصولات دیگر من برای Home Assistant</a>
