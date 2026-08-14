@@ -1,10 +1,11 @@
 <sub>🇺🇸&nbsp;<a href="../README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="README_ru.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="README_af.md">A⁠f⁠r⁠i⁠k⁠a⁠a⁠n⁠s</a>&nbsp;|</sub> <sub>🇸🇦&nbsp;<a href="README_ar.md">ا⁠ل⁠ع⁠ر⁠ب⁠ي⁠ة</a>&nbsp;|</sub> <sub>🇧🇬&nbsp;<a href="README_bg.md">Б⁠ъ⁠л⁠г⁠а⁠р⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="README_bn.md">বাং⁠লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="README_bs.md">B⁠o⁠s⁠a⁠n⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="README_ca.md">C⁠a⁠t⁠a⁠l⁠à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="README_cs.md">Č⁠e⁠š⁠t⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>cy&nbsp;<a href="README_cy.md">C⁠y⁠m⁠r⁠a⁠e⁠g</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="README_da.md">D⁠a⁠n⁠s⁠k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="README_de.md">D⁠e⁠u⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇬🇷&nbsp;<a href="README_el.md">Ε⁠λ⁠λ⁠η⁠ν⁠ι⁠κ⁠ά</a>&nbsp;|</sub> <sub>eo&nbsp;<a href="README_eo.md">E⁠s⁠p⁠e⁠r⁠a⁠n⁠t⁠o</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="README_es.md">E⁠s⁠p⁠a⁠ñ⁠o⁠l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="README_et.md">E⁠e⁠s⁠t⁠i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="README_eu.md">E⁠u⁠s⁠k⁠a⁠r⁠a</a>&nbsp;|</sub> <sub>🇮🇷&nbsp;<a href="README_fa.md">ف⁠ا⁠ر⁠س⁠ی</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="README_fi.md">S⁠u⁠o⁠m⁠i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="README_fy.md">F⁠r⁠y⁠s⁠k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="README_fr.md">F⁠r⁠a⁠n⁠ç⁠a⁠i⁠s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="README_ga.md">G⁠a⁠e⁠i⁠l⁠g⁠e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="README_gl.md">G⁠a⁠l⁠e⁠g⁠o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="README_gsw.md">S⁠c⁠h⁠w⁠i⁠i⁠z⁠e⁠r⁠d⁠ü⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="README_he.md">ע⁠ב⁠ר⁠י⁠ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_hi.md">हि⁠न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="README_hr.md">H⁠r⁠v⁠a⁠t⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="README_hu.md">M⁠a⁠g⁠y⁠a⁠r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="README_hy.md">Հ⁠ա⁠յ⁠ե⁠ր⁠ե⁠ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="README_id.md">I⁠n⁠d⁠o⁠n⁠e⁠s⁠i⁠a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="README_is.md">Í⁠s⁠l⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="README_it.md">I⁠t⁠a⁠l⁠i⁠a⁠n⁠o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="README_ja.md">日⁠本⁠語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="README_ka.md">K⁠a⁠r⁠t⁠u⁠l⁠i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="README_ko.md">한⁠국⁠어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="README_lb.md">L⁠ë⁠t⁠z⁠e⁠b⁠u⁠e⁠r⁠g⁠e⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="README_lt.md">L⁠i⁠e⁠t⁠u⁠v⁠i⁠ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="README_lv.md">L⁠a⁠t⁠v⁠i⁠e⁠š⁠u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="README_mk.md">М⁠а⁠к⁠е⁠д⁠о⁠н⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ml.md">മ⁠ല⁠യാ⁠ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nb.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠B⁠o⁠k⁠m⁠å⁠l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="README_nl.md">N⁠e⁠d⁠e⁠r⁠l⁠a⁠n⁠d⁠s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nn.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠N⁠y⁠n⁠o⁠r⁠s⁠k</a>&nbsp;|</sub> <sub>🇵🇱&nbsp;<a href="README_pl.md">P⁠o⁠l⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="README_pt.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="README_pt-BR.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s⁠&nbsp;⁠(⁠B⁠R⁠)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="README_ro.md">R⁠o⁠m⁠â⁠n⁠ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="README_sk.md">S⁠l⁠o⁠v⁠e⁠n⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="README_sl.md">S⁠l⁠o⁠v⁠e⁠n⁠š⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="README_sq.md">S⁠h⁠q⁠i⁠p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr.md">С⁠р⁠п⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr-Latn.md">S⁠r⁠p⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="README_sv.md">S⁠v⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ta.md">த⁠மி⁠ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_te.md">తె⁠లు⁠గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="README_th.md">ภ⁠า⁠ษ⁠า⁠ไ⁠ท⁠ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="README_tr.md">T⁠ü⁠r⁠k⁠ç⁠e</a>&nbsp;|</sub> <sub>🇵🇰&nbsp;<a href="README_ur.md">اُ⁠ر⁠دُ⁠و</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="README_vi.md">T⁠i⁠ế⁠n⁠g⁠&nbsp;⁠V⁠i⁠ệ⁠t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="README_zh-Hans.md">简⁠体⁠中⁠文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="README_zh-Hant.md">繁⁠體⁠中⁠文</a></sub>
 
+<!-- markdown-translator:f30c10bb91a0f6587cd22ee0c70aa5e504b1807979a245dd1c91d57aadca6019 -->
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a> <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a> <a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
 > Інтеграція поєднує світильник без цифрового керування та розумну розетку в одну сутність Home Assistant. Вона визначає стан та поточний режим яскравості за споживаною потужністю, відображає їх у картці та дозволяє включити лампу, вимкнену власною кнопкою, коротко відключивши та знову подавши живлення через розетку.
 
-# 🔌 Багаторівневе освітлення Smart Plug
+# 🔌 Smart Plug Multi-Level Light
 
 ![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
 
@@ -17,14 +18,14 @@
 * Під час першого налаштування потужність зчитується в реальному часі: користувач повинен лише перемикати світильник у наступний режим та натискати кнопку навчання;
 * Успішно фільтрує нестабільні показання потужності, запобігаючи хаотичну зміну індикатора на картці, коли потужність «стрибає» в рамках одного режиму (і навіть збігається з наступним режимом);
 * Підтримує довільну кількість режимів;
-* Картка побудована поверх штатної Home Assistant Tile Card із збереженням її геометрії, фону, hover-ефектів, розмірів, типографіки та стандартних дій;
+* Картка побудована поверх штатної Home Assistant Tile Card зі збереженням її геометрії, фону, hover-ефектів, розмірів, типографіки та стандартних дій;
 * У картці поточна яскравість візуально кодується інтенсивністю кольору;
 * Розраховує яскравість лінійно щодо максимальної потужності; округлення розрахованої яскравості до 5% можна включати більш акуратного відображення відсотків;
 * Дозволяє гнучко налаштовувати параметри, що відображаються, і зовнішній вигляд картки;
 * Дозволяє вибрати тільки датчик потужності, що відноситься до обраної розетки;
 * Дозволяє налаштувати затримку циклу знеструмлення для коректної роботи з різними моделями ламп та розеток;
 * Дозволяє налаштувати поріг потужності, нижче за який світильник вважається вимкненим;
-* Інтерфейс локалізовано для 64 локалів Home Assistant.
+* Інтерфейс локалізований для 64 локалей Home Assistant.
 
 ## 🗜 Підготовка заліза
 
@@ -41,7 +42,7 @@
 
 Цей опис є актуальним лише для власників розеток, підключених через Z2M. Іншим користувачам слід настроїти частоту оновлення в рамках своєї конфігурації:
 
-1. Відкрийте **Домашній помічник → Zigbee2MQTT**. Якщо Zigbee2MQTT немає у бічному меню, відкрийте **Установки → Програми → Zigbee2MQTT → Відкрити веб-інтерфейс**.
+1. Відкрийте **Home Assistant → Zigbee2MQTT**. Якщо Zigbee2MQTT відсутня в бічному меню, відкрийте **Налаштування → Програми → Zigbee2MQTT → Відкрити веб-інтерфейс**.
 2. Перейдіть до розділу **Пристрої**.
 3. Виберіть потрібну розетку.
 4. Відкрийте вкладку **Налаштування (специфічні)**.
@@ -55,11 +56,11 @@
 
 ℹ️ [Що таке HACS та як його встановити?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_uk.md)
 
-🚀 [Спробуйте додати репозиторій за посиланням](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Якщо ваш HA підтримує такий спосіб, натисніть **Додати** у вікні, а потім - кнопку **Завантажити** у правому нижньому кутку. Якщо інсталяція завершилася успішно, можна пропустити подальші пункти. Переходьте відразу до розділу [швидкий старт](#getting-started).
+🚀 [Спробуйте додати репозиторій за посиланням](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Якщо ваш HA підтримує такий спосіб, натисніть **Додати** у вікні, а потім - кнопку **Завантажити** у правому нижньому кутку. Якщо інсталяція завершилася успішно, можна пропустити подальші пункти. Переходьте відразу до розділу [швидкий старт](#getting-started).
 
 #### 1. Додавання репозиторію
 
-Поки репозиторій не включений до стандартного каталогу HACS, додайте його як:
+Поки що репозиторій не включено до стандартного каталогу HACS, додайте його як користувальницький:
 
 1. Відкрийте **HACS → Інтеграція**.
 2. Відкрийте меню у верхньому правому куті та виберіть **Репозиторії користувача**.
@@ -71,11 +72,11 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 
 4. Виберіть тип **Інтеграція** та натисніть **Додати**.
 
-> Додавання репозиторію лише робить інтеграцію доступною в HACS. Для встановлення необхідно окремо відкрити її картку та натиснути **Завантажити**.
+> Додавання репозиторію тільки робить інтеграцію доступною в HACS. Для встановлення необхідно окремо відкрити її картку та натиснути **Завантажити**.
 
 #### 2. Встановлення інтеграції
 
-1. Найдите в HACS: `Smart Plug Multi-Level Light`.
+1. Найдите в HACS: Smart Plug Multi-Level Light.
 2. Відкрийте інтеграцію та натисніть **Завантажити**.
 3. Після встановлення повністю перезапустіть Home Assistant.
 
@@ -107,7 +108,7 @@ custom_components/smart_plug_multilevel_light
 
 > Не копіюйте зовнішню папку репозиторію повністю в `custom_components`. Усередині `custom_components` має знаходитися безпосередньо папка `smart_plug_multilevel_light`.
 
-Картка входить до складу інтеграції, тому HACS її встановлення не потрібно. Після ручного копіювання файлів, перезапуску Home Assistant та створення першого допоміжного об'єкта інтеграція публікує JavaScript-файл картки та автоматично реєструє його в ресурсах панелі за стандартного режиму `storage`. У режимі YAML-режиму картку необхідно зареєструвати вручну, як описано нижче.
+Картка входить до складу інтеграції, тому HACS для її встановлення не потрібно. Після ручного копіювання файлів, перезапуск Home Assistant та створення першого допоміжного об'єкта інтеграція публікує JavaScript-файл картки та автоматично реєструє його в ресурсах панелі при стандартному режимі `storage`. У режимі YAML-режиму картку необхідно зареєструвати вручну, як описано нижче.
 
 <a id="getting-started"></a>
 
@@ -117,15 +118,15 @@ custom_components/smart_plug_multilevel_light
 
 1. Відкрийте **[Установки → Пристрої та служби → Допоміжне](https://my.home-assistant.io/redirect/helpers/)** та натисніть **Створити допоміжний об'єкт**.
 
-2. Виберіть **Багаторівневе освітлення Smart Plug**.
+2. Виберіть **Smart Plug Multi-Level Light**.
 
-3. Виберіть розумну розетку, до якої підключено лампу. У списку відображаються лише розетки, у яких Home Assistant бачить датчик потужності того ж пристрою.
+3. Виберіть розумну розетку, до якої підключено лампу. У списку відображаються лише розетки, у яких Home Assistant бачить датчик потужності у тому самому пристрої.
 
 4. На наступному кроці вкажіть параметри лампи:
    * **Назва світла (Light name)** - ім'я створюваної сутності, наприклад `FloorLamp`;
    * **Power sensor** — датчик мощности розетки;
 
-5. У розділі **ZUI003Z** додайте щонайменше один режим яскравості, натиснувши **Додати**.<br /> <img src="modes-edit.png" width="50%"/><br />
+5. У розділі **🔅 Режими яскравості (🔅 Brightness modes)** додайте щонайменше один режим яскравості, натиснувши **Додати**.<br /> <img src="modes-edit.png" width="50%"/><br />
    Перемкніть лампу її фізичною кнопкою, впишіть назву режиму та запустіть **Test stable power**. Після отримання стабільного значення натисніть **Застосувати**.
 
 6. Після додавання першого режиму додайте інші режими, повторюючи ці дії. У вас має вийти щось на кшталт:<br />
@@ -136,7 +137,7 @@ custom_components/smart_plug_multilevel_light
 ### 🧩 Lovelace-картка
 
 1. Відкрийте потрібну панель, увімкніть режим редагування та натисніть **Додати картку**.
-2. Виберіть **Багаторівневе освітлення Smart Plug**, вкажіть створену сутність `light` та збережіть картку.
+2. Виберіть **Smart Plug Multi-Level Light**, вкажіть створену сутність `light` та збережіть картку.
 
 Якщо картки не виявилося серед доступних, можливо, у вас використовується [YAML-режим ресурсів Lovelace](#yaml-lovelace-mode).
 
@@ -159,7 +160,7 @@ custom_components/smart_plug_multilevel_light
 
 #### Округлення яскравості до 5%
 
-Відкрийте **[Установки → Пристрої та служби → Допоміжне](https://my.home-assistant.io/redirect/helpers/)**, знайдіть створений раніше допоміжний об'єкт **Багаторівневе освітлення Smart Plug** та відкрийте його налаштування. Увімкніть або вимкніть **Round brightness to 5% (may look nicer)**.
+Відкрийте **[Установки → Пристрої та служби → Допоміжне](https://my.home-assistant.io/redirect/helpers/)**, знайдіть створений раніше допоміжний об'єкт **Smart Plug Multi-Level Light** та відкрийте його налаштування. Увімкніть або вимкніть **Round brightness to 5% (may look nicer)**.
 
 При включеному налаштуванні розрахований відсоток округляється до найближчих 5%, наприклад: 33% → 35%, 67% → 65%.
 
@@ -310,7 +311,7 @@ lovelace:
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Автоматична реєстрація виконується лише після завантаження хоча б одного налаштованого допоміжного об'єкта та лише в режимі ресурсів `storage`. Спосіб встановлення інтеграції через HACS або вручну на це не впливає.
+Автоматична реєстрація виконується лише після завантаження хоча б одного налаштованого допоміжного об'єкта та лише в режимі ресурсів `storage`. Спосіб встановлення інтеграції - через HACS або вручну – на це не впливає.
 
 Перевірте **[Налаштування → Панелі → ⋮ → Ресурси](https://my.home-assistant.io/redirect/lovelace_resources/)**. Там має бути URL:
 
@@ -337,7 +338,7 @@ lovelace:
 
 ## 🗑 Видалення
 
-1. Видаліть всі створені допоміжні об'єкти **Багаторівневе освітлення Smart Plug** через **[Установки → Пристрої та служби → Допоміжне](https://my.home-assistant.io/redirect/helpers/)**.
+1. Видаліть всі створені допоміжні об'єкти **Smart Plug Multi-Level Light** через **[Установки → Пристрої та служби → Допоміжне](https://my.home-assistant.io/redirect/helpers/)**.
 2. Видаліть інтеграцію через HACS або вручну видаліть папку:
 
 ```text
@@ -355,9 +356,9 @@ lovelace:
 
 ## 📄 Ліцензія
 
-Проект поширюється за ліцензією [З](../LICENSE).
+Проект поширюється за ліцензією [MIT](../LICENSE).
 
 <br />
 
-> \[!ПОРАДА]
+> [!TIP]
 > **Чи сподобалося рішення?** Подивіться 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_uk.md">інші мої продукти для Home Assistant</a>
