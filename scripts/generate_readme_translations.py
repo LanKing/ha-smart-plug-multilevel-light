@@ -395,9 +395,15 @@ def validate_inline_spacing(text: str, locale: str) -> None:
         issues.append("TIP callout marker was changed")
     if "[MIT](../LICENSE)" not in text:
         issues.append("MIT license label or link was changed")
-    for literal in ("Home Assistant", "HACS", "Zigbee2MQTT", "Smart Plug Multi-Level Light"):
-        if literal not in text:
-            issues.append(f"protected name is missing: {literal}")
+    source = SOURCE.read_text(encoding="utf-8")
+    for literal in PROTECTED_LITERALS:
+        if text.count(literal) != source.count(literal):
+            issues.append(
+                f"protected term count differs for {literal!r}: "
+                f"{text.count(literal)}/{source.count(literal)}"
+            )
+    if "XQZUI" in text or "XQZTECH" in text:
+        issues.append("an internal protection token remains in output")
 
     if issues:
         preview = "; ".join(issues[:10])
