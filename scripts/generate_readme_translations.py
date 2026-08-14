@@ -120,7 +120,18 @@ FRONTEND_UI = {
 }
 
 SUMMARY_RE = re.compile(r"^<summary><b>(.*?)</b></summary>$", re.MULTILINE)
-HASH_RE = re.compile(r"^<!-- markdown-translator:[a-f0-9]{64} -->\n")
+HASH_RE = re.compile(r"^<!-- markdown-translator:[a-f0-9]{64} -->\\n")
+
+PROTECTED_LITERALS = (
+    "[!TIP]",
+    "Smart Plug Multi-Level Light",
+    "Home Assistant",
+    "Zigbee2MQTT",
+    "HACS",
+    "Z2M",
+    "MIT",
+    "MDI",
+)
 
 
 def run(*args: str, cwd: Path | None = None) -> None:
@@ -179,10 +190,18 @@ def prepare_source(locale: str) -> tuple[str, dict[str, str]]:
     text = SUMMARY_RE.sub(lambda match: f"### {match.group(1)}", text)
 
     placeholders: dict[str, str] = {}
-    for index, (source, target) in enumerate(localized_ui(locale).items(), start=1):
+    index = 1
+    for source, target in localized_ui(locale).items():
         token = f"XQZUI{index:03d}XQZ"
         text = text.replace(source, token)
         placeholders[token] = target
+        index += 1
+
+    for literal in PROTECTED_LITERALS:
+        token = f"XQZTECH{index:03d}XQZ"
+        text = text.replace(literal, token)
+        placeholders[token] = literal
+        index += 1
 
     return text, placeholders
 
@@ -197,6 +216,7 @@ def finalize(
     for token, value in placeholders.items():
         text = text.replace(token, value)
 
+    text = text.replace("\\&", "&")
     text = re.sub(
         r"^### (❓.*?)$",
         lambda match: f"<summary><b>{match.group(1)}</b></summary>",
@@ -367,9 +387,17 @@ def validate_inline_spacing(text: str, locale: str) -> None:
             if before and not before.isspace() and before not in "([{<":
                 issues.append(f"line {number}: missing space before link")
 
+    if "[!TIP]" not in text or "> [!TIP]" not in text:
+        issues.append("TIP callout marker was changed")
+    if "[MIT](https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/LICENSE)" not in text:
+        issues.append("MIT license label or link was changed")
+    for literal in ("Home Assistant", "HACS", "Zigbee2MQTT", "Smart Plug Multi-Level Light"):
+        if literal not in text:
+            issues.append(f"protected name is missing: {literal}")
+
     if issues:
         preview = "; ".join(issues[:10])
-        raise RuntimeError(f"Inline Markdown spacing failed for {locale}: {preview}")
+        raise RuntimeError(f"Translated README validation failed for {locale}: {preview}")
 
 def translate_one(
     locale: str,
@@ -422,6 +450,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--translator-dir", type=Path, required=True)
     parser.add_argument("--overwrite", action="store_true")
+    parser.add_argument("--locale", action="append", dest="locales")
     args = parser.parse_args()
 
     switchers = load_switcher_module()
@@ -433,7 +462,15 @@ def main() -> int:
         "41898282+github-actions[bot]@users.noreply.github.com",
     )
 
+    selected = set(args.locales or [])
+    known = {locale for locale, _, _ in LANGUAGES}
+    unknown = selected - known
+    if unknown:
+        raise SystemExit(f"Unknown README locales: {sorted(unknown)}")
+
     for locale, provider_locale, language_name in LANGUAGES:
+        if selected and locale not in selected:
+            continue
         translate_one(
             locale,
             provider_locale,
