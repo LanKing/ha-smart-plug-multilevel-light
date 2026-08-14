@@ -10,7 +10,7 @@
 
 **✨ Omadused ja funktsioonid:**
 
-* Loob koduabilise olemi`light`ühildub automaatika, skriptide ja standardse HA liidesega;
+* Loob koduabilise olemi `light`ühildub automaatika, skriptide ja standardse HA liidesega;
 * Lülitab lambi õigesti sisse, olenemata sellest, kuidas see välja lülitati: kui toide lülitati välja nutika pistikupesa kaudu, lülitab see selle lihtsalt sisse; kui lamp lülitati oma nupuga välja, kui pistikupesa oli sisse lülitatud, teostab see voolu väljalülitamise ja uuesti sisselülitamise tsükli;
 * Määrab automaatselt lambi praeguse töörežiimi, lähtudes tegelikult mõõdetud stabiilsest võimsusest;
 * Sellel on lihtne konfiguraator, milles kasutaja nimetab järjestikku oma lambi toetatavaid režiime ja süsteem õpib, määrates igas režiimis stabiilse võimsuse;
@@ -33,7 +33,7 @@ Teil on vaja:
 1. Nutikas pistikupesa, mis peaks pakkuma HA-le võimsuse juhtimist (lülitit) ja võimsuse mõõtmist (sensor seadme\_klassiga: toide). Mõlemad olemid peavad kuuluma samasse seadmesse ja olema lubatud.
 2. Rumal tuli, mis lülitub automaatselt sisse, kui see on ühendatud ja millel on mitu heleduse seadet täielikuks nautimiseks.
 
-> Ma kasutasin pistikupesa[Tuya TS011F (Girieri korpuses)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Ütlen, et katsete alguses ei sobinud Girieri seeria pistikupesad ebatäpsete mõõtmiste tõttu, aga see mudel sobis, kuigi oli ka Girieri korpuses.
+> Ma kasutasin pistikupesa [Tuya TS011F (Girieri korpuses)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Ütlen, et katsete alguses ei sobinud Girieri seeria pistikupesad ebatäpsete mõõtmiste tõttu, aga see mudel sobis, kuigi oli ka Girieri korpuses.
 
 ### 👨‍🔬 Oluline säte, mille rakendasin oma pistikupesas:
 
@@ -41,11 +41,11 @@ Teil on vaja:
 
 See kirjeldus kehtib ainult Z2M kaudu ühendatud pistikupesade omanikele. Teised kasutajad peaksid värskendussagedust oma konfiguratsioonis reguleerima:
 
-1. Avatud**Koduassistent → Zigbee2MQTT**. Kui Zigbee2MQTT pole külgmenüüs, avage**Seaded → Rakendused → Zigbee2MQTT → Ava veebiliides**.
-2. Mine jaotisse**Seadmed**.
+1. Avatud **Koduassistent → Zigbee2MQTT**. Kui Zigbee2MQTT pole külgmenüüs, avage **Seaded → Rakendused → Zigbee2MQTT → Ava veebiliides**.
+2. Mine jaotisse **Seadmed**.
 3. Valige vajalik pistikupesa.
-4. Avage vahekaart**Seaded (konkreetsed)**.
-5. Muutused**Mõõtmise küsitluse intervall**1 s peal.
+4. Avage vahekaart **Seaded (konkreetsed)**.
+5. Muutused **Mõõtmise küsitluse intervall** 1 s peal.
 
 <a id="installation"></a>
 
@@ -53,37 +53,37 @@ See kirjeldus kehtib ainult Z2M kaudu ühendatud pistikupesade omanikele. Teised
 
 ### 🛍 Paigaldamine HACS-i kaudu
 
-ℹ️[Mis on HACS ja kuidas seda installida?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_et.md)
+ℹ️ [Mis on HACS ja kuidas seda installida?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_et.md)
 
-🚀[Proovige lingil hoidla lisada](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Kui teie HA toetab seda meetodit, klõpsake nuppu**Lisa**avanevas aknas ja seejärel nuppu**Laadi alla**paremas alanurgas. Kui installimine lõppes edukalt, võite edasised sammud vahele jätta. Liikuge otse jaotisse[kiire algus](#getting-started).
+🚀 [Proovige lingil hoidla lisada](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Kui teie HA toetab seda meetodit, klõpsake nuppu **Lisa** avanevas aknas ja seejärel nuppu **Laadi alla** paremas alanurgas. Kui installimine lõppes edukalt, võite edasised sammud vahele jätta. Liikuge otse jaotisse [kiire algus](#getting-started).
 
 #### 1. Hoidla lisamine
 
 Kuigi hoidla ei sisaldu standardses HACS-kataloogis, lisage see kohandatud kataloogina:
 
-1. Avatud**HACS → Integratsioonid**.
-2. Avage paremas ülanurgas menüü ja valige**Kohandatud hoidlad**.
+1. Avatud **HACS → Integratsioonid**.
+2. Avage paremas ülanurgas menüü ja valige **Kohandatud hoidlad**.
 3. Lisa:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Valige tüüp**Integratsioon**ja vajutage**Lisa**.
+4. Valige tüüp **Integratsioon** ja vajutage **Lisa**.
 
-> Hoidla lisamine muudab integratsiooni kättesaadavaks ainult HACS-is. Installimiseks peate selle kaardi eraldi avama ja klõpsama**Laadi alla**.
+> Hoidla lisamine muudab integratsiooni kättesaadavaks ainult HACS-is. Installimiseks peate selle kaardi eraldi avama ja klõpsama **Laadi alla**.
 
 #### 2. Integratsiooni paigaldamine
 
-1. Otsi HACS-ist:`Smart Plug Multi-Level Light`.
-2. Avage integreerimine ja klõpsake nuppu**Laadi alla**.
+1. Otsi HACS-ist: `Smart Plug Multi-Level Light`.
+2. Avage integreerimine ja klõpsake nuppu **Laadi alla**.
 3. Pärast installimist taaskäivitage Home Assistant täielikult.
 
 <a id="manual-installation"></a>
 
 ### 🧑‍💻 Paigaldamine ilma HACS-ita
 
-1. Hoidla lehel klõpsake nuppu**Kood → Laadi ZIP alla**.
+1. Hoidla lehel klõpsake nuppu **Kood → Laadi ZIP alla**.
 2. Pakkige arhiiv lahti.
 3. Kopeerige kaust:
 
@@ -97,7 +97,7 @@ koduabilise konfiguratsioonikataloogi:
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Lõplik failitee`manifest.json`peaks välja nägema selline:
+Lõplik failitee `manifest.json` peaks välja nägema selline:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
@@ -105,9 +105,9 @@ Lõplik failitee`manifest.json`peaks välja nägema selline:
 
 4. Taaskäivitage Home Assistant täielikult.
 
-> Ärge kopeerige kogu välise hoidla kausta`custom_components`. Sees`custom_components`kaust peab asuma otse`smart_plug_multilevel_light`.
+> Ärge kopeerige kogu välise hoidla kausta `custom_components`. Sees `custom_components` kaust peab asuma otse `smart_plug_multilevel_light`.
 
-Kaart on integratsiooniga kaasas, seega pole HACS selle installimiseks vajalik. Pärast failide käsitsi kopeerimist, Home Assistanti taaskäivitamist ja esimese abiobjekti loomist avaldab integratsioon JavaScripti kaardi faili ja registreerib selle standardrežiimis automaatselt paneeliressurssidega`storage`. YAML-i ressursirežiimis tuleb kaart registreerida käsitsi, nagu allpool kirjeldatud.
+Kaart on integratsiooniga kaasas, seega pole HACS selle installimiseks vajalik. Pärast failide käsitsi kopeerimist, Home Assistanti taaskäivitamist ja esimese abiobjekti loomist avaldab integratsioon JavaScripti kaardi faili ja registreerib selle standardrežiimis automaatselt paneeliressurssidega `storage`. YAML-i ressursirežiimis tuleb kaart registreerida käsitsi, nagu allpool kirjeldatud.
 
 <a id="getting-started"></a>
 
@@ -115,50 +115,51 @@ Kaart on integratsiooniga kaasas, seega pole HACS selle installimiseks vajalik. 
 
 ### 🛠 Konfiguratsioon
 
-1. Avatu&#x64;**[Seaded → Seadmed ja teenused → Tarvikud](https://my.home-assistant.io/redirect/helpers/)**&#x6A;a vajutage**Abiobjekti loomine**.
+1. Avatud **[Seaded → Seadmed ja teenused → Tarvikud](https://my.home-assistant.io/redirect/helpers/)** ja vajutage **Abiobjekti loomine**.
 
-2. Valige**Smart Plug mitmetasandiline valgusti**.
+2. Valige **Smart Plug mitmetasandiline valgusti**.
 
 3. Valige nutikas pistik, millega lamp on ühendatud. Loendis kuvatakse ainult pistikupesad, kus Home Assistant näeb samas seadmes toiteandurit.
 
 4. Järgmises etapis määrake lambi parameetrid:
-   * **Valguse nimi (Light name)**— näiteks loodava üksuse nimi`FloorLamp`;
-   * **Power sensor**- pistikupesa võimsusandur;
+   * **Valguse nimi (Light name)** — näiteks loodava üksuse nimi `FloorLamp`;
+   * **Power sensor** - pistikupesa võimsusandur;
 
-5. Jaotises**ZUI003Z**lisage klõpsuga vähemalt üks heledusrežiim**Lisa**.<br /> <img src="modes-edit.png" width="50%"/><br />Lülitage lamp selle füüsilise nupuga, sisestage režiimi nimi ja käivitage**Test stable power**. Pärast stabiilse väärtuse saamist vajutage nuppu**Rakenda**.
+5. Jaotises **ZUI003Z** lisage klõpsuga vähemalt üks heledusrežiim **Lisa**.<br /> <img src="modes-edit.png" width="50%"/><br />
+   Lülitage lamp selle füüsilise nupuga, sisestage režiimi nimi ja käivitage **Test stable power**. Pärast stabiilse väärtuse saamist vajutage nuppu **Rakenda**.
 
 6. Pärast esimese režiimi lisamist lisage neid samme korrates ülejäänud režiimid. Peaksite lõppema millegi sellisega:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Salvestage abiobjekt. Koduassistent loob uue olemi`light`, Näiteks`light.FloorLamp`.
+7. Salvestage abiobjekt. Koduassistent loob uue olemi `light`, Näiteks `light.FloorLamp`.
 
 ### 🧩 Lovelace'i kaart
 
-1. Avage soovitud paneel, lülitage redigeerimisrežiim sisse ja klõpsake nuppu**Lisage kaart**.
-2. Valige**Smart Plug mitmetasandiline valgusti**, määrake loodud olem`light`ja salvestage kaart.
+1. Avage soovitud paneel, lülitage redigeerimisrežiim sisse ja klõpsake nuppu **Lisage kaart**.
+2. Valige **Smart Plug mitmetasandiline valgusti**, määrake loodud olem `light` ja salvestage kaart.
 
-Kui kaarti saadaolevate hulgas pole, võite seda kasutada[Lovelace'i ressursi YAML-režiim](#yaml-lovelace-mode).
+Kui kaarti saadaolevate hulgas pole, võite seda kasutada [Lovelace'i ressursi YAML-režiim](#yaml-lovelace-mode).
 
 ### 🎨 Visuaalsed efektid
 
 #### Seaded kaardil
 
-Avage paneel, kus kaart asub, minge redigeerimisrežiimi ja klõpsake nuppu**Muuda**soovitud kaardil.
+Avage paneel, kus kaart asub, minge redigeerimisrežiimi ja klõpsake nuppu **Muuda** soovitud kaardil.
 
-Sektsiooni avamine**Sisu (Content)**, näete saadaolevaid seadeid:
+Sektsiooni avamine **Sisu (Content)**, näete saadaolevaid seadeid:
 
-* **Näita režiimi nime (Show mode name)**— näitab või peidab praeguse režiimi nime: näiteks Dim, Low, Medium või High.
-* **Näita protsenti (Show percentage)**— näitab või peidab arvutatud heleduse protsentides.
+* **Näita režiimi nime (Show mode name)** — näitab või peidab praeguse režiimi nime: näiteks Dim, Low, Medium või High.
+* **Näita protsenti (Show percentage)** — näitab või peidab arvutatud heleduse protsentides.
 
-Sektsiooni avamine**Interaktsioonid (Interactions)**, näete:
+Sektsiooni avamine **Interaktsioonid (Interactions)**, näete:
 
-* **Näita alati ikooni tausta (Always show icon background)**— säilitab ikooni ümber oleva ümmarguse tausta, isegi kui selle jaoks on eraldi toiming keelatud.
+* **Näita alati ikooni tausta (Always show icon background)** — säilitab ikooni ümber oleva ümmarguse tausta, isegi kui selle jaoks on eraldi toiming keelatud.
 
-> 🚫 Muide, kui teie, nagu mina, kasutate ebastandardset kaardiikooni ja välja lülitatuna pole see visuaalselt läbi kriipsutatud, soovitan oma teist pluginat -[Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_et.md), mis lahendab selle esteetilise probleemi.
+> 🚫 Muide, kui teie, nagu mina, kasutate ebastandardset kaardiikooni ja välja lülitatuna pole see visuaalselt läbi kriipsutatud, soovitan oma teist pluginat - [Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_et.md), mis lahendab selle esteetilise probleemi.
 
 #### Heleduse ümardamine kuni 5%
 
-Avatu&#x64;**[Seaded → Seadmed ja teenused → Tarvikud](https://my.home-assistant.io/redirect/helpers/)**, otsige üles varem loodud abiobjekt**Smart Plug mitmetasandiline valgusti**ja avage selle seaded. Lülitage sisse või välja**Round brightness to 5% (may look nicer)**.
+Avatud **[Seaded → Seadmed ja teenused → Tarvikud](https://my.home-assistant.io/redirect/helpers/)**, otsige üles varem loodud abiobjekt **Smart Plug mitmetasandiline valgusti** ja avage selle seaded. Lülitage sisse või välja **Round brightness to 5% (may look nicer)**.
 
 Kui säte on lubatud, ümardatakse arvutatud protsent lähima 5%ni, näiteks: 33% → 35%, 67% → 65%.
 
@@ -170,13 +171,13 @@ Saadaolevad valikud:
 
 | Parameeter | Tüüp | Vaikimisi | Sihtkoht |
 |---|---|---:|---|
-|`entity`| string | kohustuslik | integratsiooni teel loodud olem |
-|`name`| string | üksuse nimi | alistab kaardil oleva nime |
-|`icon`| string | olemi ikoon | defineerib uuesti ikooni |
-|`show_mode`| tõeväärtus |`true`| näitab režiimi nime |
-|`show_percentage`| tõeväärtus |`true`| näitab tinglikku huvi |
-|`icon_tap_action`| tegevus |`more-info`| lisatoiming ikoonil | klõpsamisel
-|`always_show_icon_background`| tõeväärtus |`false`| näitab alati ikooni ümmargust tausta, isegi kui jaoks`icon_tap_action`Valitud "Ei" |
+| `entity` | string | kohustuslik | integratsiooni teel loodud olem |
+| `name` | string | üksuse nimi | alistab kaardil oleva nime |
+| `icon` | string | olemi ikoon | defineerib uuesti ikooni |
+| `show_mode` | tõeväärtus | `true` | näitab režiimi nime |
+| `show_percentage` | tõeväärtus | `true` | näitab tinglikku huvi |
+| `icon_tap_action` | tegevus | `more-info` | lisatoiming ikoonil | klõpsamisel
+| `always_show_icon_background` | tõeväärtus | `false` | näitab alati ikooni ümmargust tausta, isegi kui jaoks `icon_tap_action` Valitud "Ei" |
 
 Täielik näide:
 
@@ -198,7 +199,7 @@ always_show_icon_background: false
 
 > Tõenäoliselt pole teil see režiim lubatud. Kui probleeme pole ja kaart töötab, jätke see samm vahele.
 
-Kui teil on`configuration.yaml`selgesõnaliselt määratud:
+Kui teil on `configuration.yaml` selgesõnaliselt määratud:
 
 ```yaml
 lovelace:
@@ -225,7 +226,7 @@ Pärast muudatust taaskäivitage Lovelace'i ressursid või taaskäivitage Home A
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Tõenäoline põhjus:**&#x76;ale tee või Koduabi ei taaskäivitatud.
+**Tõenäoline põhjus:** vale tee või Koduabi ei taaskäivitatud.
 
 Kontrollige faili saadavust:
 
@@ -233,7 +234,7 @@ Kontrollige faili saadavust:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Seejärel taaskäivitage Home Assistant täielikult ja kontrollige logi vigade suhtes`smart_plug_multilevel_light`.
+Seejärel taaskäivitage Home Assistant täielikult ja kontrollige logi vigade suhtes `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -242,13 +243,13 @@ Seejärel taaskäivitage Home Assistant täielikult ja kontrollige logi vigade s
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-Integratsioon näitab ainult objekte`switch`seotud seadmetega, millel on ka kaasas olev andur`device_class: power`.
+Integratsioon näitab ainult objekte `switch`seotud seadmetega, millel on ka kaasas olev andur `device_class: power`.
 
-Registreerug&#x65;**[Seaded → Seadmed ja teenused → Objektid](https://my.home-assistant.io/redirect/entities/)**:
+Registreeruge **[Seaded → Seadmed ja teenused → Objektid](https://my.home-assistant.io/redirect/entities/)**:
 
-* Kas nad kuuluvad`switch`ja ühe seadme võimsusandur?
+* Kas nad kuuluvad `switch` ja ühe seadme võimsusandur?
 * Kas toiteandur on sisse lülitatud?
-* Kas see on õigesti määratud?`device_class`?
+* Kas see on õigesti määratud? `device_class`?
 * Kas sellel on numbriline olek?
 
 <hr />
@@ -258,7 +259,7 @@ Registreerug&#x65;**[Seaded → Seadmed ja teenused → Objektid](https://my.hom
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Pärast pistikupesa valimist kontrollib integratsioon uuesti võimsusanduri olemasolu. Viga ilmneb siis, kui andur on eemaldatud, keelatud, teisaldatud teise seadmesse või enam ei ole`device_class: power`.
+Pärast pistikupesa valimist kontrollib integratsioon uuesti võimsusanduri olemasolu. Viga ilmneb siis, kui andur on eemaldatud, keelatud, teisaldatud teise seadmesse või enam ei ole `device_class: power`.
 
 <hr />
 </details>
@@ -267,7 +268,7 @@ Pärast pistikupesa valimist kontrollib integratsioon uuesti võimsusanduri olem
 <summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
 <br />
 
-Kontrollige võimsusanduri väärtust. Virtuaalne lamp loetakse väljalülitatuks, kui`0 W`; kui see on positiivne, tuleks see määratleda kui`on`.
+Kontrollige võimsusanduri väärtust. Virtuaalne lamp loetakse väljalülitatuks, kui `0 W`; kui see on positiivne, tuleks see määratleda kui `on`.
 
 <hr />
 </details>
@@ -276,7 +277,7 @@ Kontrollige võimsusanduri väärtust. Virtuaalne lamp loetakse väljalülitatuk
 <summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
 <br />
 
-Kontrollige, kas valitud võimsusandur ka tegelikult näitab`0 W`, kui lamp on oma nupuga välja lülitatud.
+Kontrollige, kas valitud võimsusandur ka tegelikult näitab `0 W`, kui lamp on oma nupuga välja lülitatud.
 
 <hr />
 </details>
@@ -285,7 +286,7 @@ Kontrollige, kas valitud võimsusandur ka tegelikult näitab`0 W`, kui lamp on o
 <summary><b>❓Определяется неправильный режим</b></summary>
 <br />
 
-Kontrollige**🐞 Last measures**seadetes ja atribuutides`power_history`,`power_history_modes`,`power_sample_interval_seconds`Ja`selected_power_mode`.`power_history`näitab viimati salvestatud võimsuse väärtusi,`power_history_modes`— režiim igaühe jaoks vastavalt konfigureeritud lävedele,`power_sample_interval_seconds`on perioodilise fikseerimise intervall ja`selected_power_mode`— praegune kinnitatud režiim.
+Kontrollige **🐞 Last measures** seadetes ja atribuutides `power_history`, `power_history_modes`, `power_sample_interval_seconds` Ja `selected_power_mode`. `power_history` näitab viimati salvestatud võimsuse väärtusi, `power_history_modes` — režiim igaühe jaoks vastavalt konfigureeritud lävedele, `power_sample_interval_seconds` on perioodilise fikseerimise intervall ja `selected_power_mode` — praegune kinnitatud režiim.
 
 <hr />
 </details>
@@ -296,7 +297,7 @@ Kontrollige**🐞 Last measures**seadetes ja atribuutides`power_history`,`power_
 
 See on ootuspärane käitumine. Selleks, et lühiajalised võimsuse kõikumised ei põhjustaks valesid ümberlülitusi, muudab integreerimine režiimi alles pärast seda, kui mitu järjestikust näitu vastab samale uuele režiimile.
 
-Nõutav näitude arv määratakse parameetriga**Consecutive readings to switch**ja vaikimisi`5`. Perioodilisi mõõtmisi tehakse kord sekundis ja anduri oleku muutusi töödeldakse koheselt. Kui testimise ajal vastab väärtus teisele režiimile, algab pöördloendus uuesti.
+Nõutav näitude arv määratakse parameetriga **Consecutive readings to switch** ja vaikimisi `5`. Perioodilisi mõõtmisi tehakse kord sekundis ja anduri oleku muutusi töödeldakse koheselt. Kui testimise ajal vastab väärtus teisele režiimile, algab pöördloendus uuesti.
 
 Kuni kinnitamiseni säilitab integreerimine eelmise režiimi. Tänu sellele ei lülitu kaart režiimide vahel vaheväärtuste tõttu, mis tekivad lambi vahetamisel, selle võimsuse stabiliseerimisel või andurite näitude väikeste kõikumiste tõttu.
 
@@ -309,15 +310,15 @@ Näitude arvu vähendamine kiirendab uue režiimi kuvamist, kuid muudab tuvastam
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Automaatne registreerimine toimub alles pärast vähemalt ühe konfigureeritud abiobjekti laadimist ja ainult ressursirežiimis`storage`. Integratsiooni installimise meetod - HACS-i kaudu või käsitsi - seda ei mõjuta.
+Automaatne registreerimine toimub alles pärast vähemalt ühe konfigureeritud abiobjekti laadimist ja ainult ressursirežiimis `storage`. Integratsiooni installimise meetod - HACS-i kaudu või käsitsi - seda ei mõjuta.
 
-Kontrollig&#x65;**[Seaded → Paneelid → ⋮ → Ressursid](https://my.home-assistant.io/redirect/lovelace_resources/)**. URL peaks seal olema:
+Kontrollige **[Seaded → Paneelid → ⋮ → Ressursid](https://my.home-assistant.io/redirect/lovelace_resources/)**. URL peaks seal olema:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-YAML-režiimis[lisage ressurss käsitsi](#yaml-lovelace-mode).
+YAML-režiimis [lisage ressurss käsitsi](#yaml-lovelace-mode).
 
 <hr />
 </details>
@@ -336,14 +337,14 @@ YAML-režiimis[lisage ressurss käsitsi](#yaml-lovelace-mode).
 
 ## 🗑 Eemaldamine
 
-1. Kustutage kõik loodud abiobjektid**Smart Plug mitmetasandiline valgusti**läb&#x69;**[Seaded → Seadmed ja teenused → Tarvikud](https://my.home-assistant.io/redirect/helpers/)**.
+1. Kustutage kõik loodud abiobjektid **Smart Plug mitmetasandiline valgusti** läbi **[Seaded → Seadmed ja teenused → Tarvikud](https://my.home-assistant.io/redirect/helpers/)**.
 2. Eemaldage integratsioon HACS-i kaudu või kustutage kaust käsitsi:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Kontrollig&#x65;**[Seaded → Paneelid → ⋮ → Ressursid](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x6A;a kustutage käsitsi kaardiressurss, kui see jääb alles:
+3. Kontrollige **[Seaded → Paneelid → ⋮ → Ressursid](https://my.home-assistant.io/redirect/lovelace_resources/)** ja kustutage käsitsi kaardiressurss, kui see jääb alles:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +355,9 @@ YAML-režiimis[lisage ressurss käsitsi](#yaml-lovelace-mode).
 
 ## 📄 Litsents
 
-Projekti levitatakse litsentsi alusel[KOOS](../LICENSE).
+Projekti levitatakse litsentsi alusel [KOOS](../LICENSE).
 
 <br />
 
-> \[!VIPP]**Kas lahendus meeldis?**&#x56;aata 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_et.md">minu teised koduabilise tooted</a>
+> \[!VIPP]
+> **Kas lahendus meeldis?** Vaata 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_et.md">minu teised koduabilise tooted</a>
