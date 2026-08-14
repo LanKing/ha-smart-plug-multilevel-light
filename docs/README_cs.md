@@ -10,7 +10,7 @@
 
 **✨ Vlastnosti a vlastnosti:**
 
-* Vytvoří nativní entitu Home Assistant`light`kompatibilní s automatizacemi, skripty a standardním rozhraním HA;
+* Vytvoří nativní entitu Home Assistant `light`kompatibilní s automatizacemi, skripty a standardním rozhraním HA;
 * Správně rozsvítí lampu bez ohledu na to, jak byla vypnuta: pokud bylo napájení vypnuto prostřednictvím chytré zásuvky, jednoduše ji zapne; pokud byla lampa vypnuta vlastním tlačítkem při zapnuté zásuvce, provede cyklus deaktivace a opětovného zapnutí;
 * Automaticky určuje aktuální provozní režim lampy na základě skutečně naměřeného stabilního výkonu;
 * Má jednoduchý konfigurátor, ve kterém uživatel sekvenčně pojmenovává režimy podporované jeho lampou a systém se učí určením stabilního výkonu v každém režimu;
@@ -33,7 +33,7 @@ Budete potřebovat:
 1. Chytrá zásuvka, která by měla zajišťovat ovládání výkonu (spínač) a měření výkonu (snímač s třídou\_zařízení: napájení) HA. Obě entity musí patřit ke stejnému zařízení a být povoleny.
 2. Hloupé světlo, které se automaticky zapne po připojení a má několik nastavení jasu pro úplný požitek.
 
-> Použil jsem zásuvku[Tuya TS011F (v pouzdře Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Řeknu, že na začátku experimentů řada patic Girier kvůli nepřesnému měření neseděla, ale tento model ano, ačkoliv byl také v pouzdru Girier.
+> Použil jsem zásuvku [Tuya TS011F (v pouzdře Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Řeknu, že na začátku experimentů řada patic Girier kvůli nepřesnému měření neseděla, ale tento model ano, ačkoliv byl také v pouzdru Girier.
 
 ### 👨‍🔬 Důležité nastavení, které jsem použil ve své zásuvce:
 
@@ -41,11 +41,11 @@ Budete potřebovat:
 
 Tento popis je relevantní pouze pro majitele zásuvek připojených přes Z2M. Ostatní uživatelé by měli upravit obnovovací frekvenci v rámci své konfigurace:
 
-1. OTEVŘENO**Domácí asistent → Zigbee2MQTT**. Pokud Zigbee2MQTT není v postranní nabídce, otevřete**Nastavení → Aplikace → Zigbee2MQTT → Otevřít webové rozhraní**.
-2. Přejděte do sekce**Zařízení**.
+1. OTEVŘENO **Domácí asistent → Zigbee2MQTT**. Pokud Zigbee2MQTT není v postranní nabídce, otevřete **Nastavení → Aplikace → Zigbee2MQTT → Otevřít webové rozhraní**.
+2. Přejděte do sekce **Zařízení**.
 3. Vyberte požadovanou zásuvku.
-4. Otevřete kartu**Nastavení (konkrétní)**.
-5. Změny**Interval dotazování měření**na 1 s
+4. Otevřete kartu **Nastavení (konkrétní)**.
+5. Změny **Interval dotazování měření** na 1 s
 
 <a id="installation"></a>
 
@@ -53,37 +53,37 @@ Tento popis je relevantní pouze pro majitele zásuvek připojených přes Z2M. 
 
 ### 🛍 Instalace přes HACS
 
-ℹ️[Co je HACS a jak jej nainstalovat?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cs.md)
+ℹ️ [Co je HACS a jak jej nainstalovat?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cs.md)
 
-🚀[Zkuste přidat úložiště na odkaz](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Pokud vaše HA tuto metodu podporuje, klikněte**Přidat**v okně, které se otevře, a poté na tlačítko**Stáhnout**v pravém dolním rohu. Pokud byla instalace úspěšně dokončena, můžete další kroky přeskočit. Přejít přímo do sekce[rychlý start](#getting-started).
+🚀 [Zkuste přidat úložiště na odkaz](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Pokud vaše HA tuto metodu podporuje, klikněte **Přidat** v okně, které se otevře, a poté na tlačítko **Stáhnout** v pravém dolním rohu. Pokud byla instalace úspěšně dokončena, můžete další kroky přeskočit. Přejít přímo do sekce [rychlý start](#getting-started).
 
 #### 1. Přidání úložiště
 
 Přestože úložiště není zahrnuto ve standardním adresáři HACS, přidejte jej jako vlastní:
 
-1. OTEVŘENO**HACS → Integrace**.
-2. Otevřete nabídku v pravém horním rohu a vyberte**Vlastní úložiště**.
+1. OTEVŘENO **HACS → Integrace**.
+2. Otevřete nabídku v pravém horním rohu a vyberte **Vlastní úložiště**.
 3. Přidat:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Vyberte typ**Integrace**a stiskněte**Přidat**.
+4. Vyberte typ **Integrace** a stiskněte **Přidat**.
 
-> Přidání úložiště zpřístupní integraci pouze v HACS. Chcete-li nainstalovat, musíte samostatně otevřít jeho kartu a kliknout**Stáhnout**.
+> Přidání úložiště zpřístupní integraci pouze v HACS. Chcete-li nainstalovat, musíte samostatně otevřít jeho kartu a kliknout **Stáhnout**.
 
 #### 2. Instalace integrace
 
-1. Hledat v HACS:`Smart Plug Multi-Level Light`.
-2. Otevřete integraci a klikněte**Stáhnout**.
+1. Hledat v HACS: `Smart Plug Multi-Level Light`.
+2. Otevřete integraci a klikněte **Stáhnout**.
 3. Po instalaci úplně restartujte Home Assistant.
 
 <a id="manual-installation"></a>
 
 ### 🧑‍💻 Instalace bez HACS
 
-1. Na stránce úložiště klikněte na**Kód → Stáhnout ZIP**.
+1. Na stránce úložiště klikněte na **Kód → Stáhnout ZIP**.
 2. Rozbalte archiv.
 3. Zkopírujte složku:
 
@@ -97,7 +97,7 @@ do konfiguračního adresáře Home Assistant:
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Konečná cesta k souboru`manifest.json`by měl vypadat takto:
+Konečná cesta k souboru `manifest.json` by měl vypadat takto:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
@@ -105,9 +105,9 @@ Konečná cesta k souboru`manifest.json`by měl vypadat takto:
 
 4. Úplně restartujte Home Assistant.
 
-> Nekopírujte celou složku externího úložiště do`custom_components`. Uvnitř`custom_components`složka musí být umístěna přímo`smart_plug_multilevel_light`.
+> Nekopírujte celou složku externího úložiště do `custom_components`. Uvnitř `custom_components` složka musí být umístěna přímo `smart_plug_multilevel_light`.
 
-Karta je součástí integrace, takže k její instalaci HACS není potřeba. Po ručním zkopírování souborů, restartování Home Assistant a vytvoření prvního pomocného objektu integrace publikuje soubor karty JavaScript a automaticky jej zaregistruje do zdrojů panelu ve standardním režimu.`storage`. V režimu prostředků YAML musí být karta zaregistrována ručně, jak je popsáno níže.
+Karta je součástí integrace, takže k její instalaci HACS není potřeba. Po ručním zkopírování souborů, restartování Home Assistant a vytvoření prvního pomocného objektu integrace publikuje soubor karty JavaScript a automaticky jej zaregistruje do zdrojů panelu ve standardním režimu. `storage`. V režimu prostředků YAML musí být karta zaregistrována ručně, jak je popsáno níže.
 
 <a id="getting-started"></a>
 
@@ -115,50 +115,51 @@ Karta je součástí integrace, takže k její instalaci HACS není potřeba. Po
 
 ### 🛠 Konfigurace
 
-1. OTEVŘEN&#x4F;**[Nastavení → Zařízení a služby → Příslušenství](https://my.home-assistant.io/redirect/helpers/)**&#x61; stiskněte**Vytvořit objekt pomocníka**.
+1. OTEVŘENO **[Nastavení → Zařízení a služby → Příslušenství](https://my.home-assistant.io/redirect/helpers/)** a stiskněte **Vytvořit objekt pomocníka**.
 
-2. Vybrat**Víceúrovňové světlo Smart Plug**.
+2. Vybrat **Víceúrovňové světlo Smart Plug**.
 
 3. Vyberte chytrou zástrčku, ke které je lampa připojena. Seznam zobrazuje pouze zásuvky, kde Home Assistant vidí snímač napájení ve stejném zařízení.
 
 4. V dalším kroku nastavte parametry lampy:
-   * **Název světla (Light name)**— například název vytvářené entity`FloorLamp`;
-   * **Power sensor**- zásuvkové čidlo napájení;
+   * **Název světla (Light name)** — například název vytvářené entity `FloorLamp`;
+   * **Power sensor** - zásuvkové čidlo napájení;
 
-5. V sekci**ZUI003Z**kliknutím přidejte alespoň jeden režim jasu**Přidat**.<br /> <img src="modes-edit.png" width="50%"/><br />Přepněte lampu jejím fyzickým tlačítkem, zadejte název režimu a spusťte**Test stable power**. Po získání stabilní hodnoty stiskněte**Použít**.
+5. V sekci **ZUI003Z** kliknutím přidejte alespoň jeden režim jasu **Přidat**.<br /> <img src="modes-edit.png" width="50%"/><br />
+   Přepněte lampu jejím fyzickým tlačítkem, zadejte název režimu a spusťte **Test stable power**. Po získání stabilní hodnoty stiskněte **Použít**.
 
 6. Po přidání prvního režimu přidejte zbývající režimy opakováním těchto kroků. Měli byste skončit s něčím jako:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Uložte pomocný objekt. Home Assistant vytvoří novou entitu`light`, Například`light.FloorLamp`.
+7. Uložte pomocný objekt. Home Assistant vytvoří novou entitu `light`, Například `light.FloorLamp`.
 
 ### 🧩 Přání Lovelace
 
-1. Otevřete požadovaný panel, zapněte režim úprav a klikněte**Přidejte kartu**.
-2. Vybrat**Víceúrovňové světlo Smart Plug**, určete vytvořenou entitu`light`a kartu uložte.
+1. Otevřete požadovaný panel, zapněte režim úprav a klikněte **Přidejte kartu**.
+2. Vybrat **Víceúrovňové světlo Smart Plug**, určete vytvořenou entitu `light` a kartu uložte.
 
-Pokud karta není mezi dostupnými, možná používáte[Režim YAML zdroje Lovelace](#yaml-lovelace-mode).
+Pokud karta není mezi dostupnými, možná používáte [Režim YAML zdroje Lovelace](#yaml-lovelace-mode).
 
 ### 🎨 Vizuální efekty
 
 #### Nastavení na kartě
 
-Otevřete panel, kde se karta nachází, přejděte do režimu úprav a klikněte**Upravit**na požadované kartě.
+Otevřete panel, kde se karta nachází, přejděte do režimu úprav a klikněte **Upravit** na požadované kartě.
 
-Otevření sekce**Obsah (Content)**, uvidíte dostupná nastavení:
+Otevření sekce **Obsah (Content)**, uvidíte dostupná nastavení:
 
-* **Zobrazit název režimu (Show mode name)**— zobrazí nebo skryje název aktuálního režimu: například Tlumený, Nízký, Střední nebo Vysoký.
-* **Zobrazit procenta (Show percentage)**— zobrazí nebo skryje vypočítaný jas v procentech.
+* **Zobrazit název režimu (Show mode name)** — zobrazí nebo skryje název aktuálního režimu: například Tlumený, Nízký, Střední nebo Vysoký.
+* **Zobrazit procenta (Show percentage)** — zobrazí nebo skryje vypočítaný jas v procentech.
 
-Otevření sekce**Interakce (Interactions)**, uvidíte:
+Otevření sekce **Interakce (Interactions)**, uvidíte:
 
-* **Vždy zobrazit pozadí ikony (Always show icon background)**— zachová kulaté pozadí kolem ikony, i když je pro něj zakázána samostatná akce.
+* **Vždy zobrazit pozadí ikony (Always show icon background)** — zachová kulaté pozadí kolem ikony, i když je pro něj zakázána samostatná akce.
 
-> 🚫 Mimochodem, pokud jako já používáte nestandardní ikonku karty a ve vypnutém stavu není vizuálně přeškrtnutá, doporučuji můj jiný plugin -[Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_cs.md), která tento estetický problém řeší.
+> 🚫 Mimochodem, pokud jako já používáte nestandardní ikonku karty a ve vypnutém stavu není vizuálně přeškrtnutá, doporučuji můj jiný plugin - [Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_cs.md), která tento estetický problém řeší.
 
 #### Jas zaokrouhlený nahoru na 5 %
 
-OTEVŘEN&#x4F;**[Nastavení → Zařízení a služby → Příslušenství](https://my.home-assistant.io/redirect/helpers/)**, najděte pomocný objekt vytvořený dříve**Víceúrovňové světlo Smart Plug**a otevřete jeho nastavení. Zapnout nebo vypnout**Round brightness to 5% (may look nicer)**.
+OTEVŘENO **[Nastavení → Zařízení a služby → Příslušenství](https://my.home-assistant.io/redirect/helpers/)**, najděte pomocný objekt vytvořený dříve **Víceúrovňové světlo Smart Plug** a otevřete jeho nastavení. Zapnout nebo vypnout **Round brightness to 5% (may look nicer)**.
 
 Když je toto nastavení povoleno, vypočítané procento se zaokrouhlí na nejbližších 5 %, například: 33 % → 35 %, 67 % → 65 %.
 
@@ -170,13 +171,13 @@ Dostupné možnosti:
 
 | Parametr | Typ | Výchozí | Destinace |
 |---|---|---:|---|
-|`entity`| řetězec | povinné | entita vzniklá integrací |
-|`name`| řetězec | název entity | přepíše jméno na kartě |
-|`icon`| řetězec | ikona entity | předefinuje ikonu |
-|`show_mode`| booleovský |`true`| zobrazuje název režimu |
-|`show_percentage`| booleovský |`true`| vykazuje podmíněný zájem |
-|`icon_tap_action`| akce |`more-info`| další akce po kliknutí na ikonu |
-|`always_show_icon_background`| booleovský |`false`| vždy zobrazuje kulaté pozadí ikony, i když pro`icon_tap_action`Vybráno "Ne" |
+| `entity` | řetězec | povinné | entita vzniklá integrací |
+| `name` | řetězec | název entity | přepíše jméno na kartě |
+| `icon` | řetězec | ikona entity | předefinuje ikonu |
+| `show_mode` | booleovský | `true` | zobrazuje název režimu |
+| `show_percentage` | booleovský | `true` | vykazuje podmíněný zájem |
+| `icon_tap_action` | akce | `more-info` | další akce po kliknutí na ikonu |
+| `always_show_icon_background` | booleovský | `false` | vždy zobrazuje kulaté pozadí ikony, i když pro `icon_tap_action` Vybráno "Ne" |
 
 Celý příklad:
 
@@ -198,7 +199,7 @@ always_show_icon_background: false
 
 > S největší pravděpodobností nemáte tento režim povolený. Pokud nejsou žádné problémy a karta funguje, tento krok přeskočte.
 
-Pokud máte`configuration.yaml`explicitně nastavit:
+Pokud máte `configuration.yaml` explicitně nastavit:
 
 ```yaml
 lovelace:
@@ -225,7 +226,7 @@ Po změně restartujte prostředky Lovelace nebo restartujte Home Assistant.
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Pravděpodobná příčina:**&#x6E;esprávná cesta nebo Home Assistant nebyl restartován.
+**Pravděpodobná příčina:** nesprávná cesta nebo Home Assistant nebyl restartován.
 
 Zkontrolujte dostupnost souboru:
 
@@ -233,7 +234,7 @@ Zkontrolujte dostupnost souboru:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Poté proveďte úplný restart Home Assistant a zkontrolujte, zda protokol neobsahuje chyby`smart_plug_multilevel_light`.
+Poté proveďte úplný restart Home Assistant a zkontrolujte, zda protokol neobsahuje chyby `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -242,13 +243,13 @@ Poté proveďte úplný restart Home Assistant a zkontrolujte, zda protokol neob
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-Integrace zobrazuje pouze objekty`switch`spojené se zařízeními, která také poskytují přiložený senzor`device_class: power`.
+Integrace zobrazuje pouze objekty `switch`spojené se zařízeními, která také poskytují přiložený senzor `device_class: power`.
 
-Přihlaste s&#x65;**[Nastavení → Zařízení a služby → Objekty](https://my.home-assistant.io/redirect/entities/)**:
+Přihlaste se **[Nastavení → Zařízení a služby → Objekty](https://my.home-assistant.io/redirect/entities/)**:
 
-* Patří`switch`a snímač výkonu pro jedno zařízení?
+* Patří `switch` a snímač výkonu pro jedno zařízení?
 * Je snímač napájení zapnutý?
-* Je to specifikováno správně?`device_class`?
+* Je to specifikováno správně? `device_class`?
 * Má číselný stav?
 
 <hr />
@@ -258,7 +259,7 @@ Přihlaste s&#x65;**[Nastavení → Zařízení a služby → Objekty](https://m
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Po výběru zásuvky integrace znovu zkontroluje přítomnost snímače výkonu. K chybě dojde, pokud byl senzor odstraněn, deaktivován, přesunut do jiného zařízení nebo přestal existovat`device_class: power`.
+Po výběru zásuvky integrace znovu zkontroluje přítomnost snímače výkonu. K chybě dojde, pokud byl senzor odstraněn, deaktivován, přesunut do jiného zařízení nebo přestal existovat `device_class: power`.
 
 <hr />
 </details>
@@ -267,7 +268,7 @@ Po výběru zásuvky integrace znovu zkontroluje přítomnost snímače výkonu.
 <summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
 <br />
 
-Zkontrolujte hodnotu snímače výkonu. Virtuální lampa se považuje za vypnutou, když`0 W`; když je pozitivní, měl by být definován jako`on`.
+Zkontrolujte hodnotu snímače výkonu. Virtuální lampa se považuje za vypnutou, když `0 W`; když je pozitivní, měl by být definován jako `on`.
 
 <hr />
 </details>
@@ -276,7 +277,7 @@ Zkontrolujte hodnotu snímače výkonu. Virtuální lampa se považuje za vypnut
 <summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
 <br />
 
-Zkontrolujte, zda se vybraný snímač výkonu skutečně zobrazuje`0 W`, kdy se lampa zhasne vlastním tlačítkem.
+Zkontrolujte, zda se vybraný snímač výkonu skutečně zobrazuje `0 W`, kdy se lampa zhasne vlastním tlačítkem.
 
 <hr />
 </details>
@@ -285,7 +286,7 @@ Zkontrolujte, zda se vybraný snímač výkonu skutečně zobrazuje`0 W`, kdy se
 <summary><b>❓Определяется неправильный режим</b></summary>
 <br />
 
-Kontrola**🐞 Last measures**v nastavení a atributech`power_history`,`power_history_modes`,`power_sample_interval_seconds`A`selected_power_mode`.`power_history`zobrazuje poslední zaznamenané hodnoty výkonu,`power_history_modes`— režim pro každý z nich podle nakonfigurovaných prahových hodnot,`power_sample_interval_seconds`je interval periodické fixace a`selected_power_mode`— aktuální potvrzený režim.
+Kontrola **🐞 Last measures** v nastavení a atributech `power_history`, `power_history_modes`, `power_sample_interval_seconds` A `selected_power_mode`. `power_history` zobrazuje poslední zaznamenané hodnoty výkonu, `power_history_modes` — režim pro každý z nich podle nakonfigurovaných prahových hodnot, `power_sample_interval_seconds` je interval periodické fixace a `selected_power_mode` — aktuální potvrzený režim.
 
 <hr />
 </details>
@@ -296,7 +297,7 @@ Kontrola**🐞 Last measures**v nastavení a atributech`power_history`,`power_hi
 
 Toto je očekávané chování. Aby se zabránilo krátkodobému kolísání napájení, které způsobí falešné přepínání, integrace změní režim pouze poté, co několik po sobě jdoucích odečtů odpovídá stejnému novému režimu.
 
-Požadovaný počet odečtů je nastaven parametrem**Consecutive readings to switch**a výchozí nastavení`5`. Periodická měření se provádějí jednou za sekundu a změny stavu senzoru jsou zpracovány okamžitě. Pokud během testování hodnota odpovídá jinému režimu, odpočítávání začne znovu.
+Požadovaný počet odečtů je nastaven parametrem **Consecutive readings to switch** a výchozí nastavení `5`. Periodická měření se provádějí jednou za sekundu a změny stavu senzoru jsou zpracovány okamžitě. Pokud během testování hodnota odpovídá jinému režimu, odpočítávání začne znovu.
 
 Až do potvrzení si integrace zachovává předchozí režim. Díky tomu se karta nepřepíná mezi režimy kvůli mezihodnotám, ke kterým dochází při spínání lampy, stabilizaci jejího výkonu nebo malých výkyvech v odečtech senzorů.
 
@@ -309,15 +310,15 @@ Snížením počtu odečtů se zrychlí zobrazení nového režimu, ale detekce 
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-K automatické registraci dojde pouze po načtení alespoň jednoho nakonfigurovaného pomocného objektu a pouze v režimu zdrojů`storage`. Způsob instalace integrace - přes HACS nebo ručně - na to nemá vliv.
+K automatické registraci dojde pouze po načtení alespoň jednoho nakonfigurovaného pomocného objektu a pouze v režimu zdrojů `storage`. Způsob instalace integrace - přes HACS nebo ručně - na to nemá vliv.
 
-Kontrol&#x61;**[Nastavení → Panely → ⋮ → Zdroje](https://my.home-assistant.io/redirect/lovelace_resources/)**. Adresa URL by tam měla být:
+Kontrola **[Nastavení → Panely → ⋮ → Zdroje](https://my.home-assistant.io/redirect/lovelace_resources/)**. Adresa URL by tam měla být:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-V režimu YAML[přidat zdroj ručně](#yaml-lovelace-mode).
+V režimu YAML [přidat zdroj ručně](#yaml-lovelace-mode).
 
 <hr />
 </details>
@@ -336,14 +337,14 @@ V režimu YAML[přidat zdroj ručně](#yaml-lovelace-mode).
 
 ## 🗑 Odstranění
 
-1. Odstraňte všechny vytvořené pomocné objekty**Víceúrovňové světlo Smart Plug**pře&#x73;**[Nastavení → Zařízení a služby → Příslušenství](https://my.home-assistant.io/redirect/helpers/)**.
+1. Odstraňte všechny vytvořené pomocné objekty **Víceúrovňové světlo Smart Plug** přes **[Nastavení → Zařízení a služby → Příslušenství](https://my.home-assistant.io/redirect/helpers/)**.
 2. Odeberte integraci pomocí HACS nebo ručně odstraňte složku:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Kontrol&#x61;**[Nastavení → Panely → ⋮ → Zdroje](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x61; ručně odstraňte prostředek karty, pokud zůstane:
+3. Kontrola **[Nastavení → Panely → ⋮ → Zdroje](https://my.home-assistant.io/redirect/lovelace_resources/)** a ručně odstraňte prostředek karty, pokud zůstane:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +355,9 @@ V režimu YAML[přidat zdroj ručně](#yaml-lovelace-mode).
 
 ## 📄 Licence
 
-Projekt je distribuován pod licencí[S](../LICENSE).
+Projekt je distribuován pod licencí [S](../LICENSE).
 
 <br />
 
-> \[!TIP]**Líbilo se vám řešení?**&#x50;odívejte se 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_cs.md">mé další produkty pro Home Assistant</a>
+> \[!TIP]
+> **Líbilo se vám řešení?** Podívejte se 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_cs.md">mé další produkty pro Home Assistant</a>
