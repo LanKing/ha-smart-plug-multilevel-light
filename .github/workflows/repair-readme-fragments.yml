@@ -2,10 +2,6 @@ name: Repair translated README fragments
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/repair-readme-fragments.yml"
 
 permissions:
   contents: write
@@ -80,9 +76,9 @@ jobs:
           ]
 
           PROTECTED = {
-              "Home Assistant": "ZXQHOMEASSISTANTQXZ",
-              "icon_tap_action": "ZXQICONTAPACTIONQXZ",
-              "None": "ZXQNONEQXZ",
+              "Home Assistant": "731950731950",
+              "icon_tap_action": "731951731951",
+              "None": "731952731952",
           }
 
           def protect(text):
