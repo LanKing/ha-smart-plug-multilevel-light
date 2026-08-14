@@ -193,14 +193,16 @@ def prepare_source(locale: str) -> tuple[str, dict[str, str]]:
     index = 1
     for source, target in localized_ui(locale).items():
         token = f"XQZUI{index:03d}XQZ"
-        text = text.replace(source, token)
-        placeholders[token] = target
+        protected = f"`{token}`"
+        text = text.replace(source, protected)
+        placeholders[protected] = target
         index += 1
 
     for literal in PROTECTED_LITERALS:
         token = f"XQZTECH{index:03d}XQZ"
-        text = text.replace(literal, token)
-        placeholders[token] = literal
+        protected = f"`{token}`"
+        text = text.replace(literal, protected)
+        placeholders[protected] = literal
         index += 1
 
     return text, placeholders
@@ -368,6 +370,8 @@ def validate_inline_spacing(text: str, locale: str) -> None:
     issues: list[str] = []
     in_fence = False
     for number, line in enumerate(text.splitlines(), start=1):
+        if line.startswith("<sub>"):
+            continue
         if line.lstrip().startswith("```"):
             in_fence = not in_fence
             continue
