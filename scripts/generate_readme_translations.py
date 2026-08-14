@@ -338,6 +338,39 @@ def run_round_trip_qa(
     record_round_trip_quality(locale, source, translated, back_translated)
     qa_result.unlink(missing_ok=True)
 
+
+BOLD_RE = re.compile(r"\*\*[^*\n]+\*\*")
+LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\([^)]+\)")
+
+
+def validate_inline_spacing(text: str, locale: str) -> None:
+    """Reject Markdown nodes glued to surrounding prose."""
+    issues: list[str] = []
+    in_fence = False
+    for number, line in enumerate(text.splitlines(), start=1):
+        if line.lstrip().startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+
+        for match in BOLD_RE.finditer(line):
+            before = line[match.start() - 1] if match.start() else ""
+            after = line[match.end()] if match.end() < len(line) else ""
+            if before and before.isalnum():
+                issues.append(f"line {number}: missing space before bold text")
+            if after and after.isalnum():
+                issues.append(f"line {number}: missing space after bold text")
+
+        for match in LINK_RE.finditer(line):
+            before = line[match.start() - 1] if match.start() else ""
+            if before and not before.isspace() and before not in "([{<":
+                issues.append(f"line {number}: missing space before link")
+
+    if issues:
+        preview = "; ".join(issues[:10])
+        raise RuntimeError(f"Inline Markdown spacing failed for {locale}: {preview}")
+
 def translate_one(
     locale: str,
     provider_locale: str,
@@ -373,10 +406,9 @@ def translate_one(
 
     translated = translated_path.read_text(encoding="utf-8")
     run_round_trip_qa(locale, source_text, translated, translator_dir)
-    target.write_text(
-        finalize(translated, locale, placeholders, switchers),
-        encoding="utf-8",
-    )
+    finalized = finalize(translated, locale, placeholders, switchers)
+    validate_inline_spacing(finalized, locale)
+    target.write_text(finalized, encoding="utf-8")
 
     run("git", "add", str(target.relative_to(ROOT)))
     run("git", "commit", "-m", f"Add {language_name} README translation")
