@@ -200,14 +200,10 @@ jobs:
                   f'<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_{code}.md">'
                   f"{footer[4]}</a>\n"
               )
-              text, footer_count = re.subn(
-                  r"(?ms)^## 📄 .*\Z",
-                  lambda _match: footer_block,
-                  text,
-                  count=1,
-              )
-              if footer_count != 1:
-                  raise RuntimeError(f"Footer not found in {path}")
+              footer_start = text.rfind("\\n## ")
+              if footer_start < 0:
+                  raise RuntimeError(f"Final section not found in {path}")
+              text = text[:footer_start + 1] + footer_block
 
               if text.count("<details>") != 9 or text.count("</details>") != 9:
                   raise RuntimeError(f"Details structure changed in {path}")
