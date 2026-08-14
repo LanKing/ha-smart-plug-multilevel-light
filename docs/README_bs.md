@@ -10,7 +10,7 @@
 
 **✨ Karakteristike i karakteristike:**
 
-* Kreira izvorni entitet Home Assistant`light`kompatibilan sa automatizacijama, skriptama i standardnim HA interfejsom;
+* Kreira izvorni entitet Home Assistant `light`kompatibilan sa automatizacijama, skriptama i standardnim HA interfejsom;
 * Ispravno pali lampu bez obzira na to kako je bila isključena: ako je napajanje isključeno preko pametne utičnice, jednostavno je uključuje; ako je lampa ugašena sopstvenim dugmetom dok je utičnica bila uključena, ona vrši ciklus odvajanja struje i ponovnog uključivanja;
 * Automatski određuje trenutni režim rada lampe na osnovu stvarno izmerene stabilne snage;
 * Ima jednostavan konfigurator u kojem korisnik sekvencijalno imenuje modove koje podržava njegova lampa, a sistem uči određujući stabilnu snagu u svakom modu;
@@ -33,7 +33,7 @@ trebat će vam:
 1. Pametna utičnica koja treba da obezbedi kontrolu snage (prekidač) i merenje snage (senzor sa device\_class: snaga) za HA. Oba entiteta moraju pripadati istom uređaju i biti omogućena.
 2. Glupo svjetlo koje se automatski uključuje kada se uključi i ima više postavki svjetline za potpuni užitak.
 
-> Koristio sam utičnicu[Tuya TS011F (u Girier kućištu)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Reći ću da se na početku eksperimenata Girier serija utičnica nije uklapala zbog netačnih mjerenja, ali ovaj model jeste, iako je bio i u kućištu Girier.
+> Koristio sam utičnicu [Tuya TS011F (u Girier kućištu)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Reći ću da se na početku eksperimenata Girier serija utičnica nije uklapala zbog netačnih mjerenja, ali ovaj model jeste, iako je bio i u kućištu Girier.
 
 ### 👨‍🔬 Važna postavka koju sam primijenio na svoju utičnicu:
 
@@ -41,11 +41,11 @@ trebat će vam:
 
 Ovaj opis je relevantan samo za vlasnike utičnica povezanih preko Z2M. Drugi korisnici bi trebali prilagoditi brzinu osvježavanja unutar svoje konfiguracije:
 
-1. Otvori**Home Assistant → Zigbee2MQTT**. Ako Zigbee2MQTT nije u bočnom meniju, otvorite**Postavke → Aplikacije → Zigbee2MQTT → Otvori web interfejs**.
-2. Idi na odjeljak**Uređaji**.
+1. Otvori **Home Assistant → Zigbee2MQTT**. Ako Zigbee2MQTT nije u bočnom meniju, otvorite **Postavke → Aplikacije → Zigbee2MQTT → Otvori web interfejs**.
+2. Idi na odjeljak **Uređaji**.
 3. Odaberite željenu utičnicu.
-4. Otvorite karticu**Postavke (specifične)**.
-5. Promjene**Interval anketiranja mjerenja**na 1 s.
+4. Otvorite karticu **Postavke (specifične)**.
+5. Promjene **Interval anketiranja mjerenja** na 1 s.
 
 <a id="installation"></a>
 
@@ -53,37 +53,37 @@ Ovaj opis je relevantan samo za vlasnike utičnica povezanih preko Z2M. Drugi ko
 
 ### 🛍 Instalacija putem HACS-a
 
-ℹ️[Šta je HACS i kako ga instalirati?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_bs.md)
+ℹ️ [Šta je HACS i kako ga instalirati?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_bs.md)
 
-🚀[Pokušajte dodati spremište na linku](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Ako vaš HA podržava ovu metodu, kliknite**Dodaj**u prozoru koji se otvori, a zatim dugme**Preuzmi**u donjem desnom uglu. Ako je instalacija uspješno završena, možete preskočiti daljnje korake. Preskočite pravo na dio[brzi početak](#getting-started).
+🚀 [Pokušajte dodati spremište na linku](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Ako vaš HA podržava ovu metodu, kliknite **Dodaj** u prozoru koji se otvori, a zatim dugme **Preuzmi** u donjem desnom uglu. Ako je instalacija uspješno završena, možete preskočiti daljnje korake. Preskočite pravo na dio [brzi početak](#getting-started).
 
 #### 1. Dodavanje spremišta
 
 Iako spremište nije uključeno u standardni HACS direktorij, dodajte ga kao prilagođeno:
 
-1. Otvori**HACS → Integracije**.
-2. Otvorite meni u gornjem desnom uglu i izaberite**Prilagođena spremišta**.
+1. Otvori **HACS → Integracije**.
+2. Otvorite meni u gornjem desnom uglu i izaberite **Prilagođena spremišta**.
 3. dodati:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Odaberite vrstu**Integracija**i pritisnite**Dodaj**.
+4. Odaberite vrstu **Integracija** i pritisnite **Dodaj**.
 
-> Dodavanje spremišta čini integraciju dostupnom samo u HACS-u. Da biste instalirali, potrebno je zasebno otvoriti njegovu karticu i kliknuti**Preuzmi**.
+> Dodavanje spremišta čini integraciju dostupnom samo u HACS-u. Da biste instalirali, potrebno je zasebno otvoriti njegovu karticu i kliknuti **Preuzmi**.
 
 #### 2. Instalacija integracije
 
-1. Traži u HACS-u:`Smart Plug Multi-Level Light`.
-2. Otvorite integraciju i kliknite**Preuzmi**.
+1. Traži u HACS-u: `Smart Plug Multi-Level Light`.
+2. Otvorite integraciju i kliknite **Preuzmi**.
 3. Nakon instalacije, ponovo pokrenite Home Assistant u potpunosti.
 
 <a id="manual-installation"></a>
 
 ### 🧑‍💻 Instalacija bez HACS-a
 
-1. Na stranici spremišta kliknite**Kôd → Preuzmi ZIP**.
+1. Na stranici spremišta kliknite **Kôd → Preuzmi ZIP**.
 2. Raspakujte arhivu.
 3. Kopirajte folder:
 
@@ -97,7 +97,7 @@ u direktorij konfiguracije Home Assistant:
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Konačna putanja datoteke`manifest.json`trebalo bi izgledati ovako:
+Konačna putanja datoteke `manifest.json` trebalo bi izgledati ovako:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
@@ -105,9 +105,9 @@ Konačna putanja datoteke`manifest.json`trebalo bi izgledati ovako:
 
 4. Potpuno ponovo pokrenite Home Assistant.
 
-> Nemojte kopirati cijeli folder vanjskog spremišta u`custom_components`. Unutra`custom_components`folder mora biti lociran direktno`smart_plug_multilevel_light`.
+> Nemojte kopirati cijeli folder vanjskog spremišta u `custom_components`. Unutra `custom_components` folder mora biti lociran direktno `smart_plug_multilevel_light`.
 
-Kartica je uključena u integraciju, tako da HACS nije potreban za instalaciju. Nakon ručnog kopiranja datoteka, ponovnog pokretanja Home Assistant-a i kreiranja prvog pomoćnog objekta, integracija objavljuje JavaScript karticu i automatski je registruje sa resursima panela u standardnom načinu rada`storage`. U režimu YAML resursa, kartica se mora registrovati ručno, kao što je opisano u nastavku.
+Kartica je uključena u integraciju, tako da HACS nije potreban za instalaciju. Nakon ručnog kopiranja datoteka, ponovnog pokretanja Home Assistant-a i kreiranja prvog pomoćnog objekta, integracija objavljuje JavaScript karticu i automatski je registruje sa resursima panela u standardnom načinu rada `storage`. U režimu YAML resursa, kartica se mora registrovati ručno, kao što je opisano u nastavku.
 
 <a id="getting-started"></a>
 
@@ -115,50 +115,51 @@ Kartica je uključena u integraciju, tako da HACS nije potreban za instalaciju. 
 
 ### 🛠 Konfiguracija
 
-1. Otvor&#x69;**[Podešavanja → Uređaji i usluge → Dodatna oprema](https://my.home-assistant.io/redirect/helpers/)**&#x69; pritisnite**Kreirajte pomoćni objekat**.
+1. Otvori **[Podešavanja → Uređaji i usluge → Dodatna oprema](https://my.home-assistant.io/redirect/helpers/)** i pritisnite **Kreirajte pomoćni objekat**.
 
-2. Odaberite**Smart Plug višeslojno svjetlo**.
+2. Odaberite **Smart Plug višeslojno svjetlo**.
 
 3. Odaberite pametni utikač na koji je lampa povezana. Lista prikazuje samo utičnice u kojima Home Assistant vidi senzor napajanja na istom uređaju.
 
 4. U sljedećem koraku postavite parametre lampe:
-   * **Naziv svjetla (Light name)**— naziv entiteta koji se kreira, na primjer`FloorLamp`;
-   * **Power sensor**- senzor snage utičnice;
+   * **Naziv svjetla (Light name)** — naziv entiteta koji se kreira, na primjer `FloorLamp`;
+   * **Power sensor** - senzor snage utičnice;
 
-5. U sekciji**ZUI003Z**dodajte barem jedan način osvjetljenja klikom**Dodaj**.<br /> <img src="modes-edit.png" width="50%"/><br />Uključite lampu pomoću njenog fizičkog dugmeta, unesite naziv režima i pokrenite**Test stable power**. Nakon što dobijete stabilnu vrijednost, pritisnite**Prijavite se**.
+5. U sekciji **ZUI003Z** dodajte barem jedan način osvjetljenja klikom **Dodaj**.<br /> <img src="modes-edit.png" width="50%"/><br />
+   Uključite lampu pomoću njenog fizičkog dugmeta, unesite naziv režima i pokrenite **Test stable power**. Nakon što dobijete stabilnu vrijednost, pritisnite **Prijavite se**.
 
 6. Nakon što dodate prvi način rada, dodajte preostale načine ponavljanjem ovih koraka. Trebalo bi da završite sa nečim poput:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Sačuvajte pomoćni objekat. Home Assistant će kreirati novi entitet`light`, Na primjer`light.FloorLamp`.
+7. Sačuvajte pomoćni objekat. Home Assistant će kreirati novi entitet `light`, Na primjer `light.FloorLamp`.
 
 ### 🧩 Lovelace kartica
 
-1. Otvorite željeni panel, uključite mod za uređivanje i kliknite**Dodajte karticu**.
-2. Odaberite**Smart Plug višeslojno svjetlo**, navedite kreirani entitet`light`i sačuvajte karticu.
+1. Otvorite željeni panel, uključite mod za uređivanje i kliknite **Dodajte karticu**.
+2. Odaberite **Smart Plug višeslojno svjetlo**, navedite kreirani entitet `light` i sačuvajte karticu.
 
-Ako kartica nije među dostupnim, možda koristite[Lovelace resurs YAML mod](#yaml-lovelace-mode).
+Ako kartica nije među dostupnim, možda koristite [Lovelace resurs YAML mod](#yaml-lovelace-mode).
 
 ### 🎨 Vizuelni efekti
 
 #### Postavke na kartici
 
-Otvorite panel na kojem se nalazi kartica, idite u mod za uređivanje i kliknite**Uredi**na željenoj kartici.
+Otvorite panel na kojem se nalazi kartica, idite u mod za uređivanje i kliknite **Uredi** na željenoj kartici.
 
-Otvaranje sekcije**Sadržaj (Content)**, vidjet ćete dostupne postavke:
+Otvaranje sekcije **Sadržaj (Content)**, vidjet ćete dostupne postavke:
 
-* **Prikaži naziv režima (Show mode name)**— prikazuje ili sakriva naziv trenutnog režima: na primer, Prigušeno, Nisko, Srednje ili Visoko.
-* **Prikaži procenat (Show percentage)**— prikazuje ili sakriva izračunatu osvetljenost u procentima.
+* **Prikaži naziv režima (Show mode name)** — prikazuje ili sakriva naziv trenutnog režima: na primer, Prigušeno, Nisko, Srednje ili Visoko.
+* **Prikaži procenat (Show percentage)** — prikazuje ili sakriva izračunatu osvetljenost u procentima.
 
-Otvaranje sekcije**Interakcije (Interactions)**, vidjet ćete:
+Otvaranje sekcije **Interakcije (Interactions)**, vidjet ćete:
 
-* **Uvijek prikaži pozadinu ikone (Always show icon background)**— zadržava okruglu pozadinu oko ikone, čak i ako je odvojena radnja za nju onemogućena.
+* **Uvijek prikaži pozadinu ikone (Always show icon background)** — zadržava okruglu pozadinu oko ikone, čak i ako je odvojena radnja za nju onemogućena.
 
-> 🚫 Inače, ako kao i ja koristite nestandardnu ​​ikonu kartice i kada je isključena nije vizuelno precrtana, preporučujem moj drugi dodatak -[Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_bs.md), koji rješava ovaj estetski problem.
+> 🚫 Inače, ako kao i ja koristite nestandardnu ​​ikonu kartice i kada je isključena nije vizuelno precrtana, preporučujem moj drugi dodatak - [Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_bs.md), koji rješava ovaj estetski problem.
 
 #### Zaokruživanje svjetline do 5%
 
-Otvor&#x69;**[Podešavanja → Uređaji i usluge → Dodatna oprema](https://my.home-assistant.io/redirect/helpers/)**, pronađite pomoćni objekat kreiran ranije**Smart Plug višeslojno svjetlo**i otvorite njegove postavke. Uključite ili isključite**Round brightness to 5% (may look nicer)**.
+Otvori **[Podešavanja → Uređaji i usluge → Dodatna oprema](https://my.home-assistant.io/redirect/helpers/)**, pronađite pomoćni objekat kreiran ranije **Smart Plug višeslojno svjetlo** i otvorite njegove postavke. Uključite ili isključite **Round brightness to 5% (may look nicer)**.
 
 Kada je postavka omogućena, izračunati procenat se zaokružuje na najbližih 5%, na primjer: 33% → 35%, 67% → 65%.
 
@@ -170,13 +171,13 @@ Dostupne opcije:
 
 | Parametar | Vrsta | Zadano | Odredište |
 |---|---|---:|---|
-|`entity`| string | obavezno | entitet stvoren integracijom |
-|`name`| string | naziv entiteta | zamenjuje ime na kartici |
-|`icon`| string | ikona entiteta | redefiniše ikonu |
-|`show_mode`| boolean |`true`| prikazuje naziv načina |
-|`show_percentage`| boolean |`true`| pokazuje uslovni interes |
-|`icon_tap_action`| akcija |`more-info`| dodatna radnja kada se klikne na ikonu |
-|`always_show_icon_background`| boolean |`false`| uvijek prikazuje okruglu pozadinu ikone, čak i ako je za`icon_tap_action`Odabrano "Ne" |
+| `entity` | string | obavezno | entitet stvoren integracijom |
+| `name` | string | naziv entiteta | zamenjuje ime na kartici |
+| `icon` | string | ikona entiteta | redefiniše ikonu |
+| `show_mode` | boolean | `true` | prikazuje naziv načina |
+| `show_percentage` | boolean | `true` | pokazuje uslovni interes |
+| `icon_tap_action` | akcija | `more-info` | dodatna radnja kada se klikne na ikonu |
+| `always_show_icon_background` | boolean | `false` | uvijek prikazuje okruglu pozadinu ikone, čak i ako je za `icon_tap_action` Odabrano "Ne" |
 
 Cijeli primjer:
 
@@ -198,7 +199,7 @@ always_show_icon_background: false
 
 > Najvjerovatnije nemate omogućen ovaj način rada. Ako nema problema i kartica radi, preskočite ovaj korak.
 
-Ako jesi`configuration.yaml`eksplicitno postavljeno:
+Ako jesi `configuration.yaml` eksplicitno postavljeno:
 
 ```yaml
 lovelace:
@@ -225,7 +226,7 @@ Nakon promjene, ponovo pokrenite Lovelace resurse ili ponovo pokrenite Home Assi
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Vjerovatni uzrok:**&#x70;ogrešna putanja ili Home Assistant nije ponovo pokrenut.
+**Vjerovatni uzrok:** pogrešna putanja ili Home Assistant nije ponovo pokrenut.
 
 Provjerite dostupnost fajla:
 
@@ -233,7 +234,7 @@ Provjerite dostupnost fajla:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Zatim ponovo pokrenite Home Assistant i provjerite ima li grešaka u dnevniku`smart_plug_multilevel_light`.
+Zatim ponovo pokrenite Home Assistant i provjerite ima li grešaka u dnevniku `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -242,13 +243,13 @@ Zatim ponovo pokrenite Home Assistant i provjerite ima li grešaka u dnevniku`sm
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-Integracija prikazuje samo objekte`switch`povezan s uređajima koji također imaju uključeni senzor sa`device_class: power`.
+Integracija prikazuje samo objekte `switch`povezan s uređajima koji također imaju uključeni senzor sa `device_class: power`.
 
-Prijavite s&#x65;**[Podešavanja → Uređaji i usluge → Objekti](https://my.home-assistant.io/redirect/entities/)**:
+Prijavite se **[Podešavanja → Uređaji i usluge → Objekti](https://my.home-assistant.io/redirect/entities/)**:
 
-* Da li pripadaju`switch`i senzor snage za jedan uređaj?
+* Da li pripadaju `switch` i senzor snage za jedan uređaj?
 * Da li je senzor napajanja uključen?
-* Da li je tačno navedeno?`device_class`?
+* Da li je tačno navedeno? `device_class`?
 * Ima li brojčano stanje?
 
 <hr />
@@ -258,7 +259,7 @@ Prijavite s&#x65;**[Podešavanja → Uređaji i usluge → Objekti](https://my.h
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Nakon odabira utičnice, integracija ponovo provjerava prisustvo senzora napajanja. Greška se javlja ako je senzor uklonjen, onemogućen, premješten na drugi uređaj ili je prestao`device_class: power`.
+Nakon odabira utičnice, integracija ponovo provjerava prisustvo senzora napajanja. Greška se javlja ako je senzor uklonjen, onemogućen, premješten na drugi uređaj ili je prestao `device_class: power`.
 
 <hr />
 </details>
@@ -267,7 +268,7 @@ Nakon odabira utičnice, integracija ponovo provjerava prisustvo senzora napajan
 <summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
 <br />
 
-Provjerite vrijednost senzora snage. Virtuelna lampa se smatra isključenom kada`0 W`; kada je pozitivan, treba ga definisati kao`on`.
+Provjerite vrijednost senzora snage. Virtuelna lampa se smatra isključenom kada `0 W`; kada je pozitivan, treba ga definisati kao `on`.
 
 <hr />
 </details>
@@ -276,7 +277,7 @@ Provjerite vrijednost senzora snage. Virtuelna lampa se smatra isključenom kada
 <summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
 <br />
 
-Provjerite da li se odabrani senzor snage zaista prikazuje`0 W`, kada se lampa gasi sopstvenim dugmetom.
+Provjerite da li se odabrani senzor snage zaista prikazuje `0 W`, kada se lampa gasi sopstvenim dugmetom.
 
 <hr />
 </details>
@@ -285,7 +286,7 @@ Provjerite da li se odabrani senzor snage zaista prikazuje`0 W`, kada se lampa g
 <summary><b>❓Определяется неправильный режим</b></summary>
 <br />
 
-Provjeri**🐞 Last measures**u postavkama i atributima`power_history`,`power_history_modes`,`power_sample_interval_seconds`I`selected_power_mode`.`power_history`prikazuje posljednje zabilježene vrijednosti snage,`power_history_modes`— način rada za svaki od njih prema konfiguriranim pragovima,`power_sample_interval_seconds`je interval periodične fiksacije, i`selected_power_mode`— trenutni potvrđeni način rada.
+Provjeri **🐞 Last measures** u postavkama i atributima `power_history`, `power_history_modes`, `power_sample_interval_seconds` I `selected_power_mode`. `power_history` prikazuje posljednje zabilježene vrijednosti snage, `power_history_modes` — način rada za svaki od njih prema konfiguriranim pragovima, `power_sample_interval_seconds` je interval periodične fiksacije, i `selected_power_mode` — trenutni potvrđeni način rada.
 
 <hr />
 </details>
@@ -296,7 +297,7 @@ Provjeri**🐞 Last measures**u postavkama i atributima`power_history`,`power_hi
 
 Ovo je očekivano ponašanje. Kako bi se spriječilo da kratkoročne fluktuacije snage uzrokuju lažno prebacivanje, integracija mijenja način rada samo nakon što nekoliko uzastopnih očitavanja odgovara istom novom načinu rada.
 
-Potreban broj očitavanja je postavljen parametrom**Consecutive readings to switch**i podrazumevano je na`5`. Periodična mjerenja se vrše jednom u sekundi, a promjene stanja senzora se obrađuju odmah. Ako tokom testiranja vrijednost odgovara drugom načinu rada, odbrojavanje počinje ponovo.
+Potreban broj očitavanja je postavljen parametrom **Consecutive readings to switch** i podrazumevano je na `5`. Periodična mjerenja se vrše jednom u sekundi, a promjene stanja senzora se obrađuju odmah. Ako tokom testiranja vrijednost odgovara drugom načinu rada, odbrojavanje počinje ponovo.
 
 Do potvrde, integracija zadržava prethodni način rada. Zahvaljujući tome, kartica se ne prebacuje između načina rada zbog međuvrijednosti koje se javljaju prilikom uključivanja lampe, stabilizacije njene snage ili malih fluktuacija u očitavanju senzora.
 
@@ -309,15 +310,15 @@ Smanjenje broja očitavanja ubrzava prikaz novog načina rada, ali čini detekci
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Automatska registracija se događa samo nakon učitavanja najmanje jednog konfiguriranog pomoćnog objekta i samo u načinu rada resursa`storage`. Način instaliranja integracije - putem HACS-a ili ručno - ne utiče na to.
+Automatska registracija se događa samo nakon učitavanja najmanje jednog konfiguriranog pomoćnog objekta i samo u načinu rada resursa `storage`. Način instaliranja integracije - putem HACS-a ili ručno - ne utiče na to.
 
-Provjer&#x69;**[Postavke → Paneli → ⋮ → Resursi](https://my.home-assistant.io/redirect/lovelace_resources/)**. URL bi trebao biti tamo:
+Provjeri **[Postavke → Paneli → ⋮ → Resursi](https://my.home-assistant.io/redirect/lovelace_resources/)**. URL bi trebao biti tamo:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-U YAML modu[ručno dodajte resurs](#yaml-lovelace-mode).
+U YAML modu [ručno dodajte resurs](#yaml-lovelace-mode).
 
 <hr />
 </details>
@@ -336,14 +337,14 @@ U YAML modu[ručno dodajte resurs](#yaml-lovelace-mode).
 
 ## 🗑 Uklanjanje
 
-1. Izbrišite sve kreirane pomoćne objekte**Smart Plug višeslojno svjetlo**kro&#x7A;**[Podešavanja → Uređaji i usluge → Dodatna oprema](https://my.home-assistant.io/redirect/helpers/)**.
+1. Izbrišite sve kreirane pomoćne objekte **Smart Plug višeslojno svjetlo** kroz **[Podešavanja → Uređaji i usluge → Dodatna oprema](https://my.home-assistant.io/redirect/helpers/)**.
 2. Uklonite integraciju putem HACS-a ili ručno obrišite folder:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Provjer&#x69;**[Postavke → Paneli → ⋮ → Resursi](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x69; ručno izbrišite resurs kartice ako ostane:
+3. Provjeri **[Postavke → Paneli → ⋮ → Resursi](https://my.home-assistant.io/redirect/lovelace_resources/)** i ručno izbrišite resurs kartice ako ostane:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +355,9 @@ U YAML modu[ručno dodajte resurs](#yaml-lovelace-mode).
 
 ## 📄 Licenca
 
-Projekat se distribuira pod licencom[WITH](../LICENSE).
+Projekat se distribuira pod licencom [WITH](../LICENSE).
 
 <br />
 
-> \[!SAVJET]**Da li vam se svidjelo rješenje?**&#x50;ogledajte 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_bs.md">moji drugi proizvodi za Home Assistant</a>
+> \[!SAVJET]
+> **Da li vam se svidjelo rješenje?** Pogledajte 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_bs.md">moji drugi proizvodi za Home Assistant</a>
