@@ -115,7 +115,7 @@ La carte est incluse dans l'intégration, donc HACS n'est pas nécessaire pour l
 
 ### 🛠Configuration
 
-1. Ouvri&#x72;**[Paramètres → Appareils et services → Accessoires](https://my.home-assistant.io/redirect/helpers/)**&#x65;t appuyez sur**Créer un objet d'assistance**.
+1. Ouvrir**[Paramètres → Appareils et services → Accessoires](https://my.home-assistant.io/redirect/helpers/)**et appuyez sur**Créer un objet d'assistance**.
 
 2. Sélectionner**Lumière multi-niveaux Smart Plug**.
 
@@ -158,7 +158,7 @@ Ouverture de la rubrique**Interactions**, vous verrez :
 
 #### Luminosité arrondie à 5%
 
-Ouvri&#x72;**[Paramètres → Appareils et services → Accessoires](https://my.home-assistant.io/redirect/helpers/)**, recherchez l'objet d'assistance créé précédemment**Lumière multi-niveaux Smart Plug**et ouvrez ses paramètres. Allumer ou éteindre**Round brightness to 5% (may look nicer)**.
+Ouvrir**[Paramètres → Appareils et services → Accessoires](https://my.home-assistant.io/redirect/helpers/)**, recherchez l'objet d'assistance créé précédemment**Lumière multi-niveaux Smart Plug**et ouvrez ses paramètres. Allumer ou éteindre**Round brightness to 5% (may look nicer)**.
 
 Lorsque le paramètre est activé, le pourcentage calculé est arrondi aux 5 % les plus proches, par exemple : 33 % → 35 %, 67 % → 65 %.
 
@@ -168,15 +168,15 @@ L'arrondi n'affecte que le pourcentage affiché et l'intensité visuelle de la c
 
 Options disponibles :
 
-| Paramètre | Tapez | Par défaut | Destination |
+| Paramètre | Type | Valeur par défaut | Description |
 |---|---|---:|---|
-|`entity`| chaîne | obligatoire | entité créée par intégration |
-|`name`| chaîne | nom de l'entité | remplace le nom dans la carte |
-|`icon`| chaîne | icône d'entité | redéfinit l'icône |
-|`show_mode`| booléen |`true`| affiche le nom du mode |
-|`show_percentage`| booléen |`true`| montre un intérêt conditionnel |
-|`icon_tap_action`| actions |`more-info`| action supplémentaire en cliquant sur l'icône |
-|`always_show_icon_background`| booléen |`false`| affiche toujours le fond rond de l'icône, même si pour`icon_tap_action`"Non" sélectionné |
+| `entity` | chaîne | obligatoire | entité créée par l’intégration |
+| `name` | chaîne | nom de l’entité | remplace le nom affiché sur la carte |
+| `icon` | chaîne | icône de l’entité | remplace l’icône |
+| `show_mode` | booléen | `true` | affiche le nom du mode |
+| `show_percentage` | booléen | `true` | affiche le pourcentage synthétique |
+| `icon_tap_action` | action | `more-info` | action supplémentaire lors d’un appui sur l’icône |
+| `always_show_icon_background` | booléen | `false` | affiche toujours le fond circulaire de l’icône, même si `None` est sélectionné pour `icon_tap_action` |
 
 Exemple complet :
 
@@ -222,10 +222,10 @@ Après la modification, redémarrez les ressources Lovelace ou redémarrez Home 
 ## 🧯 Dépannage
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓L’intégration n’apparaît pas dans la liste des assistants</b></summary>
 <br />
 
-**Cause probable :**&#x63;hemin incorrect ou Home Assistant n’a pas été redémarré.
+**Cause probable :**chemin incorrect ou Home Assistant n’a pas été redémarré.
 
 Vérifiez la disponibilité des fichiers :
 
@@ -239,12 +239,12 @@ Ensuite, effectuez un redémarrage complet de Home Assistant et vérifiez le jou
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓La liste des prises est vide</b></summary>
 <br />
 
 L'intégration affiche uniquement les objets`switch`associé à des appareils qui fournissent également un capteur inclus avec`device_class: power`.
 
-Enregistremen&#x74;**[Paramètres → Appareils et services → Objets](https://my.home-assistant.io/redirect/entities/)**:
+Enregistrement**[Paramètres → Appareils et services → Objets](https://my.home-assistant.io/redirect/entities/)**:
 
 * Est-ce qu'ils appartiennent`switch`et un capteur de puissance pour un appareil ?
 * Le capteur de puissance est-il allumé ?
@@ -255,7 +255,7 @@ Enregistremen&#x74;**[Paramètres → Appareils et services → Objets](https://
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓La création s’interrompt avec un message signalant l’absence de capteur de puissance</b></summary>
 <br />
 
 Après avoir sélectionné une prise, l'intégration revérifie la présence d'un capteur de puissance. L'erreur se produit si le capteur a été retiré, désactivé, déplacé vers un autre appareil ou a cessé d'avoir`device_class: power`.
@@ -264,7 +264,7 @@ Après avoir sélectionné une prise, l'intégration revérifie la présence d'u
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓La lampe est affichée comme « Éteinte » alors que la prise est allumée</b></summary>
 <br />
 
 Vérifiez la valeur du capteur de puissance. La lampe virtuelle est considérée comme éteinte lorsque`0 W`; lorsqu'il est positif, il doit être défini comme`on`.
@@ -273,7 +273,7 @@ Vérifiez la valeur du capteur de puissance. La lampe virtuelle est considérée
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓La lampe est affichée comme « Allumée » alors qu’elle est physiquement éteinte</b></summary>
 <br />
 
 Vérifiez que le capteur de puissance sélectionné affiche réellement`0 W`, lorsque la lampe est éteinte par son propre bouton.
@@ -282,7 +282,7 @@ Vérifiez que le capteur de puissance sélectionné affiche réellement`0 W`, lo
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Le mauvais mode est détecté</b></summary>
 <br />
 
 Vérifier**🐞 Last measures**dans les paramètres et les attributs`power_history`,`power_history_modes`,`power_sample_interval_seconds`Et`selected_power_mode`.`power_history`affiche les dernières valeurs de puissance enregistrées,`power_history_modes`— mode pour chacun d'eux selon des seuils configurés,`power_sample_interval_seconds`est l'intervalle de fixation périodique, et`selected_power_mode`— mode confirmé actuel.
@@ -291,7 +291,7 @@ Vérifier**🐞 Last measures**dans les paramètres et les attributs`power_histo
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Les changements de mode ne s’affichent pas immédiatement</b></summary>
 <br />
 
 Il s’agit d’un comportement attendu. Pour éviter que des fluctuations de puissance à court terme ne provoquent des commutations parasites, l'intégration ne change de mode qu'après que plusieurs lectures consécutives correspondent au même nouveau mode.
@@ -306,12 +306,12 @@ Réduire le nombre de lectures accélère l'affichage du nouveau mode, mais rend
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓La carte n’apparaît pas dans la liste</b></summary>
 <br />
 
 L'enregistrement automatique se produit uniquement après le chargement d'au moins un objet d'assistance configuré et uniquement en mode ressource`storage`. La méthode d'installation de l'intégration - via HACS ou manuellement - n'affecte pas cela.
 
-Vérifie&#x72;**[Paramètres → Panneaux → ⋮ → Ressources](https://my.home-assistant.io/redirect/lovelace_resources/)**. L'URL devrait être là :
+Vérifier**[Paramètres → Panneaux → ⋮ → Ressources](https://my.home-assistant.io/redirect/lovelace_resources/)**. L'URL devrait être là :
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -323,7 +323,7 @@ En mode YAML[ajouter une ressource manuellement](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓L’ancienne carte reste affichée après une mise à jour</b></summary>
 <br />
 
 1. Redémarrez complètement Home Assistant.
@@ -336,14 +336,14 @@ En mode YAML[ajouter une ressource manuellement](#yaml-lovelace-mode).
 
 ## 🗑 Suppression
 
-1. Supprimer tous les objets d'assistance créés**Lumière multi-niveaux Smart Plug**à traver&#x73;**[Paramètres → Appareils et services → Accessoires](https://my.home-assistant.io/redirect/helpers/)**.
+1. Supprimer tous les objets d'assistance créés**Lumière multi-niveaux Smart Plug**à travers**[Paramètres → Appareils et services → Accessoires](https://my.home-assistant.io/redirect/helpers/)**.
 2. Supprimez l'intégration via HACS ou supprimez manuellement le dossier :
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Vérifie&#x72;**[Paramètres → Panneaux → ⋮ → Ressources](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x65;t supprimez manuellement la ressource de la carte si elle reste :
+3. Vérifier**[Paramètres → Panneaux → ⋮ → Ressources](https://my.home-assistant.io/redirect/lovelace_resources/)**et supprimez manuellement la ressource de la carte si elle reste :
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +354,9 @@ En mode YAML[ajouter une ressource manuellement](#yaml-lovelace-mode).
 
 ## 📄 Licence
 
-Le projet est distribué sous licence[AVEC](../LICENSE).
+Ce projet est distribué sous la [licence MIT](../LICENSE).
 
 <br />
 
-> \[!CONSEIL]**Avez-vous aimé la solution ?**&#x52;egardez 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_fr.md">mes autres produits pour Home Assistant</a>
+> [!TIP]
+> **Cette solution vous plaît ?** Découvrez 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_fr.md">mes autres produits pour Home Assistant</a>
