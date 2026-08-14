@@ -168,15 +168,15 @@ Ronn beaflosst nëmmen de ugewisen Prozentsaz a visuell Intensitéit vun der Kaa
 
 Verfügbar Optiounen:
 
-| Parameter | Typ | Standard | Destinatioun |
+| Parameter | Typ | Default | Beschreiwung |
 |---|---|---:|---|
-|`entity`| streng | obligatoresch | Entitéit erstallt duerch Integratioun |
-|`name`| streng | Entitéit Numm | iwwerschreift den Numm op der Kaart |
-|`icon`| streng | Entitéit Ikon | nei definéiert Ikon |
-|`show_mode`| boolesch |`true`| weist Modus Numm |
-|`show_percentage`| boolesch |`true`| weist bedingt Interessi |
-|`icon_tap_action`| Aktioun |`more-info`| zousätzlech Aktioun wann Dir op d'Ikon klickt |
-|`always_show_icon_background`| boolesch |`false`| weist ëmmer de ronnen Hannergrond vun der Ikon, och wann fir`icon_tap_action`"Nee" ausgewielt |
+| `entity` | string | néideg | Entitéit erstallt duerch d'Integratioun |
+| `name` | string | Entitéit Numm | iwwerschreift den Numm op der Kaart gewisen |
+| `icon` | string | Entitéit Ikon | iwwerschreift d'Ikon |
+| `show_mode` | boolean | `true` | weist de Modusnumm |
+| `show_percentage` | boolean | `true` | weist de syntheteschen Prozentsaz |
+| `icon_tap_action` | action | `more-info` | zousätzlech Aktioun wann d'Ikon tippt gëtt |
+| `always_show_icon_background` | boolean | `false` | weist ëmmer de kreesfërmegen Ikon Hannergrond, och wann None fir icon_tap_action ausgewielt gëtt |
 
 Voll Beispill:
 
@@ -222,7 +222,7 @@ No der Ännerung, Restart Lovelace Ressourcen oder Restart Home Assistant.
 ## 🧯 Troubleshooting
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓D'Integratioun erschéngt net an der Helperlëscht</b></summary>
 <br />
 
 **Wahrscheinlech Ursaach:**&#x66;alsche Wee oder Home Assistant gouf net nei gestart.
@@ -239,7 +239,7 @@ Da maacht e komplette Restart vum Home Assistant a kontrolléiert de Log fir Fee
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓D'Pluglëscht ass eidel</b></summary>
 <br />
 
 Integratioun weist nëmmen Objeten`switch`mat Apparater assoziéiert déi och eng abegraff Sensor mat`device_class: power`.
@@ -255,7 +255,7 @@ Check a&#x6E;**[Astellungen → Apparater a Servicer → Objekter](https://my.ho
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Kreatioun hält mat engem vermësst Muecht Sensor Message</b></summary>
 <br />
 
 Nodeems Dir en Outlet gewielt hutt, kontrolléiert d'Integratioun nei op d'Präsenz vun engem Stroumsensor. De Feeler geschitt wann de Sensor geläscht, behënnert, op en aneren Apparat geplënnert ass oder net méi huet`device_class: power`.
@@ -264,7 +264,7 @@ Nodeems Dir en Outlet gewielt hutt, kontrolléiert d'Integratioun nei op d'Präs
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓D'Lampe gëtt als Off gewisen, während de Stecker op ass</b></summary>
 <br />
 
 Kontrolléiert de Power Sensor Wäert. Déi virtuell Luucht gëtt als ausgeschalt ugesinn wann`0 W`; wann positiv, et soll als definéiert ginn`on`.
@@ -273,7 +273,7 @@ Kontrolléiert de Power Sensor Wäert. Déi virtuell Luucht gëtt als ausgeschal
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓D'Lampe gëtt als On ugewisen wärend se kierperlech aus ass</b></summary>
 <br />
 
 Kontrolléiert datt de gewielte Stroumsensor tatsächlech weist`0 W`, wann d'Lampe duerch säin eegene Knäppchen ausgeschalt gëtt.
@@ -282,7 +282,7 @@ Kontrolléiert datt de gewielte Stroumsensor tatsächlech weist`0 W`, wann d'Lam
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓De falsche Modus gëtt festgestallt</b></summary>
 <br />
 
 Check**Spezifikatioune vun 🐞 Last measures**an Astellungen an Attributer`power_history`,`power_history_modes`,`power_sample_interval_seconds`An`selected_power_mode`.`power_history`weist déi lescht opgeholl Kraaftwäerter,`power_history_modes`- Modus fir jidderee vun hinnen no konfiguréierten Schwellen,`power_sample_interval_seconds`ass den Intervall vun der periodescher Fixatioun, an`selected_power_mode`- aktuell bestätegt Modus.
@@ -291,7 +291,7 @@ Check**Spezifikatioune vun 🐞 Last measures**an Astellungen an Attributer`powe
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Modus Ännerungen ginn net direkt ugewisen</b></summary>
 <br />
 
 Dëst ass erwaart Verhalen. Fir kuerzfristeg Kraaftschwankungen ze verhënneren, datt e falsche Wiessel verursaachen, ännert d'Integratioun Modus nëmmen no e puer opfolgende Liesungen entsprécht dem selwechten neie Modus.
@@ -306,7 +306,7 @@ D'Reduktioun vun der Unzuel vun de Liesungen beschleunegt den Affichage vum neie
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓D'Kaart schéngt net an der Lëscht</b></summary>
 <br />
 
 Automatesch Aschreiwung geschitt nëmmen no der Luede op d'mannst ee konfiguréiert Hëllef Objet an nëmmen am Ressource Modus`storage`. D'Methode fir d'Integratioun z'installéieren - iwwer HACS oder manuell - beaflosst dëst net.
@@ -323,7 +323,7 @@ Am YAML Modus[Ressource manuell addéieren](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Déi al Kaart gëtt nach no engem Update ugewisen</b></summary>
 <br />
 
 1. Start Home Assistant komplett nei.
@@ -354,8 +354,9 @@ Am YAML Modus[Ressource manuell addéieren](#yaml-lovelace-mode).
 
 ## 📄 Lizenz
 
-De Projet gëtt ënner Lizenz verdeelt[MAT](../LICENSE).
+Dëse Projet gëtt ënner der Lizenz [MIT](../LICENSE) verdeelt.
 
 <br />
 
-> \[!TIP]**Hutt Dir d'Léisung gär?**&#x4B;uckt 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_lb.md">meng aner Produkter fir Home Assistant</a>
+> [!TIP]
+> **Wéi dës Léisung?** Maacht e Bléck op 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_lb.md">meng aner Home Assistant Produkter</a>

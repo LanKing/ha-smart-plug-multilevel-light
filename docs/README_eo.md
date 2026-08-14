@@ -170,15 +170,15 @@ Rondiĝo nur influas la montritan procenton kaj vidan intensecon de la karto. La
 
 Disponeblaj opcioj:
 
-| Parametro | Tajpu | Defaŭlte | Celo |
+| Parametro | Tajpu | Defaŭlte | Priskribo |
 |---|---|---:|---|
-| `entity` | ŝnuro | deviga | ento kreita de integriĝo |
-| `name` | ŝnuro | nomo de ento | anstataŭigas la nomon en la karto |
-| `icon` | ŝnuro | ento-ikono | redifinas ikono |
-| `show_mode` | bulea | `true` | montras reĝimnomon |
-| `show_percentage` | bulea | `true` | montras kondiĉan intereson |
-| `icon_tap_action` | ago | `more-info` | kroma ago alklakante la piktogramon |
-| `always_show_icon_background` | bulea | `false` | ĉiam montras la rondan fonon de la ikono, eĉ se por `icon_tap_action` "Ne" elektita |
+| `entity` | string | postulata | ento kreita de la integriĝo |
+| `name` | string | nomo de ento | superregas la nomon montritan sur la karto |
+| `icon` | string | ikono de ento | superregas la ikonon |
+| `show_mode` | boolean | `true` | montras la reĝimnomon |
+| `show_percentage` | boolean | `true` | montras la sintezan procenton |
+| `icon_tap_action` | action | `more-info` | kroma ago kiam la ikono estas frapetita |
+| `always_show_icon_background` | boolean | `false` | ĉiam montras la cirklan ikonfonon, eĉ kiam None estas elektita por icon_tap_action |
 
 Plena ekzemplo:
 
@@ -224,7 +224,7 @@ Post la ŝanĝo, reŝargu Lovelace-rimedojn aŭ rekomencu Home Assistant.
 ## 🧯 Solvado de problemoj
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓La integriĝo ne aperas en la helplisto</b></summary>
 <br />
 
 **Probabla kaŭzo:** malĝusta maniero aŭ Home Assistant ne estis rekomencita.
@@ -241,7 +241,7 @@ Poste faru malfacilan rekomencon Home Assistant kaj kontrolu la protokolon por e
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓La ŝtoplisto estas malplena</b></summary>
 <br />
 
 Integriĝo nur montras objektojn `switch`asociita kun aparatoj kiuj ankaŭ provizas inkluzivita sensilo kun `device_class: power`.
@@ -257,7 +257,7 @@ Kontrolu **[Agordoj → Aparatoj kaj servoj → Objektoj](https://my.home-assist
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Kreado ĉesas kun mankanta potencosensila mesaĝo</b></summary>
 <br />
 
 Post elekto de ellasejo, la integriĝo rekontrolas la ĉeeston de potenca sensilo. La eraro okazas se la sensilo estis forigita, malŝaltita, movita al alia aparato aŭ ne plu `device_class: power`.
@@ -266,7 +266,7 @@ Post elekto de ellasejo, la integriĝo rekontrolas la ĉeeston de potenca sensil
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓La lampo montriĝas kiel Malŝaltita dum la ŝtopilo estas ŝaltita</b></summary>
 <br />
 
 Kontrolu la valoron de potenco-sensilo. La virtuala lampo estas konsiderata malŝaltita kiam `0 W`; kiam pozitive, ĝi devus esti difinita kiel `on`.
@@ -275,7 +275,7 @@ Kontrolu la valoron de potenco-sensilo. La virtuala lampo estas konsiderata mal�
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓La lampo estas montrata kiel Enŝaltita dum ĝi estas fizike malŝaltita</b></summary>
 <br />
 
 Kontrolu, ke la elektita potenco-sensilo efektive montras `0 W`, kiam la lampo estas malŝaltita per sia propra butono.
@@ -284,7 +284,7 @@ Kontrolu, ke la elektita potenco-sensilo efektive montras `0 W`, kiam la lampo e
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓La malĝusta reĝimo estas detektita</b></summary>
 <br />
 
 Kontrolu **🐞 Last measures** en agordoj kaj atributoj `power_history`, `power_history_modes`, `power_sample_interval_seconds` Kaj `selected_power_mode`. `power_history` montras la lastajn registritajn potencovalorojn, `power_history_modes` - reĝimo por ĉiu el ili laŭ agorditaj sojloj, `power_sample_interval_seconds` estas la intervalo de perioda fiksado, kaj `selected_power_mode` — nuna konfirmita reĝimo.
@@ -293,7 +293,7 @@ Kontrolu **🐞 Last measures** en agordoj kaj atributoj `power_history`, `power
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Reĝimŝanĝoj ne tuj montriĝas</b></summary>
 <br />
 
 Ĉi tio estas atendata konduto. Por malhelpi mallongperspektivajn potencfluktuojn kaŭzi falsan ŝanĝadon, la integriĝo ŝanĝas reĝimon nur post pluraj sinsekvaj valoroj egalrilatas al la sama nova reĝimo.
@@ -308,7 +308,7 @@ Redukti la nombron da legaĵoj plirapidigas la montradon de la nova reĝimo, sed
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓La karto ne aperas en la listo</b></summary>
 <br />
 
 Aŭtomata registrado okazas nur post ŝarĝo de almenaŭ unu agordita helpa objekto kaj nur en rimedreĝimo `storage`. La integriga instala metodo estas per HACS aŭ permane - ĉi tio ne efikas.
@@ -325,7 +325,7 @@ En YAML-reĝimo [aldoni rimedon permane](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓La malnova karto ankoraŭ montriĝas post ĝisdatigo</b></summary>
 <br />
 
 1. Tute rekomencu Home Assistant.
@@ -356,9 +356,9 @@ En YAML-reĝimo [aldoni rimedon permane](#yaml-lovelace-mode).
 
 ## 📄 Licenco
 
-La projekto estas distribuita sub licenco [MIT](../LICENSE).
+Ĉi tiu projekto estas distribuita sub la permesilo [MIT](../LICENSE).
 
 <br />
 
 > [!TIP]
-> **Ĉu vi ŝatis la solvon?** Rigardu 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_eo.md">miaj aliaj produktoj por Home Assistant</a>
+> **Ŝatas ĉi tiun solvon?** Rigardu 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_eo.md">miaj aliaj Home Assistant produktoj</a>

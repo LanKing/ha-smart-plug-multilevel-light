@@ -168,15 +168,15 @@ Pembulatan hanya mempengaruhi persentase yang ditampilkan dan intensitas visual 
 
 Opsi yang tersedia:
 
-| Parameter | Ketik | Bawaan | Tujuan |
+| Parameter | Ketik | Bawaan | Deskripsi |
 |---|---|---:|---|
-|`entity`| tali | wajib | entitas yang dibuat oleh integrasi |
-|`name`| tali | nama entitas | menimpa nama di kartu |
-|`icon`| tali | ikon entitas | mendefinisikan ulang ikon |
-|`show_mode`| boolean |`true`| menunjukkan nama mode |
-|`show_percentage`| boolean |`true`| menunjukkan bunga bersyarat |
-|`icon_tap_action`| tindakan |`more-info`| tindakan tambahan saat mengklik ikon |
-|`always_show_icon_background`| boolean |`false`| selalu menampilkan latar belakang ikon yang bulat, meskipun untuk`icon_tap_action`"Tidak" dipilih |
+| `entity` | string | diperlukan | entitas yang diciptakan oleh integrasi |
+| `name` | string | nama entitas | menimpa nama yang tertera pada kartu |
+| `icon` | string | ikon entitas | menimpa ikon |
+| `show_mode` | boolean | `true` | menunjukkan nama mode |
+| `show_percentage` | boolean | `true` | menunjukkan persentase sintetik |
+| `icon_tap_action` | action | `more-info` | tindakan tambahan saat ikon diketuk |
+| `always_show_icon_background` | boolean | `false` | selalu menampilkan latar belakang ikon lingkaran, meskipun None dipilih untuk icon_tap_action |
 
 Contoh lengkap:
 
@@ -222,7 +222,7 @@ Setelah perubahan, reboot sumber daya Lovelace atau mulai ulang Home Assistant.
 ## 🧯 Pemecahan masalah
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integrasi tidak muncul di daftar pembantu</b></summary>
 <br />
 
 **Kemungkinan penyebabnya:**&#x6A;alur yang salah atau Home Assistant tidak dimulai ulang.
@@ -239,7 +239,7 @@ Kemudian lakukan restart penuh Home Assistant dan periksa kesalahan pada log`sma
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Daftar steker kosong</b></summary>
 <br />
 
 Integrasi hanya menampilkan objek`switch`terkait dengan perangkat yang juga menyediakan sensor yang disertakan`device_class: power`.
@@ -255,7 +255,7 @@ Lapor masu&#x6B;**[Pengaturan → Perangkat dan layanan → Objek](https://my.ho
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Pembuatan berhenti karena pesan sensor daya hilang</b></summary>
 <br />
 
 Setelah memilih stopkontak, integrasi memeriksa kembali keberadaan sensor daya. Kesalahan terjadi jika sensor telah dilepas, dinonaktifkan, dipindahkan ke perangkat lain, atau sudah tidak ada lagi`device_class: power`.
@@ -264,7 +264,7 @@ Setelah memilih stopkontak, integrasi memeriksa kembali keberadaan sensor daya. 
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lampu ditampilkan sebagai Mati saat steker menyala</b></summary>
 <br />
 
 Periksa nilai sensor daya. Lampu virtual dianggap mati ketika`0 W`; bila positif, itu harus didefinisikan sebagai`on`.
@@ -273,7 +273,7 @@ Periksa nilai sensor daya. Lampu virtual dianggap mati ketika`0 W`; bila positif
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lampu ditampilkan dalam keadaan Hidup saat mati secara fisik</b></summary>
 <br />
 
 Periksa apakah sensor daya yang dipilih benar-benar ditampilkan`0 W`, saat lampu dimatikan dengan tombolnya sendiri.
@@ -282,7 +282,7 @@ Periksa apakah sensor daya yang dipilih benar-benar ditampilkan`0 W`, saat lampu
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Mode yang salah terdeteksi</b></summary>
 <br />
 
 Memeriksa**🐞 Last measures**dalam pengaturan dan atribut`power_history`,`power_history_modes`,`power_sample_interval_seconds`Dan`selected_power_mode`.`power_history`menunjukkan nilai daya terakhir yang tercatat,`power_history_modes`— mode untuk masing-masingnya sesuai dengan ambang batas yang dikonfigurasi,`power_sample_interval_seconds`adalah interval fiksasi periodik, dan`selected_power_mode`— mode terkonfirmasi saat ini.
@@ -291,7 +291,7 @@ Memeriksa**🐞 Last measures**dalam pengaturan dan atribut`power_history`,`powe
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Perubahan mode tidak langsung ditampilkan</b></summary>
 <br />
 
 Ini adalah perilaku yang diharapkan. Untuk mencegah fluktuasi daya jangka pendek yang menyebabkan peralihan palsu, integrasi hanya mengubah mode setelah beberapa pembacaan berturut-turut sesuai dengan mode baru yang sama.
@@ -306,7 +306,7 @@ Mengurangi jumlah pembacaan akan mempercepat tampilan mode baru, namun membuat d
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kartu tersebut tidak muncul dalam daftar</b></summary>
 <br />
 
 Pendaftaran otomatis terjadi hanya setelah memuat setidaknya satu objek pembantu yang dikonfigurasi dan hanya dalam mode sumber daya`storage`. Metode menginstal integrasi - melalui HACS atau secara manual - tidak mempengaruhi hal ini.
@@ -323,7 +323,7 @@ Dalam mode YAML[menambahkan sumber daya secara manual](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Kartu lama masih ditampilkan setelah pembaruan</b></summary>
 <br />
 
 1. Mulai ulang Home Assistant sepenuhnya.
@@ -354,8 +354,9 @@ Dalam mode YAML[menambahkan sumber daya secara manual](#yaml-lovelace-mode).
 
 ## 📄 Lisensi
 
-Proyek ini didistribusikan di bawah lisensi[DENGAN](../LICENSE).
+Proyek ini didistribusikan di bawah lisensi [MIT](../LICENSE).
 
 <br />
 
-> \[!TIP]**Apakah Anda menyukai solusinya?**&#x4C;ihat 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_id.md">produk saya yang lain untuk Home Assistant</a>
+> [!TIP]
+> **Suka solusi ini?** Lihatlah 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_id.md">produk Home Assistant saya yang lain</a>

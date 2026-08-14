@@ -168,15 +168,15 @@ custom_components/smart_plug_multilevel_light
 
 사용 가능한 옵션:
 
-| 매개변수 | 유형 | 기본값 | 목적지 |
+| 매개변수 | 유형 | 기본값 | 설명 |
 |---|---|---:|---|
-|`entity`| 문자열 | 의무적인 | 통합으로 생성된 엔터티 |
-|`name`| 문자열 | 엔터티 이름 | 카드의 이름을 무시합니다 |
-|`icon`| 문자열 | 엔터티 아이콘 | 아이콘을 재정의 |
-|`show_mode`| 부울 |`true`| 모드 이름 표시 |
-|`show_percentage`| 부울 |`true`| 조건부 관심을 보여줍니다 |
-|`icon_tap_action`| 액션 |`more-info`| 아이콘 클릭 시 추가 작업 |
-|`always_show_icon_background`| 부울 |`false`| 항상 아이콘의 둥근 배경을 표시합니다.`icon_tap_action`"아니요" 선택됨 |
+| `entity` | string | 필수 | 통합으로 생성된 엔터티 |
+| `name` | string | 엔터티 이름 | 카드에 표시된 이름보다 우선 적용됩니다. |
+| `icon` | string | 엔터티 아이콘 | 아이콘을 재정의합니다 |
+| `show_mode` | boolean | `true` | 모드 이름을 보여줍니다 |
+| `show_percentage` | boolean | `true` | 합성 비율을 보여줍니다 |
+| `icon_tap_action` | action | `more-info` | 아이콘을 탭하면 추가 동작 |
+| `always_show_icon_background` | boolean | `false` | icon_tap_action에 대해 None가 선택된 경우에도 항상 원형 아이콘 배경을 표시합니다. |
 
 전체 예:
 
@@ -222,7 +222,7 @@ lovelace:
 ## 🧯 문제 해결
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓통합이 도우미 목록에 표시되지 않습니다.</b></summary>
 <br />
 
 **예상 원인:**&#xACBD;로가 잘못되었거나 홈어시스턴트가 다시 시작되지 않았습니다.
@@ -239,7 +239,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓플러그 목록이 비어 있습니다.</b></summary>
 <br />
 
 통합에는 개체만 표시됩니다.`switch`포함된 센서도 제공하는 장치와 관련됨`device_class: power`.
@@ -255,7 +255,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓누락된 전원 센서 메시지와 함께 생성이 중지됩니다.</b></summary>
 <br />
 
 콘센트를 선택한 후 통합에서는 전원 센서가 있는지 다시 확인합니다. 센서가 제거되었거나, 비활성화되었거나, 다른 장치로 이동되었거나, 더 이상 센서가 작동하지 않는 경우 오류가 발생합니다.`device_class: power`.
@@ -264,7 +264,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓플러그가 켜져 있으면 램프가 꺼진 상태로 표시됩니다.</b></summary>
 <br />
 
 파워센서 값을 확인해보세요. 가상 램프는 다음과 같은 경우 꺼진 것으로 간주됩니다.`0 W`; 긍정적인 경우 다음과 같이 정의되어야 합니다.`on`.
@@ -273,7 +273,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓램프는 물리적으로 꺼져 있지만 켜짐으로 표시됩니다.</b></summary>
 <br />
 
 선택한 파워 센서가 실제로 표시되는지 확인하세요.`0 W`, 자체 버튼으로 램프가 꺼질 때.
@@ -282,7 +282,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓잘못된 모드가 감지되었습니다.</b></summary>
 <br />
 
 확인하다**🐞 Last measures**설정 및 속성에서`power_history`,`power_history_modes`,`power_sample_interval_seconds`그리고`selected_power_mode`.`power_history`마지막으로 기록된 전력 값을 표시합니다.`power_history_modes`— 구성된 임계값에 따른 각각의 모드,`power_sample_interval_seconds`주기적인 고정 간격이고,`selected_power_mode`— 현재 확인된 모드.
@@ -291,7 +291,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓모드 변경 사항이 즉시 표시되지 않습니다.</b></summary>
 <br />
 
 이는 예상된 동작입니다. 단기적인 전력 변동으로 인해 잘못된 스위칭이 발생하는 것을 방지하기 위해 통합은 여러 번의 연속 판독이 동일한 새 모드에 해당하는 후에만 모드를 변경합니다.
@@ -306,7 +306,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓카드가 목록에 나타나지 않습니다</b></summary>
 <br />
 
 자동 등록은 구성된 도우미 개체를 하나 이상 로드한 후에만 발생하며 리소스 모드에서만 발생합니다.`storage`. HACS를 통해 또는 수동으로 통합을 설치하는 방법은 이에 영향을 미치지 않습니다.
@@ -323,7 +323,7 @@ YAML 모드에서[수동으로 리소스 추가](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓업데이트 후에도 기존 카드가 계속 표시됩니다.</b></summary>
 <br />
 
 1. 홈어시스턴트를 완전히 다시 시작하세요.
@@ -354,8 +354,9 @@ YAML 모드에서[수동으로 리소스 추가](#yaml-lovelace-mode).
 
 ## 📄 라이센스
 
-프로젝트는 라이선스에 따라 배포됩니다.[와 함께](../LICENSE).
+이 프로젝트는 [MIT](../LICENSE) 라이센스에 따라 배포됩니다.
 
 <br />
 
-> \[!팁]**솔루션이 마음에 드셨나요?**&#xBCF4;세요 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ko.md">내 홈어시스턴트용 다른 제품</a>
+> [!TIP]
+> **이 솔루션이 마음에 드시나요?** 살펴보세요 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ko.md">내 다른 Home Assistant 제품</a>

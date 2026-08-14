@@ -168,15 +168,15 @@ Afronding heeft alleen invloed op het weergegeven percentage en de visuele inten
 
 Beschikbare opties:
 
-| Parameter | Typ | Standaard | Bestemming |
+| Parameter | Typ | Standaard | Beschrijving |
 |---|---|---:|---|
-|`entity`| tekenreeks | verplicht | entiteit gecreëerd door integratie |
-|`name`| tekenreeks | entiteitsnaam | overschrijft de naam op de kaart |
-|`icon`| tekenreeks | entiteitspictogram | herdefinieert pictogram |
-|`show_mode`| booleaans |`true`| toont modusnaam |
-|`show_percentage`| booleaans |`true`| toont voorwaardelijke rente |
-|`icon_tap_action`| actie |`more-info`| extra actie bij klikken op het icoon |
-|`always_show_icon_background`| booleaans |`false`| toont altijd de ronde achtergrond van het pictogram, ook al is dit voor`icon_tap_action`"Nee" geselecteerd |
+| `entity` | string | vereist | entiteit gecreëerd door de integratie |
+| `name` | string | entiteitsnaam | overschrijft de naam die op de kaart staat |
+| `icon` | string | entiteitspictogram | overschrijft het pictogram |
+| `show_mode` | boolean | `true` | toont de modusnaam |
+| `show_percentage` | boolean | `true` | toont het synthetische percentage |
+| `icon_tap_action` | action | `more-info` | extra actie wanneer op het pictogram wordt getikt |
+| `always_show_icon_background` | boolean | `false` | toont altijd de ronde pictogramachtergrond, zelfs wanneer None is geselecteerd voor icon_tap_action |
 
 Volledig voorbeeld:
 
@@ -222,7 +222,7 @@ Na de wijziging start u de Lovelace-bronnen opnieuw op of start u Home Assistant
 ## 🧯 Problemen oplossen
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓De integratie verschijnt niet in de helperlijst</b></summary>
 <br />
 
 **Waarschijnlijke oorzaak:**&#x6F;njuist pad of Home Assistant is niet opnieuw opgestart.
@@ -239,7 +239,7 @@ Voer vervolgens een volledige herstart van Home Assistant uit en controleer het 
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓De stekkerlijst is leeg</b></summary>
 <br />
 
 Integratie toont alleen objecten`switch`geassocieerd met apparaten die ook voorzien zijn van een meegeleverde sensor`device_class: power`.
@@ -255,7 +255,7 @@ Inchecke&#x6E;**[Instellingen → Apparaten en diensten → Objecten](https://my
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Het maken stopt met een bericht over een ontbrekende krachtsensor</b></summary>
 <br />
 
 Na het selecteren van een stopcontact controleert de integratie opnieuw op de aanwezigheid van een vermogenssensor. De fout treedt op als de sensor is verwijderd, uitgeschakeld, naar een ander apparaat is verplaatst of niet meer bestaat`device_class: power`.
@@ -264,7 +264,7 @@ Na het selecteren van een stopcontact controleert de integratie opnieuw op de aa
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓De lamp wordt weergegeven als Uit terwijl de stekker is ingeschakeld</b></summary>
 <br />
 
 Controleer de waarde van de vermogenssensor. De virtuele lamp wordt als uitgeschakeld beschouwd wanneer`0 W`; indien positief, moet het worden gedefinieerd als`on`.
@@ -273,7 +273,7 @@ Controleer de waarde van de vermogenssensor. De virtuele lamp wordt als uitgesch
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓De lamp wordt weergegeven als Aan terwijl deze fysiek uit is</b></summary>
 <br />
 
 Controleer of de geselecteerde vermogenssensor daadwerkelijk wordt weergegeven`0 W`, wanneer de lamp wordt uitgeschakeld met een eigen knop.
@@ -282,7 +282,7 @@ Controleer of de geselecteerde vermogenssensor daadwerkelijk wordt weergegeven`0
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓De verkeerde modus is gedetecteerd</b></summary>
 <br />
 
 Rekening**🐞 Last measures**in instellingen en attributen`power_history`,`power_history_modes`,`power_sample_interval_seconds`En`selected_power_mode`.`power_history`toont de laatst geregistreerde vermogenswaarden,`power_history_modes`— modus voor elk van hen volgens geconfigureerde drempels,`power_sample_interval_seconds`is het interval van periodieke fixatie, en`selected_power_mode`— huidige bevestigde modus.
@@ -291,7 +291,7 @@ Rekening**🐞 Last measures**in instellingen en attributen`power_history`,`powe
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Moduswijzigingen worden niet onmiddellijk weergegeven</b></summary>
 <br />
 
 Dit is verwacht gedrag. Om te voorkomen dat stroomfluctuaties op de korte termijn tot ongewenst schakelen leiden, verandert de integratie pas van modus nadat verschillende opeenvolgende metingen overeenkomen met dezelfde nieuwe modus.
@@ -306,7 +306,7 @@ Het verminderen van het aantal metingen versnelt de weergave van de nieuwe modus
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓De kaart verschijnt niet in de lijst</b></summary>
 <br />
 
 Automatische registratie vindt alleen plaats na het laden van ten minste één geconfigureerd helperobject en alleen in de resourcemodus`storage`. De wijze van installeren van de integratie – via HACS of handmatig – heeft hierop geen invloed.
@@ -323,7 +323,7 @@ In YAML-modus[handmatig een bron toevoegen](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓De oude kaart wordt na een update nog steeds weergegeven</b></summary>
 <br />
 
 1. Start Home Assistant volledig opnieuw op.
@@ -354,8 +354,9 @@ In YAML-modus[handmatig een bron toevoegen](#yaml-lovelace-mode).
 
 ## 📄 Licentie
 
-Het project wordt onder licentie gedistribueerd[MET](../LICENSE).
+Dit project wordt gedistribueerd onder de licentie [MIT](../LICENSE).
 
 <br />
 
-> \[!TIP]**Vond je de oplossing leuk?**&#x4B;ijk 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_nl.md">mijn andere producten voor Home Assistant</a>
+> [!TIP]
+> **Vind je deze oplossing leuk?** Kijk eens naar 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_nl.md">mijn andere Home Assistant-producten</a>

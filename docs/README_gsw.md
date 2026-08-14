@@ -168,15 +168,15 @@ Das Runden wirkt sich nur auf den angezeigten Prozentsatz und die visuelle Inten
 
 Verfügbare Optionen:
 
-| Parameter | Geben Sie | ein Standard | Ziel |
+| Parameter | Typ | Standard | Beschreibung |
 |---|---|---:|---|
-|`entity`| Zeichenfolge | obligatorisch | durch Integration erstellte Entität |
-|`name`| Zeichenfolge | Entitätsname | überschreibt den Namen in der Karte |
-|`icon`| Zeichenfolge | Entitätssymbol | definiert das Symbol neu |
-|`show_mode`| boolescher Wert |`true`| zeigt den Modusnamen | an
-|`show_percentage`| boolescher Wert |`true`| zeigt bedingtes Interesse |
-|`icon_tap_action`| Aktion |`more-info`| zusätzliche Aktion beim Klicken auf das Symbol |
-|`always_show_icon_background`| boolescher Wert |`false`| Zeigt immer den runden Hintergrund des Symbols an, auch wenn z`icon_tap_action`„Nein“ ausgewählt |
+| `entity` | string | erforderlich | Entität, die durch die Integration entsteht |
+| `name` | string | Entitätsname | überschreibt den auf der Karte angezeigten Namen |
+| `icon` | string | Entitätssymbol | überschreibt das Symbol |
+| `show_mode` | boolean | `true` | Zeigt den Modusnamen an |
+| `show_percentage` | boolean | `true` | zeigt den synthetischen Prozentsatz an |
+| `icon_tap_action` | action | `more-info` | zusätzliche Aktion, wenn auf das Symbol getippt wird |
+| `always_show_icon_background` | boolean | `false` | Zeigt immer den kreisförmigen Symbolhintergrund an, auch wenn None für icon_tap_action ausgewählt ist |
 
 Vollständiges Beispiel:
 
@@ -222,7 +222,7 @@ Starten Sie nach der Änderung die Lovelace-Ressourcen neu oder starten Sie Home
 ## 🧯 Fehlerbehebung
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Die Integration erscheint nicht in der Helferliste</b></summary>
 <br />
 
 **Wahrscheinliche Ursache:**&#x46;alscher Pfad oder Home Assistant wurde nicht neu gestartet.
@@ -239,7 +239,7 @@ Führen Sie dann einen vollständigen Neustart von Home Assistant durch und übe
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Die Steckerliste ist leer</b></summary>
 <br />
 
 Die Integration zeigt nur Objekte`switch`im Zusammenhang mit Geräten, die auch über einen integrierten Sensor verfügen`device_class: power`.
@@ -255,7 +255,7 @@ Einchecke&#x6E;**[Einstellungen → Geräte und Dienste → Objekte](https://my.
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Die Erstellung wird mit einer fehlenden Leistungssensormeldung abgebrochen</b></summary>
 <br />
 
 Nach der Auswahl einer Steckdose prüft die Integration erneut, ob ein Leistungssensor vorhanden ist. Der Fehler tritt auf, wenn der Sensor entfernt, deaktiviert, auf ein anderes Gerät verschoben wurde oder nicht mehr funktioniert`device_class: power`.
@@ -264,7 +264,7 @@ Nach der Auswahl einer Steckdose prüft die Integration erneut, ob ein Leistungs
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Die Lampe wird als ausgeschaltet angezeigt, während der Stecker eingeschaltet ist</b></summary>
 <br />
 
 Überprüfen Sie den Wert des Leistungssensors. Die virtuelle Lampe gilt als ausgeschaltet, wenn`0 W`; Wenn es positiv ist, sollte es definiert werden als`on`.
@@ -273,7 +273,7 @@ Nach der Auswahl einer Steckdose prüft die Integration erneut, ob ein Leistungs
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Die Lampe wird als „Ein“ angezeigt, während sie physisch ausgeschaltet ist</b></summary>
 <br />
 
 Überprüfen Sie, ob der ausgewählte Leistungssensor tatsächlich angezeigt wird`0 W`, wenn die Lampe über einen eigenen Knopf ausgeschaltet wird.
@@ -282,7 +282,7 @@ Nach der Auswahl einer Steckdose prüft die Integration erneut, ob ein Leistungs
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Der falsche Modus wurde erkannt</b></summary>
 <br />
 
 Überprüfen**🐞 Last measures**in Einstellungen und Attributen`power_history`,`power_history_modes`,`power_sample_interval_seconds`Und`selected_power_mode`.`power_history`zeigt die zuletzt aufgezeichneten Leistungswerte an,`power_history_modes`— Modus für jeden von ihnen gemäß den konfigurierten Schwellenwerten,`power_sample_interval_seconds`ist das Intervall der periodischen Fixierung und`selected_power_mode`— aktueller bestätigter Modus.
@@ -291,7 +291,7 @@ Nach der Auswahl einer Steckdose prüft die Integration erneut, ob ein Leistungs
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Modusänderungen werden nicht sofort angezeigt</b></summary>
 <br />
 
 Dies ist das erwartete Verhalten. Um zu verhindern, dass kurzfristige Leistungsschwankungen zu Fehlschaltungen führen, ändert die Integration den Modus erst, wenn mehrere aufeinanderfolgende Messwerte demselben neuen Modus entsprechen.
@@ -306,7 +306,7 @@ Durch die Verringerung der Anzahl der Messwerte wird die Anzeige des neuen Modus
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Die Karte erscheint nicht in der Liste</b></summary>
 <br />
 
 Die automatische Registrierung erfolgt erst nach dem Laden mindestens eines konfigurierten Hilfsobjekts und nur im Ressourcenmodus`storage`. Die Methode zur Installation der Integration – über HACS oder manuell – hat hierauf keinen Einfluss.
@@ -323,7 +323,7 @@ Im YAML-Modus[Ressource manuell hinzufügen](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Nach einem Update wird weiterhin die alte Karte angezeigt</b></summary>
 <br />
 
 1. Starten Sie Home Assistant vollständig neu.
@@ -354,8 +354,9 @@ Im YAML-Modus[Ressource manuell hinzufügen](#yaml-lovelace-mode).
 
 ## 📄 Lizenz
 
-Das Projekt wird unter Lizenz vertrieben[MIT](../LICENSE).
+Dieses Projekt wird unter der Lizenz [MIT](../LICENSE) vertrieben.
 
 <br />
 
-> \[!TIPP]**Hat Ihnen die Lösung gefallen?**&#x53;chauen Sie 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_gsw.md">meine anderen Produkte für Home Assistant</a>
+> [!TIP]
+> **Gefällt Ihnen diese Lösung?** Schauen Sie mal rein 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_gsw.md">meine anderen Home Assistant-Produkte</a>

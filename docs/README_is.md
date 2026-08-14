@@ -168,15 +168,15 @@ Námundun hefur aðeins áhrif á birta prósentu og sjónræna styrkleika korts
 
 Lausir valkostir:
 
-| Færibreyta | Tegund | Sjálfgefið | Áfangastaður |
+| Parameter | Tegund | Sjálfgefið | Lýsing |
 |---|---|---:|---|
-|`entity`| strengur | skylda | eining búin til með samþættingu |
-|`name`| strengur | nafn aðila | hnekkir nafninu á kortinu |
-|`icon`| strengur | einingartákn | endurskilgreinir táknið |
-|`show_mode`| boólska |`true`| sýnir stillingarheiti |
-|`show_percentage`| boólska |`true`| sýnir skilyrtan áhuga |
-|`icon_tap_action`| aðgerð |`more-info`| viðbótaraðgerð þegar smellt er á táknið |
-|`always_show_icon_background`| boólska |`false`| sýnir alltaf hringlaga bakgrunn táknsins, jafnvel þótt fyrir`icon_tap_action`"Nei" valið |
+| `entity` | string | krafist | eining sem er búin til við sameininguna |
+| `name` | string | nafn aðila | hnekkir nafninu sem sýnt er á kortinu |
+| `icon` | string | einingartákn | hnekkir tákninu |
+| `show_mode` | boolean | `true` | sýnir heiti stillingarinnar |
+| `show_percentage` | boolean | `true` | sýnir tilbúna prósentuna |
+| `icon_tap_action` | action | `more-info` | viðbótaraðgerð þegar ýtt er á táknið |
+| `always_show_icon_background` | boolean | `false` | sýnir alltaf hringlaga táknið bakgrunn, jafnvel þegar None er valið fyrir icon_tap_action |
 
 Fullt dæmi:
 
@@ -222,7 +222,7 @@ Eftir breytinguna skaltu endurræsa Lovelace auðlindir eða endurræsa Home Ass
 ## 🧯 Úrræðaleit
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Samþættingin birtist ekki í hjálparlistanum</b></summary>
 <br />
 
 **Líkleg orsök:**&#x72;öng slóð eða Home Assistant var ekki endurræst.
@@ -239,7 +239,7 @@ Endurræstu síðan Home Assistant að fullu og athugaðu hvort villur séu í s
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Stingalistinn er tómur</b></summary>
 <br />
 
 Sameining sýnir aðeins hluti`switch`tengt tækjum sem einnig fylgja meðfylgjandi skynjara`device_class: power`.
@@ -255,7 +255,7 @@ Innritu&#x6E;**[Stillingar → Tæki og þjónusta → Hlutir](https://my.home-a
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Sköpun hættir með skilaboðum um orkuskynjara sem vantar</b></summary>
 <br />
 
 Eftir að innstungu hefur verið valið, athugar samþættingin aftur hvort aflskynjari sé til staðar. Villan kemur upp ef skynjarinn hefur verið fjarlægður, gerður óvirkur, færður í annað tæki eða hefur ekki lengur`device_class: power`.
@@ -264,7 +264,7 @@ Eftir að innstungu hefur verið valið, athugar samþættingin aftur hvort afls
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Ljósið er sýnt sem Slökkt á meðan kveikt er á innstungunni</b></summary>
 <br />
 
 Athugaðu gildi aflskynjara. Sýndarlampinn er talinn slökktur þegar`0 W`; þegar það er jákvætt ætti það að vera skilgreint sem`on`.
@@ -273,7 +273,7 @@ Athugaðu gildi aflskynjara. Sýndarlampinn er talinn slökktur þegar`0 W`; þe
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Ljósið er sýnt sem Kveikt á meðan það er líkamlega slökkt</b></summary>
 <br />
 
 Athugaðu hvort valinn aflskynjari sýni í raun`0 W`, þegar slökkt er á lampanum með eigin hnappi.
@@ -282,7 +282,7 @@ Athugaðu hvort valinn aflskynjari sýni í raun`0 W`, þegar slökkt er á lamp
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Rangur háttur hefur fundist</b></summary>
 <br />
 
 Athugaðu**🐞 Last measures**í stillingum og eiginleikum`power_history`,`power_history_modes`,`power_sample_interval_seconds`Og`selected_power_mode`.`power_history`sýnir síðustu skráða aflgildi,`power_history_modes`— ham fyrir hvert þeirra í samræmi við stillta þröskulda,`power_sample_interval_seconds`er bil reglubundinnar festingar, og`selected_power_mode`— núverandi staðfest ham.
@@ -291,7 +291,7 @@ Athugaðu**🐞 Last measures**í stillingum og eiginleikum`power_history`,`powe
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Breytingar á stillingu birtast ekki strax</b></summary>
 <br />
 
 Þetta er væntanleg hegðun. Til að koma í veg fyrir að skammtímaaflssveiflur valdi óviðeigandi skiptum, breytir samþættingin aðeins um ham eftir nokkrar samfelldar lestur sem samsvara sömu nýju stillingunni.
@@ -306,7 +306,7 @@ Með því að fækka aflestranum flýtir fyrir birtingu nýju stillingarinnar, 
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kortið kemur ekki fram á listanum</b></summary>
 <br />
 
 Sjálfvirk skráning á sér stað aðeins eftir að hafa hlaðið að minnsta kosti einum stilltum hjálparhlut og aðeins í auðlindaham`storage`. Aðferðin við að setja upp samþættinguna - í gegnum HACS eða handvirkt - hefur ekki áhrif á þetta.
@@ -323,7 +323,7 @@ Athugað&#x75;**[Stillingar → Spjöld → ⋮ → Tilföng](https://my.home-as
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Gamla kortið birtist enn eftir uppfærslu</b></summary>
 <br />
 
 1. Endurræstu Home Assistant algjörlega.
@@ -354,8 +354,9 @@ Athugað&#x75;**[Stillingar → Spjöld → ⋮ → Tilföng](https://my.home-as
 
 ## 📄 Leyfi
 
-Verkefninu er dreift með leyfi[MEÐ](../LICENSE).
+Þessu verkefni er dreift undir [MIT](../LICENSE) leyfinu.
 
 <br />
 
-> \[!ÁBENDING]**Líkaði þér lausnin?**&#x53;jáðu 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_is.md">aðrar vörur mínar fyrir Home Assistant</a>
+> [!TIP]
+> **Eins og þessi lausn?** Skoðaðu 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_is.md">aðrar Home Assistant vörur mínar</a>

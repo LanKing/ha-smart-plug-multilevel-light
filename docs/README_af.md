@@ -170,15 +170,15 @@ Afronding beïnvloed slegs die vertoonde persentasie en visuele intensiteit van 
 
 Beskikbare opsies:
 
-| Parameter | Tik | Verstek | Bestemming |
+| Parameter | Tik | Verstek | Beskrywing |
 |---|---|---:|---|
-| `entity` | tou | verpligtend | entiteit geskep deur integrasie |
-| `name` | tou | entiteit naam | ignoreer die naam in die kaart |
-| `icon` | tou | entiteit-ikoon | herdefinieer ikoon |
-| `show_mode` | boolean | `true` | wys modusnaam |
-| `show_percentage` | boolean | `true` | toon voorwaardelike rente |
-| `icon_tap_action` | aksie | `more-info` | bykomende aksie wanneer u op die ikoon |
-| `always_show_icon_background` | boolean | `false` | wys altyd die ronde agtergrond van die ikoon, al is dit vir `icon_tap_action` "Nee" gekies |
+| `entity` | string | vereis word | entiteit geskep deur die integrasie |
+| `name` | string | entiteit naam | ignoreer die naam wat op die kaart gewys word |
+| `icon` | string | entiteit-ikoon | ignoreer die ikoon |
+| `show_mode` | boolean | `true` | wys die modusnaam |
+| `show_percentage` | boolean | `true` | toon die sintetiese persentasie |
+| `icon_tap_action` | action | `more-info` | bykomende aksie wanneer die ikoon getik word |
+| `always_show_icon_background` | boolean | `false` | wys altyd die sirkelvormige ikoonagtergrond, selfs wanneer None gekies is vir icon_tap_action |
 
 Volledige voorbeeld:
 
@@ -224,7 +224,7 @@ Na die verandering, herlaai Lovelace-hulpbronne of herbegin Home Assistant.
 ## 🧯 Probleemoplossing
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Die integrasie verskyn nie in die helperlys nie</b></summary>
 <br />
 
 **Waarskynlike oorsaak:** verkeerde manier of Home Assistant is nie herbegin nie.
@@ -241,7 +241,7 @@ Doen dan 'n harde herbegin Home Assistant en kyk na die log vir foute `smart_plu
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Die proplys is leeg</b></summary>
 <br />
 
 Integrasie wys slegs voorwerpe `switch`geassosieer met toestelle wat ook 'n ingeslote sensor voorsien `device_class: power`.
@@ -257,7 +257,7 @@ Meld aan **[Instellings → Toestelle en dienste → Voorwerpe](https://my.home-
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Skepping stop met 'n ontbrekende kragsensorboodskap</b></summary>
 <br />
 
 Nadat 'n uitlaat gekies is, kontroleer die integrasie weer vir die teenwoordigheid van 'n kragsensor. Die fout kom voor as die sensor verwyder is, gedeaktiveer is, na 'n ander toestel geskuif is of nie meer het nie `device_class: power`.
@@ -266,7 +266,7 @@ Nadat 'n uitlaat gekies is, kontroleer die integrasie weer vir die teenwoordighe
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Die lamp word as Af gewys terwyl die prop aan is</b></summary>
 <br />
 
 Gaan die kragsensorwaarde na. Die virtuele lamp word beskou as afgeskakel wanneer `0 W`; wanneer dit positief is, moet dit gedefinieer word as `on`.
@@ -275,7 +275,7 @@ Gaan die kragsensorwaarde na. Die virtuele lamp word beskou as afgeskakel wannee
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Die lamp word as Aan gewys terwyl dit fisies af is</b></summary>
 <br />
 
 Kontroleer dat die geselekteerde kragsensor werklik wys `0 W`, wanneer die lamp met sy eie knoppie afgeskakel word.
@@ -284,7 +284,7 @@ Kontroleer dat die geselekteerde kragsensor werklik wys `0 W`, wanneer die lamp 
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Die verkeerde modus word bespeur</b></summary>
 <br />
 
 Kontroleer **🐞 Last measures** in instellings en eienskappe `power_history`, `power_history_modes`, `power_sample_interval_seconds` En `selected_power_mode`. `power_history` toon die laaste aangetekende drywingswaardes, `power_history_modes` - modus vir elk van hulle volgens gekonfigureerde drempels, `power_sample_interval_seconds` is die interval van periodieke fiksasie, en `selected_power_mode` - huidige bevestigde modus.
@@ -293,7 +293,7 @@ Kontroleer **🐞 Last measures** in instellings en eienskappe `power_history`, 
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Modusveranderinge word nie onmiddellik vertoon nie</b></summary>
 <br />
 
 Dit is verwagte gedrag. Om te verhoed dat korttermyn-kragskommelings vals skakeling veroorsaak, verander die integrasie van modus slegs nadat verskeie opeenvolgende lesings ooreenstem met dieselfde nuwe modus.
@@ -308,7 +308,7 @@ Die vermindering van die aantal lesings versnel die vertoning van die nuwe modus
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Die kaart verskyn nie in die lys nie</b></summary>
 <br />
 
 Outomatiese registrasie vind slegs plaas nadat ten minste een gekonfigureerde hulpvoorwerp gelaai is en slegs in hulpbronmodus `storage`. Die integrasie-installasiemetode is via HACS of handmatig - dit het geen effek nie.
@@ -325,7 +325,7 @@ In YAML-modus [hulpbron handmatig byvoeg](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Die ou kaart word steeds vertoon na 'n opdatering</b></summary>
 <br />
 
 1. Herbegin heeltemal Home Assistant.
@@ -356,9 +356,9 @@ In YAML-modus [hulpbron handmatig byvoeg](#yaml-lovelace-mode).
 
 ## 📄 Lisensie
 
-Die projek word onder lisensie versprei [MIT](../LICENSE).
+Hierdie projek word onder die [MIT](../LICENSE)-lisensie versprei.
 
 <br />
 
 > [!TIP]
-> **Het jy van die oplossing gehou?** Kyk 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_af.md">my ander produkte vir Home Assistant</a>
+> **Hou van hierdie oplossing?** Kyk bietjie na 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_af.md">my ander Home Assistant produkte</a>

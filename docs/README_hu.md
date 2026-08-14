@@ -168,15 +168,15 @@ A kerekítés csak a kártya megjelenített százalékos arányát és vizuális
 
 Elérhető opciók:
 
-| Paraméter | Típus | Alapértelmezett | Úticél |
+| Paraméter | Írja be | Alapértelmezett | Leírás |
 |---|---|---:|---|
-|`entity`| húr | kötelező | integrációval létrehozott entitás |
-|`name`| húr | entitás neve | felülírja a kártyán szereplő nevet |
-|`icon`| húr | entitás ikon | újradefiniálja az ikont |
-|`show_mode`| logikai |`true`| mutatja a mód nevét |
-|`show_percentage`| logikai |`true`| feltételes kamatot mutat |
-|`icon_tap_action`| akció |`more-info`| további művelet az ikonra kattintva |
-|`always_show_icon_background`| logikai |`false`| mindig az ikon kerek hátterét mutatja, még akkor is, ha a`icon_tap_action`"Nem" kiválasztva |
+| `entity` | string | szükséges | az integráció által létrehozott entitás |
+| `name` | string | entitás neve | felülírja a kártyán látható nevet |
+| `icon` | string | entitás ikonra | felülírja az ikont |
+| `show_mode` | boolean | `true` | mutatja a mód nevét |
+| `show_percentage` | boolean | `true` | a szintetikus százalékot mutatja |
+| `icon_tap_action` | action | `more-info` | további művelet az ikon megérintésekor |
+| `always_show_icon_background` | boolean | `false` | mindig a kör alakú ikon hátterét mutatja, még akkor is, ha a None van kiválasztva a icon_tap_action beállításhoz |
 
 Teljes példa:
 
@@ -222,7 +222,7 @@ A változtatás után indítsa újra a Lovelace erőforrásokat, vagy indítsa �
 ## 🧯 Hibaelhárítás
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Az integráció nem jelenik meg a segédlistában</b></summary>
 <br />
 
 **Valószínű ok:**&#x68;elytelen elérési út, vagy a Home Assistant nem indult újra.
@@ -239,7 +239,7 @@ Ezután indítsa újra a Home Assistant alkalmazást, és ellenőrizze a naplót
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓A csatlakozólista üres</b></summary>
 <br />
 
 Az integráció csak az objektumokat mutatja`switch`olyan eszközökhöz kapcsolódik, amelyekhez mellékelt érzékelő is tartozik`device_class: power`.
@@ -255,7 +255,7 @@ Bejelentkezé&#x73;**[Beállítások → Eszközök és szolgáltatások → Obj
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓A létrehozás leáll, ha hiányzik a teljesítményérzékelő üzenet</b></summary>
 <br />
 
 Az aljzat kiválasztása után az integráció újra ellenőrzi a teljesítményérzékelő jelenlétét. A hiba akkor fordul elő, ha az érzékelőt eltávolították, letiltották, másik eszközre helyezték át, vagy már nem`device_class: power`.
@@ -264,7 +264,7 @@ Az aljzat kiválasztása után az integráció újra ellenőrzi a teljesítmény
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓A lámpa nem világít, ha a dugó be van kapcsolva</b></summary>
 <br />
 
 Ellenőrizze a teljesítményérzékelő értékét. A virtuális lámpa akkor tekinthető kikapcsoltnak, ha`0 W`; ha pozitív, akkor úgy kell meghatározni`on`.
@@ -273,7 +273,7 @@ Ellenőrizze a teljesítményérzékelő értékét. A virtuális lámpa akkor t
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓A lámpa világít, ha fizikailag ki van kapcsolva</b></summary>
 <br />
 
 Ellenőrizze, hogy a kiválasztott teljesítményérzékelő valóban megjelenik-e`0 W`, amikor a lámpát a saját gombja kapcsolja ki.
@@ -282,7 +282,7 @@ Ellenőrizze, hogy a kiválasztott teljesítményérzékelő valóban megjelenik
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓A rendszer rossz módot észlel</b></summary>
 <br />
 
 Ellenőrzés**🐞 Last measures**beállításokban és attribútumokban`power_history`,`power_history_modes`,`power_sample_interval_seconds`És`selected_power_mode`.`power_history`mutatja az utoljára rögzített teljesítményértékeket,`power_history_modes`— mindegyik üzemmód a beállított küszöbértékeknek megfelelően,`power_sample_interval_seconds`a periodikus rögzítés intervalluma, és`selected_power_mode`— aktuális jóváhagyott mód.
@@ -291,7 +291,7 @@ Ellenőrzés**🐞 Last measures**beállításokban és attribútumokban`power_h
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓A módváltások nem jelennek meg azonnal</b></summary>
 <br />
 
 Ez az elvárt viselkedés. Annak elkerülése érdekében, hogy a rövid távú teljesítmény-ingadozások hamis kapcsolást okozzanak, az integráció csak akkor vált üzemmódot, ha több egymást követő leolvasás ugyanazon új üzemmódnak felel meg.
@@ -306,7 +306,7 @@ A leolvasások számának csökkentése felgyorsítja az új mód kijelzését, 
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓A kártya nem jelenik meg a listában</b></summary>
 <br />
 
 Az automatikus regisztráció csak legalább egy konfigurált segédobjektum betöltése után történik, és csak erőforrás módban`storage`. Az integráció telepítésének módja - HACS-en keresztül vagy manuálisan - ezt nem befolyásolja.
@@ -323,7 +323,7 @@ YAML módban[manuálisan adja hozzá az erőforrást](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓A régi kártya frissítés után is látható</b></summary>
 <br />
 
 1. Teljesen indítsa újra a Home Assistant alkalmazást.
@@ -354,8 +354,9 @@ YAML módban[manuálisan adja hozzá az erőforrást](#yaml-lovelace-mode).
 
 ## 📄 Licenc
 
-A projekt licenc alapján kerül terjesztésre[VEL](../LICENSE).
+Ezt a projektet a [MIT](../LICENSE) licenc alatt terjesztik.
 
 <br />
 
-> \[!TIPP]**Tetszett a megoldás?**&#x4E;ézd 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_hu.md">többi termékem a Home Assistant számára</a>
+> [!TIP]
+> **Tetszik ez a megoldás?** Vessen egy pillantást 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_hu.md">többi Home Assistant termékem</a>

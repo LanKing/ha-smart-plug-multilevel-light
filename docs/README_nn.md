@@ -168,15 +168,15 @@ Avrunding påvirker kun den viste prosentandelen og visuelle intensiteten til ko
 
 Tilgjengelige alternativer:
 
-| Parameter | Skriv inn | Standard | Destinasjon |
+| Parameter | Type | Standard | Beskrivelse |
 |---|---|---:|---|
-|`entity`| streng | obligatorisk | enhet opprettet av integrasjon |
-|`name`| streng | enhetsnavn | overstyrer navnet på kortet |
-|`icon`| streng | enhetsikon | omdefinerer ikonet |
-|`show_mode`| boolsk |`true`| viser modusnavn |
-|`show_percentage`| boolsk |`true`| viser betinget interesse |
-|`icon_tap_action`| handling |`more-info`| ytterligere handling når du klikker på ikonet |
-|`always_show_icon_background`| boolsk |`false`| viser alltid den runde bakgrunnen til ikonet, selv om for`icon_tap_action`"Nei" valgt |
+| `entity` | string | nødvendig | enhet opprettet av integrasjonen |
+| `name` | string | enhetsnavn | overstyrer navnet som vises på kortet |
+| `icon` | string | enhetsikon | overstyrer ikonet |
+| `show_mode` | boolean | `true` | viser modusnavnet |
+| `show_percentage` | boolean | `true` | viser den syntetiske prosentandelen |
+| `icon_tap_action` | action | `more-info` | ytterligere handling når ikonet trykkes |
+| `always_show_icon_background` | boolean | `false` | viser alltid den sirkulære ikonbakgrunnen, selv når None er valgt for icon_tap_action |
 
 Fullstendig eksempel:
 
@@ -222,7 +222,7 @@ Etter endringen, start Lovelace-ressurser på nytt eller start Home Assistant p�
 ## 🧯 Feilsøking
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integrasjonen vises ikke i hjelpelisten</b></summary>
 <br />
 
 **Sannsynlig årsak:**&#x66;eil bane eller Home Assistant ble ikke startet på nytt.
@@ -239,7 +239,7 @@ Gjør deretter en fullstendig omstart av Home Assistant og sjekk loggen for feil
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Plugglisten er tom</b></summary>
 <br />
 
 Integrasjon viser kun objekter`switch`assosiert med enheter som også gir en medfølgende sensor med`device_class: power`.
@@ -255,7 +255,7 @@ Sjekk in&#x6E;**[Innstillinger → Enheter og tjenester → Objekter](https://my
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Opprettelsen stopper med en manglende effektsensormelding</b></summary>
 <br />
 
 Etter å ha valgt en stikkontakt, sjekker integrasjonen på nytt for tilstedeværelsen av en strømsensor. Feilen oppstår hvis sensoren har blitt fjernet, deaktivert, flyttet til en annen enhet eller ikke lenger har`device_class: power`.
@@ -264,7 +264,7 @@ Etter å ha valgt en stikkontakt, sjekker integrasjonen på nytt for tilstedevæ
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lampen vises som Av mens støpselet er på</b></summary>
 <br />
 
 Kontroller effektsensorverdien. Den virtuelle lampen anses å være slått av når`0 W`; når det er positivt, skal det defineres som`on`.
@@ -273,7 +273,7 @@ Kontroller effektsensorverdien. Den virtuelle lampen anses å være slått av n�
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lampen vises som On mens den er fysisk av</b></summary>
 <br />
 
 Sjekk at den valgte effektsensoren faktisk viser`0 W`, når lampen slås av med sin egen knapp.
@@ -282,7 +282,7 @@ Sjekk at den valgte effektsensoren faktisk viser`0 W`, når lampen slås av med 
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Feil modus er oppdaget</b></summary>
 <br />
 
 Sjekke**🐞 Last measures**i innstillinger og attributter`power_history`,`power_history_modes`,`power_sample_interval_seconds`Og`selected_power_mode`.`power_history`viser de siste registrerte effektverdiene,`power_history_modes`— modus for hver av dem i henhold til konfigurerte terskler,`power_sample_interval_seconds`er intervallet for periodisk fiksering, og`selected_power_mode`— gjeldende bekreftet modus.
@@ -291,7 +291,7 @@ Sjekke**🐞 Last measures**i innstillinger og attributter`power_history`,`power
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Modusendringer vises ikke umiddelbart</b></summary>
 <br />
 
 Dette er forventet oppførsel. For å forhindre at kortsiktige strømsvingninger forårsaker falsk svitsjing, endrer integreringen modus først etter flere påfølgende avlesninger tilsvarer den samme nye modusen.
@@ -306,7 +306,7 @@ Redusering av antall avlesninger gjør visningen av den nye modusen raskere, men
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kortet vises ikke i listen</b></summary>
 <br />
 
 Automatisk registrering skjer kun etter å ha lastet inn minst ett konfigurert hjelpeobjekt og kun i ressursmodus`storage`. Metoden for å installere integrasjonen - via HACS eller manuelt - påvirker ikke dette.
@@ -323,7 +323,7 @@ I YAML-modus[legge til ressurs manuelt](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Det gamle kortet vises fortsatt etter en oppdatering</b></summary>
 <br />
 
 1. Start Home Assistant helt på nytt.
@@ -354,8 +354,9 @@ I YAML-modus[legge til ressurs manuelt](#yaml-lovelace-mode).
 
 ## 📄 Lisens
 
-Prosjektet er distribuert under lisens[MED](../LICENSE).
+Dette prosjektet er distribuert under lisensen [MIT](../LICENSE).
 
 <br />
 
-> \[!TUPP]**Likte du løsningen?**&#x53;e 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_nn.md">mine andre produkter for Home Assistant</a>
+> [!TIP]
+> **Liker du denne løsningen?** Ta en titt på 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_nn.md">mine andre Home Assistant-produkter</a>

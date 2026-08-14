@@ -168,15 +168,15 @@ Noapaļošana ietekmē tikai attēloto procentuālo daļu un kartes vizuālo int
 
 Pieejamās opcijas:
 
-| Parametrs | Tips | Noklusējums | Galamērķis |
+| Parametrs | Tips | Noklusējums | Apraksts |
 |---|---|---:|---|
-|`entity`| stīga | obligāti | integrācijas rezultātā izveidota entītija |
-|`name`| stīga | entītijas nosaukums | ignorē vārdu kartē |
-|`icon`| stīga | entītijas ikona | no jauna definē ikonu |
-|`show_mode`| Būla |`true`| parāda režīma nosaukumu |
-|`show_percentage`| Būla |`true`| parāda nosacītu interesi |
-|`icon_tap_action`| darbība |`more-info`| papildu darbība, noklikšķinot uz ikonas |
-|`always_show_icon_background`| Būla |`false`| vienmēr parāda apaļo ikonas fonu, pat ja ir`icon_tap_action`Atlasīts "Nē" |
+| `entity` | string | nepieciešams | integrācijas rezultātā izveidotā entītija |
+| `name` | string | entītijas nosaukums | ignorē kartē norādīto vārdu |
+| `icon` | string | entītijas ikona | ignorē ikonu |
+| `show_mode` | boolean | `true` | parāda režīma nosaukumu |
+| `show_percentage` | boolean | `true` | parāda sintētisko procentuālo daudzumu |
+| `icon_tap_action` | action | `more-info` | papildu darbība, pieskaroties ikonai |
+| `always_show_icon_background` | boolean | `false` | vienmēr parāda apļveida ikonas fonu, pat ja None ir atlasīts icon_tap_action |
 
 Pilns piemērs:
 
@@ -222,7 +222,7 @@ Pēc izmaiņām atsāknējiet Lovelace resursus vai restartējiet Home Assistant
 ## 🧯 Traucējummeklēšana
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integrācija neparādās palīgu sarakstā</b></summary>
 <br />
 
 **Iespējamais iemesls:**&#x6E;epareizs ceļš vai mājas palīgs netika restartēts.
@@ -239,7 +239,7 @@ Pēc tam pilnībā restartējiet Home Assistant un pārbaudiet, vai žurnālā n
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Spraudņu saraksts ir tukšs</b></summary>
 <br />
 
 Integrācija parāda tikai objektus`switch`kas saistīti ar ierīcēm, kas nodrošina arī iekļautu sensoru ar`device_class: power`.
@@ -255,7 +255,7 @@ Reģistrētie&#x73;**[Iestatījumi → Ierīces un pakalpojumi → Objekti](http
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Izveidošana tiek pārtraukta, ja trūkst jaudas sensora ziņojuma</b></summary>
 <br />
 
 Pēc kontaktligzdas izvēles integrācija atkārtoti pārbauda, ​​vai nav jaudas sensora. Kļūda rodas, ja sensors ir noņemts, atspējots, pārvietots uz citu ierīci vai vairs nav`device_class: power`.
@@ -264,7 +264,7 @@ Pēc kontaktligzdas izvēles integrācija atkārtoti pārbauda, ​​vai nav ja
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Kad kontaktdakša ir ieslēgta, lampiņa tiek rādīta kā izslēgta</b></summary>
 <br />
 
 Pārbaudiet jaudas sensora vērtību. Virtuālā lampa tiek uzskatīta par izslēgtu, kad`0 W`; ja tas ir pozitīvs, tas jādefinē kā`on`.
@@ -273,7 +273,7 @@ Pārbaudiet jaudas sensora vērtību. Virtuālā lampa tiek uzskatīta par izsl�
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lampa tiek rādīta kā ieslēgta, kamēr tā ir fiziski izslēgta</b></summary>
 <br />
 
 Pārbaudiet, vai izvēlētais jaudas sensors patiešām parāda`0 W`, kad lampa tiek izslēgta ar tās pogu.
@@ -282,7 +282,7 @@ Pārbaudiet, vai izvēlētais jaudas sensors patiešām parāda`0 W`, kad lampa 
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Tiek konstatēts nepareizs režīms</b></summary>
 <br />
 
 Pārbaudiet**🐞 Last measures**iestatījumos un atribūtos`power_history`,`power_history_modes`,`power_sample_interval_seconds`Un`selected_power_mode`.`power_history`parāda pēdējās reģistrētās jaudas vērtības,`power_history_modes`— režīms katram no tiem atbilstoši konfigurētajiem sliekšņiem,`power_sample_interval_seconds`ir periodiskas fiksācijas intervāls, un`selected_power_mode`— pašreizējais apstiprinātais režīms.
@@ -291,7 +291,7 @@ Pārbaudiet**🐞 Last measures**iestatījumos un atribūtos`power_history`,`pow
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Režīmu izmaiņas netiek parādītas uzreiz</b></summary>
 <br />
 
 Tā ir paredzama uzvedība. Lai īstermiņa jaudas svārstības neizraisītu viltus pārslēgšanu, integrācija maina režīmu tikai pēc tam, kad vairāki secīgi rādījumi atbilst vienam un tam pašam jaunajam režīmam.
@@ -306,7 +306,7 @@ Nolasījumu skaita samazināšana paātrina jaunā režīma rādīšanu, bet pad
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Karte neparādās sarakstā</b></summary>
 <br />
 
 Automātiskā reģistrācija notiek tikai pēc vismaz viena konfigurēta palīgobjekta ielādes un tikai resursu režīmā`storage`. Integrācijas instalēšanas metode - izmantojot HACS vai manuāli - to neietekmē.
@@ -323,7 +323,7 @@ YAML režīmā[pievienot resursus manuāli](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Vecā karte joprojām tiek rādīta pēc atjaunināšanas</b></summary>
 <br />
 
 1. Pilnībā restartējiet Home Assistant.
@@ -354,8 +354,9 @@ YAML režīmā[pievienot resursus manuāli](#yaml-lovelace-mode).
 
 ## 📄 Licence
 
-Projekts tiek izplatīts saskaņā ar licenci[AR](../LICENSE).
+Šis projekts tiek izplatīts ar [MIT](../LICENSE) licenci.
 
 <br />
 
-> \[!PADOMS]**Vai jums patika risinājums?**&#x53;katies 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_lv.md">citi mani produkti Home Assistant</a>
+> [!TIP]
+> **Patīk šis risinājums?** Paskaties uz 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_lv.md">manas citas Home Assistant preces</a>

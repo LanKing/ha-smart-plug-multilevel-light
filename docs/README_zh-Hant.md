@@ -168,8 +168,15 @@ custom_components/smart_plug_multilevel_light
 
 可用選項：
 
-|參數|類型 |預設|目的地 | |---|---|---:|---|
-|`entity`|字串|強制性 |整合創建的實體| |`name`|字串|實體名稱 |覆蓋卡中的姓名 | |`icon`|字串|實體圖示|重新定義圖示| |`show_mode`|布爾 |`true`|顯示模式名稱 | |`show_percentage`|布爾 |`true`|顯示有條件的興趣 | |`icon_tap_action`|行動|`more-info`|點選圖示時的附加操作 | |`always_show_icon_background`|布爾 |`false`|總是顯示圖示的圓形背景，即使`icon_tap_action`選擇“否”|
+| 參數 | 類型 | 預設 | 描述 |
+|---|---|---:|---|
+| `entity` | string | 必填 | 整合創建的實體 |
+| `name` | string | 實體名稱 | 覆蓋卡上顯示的姓名 |
+| `icon` | string | 實體圖示 | 覆蓋圖示 |
+| `show_mode` | boolean | `true` | 顯示模式名稱 |
+| `show_percentage` | boolean | `true` | 顯示合成百分比 |
+| `icon_tap_action` | action | `more-info` | 點選圖示時的附加操作 |
+| `always_show_icon_background` | boolean | `false` | 始終顯示圓形圖示背景，即使為 icon_tap_action 選擇 None 也是如此 |
 
 完整範例：
 
@@ -215,7 +222,7 @@ lovelace:
 ## 🧯 故障排除
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓整合未出現在幫助程式清單中</b></summary>
 <br />
 
 **可能的原因：**&#x8DEF;徑不正確或 Home Assistant 未重新啟動。
@@ -232,7 +239,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓插頭列表為空</b></summary>
 <br />
 
 整合僅顯示對象`switch`與也提供附帶感測器的設備相關聯`device_class: power`.
@@ -248,7 +255,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓創建因缺少功率感測器訊息而停止</b></summary>
 <br />
 
 選擇插座後，整合會重新檢查是否有功率感測器。如果感測器已被移除、停用、移至其他裝置或不再具有，則會發生錯誤`device_class: power`.
@@ -257,7 +264,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓插頭開啟時燈顯示為關閉</b></summary>
 <br />
 
 檢查功率感測器值。虛擬燈被認為關閉時`0 W`;當為正時，應定義為`on`.
@@ -266,7 +273,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓燈在物理關閉時顯示為打開</b></summary>
 <br />
 
 檢查所選功率感測器是否實際顯示`0 W`，當燈通過其自身的按鈕關閉時。
@@ -275,7 +282,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓偵測到錯誤模式</b></summary>
 <br />
 
 查看**🐞 Last measures**在設定和屬性中`power_history`,`power_history_modes`,`power_sample_interval_seconds`和`selected_power_mode`.`power_history`顯示最後記錄的功率值，`power_history_modes`— 根據配置的閾值每個人的模式，`power_sample_interval_seconds`是周期性注視的間隔，並且`selected_power_mode`— 目前確認模式。
@@ -284,7 +291,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓模式變更不會立即顯示</b></summary>
 <br />
 
 這是預期的行為。为了防止短期功率波动引起杂散切换，积分仅在多个连续读数对应于相同的新模式后才改变模式。
@@ -299,7 +306,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓該卡未出現在清單中</b></summary>
 <br />
 
 僅在載入至少一個已配置的輔助物件後且僅在資源模式下才會發生自動註冊`storage`。安装集成的方法（通过 HACS 或手动）不会影响这一点。
@@ -316,7 +323,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓更新後仍顯示舊卡</b></summary>
 <br />
 
 1. 完全重新啟動家庭助理。
@@ -347,8 +354,9 @@ lovelace:
 
 ## 📄 許可證
 
-該項目是根據許可分發的[和](../LICENSE).
+該項目根據 [MIT](../LICENSE) 許可證分發。
 
 <br />
 
-> \[！提示]**您喜歡這個解決方案嗎？**&#x770B;看🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_zh-Hant.md">我的其他家庭助理產品</a>
+> [!TIP]
+> **喜歡這個解決方案嗎？** 看看 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_zh-Hant.md">我的其他 Home Assistant 產品</a>

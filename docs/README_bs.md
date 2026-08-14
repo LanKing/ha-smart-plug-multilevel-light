@@ -170,15 +170,15 @@ Zaokruživanje utiče samo na prikazani procenat i vizuelni intenzitet kartice. 
 
 Dostupne opcije:
 
-| Parametar | Vrsta | Zadano | Odredište |
+| Parametar | Tip | Default | Opis |
 |---|---|---:|---|
-| `entity` | string | obavezno | entitet stvoren integracijom |
-| `name` | string | naziv entiteta | zamenjuje ime na kartici |
-| `icon` | string | ikona entiteta | redefiniše ikonu |
-| `show_mode` | boolean | `true` | prikazuje naziv načina |
-| `show_percentage` | boolean | `true` | pokazuje uslovni interes |
-| `icon_tap_action` | akcija | `more-info` | dodatna radnja kada se klikne na ikonu |
-| `always_show_icon_background` | boolean | `false` | uvijek prikazuje okruglu pozadinu ikone, čak i ako je za `icon_tap_action` Odabrano "Ne" |
+| `entity` | string | potrebno | entitet stvoren integracijom |
+| `name` | string | naziv entiteta | zamenjuje ime prikazano na kartici |
+| `icon` | string | ikona entiteta | zamenjuje ikonu |
+| `show_mode` | boolean | `true` | prikazuje naziv režima |
+| `show_percentage` | boolean | `true` | pokazuje sintetički procenat |
+| `icon_tap_action` | action | `more-info` | dodatna radnja kada se dodirne ikona |
+| `always_show_icon_background` | boolean | `false` | uvijek prikazuje pozadinu kružne ikone, čak i kada je None odabran za icon_tap_action |
 
 Cijeli primjer:
 
@@ -224,7 +224,7 @@ Nakon promjene, ponovo učitajte Lovelace resurse ili ponovo pokrenite Home Assi
 ## 🧯 Rješavanje problema
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integracija se ne pojavljuje na listi pomoćnika</b></summary>
 <br />
 
 **Vjerovatni uzrok:** na pogrešan način ili Home Assistant nije ponovo pokrenut.
@@ -241,7 +241,7 @@ Zatim izvršite hard restart Home Assistant i provjerite dnevnik za greške `sma
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Lista priključaka je prazna</b></summary>
 <br />
 
 Integracija prikazuje samo objekte `switch`povezan s uređajima koji također imaju uključeni senzor sa `device_class: power`.
@@ -257,7 +257,7 @@ Prijavite se **[Podešavanja → Uređaji i usluge → Objekti](https://my.home-
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Kreiranje se zaustavlja s porukom senzora napajanja koja nedostaje</b></summary>
 <br />
 
 Nakon odabira utičnice, integracija ponovo provjerava prisustvo senzora napajanja. Greška se javlja ako je senzor uklonjen, onemogućen, premješten na drugi uređaj ili više nije `device_class: power`.
@@ -266,7 +266,7 @@ Nakon odabira utičnice, integracija ponovo provjerava prisustvo senzora napajan
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lampica je prikazana kao Off dok je utikač uključen</b></summary>
 <br />
 
 Provjerite vrijednost senzora snage. Virtuelna lampa se smatra isključenom kada `0 W`; kada je pozitivan, treba ga definisati kao `on`.
@@ -275,7 +275,7 @@ Provjerite vrijednost senzora snage. Virtuelna lampa se smatra isključenom kada
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lampica je prikazana kao Uključena dok je fizički isključena</b></summary>
 <br />
 
 Provjerite da li se odabrani senzor snage zaista prikazuje `0 W`, kada se lampa gasi sopstvenim dugmetom.
@@ -284,7 +284,7 @@ Provjerite da li se odabrani senzor snage zaista prikazuje `0 W`, kada se lampa 
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Otkriven je pogrešan način rada</b></summary>
 <br />
 
 Provjeri **🐞 Last measures** u postavkama i atributima `power_history`, `power_history_modes`, `power_sample_interval_seconds` I `selected_power_mode`. `power_history` prikazuje posljednje zabilježene vrijednosti snage, `power_history_modes` — način rada za svaki od njih prema konfiguriranim pragovima, `power_sample_interval_seconds` je interval periodične fiksacije, i `selected_power_mode` — trenutni potvrđeni način rada.
@@ -293,7 +293,7 @@ Provjeri **🐞 Last measures** u postavkama i atributima `power_history`, `powe
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Promjene načina rada se ne prikazuju odmah</b></summary>
 <br />
 
 Ovo je očekivano ponašanje. Da bi se spriječilo da kratkoročne fluktuacije snage uzrokuju lažno prebacivanje, integracija mijenja način rada samo nakon što nekoliko uzastopnih očitavanja odgovara istom novom načinu rada.
@@ -308,7 +308,7 @@ Smanjenje broja očitavanja ubrzava prikaz novog načina rada, ali čini detekci
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kartica se ne pojavljuje na listi</b></summary>
 <br />
 
 Automatska registracija se događa samo nakon učitavanja najmanje jednog konfiguriranog pomoćnog objekta i samo u načinu rada resursa `storage`. Metoda integracije je putem HACS ili ručno - to nema efekta.
@@ -325,7 +325,7 @@ U YAML modu [ručno dodajte resurs](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Stara kartica je i dalje prikazana nakon ažuriranja</b></summary>
 <br />
 
 1. Potpuno ponovo pokrenite Home Assistant.
@@ -356,9 +356,9 @@ U YAML modu [ručno dodajte resurs](#yaml-lovelace-mode).
 
 ## 📄 Licenca
 
-Projekat se distribuira pod licencom [MIT](../LICENSE).
+Ovaj projekat se distribuira pod licencom [MIT](../LICENSE).
 
 <br />
 
 > [!TIP]
-> **Da li vam se svidjelo rješenje?** Pogledajte 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_bs.md">moji ostali proizvodi za Home Assistant</a>
+> **Sviđa vam se ovo rješenje?** Pogledajte 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_bs.md">moji drugi Home Assistant proizvodi</a>

@@ -168,15 +168,15 @@ Rotunjirea afectează doar procentul afișat și intensitatea vizuală a cardulu
 
 Opțiuni disponibile:
 
-| Parametru | Tip | Implicit | Destinație |
+| Parametru | Tip | Implicit | Descriere |
 |---|---|---:|---|
-|`entity`| șir | obligatoriu | entitate creată prin integrare |
-|`name`| șir | numele entității | suprascrie numele din card |
-|`icon`| șir | pictograma entitate | redefinește pictograma |
-|`show_mode`| boolean |`true`| arată numele modului |
-|`show_percentage`| boolean |`true`| manifestă interes condiționat |
-|`icon_tap_action`| acțiune |`more-info`| acțiune suplimentară când faceți clic pe pictograma |
-|`always_show_icon_background`| boolean |`false`| arată întotdeauna fundalul rotund al pictogramei, chiar dacă pentru`icon_tap_action`„Nu” selectat |
+| `entity` | string | necesar | entitate creată prin integrare |
+| `name` | string | numele entității | înlocuiește numele afișat pe card |
+| `icon` | string | pictograma entitate | suprascrie pictograma |
+| `show_mode` | boolean | `true` | afișează numele modului |
+| `show_percentage` | boolean | `true` | arată procentul sintetic |
+| `icon_tap_action` | action | `more-info` | acțiune suplimentară când se atinge pictograma |
+| `always_show_icon_background` | boolean | `false` | afișează întotdeauna fundalul pictogramei circulare, chiar și atunci când None este selectat pentru icon_tap_action |
 
 Exemplu complet:
 
@@ -222,7 +222,7 @@ După modificare, reporniți resursele Lovelace sau reporniți Home Assistant.
 ## 🧯 Depanare
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integrarea nu apare în lista de ajutor</b></summary>
 <br />
 
 **Cauza probabila:**&#x63;ale incorectă sau Asistentul de acasă nu a fost repornit.
@@ -239,7 +239,7 @@ Apoi reporniți complet Home Assistant și verificați jurnalul pentru erori`sma
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Lista de prize este goală</b></summary>
 <br />
 
 Integrarea arată doar obiecte`switch`asociat cu dispozitive care oferă și un senzor inclus cu`device_class: power`.
@@ -255,7 +255,7 @@ Check-i&#x6E;**[Setări → Dispozitive și servicii → Obiecte](https://my.hom
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Crearea se oprește cu un mesaj lipsă de la senzorul de putere</b></summary>
 <br />
 
 După selectarea unei prize, integrarea verifică din nou prezența unui senzor de putere. Eroarea apare dacă senzorul a fost îndepărtat, dezactivat, mutat pe alt dispozitiv sau nu mai are`device_class: power`.
@@ -264,7 +264,7 @@ După selectarea unei prize, integrarea verifică din nou prezența unui senzor 
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lampa este afișată ca Off când ștecherul este pornit</b></summary>
 <br />
 
 Verificați valoarea senzorului de putere. Lampa virtuală este considerată stinsă când`0 W`; când este pozitiv, ar trebui definit ca`on`.
@@ -273,7 +273,7 @@ Verificați valoarea senzorului de putere. Lampa virtuală este considerată sti
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lampa este afișată ca Pornită când este stinsă fizic</b></summary>
 <br />
 
 Verificați dacă senzorul de putere selectat se afișează de fapt`0 W`, când lampa este stinsă de propriul buton.
@@ -282,7 +282,7 @@ Verificați dacă senzorul de putere selectat se afișează de fapt`0 W`, când 
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Este detectat modul greșit</b></summary>
 <br />
 
 Verifica**🐞 Last measures**în setări și atribute`power_history`,`power_history_modes`,`power_sample_interval_seconds`Şi`selected_power_mode`.`power_history`afișează ultimele valori de putere înregistrate,`power_history_modes`— mod pentru fiecare dintre ele în funcție de praguri configurate;`power_sample_interval_seconds`este intervalul de fixare periodică și`selected_power_mode`— modul curent confirmat.
@@ -291,7 +291,7 @@ Verifica**🐞 Last measures**în setări și atribute`power_history`,`power_his
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Schimbările de mod nu sunt afișate imediat</b></summary>
 <br />
 
 Acesta este comportamentul de așteptat. Pentru a preveni ca fluctuațiile de putere pe termen scurt să cauzeze comutare necorespunzătoare, integrarea își schimbă modul numai după ce mai multe citiri consecutive corespund aceluiași mod nou.
@@ -306,7 +306,7 @@ Reducerea numărului de citiri accelerează afișarea noului mod, dar face detec
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Cardul nu apare în listă</b></summary>
 <br />
 
 Înregistrarea automată are loc numai după încărcarea a cel puțin unui obiect helper configurat și numai în modul resursă`storage`. Metoda de instalare a integrării - prin HACS sau manual - nu afectează acest lucru.
@@ -323,7 +323,7 @@ Verific&#x61;**[Setări → Panouri → ⋮ → Resurse](https://my.home-assista
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Cardul vechi este încă afișat după o actualizare</b></summary>
 <br />
 
 1. Reporniți complet Home Assistant.
@@ -354,8 +354,9 @@ Verific&#x61;**[Setări → Panouri → ⋮ → Resurse](https://my.home-assista
 
 ## 📄 Licență
 
-Proiectul este distribuit sub licență[CU](../LICENSE).
+Acest proiect este distribuit sub licența [MIT](../LICENSE).
 
 <br />
 
-> \[!TIP]**Ți-a plăcut soluția?**&#x55;ite 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ro.md">celelalte produse ale mele pentru Home Assistant</a>
+> [!TIP]
+> **Iti place aceasta solutie?** Aruncă o privire la 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ro.md">celelalte produse ale mele Home Assistant</a>

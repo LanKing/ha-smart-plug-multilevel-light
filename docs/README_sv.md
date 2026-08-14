@@ -168,15 +168,15 @@ Avrundning påverkar endast den visade procentandelen och visuella intensiteten 
 
 Tillgängliga alternativ:
 
-| Parameter | Skriv | Standard | Destination |
+| Parameter | Typ | Standard | Beskrivning |
 |---|---|---:|---|
-|`entity`| sträng | obligatorisk | enhet skapad av integration |
-|`name`| sträng | enhetsnamn | åsidosätter namnet på kortet |
-|`icon`| sträng | enhetsikon | omdefinierar ikon |
-|`show_mode`| boolesk |`true`| visar lägesnamn |
-|`show_percentage`| boolesk |`true`| visar villkorligt intresse |
-|`icon_tap_action`| åtgärd |`more-info`| ytterligare åtgärd när du klickar på ikonen |
-|`always_show_icon_background`| boolesk |`false`| visar alltid ikonens runda bakgrund, även om för`icon_tap_action`"Nej" valt |
+| `entity` | string | krävs | enhet skapad av integrationen |
+| `name` | string | enhetens namn | åsidosätter namnet som visas på kortet |
+| `icon` | string | enhetsikon | åsidosätter ikonen |
+| `show_mode` | boolean | `true` | visar lägesnamnet |
+| `show_percentage` | boolean | `true` | visar den syntetiska procentandelen |
+| `icon_tap_action` | action | `more-info` | ytterligare åtgärd när ikonen trycks |
+| `always_show_icon_background` | boolean | `false` | visar alltid den cirkulära ikonbakgrunden, även när None är valt för icon_tap_action |
 
 Fullständigt exempel:
 
@@ -222,7 +222,7 @@ Efter ändringen, starta om Lovelace-resurser eller starta om Home Assistant.
 ## 🧯 Felsökning
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integrationen visas inte i hjälparlistan</b></summary>
 <br />
 
 **Trolig orsak:**&#x66;elaktig sökväg eller Home Assistant startades inte om.
@@ -239,7 +239,7 @@ Gör sedan en fullständig omstart av Home Assistant och kontrollera loggen för
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Plugglistan är tom</b></summary>
 <br />
 
 Integration visar bara objekt`switch`förknippas med enheter som även förser en medföljande sensor med`device_class: power`.
@@ -255,7 +255,7 @@ Checka i&#x6E;**[Inställningar → Enheter och tjänster → Objekt](https://my
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Skapandet avbryts med ett meddelande om saknad effektsensor</b></summary>
 <br />
 
 Efter att ha valt ett uttag kontrollerar integrationen på nytt för närvaron av en effektsensor. Felet uppstår om sensorn har tagits bort, inaktiverats, flyttats till en annan enhet eller inte längre har gjort det`device_class: power`.
@@ -264,7 +264,7 @@ Efter att ha valt ett uttag kontrollerar integrationen på nytt för närvaron a
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lampan visas som av när kontakten är på</b></summary>
 <br />
 
 Kontrollera effektsensorns värde. Den virtuella lampan anses vara avstängd när`0 W`; när den är positiv ska den definieras som`on`.
@@ -273,7 +273,7 @@ Kontrollera effektsensorns värde. Den virtuella lampan anses vara avstängd nä
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lampan visas som På när den är fysiskt avstängd</b></summary>
 <br />
 
 Kontrollera att den valda effektsensorn verkligen visas`0 W`, när lampan släcks med sin egen knapp.
@@ -282,7 +282,7 @@ Kontrollera att den valda effektsensorn verkligen visas`0 W`, när lampan släck
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Fel läge har upptäckts</b></summary>
 <br />
 
 Kontrollera**🐞 Last measures**i inställningar och attribut`power_history`,`power_history_modes`,`power_sample_interval_seconds`Och`selected_power_mode`.`power_history`visar de senast registrerade effektvärdena,`power_history_modes`— läge för var och en av dem enligt konfigurerade trösklar,`power_sample_interval_seconds`är intervallet för periodisk fixering, och`selected_power_mode`— aktuellt bekräftat läge.
@@ -291,7 +291,7 @@ Kontrollera**🐞 Last measures**i inställningar och attribut`power_history`,`p
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Lägesändringar visas inte omedelbart</b></summary>
 <br />
 
 Detta är förväntat beteende. För att förhindra att kortvariga effektfluktuationer orsakar falsk omkoppling, ändrar integrationen läge först efter flera på varandra följande avläsningar motsvarar samma nya läge.
@@ -306,7 +306,7 @@ Att minska antalet avläsningar snabbar upp visningen av det nya läget, men gö
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kortet visas inte i listan</b></summary>
 <br />
 
 Automatisk registrering sker endast efter att ha laddat minst ett konfigurerat hjälpobjekt och endast i resursläge`storage`. Metoden att installera integrationen - via HACS eller manuellt - påverkar inte detta.
@@ -323,7 +323,7 @@ I YAML-läge[lägga till resurs manuellt](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Det gamla kortet visas fortfarande efter en uppdatering</b></summary>
 <br />
 
 1. Starta om Home Assistant helt.
@@ -354,8 +354,9 @@ I YAML-läge[lägga till resurs manuellt](#yaml-lovelace-mode).
 
 ## 📄 Licens
 
-Projektet distribueras under licens[MED](../LICENSE).
+Detta projekt distribueras under licensen [MIT](../LICENSE).
 
 <br />
 
-> \[!DRICKS]**Gillade du lösningen?**&#x54;itta 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sv.md">mina andra produkter för Home Assistant</a>
+> [!TIP]
+> **Gillar du den här lösningen?** Ta en titt på 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sv.md">mina andra Home Assistant produkter</a>

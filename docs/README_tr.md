@@ -168,15 +168,15 @@ Yuvarlama yalnızca kartın görüntülenen yüzdesini ve görsel yoğunluğunu 
 
 Mevcut seçenekler:
 
-| Parametre | Tür | Varsayılan | Hedef |
+| Parametre | Tür | Varsayılan | Açıklama |
 |---|---|---:|---|
-|`entity`| dize | zorunlu | entegrasyonla oluşturulan varlık |
-|`name`| dize | varlık adı | karttaki adı geçersiz kılar |
-|`icon`| dize | varlık simgesi | simgeyi yeniden tanımlıyor |
-|`show_mode`| boole |`true`| mod adını gösterir |
-|`show_percentage`| boole |`true`| şartlı ilgi gösteriyor |
-|`icon_tap_action`| eylem |`more-info`| simgeye tıklandığında ek eylem |
-|`always_show_icon_background`| boole |`false`| için olsa bile her zaman simgenin yuvarlak arka planını gösterir.`icon_tap_action`"Hayır" seçildi |
+| `entity` | string | gerekli | entegrasyon tarafından oluşturulan varlık |
+| `name` | string | varlık adı | kartta gösterilen adı geçersiz kılar |
+| `icon` | string | varlık simgesi | simgeyi geçersiz kılar |
+| `show_mode` | boolean | `true` | mod adını gösterir |
+| `show_percentage` | boolean | `true` | sentetik yüzdeyi gösterir |
+| `icon_tap_action` | action | `more-info` | simgeye dokunulduğunda ek eylem |
+| `always_show_icon_background` | boolean | `false` | icon_tap_action için None seçildiğinde bile her zaman dairesel simge arka planını gösterir |
 
 Tam örnek:
 
@@ -222,7 +222,7 @@ Değişiklikten sonra Lovelace kaynaklarını yeniden başlatın veya Home Assis
 ## 🧯 Sorun giderme
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Entegrasyon yardımcı listesinde görünmüyor</b></summary>
 <br />
 
 **Muhtemel sebep:**&#x79;anlış yol veya Ev Asistanı yeniden başlatılmadı.
@@ -239,7 +239,7 @@ Ardından Home Assistant'ı tamamen yeniden başlatın ve günlüğü hatalara k
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Eklenti listesi boş</b></summary>
 <br />
 
 Entegrasyon yalnızca nesneleri gösterir`switch`aynı zamanda dahili bir sensör sağlayan cihazlarla ilişkili`device_class: power`.
@@ -255,7 +255,7 @@ Giri&#x15F;**[Ayarlar → Cihazlar ve hizmetler → Nesneler](https://my.home-as
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Eksik bir güç sensörü mesajı nedeniyle oluşturma işlemi duruyor</b></summary>
 <br />
 
 Bir priz seçildikten sonra entegrasyon, bir güç sensörünün varlığını yeniden kontrol eder. Hata, sensör kaldırıldığında, devre dışı bırakıldığında, başka bir cihaza taşındığında veya artık kullanılamadığında ortaya çıkar.`device_class: power`.
@@ -264,7 +264,7 @@ Bir priz seçildikten sonra entegrasyon, bir güç sensörünün varlığını y
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Fiş açıkken lamba Kapalı olarak gösteriliyor</b></summary>
 <br />
 
 Güç sensörü değerini kontrol edin. Sanal lamba şu durumlarda kapalı kabul edilir:`0 W`; pozitif olduğunda şu şekilde tanımlanmalıdır:`on`.
@@ -273,7 +273,7 @@ Güç sensörü değerini kontrol edin. Sanal lamba şu durumlarda kapalı kabul
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lamba fiziksel olarak kapalıyken Açık olarak gösterilir</b></summary>
 <br />
 
 Seçilen güç sensörünün gerçekten gösterip göstermediğini kontrol edin`0 W`Lamba kendi düğmesiyle kapatıldığında.
@@ -282,7 +282,7 @@ Seçilen güç sensörünün gerçekten gösterip göstermediğini kontrol edin`
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Yanlış mod algılandı</b></summary>
 <br />
 
 Kontrol etmek**🐞 Last measures**ayarlarda ve özelliklerde`power_history`,`power_history_modes`,`power_sample_interval_seconds`Ve`selected_power_mode`.`power_history`son kaydedilen güç değerlerini gösterir,`power_history_modes`— yapılandırılmış eşiklere göre her biri için mod,`power_sample_interval_seconds`periyodik sabitleme aralığıdır ve`selected_power_mode`— geçerli onaylanmış mod.
@@ -291,7 +291,7 @@ Kontrol etmek**🐞 Last measures**ayarlarda ve özelliklerde`power_history`,`po
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Mod değişiklikleri hemen görüntülenmiyor</b></summary>
 <br />
 
 Bu beklenen bir davranıştır. Kısa süreli güç dalgalanmalarının sahte anahtarlamaya neden olmasını önlemek için entegrasyon, modu yalnızca birkaç ardışık okumanın aynı yeni moda karşılık gelmesinden sonra değiştirir.
@@ -306,7 +306,7 @@ Okuma sayısının azaltılması yeni modun görüntülenmesini hızlandırır a
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kart listede görünmüyor</b></summary>
 <br />
 
 Otomatik kayıt yalnızca en az bir yapılandırılmış yardımcı nesne yüklendikten sonra ve yalnızca kaynak modunda gerçekleşir`storage`. Entegrasyonun HACS aracılığıyla veya manuel olarak kurulma yöntemi bunu etkilemez.
@@ -323,7 +323,7 @@ YAML modunda[kaynağı manuel olarak ekle](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Güncellemeden sonra eski kart hâlâ görüntüleniyor</b></summary>
 <br />
 
 1. Home Assistant'ı tamamen yeniden başlatın.
@@ -354,8 +354,9 @@ YAML modunda[kaynağı manuel olarak ekle](#yaml-lovelace-mode).
 
 ## 📄 Lisans
 
-Proje lisans altında dağıtılmaktadır[İLE](../LICENSE).
+Bu proje [MIT](../LICENSE) lisansı altında dağıtılmaktadır.
 
 <br />
 
-> \[!UÇ]**Çözümü beğendin mi?**&#x42;ak 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_tr.md">Ev Asistanı için diğer ürünlerim</a>
+> [!TIP]
+> **Bu çözümü beğendiniz mi?** Şuna bir göz at 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_tr.md">diğer Home Assistant ürünlerim</a>

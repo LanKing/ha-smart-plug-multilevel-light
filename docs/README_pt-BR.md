@@ -168,15 +168,15 @@ O arredondamento afeta apenas a porcentagem exibida e a intensidade visual do ca
 
 Opções disponíveis:
 
-| Parâmetro | Tipo | Padrão | Destino |
+| Parâmetro | Tipo | Padrão | Descrição |
 |---|---|---:|---|
-|`entity`| corda | obrigatório | entidade criada por integração |
-|`name`| corda | nome da entidade | substitui o nome no cartão |
-|`icon`| corda | ícone de entidade | redefine ícone |
-|`show_mode`| booleano |`true`| mostra o nome do modo |
-|`show_percentage`| booleano |`true`| mostra juros condicionais |
-|`icon_tap_action`| ação |`more-info`| ação adicional ao clicar no ícone |
-|`always_show_icon_background`| booleano |`false`| sempre mostra o fundo redondo do ícone, mesmo que por`icon_tap_action`"Não" selecionado |
+| `entity` | string | obrigatório | entidade criada pela integração |
+| `name` | string | nome da entidade | substitui o nome mostrado no cartão |
+| `icon` | string | ícone da entidade | substitui o ícone |
+| `show_mode` | boolean | `true` | mostra o nome do modo |
+| `show_percentage` | boolean | `true` | mostra a porcentagem sintética |
+| `icon_tap_action` | action | `more-info` | ação adicional quando o ícone é tocado |
+| `always_show_icon_background` | boolean | `false` | sempre mostra o fundo do ícone circular, mesmo quando None está selecionado para icon_tap_action |
 
 Exemplo completo:
 
@@ -222,7 +222,7 @@ Após a alteração, reinicie os recursos do Lovelace ou reinicie o Home Assista
 ## 🧯 Solução de problemas
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓A integração não aparece na lista auxiliar</b></summary>
 <br />
 
 **Causa provável:**&#x63;aminho incorreto ou o Home Assistant não foi reiniciado.
@@ -239,7 +239,7 @@ Em seguida, reinicie completamente o Home Assistant e verifique se há erros no 
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓A lista de plug-ins está vazia</b></summary>
 <br />
 
 A integração mostra apenas objetos`switch`associado a dispositivos que também fornecem um sensor incluído com`device_class: power`.
@@ -255,7 +255,7 @@ Check-i&#x6E;**[Configurações → Dispositivos e serviços → Objetos](https:
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓A criação é interrompida com uma mensagem de sensor de energia ausente</b></summary>
 <br />
 
 Após selecionar uma tomada, a integração verifica novamente a presença de um sensor de potência. O erro ocorre se o sensor tiver sido removido, desativado, movido para outro dispositivo ou não tiver mais`device_class: power`.
@@ -264,7 +264,7 @@ Após selecionar uma tomada, a integração verifica novamente a presença de um
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓A lâmpada é mostrada como Desligada enquanto o plugue está ligado</b></summary>
 <br />
 
 Verifique o valor do sensor de potência. A lâmpada virtual é considerada apagada quando`0 W`; quando positivo, deve ser definido como`on`.
@@ -273,7 +273,7 @@ Verifique o valor do sensor de potência. A lâmpada virtual é considerada apag
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓A lâmpada é mostrada como ligada enquanto está fisicamente desligada</b></summary>
 <br />
 
 Verifique se o sensor de potência selecionado realmente mostra`0 W`, quando a lâmpada é desligada pelo próprio botão.
@@ -282,7 +282,7 @@ Verifique se o sensor de potência selecionado realmente mostra`0 W`, quando a l
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓O modo errado é detectado</b></summary>
 <br />
 
 Verificar**🐞 Last measures**em configurações e atributos`power_history`,`power_history_modes`,`power_sample_interval_seconds`E`selected_power_mode`.`power_history`mostra os últimos valores de potência registrados,`power_history_modes`— modo para cada um deles de acordo com os limites configurados,`power_sample_interval_seconds`é o intervalo de fixação periódica, e`selected_power_mode`— modo confirmado atual.
@@ -291,7 +291,7 @@ Verificar**🐞 Last measures**em configurações e atributos`power_history`,`po
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓As alterações de modo não são exibidas imediatamente</b></summary>
 <br />
 
 Este é o comportamento esperado. Para evitar que flutuações de energia de curto prazo causem comutação falsa, a integração muda de modo somente após várias leituras consecutivas corresponderem ao mesmo novo modo.
@@ -306,7 +306,7 @@ A redução do número de leituras acelera a exibição do novo modo, mas torna 
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓O cartão não aparece na lista</b></summary>
 <br />
 
 O registro automático ocorre somente após carregar pelo menos um objeto auxiliar configurado e somente no modo de recurso`storage`. O método de instalação da integração – via HACS ou manualmente – não afeta isso.
@@ -323,7 +323,7 @@ No modo YAML[adicionar recurso manualmente](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓O cartão antigo ainda é exibido após uma atualização</b></summary>
 <br />
 
 1. Reinicie completamente o Home Assistant.
@@ -354,8 +354,9 @@ No modo YAML[adicionar recurso manualmente](#yaml-lovelace-mode).
 
 ## 📄 Licença
 
-O projeto é distribuído sob licença[COM](../LICENSE).
+Este projeto é distribuído sob a licença [MIT](../LICENSE).
 
 <br />
 
-> \[!DICA]**Gostou da solução?**&#x4F;lha 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_pt-BR.md">meus outros produtos para Home Assistant</a>
+> [!TIP]
+> **Gostou desta solução?** Dê uma olhada 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_pt-BR.md">meus outros produtos Home Assistant</a>

@@ -168,15 +168,15 @@ Làm tròn chỉ ảnh hưởng đến tỷ lệ phần trăm hiển thị và c
 
 Tùy chọn có sẵn:
 
-| Tham số | Loại | Mặc định | Điểm đến |
+| tham số | loại | Mặc định | Mô tả |
 |---|---|---:|---|
-|`entity`| chuỗi | bắt buộc | thực thể được tạo bởi sự tích hợp |
-|`name`| chuỗi | tên thực thể | ghi đè tên trong thẻ |
-|`icon`| chuỗi | biểu tượng thực thể | định nghĩa lại biểu tượng |
-|`show_mode`| boolean |`true`| hiển thị tên chế độ |
-|`show_percentage`| boolean |`true`| hiển thị lãi suất có điều kiện |
-|`icon_tap_action`| hành động |`more-info`| hành động bổ sung khi nhấp vào biểu tượng |
-|`always_show_icon_background`| boolean |`false`| luôn hiển thị nền tròn của biểu tượng, ngay cả khi`icon_tap_action`Đã chọn "Không" |
+| `entity` | string | bắt buộc | thực thể được tạo ra bởi sự tích hợp |
+| `name` | string | tên thực thể | ghi đè tên hiển thị trên thẻ |
+| `icon` | string | biểu tượng thực thể | ghi đè biểu tượng |
+| `show_mode` | boolean | `true` | hiển thị tên chế độ |
+| `show_percentage` | boolean | `true` | hiển thị tỷ lệ phần trăm tổng hợp |
+| `icon_tap_action` | action | `more-info` | hành động bổ sung khi chạm vào biểu tượng |
+| `always_show_icon_background` | boolean | `false` | luôn hiển thị nền biểu tượng hình tròn, ngay cả khi None được chọn cho icon_tap_action |
 
 Ví dụ đầy đủ:
 
@@ -222,7 +222,7 @@ Sau khi thay đổi, hãy khởi động lại tài nguyên Lovelace hoặc kh�
 ## 🧯 Khắc phục sự cố
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Việc tích hợp không xuất hiện trong danh sách trợ giúp</b></summary>
 <br />
 
 **Nguyên nhân có thể:**&#x111;ường dẫn không chính xác hoặc Home Assistant chưa được khởi động lại.
@@ -239,7 +239,7 @@ Sau đó khởi động lại toàn bộ Home Assistant và kiểm tra nhật k�
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Danh sách phích cắm trống</b></summary>
 <br />
 
 Tích hợp chỉ hiển thị các đối tượng`switch`được liên kết với các thiết bị cũng cung cấp cảm biến đi kèm với`device_class: power`.
@@ -255,7 +255,7 @@ Tích hợp chỉ hiển thị các đối tượng`switch`được liên kết 
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Quá trình tạo dừng lại với thông báo thiếu cảm biến nguồn</b></summary>
 <br />
 
 Sau khi chọn ổ cắm, bộ tích hợp sẽ kiểm tra lại sự hiện diện của cảm biến nguồn. Lỗi xảy ra nếu cảm biến đã bị tháo, vô hiệu hóa, chuyển sang thiết bị khác hoặc không còn`device_class: power`.
@@ -264,7 +264,7 @@ Sau khi chọn ổ cắm, bộ tích hợp sẽ kiểm tra lại sự hiện di�
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Đèn hiển thị là Tắt khi phích cắm đang bật</b></summary>
 <br />
 
 Kiểm tra giá trị cảm biến nguồn. Đèn ảo được coi là tắt khi`0 W`; khi tích cực, nó phải được định nghĩa là`on`.
@@ -273,7 +273,7 @@ Kiểm tra giá trị cảm biến nguồn. Đèn ảo được coi là tắt kh
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Đèn được hiển thị là Bật trong khi nó tắt về mặt vật lý</b></summary>
 <br />
 
 Kiểm tra xem cảm biến nguồn đã chọn có thực sự hiển thị không`0 W`, khi đèn được tắt bằng nút riêng của nó.
@@ -282,7 +282,7 @@ Kiểm tra xem cảm biến nguồn đã chọn có thực sự hiển thị kh�
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Phát hiện chế độ sai</b></summary>
 <br />
 
 Kiểm tra**🐞 Last measures**trong cài đặt và thuộc tính`power_history`,`power_history_modes`,`power_sample_interval_seconds`Và`selected_power_mode`.`power_history`hiển thị các giá trị công suất được ghi lại lần cuối,`power_history_modes`- chế độ cho từng người trong số họ theo ngưỡng được định cấu hình,`power_sample_interval_seconds`là khoảng thời gian cố định định kỳ, và`selected_power_mode`- chế độ xác nhận hiện tại.
@@ -291,7 +291,7 @@ Kiểm tra**🐞 Last measures**trong cài đặt và thuộc tính`power_histor
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Thay đổi chế độ không được hiển thị ngay lập tức</b></summary>
 <br />
 
 Đây là hành vi được mong đợi. Để ngăn chặn sự dao động công suất ngắn hạn gây ra chuyển mạch giả, tích phân chỉ thay đổi chế độ sau vài lần đọc liên tiếp tương ứng với cùng một chế độ mới.
@@ -306,7 +306,7 @@ Việc giảm số lượng giá trị đo sẽ tăng tốc độ hiển thị c
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Thẻ không xuất hiện trong danh sách</b></summary>
 <br />
 
 Đăng ký tự động chỉ xảy ra sau khi tải ít nhất một đối tượng trợ giúp được định cấu hình và chỉ ở chế độ tài nguyên`storage`. Phương pháp cài đặt tích hợp - thông qua HACS hoặc thủ công - không ảnh hưởng đến điều này.
@@ -323,7 +323,7 @@ Kiểm tr&#x61;**[Cài đặt → Bảng điều khiển → ⋮ → Tài nguyê
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Thẻ cũ vẫn hiển thị sau khi cập nhật</b></summary>
 <br />
 
 1. Khởi động lại hoàn toàn Home Assistant.
@@ -354,8 +354,9 @@ Kiểm tr&#x61;**[Cài đặt → Bảng điều khiển → ⋮ → Tài nguyê
 
 ## 📄 Giấy phép
 
-Dự án được phân phối theo giấy phép[VỚI](../LICENSE).
+Dự án này được phân phối theo giấy phép [MIT](../LICENSE).
 
 <br />
 
-> \[!MẸO]**Bạn có thích giải pháp này không?**&#x4E;hìn kìa 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_vi.md">các sản phẩm khác của tôi dành cho Trợ lý tại nhà</a>
+> [!TIP]
+> **Thích giải pháp này?** Hãy nhìn vào 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_vi.md">các sản phẩm Home Assistant khác của tôi</a>

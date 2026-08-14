@@ -168,15 +168,15 @@ Rrumbullakimi ndikon vetëm në përqindjen e shfaqur dhe intensitetin vizual t�
 
 Opsionet e disponueshme:
 
-| Parametri | Lloji | E paracaktuar | Destinacioni |
+| Parametri | Lloji | E paracaktuar | Përshkrimi |
 |---|---|---:|---|
-|`entity`| varg | obligative | entitet i krijuar nga integrimi |
-|`name`| varg | emri i njësisë ekonomike | shfuqizon emrin në kartë |
-|`icon`| varg | ikona e entitetit | ripërcakton ikonën |
-|`show_mode`| boolean |`true`| tregon emrin e modalitetit |
-|`show_percentage`| boolean |`true`| tregon interes të kushtëzuar |
-|`icon_tap_action`| veprim |`more-info`| veprim shtesë kur klikoni në ikonën |
-|`always_show_icon_background`| boolean |`false`| tregon gjithmonë sfondin e rrumbullakët të ikonës, edhe nëse për`icon_tap_action`"Jo" është zgjedhur |
+| `entity` | string | kërkohet | entitet i krijuar nga integrimi |
+| `name` | string | emri i entitetit | zëvendëson emrin e treguar në kartë |
+| `icon` | string | ikona e entitetit | anashkalon ikonën |
+| `show_mode` | boolean | `true` | tregon emrin e modalitetit |
+| `show_percentage` | boolean | `true` | tregon përqindjen sintetike |
+| `icon_tap_action` | action | `more-info` | veprim shtesë kur preket ikona |
+| `always_show_icon_background` | boolean | `false` | tregon gjithmonë sfondin rrethor të ikonës, edhe kur None është zgjedhur për icon_tap_action |
 
 Shembull i plotë:
 
@@ -222,7 +222,7 @@ Pas ndryshimit, rinisni burimet e Lovelace ose rinisni Home Assistant.
 ## 🧯 Zgjidhja e problemeve
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integrimi nuk shfaqet në listën e ndihmësve</b></summary>
 <br />
 
 **Shkaku i mundshëm:**&#x73;hteg i pasaktë ose "Asistenti në shtëpi" nuk u rinis.
@@ -239,7 +239,7 @@ Më pas bëni një rinisje të plotë të Home Assistant dhe kontrolloni regjist
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Lista e prizave është bosh</b></summary>
 <br />
 
 Integrimi tregon vetëm objekte`switch`lidhur me pajisje që ofrojnë gjithashtu një sensor të përfshirë`device_class: power`.
@@ -255,7 +255,7 @@ Regjistroh&#x75;**[Cilësimet → Pajisjet dhe shërbimet → Objektet](https://
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Krijimi ndalon me një mesazh të mungesës së sensorit të energjisë</b></summary>
 <br />
 
 Pas zgjedhjes së një prize, integrimi kontrollon përsëri për praninë e një sensori të energjisë. Gabimi ndodh nëse sensori është hequr, çaktivizuar, zhvendosur në një pajisje tjetër ose nuk është më`device_class: power`.
@@ -264,7 +264,7 @@ Pas zgjedhjes së një prize, integrimi kontrollon përsëri për praninë e nj�
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Llamba shfaqet si e fikur kur spina është e ndezur</b></summary>
 <br />
 
 Kontrolloni vlerën e sensorit të fuqisë. Llamba virtuale konsiderohet e fikur kur`0 W`; kur pozitive, duhet të përkufizohet si`on`.
@@ -273,7 +273,7 @@ Kontrolloni vlerën e sensorit të fuqisë. Llamba virtuale konsiderohet e fikur
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Llamba shfaqet si ndezur ndërsa është fizikisht e fikur</b></summary>
 <br />
 
 Kontrolloni nëse sensori i zgjedhur i fuqisë shfaqet vërtet`0 W`, kur llamba fiket me butonin e vet.
@@ -282,7 +282,7 @@ Kontrolloni nëse sensori i zgjedhur i fuqisë shfaqet vërtet`0 W`, kur llamba 
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Zbulohet mënyra e gabuar</b></summary>
 <br />
 
 Kontrollo**🐞 Last measures**në cilësimet dhe atributet`power_history`,`power_history_modes`,`power_sample_interval_seconds`Dhe`selected_power_mode`.`power_history`tregon vlerat e fundit të regjistruara të fuqisë,`power_history_modes`— modaliteti për secilën prej tyre sipas pragjeve të konfiguruara,`power_sample_interval_seconds`është intervali i fiksimit periodik, dhe`selected_power_mode`— modaliteti aktual i konfirmuar.
@@ -291,7 +291,7 @@ Kontrollo**🐞 Last measures**në cilësimet dhe atributet`power_history`,`powe
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Ndryshimet e modalitetit nuk shfaqen menjëherë</b></summary>
 <br />
 
 Kjo është sjellje e pritshme. Për të parandaluar që luhatjet afatshkurtra të energjisë të shkaktojnë ndërrim të rremë, integrimi ndryshon modalitetin vetëm pasi disa lexime të njëpasnjëshme korrespondojnë me të njëjtin modalitet të ri.
@@ -306,7 +306,7 @@ Zvogëlimi i numrit të leximeve përshpejton shfaqjen e modalitetit të ri, por
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Karta nuk shfaqet në listë</b></summary>
 <br />
 
 Regjistrimi automatik ndodh vetëm pas ngarkimit të të paktën një objekti ndihmës të konfiguruar dhe vetëm në modalitetin e burimeve`storage`. Metoda e instalimit të integrimit - nëpërmjet HACS ose manualisht - nuk ndikon në këtë.
@@ -323,7 +323,7 @@ Në modalitetin YAML[shtoni burimin me dorë](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Karta e vjetër shfaqet ende pas një përditësimi</b></summary>
 <br />
 
 1. Rinisni plotësisht Home Assistant.
@@ -352,10 +352,11 @@ Në modalitetin YAML[shtoni burimin me dorë](#yaml-lovelace-mode).
 4. Rinisni plotësisht Home Assistant.
 5. Nëse është e nevojshme, rifreskoni faqen për të pastruar cache-in e ndërfaqes.
 
-## 📄 Licencë
+## 📄 Licenca
 
-Projekti shpërndahet me licencë[ME](../LICENSE).
+Ky projekt shpërndahet nën licencën [MIT](../LICENSE).
 
 <br />
 
-> \[!KËSHILLA]**Ju pëlqeu zgjidhja?**&#x53;hikoni 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sq.md">produktet e mia të tjera për Home Assistant</a>
+> [!TIP]
+> **A ju pëlqen kjo zgjidhje?** Hidhini një sy 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sq.md">produktet e mia të tjera Home Assistant</a>

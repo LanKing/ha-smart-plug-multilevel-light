@@ -170,15 +170,15 @@ Biribiltzeak bistaratutako ehunekoari eta txartelaren ikusmen-intentsitateari ba
 
 Eskuragarri dauden aukerak:
 
-| Parametroa | Mota | Lehenetsia | Helmuga |
+| Parametroa | Mota | Lehenetsia | Deskribapena |
 |---|---|---:|---|
-| `entity` | katea | derrigorrezkoa | integrazioaren bidez sortutako entitatea |
-| `name` | katea | entitatearen izena | txartelaren izena gainidazten du |
-| `icon` | katea | entitatearen ikonoa | ikonoa birdefinitzen du |
-| `show_mode` | boolearra | `true` | moduaren izena erakusten du |
-| `show_percentage` | boolearra | `true` | baldintzapeko interesa erakusten du |
-| `icon_tap_action` | ekintza | `more-info` | ekintza gehigarria | ikonoa sakatzean
-| `always_show_icon_background` | boolearra | `false` | ikonoaren hondo biribila erakusten du beti, nahiz eta `icon_tap_action` "Ez" hautatua |
+| `entity` | string | beharrezkoak | integrazioak sortutako entitatea |
+| `name` | string | entitatearen izena | txartelan agertzen den izena gainidazten du |
+| `icon` | string | entitatearen ikonoa | ikonoa gainidazten du |
+| `show_mode` | boolean | `true` | moduaren izena erakusten du |
+| `show_percentage` | boolean | `true` | ehuneko sintetikoa erakusten du |
+| `icon_tap_action` | action | `more-info` | ekintza gehigarria ikonoa sakatzen denean |
+| `always_show_icon_background` | boolean | `false` | ikono zirkularra erakusten du beti, baita None icon_tap_action hautatuta dagoenean ere |
 
 Adibide osoa:
 
@@ -224,7 +224,7 @@ Aldaketa egin ondoren, kargatu berriro Lovelace baliabideak edo berrabiarazi Hom
 ## 🧯 Arazoak konpontzea
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integrazioa ez da laguntzaileen zerrendan agertzen</b></summary>
 <br />
 
 **Litekeena da kausa:** bide okerra edo Home Assistant ez zen berrabiarazi.
@@ -241,7 +241,7 @@ Ondoren, berrabiarazi gogor bat Home Assistant eta egiaztatu erregistroan akatsi
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Entxufeen zerrenda hutsik dago</b></summary>
 <br />
 
 Integrazioak objektuak soilik erakusten ditu `switch`barne sentsore bat ere eskaintzen duten gailuekin lotuta `device_class: power`.
@@ -257,7 +257,7 @@ Check in **[Ezarpenak → Gailuak eta zerbitzuak → Objektuak](https://my.home-
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Sorkuntza gelditzen da potentzia-sentsorearen mezu bat falta denean</b></summary>
 <br />
 
 Entxufe bat hautatu ondoren, integrazioak potentzia sentsore bat dagoen berriro egiaztatzen du. Errorea gertatzen da sentsorea kendu, desgaitu, beste gailu batera eraman bada edo jada ez bada `device_class: power`.
@@ -266,7 +266,7 @@ Entxufe bat hautatu ondoren, integrazioak potentzia sentsore bat dagoen berriro 
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lanpara itzalita agertzen da entxufea piztuta dagoen bitartean</b></summary>
 <br />
 
 Egiaztatu potentzia-sentsorearen balioa. Lanpara birtuala itzalita dagoela jotzen da `0 W`; positiboa denean, honela definitu behar da `on`.
@@ -275,7 +275,7 @@ Egiaztatu potentzia-sentsorearen balioa. Lanpara birtuala itzalita dagoela jotze
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lanpara piztuta agertzen da fisikoki itzalita dagoen bitartean</b></summary>
 <br />
 
 Egiaztatu hautatutako potentzia-sentsoreak benetan erakusten duela `0 W`, lanpara bere botoiarekin itzaltzen denean.
@@ -284,7 +284,7 @@ Egiaztatu hautatutako potentzia-sentsoreak benetan erakusten duela `0 W`, lanpar
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Modu okerra detektatu da</b></summary>
 <br />
 
 Egiaztatu **🐞 Last measures** ezarpenetan eta atributuetan `power_history`, `power_history_modes`, `power_sample_interval_seconds` Eta `selected_power_mode`. `power_history` erregistratutako azken potentzia-balioak erakusten ditu, `power_history_modes` — horietako bakoitzaren modua konfiguratutako atalaseen arabera, `power_sample_interval_seconds` aldizkako finkapen tartea da, eta `selected_power_mode` — uneko baieztatutako modua.
@@ -293,7 +293,7 @@ Egiaztatu **🐞 Last measures** ezarpenetan eta atributuetan `power_history`, `
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Modu aldaketak ez dira berehala bistaratzen</b></summary>
 <br />
 
 Espero den jokabidea da. Epe laburreko potentzia-gorabeherek etenketa faltsuak eragin ez ditzaten, integrazioak modua aldatzen du jarraian hainbat irakurketa modu berri berari dagozkion ondoren bakarrik.
@@ -308,7 +308,7 @@ Irakurketa-kopurua murrizteak modu berriaren bistaratzea bizkortzen du, baina de
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Txartela ez da zerrendan agertzen</b></summary>
 <br />
 
 Erregistro automatikoa gutxienez konfiguratutako objektu laguntzaile bat kargatu ondoren eta baliabide moduan soilik gertatzen da `storage`. Integrazio-instalazio metodoa bidezkoa da HACS edo eskuz - honek ez du eraginik.
@@ -325,7 +325,7 @@ YAML moduan [gehitu baliabidea eskuz](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Txartel zaharra oraindik bistaratzen da eguneratze baten ondoren</b></summary>
 <br />
 
 1. Erabat berrabiarazi Home Assistant.
@@ -356,9 +356,9 @@ YAML moduan [gehitu baliabidea eskuz](#yaml-lovelace-mode).
 
 ## 📄 Lizentzia
 
-Proiektua lizentziapean banatzen da [MIT](../LICENSE).
+Proiektu hau [MIT](../LICENSE) lizentziapean banatzen da.
 
 <br />
 
 > [!TIP]
-> **Gustatu al zaizu irtenbidea?** Begira 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_eu.md">nire beste produktuak Home Assistant</a>
+> **Irtenbide hau gustatzen zaizu?** Eman begirada bat 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_eu.md">nire beste Home Assistant produktuak</a>

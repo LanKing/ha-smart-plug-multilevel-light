@@ -168,15 +168,15 @@ Zaokroževanje vpliva samo na prikazani odstotek in vizualno intenzivnost kartic
 
 Razpoložljive možnosti:
 
-| Parameter | Vrsta | Privzeto | Destinacija |
+| Parameter | Vrsta | Privzeto | Opis |
 |---|---|---:|---|
-|`entity`| niz | obvezno | subjekt, ustvarjen z integracijo |
-|`name`| niz | ime subjekta | preglasi ime na kartici |
-|`icon`| niz | ikona entitete | na novo definira ikono |
-|`show_mode`| logično |`true`| prikaže ime načina |
-|`show_percentage`| logično |`true`| izkazuje pogojne obresti |
-|`icon_tap_action`| dejanje |`more-info`| dodatno dejanje ob kliku na ikono |
-|`always_show_icon_background`| logično |`false`| vedno prikaže okroglo ozadje ikone, tudi če je za`icon_tap_action`»Ne« izbrano |
+| `entity` | string | potrebno | subjekt, ustvarjen z integracijo |
+| `name` | string | ime entitete | preglasi ime, prikazano na kartici |
+| `icon` | string | ikona entitete | preglasi ikono |
+| `show_mode` | boolean | `true` | prikazuje ime načina |
+| `show_percentage` | boolean | `true` | prikazuje sintetični odstotek |
+| `icon_tap_action` | action | `more-info` | dodatno dejanje, ko se dotaknete ikone |
+| `always_show_icon_background` | boolean | `false` | vedno prikaže ozadje krožne ikone, tudi če je None izbrano za icon_tap_action |
 
 Celoten primer:
 
@@ -222,7 +222,7 @@ Po spremembi znova zaženite vire Lovelace ali ponovno zaženite Home Assistant.
 ## 🧯 Odpravljanje težav
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integracija ni prikazana na seznamu pomoči</b></summary>
 <br />
 
 **Verjeten vzrok:**&#x6E;apačna pot ali Home Assistant ni bil znova zagnan.
@@ -239,7 +239,7 @@ Nato popolnoma znova zaženite Home Assistant in preverite, ali so v dnevniku na
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Seznam vtičnikov je prazen</b></summary>
 <br />
 
 Integracija prikazuje samo objekte`switch`povezanih z napravami, ki imajo tudi vključen senzor`device_class: power`.
@@ -255,7 +255,7 @@ Prijavite s&#x65;**[Nastavitve → Naprave in storitve → Predmeti](https://my.
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Ustvarjanje se ustavi s sporočilom manjkajočega senzorja moči</b></summary>
 <br />
 
 Po izbiri vtičnice integracija ponovno preveri prisotnost senzorja moči. Napaka se pojavi, če je bil senzor odstranjen, onemogočen, premaknjen na drugo napravo ali ga ni več`device_class: power`.
@@ -264,7 +264,7 @@ Po izbiri vtičnice integracija ponovno preveri prisotnost senzorja moči. Napak
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lučka je prikazana kot izklopljena, ko je vtič vklopljen</b></summary>
 <br />
 
 Preverite vrednost senzorja moči. Navidezna svetilka se šteje za izklopljeno, ko`0 W`; ko je pozitiven, ga je treba definirati kot`on`.
@@ -273,7 +273,7 @@ Preverite vrednost senzorja moči. Navidezna svetilka se šteje za izklopljeno, 
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lučka je prikazana kot Vklopljena, medtem ko je fizično izklopljena</b></summary>
 <br />
 
 Preverite, ali izbrani senzor moči dejansko prikazuje`0 W`, ko je svetilka ugasnjena z lastnim gumbom.
@@ -282,7 +282,7 @@ Preverite, ali izbrani senzor moči dejansko prikazuje`0 W`, ko je svetilka ugas
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Zaznan je napačen način</b></summary>
 <br />
 
 Preverite**🐞 Last measures**v nastavitvah in atributih`power_history`,`power_history_modes`,`power_sample_interval_seconds`in`selected_power_mode`.`power_history`prikazuje zadnje zabeležene vrednosti moči,`power_history_modes`— način za vsakega od njih glede na konfigurirane pragove,`power_sample_interval_seconds`je interval periodične fiksacije in`selected_power_mode`— trenutno potrjeni način.
@@ -291,7 +291,7 @@ Preverite**🐞 Last measures**v nastavitvah in atributih`power_history`,`power_
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Spremembe načina se ne prikažejo takoj</b></summary>
 <br />
 
 To je pričakovano vedenje. Da bi preprečili, da bi kratkotrajna nihanja moči povzročila lažno preklapljanje, integracija spremeni način šele, ko več zaporednih odčitkov ustreza istemu novemu načinu.
@@ -306,7 +306,7 @@ Zmanjšanje števila odčitkov pospeši prikaz novega načina, vendar naredi zaz
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kartica se ne pojavi na seznamu</b></summary>
 <br />
 
 Samodejna registracija se izvede šele po nalaganju vsaj enega konfiguriranega pomožnega objekta in samo v načinu virov`storage`. Način namestitve integracije – preko HACS ali ročno – na to ne vpliva.
@@ -323,7 +323,7 @@ V načinu YAML[dodaj vir ročno](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Stara kartica je po posodobitvi še vedno prikazana</b></summary>
 <br />
 
 1. Popolnoma znova zaženite Home Assistant.
@@ -354,8 +354,9 @@ V načinu YAML[dodaj vir ročno](#yaml-lovelace-mode).
 
 ## 📄 Licenca
 
-Projekt se distribuira pod licenco[Z](../LICENSE).
+Ta projekt se distribuira pod licenco [MIT](../LICENSE).
 
 <br />
 
-> \[!NAMIG]**Vam je bila rešitev všeč?**&#x50;oglej 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sl.md">moji drugi izdelki za Domačega pomočnika</a>
+> [!TIP]
+> **Vam je všeč ta rešitev?** Oglejte si 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sl.md">moji drugi izdelki Home Assistant</a>

@@ -170,15 +170,15 @@ Kui säte on lubatud, ümardatakse arvutatud protsent lähima 5%ni, näiteks: 33
 
 Saadaolevad valikud:
 
-| Parameeter | Tüüp | Vaikimisi | Sihtkoht |
+| Parameeter | Tüüp | Vaikimisi | Kirjeldus |
 |---|---|---:|---|
-| `entity` | string | kohustuslik | integreerimise teel loodud olem |
-| `name` | string | üksuse nimi | alistab kaardil oleva nime |
-| `icon` | string | olemi ikoon | defineerib uuesti ikooni |
-| `show_mode` | tõeväärtus | `true` | näitab režiimi nime |
-| `show_percentage` | tõeväärtus | `true` | näitab tinglikku huvi |
-| `icon_tap_action` | tegevus | `more-info` | lisatoiming ikoonil | klõpsamisel
-| `always_show_icon_background` | tõeväärtus | `false` | näitab alati ikooni ümmargust tausta, isegi kui jaoks `icon_tap_action` Valitud "Ei" |
+| `entity` | string | nõutud | integreerimisel loodud olem |
+| `name` | string | olemi nimi | tühistab kaardil näidatud nime |
+| `icon` | string | olemi ikoon | alistab ikooni |
+| `show_mode` | boolean | `true` | näitab režiimi nime |
+| `show_percentage` | boolean | `true` | näitab sünteetilist protsenti |
+| `icon_tap_action` | action | `more-info` | lisatoimingud ikooni puudutamisel |
+| `always_show_icon_background` | boolean | `false` | näitab alati ringikujulist ikooni tausta, isegi kui icon_tap_action jaoks on valitud None |
 
 Täielik näide:
 
@@ -224,7 +224,7 @@ Pärast muudatust laadige Lovelace'i ressursid uuesti või taaskäivitage Home A
 ## 🧯 Veaotsing
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integratsiooni abimeeste loendis ei kuvata</b></summary>
 <br />
 
 **Tõenäoline põhjus:** valel teel või Home Assistant ei taaskäivitatud.
@@ -241,7 +241,7 @@ Seejärel tehke kõva taaskäivitus Home Assistant ja kontrollige logist vigu `s
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Pistikuloend on tühi</b></summary>
 <br />
 
 Integratsioon näitab ainult objekte `switch`seotud seadmetega, millel on ka kaasas olev andur `device_class: power`.
@@ -257,7 +257,7 @@ Registreeruge **[Seaded → Seadmed ja teenused → Objektid](https://my.home-as
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Loomine peatub puuduva toiteanduri teatega</b></summary>
 <br />
 
 Pärast pistikupesa valimist kontrollib integratsioon uuesti võimsusanduri olemasolu. Viga ilmneb siis, kui andur on eemaldatud, keelatud, teisaldatud teise seadmesse või seda enam pole `device_class: power`.
@@ -266,7 +266,7 @@ Pärast pistikupesa valimist kontrollib integratsioon uuesti võimsusanduri olem
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Kui pistik on sisse lülitatud, kuvatakse lamp väljas</b></summary>
 <br />
 
 Kontrollige võimsusanduri väärtust. Virtuaalne lamp loetakse väljalülitatuks, kui `0 W`; kui see on positiivne, tuleks see määratleda kui `on`.
@@ -275,7 +275,7 @@ Kontrollige võimsusanduri väärtust. Virtuaalne lamp loetakse väljalülitatuk
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Kui lamp on füüsiliselt välja lülitatud, kuvatakse see sisselülitatuna</b></summary>
 <br />
 
 Kontrollige, kas valitud võimsusandur ka tegelikult näitab `0 W`, kui lamp on oma nupuga välja lülitatud.
@@ -284,7 +284,7 @@ Kontrollige, kas valitud võimsusandur ka tegelikult näitab `0 W`, kui lamp on 
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Tuvastatakse vale režiim</b></summary>
 <br />
 
 Kontrollige **🐞 Last measures** seadetes ja atribuutides `power_history`, `power_history_modes`, `power_sample_interval_seconds` Ja `selected_power_mode`. `power_history` näitab viimati salvestatud võimsuse väärtusi, `power_history_modes` — režiim igaühe jaoks vastavalt konfigureeritud lävedele, `power_sample_interval_seconds` on perioodilise fikseerimise intervall ja `selected_power_mode` — praegune kinnitatud režiim.
@@ -293,7 +293,7 @@ Kontrollige **🐞 Last measures** seadetes ja atribuutides `power_history`, `po
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Režiimi muudatusi ei kuvata kohe</b></summary>
 <br />
 
 See on ootuspärane käitumine. Selleks, et lühiajalised võimsuse kõikumised ei põhjustaks valesid ümberlülitusi, muudab integreerimine režiimi alles pärast seda, kui mitu järjestikust näitu vastab samale uuele režiimile.
@@ -308,7 +308,7 @@ Näitude arvu vähendamine kiirendab uue režiimi kuvamist, kuid muudab tuvastam
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kaarti ei kuvata loendis</b></summary>
 <br />
 
 Automaatne registreerimine toimub alles pärast vähemalt ühe konfigureeritud abiobjekti laadimist ja ainult ressursirežiimis `storage`. Integratsiooni installimeetod on via HACS või käsitsi – see ei mõjuta.
@@ -325,7 +325,7 @@ YAML-režiimis [lisage ressurss käsitsi](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Pärast värskendamist kuvatakse endiselt vana kaarti</b></summary>
 <br />
 
 1. Täielikult taaskäivitage Home Assistant.
@@ -356,9 +356,9 @@ YAML-režiimis [lisage ressurss käsitsi](#yaml-lovelace-mode).
 
 ## 📄 Litsents
 
-Projekti levitatakse litsentsi alusel [MIT](../LICENSE).
+Seda projekti levitatakse litsentsi [MIT](../LICENSE) all.
 
 <br />
 
 > [!TIP]
-> **Kas lahendus meeldis?** Vaata 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_et.md">minu teised tooted Home Assistant</a>
+> **Kas see lahendus meeldib?** Heida pilk peale 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_et.md">minu teised Home Assistant tooted</a>

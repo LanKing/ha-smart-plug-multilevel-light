@@ -168,15 +168,15 @@ Rounding beynfloedet allinnich de werjûn persintaazje en fisuele yntinsiteit fa
 
 Beskikbere opsjes:
 
-| Parameter | Type | Standert | Bestimming |
+| Parameter | Type | Standert | Beskriuwing |
 |---|---|---:|---|
-|`entity`| string | ferplichte | entiteit makke troch yntegraasje |
-|`name`| string | entiteit namme | oerskriuwt de namme yn 'e kaart |
-|`icon`| string | entiteit ikoan | definiearret ikoan |
-|`show_mode`| boolean |`true`| toant modusnamme |
-|`show_percentage`| boolean |`true`| lit betingst ynteresse sjen |
-|`icon_tap_action`| aksje |`more-info`| ekstra aksje by it klikken op it ikoan |
-|`always_show_icon_background`| boolean |`false`| toant altyd de rûne eftergrûn fan it byldkaike, sels as foar`icon_tap_action`"Nee" selektearre |
+| `entity` | string | fereaske | entiteit makke troch de yntegraasje |
+| `name` | string | entiteit namme | oerskriuwt de namme werjûn op de kaart |
+| `icon` | string | entiteit ikoan | oerskriuwt it ikoan |
+| `show_mode` | boolean | `true` | toant de namme fan de modus |
+| `show_percentage` | boolean | `true` | toant de syntetyske persintaazje |
+| `icon_tap_action` | action | `more-info` | ekstra aksje as it byldkaike wurdt tikt |
+| `always_show_icon_background` | boolean | `false` | toant altyd de sirkulêre ikoaneftergrûn, sels as None is selektearre foar icon_tap_action |
 
 Folslein foarbyld:
 
@@ -222,7 +222,7 @@ Nei de feroaring, herstart Lovelace-boarnen of start Home Assistant opnij.
 ## 🧯 Troubleshooting
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓De yntegraasje komt net foar yn de helperlist</b></summary>
 <br />
 
 **Wierskynlike oarsaak:**&#x66;erkeard paad of Home Assistant waard net opnij starte.
@@ -239,7 +239,7 @@ Doch dan in folsleine werstart fan Home Assistant en kontrolearje it log op flat
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓De stekkerlist is leech</b></summary>
 <br />
 
 Yntegraasje lit allinich objekten sjen`switch`ferbûn mei apparaten dy't ek soargje foar in ynbegrepen sensor mei`device_class: power`.
@@ -255,7 +255,7 @@ Yntsjekk&#x65;**[Ynstellings → Apparaten en tsjinsten → Objekten](https://my
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Creation stopt mei in ûntbrekkende macht sensor berjocht</b></summary>
 <br />
 
 Nei it selektearjen fan in outlet kontrolearret de yntegraasje opnij foar de oanwêzigens fan in machtsensor. De flater treedt op as de sensor is fuortsmiten, útskeakele, ferpleatst nei in oar apparaat, of net mear hat`device_class: power`.
@@ -264,7 +264,7 @@ Nei it selektearjen fan in outlet kontrolearret de yntegraasje opnij foar de oan
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓De lamp wurdt werjûn as Off wylst de stekker oan is</b></summary>
 <br />
 
 Kontrolearje de macht sensor wearde. De firtuele lamp wurdt beskôge útskeakele wannear`0 W`; wannear posityf, it moat wurde definiearre as`on`.
@@ -273,7 +273,7 @@ Kontrolearje de macht sensor wearde. De firtuele lamp wurdt beskôge útskeakele
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓De lamp wurdt werjûn as Oan wylst it fysyk út is</b></summary>
 <br />
 
 Kontrolearje dat de selektearre macht sensor eins toant`0 W`, as de lampe wurdt útskeakele troch syn eigen knop.
@@ -282,7 +282,7 @@ Kontrolearje dat de selektearre macht sensor eins toant`0 W`, as de lampe wurdt 
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓De ferkearde modus wurdt ûntdutsen</b></summary>
 <br />
 
 Kontrôle**🐞 Last measures**yn ynstellings en attributen`power_history`,`power_history_modes`,`power_sample_interval_seconds`En`selected_power_mode`.`power_history`toant de lêste opnommen krêftwearden,`power_history_modes`- modus foar elk fan har neffens ynstelde drompels,`power_sample_interval_seconds`is it ynterval fan periodike fixaasje, en`selected_power_mode`- aktuele befêstige modus.
@@ -291,7 +291,7 @@ Kontrôle**🐞 Last measures**yn ynstellings en attributen`power_history`,`powe
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Moduswizigingen wurde net direkt werjûn</b></summary>
 <br />
 
 Dit is ferwachte gedrach. Om foar te kommen dat koarte-termyn macht fluktuaasjes feroarsaakje spurious switching, de yntegraasje feroaret modus allinnich neidat ferskate opienfolgjende lêzingen oerienkomme mei deselde nije modus.
@@ -306,7 +306,7 @@ It ferminderjen fan it oantal lêzings fersnelt de werjefte fan 'e nije modus, m
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓De kaart komt net yn 'e list</b></summary>
 <br />
 
 Automatyske registraasje bart allinich nei it laden fan op syn minst ien konfigureare helperobjekt en allinich yn boarnemodus`storage`. De metoade foar it ynstallearjen fan de yntegraasje - fia HACS of mei de hân - hat gjin ynfloed op dit.
@@ -323,7 +323,7 @@ Yn YAML modus[add boarne hânmjittich](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓De âlde kaart wurdt noch werjûn nei in fernijing</b></summary>
 <br />
 
 1. Start Home Assistant folslein op 'e nij.
@@ -354,8 +354,9 @@ Yn YAML modus[add boarne hânmjittich](#yaml-lovelace-mode).
 
 ## 📄 Lisinsje
 
-It projekt wurdt ferdield ûnder lisinsje[MEI](../LICENSE).
+Dit projekt is ferspraat ûnder de lisinsje [MIT](../LICENSE).
 
 <br />
 
-> \[!TIP]**Hawwe jo de oplossing leuk?**&#x53;joch 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_fy.md">myn oare produkten foar Home Assistant</a>
+> [!TIP]
+> **Liket dizze oplossing?** Sjoch ris op 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_fy.md">myn oare Home Assistant produkten</a>

@@ -168,15 +168,15 @@ custom_components/smart_plug_multilevel_light
 
 可用选项：
 
-|参数|类型 |默认|目的地 |
+| 参数 | 类型 | 默认 | 描述 |
 |---|---|---:|---|
-|`entity`|字符串|强制性 |整合创建的实体|
-|`name`|字符串|实体名称 |覆盖卡中的姓名 |
-|`icon`|字符串|实体图标|重新定义图标|
-|`show_mode`|布尔 |`true`|显示模式名称 |
-|`show_percentage`|布尔 |`true`|显示有条件的兴趣 |
-|`icon_tap_action`|行动|`more-info`|单击图标时的附加操作 |
-|`always_show_icon_background`|布尔 |`false`|始终显示图标的圆形背景，即使`icon_tap_action`选择“否”|
+| `entity` | string | 必填 | 集成创建的实体 |
+| `name` | string | 实体名称 | 覆盖卡上显示的姓名 |
+| `icon` | string | 实体图标 | 覆盖图标 |
+| `show_mode` | boolean | `true` | 显示模式名称 |
+| `show_percentage` | boolean | `true` | 显示合成百分比 |
+| `icon_tap_action` | action | `more-info` | 点击图标时的附加操作 |
+| `always_show_icon_background` | boolean | `false` | 始终显示圆形图标背景，即使为 icon_tap_action 选择 None 也是如此 |
 
 完整示例：
 
@@ -222,7 +222,7 @@ lovelace:
 ## 🧯 故障排除
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓集成未出现在帮助程序列表中</b></summary>
 <br />
 
 **可能的原因：**&#x8DEF;径不正确或 Home Assistant 未重新启动。
@@ -239,7 +239,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓插头列表为空</b></summary>
 <br />
 
 集成仅显示对象`switch`与还提供附带传感器的设备相关联`device_class: power`.
@@ -255,7 +255,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓创建因缺少功率传感器消息而停止</b></summary>
 <br />
 
 选择插座后，集成会重新检查是否存在功率传感器。如果传感器已被移除、禁用、移至其他设备或不再具有，则会发生错误`device_class: power`.
@@ -264,7 +264,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓插头打开时灯显示为关闭</b></summary>
 <br />
 
 检查功率传感器值。虚拟灯被认为关闭时`0 W`;当为正时，应定义为`on`.
@@ -273,7 +273,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓灯在物理关闭时显示为打开</b></summary>
 <br />
 
 检查所选功率传感器是否实际显示`0 W`，当灯通过其自身的按钮关闭时。
@@ -282,7 +282,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓检测到错误模式</b></summary>
 <br />
 
 查看**🐞 Last measures**在设置和属性中`power_history`,`power_history_modes`,`power_sample_interval_seconds`和`selected_power_mode`.`power_history`显示最后记录的功率值，`power_history_modes`— 根据配置的阈值每个人的模式，`power_sample_interval_seconds`是周期性注视的间隔，并且`selected_power_mode`— 当前确认模式。
@@ -291,7 +291,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓模式更改不会立即显示</b></summary>
 <br />
 
 这是预期的行为。为了防止短期功率波动引起杂散切换，积分仅在多个连续读数对应于相同的新模式后才改变模式。
@@ -306,7 +306,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓该卡未出现在列表中</b></summary>
 <br />
 
 仅在加载至少一个已配置的辅助对象后且仅在资源模式下才会发生自动注册`storage`。安装集成的方法（通过 HACS 或手动）不会影响这一点。
@@ -323,7 +323,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓更新后仍显示旧卡</b></summary>
 <br />
 
 1. 完全重新启动家庭助理。
@@ -354,8 +354,9 @@ lovelace:
 
 ## 📄 许可证
 
-该项目是根据许可分发的[和](../LICENSE).
+该项目根据 [MIT](../LICENSE) 许可证分发。
 
 <br />
 
-> \[！提示]**您喜欢这个解决方案吗？**&#x770B;看🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_zh-Hans.md">我的其他家庭助理产品</a>
+> [!TIP]
+> **喜欢这个解决方案吗？** 看看 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_zh-Hans.md">我的其他 Home Assistant 产品</a>

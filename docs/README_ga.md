@@ -168,15 +168,15 @@ Ní bhíonn tionchar ag slánú ach ar chéatadán ar taispeáint agus ar dhéin
 
 Roghanna atá ar fáil:
 
-| Paraiméadar | Cineál | Réamhshocrú | Ceann Scríbe |
+| Paraiméadar | Cineál | Réamhshocrú | Cur síos |
 |---|---|---:|---|
-|`entity`| teaghrán | éigeantach | eintiteas cruthaithe ag comhtháthú |
-|`name`| teaghrán | ainm aonáin | sháraíonn an t-ainm sa chárta |
-|`icon`| teaghrán | íocón aonáin | athshainíonn an deilbhín |
-|`show_mode`| Boole |`true`| léiríonn ainm mód |
-|`show_percentage`| Boole |`true`| léiríonn ús coinníollach |
-|`icon_tap_action`| gníomh |`more-info`| gníomh breise nuair a chliceáiltear ar an deilbhín |
-|`always_show_icon_background`| Boole |`false`| i gcónaí léiríonn an cúlra cruinn ar an deilbhín, fiú más ar feadh`icon_tap_action`"Níl" roghnaithe |
+| `entity` | string | ag teastáil | eintiteas cruthaithe ag an gcomhtháthú |
+| `name` | string | ainm aonáin | sáraíonn sé an t-ainm a thaispeántar ar an gcárta |
+| `icon` | string | deilbhín eintiteas | sháraíonn an deilbhín |
+| `show_mode` | boolean | `true` | léiríonn an t-ainm mód |
+| `show_percentage` | boolean | `true` | léiríonn an céatadán sintéiseach |
+| `icon_tap_action` | action | `more-info` | gníomh breise nuair a bhíonn an deilbhín taped |
+| `always_show_icon_background` | boolean | `false` | taispeántar cúlra an deilbhín ciorclach i gcónaí, fiú nuair a roghnaítear None le haghaidh icon_tap_action |
 
 Sampla iomlán:
 
@@ -222,7 +222,7 @@ Tar éis an athraithe, atosaigh acmhainní Lovelace nó atosaigh Cúntóir Baile
 ## 🧯 Fabhtcheartú
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Níl an comhtháthú le feiceáil sa liosta cúntóirí</b></summary>
 <br />
 
 **Cúis dócha:**&#x63;osán mícheart nó níor atosaíodh Cúntóir Baile.
@@ -239,7 +239,7 @@ Ansin déan atosú iomlán ar Chúntóir Baile agus seiceáil an logáil isteach
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Tá an liosta breiseán folamh</b></summary>
 <br />
 
 Ní léiríonn comhtháthú ach rudaí`switch`a bhaineann le feistí a sholáthraíonn braiteoir cuimsithe freisin le`device_class: power`.
@@ -255,7 +255,7 @@ Seiceáil isteac&#x68;**[Socruithe → Gléasanna agus seirbhísí → Réada](h
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Stopann an cruthú agus teachtaireacht braiteoir cumhachta in easnamh</b></summary>
 <br />
 
 Tar éis asraon a roghnú, athsheiceálann an comhtháthú láithreacht braiteoir cumhachta. Tarlaíonn an earráid má baineadh an braiteoir, má dhíchumasaítear é, má bhogtar é go gléas eile, nó má scoirtear de`device_class: power`.
@@ -264,7 +264,7 @@ Tar éis asraon a roghnú, athsheiceálann an comhtháthú láithreacht braiteoi
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Taispeántar an lampa mar Off agus an breiseán ar siúl</b></summary>
 <br />
 
 Seiceáil an luach braiteoir cumhachta. Meastar go bhfuil an lampa fíorúil múchta nuair`0 W`; nuair a bheidh sé dearfach, ba cheart é a shainiú mar`on`.
@@ -273,7 +273,7 @@ Seiceáil an luach braiteoir cumhachta. Meastar go bhfuil an lampa fíorúil mú
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Taispeántar an lampa mar On agus é múchta go fisiciúil</b></summary>
 <br />
 
 Seiceáil go léiríonn an braiteoir cumhachta roghnaithe i ndáiríre`0 W`, nuair a bhíonn an lampa múchta ag a chnaipe féin.
@@ -282,7 +282,7 @@ Seiceáil go léiríonn an braiteoir cumhachta roghnaithe i ndáiríre`0 W`, nua
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Braitear an modh mícheart</b></summary>
 <br />
 
 Seiceáil**🐞 Last measures**i socruithe agus tréithe`power_history`,`power_history_modes`,`power_sample_interval_seconds`Agus`selected_power_mode`.`power_history`taispeánann sé na luachanna cumhachta is déanaí a taifeadadh,`power_history_modes`— mód do gach ceann acu de réir tairseacha cumraithe,`power_sample_interval_seconds`is é an t-eatramh de shocrú tréimhsiúil, agus`selected_power_mode`— modh deimhnithe reatha.
@@ -291,7 +291,7 @@ Seiceáil**🐞 Last measures**i socruithe agus tréithe`power_history`,`power_h
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Ní thaispeántar athruithe mód láithreach</b></summary>
 <br />
 
 Táthar ag súil leis an iompar seo. Chun luaineachtaí cumhachta gearrthéarmacha a chosc ó bheith ina chúis le hathrú spraíúil, ní athraíonn an comhtháthú modh ach amháin tar éis roinnt léamha as a chéile a fhreagraíonn don mhodh nua céanna.
@@ -306,7 +306,7 @@ Má laghdaítear líon na léamha, cuirtear dlús le taispeáint an mhodha nua, 
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Níl an cárta le feiceáil sa liosta</b></summary>
 <br />
 
 Ní tharlaíonn clárú uathoibríoch ach amháin tar éis réad cúntóra cumraithe amháin ar a laghad a lódáil agus sa mhód acmhainne amháin`storage`. Ní dhéanann an modh chun an comhtháthú a shuiteáil - trí HACS nó de láimh - difear dó seo.
@@ -323,7 +323,7 @@ I mód YAML[cuir acmhainn leis de láimh](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Tá an seanchárta fós ar taispeáint tar éis nuashonraithe</b></summary>
 <br />
 
 1. Atosaigh Cúntóir Baile go hiomlán.
@@ -354,8 +354,9 @@ I mód YAML[cuir acmhainn leis de láimh](#yaml-lovelace-mode).
 
 ## 📄 Ceadúnas
 
-Tá an tionscadal a dháileadh faoi cheadúnas[LEIS](../LICENSE).
+Déantar an tionscadal seo a dháileadh faoin gceadúnas [MIT](../LICENSE).
 
 <br />
 
-> \[!TIP]**Ar thaitin an réiteach leat?**&#x46;éach 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ga.md">mo tháirgí eile do Chúntóir Baile</a>
+> [!TIP]
+> **Cosúil leis an réiteach seo?** Féach ar 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ga.md">mo tháirgí Home Assistant eile</a>

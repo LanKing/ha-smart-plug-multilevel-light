@@ -168,15 +168,15 @@ custom_components/smart_plug_multilevel_light
 
 利用可能なオプション:
 
-|パラメータ |タイプ |デフォルト |目的地 |
+| パラメータ | 種類 | デフォルト | 説明 |
 |---|---|---:|---|
-|`entity`|文字列 |必須 |統合によって作成されたエンティティ |
-|`name`|文字列 |エンティティ名 |カード内の名前をオーバーライドします。
-|`icon`|文字列 |エンティティアイコン |アイコンを再定義します |
-|`show_mode`|ブール値 |`true`|モード名を示します |
-|`show_percentage`|ブール値 |`true`|条件付きの金利を示します |
-|`icon_tap_action`|アクション |`more-info`|アイコンをクリックしたときの追加アクション |
-|`always_show_icon_background`|ブール値 |`false`|たとえ`icon_tap_action`「いいえ」が選択されました |
+| `entity` | string | 必須 | 統合によって作成されたエンティティ |
+| `name` | string | エンティティ名 | カードに表示されている名前を上書きします |
+| `icon` | string | エンティティアイコン | アイコンをオーバーライドします |
+| `show_mode` | boolean | `true` | モード名を示します |
+| `show_percentage` | boolean | `true` | 合成の割合を示します |
+| `icon_tap_action` | action | `more-info` | アイコンをタップしたときの追加アクション |
+| `always_show_icon_background` | boolean | `false` | icon_tap_action に None が選択されている場合でも、常に円形のアイコンの背景が表示されます。 |
 
 完全な例:
 
@@ -222,7 +222,7 @@ lovelace:
 ## 🧯 トラブルシューティング
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓統合がヘルパー リストに表示されない</b></summary>
 <br />
 
 **考えられる原因:**&#x30D1;スが間違っているか、Home Assistant が再起動されていません。
@@ -239,7 +239,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓プラグリストが空です</b></summary>
 <br />
 
 統合ではオブジェクトのみが表示されます`switch`付属のセンサーも提供するデバイスに関連付けられています。`device_class: power`.
@@ -255,7 +255,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓パワーセンサーが見つからないというメッセージが表示されて作成が停止する</b></summary>
 <br />
 
 コンセントを選択した後、統合は電力センサーの存在を再チェックします。このエラーは、センサーが取り外されたり、無効になったり、別のデバイスに移動されたり、センサーが存在しなくなったりした場合に発生します。`device_class: power`.
@@ -264,7 +264,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓プラグがオンの場合、ランプはオフと表示されます</b></summary>
 <br />
 
 パワーセンサーの値を確認してください。仮想ランプは次の場合にオフになっているとみなされます。`0 W`;正の場合、次のように定義する必要があります。`on`.
@@ -273,7 +273,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓ランプは物理的にオフでもオンとして表示されます</b></summary>
 <br />
 
 選択したパワーセンサーが実際に表示されていることを確認します`0 W`、ランプが独自のボタンによって消灯されるとき。
@@ -282,7 +282,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓間違ったモードが検出されました</b></summary>
 <br />
 
 チェック**🐞 Last measures**設定と属性で`power_history`,`power_history_modes`,`power_sample_interval_seconds`そして`selected_power_mode`.`power_history`最後に記録された電力値を示します。`power_history_modes`— 設定されたしきい値に応じたそれぞれのモード、`power_sample_interval_seconds`は定期的な注視の間隔であり、`selected_power_mode`— 現在確認されているモード。
@@ -291,7 +291,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓モード変更はすぐには表示されません</b></summary>
 <br />
 
 これは予期された動作です。短期間の電力変動によって誤ったスイッチングが発生するのを防ぐため、積分では、いくつかの連続した読み取り値が同じ新しいモードに対応した後でのみモードが変更されます。
@@ -306,7 +306,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓カードがリストに表示されない</b></summary>
 <br />
 
 自動登録は、少なくとも 1 つの構成済みヘルパー オブジェクトをロードした後、かつリソース モードでのみ行われます。`storage`。統合のインストール方法 (HACS 経由または手動) は、これに影響しません。
@@ -323,7 +323,7 @@ YAMLモードの場合[リソースを手動で追加する](#yaml-lovelace-mode
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓更新後も古いカードが表示されます</b></summary>
 <br />
 
 1. ホームアシスタントを完全に再起動します。
@@ -352,10 +352,11 @@ YAMLモードの場合[リソースを手動で追加する](#yaml-lovelace-mode
 4. ホームアシスタントを完全に再起動します。
 5. 必要に応じて、ページを更新してインターフェイス キャッシュをクリアします。
 
-## 📄ライセンス
+## 📄 ライセンス
 
-プロジェクトはライセンスに基づいて配布されています[と](../LICENSE).
+このプロジェクトは [MIT](../LICENSE) ライセンスに基づいて配布されています。
 
 <br />
 
-> \[！ヒント]**この解決策は気に入りましたか?**&#x898B;てください🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ja.md">ホームアシスタント用の他の製品</a>
+> [!TIP]
+> **この解決策が気に入りましたか?** 見てみましょう 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ja.md">他の Home Assistant 製品</a>

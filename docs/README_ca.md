@@ -170,15 +170,15 @@ L'arrodoniment només afecta el percentatge mostrat i la intensitat visual de la
 
 Opcions disponibles:
 
-| Paràmetre | Tipus | Per defecte | Destinació |
+| Paràmetre | Tipus | Per defecte | Descripció |
 |---|---|---:|---|
-| `entity` | cadena | obligatòria | entitat creada per integració |
-| `name` | cadena | nom de l'entitat | anul·la el nom de la targeta |
-| `icon` | cadena | icona d'entitat | redefineix la icona |
-| `show_mode` | booleà | `true` | mostra el nom del mode |
-| `show_percentage` | booleà | `true` | mostra interès condicional |
-| `icon_tap_action` | acció | `more-info` | acció addicional en fer clic a la icona |
-| `always_show_icon_background` | booleà | `false` | sempre mostra el fons rodó de la icona, encara que sigui per `icon_tap_action` "No" seleccionat |
+| `entity` | string | requerit | entitat creada per la integració |
+| `name` | string | nom de l'entitat | anul·la el nom que apareix a la targeta |
+| `icon` | string | icona d'entitat | anul·la la icona |
+| `show_mode` | boolean | `true` | mostra el nom del mode |
+| `show_percentage` | boolean | `true` | mostra el percentatge sintètic |
+| `icon_tap_action` | action | `more-info` | acció addicional quan es toca la icona |
+| `always_show_icon_background` | boolean | `false` | sempre mostra el fons de la icona circular, fins i tot quan s'ha seleccionat None per a icon_tap_action |
 
 Exemple complet:
 
@@ -224,7 +224,7 @@ Després del canvi, torneu a carregar els recursos de Lovelace o reinicieu-lo Ho
 ## 🧯 Resolució de problemes
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓La integració no apareix a la llista d'ajudants</b></summary>
 <br />
 
 **Causa probable:** manera incorrecta o Home Assistant no es va reiniciar.
@@ -241,7 +241,7 @@ A continuació, feu un reinici dur Home Assistant i comproveu si hi ha errors al
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓La llista de connectors està buida</b></summary>
 <br />
 
 La integració només mostra objectes `switch`associat amb dispositius que també proporcionen un sensor inclòs `device_class: power`.
@@ -257,7 +257,7 @@ Registra't **[Configuració → Dispositius i serveis → Objectes](https://my.h
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓La creació s'atura amb un missatge del sensor de potència que falta</b></summary>
 <br />
 
 Després de seleccionar una presa de corrent, la integració torna a comprovar la presència d'un sensor de potència. L'error es produeix si el sensor s'ha eliminat, desactivat, traslladat a un altre dispositiu o ja no `device_class: power`.
@@ -266,7 +266,7 @@ Després de seleccionar una presa de corrent, la integració torna a comprovar l
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓El llum es mostra apagat mentre l'endoll està encès</b></summary>
 <br />
 
 Comproveu el valor del sensor de potència. El llum virtual es considera apagat quan `0 W`; quan és positiu, s'ha de definir com `on`.
@@ -275,7 +275,7 @@ Comproveu el valor del sensor de potència. El llum virtual es considera apagat 
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓El llum es mostra com a Encès mentre està físicament apagat</b></summary>
 <br />
 
 Comproveu que el sensor de potència seleccionat es mostri realment `0 W`, quan el llum s'apaga amb el seu propi botó.
@@ -284,7 +284,7 @@ Comproveu que el sensor de potència seleccionat es mostri realment `0 W`, quan 
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓S'ha detectat el mode incorrecte</b></summary>
 <br />
 
 Comproveu **🐞 Last measures** en la configuració i els atributs `power_history`, `power_history_modes`, `power_sample_interval_seconds` I `selected_power_mode`. `power_history` mostra els últims valors de potència registrats, `power_history_modes` — mode per a cadascun d'ells segons els llindars configurats, `power_sample_interval_seconds` és l'interval de fixació periòdica, i `selected_power_mode` — Mode actual confirmat.
@@ -293,7 +293,7 @@ Comproveu **🐞 Last measures** en la configuració i els atributs `power_histo
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Els canvis de mode no es mostren immediatament</b></summary>
 <br />
 
 Aquest és el comportament esperat. Per evitar que les fluctuacions de potència a curt termini ocasionin canvis falsos, la integració canvia de mode només després que diverses lectures consecutives corresponguin al mateix mode nou.
@@ -308,7 +308,7 @@ La reducció del nombre de lectures accelera la visualització del nou mode, per
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓La targeta no apareix a la llista</b></summary>
 <br />
 
 El registre automàtic només es produeix després de carregar almenys un objecte d'ajuda configurat i només en mode de recursos `storage`. El mètode d'instal·lació d'integració és via HACS o manualment, això no té cap efecte.
@@ -325,7 +325,7 @@ En mode YAML [afegir recursos manualment](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓La targeta antiga encara es mostra després d'una actualització</b></summary>
 <br />
 
 1. Reinicieu completament Home Assistant.
@@ -354,11 +354,11 @@ En mode YAML [afegir recursos manualment](#yaml-lovelace-mode).
 4. Reinicieu completament Home Assistant.
 5. Si cal, actualitzeu la pàgina per esborrar la memòria cau de la interfície.
 
-## 📄 Llicència
+## 📄 llicència
 
-El projecte es distribueix sota llicència [MIT](../LICENSE).
+Aquest projecte es distribueix sota la llicència [MIT](../LICENSE).
 
 <br />
 
 > [!TIP]
-> **T'ha agradat la solució?** Mira 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ca.md">els meus altres productes per Home Assistant</a>
+> **T'agrada aquesta solució?** Fes una ullada a 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ca.md">els meus altres productes Home Assistant</a>

@@ -168,15 +168,15 @@ Zaokrúhľovanie ovplyvňuje len zobrazené percento a vizuálnu intenzitu karty
 
 Dostupné možnosti:
 
-| Parameter | Typ | Predvolené | Destinácia |
+| Parameter | Typ | Predvolené | Popis |
 |---|---|---:|---|
-|`entity`| reťazec | povinné | subjekt vytvorený integráciou |
-|`name`| reťazec | názov entity | prepíše meno na karte |
-|`icon`| reťazec | ikona entity | predefinuje ikonu |
-|`show_mode`| boolean |`true`| zobrazuje názov režimu |
-|`show_percentage`| boolean |`true`| prejavuje podmienený záujem |
-|`icon_tap_action`| akcia |`more-info`| dodatočná akcia po kliknutí na ikonu |
-|`always_show_icon_background`| boolean |`false`| vždy zobrazuje okrúhle pozadie ikony, aj keď pre`icon_tap_action`"Nie" vybrané |
+| `entity` | string | požadované | entita vytvorená integráciou |
+| `name` | string | názov entity | prepíše meno zobrazené na karte |
+| `icon` | string | ikona entity | prepíše ikonu |
+| `show_mode` | boolean | `true` | zobrazuje názov režimu |
+| `show_percentage` | boolean | `true` | ukazuje syntetické percento |
+| `icon_tap_action` | action | `more-info` | dodatočnú akciu po ťuknutí na ikonu |
+| `always_show_icon_background` | boolean | `false` | vždy zobrazuje kruhové pozadie ikony, aj keď je pre icon_tap_action vybraté None |
 
 Úplný príklad:
 
@@ -222,7 +222,7 @@ Po zmene reštartujte prostriedky Lovelace alebo reštartujte Home Assistant.
 ## 🧯 Riešenie problémov
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integrácia sa nezobrazuje v zozname pomocníkov</b></summary>
 <br />
 
 **Pravdepodobná príčina:**&#x6E;esprávna cesta alebo Home Assistant nebol reštartovaný.
@@ -239,7 +239,7 @@ Potom vykonajte úplný reštart domáceho asistenta a skontrolujte, či protoko
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Zoznam zásuviek je prázdny</b></summary>
 <br />
 
 Integrácia zobrazuje iba objekty`switch`spojené so zariadeniami, ktoré tiež poskytujú priložený snímač`device_class: power`.
@@ -255,7 +255,7 @@ Prihlásiť s&#x61;**[Nastavenia → Zariadenia a služby → Objekty](https://m
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Vytváranie sa zastaví s chýbajúcou správou snímača napájania</b></summary>
 <br />
 
 Po výbere zásuvky integrácia znova skontroluje prítomnosť snímača výkonu. Chyba nastane, ak bol senzor odstránený, deaktivovaný, presunutý do iného zariadenia alebo už nie`device_class: power`.
@@ -264,7 +264,7 @@ Po výbere zásuvky integrácia znova skontroluje prítomnosť snímača výkonu
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Keď je zástrčka zapnutá, lampa sa zobrazuje ako nesvieti</b></summary>
 <br />
 
 Skontrolujte hodnotu snímača výkonu. Virtuálna lampa sa považuje za vypnutú, keď`0 W`; keď je pozitívny, mal by byť definovaný ako`on`.
@@ -273,7 +273,7 @@ Skontrolujte hodnotu snímača výkonu. Virtuálna lampa sa považuje za vypnut�
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lampa sa zobrazuje ako Zapnutá, keď je fyzicky vypnutá</b></summary>
 <br />
 
 Skontrolujte, či sa vybraný snímač výkonu skutočne zobrazuje`0 W`, keď sa lampa vypne vlastným tlačidlom.
@@ -282,7 +282,7 @@ Skontrolujte, či sa vybraný snímač výkonu skutočne zobrazuje`0 W`, keď sa
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Zistil sa nesprávny režim</b></summary>
 <br />
 
 Skontrolujte**🐞 Last measures**v nastaveniach a atribútoch`power_history`,`power_history_modes`,`power_sample_interval_seconds`A`selected_power_mode`.`power_history`zobrazuje posledné zaznamenané hodnoty výkonu,`power_history_modes`— režim pre každý z nich podľa nakonfigurovaných prahových hodnôt,`power_sample_interval_seconds`je interval periodickej fixácie, a`selected_power_mode`— aktuálny potvrdený režim.
@@ -291,7 +291,7 @@ Skontrolujte**🐞 Last measures**v nastaveniach a atribútoch`power_history`,`p
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Zmeny režimu sa nezobrazia okamžite</b></summary>
 <br />
 
 Toto je očakávané správanie. Aby sa predišlo krátkodobému kolísaniu napájania, ktoré by spôsobilo falošné prepínanie, integrácia zmení režim až po niekoľkých po sebe idúcich odčítaniach zodpovedajúcich rovnakému novému režimu.
@@ -306,7 +306,7 @@ Znížením počtu načítaní sa zrýchli zobrazenie nového režimu, no detekc
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Karta sa nezobrazuje v zozname</b></summary>
 <br />
 
 K automatickej registrácii dôjde až po načítaní aspoň jedného nakonfigurovaného pomocného objektu a iba v režime zdrojov`storage`. Spôsob inštalácie integrácie - cez HACS alebo manuálne - to neovplyvňuje.
@@ -323,7 +323,7 @@ V režime YAML[pridať zdroj ručne](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Stará karta sa po aktualizácii stále zobrazuje</b></summary>
 <br />
 
 1. Úplne reštartujte Home Assistant.
@@ -354,8 +354,9 @@ V režime YAML[pridať zdroj ručne](#yaml-lovelace-mode).
 
 ## 📄 Licencia
 
-Projekt je distribuovaný na základe licencie[S](../LICENSE).
+Tento projekt je distribuovaný pod licenciou [MIT](../LICENSE).
 
 <br />
 
-> \[!TIP]**Páčilo sa vám riešenie?**&#x50;ozrite 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sk.md">moje ďalšie produkty pre domáceho asistenta</a>
+> [!TIP]
+> **Páči sa vám toto riešenie?** Pozrite sa na 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sk.md">moje ďalšie produkty Home Assistant</a>

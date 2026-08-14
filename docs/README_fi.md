@@ -170,15 +170,15 @@ Pyöristys vaikuttaa vain kortin näytettävään prosenttiosuuteen ja visuaalis
 
 Käytettävissä olevat vaihtoehdot:
 
-| Parametri | Tyyppi | Oletus | Kohde |
+| Parametri | Kirjoita | Oletus | Kuvaus |
 |---|---|---:|---|
-| `entity` | merkkijono | pakollinen | integraatiolla luotu kokonaisuus |
-| `name` | merkkijono | kokonaisuuden nimi | ohittaa kortissa olevan nimen |
-| `icon` | merkkijono | entiteettikuvake | määrittelee kuvakkeen uudelleen |
-| `show_mode` | boolen | `true` | näyttää tilan nimen |
-| `show_percentage` | boolen | `true` | osoittaa ehdollista kiinnostusta |
-| `icon_tap_action` | toiminta | `more-info` | lisätoiminto, kun napsautat kuvaketta |
-| `always_show_icon_background` | boolen | `false` | näyttää aina kuvakkeen pyöreän taustan, vaikka olisikin `icon_tap_action` "Ei" valittu |
+| `entity` | string | tarvitaan | integraation luoma kokonaisuus |
+| `name` | string | entiteetin nimi | ohittaa kortissa näkyvän nimen |
+| `icon` | string | entiteetin kuvake | ohittaa kuvakkeen |
+| `show_mode` | boolean | `true` | näyttää tilan nimen |
+| `show_percentage` | boolean | `true` | näyttää synteettisen prosenttiosuuden |
+| `icon_tap_action` | action | `more-info` | lisätoimintoa, kun kuvaketta napautetaan |
+| `always_show_icon_background` | boolean | `false` | näyttää aina pyöreän kuvakkeen taustan, vaikka None on valittuna icon_tap_action |
 
 Koko esimerkki:
 
@@ -224,7 +224,7 @@ Muutoksen jälkeen lataa Lovelace-resurssit uudelleen tai käynnistä uudelleen 
 ## 🧯 Vianetsintä
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integrointi ei näy auttajaluettelossa</b></summary>
 <br />
 
 **Todennäköinen syy:** väärällä tavalla tai Home Assistant ei käynnistynyt uudelleen.
@@ -241,7 +241,7 @@ Tee sitten kova uudelleenkäynnistys Home Assistant ja tarkista lokista virheide
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Liitäntäluettelo on tyhjä</b></summary>
 <br />
 
 Integrointi näyttää vain objektit `switch`liittyy laitteisiin, joissa on myös mukana toimitettu anturi `device_class: power`.
@@ -257,7 +257,7 @@ Kirjaudu sisään **[Asetukset → Laitteet ja palvelut → Objektit](https://my
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Luominen pysähtyy, kun tehoanturin viesti puuttuu</b></summary>
 <br />
 
 Pistorasian valinnan jälkeen integrointi tarkistaa uudelleen tehoanturin olemassaolon. Virhe ilmenee, jos anturi on poistettu, poistettu käytöstä, siirretty toiseen laitteeseen tai sitä ei enää ole `device_class: power`.
@@ -266,7 +266,7 @@ Pistorasian valinnan jälkeen integrointi tarkistaa uudelleen tehoanturin olemas
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lamppu näkyy sammuneena, kun pistoke on päällä</b></summary>
 <br />
 
 Tarkista tehoanturin arvo. Virtuaalilampun katsotaan sammuneen, kun `0 W`; kun se on positiivinen, se tulisi määritellä muodossa `on`.
@@ -275,7 +275,7 @@ Tarkista tehoanturin arvo. Virtuaalilampun katsotaan sammuneen, kun `0 W`; kun s
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lamppu näkyy päällä, kun se on fyysisesti pois päältä</b></summary>
 <br />
 
 Tarkista, että valittu tehoanturi todella näyttää `0 W`, kun lamppu sammutetaan omalla painikkeellaan.
@@ -284,7 +284,7 @@ Tarkista, että valittu tehoanturi todella näyttää `0 W`, kun lamppu sammutet
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Väärä tila havaitaan</b></summary>
 <br />
 
 Tarkista **🐞 Last measures** asetuksissa ja määritteissä `power_history`, `power_history_modes`, `power_sample_interval_seconds` Ja `selected_power_mode`. `power_history` näyttää viimeksi tallennetut tehoarvot, `power_history_modes` — tila kullekin niistä määritettyjen kynnysarvojen mukaan, `power_sample_interval_seconds` on jaksollisen kiinnittymisen aikaväli, ja `selected_power_mode` — nykyinen vahvistettu tila.
@@ -293,7 +293,7 @@ Tarkista **🐞 Last measures** asetuksissa ja määritteissä `power_history`, 
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Tilamuutokset eivät näy heti</b></summary>
 <br />
 
 Tämä on odotettua käytöstä. Jotta lyhytaikaiset tehonvaihtelut eivät aiheuta vääriä kytkentöjä, integrointi vaihtaa tilaa vasta, kun useat peräkkäiset lukemat vastaavat samaa uutta tilaa.
@@ -308,7 +308,7 @@ Lukemien määrän vähentäminen nopeuttaa uuden tilan näyttöä, mutta tekee 
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kortti ei näy luettelossa</b></summary>
 <br />
 
 Automaattinen rekisteröinti tapahtuu vain, kun vähintään yksi määritetty apuobjekti on ladattu ja vain resurssitilassa `storage`. Integrointiasennusmenetelmä on kautta HACS tai manuaalisesti - tällä ei ole vaikutusta.
@@ -325,7 +325,7 @@ YAML-tilassa [lisää resurssit manuaalisesti](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Vanha kortti näkyy edelleen päivityksen jälkeen</b></summary>
 <br />
 
 1. Käynnistä kokonaan uudelleen Home Assistant.
@@ -356,9 +356,9 @@ YAML-tilassa [lisää resurssit manuaalisesti](#yaml-lovelace-mode).
 
 ## 📄 Lisenssi
 
-Projektia jaetaan lisenssillä [MIT](../LICENSE).
+Tätä projektia jaetaan lisenssillä [MIT](../LICENSE).
 
 <br />
 
 > [!TIP]
-> **Piditkö ratkaisusta?** Katso 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_fi.md">muut tuotteeni Home Assistant</a>
+> **Pidätkö tästä ratkaisusta?** Katsokaa 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_fi.md">muut Home Assistant-tuotteeni</a>

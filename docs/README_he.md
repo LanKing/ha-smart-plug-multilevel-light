@@ -168,15 +168,15 @@ custom_components/smart_plug_multilevel_light
 
 אפשרויות זמינות:
 
-| פרמטר | הקלד | ברירת מחדל | יעד |
+| פרמטר | הקלד | ברירת מחדל | תיאור |
 |---|---|---:|---|
-|`entity`| מחרוזת | חובה | ישות שנוצרה על ידי אינטגרציה |
-|`name`| מחרוזת | שם ישות | עוקף את השם בכרטיס |
-|`icon`| מחרוזת | סמל ישות | מגדיר מחדש את הסמל |
-|`show_mode`| בוליאני |`true`| מציג שם מצב |
-|`show_percentage`| בוליאני |`true`| מראה עניין מותנה |
-|`icon_tap_action`| פעולה |`more-info`| פעולה נוספת בלחיצה על הסמל |
-|`always_show_icon_background`| בוליאני |`false`| תמיד מציג את הרקע העגול של הסמל, גם אם עבור`icon_tap_action`"לא" נבחר |
+| `entity` | string | נדרש | ישות שנוצרה על ידי האינטגרציה |
+| `name` | string | שם הישות | עוקף את השם המוצג בכרטיס |
+| `icon` | string | סמל ישות | עוקף את הסמל |
+| `show_mode` | boolean | `true` | מציג את שם המצב |
+| `show_percentage` | boolean | `true` | מציג את האחוז הסינטטי |
+| `icon_tap_action` | action | `more-info` | פעולה נוספת בעת הקשה על הסמל |
+| `always_show_icon_background` | boolean | `false` | תמיד מציג את רקע הסמל העגול, גם כאשר None נבחר עבור icon_tap_action |
 
 דוגמה מלאה:
 
@@ -222,7 +222,7 @@ lovelace:
 ## 🧯 פתרון בעיות
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓השילוב אינו מופיע ברשימת העוזרים</b></summary>
 <br />
 
 **סיבה אפשרית:**&#x5E0;תיב שגוי או Home Assistant לא הופעל מחדש.
@@ -239,7 +239,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓רשימת התקעים ריקה</b></summary>
 <br />
 
 אינטגרציה מציגה רק אובייקטים`switch`הקשורים למכשירים המספקים גם חיישן כלול עם`device_class: power`.
@@ -255,7 +255,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓היצירה נעצרת עם הודעת חיישן כוח חסר</b></summary>
 <br />
 
 לאחר בחירת שקע, האינטגרציה בודקת מחדש אם יש חיישן כוח. השגיאה מתרחשת אם החיישן הוסר, הושבת, הועבר למכשיר אחר או לא`device_class: power`.
@@ -264,7 +264,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓המנורה מוצגת ככבויה כאשר התקע פועל</b></summary>
 <br />
 
 בדוק את ערך חיישן הכוח. המנורה הוירטואלית נחשבת כבויה כאשר`0 W`; כאשר חיובי, זה צריך להיות מוגדר כ`on`.
@@ -273,7 +273,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓המנורה מוצגת כפועלת כשהיא כבויה פיזית</b></summary>
 <br />
 
 בדוק שחיישן הכוח שנבחר אכן מופיע`0 W`, כאשר המנורה כבויה על ידי כפתור משלה.
@@ -282,7 +282,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓מצב שגוי מזוהה</b></summary>
 <br />
 
 לִבדוֹק**🐞 Last measures**בהגדרות ובתכונות`power_history`,`power_history_modes`,`power_sample_interval_seconds`ו`selected_power_mode`.`power_history`מציג את ערכי ההספק האחרונים שנרשמו,`power_history_modes`- מצב עבור כל אחד מהם בהתאם לספים מוגדרים,`power_sample_interval_seconds`הוא המרווח של קיבוע תקופתי, ו`selected_power_mode`- מצב אישור נוכחי.
@@ -291,7 +291,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓שינויים במצב אינם מוצגים מיד</b></summary>
 <br />
 
 זו התנהגות צפויה. כדי למנוע מתנודות חשמל קצרות טווח לגרום למעבר מזויף, האינטגרציה משנה מצב רק לאחר מספר קריאות רצופות מתאימות לאותו מצב חדש.
@@ -306,7 +306,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓הכרטיס אינו מופיע ברשימה</b></summary>
 <br />
 
 רישום אוטומטי מתרחש רק לאחר טעינת אובייקט עוזר מוגדר אחד לפחות ורק במצב משאב`storage`. שיטת התקנת האינטגרציה - דרך HACS או ידנית - אינה משפיעה על כך.
@@ -323,7 +323,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓הכרטיס הישן עדיין מוצג לאחר עדכון</b></summary>
 <br />
 
 1. הפעל מחדש לחלוטין את Home Assistant.
@@ -354,8 +354,9 @@ lovelace:
 
 ## 📄 רישיון
 
-הפרויקט מופץ ברישיון[עִם](../LICENSE).
+פרויקט זה מופץ תחת הרישיון [MIT](../LICENSE).
 
 <br />
 
-> \[!עֵצָה]**אהבתם את הפתרון?**&#x5EA;ראה 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_he.md">המוצרים האחרים שלי עבור Home Assistant</a>
+> [!TIP]
+> **אוהבים את הפתרון הזה?** תסתכל על 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_he.md">מוצרי Home Assistant האחרים שלי</a>

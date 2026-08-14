@@ -170,15 +170,15 @@ Mae talgrynnu yn effeithio ar ganran arddangos a dwyster gweledol y cerdyn yn un
 
 Opsiynau sydd ar gael:
 
-| Paramedr | Math | Diofyn | Cyrchfan |
+| Paramedr | Math | Diofyn | Disgrifiad |
 |---|---|---:|---|
-| `entity` | llinyn | gorfodol | endid a grëwyd trwy integreiddio |
-| `name` | llinyn | enw endid | yn diystyru'r enw yn y cerdyn |
-| `icon` | llinyn | icon endid | ailddiffinio eicon |
-| `show_mode` | boolaidd | `true` | yn dangos enw modd |
-| `show_percentage` | boolaidd | `true` | yn dangos llog amodol |
-| `icon_tap_action` | gweithredu | `more-info` | gweithredu ychwanegol wrth glicio ar yr eicon |
-| `always_show_icon_background` | boolaidd | `false` | yn dangos cefndir crwn yr eicon bob amser, hyd yn oed os o blaid `icon_tap_action` Dewiswyd "Na" |
+| `entity` | string | ofynnol | endid a grëwyd gan yr integreiddio |
+| `name` | string | enw endid | yn diystyru'r enw a ddangosir ar y cerdyn |
+| `icon` | string | eicon endid | yn diystyru'r eicon |
+| `show_mode` | boolean | `true` | yn dangos enw'r modd |
+| `show_percentage` | boolean | `true` | yn dangos y ganran synthetig |
+| `icon_tap_action` | action | `more-info` | gweithredu ychwanegol pan fydd yr eicon yn cael ei dapio |
+| `always_show_icon_background` | boolean | `false` | yn dangos cefndir yr eicon crwn bob amser, hyd yn oed pan ddewisir None ar gyfer icon_tap_action |
 
 Enghraifft lawn:
 
@@ -224,7 +224,7 @@ Ar ôl y newid, ail-lwythwch adnoddau Lovelace neu ailgychwyn Home Assistant.
 ## 🧯 Datrys Problemau
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Nid yw'r integreiddiad yn ymddangos yn y rhestr cynorthwywyr</b></summary>
 <br />
 
 **Achos tebygol:** ffordd anghywir neu Home Assistant ni chafodd ei ailgychwyn.
@@ -241,7 +241,7 @@ Yna gwnewch ailgychwyn caled Home Assistant a gwiriwch y log am wallau `smart_pl
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Mae'r rhestr plwg yn wag</b></summary>
 <br />
 
 Mae integreiddio yn dangos gwrthrychau yn unig `switch`sy'n gysylltiedig â dyfeisiau sydd hefyd yn darparu synhwyrydd cynnwys gyda `device_class: power`.
@@ -257,7 +257,7 @@ Gwiriwch i mewn **[Gosodiadau → Dyfeisiau a gwasanaethau → Gwrthrychau](http
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Mae creu yn stopio gyda neges synhwyrydd pŵer ar goll</b></summary>
 <br />
 
 Ar ôl dewis allfa, mae'r integreiddio yn ail-wirio am bresenoldeb synhwyrydd pŵer. Mae'r gwall yn digwydd os yw'r synhwyrydd wedi'i dynnu, ei analluogi, ei symud i ddyfais arall, neu os nad oes ganddo bellach `device_class: power`.
@@ -266,7 +266,7 @@ Ar ôl dewis allfa, mae'r integreiddio yn ail-wirio am bresenoldeb synhwyrydd p�
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Dangosir y lamp fel Off tra bod y plwg ymlaen</b></summary>
 <br />
 
 Gwiriwch werth y synhwyrydd pŵer. Ystyrir bod y lamp rhithwir wedi'i ddiffodd pryd `0 W`; pan yn bositif, dylid ei ddiffinio fel `on`.
@@ -275,7 +275,7 @@ Gwiriwch werth y synhwyrydd pŵer. Ystyrir bod y lamp rhithwir wedi'i ddiffodd p
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Dangosir y lamp fel Ar tra ei fod wedi'i ddiffodd yn gorfforol</b></summary>
 <br />
 
 Gwiriwch fod y synhwyrydd pŵer a ddewiswyd yn dangos mewn gwirionedd `0 W`, pan fydd y lamp yn cael ei ddiffodd gan ei botwm ei hun.
@@ -284,7 +284,7 @@ Gwiriwch fod y synhwyrydd pŵer a ddewiswyd yn dangos mewn gwirionedd `0 W`, pan
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Mae'r modd anghywir yn cael ei ganfod</b></summary>
 <br />
 
 Gwirio **🐞 Last measures** mewn gosodiadau a phriodoleddau `power_history`, `power_history_modes`, `power_sample_interval_seconds` Ac `selected_power_mode`. `power_history` yn dangos y gwerthoedd pŵer diwethaf a gofnodwyd, `power_history_modes` - modd ar gyfer pob un ohonynt yn ôl trothwyon wedi'u ffurfweddu, `power_sample_interval_seconds` yw cyfwng gosodiad cyfnodol, a `selected_power_mode` - modd cadarnhau cyfredol.
@@ -293,7 +293,7 @@ Gwirio **🐞 Last measures** mewn gosodiadau a phriodoleddau `power_history`, `
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Nid yw newidiadau modd yn cael eu harddangos ar unwaith</b></summary>
 <br />
 
 Dyma ymddygiad disgwyliedig. Er mwyn atal amrywiadau pŵer tymor byr rhag achosi newid annilys, mae'r integreiddio yn newid modd dim ond ar ôl sawl darlleniad olynol yn cyfateb i'r un modd newydd.
@@ -308,7 +308,7 @@ Mae lleihau nifer y darlleniadau yn cyflymu arddangosiad y modd newydd, ond yn g
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Nid yw'r cerdyn yn ymddangos yn y rhestr</b></summary>
 <br />
 
 Mae cofrestru awtomatig yn digwydd dim ond ar ôl llwytho o leiaf un gwrthrych helpwr ffurfweddu a dim ond yn y modd adnoddau `storage`. Mae'r dull gosod integreiddio trwy HACS neu â llaw - nid yw hyn yn cael unrhyw effaith.
@@ -325,7 +325,7 @@ Yn y modd YAML [ychwanegu adnodd â llaw](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Mae'r hen gerdyn yn dal i gael ei arddangos ar ôl diweddariad</b></summary>
 <br />
 
 1. Ailgychwyn yn llwyr Home Assistant.
@@ -356,9 +356,9 @@ Yn y modd YAML [ychwanegu adnodd â llaw](#yaml-lovelace-mode).
 
 ## 📄 Trwydded
 
-Mae'r prosiect yn cael ei ddosbarthu o dan drwydded [MIT](../LICENSE).
+Mae'r prosiect hwn yn cael ei ddosbarthu o dan y drwydded [MIT](../LICENSE).
 
 <br />
 
 > [!TIP]
-> **Oeddech chi'n hoffi'r ateb?** Edrych 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_cy.md">fy nghynhyrchion eraill ar gyfer Home Assistant</a>
+> **Hoffi'r ateb hwn?** Cymerwch olwg ar 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_cy.md">fy cynhyrchion Home Assistant eraill</a>

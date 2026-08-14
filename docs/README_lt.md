@@ -168,15 +168,15 @@ Apvalinimas turi įtakos tik rodomam kortelės procentui ir vizualiniam intensyv
 
 Galimos parinktys:
 
-| Parametras | Tipas | Numatytasis | Paskirtis |
+| Parametras | Tipas | Numatytoji | Aprašymas |
 |---|---|---:|---|
-|`entity`| styga | privalomas | integracijos būdu sukurtas subjektas |
-|`name`| styga | subjekto pavadinimas | nepaiso vardo kortelėje |
-|`icon`| styga | subjekto piktograma | iš naujo apibrėžia piktogramą |
-|`show_mode`| loginis |`true`| rodo režimo pavadinimą |
-|`show_percentage`| loginis |`true`| rodo sąlygines palūkanas |
-|`icon_tap_action`| veiksmas |`more-info`| papildomas veiksmas spustelėjus piktogramą |
-|`always_show_icon_background`| loginis |`false`| visada rodomas apvalus piktogramos fonas, net jei skirtas`icon_tap_action`Pasirinktas „Ne“ |
+| `entity` | string | reikalaujama | integracijos sukurtas subjektas |
+| `name` | string | subjekto pavadinimas | nepaiso kortelėje nurodyto vardo |
+| `icon` | string | subjekto piktograma | nepaiso piktogramos |
+| `show_mode` | boolean | `true` | rodo režimo pavadinimą |
+| `show_percentage` | boolean | `true` | rodo sintetinį procentą |
+| `icon_tap_action` | action | `more-info` | papildomas veiksmas palietus piktogramą |
+| `always_show_icon_background` | boolean | `false` | visada rodomas apskrito piktogramos fonas, net kai None pasirinktas icon_tap_action |
 
 Pilnas pavyzdys:
 
@@ -222,7 +222,7 @@ Po pakeitimo iš naujo paleiskite Lovelace išteklius arba iš naujo paleiskite 
 ## 🧯 Trikčių šalinimas
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integracija nerodoma pagalbininkų sąraše</b></summary>
 <br />
 
 **Tikėtina priežastis:**&#x6E;eteisingas kelias arba namų asistentas nebuvo paleistas iš naujo.
@@ -239,7 +239,7 @@ Tada visiškai iš naujo paleiskite „Home Assistant“ ir patikrinkite, ar žu
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Kištukų sąrašas tuščias</b></summary>
 <br />
 
 Integracija rodo tik objektus`switch`susiję su įrenginiais, kuriuose taip pat yra įtrauktas jutiklis`device_class: power`.
@@ -255,7 +255,7 @@ Prisiregistruokit&#x65;**[Nustatymai → Įrenginiai ir paslaugos → Objektai](
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Kūrimas sustoja, kai trūksta maitinimo jutiklio pranešimo</b></summary>
 <br />
 
 Pasirinkus lizdą, integracija dar kartą patikrina, ar nėra galios jutiklio. Klaida atsiranda, jei jutiklis buvo pašalintas, išjungtas, perkeltas į kitą įrenginį arba nebėra`device_class: power`.
@@ -264,7 +264,7 @@ Pasirinkus lizdą, integracija dar kartą patikrina, ar nėra galios jutiklio. K
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Kai kištukas įjungtas, lemputė rodoma kaip Išjungta</b></summary>
 <br />
 
 Patikrinkite galios jutiklio vertę. Virtuali lemputė laikoma išjungta, kai`0 W`; kai teigiamas, jis turėtų būti apibrėžtas kaip`on`.
@@ -273,7 +273,7 @@ Patikrinkite galios jutiklio vertę. Virtuali lemputė laikoma išjungta, kai`0 
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Kai lemputė fiziškai išjungta, ji rodoma kaip Įjungta</b></summary>
 <br />
 
 Patikrinkite, ar pasirinktas galios jutiklis tikrai rodomas`0 W`, kai lempa išjungiama savo mygtuku.
@@ -282,7 +282,7 @@ Patikrinkite, ar pasirinktas galios jutiklis tikrai rodomas`0 W`, kai lempa išj
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Aptiktas netinkamas režimas</b></summary>
 <br />
 
 Patikrinkite**🐞 Last measures**nustatymuose ir atributuose`power_history`,`power_history_modes`,`power_sample_interval_seconds`Ir`selected_power_mode`.`power_history`rodo paskutines įrašytas galios vertes,`power_history_modes`— režimas kiekvienam iš jų pagal sukonfigūruotas ribas,`power_sample_interval_seconds`yra periodinės fiksacijos intervalas, ir`selected_power_mode`— esamas patvirtintas režimas.
@@ -291,7 +291,7 @@ Patikrinkite**🐞 Last measures**nustatymuose ir atributuose`power_history`,`po
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Režimo pakeitimai nerodomi iš karto</b></summary>
 <br />
 
 Tai laukiamas elgesys. Kad trumpalaikiai galios svyravimai nesukeltų klaidingų perjungimų, integracija pakeičia režimą tik po to, kai keli iš eilės rodmenys atitinka tą patį naują režimą.
@@ -306,7 +306,7 @@ Sumažinus rodmenų skaičių, naujojo režimo rodymas pagreitėja, tačiau apti
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kortelė sąraše nerodoma</b></summary>
 <br />
 
 Automatinė registracija įvyksta tik įkėlus bent vieną sukonfigūruotą pagalbinį objektą ir tik išteklių režimu`storage`. Integracijos diegimo būdas – per HACS arba rankiniu būdu – tam įtakos neturi.
@@ -323,7 +323,7 @@ YAML režimu[pridėti išteklių rankiniu būdu](#yaml-lovelace-mode).
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Senoji kortelė vis dar rodoma po atnaujinimo</b></summary>
 <br />
 
 1. Visiškai iš naujo paleiskite „Home Assistant“.
@@ -354,8 +354,9 @@ YAML režimu[pridėti išteklių rankiniu būdu](#yaml-lovelace-mode).
 
 ## 📄 Licencija
 
-Projektas platinamas pagal licenciją[SU](../LICENSE).
+Šis projektas platinamas pagal [MIT](../LICENSE) licenciją.
 
 <br />
 
-> \[!PATARIMAS]**Ar jums patiko sprendimas?**&#x17D;iūrėk 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_lt.md">kiti mano produktai, skirti namų asistentui</a>
+> [!TIP]
+> **Patinka šis sprendimas?** Pažvelkite į 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_lt.md">kiti mano Home Assistant produktai</a>

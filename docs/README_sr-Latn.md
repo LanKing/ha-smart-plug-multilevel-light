@@ -168,15 +168,15 @@ custom_components/smart_plug_multilevel_light
 
 Доступне опције:
 
-| Параметар | Тип | Дефаулт | Одредиште |
+| Parametar | Tip | Podrazumevano | Opis |
 |---|---|---:|---|
-|`entity`| стринг | обавезно | ентитет створен интеграцијом |
-|`name`| стринг | назив ентитета | замењује име на картици |
-|`icon`| стринг | икона ентитета | редефинише икону |
-|`show_mode`| боолеан |`true`| приказује назив режима |
-|`show_percentage`| боолеан |`true`| показује условни интерес |
-|`icon_tap_action`| акција |`more-info`| додатна радња при клику на икону |
-|`always_show_icon_background`| боолеан |`false`| увек приказује округлу позадину иконе, чак и ако је за`icon_tap_action`Изабрано "Не" |
+| `entity` | string | potrebno | entitet stvoren integracijom |
+| `name` | string | naziv entiteta | zamenjuje ime prikazano na kartici |
+| `icon` | string | ikona entiteta | zamenjuje ikonu |
+| `show_mode` | boolean | `true` | prikazuje naziv režima |
+| `show_percentage` | boolean | `true` | pokazuje sintetički procenat |
+| `icon_tap_action` | action | `more-info` | dodatna radnja kada se dodirne ikona |
+| `always_show_icon_background` | boolean | `false` | uvek prikazuje pozadinu kružne ikone, čak i kada je ZKSKNONEKKSZ izabran za ZKSKICONTAPACTIONKKSZ |
 
 Цео пример:
 
@@ -222,7 +222,7 @@ lovelace:
 ## 🧯 Решавање проблема
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integracija se ne pojavljuje na listi pomoćnika</b></summary>
 <br />
 
 **Вероватни узрок:**&#x43F;огрешна путања или Хоме Ассистант није поново покренут.
@@ -239,7 +239,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Lista priključaka je prazna</b></summary>
 <br />
 
 Интеграција приказује само објекте`switch`повезан са уређајима који такође обезбеђују укључени сензор са`device_class: power`.
@@ -255,7 +255,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Kreiranje se zaustavlja sa porukom senzora napajanja koja nedostaje</b></summary>
 <br />
 
 Након избора утичнице, интеграција поново проверава присуство сензора напајања. Грешка се јавља ако је сензор уклоњен, онемогућен, премештен на други уређај или више није`device_class: power`.
@@ -264,7 +264,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lampica se prikazuje kao isključena dok je utikač uključen</b></summary>
 <br />
 
 Проверите вредност сензора снаге. Виртуелна лампа се сматра искљученом када`0 W`; када је позитиван, треба га дефинисати као`on`.
@@ -273,7 +273,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lampica je prikazana kao Uključena dok je fizički isključena</b></summary>
 <br />
 
 Проверите да ли се изабрани сензор снаге заиста приказује`0 W`, када се лампа гаси сопственим дугметом.
@@ -282,7 +282,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Otkriven je pogrešan režim</b></summary>
 <br />
 
 Провери**КСКЗУИ007КСКЗ**у подешавањима и атрибутима`power_history`,`power_history_modes`,`power_sample_interval_seconds`и`selected_power_mode`.`power_history`приказује последње забележене вредности снаге,`power_history_modes`— режим за сваки од њих према конфигурисаним праговима,`power_sample_interval_seconds`је интервал периодичне фиксације, и`selected_power_mode`— тренутни потврђени режим.
@@ -291,7 +291,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Promene režima se ne prikazuju odmah</b></summary>
 <br />
 
 Ово је очекивано понашање. Да би се спречило да краткорочне флуктуације снаге изазову лажно пребацивање, интеграција мења режим тек након што неколико узастопних очитавања одговара истом новом режиму.
@@ -306,7 +306,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Kartica se ne pojavljuje na listi</b></summary>
 <br />
 
 Аутоматска регистрација се дешава само након учитавања најмање једног конфигурисаног помоћног објекта и само у режиму ресурса`storage`. Начин инсталирања интеграције - преко ХАЦС-а или ручно - не утиче на то.
@@ -323,7 +323,7 @@ lovelace:
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Stara kartica je i dalje prikazana nakon ažuriranja</b></summary>
 <br />
 
 1. Потпуно поново покрените Хоме Ассистант.
@@ -352,10 +352,11 @@ lovelace:
 4. Потпуно поново покрените Хоме Ассистант.
 5. Ако је потребно, освежите страницу да обришете кеш интерфејса.
 
-## 📄 Лиценца
+## 📄 Licenca
 
-Пројекат се дистрибуира под лиценцом[ВИТХ](../LICENSE).
+Ovaj projekat se distribuira pod licencom [MIT](../LICENSE).
 
 <br />
 
-> \[!САВЕТ]**Да ли вам се допало решење?**&#x41F;огледајте 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sr-Latn.md">моји други производи за Хоме Ассистант</a>
+> [!TIP]
+> **Sviđa vam se ovo rešenje?** Pogledajte 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_sr-Latn.md">moji drugi ZKSKHOMEASSISTANTKKSZ proizvodi</a>
