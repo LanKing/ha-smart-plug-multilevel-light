@@ -389,11 +389,11 @@ def validate_inline_spacing(text: str, locale: str) -> None:
         for match in LINK_RE.finditer(line):
             before = line[match.start() - 1] if match.start() else ""
             if before and not before.isspace() and before not in "([{<":
-                issues.append(f"line {number}: missing space before link")
+                issues.append(f"line {number}: {before!r} before link: {line[:120]!r}")
 
     if "[!TIP]" not in text or "> [!TIP]" not in text:
         issues.append("TIP callout marker was changed")
-    if "[MIT](https://github.com/LanKing/ha-smart-plug-multilevel-light/blob/main/LICENSE)" not in text:
+    if "[MIT](../LICENSE)" not in text:
         issues.append("MIT license label or link was changed")
     for literal in ("Home Assistant", "HACS", "Zigbee2MQTT", "Smart Plug Multi-Level Light"):
         if literal not in text:
