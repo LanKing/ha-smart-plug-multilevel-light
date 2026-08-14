@@ -1,30 +1,31 @@
 <sub>🇺🇸&nbsp;<a href="../README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a>&nbsp;|</sub> <sub>🇺🇦&nbsp;<a href="README_uk.md">У⁠к⁠р⁠а⁠ї⁠н⁠с⁠ь⁠к⁠а</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="README_ru.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="README_af.md">A⁠f⁠r⁠i⁠k⁠a⁠a⁠n⁠s</a>&nbsp;|</sub> <sub>🇸🇦&nbsp;<a href="README_ar.md">ا⁠ل⁠ع⁠ر⁠ب⁠ي⁠ة</a>&nbsp;|</sub> <sub>🇧🇬&nbsp;<a href="README_bg.md">Б⁠ъ⁠л⁠г⁠а⁠р⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="README_bn.md">বাং⁠লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="README_bs.md">B⁠o⁠s⁠a⁠n⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="README_ca.md">C⁠a⁠t⁠a⁠l⁠à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="README_cs.md">Č⁠e⁠š⁠t⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="README_da.md">D⁠a⁠n⁠s⁠k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="README_de.md">D⁠e⁠u⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇬🇷&nbsp;<a href="README_el.md">Ε⁠λ⁠λ⁠η⁠ν⁠ι⁠κ⁠ά</a>&nbsp;|</sub> <sub>eo&nbsp;<a href="README_eo.md">E⁠s⁠p⁠e⁠r⁠a⁠n⁠t⁠o</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="README_es.md">E⁠s⁠p⁠a⁠ñ⁠o⁠l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="README_et.md">E⁠e⁠s⁠t⁠i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="README_eu.md">E⁠u⁠s⁠k⁠a⁠r⁠a</a>&nbsp;|</sub> <sub>🇮🇷&nbsp;<a href="README_fa.md">ف⁠ا⁠ر⁠س⁠ی</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="README_fi.md">S⁠u⁠o⁠m⁠i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="README_fy.md">F⁠r⁠y⁠s⁠k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="README_fr.md">F⁠r⁠a⁠n⁠ç⁠a⁠i⁠s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="README_ga.md">G⁠a⁠e⁠i⁠l⁠g⁠e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="README_gl.md">G⁠a⁠l⁠e⁠g⁠o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="README_gsw.md">S⁠c⁠h⁠w⁠i⁠i⁠z⁠e⁠r⁠d⁠ü⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="README_he.md">ע⁠ב⁠ר⁠י⁠ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_hi.md">हि⁠न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="README_hr.md">H⁠r⁠v⁠a⁠t⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="README_hu.md">M⁠a⁠g⁠y⁠a⁠r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="README_hy.md">Հ⁠ա⁠յ⁠ե⁠ր⁠ե⁠ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="README_id.md">I⁠n⁠d⁠o⁠n⁠e⁠s⁠i⁠a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="README_is.md">Í⁠s⁠l⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="README_it.md">I⁠t⁠a⁠l⁠i⁠a⁠n⁠o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="README_ja.md">日⁠本⁠語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="README_ka.md">K⁠a⁠r⁠t⁠u⁠l⁠i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="README_ko.md">한⁠국⁠어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="README_lb.md">L⁠ë⁠t⁠z⁠e⁠b⁠u⁠e⁠r⁠g⁠e⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="README_lt.md">L⁠i⁠e⁠t⁠u⁠v⁠i⁠ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="README_lv.md">L⁠a⁠t⁠v⁠i⁠e⁠š⁠u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="README_mk.md">М⁠а⁠к⁠е⁠д⁠о⁠н⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ml.md">മ⁠ല⁠യാ⁠ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nb.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠B⁠o⁠k⁠m⁠å⁠l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="README_nl.md">N⁠e⁠d⁠e⁠r⁠l⁠a⁠n⁠d⁠s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nn.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠N⁠y⁠n⁠o⁠r⁠s⁠k</a>&nbsp;|</sub> <sub>🇵🇱&nbsp;<a href="README_pl.md">P⁠o⁠l⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="README_pt.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="README_pt-BR.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s⁠&nbsp;⁠(⁠B⁠R⁠)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="README_ro.md">R⁠o⁠m⁠â⁠n⁠ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="README_sk.md">S⁠l⁠o⁠v⁠e⁠n⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="README_sl.md">S⁠l⁠o⁠v⁠e⁠n⁠š⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="README_sq.md">S⁠h⁠q⁠i⁠p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr.md">С⁠р⁠п⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr-Latn.md">S⁠r⁠p⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="README_sv.md">S⁠v⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ta.md">த⁠மி⁠ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_te.md">తె⁠లు⁠గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="README_th.md">ภ⁠า⁠ษ⁠า⁠ไ⁠ท⁠ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="README_tr.md">T⁠ü⁠r⁠k⁠ç⁠e</a>&nbsp;|</sub> <sub>🇵🇰&nbsp;<a href="README_ur.md">اُ⁠ر⁠دُ⁠و</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="README_vi.md">T⁠i⁠ế⁠n⁠g⁠&nbsp;⁠V⁠i⁠ệ⁠t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="README_zh-Hans.md">简⁠体⁠中⁠文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="README_zh-Hant.md">繁⁠體⁠中⁠文</a></sub>
 
+<!-- markdown-translator:f30c10bb91a0f6587cd22ee0c70aa5e504b1807979a245dd1c91d57aadca6019 -->
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a> <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a> <a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
-> Mae'r integreiddiad yn cyfuno gosodiad golau nad yw'n cael ei reoli'n ddigidol a phlwg smart yn un endid Cynorthwyydd Cartref. Mae'n pennu'r statws a'r modd disgleirdeb presennol yn seiliedig ar y defnydd o bŵer, yn eu harddangos mewn cerdyn ac yn caniatáu ichi droi lamp wedi'i diffodd gan ei botwm ei hun trwy ddiffodd yn fyr ac ailgymhwyso'r pŵer trwy'r allfa.
+> Mae integreiddio yn cyfuno golau rheoli nad yw'n ddigidol a phlwg smart yn un endid Home Assistant. Mae'n pennu'r statws a'r modd disgleirdeb presennol yn seiliedig ar y defnydd o bŵer, yn eu harddangos mewn cerdyn ac yn caniatáu ichi droi lamp wedi'i diffodd gan ei botwm ei hun trwy ddiffodd yn fyr ac ailgymhwyso'r pŵer trwy'r allfa.
 
-# 🔌 Golau Aml-Lefel Plug Smart
+# 🔌 Smart Plug Multi-Level Light
 
 ![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Nodweddion a nodweddion:**
 
-* Yn creu endid Cynorthwyydd Cartref brodorol `light`gydnaws ag awtomeiddio, sgriptiau a rhyngwyneb safonol HA;
+* Yn creu endid rheolaidd Home Assistant `light`gydnaws ag awtomeiddio, sgriptiau a rhyngwyneb safonol HA;
 * Yn troi'r lamp ymlaen yn gywir waeth sut y cafodd ei ddiffodd: pe bai'r pŵer yn cael ei ddiffodd trwy'r soced smart, mae'n syml yn ei droi ymlaen; os cafodd y lamp ei ddiffodd gyda'i botwm ei hun tra bod y soced ymlaen, mae'n perfformio cylch o ddad-egnïo a throi ymlaen eto;
 * Yn pennu dull gweithredu cyfredol y lamp yn awtomatig yn seiliedig ar y pŵer sefydlog a fesurir mewn gwirionedd;
 * Mae ganddo gyflunydd syml lle mae'r defnyddiwr yn enwi'r moddau a gefnogir gan ei lamp yn olynol, ac mae'r system yn dysgu trwy bennu'r pŵer sefydlog ym mhob modd;
 * Yn ystod y gosodiad cyntaf, darllenir y pŵer mewn amser real: dim ond i'r modd nesaf y mae'n rhaid i'r defnyddiwr newid y golau a phwyso'r botwm dysgu;
 * Yn hidlo darlleniadau pŵer ansefydlog yn llwyddiannus, gan atal newidiadau anhrefnus yn y dangosydd ar y cerdyn pan fydd y pŵer yn “neidio” o fewn un modd (a hyd yn oed yn cyd-fynd â'r modd nesaf);
 * Yn cefnogi nifer mympwyol o foddau;
-* Mae'r cerdyn wedi'i adeiladu ar ben y Cerdyn Teils Cynorthwyydd Cartref safonol, gan gadw ei geometreg, cefndir, effeithiau hofran, meintiau, teipograffeg a gweithredoedd safonol;
+* Mae'r cerdyn wedi'i adeiladu ar ben yr un safonol Home Assistant Cerdyn Teil yn cadw ei geometreg, cefndir, effeithiau hofran, meintiau, teipograffeg a gweithredoedd safonol;
 * Yn y cerdyn, mae'r disgleirdeb presennol wedi'i amgodio'n weledol gan ddwysedd lliw;
 * Yn cyfrifo disgleirdeb yn llinol o'i gymharu â'r pŵer mwyaf; gellir galluogi talgrynnu'r disgleirdeb a gyfrifwyd i 5% er mwyn dangos canrannau'n fwy cywir;
 * Yn eich galluogi i addasu'r paramedrau arddangos ac ymddangosiad y cerdyn yn hyblyg;
 * Yn caniatáu ichi ddewis y synhwyrydd pŵer sy'n gysylltiedig â'r plwg smart a ddewiswyd yn unig;
 * Yn eich galluogi i addasu oedi'r cylch dad-egni ar gyfer gweithrediad cywir gyda gwahanol fodelau o lampau a socedi;
 * Yn eich galluogi i osod y trothwy pŵer y mae'r lamp yn cael ei ystyried i ffwrdd oddi tano;
-* Mae'r rhyngwyneb wedi'i leoleiddio ar gyfer 64 o leoliadau Cynorthwywyr Cartref.
+* Rhyngwyneb wedi'i leoleiddio ar gyfer 64 locales Home Assistant.
 
 ## 🗜 Paratoi haearn
 
@@ -39,9 +40,9 @@ Bydd angen:
 
 > Nid yw fy soced yn adrodd darlleniadau i HA yn awtomatig a dim ond ar gyfnod penodol y mae'n caniatáu pleidleisio. Yn ddiofyn, roedd yn 60 eiliad. Mae angen gosod y cyfwng hwn i 1 eiliad, fel arall byddwch yn aros am amser hir iawn i'r arddangosfa newid modd ymddangos.
 
-Mae'r disgrifiad hwn yn berthnasol i berchnogion socedi sydd wedi'u cysylltu trwy Z2M yn unig. Dylai defnyddwyr eraill addasu'r gyfradd adnewyddu o fewn eu ffurfweddiad:
+Mae'r disgrifiad hwn yn berthnasol yn unig i berchnogion socedi sydd wedi'u cysylltu drwy Z2M. Dylai defnyddwyr eraill addasu'r gyfradd adnewyddu o fewn eu ffurfweddiad:
 
-1. Agored **Cynorthwyydd Cartref → Zigbee2MQTT**. Os nad yw Zigbee2MQTT yn y ddewislen ochr, agorwch **Gosodiadau → Ceisiadau → Zigbee2MQTT → Rhyngwyneb gwe agored**.
+1. Agored **Home Assistant → Zigbee2MQTT**. Os Zigbee2MQTT ar goll yn y ddewislen ochr, agored **Gosodiadau → Ceisiadau → Zigbee2MQTT → Rhyngwyneb gwe agored**.
 2. Ewch i adran **Dyfeisiau**.
 3. Dewiswch yr allfa ofynnol.
 4. Agorwch y tab **Gosodiadau (penodol)**.
@@ -53,13 +54,13 @@ Mae'r disgrifiad hwn yn berthnasol i berchnogion socedi sydd wedi'u cysylltu trw
 
 ### 🛍 Gosod trwy HACS
 
-ℹ️ [Beth yw HACS a sut i'w osod?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cy.md)
+ℹ️ [Beth sydd wedi digwydd HACS a sut i'w osod?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cy.md)
 
-🚀 [Ceisiwch ychwanegu ystorfa yn y ddolen](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Os yw'ch HA yn cefnogi'r dull hwn, cliciwch **Ychwanegu** yn y ffenestr sy'n agor, ac yna'r botwm **Lawrlwythwch** yn y gornel dde isaf. Os cwblhawyd y gosodiad yn llwyddiannus, gallwch hepgor camau pellach. Ewch yn syth i'r adran [cychwyn cyflym](#getting-started).
+🚀 [Ceisiwch ychwanegu ystorfa yn y ddolen](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Os yw'ch HA yn cefnogi'r dull hwn, cliciwch **Ychwanegu** yn y ffenestr sy'n agor, ac yna'r botwm **Lawrlwythwch** yn y gornel dde isaf. Os cwblhawyd y gosodiad yn llwyddiannus, gallwch hepgor camau pellach. Ewch yn syth i'r adran [cychwyn cyflym](#getting-started).
 
 #### 1. Ychwanegu ystorfa
 
-Er nad yw'r ystorfa wedi'i chynnwys yn y cyfeiriadur HACS safonol, ychwanegwch ef fel un wedi'i deilwra:
+Nid yw'r ystorfa wedi'i chynnwys yn y cyfeiriadur safonol eto HACS, ychwanegwch ef fel arfer:
 
 1. Agored **HACS → Integreiddiadau**.
 2. Agorwch y ddewislen yn y gornel dde uchaf a dewiswch **Storfeydd Personol**.
@@ -71,13 +72,13 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 
 4. Dewiswch fath **Integreiddio** a gwasg **Ychwanegu**.
 
-> Dim ond yn HACS y mae ychwanegu ystorfa yn golygu bod yr integreiddio ar gael. I osod, mae angen ichi agor ei gerdyn ar wahân a chlicio **Lawrlwythwch**.
+> Mae ychwanegu ystorfa yn golygu bod yr integreiddio ar gael i mewn HACS. I osod, mae angen ichi agor ei gerdyn ar wahân a chlicio **Lawrlwythwch**.
 
 #### 2. Gosod integreiddio
 
-1. Chwilio yn HACS: `Smart Plug Multi-Level Light`.
+1. Dod o hyd i mewn HACS: Smart Plug Multi-Level Light.
 2. Agorwch yr integreiddiad a chliciwch **Lawrlwythwch**.
-3. Ar ôl ei osod, ailgychwynnwch y Cynorthwyydd Cartref yn llwyr.
+3. Ar ôl gosod, ailgychwyn yn gyfan gwbl Home Assistant.
 
 <a id="manual-installation"></a>
 
@@ -91,7 +92,7 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 custom_components/smart_plug_multilevel_light
 ```
 
-i gyfeiriadur cyfluniad Home Assistant:
+i'r cyfeiriadur cyfluniad Home Assistant:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
@@ -103,40 +104,40 @@ Llwybr ffeil terfynol `manifest.json` dylai edrych fel hyn:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-4. Ailgychwyn Cynorthwyydd Cartref yn llwyr.
+4. Ailgychwyn yn llwyr Home Assistant.
 
 > Peidiwch â chopïo'r ffolder ystorfa allanol gyfan i `custom_components`. Y tu mewn `custom_components` rhaid lleoli'r ffolder yn uniongyrchol `smart_plug_multilevel_light`.
 
-Mae'r cerdyn wedi'i gynnwys yn yr integreiddio, felly nid oes angen HACS i'w osod. Ar ôl copïo'r ffeiliau â llaw, ailgychwyn Home Assistant, a chreu'r gwrthrych cynorthwyydd cyntaf, mae'r integreiddiad yn cyhoeddi'r ffeil cerdyn JavaScript ac yn ei gofrestru'n awtomatig gydag adnoddau panel yn y modd safonol `storage`. Yn y modd adnoddau YAML, rhaid i'r cerdyn gael ei gofrestru â llaw, fel y disgrifir isod.
+Mae'r cerdyn yn rhan o'r integreiddio, felly HACS nid yw'n ofynnol ar gyfer gosod. Ar ôl copïo ffeiliau â llaw, ailgychwyn Home Assistant a chreu'r gwrthrych ategol cyntaf, mae'r integreiddiad yn cyhoeddi'r ffeil cerdyn JavaScript ac yn ei gofrestru'n awtomatig gydag adnoddau'r panel yn y modd safonol `storage`. Yn y modd adnoddau YAML, rhaid i'r cerdyn gael ei gofrestru â llaw, fel y disgrifir isod.
 
 <a id="getting-started"></a>
 
-## 🚀 Cychwyn cyflym ar ôl gosod
+## 🚀 Cychwyn cyflym ar ôl ei osod
 
 ### 🛠 Ffurfwedd
 
 1. Agored **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)** a gwasg **Creu Gwrthrych Helper**.
 
-2. Dewiswch **Golau Aml-Lefel Plug Smart**.
+2. Dewiswch **Smart Plug Multi-Level Light**.
 
-3. Dewiswch y plwg smart y mae'r lamp wedi'i gysylltu ag ef. Mae'r rhestr ond yn dangos allfeydd lle mae Cynorthwyydd Cartref yn gweld synhwyrydd pŵer yn yr un ddyfais.
+3. Dewiswch y plwg smart y mae'r lamp wedi'i gysylltu ag ef. Mae'r rhestr yn dangos dim ond socedi sydd wedi Home Assistant yn gweld y synhwyrydd pŵer yn yr un ddyfais.
 
 4. Yn y cam nesaf, gosodwch baramedrau'r lampau:
    * **Enw'r golau (Light name)** — enw'r endid sy'n cael ei greu, er enghraifft `FloorLamp`;
    * **Power sensor** - synhwyrydd pŵer soced;
 
-5. Yn yr adran **ZUI003Z** ychwanegu o leiaf un modd disgleirdeb trwy glicio **Ychwanegu**.<br /> <img src="modes-edit.png" width="50%"/><br />
+5. Yn yr adran **🔅 Moddau disgleirdeb (🔅 Brightness modes)** ychwanegu o leiaf un modd disgleirdeb trwy glicio **Ychwanegu**.<br /> <img src="modes-edit.png" width="50%"/><br />
    Newidiwch y lamp gyda'i botwm corfforol, rhowch enw'r modd a chychwyn **Test stable power**. Ar ôl cael gwerth sefydlog, pwyswch **Ymgeisiwch**.
 
 6. Ar ôl ychwanegu'r modd cyntaf, ychwanegwch y moddau sy'n weddill trwy ailadrodd y camau hyn. Dylech chi gael rhywbeth fel:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Arbedwch y gwrthrych helpwr. Bydd Cynorthwyydd Cartref yn creu endid newydd `light`, Er enghraifft `light.FloorLamp`.
+7. Arbedwch y gwrthrych helpwr. Home Assistant yn creu endid newydd `light`, Er enghraifft `light.FloorLamp`.
 
 ### 🧩 Cerdyn Lovelace
 
 1. Agorwch y panel a ddymunir, trowch y modd golygu ymlaen a chliciwch **Ychwanegu cerdyn**.
-2. Dewiswch **Golau Aml-Lefel Plug Smart**, nodwch yr endid a grëwyd `light` ac arbed y cerdyn.
+2. Dewiswch **Smart Plug Multi-Level Light**, nodwch yr endid a grëwyd `light` ac arbed y cerdyn.
 
 Os nad yw'r cerdyn ymhlith y rhai sydd ar gael, efallai y byddwch chi'n ei ddefnyddio [Adnodd Lovelace modd YAML](#yaml-lovelace-mode).
 
@@ -159,7 +160,7 @@ Wrth agor yr adran **Rhyngweithiadau (Interactions)**, byddwch yn gweld:
 
 #### Disgleirdeb yn talgrynnu hyd at 5%
 
-Agored **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)**, darganfyddwch y gwrthrych helpwr a grëwyd yn gynharach **Golau Aml-Lefel Plug Smart** ac agor ei osodiadau. Trowch ymlaen neu i ffwrdd **Round brightness to 5% (may look nicer)**.
+Agored **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)**, darganfyddwch y gwrthrych helpwr a grëwyd yn gynharach **Smart Plug Multi-Level Light** ac agor ei osodiadau. Trowch ymlaen neu i ffwrdd **Round brightness to 5% (may look nicer)**.
 
 Pan fydd y gosodiad wedi'i alluogi, mae'r ganran a gyfrifwyd yn cael ei thalgrynnu i'r 5% agosaf, er enghraifft: 33% → 35%, 67% → 65%.
 
@@ -206,7 +207,7 @@ lovelace:
   resource_mode: yaml
 ```
 
-Nid yw Cynorthwy-ydd Cartref yn caniatáu i'r integreiddio newid y rhestr adnoddau yn awtomatig. Yn yr achos hwn, ychwanegwch yr adnodd â llaw:
+Home Assistant nid yw'n caniatáu i'r integreiddio newid y rhestr adnoddau yn awtomatig. Yn yr achos hwn, ychwanegwch yr adnodd â llaw:
 
 ```yaml
 lovelace:
@@ -216,7 +217,7 @@ lovelace:
       type: module
 ```
 
-Ar ôl y newid, ailgychwyn adnoddau Lovelace neu ailgychwyn Cynorthwyydd Cartref.
+Ar ôl y newid, ail-lwythwch adnoddau Lovelace neu ailgychwyn Home Assistant.
 
 <a id="troubleshooting"></a>
 
@@ -226,7 +227,7 @@ Ar ôl y newid, ailgychwyn adnoddau Lovelace neu ailgychwyn Cynorthwyydd Cartref
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Achos tebygol:** llwybr anghywir neu ni chafodd Cynorthwyydd Cartref ei ailgychwyn.
+**Achos tebygol:** ffordd anghywir neu Home Assistant ni chafodd ei ailgychwyn.
 
 Gwiriwch am argaeledd ffeil:
 
@@ -234,7 +235,7 @@ Gwiriwch am argaeledd ffeil:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Yna ailgychwynnwch Gynorthwyydd Cartref yn llawn a gwiriwch y log am wallau `smart_plug_multilevel_light`.
+Yna gwnewch ailgychwyn caled Home Assistant a gwiriwch y log am wallau `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -243,7 +244,7 @@ Yna ailgychwynnwch Gynorthwyydd Cartref yn llawn a gwiriwch y log am wallau `sma
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-Mae integreiddio yn dangos gwrthrychau yn unig `switch`gysylltiedig â dyfeisiau sydd hefyd yn darparu synhwyrydd cynnwys gyda `device_class: power`.
+Mae integreiddio yn dangos gwrthrychau yn unig `switch`sy'n gysylltiedig â dyfeisiau sydd hefyd yn darparu synhwyrydd cynnwys gyda `device_class: power`.
 
 Gwiriwch i mewn **[Gosodiadau → Dyfeisiau a gwasanaethau → Gwrthrychau](https://my.home-assistant.io/redirect/entities/)**:
 
@@ -259,7 +260,7 @@ Gwiriwch i mewn **[Gosodiadau → Dyfeisiau a gwasanaethau → Gwrthrychau](http
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Ar ôl dewis allfa, mae'r integreiddio yn ail-wirio am bresenoldeb synhwyrydd pŵer. Mae'r gwall yn digwydd os yw'r synhwyrydd wedi'i dynnu, wedi'i analluogi, wedi'i symud i ddyfais arall, neu wedi peidio â chael `device_class: power`.
+Ar ôl dewis allfa, mae'r integreiddio yn ail-wirio am bresenoldeb synhwyrydd pŵer. Mae'r gwall yn digwydd os yw'r synhwyrydd wedi'i dynnu, ei analluogi, ei symud i ddyfais arall, neu os nad oes ganddo bellach `device_class: power`.
 
 <hr />
 </details>
@@ -310,7 +311,7 @@ Mae lleihau nifer y darlleniadau yn cyflymu arddangosiad y modd newydd, ond yn g
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Mae cofrestru awtomatig yn digwydd dim ond ar ôl llwytho o leiaf un gwrthrych helpwr ffurfweddu a dim ond yn y modd adnoddau `storage`. Nid yw'r dull o osod yr integreiddiad - trwy HACS neu â llaw - yn effeithio ar hyn.
+Mae cofrestru awtomatig yn digwydd dim ond ar ôl llwytho o leiaf un gwrthrych helpwr ffurfweddu a dim ond yn y modd adnoddau `storage`. Mae'r dull gosod integreiddio trwy HACS neu â llaw - nid yw hyn yn cael unrhyw effaith.
 
 Gwirio **[Gosodiadau → Paneli → ⋮ → Adnoddau](https://my.home-assistant.io/redirect/lovelace_resources/)**. Dylai'r URL fod yno:
 
@@ -327,7 +328,7 @@ Yn y modd YAML [ychwanegu adnodd â llaw](#yaml-lovelace-mode).
 <summary><b>❓После обновления отображается старая карточка</b></summary>
 <br />
 
-1. Ailgychwyn Cynorthwyydd Cartref yn llwyr.
+1. Ailgychwyn yn llwyr Home Assistant.
 2. Adnewyddwch y dudalen i glirio storfa eich porwr.
 3. Gwiriwch rif y fersiwn yn URL adnodd y panel.
 4. Yn y cymhwysiad symudol, caewch ac ailagorwch y rhyngwyneb yn llwyr.
@@ -337,8 +338,8 @@ Yn y modd YAML [ychwanegu adnodd â llaw](#yaml-lovelace-mode).
 
 ## 🗑 Tynnu
 
-1. Dileu'r holl wrthrychau helpwr a grëwyd **Golau Aml-Lefel Plug Smart** trwy **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)**.
-2. Tynnwch yr integreiddiad trwy HACS neu dilëwch y ffolder â llaw:
+1. Dileu'r holl wrthrychau helpwr a grëwyd **Smart Plug Multi-Level Light** trwy **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)**.
+2. Dileu'r integreiddio trwy HACS neu ddileu'r ffolder â llaw:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
@@ -350,14 +351,14 @@ Yn y modd YAML [ychwanegu adnodd â llaw](#yaml-lovelace-mode).
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-4. Ailgychwyn Cynorthwyydd Cartref yn llwyr.
+4. Ailgychwyn yn llwyr Home Assistant.
 5. Os oes angen, adnewyddwch y dudalen i glirio storfa'r rhyngwyneb.
 
 ## 📄 Trwydded
 
-Mae'r prosiect yn cael ei ddosbarthu o dan drwydded [GYDA](../LICENSE).
+Mae'r prosiect yn cael ei ddosbarthu o dan drwydded [MIT](../LICENSE).
 
 <br />
 
-> \[!TIP]
-> **Oeddech chi'n hoffi'r ateb?** Edrych 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_cy.md">fy nghynnyrch eraill ar gyfer Cynorthwy-ydd Cartref</a>
+> [!TIP]
+> **Oeddech chi'n hoffi'r ateb?** Edrych 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_cy.md">fy nghynhyrchion eraill ar gyfer Home Assistant</a>
