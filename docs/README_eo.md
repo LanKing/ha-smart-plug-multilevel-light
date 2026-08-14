@@ -1,39 +1,40 @@
 <sub>🇺🇸&nbsp;<a href="../README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a>&nbsp;|</sub> <sub>🇺🇦&nbsp;<a href="README_uk.md">У⁠к⁠р⁠а⁠ї⁠н⁠с⁠ь⁠к⁠а</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="README_ru.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="README_af.md">A⁠f⁠r⁠i⁠k⁠a⁠a⁠n⁠s</a>&nbsp;|</sub> <sub>🇸🇦&nbsp;<a href="README_ar.md">ا⁠ل⁠ع⁠ر⁠ب⁠ي⁠ة</a>&nbsp;|</sub> <sub>🇧🇬&nbsp;<a href="README_bg.md">Б⁠ъ⁠л⁠г⁠а⁠р⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="README_bn.md">বাং⁠লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="README_bs.md">B⁠o⁠s⁠a⁠n⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="README_ca.md">C⁠a⁠t⁠a⁠l⁠à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="README_cs.md">Č⁠e⁠š⁠t⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>cy&nbsp;<a href="README_cy.md">C⁠y⁠m⁠r⁠a⁠e⁠g</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="README_da.md">D⁠a⁠n⁠s⁠k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="README_de.md">D⁠e⁠u⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇬🇷&nbsp;<a href="README_el.md">Ε⁠λ⁠λ⁠η⁠ν⁠ι⁠κ⁠ά</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="README_es.md">E⁠s⁠p⁠a⁠ñ⁠o⁠l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="README_et.md">E⁠e⁠s⁠t⁠i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="README_eu.md">E⁠u⁠s⁠k⁠a⁠r⁠a</a>&nbsp;|</sub> <sub>🇮🇷&nbsp;<a href="README_fa.md">ف⁠ا⁠ر⁠س⁠ی</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="README_fi.md">S⁠u⁠o⁠m⁠i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="README_fy.md">F⁠r⁠y⁠s⁠k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="README_fr.md">F⁠r⁠a⁠n⁠ç⁠a⁠i⁠s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="README_ga.md">G⁠a⁠e⁠i⁠l⁠g⁠e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="README_gl.md">G⁠a⁠l⁠e⁠g⁠o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="README_gsw.md">S⁠c⁠h⁠w⁠i⁠i⁠z⁠e⁠r⁠d⁠ü⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="README_he.md">ע⁠ב⁠ר⁠י⁠ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_hi.md">हि⁠न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="README_hr.md">H⁠r⁠v⁠a⁠t⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="README_hu.md">M⁠a⁠g⁠y⁠a⁠r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="README_hy.md">Հ⁠ա⁠յ⁠ե⁠ր⁠ե⁠ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="README_id.md">I⁠n⁠d⁠o⁠n⁠e⁠s⁠i⁠a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="README_is.md">Í⁠s⁠l⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="README_it.md">I⁠t⁠a⁠l⁠i⁠a⁠n⁠o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="README_ja.md">日⁠本⁠語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="README_ka.md">K⁠a⁠r⁠t⁠u⁠l⁠i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="README_ko.md">한⁠국⁠어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="README_lb.md">L⁠ë⁠t⁠z⁠e⁠b⁠u⁠e⁠r⁠g⁠e⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="README_lt.md">L⁠i⁠e⁠t⁠u⁠v⁠i⁠ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="README_lv.md">L⁠a⁠t⁠v⁠i⁠e⁠š⁠u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="README_mk.md">М⁠а⁠к⁠е⁠д⁠о⁠н⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ml.md">മ⁠ല⁠യാ⁠ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nb.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠B⁠o⁠k⁠m⁠å⁠l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="README_nl.md">N⁠e⁠d⁠e⁠r⁠l⁠a⁠n⁠d⁠s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nn.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠N⁠y⁠n⁠o⁠r⁠s⁠k</a>&nbsp;|</sub> <sub>🇵🇱&nbsp;<a href="README_pl.md">P⁠o⁠l⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="README_pt.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="README_pt-BR.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s⁠&nbsp;⁠(⁠B⁠R⁠)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="README_ro.md">R⁠o⁠m⁠â⁠n⁠ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="README_sk.md">S⁠l⁠o⁠v⁠e⁠n⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="README_sl.md">S⁠l⁠o⁠v⁠e⁠n⁠š⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="README_sq.md">S⁠h⁠q⁠i⁠p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr.md">С⁠р⁠п⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr-Latn.md">S⁠r⁠p⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="README_sv.md">S⁠v⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ta.md">த⁠மி⁠ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_te.md">తె⁠లు⁠గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="README_th.md">ภ⁠า⁠ษ⁠า⁠ไ⁠ท⁠ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="README_tr.md">T⁠ü⁠r⁠k⁠ç⁠e</a>&nbsp;|</sub> <sub>🇵🇰&nbsp;<a href="README_ur.md">اُ⁠ر⁠دُ⁠و</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="README_vi.md">T⁠i⁠ế⁠n⁠g⁠&nbsp;⁠V⁠i⁠ệ⁠t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="README_zh-Hans.md">简⁠体⁠中⁠文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="README_zh-Hant.md">繁⁠體⁠中⁠文</a></sub>
 
+<!-- markdown-translator:f30c10bb91a0f6587cd22ee0c70aa5e504b1807979a245dd1c91d57aadca6019 -->
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a> <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a> <a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
-> La integriĝo kombinas ne-ciferece kontrolitan lumilon kaj inteligentan ŝtopilon en unu Hejma Asistanto. Ĝi determinas la staton kaj nunan brilreĝimon surbaze de elektrokonsumo, montras ilin en karto kaj permesas al vi ŝalti lampon malŝaltitan per sia propra butono mallonge malŝaltante kaj reaplikante la potencon tra la ellasejo.
+> Integriĝo kombinas ne-ciferecan kontrollumon kaj inteligentan ŝtopilon en unu enton Home Assistant. Ĝi determinas la staton kaj nunan brilreĝimon surbaze de elektrokonsumo, montras ilin en karto kaj permesas al vi ŝalti lampon malŝaltitan per sia propra butono mallonge malŝaltante kaj reaplikante la potencon tra la ellasejo.
 
-# 🔌 Smart Plug Plurnivela Lumo
+# 🔌 Smart Plug Multi-Level Light
 
 ![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Karakterizaĵoj kaj funkcioj:**
 
-* Kreas indiĝenan Hejman Asistanton `light`kongrua kun aŭtomatigoj, skriptoj kaj norma HA-interfaco;
+* Kreas regulan enton Home Assistant `light`kongrua kun aŭtomatigoj, skriptoj kaj norma HA-interfaco;
 * Ĝuste ŝaltas la lampon sendepende de kiel ĝi estis malŝaltita: se la potenco estis malŝaltita per la inteligenta ingo, ĝi simple ŝaltas ĝin; se la lampo estis malŝaltita per sia propra butono dum la ingo estis ŝaltita, ĝi elfaras ciklon de malenergigo kaj enŝaltado denove;
 * Aŭtomate determinas la nunan operacian reĝimon de la lampo surbaze de la efektive mezurita stabila potenco;
 * Ĝi havas simplan agordilon en kiu la uzanto sinsekve nomas la reĝimojn subtenatajn de sia lampo, kaj la sistemo lernas determinante la stabilan potencon en ĉiu reĝimo;
 * Dum la unua agordo, la potenco estas legita en reala tempo: la uzanto devas nur ŝanĝi la lumon al la sekva reĝimo kaj premi la lernbutonon;
 * Sukcese filtras malstabilajn potencajn legaĵojn, malhelpante ĥaosajn ŝanĝojn de la indikilo sur la karto kiam la potenco "saltas" ene de unu reĝimo (kaj eĉ koincidas kun la sekva reĝimo);
 * Subtenas arbitran nombron da reĝimoj;
-* La karto estas konstruita sur la norma Hejma Asistanta Kahela Karto, konservante ĝian geometrion, fonon, ŝvebajn efikojn, grandecojn, tipografion kaj normajn agojn;
+* La karto estas konstruita super la norma Home Assistant Kahelo Karto konservanta ĝian geometrion, fonon, ŝvebajn efikojn, grandecojn, tipografion kaj normajn agojn;
 * En la karto, la nuna brilo estas vide kodita per kolorintenseco;
 * Kalkulas brilon linie relative al maksimuma potenco; rondigo de la kalkulita brilo al 5% povas esti ebligita por pli preciza montrado de procentoj;
 * Ebligas al vi flekseble personecigi la montratajn parametrojn kaj aspekton de la karto;
 * Permesas al vi elekti nur la potencan sensilon rilatan al la elektita inteligenta ŝtopilo;
 * Permesas al vi ĝustigi la malfruon de la malenergiga ciklo por ĝusta funkciado kun malsamaj modeloj de lampoj kaj ingoj;
 * Permesas al vi agordi la potencan sojlon sub kiu la lampo estas konsiderata malŝaltita;
-* La interfaco estas lokalizita por 64 ejoj de Hejma Asistanto.
+* Interfaco lokalizita por 64 lokoj Home Assistant.
 
 ## 🗜 Preparado de fero
 
 Vi bezonos:
 
 1. Inteligenta ingo, kiu devus provizi potencan kontrolon (ŝaltilo) kaj potenco-mezuradon (sensilo kun device\_class: potenco) al la HA. Ambaŭ estaĵoj devas aparteni al la sama aparato kaj esti ebligitaj.
-2. Malsaĝa lumo, kiu aŭtomate ŝaltas unufoje enŝovita kaj havas plurajn brilajn agordojn por kompleta ĝuo.
+2. Malsaĝa lumo, kiu ŝaltas aŭtomate unufoje enŝovita kaj havas plurajn brilajn agordojn por kompleta ĝuo.
 
-> Mi uzis ingon [Tuya TS011F (en Girier-kazo)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Mi diros, ke komence de la eksperimentoj, la serio de ingoj Girier ne konvenis pro malprecizaj mezuradoj, sed ĉi tiu modelo jes, kvankam ĝi estis ankaŭ en la kazo Girier.
+> Mi uzis ingon [Tuya TS011F (en Girier-kazo)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Mi diros, ke komence de la eksperimentoj, la serio de ingoj Girier ne konvenis pro malprecizaj mezuradoj, sed ĉi tiu modelo faris, kvankam ĝi estis ankaŭ en la kazo Girier.
 
 ### 👨‍🔬 Grava agordo, kiun mi aplikis al mia ellasejo:
 
@@ -41,7 +42,7 @@ Vi bezonos:
 
 Ĉi tiu priskribo estas grava nur por posedantoj de ingoj konektitaj per Z2M. Aliaj uzantoj devas ĝustigi la refreŝigan indicon ene de sia agordo:
 
-1. Malfermu **Hejma Asistanto → Zigbee2MQTT**. Se Zigbee2MQTT ne estas en la flanka menuo, malfermu **Agordoj → Aplikoj → Zigbee2MQTT → Malfermu retan interfacon**.
+1. Malfermu **Home Assistant → Zigbee2MQTT**. Se Zigbee2MQTT mankas en la flanka menuo, malfermita **Agordoj → Aplikoj → Zigbee2MQTT → Malfermu retan interfacon**.
 2. Iru al sekcio **Aparatoj**.
 3. Elektu la bezonatan ellasejon.
 4. Malfermu la langeton **Agordoj (specifaj)**.
@@ -53,13 +54,13 @@ Vi bezonos:
 
 ### 🛍 Instalado per HACS
 
-ℹ️ [Kio estas HACS kaj kiel instali ĝin?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_eo.md)
+ℹ️ [Kio okazis HACS kaj kiel instali ĝin?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_eo.md)
 
-🚀 [Provu aldoni deponejon ĉe la ligilo](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Se via HA subtenas ĉi tiun metodon, alklaku **Aldoni** en la fenestro kiu malfermiĝas, kaj poste la butonon **Elŝutu** en la malsupra dekstra angulo. Se la instalado estis kompletigita sukcese, vi povas salti pliajn paŝojn. Saltu rekte al sekcio [rapida komenco](#getting-started).
+🚀 [Provu aldoni deponejon ĉe la ligilo](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Se via HA subtenas ĉi tiun metodon, alklaku **Aldoni** en la fenestro kiu malfermiĝas, kaj poste la butonon **Elŝutu** en la malsupra dekstra angulo. Se la instalado estis kompletigita sukcese, vi povas salti pliajn paŝojn. Saltu rekte al sekcio [rapida komenco](#getting-started).
 
 #### 1. Aldonante deponejon
 
-Dum la deponejo ne estas inkluzivita en la norma HACS-dosierujo, aldonu ĝin kiel kutiman:
+La deponejo ankoraŭ ne estas inkluzivita en la norma dosierujo HACS, aldonu ĝin kiel kutimo:
 
 1. Malfermu **HACS → Integriĝoj**.
 2. Malfermu la menuon en la supra dekstra angulo kaj elektu **Propraj Deponejoj**.
@@ -71,13 +72,13 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 
 4. Elektu tipon **Integriĝo** kaj premu **Aldoni**.
 
-> Aldonante deponejon nur disponigas la integriĝon en HACS. Por instali, vi devas aparte malfermi ĝian karton kaj klaki **Elŝutu**.
+> Aldono de deponejo nur ebligas la integriĝon en HACS. Por instali, vi devas aparte malfermi ĝian karton kaj klaki **Elŝutu**.
 
 #### 2. Instalado de integriĝo
 
-1. Serĉu en HACS: `Smart Plug Multi-Level Light`.
+1. Trovu en HACS: Smart Plug Multi-Level Light.
 2. Malfermu la integriĝon kaj alklaku **Elŝutu**.
-3. Post instalado, rekomencu tute Hejman Asistanton.
+3. Post instalado, rekomencu tute Home Assistant.
 
 <a id="manual-installation"></a>
 
@@ -91,7 +92,7 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 custom_components/smart_plug_multilevel_light
 ```
 
-al la agorda dosierujo de Hejma Asistanto:
+al la agorda dosierujo Home Assistant:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
@@ -103,11 +104,11 @@ Fina dosiera vojo `manifest.json` devus aspekti jene:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-4. Tute rekomencu Hejman Asistanton.
+4. Tute rekomencu Home Assistant.
 
-> Ne kopiu la tutan eksteran deponejon al `custom_components`. Interne `custom_components` la dosierujo devas troviĝi rekte `smart_plug_multilevel_light`.
+> Ne kopiu la tutan eksteran deponejan dosierujon al `custom_components`. Interne `custom_components` la dosierujo devas troviĝi rekte `smart_plug_multilevel_light`.
 
-La karto estas inkluzivita en la integriĝo, do HACS ne estas postulata por instali ĝin. Post permane kopiado de la dosieroj, rekomencado de Hejma Asistanto kaj kreado de la unua helpa objekto, la integriĝo publikigas la JavaScript-kartdosieron kaj aŭtomate registras ĝin kun panelaj rimedoj en norma reĝimo. `storage`. En YAML-rimeda reĝimo, la karto devas esti registrita permane, kiel priskribite sube.
+La karto estas parto de la integriĝo, do HACS ĝi ne estas postulata por instalado. Post mane kopiado de dosieroj, rekomencu Home Assistant kaj kreante la unuan helpan objekton, la integriĝo publikigas la JavaScript-kartdosieron kaj aŭtomate registras ĝin kun la panelaj rimedoj en norma reĝimo `storage`. En YAML-rimeda reĝimo, la karto devas esti registrita permane, kiel priskribite malsupre.
 
 <a id="getting-started"></a>
 
@@ -117,26 +118,26 @@ La karto estas inkluzivita en la integriĝo, do HACS ne estas postulata por inst
 
 1. Malfermu **[Agordoj → Aparatoj kaj servoj → Akcesoraĵoj](https://my.home-assistant.io/redirect/helpers/)** kaj premu **Krei Helpan Objekton**.
 
-2. Elektu **Smart Plug Plurnivela Lumo**.
+2. Elektu **Smart Plug Multi-Level Light**.
 
-3. Elektu la inteligentan ŝtopilon al kiu la lampo estas konektita. La listo nur montras ellasejojn kie Hejma Asistanto vidas potencan sensilon en la sama aparato.
+3. Elektu la inteligentan ŝtopilon al kiu la lampo estas konektita. La listo montras nur ingojn kiuj havas Home Assistant vidas la potencosensilon en la sama aparato.
 
 4. En la sekva paŝo, agordu la lampajn parametrojn:
    * **Lumnomo (Light name)** — la nomo de la kreata ento, ekzemple `FloorLamp`;
    * **Power sensor** - inga potenco-sensilo;
 
-5. En la sekcio **ZUI003Z** aldonu almenaŭ unu brilreĝimon per klako **Aldoni**.<br /> <img src="modes-edit.png" width="50%"/><br />
+5. En la sekcio **🔅 Helecaj reĝimoj (🔅 Brightness modes)** aldonu almenaŭ unu brilreĝimon per klako **Aldoni**.<br /> <img src="modes-edit.png" width="50%"/><br />
    Ŝaltu la lampon per ĝia fizika butono, enigu la nomon de la reĝimo kaj komencu **Test stable power**. Post akiri stabilan valoron, premu **Apliki**.
 
 6. Post aldoni la unuan reĝimon, aldonu la ceterajn modojn ripetante ĉi tiujn paŝojn. Vi devus fini kun io kiel:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Konservu la helpan objekton. Hejma Asistanto kreos novan enton `light`, Ekzemple `light.FloorLamp`.
+7. Konservu la helpan objekton. Home Assistant kreos novan enton `light`, Ekzemple `light.FloorLamp`.
 
 ### 🧩 Lovelace-karto
 
 1. Malfermu la deziratan panelon, ŝaltu redaktan reĝimon kaj alklaku **Aldonu karton**.
-2. Elektu **Smart Plug Plurnivela Lumo**, specifu la kreitan enton `light` kaj konservu la karton.
+2. Elektu **Smart Plug Multi-Level Light**, specifu la kreitan enton `light` kaj konservu la karton.
 
 Se la karto ne estas inter la disponeblaj, vi eble uzas [Lovelace rimedo YAML-reĝimo](#yaml-lovelace-mode).
 
@@ -159,7 +160,7 @@ Malfermante la sekcion **Interagoj (Interactions)**, vi vidos:
 
 #### Brilo rondiĝas ĝis 5%
 
-Malfermu **[Agordoj → Aparatoj kaj servoj → Akcesoraĵoj](https://my.home-assistant.io/redirect/helpers/)**, trovu la helpan objekton kreitan pli frue **Smart Plug Plurnivela Lumo** kaj malfermu ĝiajn agordojn. Ŝalti aŭ malŝalti **Round brightness to 5% (may look nicer)**.
+Malfermu **[Agordoj → Aparatoj kaj servoj → Akcesoraĵoj](https://my.home-assistant.io/redirect/helpers/)**, trovu la helpan objekton kreitan pli frue **Smart Plug Multi-Level Light** kaj malfermu ĝiajn agordojn. Ŝalti aŭ malŝalti **Round brightness to 5% (may look nicer)**.
 
 Kiam la agordo estas ebligita, la kalkulita procento estas rondigita al la plej proksima 5%, ekzemple: 33% → 35%, 67% → 65%.
 
@@ -206,7 +207,7 @@ lovelace:
   resource_mode: yaml
 ```
 
-Hejma Asistanto ne permesas al la integriĝo aŭtomate ŝanĝi la liston de rimedoj. En ĉi tiu kazo, aldonu la rimedon permane:
+Home Assistant ne permesas al la integriĝo aŭtomate ŝanĝi la liston de rimedoj. En ĉi tiu kazo, aldonu la rimedon permane:
 
 ```yaml
 lovelace:
@@ -216,7 +217,7 @@ lovelace:
       type: module
 ```
 
-Post la ŝanĝo, rekomencu Lovelace-rimedojn aŭ rekomencu Hejman Asistanton.
+Post la ŝanĝo, reŝargu Lovelace-rimedojn aŭ rekomencu Home Assistant.
 
 <a id="troubleshooting"></a>
 
@@ -226,7 +227,7 @@ Post la ŝanĝo, rekomencu Lovelace-rimedojn aŭ rekomencu Hejman Asistanton.
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Probabla kaŭzo:** malĝusta vojo aŭ Hejma Asistanto ne estis rekomencita.
+**Probabla kaŭzo:** malĝusta maniero aŭ Home Assistant ne estis rekomencita.
 
 Kontrolu la haveblecon de dosiero:
 
@@ -234,7 +235,7 @@ Kontrolu la haveblecon de dosiero:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Poste faru plenan rekomencon de Hejma Asistanto kaj kontrolu la protokolon por eraroj `smart_plug_multilevel_light`.
+Poste faru malfacilan rekomencon Home Assistant kaj kontrolu la protokolon por eraroj `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -259,7 +260,7 @@ Kontrolu **[Agordoj → Aparatoj kaj servoj → Objektoj](https://my.home-assist
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Post elekto de ellasejo, la integriĝo rekontrolas la ĉeeston de potenca sensilo. La eraro okazas se la sensilo estis forigita, malŝaltita, movita al alia aparato aŭ ĉesis havi `device_class: power`.
+Post elekto de ellasejo, la integriĝo rekontrolas la ĉeeston de potenca sensilo. La eraro okazas se la sensilo estis forigita, malŝaltita, movita al alia aparato aŭ ne plu `device_class: power`.
 
 <hr />
 </details>
@@ -310,7 +311,7 @@ Redukti la nombron da legaĵoj plirapidigas la montradon de la nova reĝimo, sed
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Aŭtomata registrado okazas nur post ŝarĝo de almenaŭ unu agordita helpa objekto kaj nur en rimedreĝimo `storage`. La metodo instali la integriĝon - per HACS aŭ permane - ne influas ĉi tion.
+Aŭtomata registrado okazas nur post ŝarĝo de almenaŭ unu agordita helpa objekto kaj nur en rimedreĝimo `storage`. La integriga instala metodo estas per HACS aŭ permane - ĉi tio ne efikas.
 
 Kontrolu **[Agordoj → Paneloj → ⋮ → Rimedoj](https://my.home-assistant.io/redirect/lovelace_resources/)**. La URL devus esti tie:
 
@@ -327,9 +328,9 @@ En YAML-reĝimo [aldoni rimedon permane](#yaml-lovelace-mode).
 <summary><b>❓После обновления отображается старая карточка</b></summary>
 <br />
 
-1. Tute rekomencu Hejman Asistanton.
+1. Tute rekomencu Home Assistant.
 2. Refreŝigu la paĝon por forigi vian retumilon kaŝmemoron.
-3. Kontrolu la numeron de versio en la URL de la panela rimedo.
+3. Kontrolu la version-numeron en la panela rimeda URL.
 4. En la poŝtelefona aplikaĵo, tute fermu kaj remalfermu la interfacon.
 
 <hr />
@@ -337,8 +338,8 @@ En YAML-reĝimo [aldoni rimedon permane](#yaml-lovelace-mode).
 
 ## 🗑 Forigo
 
-1. Forigu ĉiujn kreitajn helpajn objektojn **Smart Plug Plurnivela Lumo** tra **[Agordoj → Aparatoj kaj servoj → Akcesoraĵoj](https://my.home-assistant.io/redirect/helpers/)**.
-2. Forigu la integriĝon per HACS aŭ mane forigu la dosierujon:
+1. Forigu ĉiujn kreitajn helpajn objektojn **Smart Plug Multi-Level Light** tra **[Agordoj → Aparatoj kaj servoj → Akcesoraĵoj](https://my.home-assistant.io/redirect/helpers/)**.
+2. Forigi la integriĝon per HACS aŭ mane forigu la dosierujon:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
@@ -350,14 +351,14 @@ En YAML-reĝimo [aldoni rimedon permane](#yaml-lovelace-mode).
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-4. Tute rekomencu Hejman Asistanton.
+4. Tute rekomencu Home Assistant.
 5. Se necese, refreŝigu la paĝon por malplenigi la interfacan kaŝmemoron.
 
 ## 📄 Licenco
 
-La projekto estas distribuita sub licenco [KUN](../LICENSE).
+La projekto estas distribuita sub licenco [MIT](../LICENSE).
 
 <br />
 
-> \[! KONSILETO]
-> **Ĉu vi ŝatis la solvon?** Rigardu 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_eo.md">miaj aliaj produktoj por Hejma Asistanto</a>
+> [!TIP]
+> **Ĉu vi ŝatis la solvon?** Rigardu 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_eo.md">miaj aliaj produktoj por Home Assistant</a>
