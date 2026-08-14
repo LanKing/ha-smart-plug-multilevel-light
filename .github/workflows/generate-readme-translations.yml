@@ -85,7 +85,6 @@ jobs:
       - name: Generate translations from Russian README
         env:
           OVERWRITE: true
-          TARGET_LOCALE: uk
         run: |
           args=()
           if [ "$OVERWRITE" = "true" ]; then
@@ -93,5 +92,4 @@ jobs:
           fi
           python scripts/generate_readme_translations.py \
             --translator-dir .readme-translator \
-            --locale "$TARGET_LOCALE" \
             "${args[@]}"
