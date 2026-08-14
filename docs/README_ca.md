@@ -10,7 +10,7 @@
 
 **✨ Característiques i característiques:**
 
-* Crea una entitat nativa de Home Assistant`light`compatible amb automatitzacions, scripts i interfície HA estàndard;
+* Crea una entitat nativa de Home Assistant `light`compatible amb automatitzacions, scripts i interfície HA estàndard;
 * Encén correctament el llum independentment de com es va apagar: si es va apagar l'alimentació a través de la presa intel·ligent, simplement l'encén; si el llum es va apagar amb el seu propi botó mentre l'endoll estava encès, realitza un cicle de desactivació i tornada a encendre;
 * Determina automàticament el mode de funcionament actual de la làmpada en funció de la potència estable realment mesurada;
 * Disposa d'un configurador senzill en el qual l'usuari anomena seqüencialment els modes suportats per la seva làmpada, i el sistema aprèn determinant la potència estable en cada mode;
@@ -33,7 +33,7 @@ Necessitareu:
 1. Un endoll intel·ligent que hauria de proporcionar control de potència (interruptor) i mesura de potència (sensor amb device\_class: power) a l'HA. Les dues entitats han de pertànyer al mateix dispositiu i estar habilitades.
 2. Una llum ximple que s'encén automàticament un cop connectat i té múltiples paràmetres de brillantor per gaudir-ne completament.
 
-> Vaig fer servir un endoll[Tuya TS011F (en el cas Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Diré que a l'inici dels experiments, la sèrie de preses Girier no encaixava a causa de mesures inexactes, però aquest model sí, tot i que també va ser en el cas Girier.
+> Vaig fer servir un endoll [Tuya TS011F (en el cas Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Diré que a l'inici dels experiments, la sèrie de preses Girier no encaixava a causa de mesures inexactes, però aquest model sí, tot i que també va ser en el cas Girier.
 
 ### 👨‍🔬 Configuració important que vaig aplicar al meu punt de venda:
 
@@ -41,11 +41,11 @@ Necessitareu:
 
 Aquesta descripció només és rellevant per als propietaris d'endolls connectats mitjançant Z2M. Altres usuaris haurien d'ajustar la freqüència d'actualització dins de la seva configuració:
 
-1. Obert**Assistent d'inici → Zigbee2MQTT**. Si Zigbee2MQTT no es troba al menú lateral, obriu**Configuració → Aplicacions → Zigbee2MQTT → Obre la interfície web**.
-2. Vés a la secció**Dispositius**.
+1. Obert **Assistent d'inici → Zigbee2MQTT**. Si Zigbee2MQTT no es troba al menú lateral, obriu **Configuració → Aplicacions → Zigbee2MQTT → Obre la interfície web**.
+2. Vés a la secció **Dispositius**.
 3. Seleccioneu la presa necessària.
-4. Obriu la pestanya**Configuració (específica)**.
-5. Els canvis**Interval d'enquesta de mesura**a 1 s.
+4. Obriu la pestanya **Configuració (específica)**.
+5. Els canvis **Interval d'enquesta de mesura** a 1 s.
 
 <a id="installation"></a>
 
@@ -53,37 +53,37 @@ Aquesta descripció només és rellevant per als propietaris d'endolls connectat
 
 ### 🛍 Instal·lació via HACS
 
-ℹ️[Què és HACS i com instal·lar-lo?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ca.md)
+ℹ️ [Què és HACS i com instal·lar-lo?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ca.md)
 
-🚀[Proveu d'afegir un repositori a l'enllaç](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Si el vostre HA admet aquest mètode, feu clic**Afegeix**a la finestra que s'obre i després el botó**Descarregar**a la cantonada inferior dreta. Si la instal·lació s'ha completat correctament, podeu saltar-vos altres passos. Saltar directament a la secció[inici ràpid](#getting-started).
+🚀 [Proveu d'afegir un repositori a l'enllaç](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Si el vostre HA admet aquest mètode, feu clic **Afegeix** a la finestra que s'obre i després el botó **Descarregar** a la cantonada inferior dreta. Si la instal·lació s'ha completat correctament, podeu saltar-vos altres passos. Saltar directament a la secció [inici ràpid](#getting-started).
 
 #### 1. Afegir un repositori
 
 Tot i que el repositori no està inclòs al directori estàndard HACS, afegiu-lo com a personalitzat:
 
-1. Obert**HACS → Integracions**.
-2. Obriu el menú a l'extrem superior dret i seleccioneu**Repositoris personalitzats**.
+1. Obert **HACS → Integracions**.
+2. Obriu el menú a l'extrem superior dret i seleccioneu **Repositoris personalitzats**.
 3. Afegeix:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Seleccioneu el tipus**Integració**i premeu**Afegeix**.
+4. Seleccioneu el tipus **Integració** i premeu **Afegeix**.
 
-> Afegir un repositori només fa que la integració estigui disponible a HACS. Per instal·lar-lo, heu d'obrir la seva targeta per separat i fer clic**Descarregar**.
+> Afegir un repositori només fa que la integració estigui disponible a HACS. Per instal·lar-lo, heu d'obrir la seva targeta per separat i fer clic **Descarregar**.
 
 #### 2. Instal·lació d'integració
 
-1. Cerca a HACS:`Smart Plug Multi-Level Light`.
-2. Obriu la integració i feu clic**Descarregar**.
+1. Cerca a HACS: `Smart Plug Multi-Level Light`.
+2. Obriu la integració i feu clic **Descarregar**.
 3. Després de la instal·lació, reinicieu Home Assistant completament.
 
 <a id="manual-installation"></a>
 
 ### 🧑‍💻 Instal·lació sense HACS
 
-1. A la pàgina del repositori, feu clic**Codi → Descarregar ZIP**.
+1. A la pàgina del repositori, feu clic **Codi → Descarregar ZIP**.
 2. Descomprimir l'arxiu.
 3. Copia la carpeta:
 
@@ -97,7 +97,7 @@ al directori de configuració de Home Assistant:
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Ruta del fitxer final`manifest.json`hauria de ser així:
+Ruta del fitxer final `manifest.json` hauria de ser així:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
@@ -105,9 +105,9 @@ Ruta del fitxer final`manifest.json`hauria de ser així:
 
 4. Reinicieu completament Home Assistant.
 
-> No copieu tota la carpeta del repositori extern`custom_components`. Dins`custom_components`la carpeta s'ha de localitzar directament`smart_plug_multilevel_light`.
+> No copieu tota la carpeta del repositori extern `custom_components`. Dins `custom_components` la carpeta s'ha de localitzar directament `smart_plug_multilevel_light`.
 
-La targeta està inclosa a la integració, per la qual cosa no cal que HACS la instal·li. Després de copiar manualment els fitxers, reiniciar Home Assistant i crear el primer objecte d'ajuda, la integració publica el fitxer de la targeta JavaScript i el registra automàticament amb els recursos del panell en mode estàndard.`storage`. En el mode de recursos YAML, la targeta s'ha de registrar manualment, tal com es descriu a continuació.
+La targeta està inclosa a la integració, per la qual cosa no cal que HACS la instal·li. Després de copiar manualment els fitxers, reiniciar Home Assistant i crear el primer objecte d'ajuda, la integració publica el fitxer de la targeta JavaScript i el registra automàticament amb els recursos del panell en mode estàndard. `storage`. En el mode de recursos YAML, la targeta s'ha de registrar manualment, tal com es descriu a continuació.
 
 <a id="getting-started"></a>
 
@@ -115,50 +115,51 @@ La targeta està inclosa a la integració, per la qual cosa no cal que HACS la i
 
 ### 🛠 Configuració
 
-1. Ober&#x74;**[Configuració → Dispositius i serveis → Accessoris](https://my.home-assistant.io/redirect/helpers/)**&#x69; premeu**Crea un objecte d'ajuda**.
+1. Obert **[Configuració → Dispositius i serveis → Accessoris](https://my.home-assistant.io/redirect/helpers/)** i premeu **Crea un objecte d'ajuda**.
 
-2. Seleccioneu**Endoll intel·ligent Llum multinivell**.
+2. Seleccioneu **Endoll intel·ligent Llum multinivell**.
 
 3. Seleccioneu l'endoll intel·ligent al qual està connectada la làmpada. La llista només mostra els punts de venda on Home Assistant veu un sensor de potència al mateix dispositiu.
 
 4. Al següent pas, configureu els paràmetres de la làmpada:
-   * **Nom de la llum (Light name)**— el nom de l'entitat que es crea, per exemple`FloorLamp`;
-   * **Power sensor**- sensor de potència de presa;
+   * **Nom de la llum (Light name)** — el nom de l'entitat que es crea, per exemple `FloorLamp`;
+   * **Power sensor** - sensor de potència de presa;
 
-5. A la secció**ZUI003Z**afegeix almenys un mode de brillantor fent clic**Afegeix**.<br /> <img src="modes-edit.png" width="50%"/><br />Canvia el llum amb el seu botó físic, introdueix el nom del mode i comença**Test stable power**. Després d'obtenir un valor estable, premeu**Aplicar**.
+5. A la secció **ZUI003Z** afegeix almenys un mode de brillantor fent clic **Afegeix**.<br /> <img src="modes-edit.png" width="50%"/><br />
+   Canvia el llum amb el seu botó físic, introdueix el nom del mode i comença **Test stable power**. Després d'obtenir un valor estable, premeu **Aplicar**.
 
 6. Després d'afegir el primer mode, afegiu els modes restants repetint aquests passos. Hauríeu d'acabar amb alguna cosa com:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Deseu l'objecte auxiliar. Home Assistant crearà una entitat nova`light`, Per exemple`light.FloorLamp`.
+7. Deseu l'objecte auxiliar. Home Assistant crearà una entitat nova `light`, Per exemple `light.FloorLamp`.
 
 ### 🧩 Targeta Lovelace
 
-1. Obriu el tauler desitjat, activeu el mode d'edició i feu clic**Afegeix una targeta**.
-2. Seleccioneu**Endoll intel·ligent Llum multinivell**, especifiqueu l'entitat creada`light`i guarda la targeta.
+1. Obriu el tauler desitjat, activeu el mode d'edició i feu clic **Afegeix una targeta**.
+2. Seleccioneu **Endoll intel·ligent Llum multinivell**, especifiqueu l'entitat creada `light` i guarda la targeta.
 
-Si la targeta no es troba entre les disponibles, és possible que estigueu utilitzant[Mode YAML de recursos de Lovelace](#yaml-lovelace-mode).
+Si la targeta no es troba entre les disponibles, és possible que estigueu utilitzant [Mode YAML de recursos de Lovelace](#yaml-lovelace-mode).
 
 ### 🎨 Efectes visuals
 
 #### Configuració a la targeta
 
-Obriu el tauler on es troba la targeta, aneu al mode d'edició i feu clic**Edita**a la targeta desitjada.
+Obriu el tauler on es troba la targeta, aneu al mode d'edició i feu clic **Edita** a la targeta desitjada.
 
-Obrint la secció**Contingut (Content)**, veureu la configuració disponible:
+Obrint la secció **Contingut (Content)**, veureu la configuració disponible:
 
-* **Mostra el nom del mode (Show mode name)**— mostra o amaga el nom del mode actual: per exemple, Dim, Low, Medium o High.
-* **Mostra el percentatge (Show percentage)**— mostra o amaga la brillantor calculada com a percentatge.
+* **Mostra el nom del mode (Show mode name)** — mostra o amaga el nom del mode actual: per exemple, Dim, Low, Medium o High.
+* **Mostra el percentatge (Show percentage)** — mostra o amaga la brillantor calculada com a percentatge.
 
-Obrint la secció**Interaccions (Interactions)**, veuràs:
+Obrint la secció **Interaccions (Interactions)**, veuràs:
 
-* **Mostra sempre el fons de la icona (Always show icon background)**— conserva el fons rodó al voltant de la icona, fins i tot si una acció independent està desactivada.
+* **Mostra sempre el fons de la icona (Always show icon background)** — conserva el fons rodó al voltant de la icona, fins i tot si una acció independent està desactivada.
 
-> 🚫 Per cert, si, com jo, utilitzeu una icona de targeta no estàndard i quan està desactivada no està ratllada visualment, us recomano el meu altre connector:[Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_ca.md), que resol aquest problema estètic.
+> 🚫 Per cert, si, com jo, utilitzeu una icona de targeta no estàndard i quan està desactivada no està ratllada visualment, us recomano el meu altre connector: [Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_ca.md), que resol aquest problema estètic.
 
 #### Lluentor arrodonit fins al 5%
 
-Ober&#x74;**[Configuració → Dispositius i serveis → Accessoris](https://my.home-assistant.io/redirect/helpers/)**, trobeu l'objecte auxiliar creat anteriorment**Endoll intel·ligent Llum multinivell**i obre la seva configuració. Encendre o apagar**Round brightness to 5% (may look nicer)**.
+Obert **[Configuració → Dispositius i serveis → Accessoris](https://my.home-assistant.io/redirect/helpers/)**, trobeu l'objecte auxiliar creat anteriorment **Endoll intel·ligent Llum multinivell** i obre la seva configuració. Encendre o apagar **Round brightness to 5% (may look nicer)**.
 
 Quan la configuració està activada, el percentatge calculat s'arrodoneix al 5% més proper, per exemple: 33% → 35%, 67% → 65%.
 
@@ -170,13 +171,13 @@ Opcions disponibles:
 
 | Paràmetre | Tipus | Per defecte | Destinació |
 |---|---|---:|---|
-|`entity`| cadena | obligatòria | entitat creada per integració |
-|`name`| cadena | nom de l'entitat | anul·la el nom de la targeta |
-|`icon`| cadena | icona d'entitat | redefineix la icona |
-|`show_mode`| booleà |`true`| mostra el nom del mode |
-|`show_percentage`| booleà |`true`| mostra interès condicional |
-|`icon_tap_action`| acció |`more-info`| acció addicional en fer clic a la icona |
-|`always_show_icon_background`| booleà |`false`| sempre mostra el fons rodó de la icona, encara que sigui per`icon_tap_action`"No" seleccionat |
+| `entity` | cadena | obligatòria | entitat creada per integració |
+| `name` | cadena | nom de l'entitat | anul·la el nom de la targeta |
+| `icon` | cadena | icona d'entitat | redefineix la icona |
+| `show_mode` | booleà | `true` | mostra el nom del mode |
+| `show_percentage` | booleà | `true` | mostra interès condicional |
+| `icon_tap_action` | acció | `more-info` | acció addicional en fer clic a la icona |
+| `always_show_icon_background` | booleà | `false` | sempre mostra el fons rodó de la icona, encara que sigui per `icon_tap_action` "No" seleccionat |
 
 Exemple complet:
 
@@ -198,7 +199,7 @@ always_show_icon_background: false
 
 > El més probable és que no tinguis aquest mode activat. Si no hi ha problemes i la targeta funciona, ometeu aquest pas.
 
-Si tens`configuration.yaml`establert explícitament:
+Si tens `configuration.yaml` establert explícitament:
 
 ```yaml
 lovelace:
@@ -225,7 +226,7 @@ Després del canvi, reinicieu els recursos de Lovelace o reinicieu Home Assistan
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Causa probable:**&#x63;amí incorrecte o Home Assistant no s'ha reiniciat.
+**Causa probable:** camí incorrecte o Home Assistant no s'ha reiniciat.
 
 Comproveu la disponibilitat dels fitxers:
 
@@ -233,7 +234,7 @@ Comproveu la disponibilitat dels fitxers:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-A continuació, feu un reinici complet de Home Assistant i comproveu si hi ha errors al registre`smart_plug_multilevel_light`.
+A continuació, feu un reinici complet de Home Assistant i comproveu si hi ha errors al registre `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -242,13 +243,13 @@ A continuació, feu un reinici complet de Home Assistant i comproveu si hi ha er
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-La integració només mostra objectes`switch`associat amb dispositius que també proporcionen un sensor inclòs`device_class: power`.
+La integració només mostra objectes `switch`associat amb dispositius que també proporcionen un sensor inclòs `device_class: power`.
 
-Registra'&#x74;**[Configuració → Dispositius i serveis → Objectes](https://my.home-assistant.io/redirect/entities/)**:
+Registra't **[Configuració → Dispositius i serveis → Objectes](https://my.home-assistant.io/redirect/entities/)**:
 
-* Pertanyen`switch`i un sensor de potència per a un dispositiu?
+* Pertanyen `switch` i un sensor de potència per a un dispositiu?
 * El sensor de potència està encès?
-* Està especificat correctament?`device_class`?
+* Està especificat correctament? `device_class`?
 * Té un estat numèric?
 
 <hr />
@@ -258,7 +259,7 @@ Registra'&#x74;**[Configuració → Dispositius i serveis → Objectes](https://
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Després de seleccionar una presa de corrent, la integració torna a comprovar la presència d'un sensor de potència. L'error es produeix si el sensor s'ha eliminat, desactivat, traslladat a un altre dispositiu o ha deixat de tenir-lo.`device_class: power`.
+Després de seleccionar una presa de corrent, la integració torna a comprovar la presència d'un sensor de potència. L'error es produeix si el sensor s'ha eliminat, desactivat, traslladat a un altre dispositiu o ha deixat de tenir-lo. `device_class: power`.
 
 <hr />
 </details>
@@ -267,7 +268,7 @@ Després de seleccionar una presa de corrent, la integració torna a comprovar l
 <summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
 <br />
 
-Comproveu el valor del sensor de potència. El llum virtual es considera apagat quan`0 W`; quan és positiu, s'ha de definir com`on`.
+Comproveu el valor del sensor de potència. El llum virtual es considera apagat quan `0 W`; quan és positiu, s'ha de definir com `on`.
 
 <hr />
 </details>
@@ -276,7 +277,7 @@ Comproveu el valor del sensor de potència. El llum virtual es considera apagat 
 <summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
 <br />
 
-Comproveu que el sensor de potència seleccionat es mostri realment`0 W`, quan el llum s'apaga amb el seu propi botó.
+Comproveu que el sensor de potència seleccionat es mostri realment `0 W`, quan el llum s'apaga amb el seu propi botó.
 
 <hr />
 </details>
@@ -285,7 +286,7 @@ Comproveu que el sensor de potència seleccionat es mostri realment`0 W`, quan e
 <summary><b>❓Определяется неправильный режим</b></summary>
 <br />
 
-Comproveu**🐞 Last measures**en la configuració i els atributs`power_history`,`power_history_modes`,`power_sample_interval_seconds`I`selected_power_mode`.`power_history`mostra els últims valors de potència registrats,`power_history_modes`— mode per a cadascun d'ells segons els llindars configurats,`power_sample_interval_seconds`és l'interval de fixació periòdica, i`selected_power_mode`— Mode actual confirmat.
+Comproveu **🐞 Last measures** en la configuració i els atributs `power_history`, `power_history_modes`, `power_sample_interval_seconds` I `selected_power_mode`. `power_history` mostra els últims valors de potència registrats, `power_history_modes` — mode per a cadascun d'ells segons els llindars configurats, `power_sample_interval_seconds` és l'interval de fixació periòdica, i `selected_power_mode` — Mode actual confirmat.
 
 <hr />
 </details>
@@ -296,7 +297,7 @@ Comproveu**🐞 Last measures**en la configuració i els atributs`power_history`
 
 Aquest és el comportament esperat. Per evitar que les fluctuacions de potència a curt termini ocasionin canvis falsos, la integració canvia de mode només després que diverses lectures consecutives corresponguin al mateix mode nou.
 
-El paràmetre estableix el nombre requerit de lectures**Consecutive readings to switch**i per defecte`5`. Les mesures periòdiques es realitzen una vegada per segon i els canvis en l'estat del sensor es processen immediatament. Si durant la prova el valor correspon a un mode diferent, el compte enrere torna a començar.
+El paràmetre estableix el nombre requerit de lectures **Consecutive readings to switch** i per defecte `5`. Les mesures periòdiques es realitzen una vegada per segon i els canvis en l'estat del sensor es processen immediatament. Si durant la prova el valor correspon a un mode diferent, el compte enrere torna a començar.
 
 Fins a la confirmació, la integració manté el mode anterior. Gràcies a això, la targeta no canvia entre els modes a causa dels valors intermedis que es produeixen en canviar el llum, estabilitzar-ne la potència o petites fluctuacions en les lectures del sensor.
 
@@ -309,15 +310,15 @@ La reducció del nombre de lectures accelera la visualització del nou mode, per
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-El registre automàtic només es produeix després de carregar almenys un objecte d'ajuda configurat i només en mode de recursos`storage`. El mètode d'instal·lació de la integració, mitjançant HACS o manualment, no afecta això.
+El registre automàtic només es produeix després de carregar almenys un objecte d'ajuda configurat i només en mode de recursos `storage`. El mètode d'instal·lació de la integració, mitjançant HACS o manualment, no afecta això.
 
-Comprove&#x75;**[Configuració → Taulers → ⋮ → Recursos](https://my.home-assistant.io/redirect/lovelace_resources/)**. L'URL hauria d'estar allà:
+Comproveu **[Configuració → Taulers → ⋮ → Recursos](https://my.home-assistant.io/redirect/lovelace_resources/)**. L'URL hauria d'estar allà:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-En mode YAML[afegir recursos manualment](#yaml-lovelace-mode).
+En mode YAML [afegir recursos manualment](#yaml-lovelace-mode).
 
 <hr />
 </details>
@@ -336,14 +337,14 @@ En mode YAML[afegir recursos manualment](#yaml-lovelace-mode).
 
 ## 🗑 Eliminació
 
-1. Suprimeix tots els objectes d'ajuda creats**Endoll intel·ligent Llum multinivell**a través d&#x65;**[Configuració → Dispositius i serveis → Accessoris](https://my.home-assistant.io/redirect/helpers/)**.
+1. Suprimeix tots els objectes d'ajuda creats **Endoll intel·ligent Llum multinivell** a través de **[Configuració → Dispositius i serveis → Accessoris](https://my.home-assistant.io/redirect/helpers/)**.
 2. Elimineu la integració mitjançant HACS o suprimiu manualment la carpeta:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Comprove&#x75;**[Configuració → Taulers → ⋮ → Recursos](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x69; suprimiu manualment el recurs de la targeta si queda:
+3. Comproveu **[Configuració → Taulers → ⋮ → Recursos](https://my.home-assistant.io/redirect/lovelace_resources/)** i suprimiu manualment el recurs de la targeta si queda:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +355,9 @@ En mode YAML[afegir recursos manualment](#yaml-lovelace-mode).
 
 ## 📄 Llicència
 
-El projecte es distribueix sota llicència[AMB](../LICENSE).
+El projecte es distribueix sota llicència [AMB](../LICENSE).
 
 <br />
 
-> \[!CONSELL]**T'ha agradat la solució?**&#x4D;ira 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ca.md">els meus altres productes per a Home Assistant</a>
+> \[!CONSELL]
+> **T'ha agradat la solució?** Mira 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_ca.md">els meus altres productes per a Home Assistant</a>
