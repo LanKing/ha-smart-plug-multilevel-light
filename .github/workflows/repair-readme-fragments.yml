@@ -181,14 +181,23 @@ jobs:
                   f"| `always_show_icon_background` | boolean | `false` | {table[13]} |",
               ]
               table_block = "\n".join(rows) + "\n"
-              text, table_count = re.subn(
-                  r"(?m)(?:^\|.*\n){9}",
-                  lambda _match: table_block,
-                  text,
-                  count=1,
+              table_start = text.find("\\n|")
+              code_start = text.find("\\n\`\`\`yaml", table_start)
+              if table_start < 0 or code_start < 0:
+                  raise RuntimeError(f"Parameter table boundaries not found in {path}")
+              between = text[table_start + 1:code_start].rstrip()
+              blocks = between.split("\\n\\n")
+              if len(blocks) < 2:
+                  raise RuntimeError(f"Full-example label not found after table in {path}")
+              example_label = blocks[-1]
+              text = (
+                  text[:table_start + 1]
+                  + table_block
+                  + "\\n"
+                  + example_label
+                  + "\\n"
+                  + text[code_start:]
               )
-              if table_count != 1:
-                  raise RuntimeError(f"Parameter table not found in {path}")
 
               license_sentence = footer[1].replace("731948731948", "[MIT](../LICENSE)")
               footer_block = (
