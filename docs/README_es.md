@@ -10,7 +10,7 @@
 
 **✨ Funciones y características:**
 
-* Crea una entidad nativa de Home Assistant`light`compatible con automatizaciones, scripts e interfaz HA estándar;
+* Crea una entidad nativa de Home Assistant `light`compatible con automatizaciones, scripts e interfaz HA estándar;
 * Enciende correctamente la lámpara independientemente de cómo se apagó: si se cortó la alimentación a través del enchufe inteligente, simplemente la enciende; si la lámpara se apagó con su propio botón mientras el enchufe estaba encendido, realiza un ciclo de desenergización y encendido nuevamente;
 * Determina automáticamente el modo de funcionamiento actual de la lámpara en función de la potencia estable medida realmente;
 * Dispone de un configurador sencillo en el que el usuario nombra secuencialmente los modos que soporta su lámpara, y el sistema aprende determinando la potencia estable en cada modo;
@@ -33,7 +33,7 @@ Necesitarás:
 1. Un enchufe inteligente que debe proporcionar control de energía (interruptor) y medición de energía (sensor con clase\_dispositivo: energía) al HA. Ambas entidades deben pertenecer al mismo dispositivo y estar habilitadas.
 2. Una luz divertida que se enciende automáticamente una vez enchufada y tiene múltiples configuraciones de brillo para disfrutar por completo.
 
-> usé un enchufe[Tuya TS011F (en caso Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Diré que al inicio de los experimentos la serie de enchufes Girier no encajaba por mediciones inexactas, pero este modelo sí, aunque también lo fue en el caso Girier.
+> usé un enchufe [Tuya TS011F (en caso Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Diré que al inicio de los experimentos la serie de enchufes Girier no encajaba por mediciones inexactas, pero este modelo sí, aunque también lo fue en el caso Girier.
 
 ### 👨‍🔬 Configuración importante que apliqué a mi outlet:
 
@@ -41,11 +41,11 @@ Necesitarás:
 
 Esta descripción es relevante sólo para propietarios de enchufes conectados a través de Z2M. Otros usuarios deberán ajustar la frecuencia de actualización dentro de su configuración:
 
-1. Abierto**Asistente de inicio → Zigbee2MQTT**. Si Zigbee2MQTT no está en el menú lateral, abra**Configuración → Aplicaciones → Zigbee2MQTT → Abrir interfaz web**.
-2. Ir a la sección**Dispositivos**.
+1. Abierto **Asistente de inicio → Zigbee2MQTT**. Si Zigbee2MQTT no está en el menú lateral, abra **Configuración → Aplicaciones → Zigbee2MQTT → Abrir interfaz web**.
+2. Ir a la sección **Dispositivos**.
 3. Seleccione la salida requerida.
-4. Abre la pestaña**Configuración (específica)**.
-5. los cambios**Intervalo de sondeo de medición**en 1 s.
+4. Abre la pestaña **Configuración (específica)**.
+5. los cambios **Intervalo de sondeo de medición** en 1 s.
 
 <a id="installation"></a>
 
@@ -53,37 +53,37 @@ Esta descripción es relevante sólo para propietarios de enchufes conectados a 
 
 ### 🛍 Instalación mediante HACS
 
-ℹ️[¿Qué es HACS y cómo instalarlo?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_es.md)
+ℹ️ [¿Qué es HACS y cómo instalarlo?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_es.md)
 
-🚀[Intente agregar un repositorio en el enlace](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Si su HA admite este método, haga clic en**Agregar**en la ventana que se abre, y luego el botón**Descargar**en la esquina inferior derecha. Si la instalación se completó correctamente, puede omitir pasos adicionales. Saltar directamente a la sección[inicio rápido](#getting-started).
+🚀 [Intente agregar un repositorio en el enlace](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Si su HA admite este método, haga clic en **Agregar** en la ventana que se abre, y luego el botón **Descargar** en la esquina inferior derecha. Si la instalación se completó correctamente, puede omitir pasos adicionales. Saltar directamente a la sección [inicio rápido](#getting-started).
 
 #### 1. Agregar un repositorio
 
 Si bien el repositorio no está incluido en el directorio HACS estándar, agréguelo como uno personalizado:
 
-1. Abierto**HACS → Integraciones**.
-2. Abra el menú en la esquina superior derecha y seleccione**Repositorios personalizados**.
+1. Abierto **HACS → Integraciones**.
+2. Abra el menú en la esquina superior derecha y seleccione **Repositorios personalizados**.
 3. Agregar:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Seleccionar tipo**Integración**y presione**Agregar**.
+4. Seleccionar tipo **Integración** y presione **Agregar**.
 
-> Agregar un repositorio solo hace que la integración esté disponible en HACS. Para instalar, debe abrir su tarjeta por separado y hacer clic**Descargar**.
+> Agregar un repositorio solo hace que la integración esté disponible en HACS. Para instalar, debe abrir su tarjeta por separado y hacer clic **Descargar**.
 
 #### 2. Instalación de integración
 
-1. Buscar en HACS:`Smart Plug Multi-Level Light`.
-2. Abra la integración y haga clic**Descargar**.
+1. Buscar en HACS: `Smart Plug Multi-Level Light`.
+2. Abra la integración y haga clic **Descargar**.
 3. Después de la instalación, reinicie Home Assistant por completo.
 
 <a id="manual-installation"></a>
 
 ### 🧑‍💻 Instalación sin HACS
 
-1. En la página del repositorio, haga clic en**Código → Descargar ZIP**.
+1. En la página del repositorio, haga clic en **Código → Descargar ZIP**.
 2. Desempaquete el archivo.
 3. Copia la carpeta:
 
@@ -97,7 +97,7 @@ al directorio de configuración de Home Assistant:
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Ruta del archivo final`manifest.json`debería verse así:
+Ruta del archivo final `manifest.json` debería verse así:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
@@ -105,9 +105,9 @@ Ruta del archivo final`manifest.json`debería verse así:
 
 4. Reinicie completamente Home Assistant.
 
-> No copie toda la carpeta del repositorio externo a`custom_components`. Adentro`custom_components`la carpeta debe estar ubicada directamente`smart_plug_multilevel_light`.
+> No copie toda la carpeta del repositorio externo a `custom_components`. Adentro `custom_components` la carpeta debe estar ubicada directamente `smart_plug_multilevel_light`.
 
-La tarjeta está incluida en la integración, por lo que no es necesario HACS para instalarla. Después de copiar manualmente los archivos, reiniciar Home Assistant y crear el primer objeto auxiliar, la integración publica el archivo de tarjeta JavaScript y lo registra automáticamente con los recursos del panel en modo estándar.`storage`. En el modo de recursos YAML, la tarjeta debe registrarse manualmente, como se describe a continuación.
+La tarjeta está incluida en la integración, por lo que no es necesario HACS para instalarla. Después de copiar manualmente los archivos, reiniciar Home Assistant y crear el primer objeto auxiliar, la integración publica el archivo de tarjeta JavaScript y lo registra automáticamente con los recursos del panel en modo estándar. `storage`. En el modo de recursos YAML, la tarjeta debe registrarse manualmente, como se describe a continuación.
 
 <a id="getting-started"></a>
 
@@ -115,50 +115,51 @@ La tarjeta está incluida en la integración, por lo que no es necesario HACS pa
 
 ### 🛠 Configuración
 
-1. Abiert&#x6F;**[Ajustes → Dispositivos y servicios → Accesorios](https://my.home-assistant.io/redirect/helpers/)**&#x79; presione**Crear objeto auxiliar**.
+1. Abierto **[Ajustes → Dispositivos y servicios → Accesorios](https://my.home-assistant.io/redirect/helpers/)** y presione **Crear objeto auxiliar**.
 
-2. Seleccionar**Luz multinivel con enchufe inteligente**.
+2. Seleccionar **Luz multinivel con enchufe inteligente**.
 
 3. Seleccione el enchufe inteligente al que está conectada la lámpara. La lista solo muestra los enchufes donde Home Assistant ve un sensor de energía en el mismo dispositivo.
 
 4. En el siguiente paso, configure los parámetros de la lámpara:
-   * **Nombre de la luz (Light name)**— el nombre de la entidad que se está creando, por ejemplo`FloorLamp`;
-   * **Power sensor**- sensor de potencia del enchufe;
+   * **Nombre de la luz (Light name)** — el nombre de la entidad que se está creando, por ejemplo `FloorLamp`;
+   * **Power sensor** - sensor de potencia del enchufe;
 
-5. en la sección**ZUI003Z**agregue al menos un modo de brillo haciendo clic**Agregar**.<br /> <img src="modes-edit.png" width="50%"/><br />Cambie la lámpara con su botón físico, ingrese el nombre del modo y comience**Test stable power**. Después de obtener un valor estable, presione**Aplicar**.
+5. en la sección **ZUI003Z** agregue al menos un modo de brillo haciendo clic **Agregar**.<br /> <img src="modes-edit.png" width="50%"/><br />
+   Cambie la lámpara con su botón físico, ingrese el nombre del modo y comience **Test stable power**. Después de obtener un valor estable, presione **Aplicar**.
 
 6. Después de agregar el primer modo, agregue los modos restantes repitiendo estos pasos. Deberías terminar con algo como:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Guarde el objeto auxiliar. Home Assistant creará una nueva entidad`light`, Por ejemplo`light.FloorLamp`.
+7. Guarde el objeto auxiliar. Home Assistant creará una nueva entidad `light`, Por ejemplo `light.FloorLamp`.
 
 ### 🧩 Tarjeta Lovelace
 
-1. Abra el panel deseado, active el modo de edición y haga clic en**Añadir una tarjeta**.
-2. Seleccionar**Luz multinivel con enchufe inteligente**, especifique la entidad creada`light`y guarda la tarjeta.
+1. Abra el panel deseado, active el modo de edición y haga clic en **Añadir una tarjeta**.
+2. Seleccionar **Luz multinivel con enchufe inteligente**, especifique la entidad creada `light` y guarda la tarjeta.
 
-Si la tarjeta no está entre las disponibles, es posible que estés utilizando[Modo YAML de recursos de Lovelace](#yaml-lovelace-mode).
+Si la tarjeta no está entre las disponibles, es posible que estés utilizando [Modo YAML de recursos de Lovelace](#yaml-lovelace-mode).
 
 ### 🎨 Efectos visuales
 
 #### Configuraciones en la tarjeta
 
-Abra el panel donde se encuentra la tarjeta, vaya al modo de edición y haga clic**Editar**en la tarjeta deseada.
+Abra el panel donde se encuentra la tarjeta, vaya al modo de edición y haga clic **Editar** en la tarjeta deseada.
 
-Abriendo la sección**Contenido (Content)**, verás las configuraciones disponibles:
+Abriendo la sección **Contenido (Content)**, verás las configuraciones disponibles:
 
-* **Mostrar nombre del modo (Show mode name)**— muestra u oculta el nombre del modo actual: por ejemplo, Tenue, Bajo, Medio o Alto.
-* **Mostrar porcentaje (Show percentage)**— muestra u oculta el brillo calculado como porcentaje.
+* **Mostrar nombre del modo (Show mode name)** — muestra u oculta el nombre del modo actual: por ejemplo, Tenue, Bajo, Medio o Alto.
+* **Mostrar porcentaje (Show percentage)** — muestra u oculta el brillo calculado como porcentaje.
 
-Abriendo la sección**Interacciones (Interactions)**, verás:
+Abriendo la sección **Interacciones (Interactions)**, verás:
 
-* **Mostrar siempre el fondo del icono (Always show icon background)**— conserva el fondo redondo alrededor del icono, incluso si se desactiva una acción independiente.
+* **Mostrar siempre el fondo del icono (Always show icon background)** — conserva el fondo redondo alrededor del icono, incluso si se desactiva una acción independiente.
 
-> 🚫 Por cierto, si usted, como yo, usa un ícono de tarjeta no estándar y cuando está apagado no está tachado visualmente, le recomiendo mi otro complemento:[Mdi apagado de reserva](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_es.md), que soluciona este problema estético.
+> 🚫 Por cierto, si usted, como yo, usa un ícono de tarjeta no estándar y cuando está apagado no está tachado visualmente, le recomiendo mi otro complemento: [Mdi apagado de reserva](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_es.md), que soluciona este problema estético.
 
 #### Brillo redondeado hasta el 5%
 
-Abiert&#x6F;**[Ajustes → Dispositivos y servicios → Accesorios](https://my.home-assistant.io/redirect/helpers/)**, busque el objeto auxiliar creado anteriormente**Luz multinivel con enchufe inteligente**y abra su configuración. Activar o desactivar**Round brightness to 5% (may look nicer)**.
+Abierto **[Ajustes → Dispositivos y servicios → Accesorios](https://my.home-assistant.io/redirect/helpers/)**, busque el objeto auxiliar creado anteriormente **Luz multinivel con enchufe inteligente** y abra su configuración. Activar o desactivar **Round brightness to 5% (may look nicer)**.
 
 Cuando la configuración está habilitada, el porcentaje calculado se redondea al 5% más cercano, por ejemplo: 33% → 35%, 67% → 65%.
 
@@ -170,13 +171,13 @@ Opciones disponibles:
 
 | Parámetro | Tipo | Predeterminado | Destino |
 |---|---|---:|---|
-|`entity`| cadena | obligatorio | entidad creada por integración |
-|`name`| cadena | nombre de la entidad | anula el nombre en la tarjeta |
-|`icon`| cadena | icono de entidad | redefine el icono |
-|`show_mode`| booleano |`true`| muestra el nombre del modo |
-|`show_percentage`| booleano |`true`| muestra interés condicional |
-|`icon_tap_action`| acción |`more-info`| acción adicional al hacer clic en el icono |
-|`always_show_icon_background`| booleano |`false`| siempre muestra el fondo redondo del icono, incluso si es para`icon_tap_action`"No" seleccionado |
+| `entity` | cadena | obligatorio | entidad creada por integración |
+| `name` | cadena | nombre de la entidad | anula el nombre en la tarjeta |
+| `icon` | cadena | icono de entidad | redefine el icono |
+| `show_mode` | booleano | `true` | muestra el nombre del modo |
+| `show_percentage` | booleano | `true` | muestra interés condicional |
+| `icon_tap_action` | acción | `more-info` | acción adicional al hacer clic en el icono |
+| `always_show_icon_background` | booleano | `false` | siempre muestra el fondo redondo del icono, incluso si es para `icon_tap_action` "No" seleccionado |
 
 Ejemplo completo:
 
@@ -198,7 +199,7 @@ always_show_icon_background: false
 
 > Lo más probable es que no tengas este modo habilitado. Si no hay problemas y la tarjeta funciona, omite este paso.
 
-si tienes`configuration.yaml`establecer explícitamente:
+si tienes `configuration.yaml` establecer explícitamente:
 
 ```yaml
 lovelace:
@@ -225,7 +226,7 @@ Después del cambio, reinicie los recursos de Lovelace o reinicie Home Assistant
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Causa probable:**&#x72;uta incorrecta o Home Assistant no se reinició.
+**Causa probable:** ruta incorrecta o Home Assistant no se reinició.
 
 Verifique la disponibilidad del archivo:
 
@@ -233,7 +234,7 @@ Verifique la disponibilidad del archivo:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Luego reinicie completamente Home Assistant y verifique el registro en busca de errores.`smart_plug_multilevel_light`.
+Luego reinicie completamente Home Assistant y verifique el registro en busca de errores. `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -242,13 +243,13 @@ Luego reinicie completamente Home Assistant y verifique el registro en busca de 
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-La integración solo muestra objetos`switch`asociado con dispositivos que también proporcionan un sensor incluido con`device_class: power`.
+La integración solo muestra objetos `switch`asociado con dispositivos que también proporcionan un sensor incluido con `device_class: power`.
 
-Registrars&#x65;**[Configuración → Dispositivos y servicios → Objetos](https://my.home-assistant.io/redirect/entities/)**:
+Registrarse **[Configuración → Dispositivos y servicios → Objetos](https://my.home-assistant.io/redirect/entities/)**:
 
-* ¿Pertenecen?`switch`¿Y un sensor de potencia para un dispositivo?
+* ¿Pertenecen? `switch` ¿Y un sensor de potencia para un dispositivo?
 * ¿Está encendido el sensor de potencia?
-* ¿Está especificado correctamente?`device_class`?
+* ¿Está especificado correctamente? `device_class`?
 * ¿Tiene un estado numérico?
 
 <hr />
@@ -258,7 +259,7 @@ Registrars&#x65;**[Configuración → Dispositivos y servicios → Objetos](http
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Después de seleccionar una toma de corriente, la integración vuelve a comprobar la presencia de un sensor de potencia. El error ocurre si el sensor ha sido retirado, desactivado, movido a otro dispositivo o ha dejado de tener`device_class: power`.
+Después de seleccionar una toma de corriente, la integración vuelve a comprobar la presencia de un sensor de potencia. El error ocurre si el sensor ha sido retirado, desactivado, movido a otro dispositivo o ha dejado de tener `device_class: power`.
 
 <hr />
 </details>
@@ -267,7 +268,7 @@ Después de seleccionar una toma de corriente, la integración vuelve a comproba
 <summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
 <br />
 
-Verifique el valor del sensor de potencia. La lámpara virtual se considera apagada cuando`0 W`; cuando es positivo, debe definirse como`on`.
+Verifique el valor del sensor de potencia. La lámpara virtual se considera apagada cuando `0 W`; cuando es positivo, debe definirse como `on`.
 
 <hr />
 </details>
@@ -276,7 +277,7 @@ Verifique el valor del sensor de potencia. La lámpara virtual se considera apag
 <summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
 <br />
 
-Compruebe que el sensor de potencia seleccionado realmente muestre`0 W`, cuando la lámpara se apaga mediante su propio botón.
+Compruebe que el sensor de potencia seleccionado realmente muestre `0 W`, cuando la lámpara se apaga mediante su propio botón.
 
 <hr />
 </details>
@@ -285,7 +286,7 @@ Compruebe que el sensor de potencia seleccionado realmente muestre`0 W`, cuando 
 <summary><b>❓Определяется неправильный режим</b></summary>
 <br />
 
-Controlar**🐞 Last measures**en configuraciones y atributos`power_history`,`power_history_modes`,`power_sample_interval_seconds`Y`selected_power_mode`.`power_history`muestra los últimos valores de potencia registrados,`power_history_modes`— modo para cada uno de ellos según los umbrales configurados,`power_sample_interval_seconds`es el intervalo de fijación periódica, y`selected_power_mode`— modo confirmado actual.
+Controlar **🐞 Last measures** en configuraciones y atributos `power_history`, `power_history_modes`, `power_sample_interval_seconds` Y `selected_power_mode`. `power_history` muestra los últimos valores de potencia registrados, `power_history_modes` — modo para cada uno de ellos según los umbrales configurados, `power_sample_interval_seconds` es el intervalo de fijación periódica, y `selected_power_mode` — modo confirmado actual.
 
 <hr />
 </details>
@@ -296,7 +297,7 @@ Controlar**🐞 Last measures**en configuraciones y atributos`power_history`,`po
 
 Este es el comportamiento esperado. Para evitar que las fluctuaciones de energía a corto plazo causen conmutaciones espurias, la integración cambia de modo solo después de que varias lecturas consecutivas correspondan al mismo modo nuevo.
 
-El número requerido de lecturas está establecido por el parámetro**Consecutive readings to switch**y por defecto es`5`. Las mediciones periódicas se realizan una vez por segundo y los cambios en el estado del sensor se procesan inmediatamente. Si durante la prueba el valor corresponde a un modo diferente, la cuenta atrás comienza de nuevo.
+El número requerido de lecturas está establecido por el parámetro **Consecutive readings to switch** y por defecto es `5`. Las mediciones periódicas se realizan una vez por segundo y los cambios en el estado del sensor se procesan inmediatamente. Si durante la prueba el valor corresponde a un modo diferente, la cuenta atrás comienza de nuevo.
 
 Hasta la confirmación, la integración mantiene el modo anterior. Gracias a esto, la tarjeta no cambia entre modos debido a valores intermedios que se producen al encender la lámpara, estabilizar su potencia o pequeñas fluctuaciones en las lecturas del sensor.
 
@@ -309,15 +310,15 @@ Reducir el número de lecturas acelera la visualización del nuevo modo, pero ha
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-El registro automático ocurre solo después de cargar al menos un objeto auxiliar configurado y solo en modo de recursos`storage`. El método de instalación de la integración (a través de HACS o manualmente) no afecta esto.
+El registro automático ocurre solo después de cargar al menos un objeto auxiliar configurado y solo en modo de recursos `storage`. El método de instalación de la integración (a través de HACS o manualmente) no afecta esto.
 
-Controla&#x72;**[Configuración → Paneles → ⋮ → Recursos](https://my.home-assistant.io/redirect/lovelace_resources/)**. La URL debería estar ahí:
+Controlar **[Configuración → Paneles → ⋮ → Recursos](https://my.home-assistant.io/redirect/lovelace_resources/)**. La URL debería estar ahí:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-En modo YAML[agregar recurso manualmente](#yaml-lovelace-mode).
+En modo YAML [agregar recurso manualmente](#yaml-lovelace-mode).
 
 <hr />
 </details>
@@ -336,14 +337,14 @@ En modo YAML[agregar recurso manualmente](#yaml-lovelace-mode).
 
 ## 🗑 Eliminación
 
-1. Eliminar todos los objetos auxiliares creados**Luz multinivel con enchufe inteligente**a través d&#x65;**[Ajustes → Dispositivos y servicios → Accesorios](https://my.home-assistant.io/redirect/helpers/)**.
+1. Eliminar todos los objetos auxiliares creados **Luz multinivel con enchufe inteligente** a través de **[Ajustes → Dispositivos y servicios → Accesorios](https://my.home-assistant.io/redirect/helpers/)**.
 2. Elimine la integración a través de HACS o elimine manualmente la carpeta:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Controla&#x72;**[Configuración → Paneles → ⋮ → Recursos](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x79; elimine manualmente el recurso de la tarjeta si permanece:
+3. Controlar **[Configuración → Paneles → ⋮ → Recursos](https://my.home-assistant.io/redirect/lovelace_resources/)** y elimine manualmente el recurso de la tarjeta si permanece:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +355,9 @@ En modo YAML[agregar recurso manualmente](#yaml-lovelace-mode).
 
 ## 📄 Licencia
 
-El proyecto se distribuye bajo licencia.[CON](../LICENSE).
+El proyecto se distribuye bajo licencia. [CON](../LICENSE).
 
 <br />
 
-> \[!CONSEJO]**¿Te gustó la solución?**&#x4D;ira 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_es.md">mis otros productos para Home Assistant</a>
+> \[!CONSEJO]
+> **¿Te gustó la solución?** Mira 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_es.md">mis otros productos para Home Assistant</a>
