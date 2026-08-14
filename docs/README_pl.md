@@ -1,89 +1,91 @@
 <sub>🇺🇸&nbsp;<a href="../README.md">E⁠n⁠g⁠l⁠i⁠s⁠h</a>&nbsp;|</sub> <sub>🇺🇦&nbsp;<a href="README_uk.md">У⁠к⁠р⁠а⁠ї⁠н⁠с⁠ь⁠к⁠а</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="README_ru.md">Р⁠у⁠с⁠с⁠к⁠и⁠й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="README_af.md">A⁠f⁠r⁠i⁠k⁠a⁠a⁠n⁠s</a>&nbsp;|</sub> <sub>🇸🇦&nbsp;<a href="README_ar.md">ا⁠ل⁠ع⁠ر⁠ب⁠ي⁠ة</a>&nbsp;|</sub> <sub>🇧🇬&nbsp;<a href="README_bg.md">Б⁠ъ⁠л⁠г⁠а⁠р⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="README_bn.md">বাং⁠লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="README_bs.md">B⁠o⁠s⁠a⁠n⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="README_ca.md">C⁠a⁠t⁠a⁠l⁠à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="README_cs.md">Č⁠e⁠š⁠t⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>cy&nbsp;<a href="README_cy.md">C⁠y⁠m⁠r⁠a⁠e⁠g</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="README_da.md">D⁠a⁠n⁠s⁠k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="README_de.md">D⁠e⁠u⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇬🇷&nbsp;<a href="README_el.md">Ε⁠λ⁠λ⁠η⁠ν⁠ι⁠κ⁠ά</a>&nbsp;|</sub> <sub>eo&nbsp;<a href="README_eo.md">E⁠s⁠p⁠e⁠r⁠a⁠n⁠t⁠o</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="README_es.md">E⁠s⁠p⁠a⁠ñ⁠o⁠l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="README_et.md">E⁠e⁠s⁠t⁠i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="README_eu.md">E⁠u⁠s⁠k⁠a⁠r⁠a</a>&nbsp;|</sub> <sub>🇮🇷&nbsp;<a href="README_fa.md">ف⁠ا⁠ر⁠س⁠ی</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="README_fi.md">S⁠u⁠o⁠m⁠i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="README_fy.md">F⁠r⁠y⁠s⁠k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="README_fr.md">F⁠r⁠a⁠n⁠ç⁠a⁠i⁠s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="README_ga.md">G⁠a⁠e⁠i⁠l⁠g⁠e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="README_gl.md">G⁠a⁠l⁠e⁠g⁠o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="README_gsw.md">S⁠c⁠h⁠w⁠i⁠i⁠z⁠e⁠r⁠d⁠ü⁠t⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="README_he.md">ע⁠ב⁠ר⁠י⁠ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_hi.md">हि⁠न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="README_hr.md">H⁠r⁠v⁠a⁠t⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="README_hu.md">M⁠a⁠g⁠y⁠a⁠r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="README_hy.md">Հ⁠ա⁠յ⁠ե⁠ր⁠ե⁠ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="README_id.md">I⁠n⁠d⁠o⁠n⁠e⁠s⁠i⁠a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="README_is.md">Í⁠s⁠l⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="README_it.md">I⁠t⁠a⁠l⁠i⁠a⁠n⁠o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="README_ja.md">日⁠本⁠語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="README_ka.md">K⁠a⁠r⁠t⁠u⁠l⁠i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="README_ko.md">한⁠국⁠어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="README_lb.md">L⁠ë⁠t⁠z⁠e⁠b⁠u⁠e⁠r⁠g⁠e⁠s⁠c⁠h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="README_lt.md">L⁠i⁠e⁠t⁠u⁠v⁠i⁠ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="README_lv.md">L⁠a⁠t⁠v⁠i⁠e⁠š⁠u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="README_mk.md">М⁠а⁠к⁠е⁠д⁠о⁠н⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ml.md">മ⁠ല⁠യാ⁠ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nb.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠B⁠o⁠k⁠m⁠å⁠l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="README_nl.md">N⁠e⁠d⁠e⁠r⁠l⁠a⁠n⁠d⁠s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nn.md">N⁠o⁠r⁠s⁠k⁠&nbsp;⁠N⁠y⁠n⁠o⁠r⁠s⁠k</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="README_pt.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="README_pt-BR.md">P⁠o⁠r⁠t⁠u⁠g⁠u⁠ê⁠s⁠&nbsp;⁠(⁠B⁠R⁠)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="README_ro.md">R⁠o⁠m⁠â⁠n⁠ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="README_sk.md">S⁠l⁠o⁠v⁠e⁠n⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="README_sl.md">S⁠l⁠o⁠v⁠e⁠n⁠š⁠č⁠i⁠n⁠a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="README_sq.md">S⁠h⁠q⁠i⁠p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr.md">С⁠р⁠п⁠с⁠к⁠и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr-Latn.md">S⁠r⁠p⁠s⁠k⁠i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="README_sv.md">S⁠v⁠e⁠n⁠s⁠k⁠a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ta.md">த⁠மி⁠ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_te.md">తె⁠లు⁠గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="README_th.md">ภ⁠า⁠ษ⁠า⁠ไ⁠ท⁠ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="README_tr.md">T⁠ü⁠r⁠k⁠ç⁠e</a>&nbsp;|</sub> <sub>🇵🇰&nbsp;<a href="README_ur.md">اُ⁠ر⁠دُ⁠و</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="README_vi.md">T⁠i⁠ế⁠n⁠g⁠&nbsp;⁠V⁠i⁠ệ⁠t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="README_zh-Hans.md">简⁠体⁠中⁠文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="README_zh-Hant.md">繁⁠體⁠中⁠文</a></sub>
 
-<a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a> <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a> <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a> <a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
+<a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Helper-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
+<a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
+<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a>
+<a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a>
+<a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
 
-> Integracja łączy niesterowaną cyfrowo oprawę oświetleniową i inteligentną wtyczkę w jedną jednostkę Home Assistant. Określa stan i aktualny tryb jasności na podstawie zużycia prądu, wyświetla je na karcie oraz pozwala na włączenie lampy wyłączonej własnym przyciskiem poprzez krótkie wyłączenie i ponowne podanie zasilania przez gniazdko.
+> Integracja łączy lampę bez sterowania cyfrowego i inteligentne gniazdko w jedną encję Home Assistant. Określa stan lampy i jej bieżący tryb jasności na podstawie poboru mocy, wyświetla je na karcie oraz potrafi włączyć lampę wyłączoną jej własnym przyciskiem, krótko odcinając i ponownie podając zasilanie przez gniazdko.
 
-# 🔌 Wielopoziomowe światło inteligentnej wtyczki
+# 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Przykłady trybów na karcie](ha-smart-plug-multilevel-light-card-modes-v4.png)
 
-**✨ Funkcje i funkcje:**
+**✨ Możliwości i najważniejsze cechy:**
 
-* Tworzy natywną encję Home Assistant`light`kompatybilny z automatyzacją, skryptami i standardowym interfejsem HA;
-* Prawidłowo włącza lampę niezależnie od tego, w jaki sposób została wyłączona: jeśli zasilanie zostało wyłączone przez inteligentne gniazdko, po prostu je włącza; jeżeli lampa została wyłączona własnym przyciskiem przy włączonym gniazdku, wykonuje cykl wyłączenia i ponownego włączenia;
-* Automatycznie określa aktualny tryb pracy lampy na podstawie faktycznie zmierzonej mocy stabilnej;
-* Posiada prosty konfigurator, w którym użytkownik sekwencyjnie nazywa tryby obsługiwane przez jego lampę, a system uczy się poprzez określenie stabilnej mocy w każdym trybie;
-* Podczas pierwszego ustawienia moc odczytywana jest w czasie rzeczywistym: wystarczy przełączyć lampę na kolejny tryb i nacisnąć przycisk uczenia;
-* Skutecznie filtruje niestabilne odczyty mocy, zapobiegając chaotycznym zmianom wskaźnika na karcie, gdy moc „przeskakuje” w obrębie jednego trybu (a nawet pokrywa się z kolejnym trybem);
+* Tworzy natywną encję Home Assistant `light`, zgodną z automatyzacjami, skryptami i standardowym interfejsem HA;
+* Poprawnie włącza lampę niezależnie od sposobu jej wyłączenia: jeśli zasilanie odcięto przez inteligentne gniazdko — po prostu je włącza; jeśli lampę wyłączono jej własnym przyciskiem przy włączonym gniazdku — wykonuje cykl odłączenia i ponownego podania zasilania;
+* Automatycznie określa bieżący tryb pracy lampy na podstawie rzeczywiście zmierzonego, stabilnego poboru mocy;
+* Udostępnia prosty konfigurator, w którym użytkownik kolejno nadaje nazwy trybom obsługiwanym przez lampę, a system uczy się stabilnego poboru mocy w każdym z nich;
+* Podczas pierwszej konfiguracji moc jest odczytywana w czasie rzeczywistym — wystarczy przełączyć lampę na kolejny tryb i uruchomić pomiar;
+* Skutecznie odfiltrowuje niestabilne odczyty mocy, zapobiegając chaotycznym zmianom wskaźnika na karcie, gdy moc waha się w obrębie jednego trybu lub chwilowo odpowiada innemu;
 * Obsługuje dowolną liczbę trybów;
-* Karta jest zbudowana na bazie standardowej karty kafelkowej Home Assistant, zachowując jej geometrię, tło, efekty najechania, rozmiary, typografię i standardowe działania;
-* Na karcie aktualna jasność jest kodowana wizualnie poprzez intensywność koloru;
-* Oblicza jasność liniowo w stosunku do mocy maksymalnej; można włączyć zaokrąglanie obliczonej jasności do 5% w celu dokładniejszego wyświetlania wartości procentowych;
-* Pozwala elastycznie dostosowywać wyświetlane parametry i wygląd karty;
-* Umożliwia wybranie tylko czujnika mocy powiązanego z wybraną inteligentną wtyczką;
-* Umożliwia dostosowanie opóźnienia cyklu wyłączenia w celu prawidłowej pracy z różnymi modelami lamp i gniazd;
-* Umożliwia ustawienie progu mocy, poniżej którego lampa jest uważana za wyłączoną;
-* Interfejs jest zlokalizowany dla 64 lokalizacji Home Assistant.
+* Karta bazuje na natywnej Home Assistant Tile Card i zachowuje jej geometrię, tło, efekty najechania, rozmiary, typografię oraz standardowe działania;
+* Bieżąca jasność jest wizualizowana na karcie intensywnością koloru;
+* Oblicza jasność liniowo względem maksymalnej mocy; opcjonalne zaokrąglanie obliczonej jasności do 5% zapewnia czytelniejsze wartości procentowe;
+* Pozwala elastycznie skonfigurować wyświetlane informacje i wygląd karty;
+* Pozwala wybrać wyłącznie czujnik mocy należący do wybranego inteligentnego gniazdka;
+* Pozwala skonfigurować opóźnienie cyklu zasilania dla różnych modeli lamp i gniazdek;
+* Pozwala skonfigurować próg mocy, poniżej którego lampa jest uznawana za wyłączoną;
+* Interfejs jest zlokalizowany dla 64 ustawień regionalnych Home Assistant.
 
-## 🗜Przygotowywanie żelaza
+## 🗜 Przygotowanie sprzętu
 
-Będziesz potrzebować:
+Potrzebujesz:
 
-1. Inteligentne gniazdo, które powinno zapewniać kontrolę mocy (przełącznik) i pomiar mocy (czujnik z klasą urządzenia: moc) do HA. Obie jednostki muszą należeć do tego samego urządzenia i być włączone.
-2. Głupie światło, które włącza się automatycznie po podłączeniu i ma wiele ustawień jasności, aby zapewnić pełną przyjemność.
+1. Inteligentnego gniazdka udostępniającego w HA sterowanie zasilaniem (`switch`) oraz pomiar mocy (`sensor` z `device_class: power`). Obie encje muszą należeć do tego samego urządzenia i być włączone.
+2. Zwykłej lampy, która włącza się automatycznie po podaniu zasilania i najlepiej ma kilka trybów jasności.
 
-> Użyłem gniazdka[Tuya TS011F (w obudowie Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Powiem, że na początku eksperymentów seria gniazd Girier nie pasowała ze względu na niedokładne pomiary, ale ten model tak, choć w przypadku Giriera też tak było.
+> Użyłem gniazdka [Tuya TS011F (w obudowie Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Na początku testów kilka gniazdek Girier nie sprawdziło się z powodu niedokładnych pomiarów, ale ten model działał prawidłowo, mimo że również znajdował się w obudowie Girier.
 
-### 👨‍🔬 Ważne ustawienie, które zastosowałem w swoim gniazdku:
+### 👨‍🔬 Ważne ustawienie zastosowane w moim gniazdku
 
-> Moje gniazdo nie raportuje automatycznie odczytów do HA i umożliwia odpytywanie tylko w określonych odstępach czasu. Domyślnie było to 60 sekund. Należy ustawić ten odstęp na 1 sekundę, w przeciwnym razie na pojawienie się wyświetlacza zmiany trybu trzeba będzie czekać bardzo długo.
+> Moje gniazdko nie przesyła automatycznie odczytów do HA i obsługuje jedynie odpytywanie w ustawionych odstępach czasu. Domyślnie było to 60 sekund. Ustaw interwał na 1 sekundę, w przeciwnym razie na wyświetlenie zmiany trybu trzeba będzie bardzo długo czekać.
 
-Opis ten dotyczy wyłącznie posiadaczy gniazd podłączonych poprzez Z2M. Inni użytkownicy powinni dostosować częstotliwość odświeżania w ramach swojej konfiguracji:
+Poniższa instrukcja dotyczy wyłącznie gniazdek połączonych przez Zigbee2MQTT. W pozostałych konfiguracjach częstotliwość aktualizacji należy ustawić odpowiednio do używanego rozwiązania:
 
-1. Otwarte**Asystent domowy → Zigbee2MQTT**. Jeżeli w bocznym menu nie ma Zigbee2MQTT, otwórz**Ustawienia → Aplikacje → Zigbee2MQTT → Otwórz interfejs sieciowy**.
-2. Przejdź do sekcji**Urządzenia**.
-3. Wybierz żądane gniazdko.
-4. Otwórz zakładkę**Ustawienia (specyficzne)**.
-5. Zmiany**Interwał sondowania pomiaru**na 1 s.
+1. Otwórz **Home Assistant → Zigbee2MQTT**. Jeśli Zigbee2MQTT nie ma na pasku bocznym, otwórz **Ustawienia → Aplikacje → Zigbee2MQTT → Otwórz interfejs internetowy**.
+2. Przejdź do sekcji **Urządzenia**.
+3. Wybierz odpowiednie gniazdko.
+4. Otwórz kartę **Ustawienia (specyficzne)**.
+5. Ustaw **Measurement poll interval** na 1 s.
 
 <a id="installation"></a>
-
 ## 📦 Instalacja
 
-### 🛍 Instalacja poprzez HACS
+### 🛍 Instalacja przez HACS
 
-ℹ️[Co to jest HACS i jak go zainstalować?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_pl.md)
+ℹ️ [Czym jest HACS i jak go zainstalować?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_pl.md)
 
-🚀[Spróbuj dodać repozytorium pod linkiem](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Jeśli Twój HA obsługuje tę metodę, kliknij**Dodać**w oknie, które zostanie otwarte, a następnie przycisk**Pobierać**w prawym dolnym rogu. Jeżeli instalacja przebiegła pomyślnie, możesz pominąć dalsze kroki. Przejdź bezpośrednio do sekcji[szybki start](#getting-started).
+🚀 [Spróbuj dodać repozytorium za pomocą tego odnośnika](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Jeśli Twoja instancja HA obsługuje tę metodę, kliknij **Dodaj** w otwartym oknie, a następnie **Pobierz** w prawym dolnym rogu. Jeśli instalacja zakończy się powodzeniem, możesz pominąć dalsze kroki i przejść bezpośrednio do sekcji [Szybki start](#getting-started).
 
-#### 1. Dodanie repozytorium
+#### 1. Dodawanie repozytorium
 
-Chociaż repozytorium nie znajduje się w standardowym katalogu HACS, dodaj je jako niestandardowe:
+Dopóki repozytorium nie znajduje się w domyślnym katalogu HACS, dodaj je jako repozytorium niestandardowe:
 
-1. Otwarte**HACS → Integracje**.
-2. Otwórz menu w prawym górnym rogu i wybierz**Niestandardowe repozytoria**.
-3. Dodać:
+1. Otwórz **HACS → Integracje**.
+2. Otwórz menu w prawym górnym rogu i wybierz **Niestandardowe repozytoria**.
+3. Dodaj:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Wybierz typ**Integracja**i naciśnij**Dodać**.
+4. Wybierz typ **Integracja** i kliknij **Dodaj**.
 
-> Dodanie repozytorium powoduje jedynie udostępnienie integracji w systemie HACS. Aby zainstalować, musisz osobno otworzyć kartę i kliknąć**Pobierać**.
+> Dodanie repozytorium jedynie udostępnia integrację w HACS. Aby ją zainstalować, otwórz osobno jej stronę i kliknij **Pobierz**.
 
-#### 2. Instalacja integracji
+#### 2. Instalowanie integracji
 
-1. Szukaj w HACS:`Smart Plug Multi-Level Light`.
-2. Otwórz integrację i kliknij**Pobierać**.
-3. Po instalacji zrestartuj całkowicie Home Assistant.
+1. Znajdź w HACS `Smart Plug Multi-Level Light`.
+2. Otwórz integrację i kliknij **Pobierz**.
+3. Po instalacji wykonaj pełny restart Home Assistant.
 
 <a id="manual-installation"></a>
-
 ### 🧑‍💻 Instalacja bez HACS
 
-1. Na stronie repozytorium kliknij**Kod → Pobierz ZIP**.
+1. Na stronie repozytorium kliknij **Code → Download ZIP**.
 2. Rozpakuj archiwum.
 3. Skopiuj folder:
 
@@ -91,99 +93,95 @@ https://github.com/LanKing/ha-smart-plug-multilevel-light
 custom_components/smart_plug_multilevel_light
 ```
 
-do katalogu konfiguracyjnego Home Assistant:
+do katalogu konfiguracji Home Assistant:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Ostateczna ścieżka pliku`manifest.json`powinno wyglądać tak:
+Końcowa ścieżka do pliku `manifest.json` powinna wyglądać tak:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-4. Całkowicie uruchom ponownie Asystenta Home.
+4. Wykonaj pełny restart Home Assistant.
 
-> Nie kopiuj do niego całego folderu repozytorium zewnętrznego`custom_components`. Wewnątrz`custom_components`folder musi znajdować się bezpośrednio`smart_plug_multilevel_light`.
+> Nie kopiuj całego zewnętrznego folderu repozytorium do `custom_components`. Bezpośrednio w `custom_components` powinien znajdować się folder `smart_plug_multilevel_light`.
 
-Karta jest objęta integracją, więc do jej instalacji nie jest wymagany HACS. Po ręcznym skopiowaniu plików, ponownym uruchomieniu Home Assistant i utworzeniu pierwszego obiektu pomocniczego, integracja publikuje plik karty JavaScript i automatycznie rejestruje go w zasobach panelu w trybie standardowym`storage`. W trybie zasobu YAML karta musi zostać zarejestrowana ręcznie, jak opisano poniżej.
+Karta jest częścią integracji, więc HACS nie jest potrzebny do jej instalacji. Po ręcznym skopiowaniu plików, restarcie Home Assistant i utworzeniu pierwszego pomocnika integracja udostępnia plik JavaScript karty i automatycznie rejestruje go w zasobach pulpitu w domyślnym trybie `storage`. W trybie zasobów YAML kartę trzeba zarejestrować ręcznie zgodnie z opisem poniżej.
 
 <a id="getting-started"></a>
-
 ## 🚀 Szybki start po instalacji
 
 ### 🛠 Konfiguracja
 
-1. Otwart&#x65;**[Ustawienia → Urządzenia i usługi → Akcesoria](https://my.home-assistant.io/redirect/helpers/)**&#x69; naciśnij**Utwórz obiekt pomocniczy**.
+1. Otwórz **[Ustawienia → Urządzenia oraz usługi → Pomocnicy](https://my.home-assistant.io/redirect/helpers/)** i kliknij **Utwórz pomocnika**.
+2. Wybierz **Smart Plug Multi-Level Light**.
+3. Wybierz inteligentne gniazdko, do którego podłączona jest lampa. Lista zawiera tylko gniazdka, dla których Home Assistant wykrywa czujnik mocy należący do tego samego urządzenia.
+4. W kolejnym kroku skonfiguruj lampę:
+   - **Nazwa światła** — nazwa tworzonej encji, na przykład `FloorLamp`;
+   - **Czujnik mocy** — czujnik mocy gniazdka.
+5. W sekcji **🔅 Tryby jasności** dodaj co najmniej jeden tryb jasności, klikając **Dodaj**.<br />
+<img src="modes-edit.png" width="50%"/><br />
+Przełącz lampę jej fizycznym przyciskiem, wpisz nazwę trybu i uruchom **Test stable power**. Po uzyskaniu stabilnej wartości kliknij **Zastosuj**.
 
-2. Wybierać**Inteligentne oświetlenie wielopoziomowe z wtyczką**.
+6. Po dodaniu pierwszego trybu dodaj pozostałe, powtarzając te czynności. Rezultat powinien wyglądać mniej więcej tak:<br />
+<img src="modes-list.png" width="50%"/>
+7. Zapisz pomocnika. Home Assistant utworzy nową encję `light`, na przykład `light.FloorLamp`.
 
-3. Wybierz inteligentną wtyczkę, do której podłączona jest lampa. Lista pokazuje tylko te gniazdka, w których Home Assistant widzi czujnik mocy w tym samym urządzeniu.
+### 🧩 Karta Lovelace
 
-4. W kolejnym kroku ustaw parametry lampy:
-   * **Nazwa światła (Light name)**— na przykład nazwa tworzonego podmiotu`FloorLamp`;
-   * **Czujnik mocy (Power sensor)**- czujnik zasilania gniazda;
+1. Otwórz odpowiedni pulpit, włącz tryb edycji i kliknij **Dodaj kartę**.
+2. Wybierz **Smart Plug Multi-Level Light**, wskaż utworzoną encję `light` i zapisz kartę.
 
-5. W sekcji**ZUI003Z**dodaj co najmniej jeden tryb jasności, klikając**Dodać**.<br /> <img src="modes-edit.png" width="50%"/><br />Przełącz lampę za pomocą fizycznego przycisku, wprowadź nazwę trybu i uruchom**Test stable power**. Po uzyskaniu stabilnej wartości naciśnij**Stosować**.
+Jeśli karty nie ma na liście, być może używasz [trybu zasobów YAML Lovelace](#yaml-lovelace-mode).
 
-6. Po dodaniu pierwszego trybu dodaj pozostałe tryby, powtarzając powyższe kroki. Powinieneś skończyć z czymś takim:<br />
-   <img src="modes-list.png" width="50%"/>
+### 🎨 Efekty wizualne
 
-7. Zapisz obiekt pomocniczy. Home Assistant utworzy nowy podmiot`light`, Na przykład`light.FloorLamp`.
+#### Ustawienia karty
 
-### 🧩Karta Lovelace
+Otwórz pulpit zawierający kartę, przejdź do trybu edycji i kliknij **Edytuj** na odpowiedniej karcie.
 
-1. Otwórz żądany panel, włącz tryb edycji i kliknij**Dodaj kartę**.
-2. Wybierać**Inteligentne oświetlenie wielopoziomowe z wtyczką**, określ utworzony element`light`i zapisz kartę.
+Rozwiń sekcję **Zawartość**. Dostępne ustawienia:
 
-Jeśli karty nie ma wśród dostępnych, być może używasz[Tryb YAML zasobu Lovelace](#yaml-lovelace-mode).
+- **Pokaż nazwę trybu** — pokazuje lub ukrywa nazwę bieżącego trybu, na przykład Dim, Low, Medium albo High.
+- **Pokaż procent** — pokazuje lub ukrywa obliczoną jasność w procentach.
 
-### 🎨Efekty wizualne
+Rozwiń sekcję **Interakcje**. Dostępne ustawienie:
 
-#### Ustawienia w karcie
+- **Zawsze pokazuj tło ikony** — zachowuje okrągłe tło wokół ikony nawet wtedy, gdy jej osobne działanie jest wyłączone.
 
-Otwórz panel, w którym znajduje się karta, przejdź do trybu edycji i kliknij**Redagować**na żądanej karcie.
-
-Otwarcie sekcji**Zawartość (Content)**, zobaczysz dostępne ustawienia:
-
-* **Pokaż nazwę trybu (Show mode name)**— pokazuje lub ukrywa nazwę bieżącego trybu: na przykład Ciemny, Niski, Średni lub Wysoki.
-* **Pokaż procent (Show percentage)**— pokazuje lub ukrywa obliczoną jasność w procentach.
-
-Otwarcie sekcji**Interakcje (Interactions)**, zobaczysz:
-
-* **Zawsze pokazuj tło ikony (Always show icon background)**— zachowuje okrągłe tło wokół ikony, nawet jeśli wyłączona jest dla niej osobna akcja.
-
-> 🚫 Swoją drogą, jeśli tak jak ja korzystacie z niestandardowej ikony karty i po wyłączeniu nie jest ona wizualnie przekreślona, ​​to polecam moją drugą wtyczkę -[Funkcja zastępcza Mdi wyłączona](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_pl.md), co rozwiązuje ten problem estetyczny.
+> 🚫 Jeśli podobnie jak ja używasz niestandardowej ikony karty, która po wyłączeniu nie jest wizualnie przekreślana, polecam mój drugi dodatek — [Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_pl.md), który rozwiązuje ten problem estetyczny.
 
 #### Zaokrąglanie jasności do 5%
 
-Otwart&#x65;**[Ustawienia → Urządzenia i usługi → Akcesoria](https://my.home-assistant.io/redirect/helpers/)**, znajdź utworzony wcześniej obiekt pomocniczy**Inteligentne oświetlenie wielopoziomowe z wtyczką**i otwórz jego ustawienia. Włącz lub wyłącz**Round brightness to 5% (may look nicer)**.
+Otwórz **[Ustawienia → Urządzenia oraz usługi → Pomocnicy](https://my.home-assistant.io/redirect/helpers/)**, znajdź wcześniej utworzonego pomocnika **Smart Plug Multi-Level Light** i otwórz jego ustawienia. Włącz lub wyłącz **Round brightness to 5% (may look nicer)**.
 
-Gdy ustawienie jest włączone, obliczony procent jest zaokrąglany do najbliższych 5%, na przykład: 33% → 35%, 67% → 65%.
+Po włączeniu obliczona wartość procentowa jest zaokrąglana do najbliższych 5%, na przykład: 33% → 35%, 67% → 65%.
 
-Zaokrąglenie wpływa jedynie na wyświetlany procent i intensywność wizualną karty. Definicja trybu i działanie lampy nie ulegają zmianie. Domyślnie zaokrąglanie jest wyłączone.
+Zaokrąglanie wpływa wyłącznie na wyświetlaną wartość procentową i wizualną intensywność karty. Nie zmienia sposobu wykrywania trybu ani działania lampy. Domyślnie jest wyłączone.
 
-## 🧩 Karta Lovelace w szczegółach
+## 🧩 Szczegóły karty Lovelace
 
-Dostępne opcje:
+Dostępne parametry:
 
-| Parametr | Wpisz | Domyślne | Miejsce docelowe |
+| Parametr | Typ | Domyślnie | Przeznaczenie |
 |---|---|---:|---|
-|`entity`| ciąg | obowiązkowe | podmiot powstały w wyniku integracji |
-|`name`| ciąg | nazwa podmiotu | zastępuje nazwisko na karcie |
-|`icon`| ciąg | ikona podmiotu | na nowo definiuje ikonę |
-|`show_mode`| wartość logiczna |`true`| pokazuje nazwę trybu |
-|`show_percentage`| wartość logiczna |`true`| pokazuje odsetki warunkowe |
-|`icon_tap_action`| akcja |`more-info`| dodatkowa akcja po kliknięciu na ikonę |
-|`always_show_icon_background`| wartość logiczna |`false`| zawsze pokazuje okrągłe tło ikony, nawet jeśli`icon_tap_action`Wybrano „Nie” |
+| `entity` | string | wymagany | encja utworzona przez integrację |
+| `name` | string | nazwa encji | zastępuje nazwę wyświetlaną na karcie |
+| `icon` | string | ikona encji | zastępuje ikonę |
+| `show_mode` | boolean | `true` | pokazuje nazwę trybu |
+| `show_percentage` | boolean | `true` | pokazuje umowną wartość procentową |
+| `icon_tap_action` | action | `more-info` | dodatkowe działanie po dotknięciu ikony |
+| `always_show_icon_background` | boolean | `false` | zawsze pokazuje okrągłe tło ikony, nawet gdy dla `icon_tap_action` wybrano `None` |
 
 Pełny przykład:
 
 ```yaml
 type: custom:smart-plug-multilevel-light-card
 entity: light.floor_lamp
-name: Торшер
+name: Lampa podłogowa
 icon: mdi:floor-lamp
 show_mode: true
 show_percentage: true
@@ -193,19 +191,18 @@ always_show_icon_background: false
 ```
 
 <a id="yaml-lovelace-mode"></a>
+### Tryb zasobów YAML Lovelace
 
-### Tryb YAML zasobu Lovelace
+> Najprawdopodobniej nie używasz tego trybu. Jeśli karta działa i nie wystąpiły żadne problemy, pomiń tę sekcję.
 
-> Najprawdopodobniej nie masz włączonego tego trybu. Jeśli nie ma żadnych problemów i karta działa, pomiń ten krok.
-
-Jeśli masz`configuration.yaml`wyraźnie ustawione:
+Jeśli plik `configuration.yaml` zawiera:
 
 ```yaml
 lovelace:
   resource_mode: yaml
 ```
 
-Home Assistant nie pozwala integracji na automatyczną zmianę listy zasobów. W takim przypadku dodaj zasób ręcznie:
+Home Assistant nie pozwala integracji automatycznie zmieniać listy zasobów. W takim przypadku dodaj zasób ręcznie:
 
 ```yaml
 lovelace:
@@ -215,147 +212,138 @@ lovelace:
       type: module
 ```
 
-Po zmianie zrestartuj zasoby Lovelace lub zrestartuj Home Assistant.
+Po wprowadzeniu zmiany przeładuj zasoby Lovelace lub uruchom ponownie Home Assistant.
 
 <a id="troubleshooting"></a>
-
 ## 🧯 Rozwiązywanie problemów
 
 <details>
-<summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
+<summary><b>❓Integracja nie pojawia się na liście pomocników</b></summary>
 <br />
 
-**Prawdopodobna przyczyna:**&#x6E;ieprawidłowa ścieżka lub Home Assistant nie został ponownie uruchomiony.
+**Prawdopodobna przyczyna:** nieprawidłowa ścieżka albo brak ponownego uruchomienia Home Assistant.
 
-Sprawdź dostępność pliku:
+Sprawdź, czy istnieje plik:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Następnie wykonaj pełny restart Home Assistant i sprawdź dziennik pod kątem błędów`smart_plug_multilevel_light`.
-
+Następnie wykonaj pełny restart Home Assistant i sprawdź dziennik pod kątem błędów `smart_plug_multilevel_light`.
 <hr />
 </details>
 
 <details>
-<summary><b>❓Список розеток пуст</b></summary>
+<summary><b>❓Lista gniazdek jest pusta</b></summary>
 <br />
 
-Integracja pokazuje tylko obiekty`switch`powiązane z urządzeniami, które zapewniają również dołączony czujnik`device_class: power`.
+Integracja pokazuje tylko encje `switch` powiązane z urządzeniami, które udostępniają także włączony czujnik z `device_class: power`.
 
-Zameldować si&#x119;**[Ustawienia → Urządzenia i usługi → Obiekty](https://my.home-assistant.io/redirect/entities/)**:
+Sprawdź w **[Ustawienia → Urządzenia oraz usługi → Encje](https://my.home-assistant.io/redirect/entities/)**:
 
-* Czy należą`switch`i czujnik zasilania dla jednego urządzenia?
-* Czy czujnik zasilania jest włączony?
-* Czy jest to określone poprawnie?`device_class`?
-* Czy ma stan numeryczny?
-
+- Czy `switch` i czujnik mocy należą do tego samego urządzenia?
+- Czy czujnik mocy jest włączony?
+- Czy jego `device_class` jest ustawione prawidłowo?
+- Czy ma stan liczbowy?
 <hr />
 </details>
 
 <details>
-<summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
+<summary><b>❓Tworzenie zostaje przerwane komunikatem o braku czujnika mocy</b></summary>
 <br />
 
-Po wybraniu gniazdka, integracja ponownie sprawdza obecność czujnika zasilania. Błąd występuje, jeśli czujnik został usunięty, wyłączony, przeniesiony do innego urządzenia lub już go nie ma`device_class: power`.
-
+Po wybraniu gniazdka integracja ponownie sprawdza obecność czujnika mocy. Błąd występuje, jeśli czujnik został usunięty, wyłączony, przeniesiony do innego urządzenia albo nie ma już `device_class: power`.
 <hr />
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
+<summary><b>❓Lampa jest wyświetlana jako „Wyłączona”, mimo że gniazdko jest włączone</b></summary>
 <br />
 
-Sprawdź wartość czujnika mocy. Wirtualną lampę uważa się za wyłączoną, gdy`0 W`; gdy jest dodatni, należy go zdefiniować jako`on`.
-
+Sprawdź wartość czujnika mocy. Wirtualna lampa jest uznawana za wyłączoną przy `0 W`; przy wartości dodatniej powinna zostać rozpoznana jako `on`.
 <hr />
 </details>
 
 <details>
-<summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
+<summary><b>❓Lampa jest wyświetlana jako „Włączona”, mimo że fizycznie jest wyłączona</b></summary>
 <br />
 
-Sprawdź, czy wybrany czujnik mocy faktycznie pokazuje`0 W`, gdy lampa jest wyłączana własnym przyciskiem.
-
+Upewnij się, że wybrany czujnik mocy rzeczywiście wskazuje `0 W`, gdy lampa została wyłączona własnym przyciskiem.
 <hr />
 </details>
 
 <details>
-<summary><b>❓Определяется неправильный режим</b></summary>
+<summary><b>❓Wykrywany jest niewłaściwy tryb</b></summary>
 <br />
 
-Sprawdzać**🐞 Last measures**w ustawieniach i atrybutach`power_history`,`power_history_modes`,`power_sample_interval_seconds`I`selected_power_mode`.`power_history`pokazuje ostatnie zarejestrowane wartości mocy,`power_history_modes`— tryb dla każdego z nich według skonfigurowanych progów,`power_sample_interval_seconds`jest przedziałem okresowej fiksacji, oraz`selected_power_mode`— bieżący, potwierdzony tryb.
-
+Sprawdź **🐞 Last measures** w ustawieniach oraz atrybuty `power_history`, `power_history_modes`, `power_sample_interval_seconds` i `selected_power_mode`. `power_history` zawiera ostatnio zarejestrowane wartości mocy, `power_history_modes` — tryb przypisany do każdej wartości zgodnie ze skonfigurowanymi progami, `power_sample_interval_seconds` — interwał okresowego próbkowania, a `selected_power_mode` — bieżący potwierdzony tryb.
 <hr />
 </details>
 
 <details>
-<summary><b>❓Переключение режима отображается не сразу</b></summary>
+<summary><b>❓Zmiana trybu nie jest wyświetlana od razu</b></summary>
 <br />
 
-Jest to oczekiwane zachowanie. Aby zapobiec sytuacji, w której krótkotrwałe wahania mocy powodują fałszywe przełączanie, całkowanie zmienia tryb dopiero po kilku kolejnych odczytach odpowiadających temu samemu nowemu trybowi.
+To oczekiwane zachowanie. Aby krótkotrwałe wahania mocy nie powodowały fałszywych zmian trybu, integracja przełącza tryb dopiero wtedy, gdy kilka kolejnych odczytów odpowiada temu samemu nowemu trybowi.
 
-Wymaganą liczbę odczytów ustawia się za pomocą parametru**Consecutive readings to switch**i domyślnie`5`. Pomiary okresowe wykonywane są raz na sekundę, a zmiany stanu czujnika przetwarzane są natychmiastowo. Jeśli podczas testowania wartość odpowiada innemu trybowi, odliczanie rozpoczyna się od nowa.
+Wymaganą liczbę odczytów określa parametr **Consecutive readings to switch**; domyślna wartość to `5`. Okresowe próbki są pobierane raz na sekundę, a zmiany stanu czujnika są przetwarzane natychmiast. Jeśli podczas potwierdzania odczyt odpowiada innemu trybowi, liczenie rozpoczyna się od nowa.
 
-Do czasu potwierdzenia integracja utrzymuje dotychczasowy tryb. Dzięki temu karta nie przełącza się pomiędzy trybami ze względu na wartości pośrednie występujące przy załączaniu lampy, stabilizowaniu jej mocy, czy też na niewielkie wahania wskazań czujników.
+Do momentu potwierdzenia integracja zachowuje poprzedni tryb. Dzięki temu karta nie przeskakuje między trybami z powodu wartości pośrednich pojawiających się podczas zmiany trybu lampy, stabilizowania się poboru mocy albo niewielkich wahań wskazań czujnika.
 
-Zmniejszenie liczby odczytów przyspiesza wyświetlanie nowego trybu, ale sprawia, że ​​detekcja jest bardziej wrażliwa na wahania mocy.
-
+Zmniejszenie liczby odczytów przyspiesza wyświetlenie nowego trybu, ale zwiększa wrażliwość wykrywania na wahania mocy.
 <hr />
 </details>
 
 <details>
-<summary><b>❓Карточка не появилась в списке</b></summary>
+<summary><b>❓Karta nie pojawia się na liście</b></summary>
 <br />
 
-Rejestracja automatyczna następuje dopiero po załadowaniu przynajmniej jednego skonfigurowanego obiektu pomocniczego i tylko w trybie zasobu`storage`. Sposób instalacji integracji – poprzez HACS lub ręcznie – nie ma na to wpływu.
+Automatyczna rejestracja następuje dopiero po załadowaniu co najmniej jednego skonfigurowanego pomocnika i tylko w trybie zasobów `storage`. Sposób instalacji integracji — przez HACS lub ręcznie — nie ma znaczenia.
 
-Sprawdza&#x107;**[Ustawienia → Panele → ⋮ → Zasoby](https://my.home-assistant.io/redirect/lovelace_resources/)**. Adres URL powinien tam być:
+Sprawdź **[Ustawienia → Pulpity → ⋮ → Zasoby](https://my.home-assistant.io/redirect/lovelace_resources/)**. Powinien znajdować się tam adres URL:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-W trybie YAML[dodaj zasób ręcznie](#yaml-lovelace-mode).
-
+W trybie YAML [dodaj zasób ręcznie](#yaml-lovelace-mode).
 <hr />
 </details>
 
 <details>
-<summary><b>❓После обновления отображается старая карточка</b></summary>
+<summary><b>❓Po aktualizacji nadal wyświetlana jest stara karta</b></summary>
 <br />
 
-1. Całkowicie uruchom ponownie Asystenta Home.
-2. Odśwież stronę, aby wyczyścić pamięć podręczną przeglądarki.
-3. Sprawdź numer wersji w adresie URL zasobu panelu.
-4. W aplikacji mobilnej całkowicie zamknij i otwórz ponownie interfejs.
-
+1. Wykonaj pełny restart Home Assistant.
+2. Odśwież stronę z wyczyszczeniem pamięci podręcznej przeglądarki.
+3. Sprawdź numer wersji w adresie URL zasobu pulpitu.
+4. W aplikacji mobilnej całkowicie zamknij i ponownie otwórz interfejs.
 <hr />
 </details>
 
-## 🗑 Usunięcie
+## 🗑 Usuwanie
 
-1. Usuń wszystkie utworzone obiekty pomocnicze**Inteligentne oświetlenie wielopoziomowe z wtyczką**Poprze&#x7A;**[Ustawienia → Urządzenia i usługi → Akcesoria](https://my.home-assistant.io/redirect/helpers/)**.
-2. Usuń integrację poprzez HACS lub ręcznie usuń folder:
+1. Usuń wszystkie utworzone pomocniki **Smart Plug Multi-Level Light** w **[Ustawienia → Urządzenia oraz usługi → Pomocnicy](https://my.home-assistant.io/redirect/helpers/)**.
+2. Usuń integrację przez HACS albo ręcznie usuń folder:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Sprawdza&#x107;**[Ustawienia → Panele → ⋮ → Zasoby](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x69; ręcznie usuń zasób karty, jeśli pozostaje:
+3. Sprawdź **[Ustawienia → Pulpity → ⋮ → Zasoby](https://my.home-assistant.io/redirect/lovelace_resources/)** i ręcznie usuń zasób karty, jeśli nadal istnieje:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-4. Całkowicie uruchom ponownie Asystenta Home.
-5. W razie potrzeby odśwież stronę, aby wyczyścić pamięć podręczną interfejsu.
+4. Wykonaj pełny restart Home Assistant.
+5. W razie potrzeby odśwież stronę z wyczyszczeniem pamięci podręcznej interfejsu.
 
 ## 📄 Licencja
 
-Projekt rozpowszechniany jest na licencji[Z](../LICENSE).
+Projekt jest udostępniany na licencji [MIT](../LICENSE).
 
 <br />
 
-> \[!WSKAZÓWKA]**Czy rozwiązanie przypadło Ci do gustu?**&#x53;pójrz 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_pl.md">moje inne produkty dla Home Assistant</a>
+> [!TIP]
+> **Podoba Ci się to rozwiązanie?** Zobacz 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_pl.md">moje pozostałe produkty dla Home Assistant</a>
