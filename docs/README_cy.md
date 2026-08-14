@@ -10,7 +10,7 @@
 
 **✨ Nodweddion a nodweddion:**
 
-* Yn creu endid Cynorthwyydd Cartref brodorol`light`gydnaws ag awtomeiddio, sgriptiau a rhyngwyneb safonol HA;
+* Yn creu endid Cynorthwyydd Cartref brodorol `light`gydnaws ag awtomeiddio, sgriptiau a rhyngwyneb safonol HA;
 * Yn troi'r lamp ymlaen yn gywir waeth sut y cafodd ei ddiffodd: pe bai'r pŵer yn cael ei ddiffodd trwy'r soced smart, mae'n syml yn ei droi ymlaen; os cafodd y lamp ei ddiffodd gyda'i botwm ei hun tra bod y soced ymlaen, mae'n perfformio cylch o ddad-egnïo a throi ymlaen eto;
 * Yn pennu dull gweithredu cyfredol y lamp yn awtomatig yn seiliedig ar y pŵer sefydlog a fesurir mewn gwirionedd;
 * Mae ganddo gyflunydd syml lle mae'r defnyddiwr yn enwi'r moddau a gefnogir gan ei lamp yn olynol, ac mae'r system yn dysgu trwy bennu'r pŵer sefydlog ym mhob modd;
@@ -33,7 +33,7 @@ Bydd angen:
 1. Soced smart a ddylai ddarparu rheolaeth pŵer (switsh) a mesur pŵer (synhwyrydd gyda device\_class: power) i'r HA. Rhaid i'r ddau endid berthyn i'r un ddyfais a chael eu galluogi.
 2. Golau gwirion sy'n troi ymlaen yn awtomatig ar ôl ei blygio i mewn ac sydd â gosodiadau disgleirdeb lluosog ar gyfer mwynhad llwyr.
 
-> Defnyddiais i soced[Tuya TS011F (yn achos Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Dywedaf, ar ddechrau'r arbrofion, nad oedd y gyfres Girier o socedi yn ffitio oherwydd mesuriadau anghywir, ond gwnaeth y model hwn, er ei fod hefyd yn achos Girier.
+> Defnyddiais i soced [Tuya TS011F (yn achos Girier)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Dywedaf, ar ddechrau'r arbrofion, nad oedd y gyfres Girier o socedi yn ffitio oherwydd mesuriadau anghywir, ond gwnaeth y model hwn, er ei fod hefyd yn achos Girier.
 
 ### 👨‍🔬 Gosodiad pwysig a gymhwysais i fy allfa:
 
@@ -41,11 +41,11 @@ Bydd angen:
 
 Mae'r disgrifiad hwn yn berthnasol i berchnogion socedi sydd wedi'u cysylltu trwy Z2M yn unig. Dylai defnyddwyr eraill addasu'r gyfradd adnewyddu o fewn eu ffurfweddiad:
 
-1. Agored**Cynorthwyydd Cartref → Zigbee2MQTT**. Os nad yw Zigbee2MQTT yn y ddewislen ochr, agorwch**Gosodiadau → Ceisiadau → Zigbee2MQTT → Rhyngwyneb gwe agored**.
-2. Ewch i adran**Dyfeisiau**.
+1. Agored **Cynorthwyydd Cartref → Zigbee2MQTT**. Os nad yw Zigbee2MQTT yn y ddewislen ochr, agorwch **Gosodiadau → Ceisiadau → Zigbee2MQTT → Rhyngwyneb gwe agored**.
+2. Ewch i adran **Dyfeisiau**.
 3. Dewiswch yr allfa ofynnol.
-4. Agorwch y tab**Gosodiadau (penodol)**.
-5. Y newidiadau**Cyfwng pôl mesur**ar 1 s.
+4. Agorwch y tab **Gosodiadau (penodol)**.
+5. Y newidiadau **Cyfwng pôl mesur** ar 1 s.
 
 <a id="installation"></a>
 
@@ -53,37 +53,37 @@ Mae'r disgrifiad hwn yn berthnasol i berchnogion socedi sydd wedi'u cysylltu trw
 
 ### 🛍 Gosod trwy HACS
 
-ℹ️[Beth yw HACS a sut i'w osod?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cy.md)
+ℹ️ [Beth yw HACS a sut i'w osod?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cy.md)
 
-🚀[Ceisiwch ychwanegu ystorfa yn y ddolen](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Os yw'ch HA yn cefnogi'r dull hwn, cliciwch**Ychwanegu**yn y ffenestr sy'n agor, ac yna'r botwm**Lawrlwythwch**yn y gornel dde isaf. Os cwblhawyd y gosodiad yn llwyddiannus, gallwch hepgor camau pellach. Ewch yn syth i'r adran[cychwyn cyflym](#getting-started).
+🚀 [Ceisiwch ychwanegu ystorfa yn y ddolen](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Os yw'ch HA yn cefnogi'r dull hwn, cliciwch **Ychwanegu** yn y ffenestr sy'n agor, ac yna'r botwm **Lawrlwythwch** yn y gornel dde isaf. Os cwblhawyd y gosodiad yn llwyddiannus, gallwch hepgor camau pellach. Ewch yn syth i'r adran [cychwyn cyflym](#getting-started).
 
 #### 1. Ychwanegu ystorfa
 
 Er nad yw'r ystorfa wedi'i chynnwys yn y cyfeiriadur HACS safonol, ychwanegwch ef fel un wedi'i deilwra:
 
-1. Agored**HACS → Integreiddiadau**.
-2. Agorwch y ddewislen yn y gornel dde uchaf a dewiswch**Storfeydd Personol**.
+1. Agored **HACS → Integreiddiadau**.
+2. Agorwch y ddewislen yn y gornel dde uchaf a dewiswch **Storfeydd Personol**.
 3. Ychwanegu:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Dewiswch fath**Integreiddio**a gwasg**Ychwanegu**.
+4. Dewiswch fath **Integreiddio** a gwasg **Ychwanegu**.
 
-> Dim ond yn HACS y mae ychwanegu ystorfa yn golygu bod yr integreiddio ar gael. I osod, mae angen ichi agor ei gerdyn ar wahân a chlicio**Lawrlwythwch**.
+> Dim ond yn HACS y mae ychwanegu ystorfa yn golygu bod yr integreiddio ar gael. I osod, mae angen ichi agor ei gerdyn ar wahân a chlicio **Lawrlwythwch**.
 
 #### 2. Gosod integreiddio
 
-1. Chwilio yn HACS:`Smart Plug Multi-Level Light`.
-2. Agorwch yr integreiddiad a chliciwch**Lawrlwythwch**.
+1. Chwilio yn HACS: `Smart Plug Multi-Level Light`.
+2. Agorwch yr integreiddiad a chliciwch **Lawrlwythwch**.
 3. Ar ôl ei osod, ailgychwynnwch y Cynorthwyydd Cartref yn llwyr.
 
 <a id="manual-installation"></a>
 
 ### 🧑‍💻 Gosod heb HACS
 
-1. Ar dudalen y storfa, cliciwch**Cod → Lawrlwythwch ZIP**.
+1. Ar dudalen y storfa, cliciwch **Cod → Lawrlwythwch ZIP**.
 2. Dadbacio'r archif.
 3. Copïwch y ffolder:
 
@@ -97,7 +97,7 @@ i gyfeiriadur cyfluniad Home Assistant:
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Llwybr ffeil terfynol`manifest.json`dylai edrych fel hyn:
+Llwybr ffeil terfynol `manifest.json` dylai edrych fel hyn:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
@@ -105,9 +105,9 @@ Llwybr ffeil terfynol`manifest.json`dylai edrych fel hyn:
 
 4. Ailgychwyn Cynorthwyydd Cartref yn llwyr.
 
-> Peidiwch â chopïo'r ffolder ystorfa allanol gyfan i`custom_components`. Y tu mewn`custom_components`rhaid lleoli'r ffolder yn uniongyrchol`smart_plug_multilevel_light`.
+> Peidiwch â chopïo'r ffolder ystorfa allanol gyfan i `custom_components`. Y tu mewn `custom_components` rhaid lleoli'r ffolder yn uniongyrchol `smart_plug_multilevel_light`.
 
-Mae'r cerdyn wedi'i gynnwys yn yr integreiddio, felly nid oes angen HACS i'w osod. Ar ôl copïo'r ffeiliau â llaw, ailgychwyn Home Assistant, a chreu'r gwrthrych cynorthwyydd cyntaf, mae'r integreiddiad yn cyhoeddi'r ffeil cerdyn JavaScript ac yn ei gofrestru'n awtomatig gydag adnoddau panel yn y modd safonol`storage`. Yn y modd adnoddau YAML, rhaid i'r cerdyn gael ei gofrestru â llaw, fel y disgrifir isod.
+Mae'r cerdyn wedi'i gynnwys yn yr integreiddio, felly nid oes angen HACS i'w osod. Ar ôl copïo'r ffeiliau â llaw, ailgychwyn Home Assistant, a chreu'r gwrthrych cynorthwyydd cyntaf, mae'r integreiddiad yn cyhoeddi'r ffeil cerdyn JavaScript ac yn ei gofrestru'n awtomatig gydag adnoddau panel yn y modd safonol `storage`. Yn y modd adnoddau YAML, rhaid i'r cerdyn gael ei gofrestru â llaw, fel y disgrifir isod.
 
 <a id="getting-started"></a>
 
@@ -115,50 +115,51 @@ Mae'r cerdyn wedi'i gynnwys yn yr integreiddio, felly nid oes angen HACS i'w oso
 
 ### 🛠 Ffurfwedd
 
-1. Agore&#x64;**[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)**&#x61; gwasg**Creu Gwrthrych Helper**.
+1. Agored **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)** a gwasg **Creu Gwrthrych Helper**.
 
-2. Dewiswch**Golau Aml-Lefel Plug Smart**.
+2. Dewiswch **Golau Aml-Lefel Plug Smart**.
 
 3. Dewiswch y plwg smart y mae'r lamp wedi'i gysylltu ag ef. Mae'r rhestr ond yn dangos allfeydd lle mae Cynorthwyydd Cartref yn gweld synhwyrydd pŵer yn yr un ddyfais.
 
 4. Yn y cam nesaf, gosodwch baramedrau'r lampau:
-   * **Enw'r golau (Light name)**— enw'r endid sy'n cael ei greu, er enghraifft`FloorLamp`;
-   * **Power sensor**- synhwyrydd pŵer soced;
+   * **Enw'r golau (Light name)** — enw'r endid sy'n cael ei greu, er enghraifft `FloorLamp`;
+   * **Power sensor** - synhwyrydd pŵer soced;
 
-5. Yn yr adran**ZUI003Z**ychwanegu o leiaf un modd disgleirdeb trwy glicio**Ychwanegu**.<br /> <img src="modes-edit.png" width="50%"/><br />Newidiwch y lamp gyda'i botwm corfforol, rhowch enw'r modd a chychwyn**Test stable power**. Ar ôl cael gwerth sefydlog, pwyswch**Ymgeisiwch**.
+5. Yn yr adran **ZUI003Z** ychwanegu o leiaf un modd disgleirdeb trwy glicio **Ychwanegu**.<br /> <img src="modes-edit.png" width="50%"/><br />
+   Newidiwch y lamp gyda'i botwm corfforol, rhowch enw'r modd a chychwyn **Test stable power**. Ar ôl cael gwerth sefydlog, pwyswch **Ymgeisiwch**.
 
 6. Ar ôl ychwanegu'r modd cyntaf, ychwanegwch y moddau sy'n weddill trwy ailadrodd y camau hyn. Dylech chi gael rhywbeth fel:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Arbedwch y gwrthrych helpwr. Bydd Cynorthwyydd Cartref yn creu endid newydd`light`, Er enghraifft`light.FloorLamp`.
+7. Arbedwch y gwrthrych helpwr. Bydd Cynorthwyydd Cartref yn creu endid newydd `light`, Er enghraifft `light.FloorLamp`.
 
 ### 🧩 Cerdyn Lovelace
 
-1. Agorwch y panel a ddymunir, trowch y modd golygu ymlaen a chliciwch**Ychwanegu cerdyn**.
-2. Dewiswch**Golau Aml-Lefel Plug Smart**, nodwch yr endid a grëwyd`light`ac arbed y cerdyn.
+1. Agorwch y panel a ddymunir, trowch y modd golygu ymlaen a chliciwch **Ychwanegu cerdyn**.
+2. Dewiswch **Golau Aml-Lefel Plug Smart**, nodwch yr endid a grëwyd `light` ac arbed y cerdyn.
 
-Os nad yw'r cerdyn ymhlith y rhai sydd ar gael, efallai y byddwch chi'n ei ddefnyddio[Adnodd Lovelace modd YAML](#yaml-lovelace-mode).
+Os nad yw'r cerdyn ymhlith y rhai sydd ar gael, efallai y byddwch chi'n ei ddefnyddio [Adnodd Lovelace modd YAML](#yaml-lovelace-mode).
 
 ### 🎨 Effeithiau gweledol
 
 #### Gosodiadau yn y cerdyn
 
-Agorwch y panel lle mae'r cerdyn wedi'i leoli, ewch i'r modd golygu a chliciwch**Golygu**ar y cerdyn dymunol.
+Agorwch y panel lle mae'r cerdyn wedi'i leoli, ewch i'r modd golygu a chliciwch **Golygu** ar y cerdyn dymunol.
 
-Wrth agor yr adran**Cynnwys (Content)**, fe welwch y gosodiadau sydd ar gael:
+Wrth agor yr adran **Cynnwys (Content)**, fe welwch y gosodiadau sydd ar gael:
 
-* **Dangos enw'r modd (Show mode name)**— yn dangos neu'n cuddio enw'r modd presennol: er enghraifft, Dim, Isel, Canolig neu Uchel.
-* **Dangos canran (Show percentage)**— yn dangos neu'n cuddio'r disgleirdeb a gyfrifwyd fel canran.
+* **Dangos enw'r modd (Show mode name)** — yn dangos neu'n cuddio enw'r modd presennol: er enghraifft, Dim, Isel, Canolig neu Uchel.
+* **Dangos canran (Show percentage)** — yn dangos neu'n cuddio'r disgleirdeb a gyfrifwyd fel canran.
 
-Wrth agor yr adran**Rhyngweithiadau (Interactions)**, byddwch yn gweld:
+Wrth agor yr adran **Rhyngweithiadau (Interactions)**, byddwch yn gweld:
 
-* **Dangos cefndir yr eicon bob amser (Always show icon background)**— yn cadw'r cefndir crwn o amgylch yr eicon, hyd yn oed os yw gweithred ar wahân ar ei gyfer yn anabl.
+* **Dangos cefndir yr eicon bob amser (Always show icon background)** — yn cadw'r cefndir crwn o amgylch yr eicon, hyd yn oed os yw gweithred ar wahân ar ei gyfer yn anabl.
 
-> 🚫 Gyda llaw, os ydych chi, fel fi, yn defnyddio eicon cerdyn ansafonol a phan nad yw wedi'i ddiffodd yn weledol, rwy'n argymell fy ategyn arall -[Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_cy.md), sy'n datrys y broblem esthetig hon.
+> 🚫 Gyda llaw, os ydych chi, fel fi, yn defnyddio eicon cerdyn ansafonol a phan nad yw wedi'i ddiffodd yn weledol, rwy'n argymell fy ategyn arall - [Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_cy.md), sy'n datrys y broblem esthetig hon.
 
 #### Disgleirdeb yn talgrynnu hyd at 5%
 
-Agore&#x64;**[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)**, darganfyddwch y gwrthrych helpwr a grëwyd yn gynharach**Golau Aml-Lefel Plug Smart**ac agor ei osodiadau. Trowch ymlaen neu i ffwrdd**Round brightness to 5% (may look nicer)**.
+Agored **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)**, darganfyddwch y gwrthrych helpwr a grëwyd yn gynharach **Golau Aml-Lefel Plug Smart** ac agor ei osodiadau. Trowch ymlaen neu i ffwrdd **Round brightness to 5% (may look nicer)**.
 
 Pan fydd y gosodiad wedi'i alluogi, mae'r ganran a gyfrifwyd yn cael ei thalgrynnu i'r 5% agosaf, er enghraifft: 33% → 35%, 67% → 65%.
 
@@ -170,13 +171,13 @@ Opsiynau sydd ar gael:
 
 | Paramedr | Math | Diofyn | Cyrchfan |
 |---|---|---:|---|
-|`entity`| llinyn | gorfodol | endid a grëwyd trwy integreiddio |
-|`name`| llinyn | enw endid | yn diystyru'r enw yn y cerdyn |
-|`icon`| llinyn | icon endid | ailddiffinio eicon |
-|`show_mode`| boolaidd |`true`| yn dangos enw modd |
-|`show_percentage`| boolaidd |`true`| yn dangos llog amodol |
-|`icon_tap_action`| gweithredu |`more-info`| gweithredu ychwanegol wrth glicio ar yr eicon |
-|`always_show_icon_background`| boolaidd |`false`| yn dangos cefndir crwn yr eicon bob amser, hyd yn oed os o blaid`icon_tap_action`Dewiswyd "Na" |
+| `entity` | llinyn | gorfodol | endid a grëwyd trwy integreiddio |
+| `name` | llinyn | enw endid | yn diystyru'r enw yn y cerdyn |
+| `icon` | llinyn | icon endid | ailddiffinio eicon |
+| `show_mode` | boolaidd | `true` | yn dangos enw modd |
+| `show_percentage` | boolaidd | `true` | yn dangos llog amodol |
+| `icon_tap_action` | gweithredu | `more-info` | gweithredu ychwanegol wrth glicio ar yr eicon |
+| `always_show_icon_background` | boolaidd | `false` | yn dangos cefndir crwn yr eicon bob amser, hyd yn oed os o blaid `icon_tap_action` Dewiswyd "Na" |
 
 Enghraifft lawn:
 
@@ -198,7 +199,7 @@ always_show_icon_background: false
 
 > Yn fwyaf tebygol, nid oes gennych y modd hwn wedi'i alluogi. Os nad oes unrhyw broblemau a bod y cerdyn yn gweithio, sgipiwch y cam hwn.
 
-Os oes gennych chi`configuration.yaml`gosod yn benodol:
+Os oes gennych chi `configuration.yaml` gosod yn benodol:
 
 ```yaml
 lovelace:
@@ -225,7 +226,7 @@ Ar ôl y newid, ailgychwyn adnoddau Lovelace neu ailgychwyn Cynorthwyydd Cartref
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Achos tebygol:**&#x6C;lwybr anghywir neu ni chafodd Cynorthwyydd Cartref ei ailgychwyn.
+**Achos tebygol:** llwybr anghywir neu ni chafodd Cynorthwyydd Cartref ei ailgychwyn.
 
 Gwiriwch am argaeledd ffeil:
 
@@ -233,7 +234,7 @@ Gwiriwch am argaeledd ffeil:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Yna ailgychwynnwch Gynorthwyydd Cartref yn llawn a gwiriwch y log am wallau`smart_plug_multilevel_light`.
+Yna ailgychwynnwch Gynorthwyydd Cartref yn llawn a gwiriwch y log am wallau `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -242,13 +243,13 @@ Yna ailgychwynnwch Gynorthwyydd Cartref yn llawn a gwiriwch y log am wallau`smar
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-Mae integreiddio yn dangos gwrthrychau yn unig`switch`gysylltiedig â dyfeisiau sydd hefyd yn darparu synhwyrydd cynnwys gyda`device_class: power`.
+Mae integreiddio yn dangos gwrthrychau yn unig `switch`gysylltiedig â dyfeisiau sydd hefyd yn darparu synhwyrydd cynnwys gyda `device_class: power`.
 
-Gwiriwch i mew&#x6E;**[Gosodiadau → Dyfeisiau a gwasanaethau → Gwrthrychau](https://my.home-assistant.io/redirect/entities/)**:
+Gwiriwch i mewn **[Gosodiadau → Dyfeisiau a gwasanaethau → Gwrthrychau](https://my.home-assistant.io/redirect/entities/)**:
 
-* Ydyn nhw'n perthyn`switch`a synhwyrydd pŵer ar gyfer un ddyfais?
+* Ydyn nhw'n perthyn `switch` a synhwyrydd pŵer ar gyfer un ddyfais?
 * Ydy'r synhwyrydd pŵer ymlaen?
-* A yw wedi'i nodi'n gywir?`device_class`?
+* A yw wedi'i nodi'n gywir? `device_class`?
 * A oes ganddo gyflwr rhifiadol?
 
 <hr />
@@ -258,7 +259,7 @@ Gwiriwch i mew&#x6E;**[Gosodiadau → Dyfeisiau a gwasanaethau → Gwrthrychau](
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Ar ôl dewis allfa, mae'r integreiddio yn ail-wirio am bresenoldeb synhwyrydd pŵer. Mae'r gwall yn digwydd os yw'r synhwyrydd wedi'i dynnu, wedi'i analluogi, wedi'i symud i ddyfais arall, neu wedi peidio â chael`device_class: power`.
+Ar ôl dewis allfa, mae'r integreiddio yn ail-wirio am bresenoldeb synhwyrydd pŵer. Mae'r gwall yn digwydd os yw'r synhwyrydd wedi'i dynnu, wedi'i analluogi, wedi'i symud i ddyfais arall, neu wedi peidio â chael `device_class: power`.
 
 <hr />
 </details>
@@ -267,7 +268,7 @@ Ar ôl dewis allfa, mae'r integreiddio yn ail-wirio am bresenoldeb synhwyrydd p�
 <summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
 <br />
 
-Gwiriwch werth y synhwyrydd pŵer. Ystyrir bod y lamp rhithwir wedi'i ddiffodd pryd`0 W`; pan yn bositif, dylid ei ddiffinio fel`on`.
+Gwiriwch werth y synhwyrydd pŵer. Ystyrir bod y lamp rhithwir wedi'i ddiffodd pryd `0 W`; pan yn bositif, dylid ei ddiffinio fel `on`.
 
 <hr />
 </details>
@@ -276,7 +277,7 @@ Gwiriwch werth y synhwyrydd pŵer. Ystyrir bod y lamp rhithwir wedi'i ddiffodd p
 <summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
 <br />
 
-Gwiriwch fod y synhwyrydd pŵer a ddewiswyd yn dangos mewn gwirionedd`0 W`, pan fydd y lamp yn cael ei ddiffodd gan ei botwm ei hun.
+Gwiriwch fod y synhwyrydd pŵer a ddewiswyd yn dangos mewn gwirionedd `0 W`, pan fydd y lamp yn cael ei ddiffodd gan ei botwm ei hun.
 
 <hr />
 </details>
@@ -285,7 +286,7 @@ Gwiriwch fod y synhwyrydd pŵer a ddewiswyd yn dangos mewn gwirionedd`0 W`, pan 
 <summary><b>❓Определяется неправильный режим</b></summary>
 <br />
 
-Gwirio**🐞 Last measures**mewn gosodiadau a phriodoleddau`power_history`,`power_history_modes`,`power_sample_interval_seconds`Ac`selected_power_mode`.`power_history`yn dangos y gwerthoedd pŵer diwethaf a gofnodwyd,`power_history_modes`- modd ar gyfer pob un ohonynt yn ôl trothwyon wedi'u ffurfweddu,`power_sample_interval_seconds`yw cyfwng gosodiad cyfnodol, a`selected_power_mode`- modd cadarnhau cyfredol.
+Gwirio **🐞 Last measures** mewn gosodiadau a phriodoleddau `power_history`, `power_history_modes`, `power_sample_interval_seconds` Ac `selected_power_mode`. `power_history` yn dangos y gwerthoedd pŵer diwethaf a gofnodwyd, `power_history_modes` - modd ar gyfer pob un ohonynt yn ôl trothwyon wedi'u ffurfweddu, `power_sample_interval_seconds` yw cyfwng gosodiad cyfnodol, a `selected_power_mode` - modd cadarnhau cyfredol.
 
 <hr />
 </details>
@@ -296,7 +297,7 @@ Gwirio**🐞 Last measures**mewn gosodiadau a phriodoleddau`power_history`,`powe
 
 Dyma ymddygiad disgwyliedig. Er mwyn atal amrywiadau pŵer tymor byr rhag achosi newid annilys, mae'r integreiddio yn newid modd dim ond ar ôl sawl darlleniad olynol yn cyfateb i'r un modd newydd.
 
-Mae'r nifer gofynnol o ddarlleniadau yn cael ei osod gan y paramedr**Consecutive readings to switch**a rhagosodiadau i`5`. Perfformir mesuriadau cyfnodol unwaith yr eiliad, a phrosesir newidiadau yn y cyflwr synhwyrydd ar unwaith. Os yw'r gwerth yn cyfateb i fodd gwahanol yn ystod y prawf, mae'r cyfrif i lawr yn dechrau eto.
+Mae'r nifer gofynnol o ddarlleniadau yn cael ei osod gan y paramedr **Consecutive readings to switch** a rhagosodiadau i `5`. Perfformir mesuriadau cyfnodol unwaith yr eiliad, a phrosesir newidiadau yn y cyflwr synhwyrydd ar unwaith. Os yw'r gwerth yn cyfateb i fodd gwahanol yn ystod y prawf, mae'r cyfrif i lawr yn dechrau eto.
 
 Hyd nes y cadarnhad, mae'r integreiddio yn cynnal y modd blaenorol. Diolch i hyn, nid yw'r cerdyn yn newid rhwng moddau oherwydd gwerthoedd canolraddol sy'n digwydd wrth newid y lamp, sefydlogi ei bŵer, neu amrywiadau bach mewn darlleniadau synhwyrydd.
 
@@ -309,15 +310,15 @@ Mae lleihau nifer y darlleniadau yn cyflymu arddangosiad y modd newydd, ond yn g
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Mae cofrestru awtomatig yn digwydd dim ond ar ôl llwytho o leiaf un gwrthrych helpwr ffurfweddu a dim ond yn y modd adnoddau`storage`. Nid yw'r dull o osod yr integreiddiad - trwy HACS neu â llaw - yn effeithio ar hyn.
+Mae cofrestru awtomatig yn digwydd dim ond ar ôl llwytho o leiaf un gwrthrych helpwr ffurfweddu a dim ond yn y modd adnoddau `storage`. Nid yw'r dull o osod yr integreiddiad - trwy HACS neu â llaw - yn effeithio ar hyn.
 
-Gwiri&#x6F;**[Gosodiadau → Paneli → ⋮ → Adnoddau](https://my.home-assistant.io/redirect/lovelace_resources/)**. Dylai'r URL fod yno:
+Gwirio **[Gosodiadau → Paneli → ⋮ → Adnoddau](https://my.home-assistant.io/redirect/lovelace_resources/)**. Dylai'r URL fod yno:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-Yn y modd YAML[ychwanegu adnodd â llaw](#yaml-lovelace-mode).
+Yn y modd YAML [ychwanegu adnodd â llaw](#yaml-lovelace-mode).
 
 <hr />
 </details>
@@ -336,14 +337,14 @@ Yn y modd YAML[ychwanegu adnodd â llaw](#yaml-lovelace-mode).
 
 ## 🗑 Tynnu
 
-1. Dileu'r holl wrthrychau helpwr a grëwyd**Golau Aml-Lefel Plug Smart**trw&#x79;**[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)**.
+1. Dileu'r holl wrthrychau helpwr a grëwyd **Golau Aml-Lefel Plug Smart** trwy **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)**.
 2. Tynnwch yr integreiddiad trwy HACS neu dilëwch y ffolder â llaw:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Gwiri&#x6F;**[Gosodiadau → Paneli → ⋮ → Adnoddau](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x61; dileu'r adnodd cerdyn â llaw os yw'n parhau i fod:
+3. Gwirio **[Gosodiadau → Paneli → ⋮ → Adnoddau](https://my.home-assistant.io/redirect/lovelace_resources/)** a dileu'r adnodd cerdyn â llaw os yw'n parhau i fod:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +355,9 @@ Yn y modd YAML[ychwanegu adnodd â llaw](#yaml-lovelace-mode).
 
 ## 📄 Trwydded
 
-Mae'r prosiect yn cael ei ddosbarthu o dan drwydded[GYDA](../LICENSE).
+Mae'r prosiect yn cael ei ddosbarthu o dan drwydded [GYDA](../LICENSE).
 
 <br />
 
-> \[!TIP]**Oeddech chi'n hoffi'r ateb?**&#x45;drych 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_cy.md">fy nghynnyrch eraill ar gyfer Cynorthwy-ydd Cartref</a>
+> \[!TIP]
+> **Oeddech chi'n hoffi'r ateb?** Edrych 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_cy.md">fy nghynnyrch eraill ar gyfer Cynorthwy-ydd Cartref</a>
