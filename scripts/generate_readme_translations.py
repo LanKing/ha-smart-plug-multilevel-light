@@ -388,7 +388,7 @@ def validate_inline_spacing(text: str, locale: str) -> None:
 
         for match in LINK_RE.finditer(line):
             before = line[match.start() - 1] if match.start() else ""
-            if before and not before.isspace() and before not in "([{<":
+            if before and not before.isspace() and before not in "([{<*":
                 issues.append(f"line {number}: {before!r} before link: {line[:120]!r}")
 
     if "[!TIP]" not in text or "> [!TIP]" not in text:
