@@ -67,7 +67,11 @@ jobs:
             const batch = unique.slice(index, index + batchSize)
             await Promise.all(
               batch.map(async (value) => {
-                translated.set(value, await translateFn(value))
+                const leading = value.match(/^\\s*/)?.[0] ?? ''
+                const trailing = value.match(/\\s*$/)?.[0] ?? ''
+                const core = value.slice(leading.length, value.length - trailing.length)
+                const result = core ? await translateFn(core) : core
+                translated.set(value, leading + result + trailing)
               }),
             )
             await new Promise((resolve) => setTimeout(resolve, 200))
@@ -80,7 +84,7 @@ jobs:
 
       - name: Generate translations from Russian README
         env:
-          OVERWRITE: ${{ inputs.overwrite }}
+          OVERWRITE: true
         run: |
           args=()
           if [ "$OVERWRITE" = "true" ]; then
