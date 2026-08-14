@@ -10,7 +10,7 @@
 
 **✨ Funktioner og funktioner:**
 
-* Opretter en indbygget Home Assistant-entitet`light`kompatibel med automatiseringer, scripts og standard HA-grænseflade;
+* Opretter en indbygget Home Assistant-entitet `light`kompatibel med automatiseringer, scripts og standard HA-grænseflade;
 * Tænder lampen korrekt, uanset hvordan den blev slukket: Hvis strømmen blev slukket gennem smart-stikkontakten, tænder den blot; hvis lampen blev slukket med sin egen knap, mens stikkontakten var tændt, udfører den en cyklus med afbrydelse og tænding igen;
 * Bestemmer automatisk lampens aktuelle driftstilstand baseret på den faktisk målte stabile effekt;
 * Den har en simpel konfigurator, hvor brugeren sekventielt navngiver de tilstande, der understøttes af hans lampe, og systemet lærer ved at bestemme den stabile effekt i hver tilstand;
@@ -33,7 +33,7 @@ Du skal bruge:
 1. Et smart stik, der skal give strømstyring (switch) og effektmåling (sensor med device\_class: power) til HA. Begge enheder skal tilhøre den samme enhed og være aktiveret.
 2. Et fjollet lys, der tænder automatisk, når det er tilsluttet og har flere lysstyrkeindstillinger for fuld nydelse.
 
-> Jeg brugte en stikkontakt[Tuya TS011F (i Girier-etui)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Jeg vil sige, at i begyndelsen af ​​forsøgene passede Girier-serien af ​​fatninger ikke på grund af unøjagtige mål, men det gjorde denne model, selvom den også var i Girier-sagen.
+> Jeg brugte en stikkontakt [Tuya TS011F (i Girier-etui)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Jeg vil sige, at i begyndelsen af ​​forsøgene passede Girier-serien af ​​fatninger ikke på grund af unøjagtige mål, men det gjorde denne model, selvom den også var i Girier-sagen.
 
 ### 👨‍🔬 Vigtig indstilling, som jeg anvendte på min stikkontakt:
 
@@ -41,11 +41,11 @@ Du skal bruge:
 
 Denne beskrivelse er kun relevant for ejere af stikkontakter tilsluttet via Z2M. Andre brugere bør justere opdateringshastigheden i deres konfiguration:
 
-1. Åben**Hjemmeassistent → Zigbee2MQTT**. Hvis Zigbee2MQTT ikke er i sidemenuen, skal du åbne**Indstillinger → Programmer → Zigbee2MQTT → Åbn webgrænseflade**.
-2. Gå til afsnittet**Enheder**.
+1. Åben **Hjemmeassistent → Zigbee2MQTT**. Hvis Zigbee2MQTT ikke er i sidemenuen, skal du åbne **Indstillinger → Programmer → Zigbee2MQTT → Åbn webgrænseflade**.
+2. Gå til afsnittet **Enheder**.
 3. Vælg den ønskede stikkontakt.
-4. Åbn fanen**Indstillinger (specifikke)**.
-5. Ændringerne**Måling poll interval**på 1 s.
+4. Åbn fanen **Indstillinger (specifikke)**.
+5. Ændringerne **Måling poll interval** på 1 s.
 
 <a id="installation"></a>
 
@@ -53,37 +53,37 @@ Denne beskrivelse er kun relevant for ejere af stikkontakter tilsluttet via Z2M.
 
 ### 🛍 Installation via HACS
 
-ℹ️[Hvad er HACS, og hvordan installeres det?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_da.md)
+ℹ️ [Hvad er HACS, og hvordan installeres det?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_da.md)
 
-🚀[Prøv at tilføje et lager på linket](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Hvis din HA understøtter denne metode, skal du klikke**Tilføje**i vinduet, der åbnes, og derefter knappen**Download**i nederste højre hjørne. Hvis installationen blev gennemført med succes, kan du springe yderligere trin over. Spring direkte til afsnittet[hurtig start](#getting-started).
+🚀 [Prøv at tilføje et lager på linket](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Hvis din HA understøtter denne metode, skal du klikke **Tilføje** i vinduet, der åbnes, og derefter knappen **Download** i nederste højre hjørne. Hvis installationen blev gennemført med succes, kan du springe yderligere trin over. Spring direkte til afsnittet [hurtig start](#getting-started).
 
 #### 1. Tilføjelse af et lager
 
 Selvom lageret ikke er inkluderet i standard HACS-biblioteket, skal du tilføje det som et brugerdefineret:
 
-1. Åben**HACS → Integrationer**.
-2. Åbn menuen i øverste højre hjørne og vælg**Brugerdefinerede depoter**.
+1. Åben **HACS → Integrationer**.
+2. Åbn menuen i øverste højre hjørne og vælg **Brugerdefinerede depoter**.
 3. Tilføje:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Vælg type**Integration**og tryk**Tilføje**.
+4. Vælg type **Integration** og tryk **Tilføje**.
 
-> Tilføjelse af et lager gør kun integrationen tilgængelig i HACS. For at installere skal du separat åbne dets kort og klikke**Download**.
+> Tilføjelse af et lager gør kun integrationen tilgængelig i HACS. For at installere skal du separat åbne dets kort og klikke **Download**.
 
 #### 2. Installation af integration
 
-1. Søg i HACS:`Smart Plug Multi-Level Light`.
-2. Åbn integrationen og klik**Download**.
+1. Søg i HACS: `Smart Plug Multi-Level Light`.
+2. Åbn integrationen og klik **Download**.
 3. Efter installationen skal du genstarte Home Assistant helt.
 
 <a id="manual-installation"></a>
 
 ### 🧑‍💻 Installation uden HACS
 
-1. På lagersiden skal du klikke**Kode → Download ZIP**.
+1. På lagersiden skal du klikke **Kode → Download ZIP**.
 2. Pak arkivet ud.
 3. Kopier mappen:
 
@@ -97,7 +97,7 @@ til Home Assistant-konfigurationsbiblioteket:
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Endelig filsti`manifest.json`skal se sådan ud:
+Endelig filsti `manifest.json` skal se sådan ud:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
@@ -105,9 +105,9 @@ Endelig filsti`manifest.json`skal se sådan ud:
 
 4. Genstart Home Assistant fuldstændigt.
 
-> Kopier ikke hele den eksterne arkivmappe til`custom_components`. Indenfor`custom_components`mappen skal være placeret direkte`smart_plug_multilevel_light`.
+> Kopier ikke hele den eksterne arkivmappe til `custom_components`. Indenfor `custom_components` mappen skal være placeret direkte `smart_plug_multilevel_light`.
 
-Kortet er inkluderet i integrationen, så HACS er ikke påkrævet for at installere det. Efter manuel kopiering af filerne, genstart af Home Assistant og oprettelse af det første hjælpeobjekt, udgiver integrationen JavaScript-kortfilen og registrerer den automatisk med panelressourcer i standardtilstand`storage`. I YAML-ressourcetilstand skal kortet registreres manuelt, som beskrevet nedenfor.
+Kortet er inkluderet i integrationen, så HACS er ikke påkrævet for at installere det. Efter manuel kopiering af filerne, genstart af Home Assistant og oprettelse af det første hjælpeobjekt, udgiver integrationen JavaScript-kortfilen og registrerer den automatisk med panelressourcer i standardtilstand `storage`. I YAML-ressourcetilstand skal kortet registreres manuelt, som beskrevet nedenfor.
 
 <a id="getting-started"></a>
 
@@ -115,50 +115,51 @@ Kortet er inkluderet i integrationen, så HACS er ikke påkrævet for at install
 
 ### 🛠 Konfiguration
 
-1. Åbe&#x6E;**[Indstillinger → Enheder og tjenester → Tilbehør](https://my.home-assistant.io/redirect/helpers/)**&#x6F;g tryk**Opret hjælpeobjekt**.
+1. Åben **[Indstillinger → Enheder og tjenester → Tilbehør](https://my.home-assistant.io/redirect/helpers/)** og tryk **Opret hjælpeobjekt**.
 
-2. Vælge**Smart Plug Multi-Level Light**.
+2. Vælge **Smart Plug Multi-Level Light**.
 
 3. Vælg det smarte stik, som lampen er tilsluttet. Listen viser kun stikkontakter, hvor Home Assistant ser en strømsensor i den samme enhed.
 
 4. I næste trin skal du indstille lampeparametrene:
-   * **Lysnavn (Light name)**— navnet på den enhed, der oprettes, f.eks`FloorLamp`;
-   * **Power sensor**- socket strømsensor;
+   * **Lysnavn (Light name)** — navnet på den enhed, der oprettes, f.eks `FloorLamp`;
+   * **Power sensor** - socket strømsensor;
 
-5. I afsnittet**ZUI003Z**tilføje mindst én lysstyrketilstand ved at klikke**Tilføje**.<br /> <img src="modes-edit.png" width="50%"/><br />Skift lampen med dens fysiske knap, indtast navnet på tilstanden og start**Test stable power**. Efter at have opnået en stabil værdi, tryk på**Anvende**.
+5. I afsnittet **ZUI003Z** tilføje mindst én lysstyrketilstand ved at klikke **Tilføje**.<br /> <img src="modes-edit.png" width="50%"/><br />
+   Skift lampen med dens fysiske knap, indtast navnet på tilstanden og start **Test stable power**. Efter at have opnået en stabil værdi, tryk på **Anvende**.
 
 6. Når du har tilføjet den første tilstand, skal du tilføje de resterende tilstande ved at gentage disse trin. Du burde ende med noget som:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Gem hjælpeobjektet. Home Assistant vil oprette en ny enhed`light`, F.eks`light.FloorLamp`.
+7. Gem hjælpeobjektet. Home Assistant vil oprette en ny enhed `light`, F.eks `light.FloorLamp`.
 
 ### 🧩 Lovelace kort
 
-1. Åbn det ønskede panel, slå redigeringstilstand til og klik**Tilføj et kort**.
-2. Vælge**Smart Plug Multi-Level Light**, angiv den oprettede enhed`light`og gem kortet.
+1. Åbn det ønskede panel, slå redigeringstilstand til og klik **Tilføj et kort**.
+2. Vælge **Smart Plug Multi-Level Light**, angiv den oprettede enhed `light` og gem kortet.
 
-Hvis kortet ikke er blandt de tilgængelige, bruger du muligvis[Lovelace-ressource YAML-tilstand](#yaml-lovelace-mode).
+Hvis kortet ikke er blandt de tilgængelige, bruger du muligvis [Lovelace-ressource YAML-tilstand](#yaml-lovelace-mode).
 
 ### 🎨 Visuelle effekter
 
 #### Indstillinger i kortet
 
-Åbn panelet, hvor kortet er placeret, gå til redigeringstilstand og klik**Redigere**på det ønskede kort.
+Åbn panelet, hvor kortet er placeret, gå til redigeringstilstand og klik **Redigere** på det ønskede kort.
 
-Åbning af afsnittet**Indhold (Content)**, vil du se de tilgængelige indstillinger:
+Åbning af afsnittet **Indhold (Content)**, vil du se de tilgængelige indstillinger:
 
-* **Vis tilstandsnavn (Show mode name)**— viser eller skjuler navnet på den aktuelle tilstand: for eksempel Dæmp, Lav, Medium eller Høj.
-* **Vis procent (Show percentage)**— viser eller skjuler den beregnede lysstyrke i procent.
+* **Vis tilstandsnavn (Show mode name)** — viser eller skjuler navnet på den aktuelle tilstand: for eksempel Dæmp, Lav, Medium eller Høj.
+* **Vis procent (Show percentage)** — viser eller skjuler den beregnede lysstyrke i procent.
 
-Åbning af afsnittet**Interaktioner (Interactions)**, vil du se:
+Åbning af afsnittet **Interaktioner (Interactions)**, vil du se:
 
-* **Vis altid ikonbaggrund (Always show icon background)**— bevarer den runde baggrund omkring ikonet, selvom en separat handling for det er deaktiveret.
+* **Vis altid ikonbaggrund (Always show icon background)** — bevarer den runde baggrund omkring ikonet, selvom en separat handling for det er deaktiveret.
 
-> 🚫 Forresten, hvis du ligesom mig bruger et ikke-standard kortikon, og når det er slukket, er det ikke visuelt overstreget, anbefaler jeg mit andet plugin -[Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_da.md), som løser dette æstetiske problem.
+> 🚫 Forresten, hvis du ligesom mig bruger et ikke-standard kortikon, og når det er slukket, er det ikke visuelt overstreget, anbefaler jeg mit andet plugin - [Mdi Off Fallback](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_da.md), som løser dette æstetiske problem.
 
 #### Lysstyrke runder op til 5 %
 
-Åbe&#x6E;**[Indstillinger → Enheder og tjenester → Tilbehør](https://my.home-assistant.io/redirect/helpers/)**, find hjælpeobjektet oprettet tidligere**Smart Plug Multi-Level Light**og åbn dens indstillinger. Tænd eller sluk**Round brightness to 5% (may look nicer)**.
+Åben **[Indstillinger → Enheder og tjenester → Tilbehør](https://my.home-assistant.io/redirect/helpers/)**, find hjælpeobjektet oprettet tidligere **Smart Plug Multi-Level Light** og åbn dens indstillinger. Tænd eller sluk **Round brightness to 5% (may look nicer)**.
 
 Når indstillingen er aktiveret, afrundes den beregnede procentdel til nærmeste 5 %, for eksempel: 33 % → 35 %, 67 % → 65 %.
 
@@ -170,13 +171,13 @@ Tilgængelige muligheder:
 
 | Parameter | Skriv | Standard | Destination |
 |---|---|---:|---|
-|`entity`| streng | obligatorisk | enhed skabt af integration |
-|`name`| streng | enhedsnavn | tilsidesætter navnet på kortet |
-|`icon`| streng | enhedsikon | omdefinerer ikon |
-|`show_mode`| boolsk |`true`| viser tilstandsnavn |
-|`show_percentage`| boolsk |`true`| viser betinget interesse |
-|`icon_tap_action`| handling |`more-info`| yderligere handling, når du klikker på ikonet |
-|`always_show_icon_background`| boolsk |`false`| viser altid ikonets runde baggrund, selvom for`icon_tap_action`"Nej" valgt |
+| `entity` | streng | obligatorisk | enhed skabt af integration |
+| `name` | streng | enhedsnavn | tilsidesætter navnet på kortet |
+| `icon` | streng | enhedsikon | omdefinerer ikon |
+| `show_mode` | boolsk | `true` | viser tilstandsnavn |
+| `show_percentage` | boolsk | `true` | viser betinget interesse |
+| `icon_tap_action` | handling | `more-info` | yderligere handling, når du klikker på ikonet |
+| `always_show_icon_background` | boolsk | `false` | viser altid ikonets runde baggrund, selvom for `icon_tap_action` "Nej" valgt |
 
 Fuldstændig eksempel:
 
@@ -198,7 +199,7 @@ always_show_icon_background: false
 
 > Mest sandsynligt har du ikke denne tilstand aktiveret. Hvis der ikke er nogen problemer, og kortet virker, skal du springe dette trin over.
 
-Hvis du har`configuration.yaml`udtrykkeligt indstillet:
+Hvis du har `configuration.yaml` udtrykkeligt indstillet:
 
 ```yaml
 lovelace:
@@ -225,7 +226,7 @@ Efter ændringen skal du genstarte Lovelace-ressourcer eller genstarte Home Assi
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Sandsynlig årsag:**&#x66;orkert sti, eller Home Assistant blev ikke genstartet.
+**Sandsynlig årsag:** forkert sti, eller Home Assistant blev ikke genstartet.
 
 Tjek for tilgængelighed af filer:
 
@@ -233,7 +234,7 @@ Tjek for tilgængelighed af filer:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Genstart derefter Home Assistant og kontroller loggen for fejl`smart_plug_multilevel_light`.
+Genstart derefter Home Assistant og kontroller loggen for fejl `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -242,13 +243,13 @@ Genstart derefter Home Assistant og kontroller loggen for fejl`smart_plug_multil
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-Integration viser kun objekter`switch`forbundet med enheder, der også giver en medfølgende sensor med`device_class: power`.
+Integration viser kun objekter `switch`forbundet med enheder, der også giver en medfølgende sensor med `device_class: power`.
 
-Tjek in&#x64;**[Indstillinger → Enheder og tjenester → Objekter](https://my.home-assistant.io/redirect/entities/)**:
+Tjek ind **[Indstillinger → Enheder og tjenester → Objekter](https://my.home-assistant.io/redirect/entities/)**:
 
-* Hører de til`switch`og en strømsensor til én enhed?
+* Hører de til `switch` og en strømsensor til én enhed?
 * Er strømsensoren tændt?
-* Er det angivet korrekt?`device_class`?
+* Er det angivet korrekt? `device_class`?
 * Har den en numerisk tilstand?
 
 <hr />
@@ -258,7 +259,7 @@ Tjek in&#x64;**[Indstillinger → Enheder og tjenester → Objekter](https://my.
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Efter at have valgt en stikkontakt, kontrollerer integrationen igen for tilstedeværelsen af ​​en strømsensor. Fejlen opstår, hvis sensoren er blevet fjernet, deaktiveret, flyttet til en anden enhed eller er ophørt med at have`device_class: power`.
+Efter at have valgt en stikkontakt, kontrollerer integrationen igen for tilstedeværelsen af ​​en strømsensor. Fejlen opstår, hvis sensoren er blevet fjernet, deaktiveret, flyttet til en anden enhed eller er ophørt med at have `device_class: power`.
 
 <hr />
 </details>
@@ -267,7 +268,7 @@ Efter at have valgt en stikkontakt, kontrollerer integrationen igen for tilstede
 <summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
 <br />
 
-Kontroller effektsensorværdien. Den virtuelle lampe anses for at være slukket, når`0 W`; når den er positiv, skal den defineres som`on`.
+Kontroller effektsensorværdien. Den virtuelle lampe anses for at være slukket, når `0 W`; når den er positiv, skal den defineres som `on`.
 
 <hr />
 </details>
@@ -276,7 +277,7 @@ Kontroller effektsensorværdien. Den virtuelle lampe anses for at være slukket,
 <summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
 <br />
 
-Kontroller, at den valgte effektsensor faktisk viser`0 W`, når lampen er slukket med sin egen knap.
+Kontroller, at den valgte effektsensor faktisk viser `0 W`, når lampen er slukket med sin egen knap.
 
 <hr />
 </details>
@@ -285,7 +286,7 @@ Kontroller, at den valgte effektsensor faktisk viser`0 W`, når lampen er slukke
 <summary><b>❓Определяется неправильный режим</b></summary>
 <br />
 
-Check**🐞 Last measures**i indstillinger og attributter`power_history`,`power_history_modes`,`power_sample_interval_seconds`Og`selected_power_mode`.`power_history`viser de sidst registrerede effektværdier,`power_history_modes`— tilstand for hver af dem i henhold til konfigurerede tærskler,`power_sample_interval_seconds`er intervallet for periodisk fiksering, og`selected_power_mode`— aktuel bekræftet tilstand.
+Check **🐞 Last measures** i indstillinger og attributter `power_history`, `power_history_modes`, `power_sample_interval_seconds` Og `selected_power_mode`. `power_history` viser de sidst registrerede effektværdier, `power_history_modes` — tilstand for hver af dem i henhold til konfigurerede tærskler, `power_sample_interval_seconds` er intervallet for periodisk fiksering, og `selected_power_mode` — aktuel bekræftet tilstand.
 
 <hr />
 </details>
@@ -296,7 +297,7 @@ Check**🐞 Last measures**i indstillinger og attributter`power_history`,`power_
 
 Dette er forventet adfærd. For at forhindre kortsigtede strømudsving i at forårsage falsk omskiftning, skifter integrationen først tilstand efter flere på hinanden følgende aflæsninger svarer til den samme nye tilstand.
 
-Det nødvendige antal aflæsninger indstilles af parameteren**Consecutive readings to switch**og er standard til`5`. Periodiske målinger udføres en gang i sekundet, og ændringer i sensortilstanden behandles med det samme. Hvis værdien under testen svarer til en anden tilstand, starter nedtællingen igen.
+Det nødvendige antal aflæsninger indstilles af parameteren **Consecutive readings to switch** og er standard til `5`. Periodiske målinger udføres en gang i sekundet, og ændringer i sensortilstanden behandles med det samme. Hvis værdien under testen svarer til en anden tilstand, starter nedtællingen igen.
 
 Indtil bekræftelse bevarer integrationen den tidligere tilstand. Takket være dette skifter kortet ikke mellem tilstande på grund af mellemværdier, der opstår, når du skifter lampen, stabiliserer dens effekt eller små udsving i sensoraflæsninger.
 
@@ -309,15 +310,15 @@ Reduktion af antallet af aflæsninger fremskynder visningen af ​​den nye til
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Automatisk registrering sker kun efter indlæsning af mindst ét ​​konfigureret hjælpeobjekt og kun i ressourcetilstand`storage`. Metoden til at installere integrationen - via HACS eller manuelt - påvirker ikke dette.
+Automatisk registrering sker kun efter indlæsning af mindst ét ​​konfigureret hjælpeobjekt og kun i ressourcetilstand `storage`. Metoden til at installere integrationen - via HACS eller manuelt - påvirker ikke dette.
 
-Chec&#x6B;**[Indstillinger → Paneler → ⋮ → Ressourcer](https://my.home-assistant.io/redirect/lovelace_resources/)**. URL'en skal være der:
+Check **[Indstillinger → Paneler → ⋮ → Ressourcer](https://my.home-assistant.io/redirect/lovelace_resources/)**. URL'en skal være der:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-I YAML-tilstand[tilføje ressource manuelt](#yaml-lovelace-mode).
+I YAML-tilstand [tilføje ressource manuelt](#yaml-lovelace-mode).
 
 <hr />
 </details>
@@ -336,14 +337,14 @@ I YAML-tilstand[tilføje ressource manuelt](#yaml-lovelace-mode).
 
 ## 🗑 Fjernelse
 
-1. Slet alle oprettede hjælpeobjekter**Smart Plug Multi-Level Light**ve&#x64;**[Indstillinger → Enheder og tjenester → Tilbehør](https://my.home-assistant.io/redirect/helpers/)**.
+1. Slet alle oprettede hjælpeobjekter **Smart Plug Multi-Level Light** ved **[Indstillinger → Enheder og tjenester → Tilbehør](https://my.home-assistant.io/redirect/helpers/)**.
 2. Fjern integrationen via HACS eller slet mappen manuelt:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Chec&#x6B;**[Indstillinger → Paneler → ⋮ → Ressourcer](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x6F;g manuelt slette kortressourcen, hvis den forbliver:
+3. Check **[Indstillinger → Paneler → ⋮ → Ressourcer](https://my.home-assistant.io/redirect/lovelace_resources/)** og manuelt slette kortressourcen, hvis den forbliver:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +355,9 @@ I YAML-tilstand[tilføje ressource manuelt](#yaml-lovelace-mode).
 
 ## 📄 Licens
 
-Projektet distribueres under licens[MED](../LICENSE).
+Projektet distribueres under licens [MED](../LICENSE).
 
 <br />
 
-> \[!TIP]**Kunne du lide løsningen?**&#x53;e 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_da.md">mine andre produkter til Home Assistant</a>
+> \[!TIP]
+> **Kunne du lide løsningen?** Se 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_da.md">mine andre produkter til Home Assistant</a>
