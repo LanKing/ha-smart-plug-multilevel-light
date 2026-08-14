@@ -10,7 +10,7 @@
 
 **✨ Kenmerke en kenmerke:**
 
-* Skep 'n inheemse Home Assistant-entiteit`light`versoenbaar is met outomatisering, skrifte en standaard HA-koppelvlak;
+* Skep 'n inheemse Home Assistant-entiteit `light`versoenbaar is met outomatisering, skrifte en standaard HA-koppelvlak;
 * Skakel die lamp korrek aan, ongeag hoe dit afgeskakel is: as die krag deur die slimsok afgeskakel is, skakel dit dit eenvoudig aan; as die lamp met sy eie knoppie afgeskakel is terwyl die sok aan was, voer dit 'n siklus uit van kragonderbreking en weer aanskakel;
 * Bepaal outomaties die huidige bedryfsmodus van die lamp gebaseer op die werklik gemete stabiele krag;
 * Dit het 'n eenvoudige konfigurator waarin die gebruiker opeenvolgend die modusse wat deur sy lamp ondersteun word, noem, en die stelsel leer deur die stabiele krag in elke modus te bepaal;
@@ -33,7 +33,7 @@ Jy sal nodig hê:
 1. 'n Slim sok wat kragbeheer (skakelaar) en kragmeting (sensor met device\_class: krag) aan die HA moet verskaf. Albei entiteite moet aan dieselfde toestel behoort en geaktiveer wees.
 2. 'n Dwaas lig wat outomaties aanskakel sodra dit ingeprop is en verskeie helderheidinstellings het vir volledige genot.
 
-> Ek het 'n sok gebruik[Tuya TS011F (in Girier geval)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Ek sal sê aan die begin van die eksperimente het die Girier-reeks voetstukke nie gepas nie as gevolg van onakkurate metings, maar hierdie model het wel, hoewel dit ook in die Girier-geval was.
+> Ek het 'n sok gebruik [Tuya TS011F (in Girier geval)](https://www.zigbee2mqtt.io/devices/TS011F_plug_3.html). Ek sal sê aan die begin van die eksperimente het die Girier-reeks voetstukke nie gepas nie as gevolg van onakkurate metings, maar hierdie model het wel, hoewel dit ook in die Girier-geval was.
 
 ### 👨‍🔬 Belangrike instelling wat ek op my afsetpunt toegepas het:
 
@@ -41,11 +41,11 @@ Jy sal nodig hê:
 
 Hierdie beskrywing is slegs relevant vir eienaars van voetstukke wat via Z2M verbind is. Ander gebruikers moet die herlaaitempo binne hul konfigurasie aanpas:
 
-1. Maak oop**Huisassistent → Zigbee2MQTT**. As Zigbee2MQTT nie in die sykieslys is nie, maak oop**Instellings → Toepassings → Zigbee2MQTT → Maak webkoppelvlak oop**.
-2. Gaan na afdeling**Toestelle**.
+1. Maak oop **Huisassistent → Zigbee2MQTT**. As Zigbee2MQTT nie in die sykieslys is nie, maak oop **Instellings → Toepassings → Zigbee2MQTT → Maak webkoppelvlak oop**.
+2. Gaan na afdeling **Toestelle**.
 3. Kies die verlangde uitlaat.
-4. Maak die oortjie oop**Instellings (spesifiek)**.
-5. Die veranderinge**Metingspeilingsinterval**op 1 s.
+4. Maak die oortjie oop **Instellings (spesifiek)**.
+5. Die veranderinge **Metingspeilingsinterval** op 1 s.
 
 <a id="installation"></a>
 
@@ -53,37 +53,37 @@ Hierdie beskrywing is slegs relevant vir eienaars van voetstukke wat via Z2M ver
 
 ### 🛍 Installasie via HACS
 
-ℹ️[Wat is HACS en hoe om dit te installeer?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_af.md)
+ℹ️ [Wat is HACS en hoe om dit te installeer?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_af.md)
 
-🚀[Probeer om 'n bewaarplek by die skakel by te voeg](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). As jou HA hierdie metode ondersteun, klik**Voeg by**in die venster wat oopmaak, en dan die knoppie**Laai af**in die onderste regterhoek. As die installasie suksesvol voltooi is, kan jy verdere stappe oorslaan. Slaan reguit na afdeling[vinnige begin](#getting-started).
+🚀 [Probeer om 'n bewaarplek by die skakel by te voeg](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). As jou HA hierdie metode ondersteun, klik **Voeg by** in die venster wat oopmaak, en dan die knoppie **Laai af** in die onderste regterhoek. As die installasie suksesvol voltooi is, kan jy verdere stappe oorslaan. Slaan reguit na afdeling [vinnige begin](#getting-started).
 
 #### 1. Voeg 'n bewaarplek by
 
 Terwyl die bewaarplek nie in die standaard HACS-gids ingesluit is nie, voeg dit as 'n pasgemaakte een by:
 
-1. Maak oop**HACS → Integrasies**.
-2. Maak die kieslys in die regter boonste hoek oop en kies**Pasgemaakte bewaarplekke**.
+1. Maak oop **HACS → Integrasies**.
+2. Maak die kieslys in die regter boonste hoek oop en kies **Pasgemaakte bewaarplekke**.
 3. Voeg by:
 
 ```text
 https://github.com/LanKing/ha-smart-plug-multilevel-light
 ```
 
-4. Kies tipe**Integrasie**en druk**Voeg by**.
+4. Kies tipe **Integrasie** en druk **Voeg by**.
 
-> Die byvoeging van 'n bewaarplek maak die integrasie slegs in HACS beskikbaar. Om te installeer, moet jy die kaart apart oopmaak en klik**Laai af**.
+> Die byvoeging van 'n bewaarplek maak die integrasie slegs in HACS beskikbaar. Om te installeer, moet jy die kaart apart oopmaak en klik **Laai af**.
 
 #### 2. Installering van integrasie
 
-1. Soek in HACS:`Smart Plug Multi-Level Light`.
-2. Maak die integrasie oop en klik**Laai af**.
+1. Soek in HACS: `Smart Plug Multi-Level Light`.
+2. Maak die integrasie oop en klik **Laai af**.
 3. Na die installasie, herbegin Home Assistant heeltemal.
 
 <a id="manual-installation"></a>
 
 ### 🧑‍💻 Installasie sonder HACS
 
-1. Klik op die bewaarplekbladsy**Kode → Laai zip af**.
+1. Klik op die bewaarplekbladsy **Kode → Laai zip af**.
 2. Pak die argief uit.
 3. Kopieer die gids:
 
@@ -97,7 +97,7 @@ na die Home Assistant-konfigurasiegids:
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-Finale lêer pad`manifest.json`moet so lyk:
+Finale lêer pad `manifest.json` moet so lyk:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light/manifest.json
@@ -105,9 +105,9 @@ Finale lêer pad`manifest.json`moet so lyk:
 
 4. Herbegin Home Assistant heeltemal.
 
-> Moenie die hele eksterne bewaarplekgids na kopieer nie`custom_components`. Binne`custom_components`die gids moet direk geleë wees`smart_plug_multilevel_light`.
+> Moenie die hele eksterne bewaarplekgids na kopieer nie `custom_components`. Binne `custom_components` die gids moet direk geleë wees `smart_plug_multilevel_light`.
 
-Die kaart is by die integrasie ingesluit, so HACS is nie nodig om dit te installeer nie. Nadat die lêers met die hand gekopieer is, Home Assistant herbegin en die eerste helper-objek geskep is, publiseer die integrasie die JavaScript-kaartlêer en registreer dit outomaties met paneelhulpbronne in standaardmodus`storage`. In YAML-hulpbronmodus moet die kaart met die hand geregistreer word, soos hieronder beskryf.
+Die kaart is by die integrasie ingesluit, so HACS is nie nodig om dit te installeer nie. Nadat die lêers met die hand gekopieer is, Home Assistant herbegin en die eerste helper-objek geskep is, publiseer die integrasie die JavaScript-kaartlêer en registreer dit outomaties met paneelhulpbronne in standaardmodus `storage`. In YAML-hulpbronmodus moet die kaart met die hand geregistreer word, soos hieronder beskryf.
 
 <a id="getting-started"></a>
 
@@ -115,50 +115,51 @@ Die kaart is by die integrasie ingesluit, so HACS is nie nodig om dit te install
 
 ### 🛠 Konfigurasie
 
-1. Maak oo&#x70;**[Instellings → Toestelle en dienste → Bykomstighede](https://my.home-assistant.io/redirect/helpers/)**&#x65;n druk**Skep Helper Object**.
+1. Maak oop **[Instellings → Toestelle en dienste → Bykomstighede](https://my.home-assistant.io/redirect/helpers/)** en druk **Skep Helper Object**.
 
-2. Kies**Slimprop Multi-Level Light**.
+2. Kies **Slimprop Multi-Level Light**.
 
 3. Kies die slimprop waaraan die lamp gekoppel is. Die lys wys net afsetpunte waar Home Assistant 'n kragsensor in dieselfde toestel sien.
 
 4. Stel in die volgende stap die lampparameters in:
-   * **Lignaam (Light name)**— die naam van die entiteit wat geskep word, byvoorbeeld`FloorLamp`;
-   * **Power sensor**- sok krag sensor;
+   * **Lignaam (Light name)** — die naam van die entiteit wat geskep word, byvoorbeeld `FloorLamp`;
+   * **Power sensor** - sok krag sensor;
 
-5. In die afdeling**ZUI003Z**voeg ten minste een helderheidsmodus by deur te klik**Voeg by**.<br /> <img src="modes-edit.png" width="50%"/><br />Skakel die lamp met sy fisiese knoppie, voer die naam van die modus in en begin**Test stable power**. Nadat u 'n stabiele waarde verkry het, druk**Doen aansoek**.
+5. In die afdeling **ZUI003Z** voeg ten minste een helderheidsmodus by deur te klik **Voeg by**.<br /> <img src="modes-edit.png" width="50%"/><br />
+   Skakel die lamp met sy fisiese knoppie, voer die naam van die modus in en begin **Test stable power**. Nadat u 'n stabiele waarde verkry het, druk **Doen aansoek**.
 
 6. Nadat u die eerste modus bygevoeg het, voeg die oorblywende modusse by deur hierdie stappe te herhaal. Jy moet eindig met iets soos:<br />
    <img src="modes-list.png" width="50%"/>
 
-7. Stoor die helper-voorwerp. Home Assistant sal 'n nuwe entiteit skep`light`, Byvoorbeeld`light.FloorLamp`.
+7. Stoor die helper-voorwerp. Home Assistant sal 'n nuwe entiteit skep `light`, Byvoorbeeld `light.FloorLamp`.
 
 ### 🧩 Lovelace-kaart
 
-1. Maak die gewenste paneel oop, skakel die wysigingsmodus aan en klik**Voeg 'n kaart by**.
-2. Kies**Slimprop Multi-Level Light**, spesifiseer die geskepte entiteit`light`en stoor die kaart.
+1. Maak die gewenste paneel oop, skakel die wysigingsmodus aan en klik **Voeg 'n kaart by**.
+2. Kies **Slimprop Multi-Level Light**, spesifiseer die geskepte entiteit `light` en stoor die kaart.
 
-As die kaart nie onder die beskikbares is nie, gebruik jy dalk[Lovelace hulpbron YAML-modus](#yaml-lovelace-mode).
+As die kaart nie onder die beskikbares is nie, gebruik jy dalk [Lovelace hulpbron YAML-modus](#yaml-lovelace-mode).
 
 ### 🎨 Visuele effekte
 
 #### Instellings in die kaart
 
-Maak die paneel oop waar die kaart geleë is, gaan na redigeermodus en klik**Wysig**op die verlangde kaart.
+Maak die paneel oop waar die kaart geleë is, gaan na redigeermodus en klik **Wysig** op die verlangde kaart.
 
-Die opening van die afdeling**Inhoud (Content)**, sal jy die beskikbare instellings sien:
+Die opening van die afdeling **Inhoud (Content)**, sal jy die beskikbare instellings sien:
 
-* **Wys modusnaam (Show mode name)**— wys of verberg die naam van die huidige modus: byvoorbeeld, Dim, Laag, Medium of Hoog.
-* **Wys persentasie (Show percentage)**- wys of verberg die berekende helderheid as 'n persentasie.
+* **Wys modusnaam (Show mode name)** — wys of verberg die naam van die huidige modus: byvoorbeeld, Dim, Laag, Medium of Hoog.
+* **Wys persentasie (Show percentage)** - wys of verberg die berekende helderheid as 'n persentasie.
 
-Die opening van die afdeling**Interaksies (Interactions)**, jy sal sien:
+Die opening van die afdeling **Interaksies (Interactions)**, jy sal sien:
 
-* **Wys altyd ikoonagtergrond (Always show icon background)**- behou die ronde agtergrond rondom die ikoon, selfs al is 'n aparte aksie daarvoor gedeaktiveer.
+* **Wys altyd ikoonagtergrond (Always show icon background)** - behou die ronde agtergrond rondom die ikoon, selfs al is 'n aparte aksie daarvoor gedeaktiveer.
 
-> 🚫 Terloops, as jy, soos ek, 'n nie-standaard kaartikoon gebruik en wanneer dit afgeskakel is dit nie visueel deurgehaal is nie, beveel ek my ander inprop aan -[Mdi Off Terugval](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_af.md), wat hierdie estetiese probleem oplos.
+> 🚫 Terloops, as jy, soos ek, 'n nie-standaard kaartikoon gebruik en wanneer dit afgeskakel is dit nie visueel deurgehaal is nie, beveel ek my ander inprop aan - [Mdi Off Terugval](https://github.com/LanKing/ha-mdi-off-fallback/blob/main/docs/README_af.md), wat hierdie estetiese probleem oplos.
 
 #### Helderheid rond af tot 5%
 
-Maak oo&#x70;**[Instellings → Toestelle en dienste → Bykomstighede](https://my.home-assistant.io/redirect/helpers/)**, vind die helper-objek wat vroeër geskep is**Slimprop Multi-Level Light**en maak sy instellings oop. Skakel aan of af**Round brightness to 5% (may look nicer)**.
+Maak oop **[Instellings → Toestelle en dienste → Bykomstighede](https://my.home-assistant.io/redirect/helpers/)**, vind die helper-objek wat vroeër geskep is **Slimprop Multi-Level Light** en maak sy instellings oop. Skakel aan of af **Round brightness to 5% (may look nicer)**.
 
 Wanneer die instelling geaktiveer is, word die berekende persentasie tot die naaste 5% afgerond, byvoorbeeld: 33% → 35%, 67% → 65%.
 
@@ -170,13 +171,13 @@ Beskikbare opsies:
 
 | Parameter | Tik | Verstek | Bestemming |
 |---|---|---:|---|
-|`entity`| tou | verpligtend | entiteit geskep deur integrasie |
-|`name`| tou | entiteit naam | ignoreer die naam in die kaart |
-|`icon`| tou | entiteit ikoon | herdefinieer ikoon |
-|`show_mode`| boolean |`true`| wys modusnaam |
-|`show_percentage`| boolean |`true`| toon voorwaardelike rente |
-|`icon_tap_action`| aksie |`more-info`| bykomende aksie wanneer u op die ikoon |
-|`always_show_icon_background`| boolean |`false`| wys altyd die ronde agtergrond van die ikoon, al is dit vir`icon_tap_action`"Nee" gekies |
+| `entity` | tou | verpligtend | entiteit geskep deur integrasie |
+| `name` | tou | entiteit naam | ignoreer die naam in die kaart |
+| `icon` | tou | entiteit ikoon | herdefinieer ikoon |
+| `show_mode` | boolean | `true` | wys modusnaam |
+| `show_percentage` | boolean | `true` | toon voorwaardelike rente |
+| `icon_tap_action` | aksie | `more-info` | bykomende aksie wanneer u op die ikoon |
+| `always_show_icon_background` | boolean | `false` | wys altyd die ronde agtergrond van die ikoon, al is dit vir `icon_tap_action` "Nee" gekies |
 
 Volledige voorbeeld:
 
@@ -198,7 +199,7 @@ always_show_icon_background: false
 
 > Heel waarskynlik, jy het nie hierdie modus geaktiveer nie. As daar geen probleme is nie en die kaart werk, slaan hierdie stap oor.
 
-As jy het`configuration.yaml`uitdruklik gestel:
+As jy het `configuration.yaml` uitdruklik gestel:
 
 ```yaml
 lovelace:
@@ -225,7 +226,7 @@ Na die verandering, herlaai Lovelace-hulpbronne of herbegin Home Assistant.
 <summary><b>❓Интеграция не появилась в списке вспомогательных объектов</b></summary>
 <br />
 
-**Waarskynlike oorsaak:**&#x76;erkeerde pad of Home Assistant is nie herbegin nie.
+**Waarskynlike oorsaak:** verkeerde pad of Home Assistant is nie herbegin nie.
 
 Kyk vir lêerbeskikbaarheid:
 
@@ -233,7 +234,7 @@ Kyk vir lêerbeskikbaarheid:
 /config/custom_components/smart_plug_multilevel_light/manifest.json
 ```
 
-Doen dan 'n volledige herbegin van Home Assistant en kyk na die logboek vir foute`smart_plug_multilevel_light`.
+Doen dan 'n volledige herbegin van Home Assistant en kyk na die logboek vir foute `smart_plug_multilevel_light`.
 
 <hr />
 </details>
@@ -242,13 +243,13 @@ Doen dan 'n volledige herbegin van Home Assistant en kyk na die logboek vir fout
 <summary><b>❓Список розеток пуст</b></summary>
 <br />
 
-Integrasie wys slegs voorwerpe`switch`geassosieer met toestelle wat ook 'n ingeslote sensor voorsien`device_class: power`.
+Integrasie wys slegs voorwerpe `switch`geassosieer met toestelle wat ook 'n ingeslote sensor voorsien `device_class: power`.
 
-Meld aa&#x6E;**[Instellings → Toestelle en dienste → Voorwerpe](https://my.home-assistant.io/redirect/entities/)**:
+Meld aan **[Instellings → Toestelle en dienste → Voorwerpe](https://my.home-assistant.io/redirect/entities/)**:
 
-* Behoort hulle`switch`en 'n kragsensor vir een toestel?
+* Behoort hulle `switch` en 'n kragsensor vir een toestel?
 * Is die kragsensor aangeskakel?
-* Is dit korrek gespesifiseer?`device_class`?
+* Is dit korrek gespesifiseer? `device_class`?
 * Het dit 'n numeriese toestand?
 
 <hr />
@@ -258,7 +259,7 @@ Meld aa&#x6E;**[Instellings → Toestelle en dienste → Voorwerpe](https://my.h
 <summary><b>❓Создание прерывается сообщением об отсутствии датчика мощности</b></summary>
 <br />
 
-Nadat 'n uitlaat gekies is, kontroleer die integrasie weer vir die teenwoordigheid van 'n kragsensor. Die fout kom voor as die sensor verwyder is, gedeaktiveer is, na 'n ander toestel geskuif is, of nie meer`device_class: power`.
+Nadat 'n uitlaat gekies is, kontroleer die integrasie weer vir die teenwoordigheid van 'n kragsensor. Die fout kom voor as die sensor verwyder is, gedeaktiveer is, na 'n ander toestel geskuif is, of nie meer `device_class: power`.
 
 <hr />
 </details>
@@ -267,7 +268,7 @@ Nadat 'n uitlaat gekies is, kontroleer die integrasie weer vir die teenwoordighe
 <summary><b>❓Лампа отображается как «Выключено» при включённой розетке</b></summary>
 <br />
 
-Gaan die kragsensorwaarde na. Die virtuele lamp word beskou as afgeskakel wanneer`0 W`; wanneer dit positief is, moet dit gedefinieer word as`on`.
+Gaan die kragsensorwaarde na. Die virtuele lamp word beskou as afgeskakel wanneer `0 W`; wanneer dit positief is, moet dit gedefinieer word as `on`.
 
 <hr />
 </details>
@@ -276,7 +277,7 @@ Gaan die kragsensorwaarde na. Die virtuele lamp word beskou as afgeskakel wannee
 <summary><b>❓Лампа отображается как «Включено», когда физически выключен</b></summary>
 <br />
 
-Kontroleer dat die geselekteerde kragsensor werklik wys`0 W`, wanneer die lamp met sy eie knoppie afgeskakel word.
+Kontroleer dat die geselekteerde kragsensor werklik wys `0 W`, wanneer die lamp met sy eie knoppie afgeskakel word.
 
 <hr />
 </details>
@@ -285,7 +286,7 @@ Kontroleer dat die geselekteerde kragsensor werklik wys`0 W`, wanneer die lamp m
 <summary><b>❓Определяется неправильный режим</b></summary>
 <br />
 
-Kontroleer**🐞 Last measures**in instellings en eienskappe`power_history`,`power_history_modes`,`power_sample_interval_seconds`En`selected_power_mode`.`power_history`toon die laaste aangetekende drywingswaardes,`power_history_modes`- modus vir elk van hulle volgens gekonfigureerde drempels,`power_sample_interval_seconds`is die interval van periodieke fiksasie, en`selected_power_mode`- huidige bevestigde modus.
+Kontroleer **🐞 Last measures** in instellings en eienskappe `power_history`, `power_history_modes`, `power_sample_interval_seconds` En `selected_power_mode`. `power_history` toon die laaste aangetekende drywingswaardes, `power_history_modes` - modus vir elk van hulle volgens gekonfigureerde drempels, `power_sample_interval_seconds` is die interval van periodieke fiksasie, en `selected_power_mode` - huidige bevestigde modus.
 
 <hr />
 </details>
@@ -296,7 +297,7 @@ Kontroleer**🐞 Last measures**in instellings en eienskappe`power_history`,`pow
 
 Dit is verwagte gedrag. Om te verhoed dat korttermyn-kragskommelings vals skakeling veroorsaak, verander die integrasie van modus slegs nadat verskeie opeenvolgende lesings ooreenstem met dieselfde nuwe modus.
 
-Die vereiste aantal lesings word deur die parameter gestel**Consecutive readings to switch**en verstek na`5`. Periodieke metings word een keer per sekonde uitgevoer, en veranderinge in die sensortoestand word onmiddellik verwerk. As die waarde tydens die toets ooreenstem met 'n ander modus, begin die aftelling weer.
+Die vereiste aantal lesings word deur die parameter gestel **Consecutive readings to switch** en verstek na `5`. Periodieke metings word een keer per sekonde uitgevoer, en veranderinge in die sensortoestand word onmiddellik verwerk. As die waarde tydens die toets ooreenstem met 'n ander modus, begin die aftelling weer.
 
 Tot bevestiging behou die integrasie die vorige modus. Danksy hierdie skakel die kaart nie tussen modusse nie as gevolg van tussenwaardes wat voorkom wanneer die lamp geskakel word, sy krag stabiliseer of klein skommelinge in sensorlesings.
 
@@ -309,15 +310,15 @@ Die vermindering van die aantal lesings versnel die vertoning van die nuwe modus
 <summary><b>❓Карточка не появилась в списке</b></summary>
 <br />
 
-Outomatiese registrasie vind slegs plaas nadat ten minste een gekonfigureerde hulpvoorwerp gelaai is en slegs in hulpbronmodus`storage`. Die metode om die integrasie te installeer - via HACS of handmatig - beïnvloed dit nie.
+Outomatiese registrasie vind slegs plaas nadat ten minste een gekonfigureerde hulpvoorwerp gelaai is en slegs in hulpbronmodus `storage`. Die metode om die integrasie te installeer - via HACS of handmatig - beïnvloed dit nie.
 
-Kontrolee&#x72;**[Instellings → Panele → ⋮ → Hulpbronne](https://my.home-assistant.io/redirect/lovelace_resources/)**. Die URL moet daar wees:
+Kontroleer **[Instellings → Panele → ⋮ → Hulpbronne](https://my.home-assistant.io/redirect/lovelace_resources/)**. Die URL moet daar wees:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
 ```
 
-In YAML-modus[hulpbron handmatig byvoeg](#yaml-lovelace-mode).
+In YAML-modus [hulpbron handmatig byvoeg](#yaml-lovelace-mode).
 
 <hr />
 </details>
@@ -336,14 +337,14 @@ In YAML-modus[hulpbron handmatig byvoeg](#yaml-lovelace-mode).
 
 ## 🗑 Verwydering
 
-1. Vee alle geskepte helper-voorwerpe uit**Slimprop Multi-Level Light**deu&#x72;**[Instellings → Toestelle en dienste → Bykomstighede](https://my.home-assistant.io/redirect/helpers/)**.
+1. Vee alle geskepte helper-voorwerpe uit **Slimprop Multi-Level Light** deur **[Instellings → Toestelle en dienste → Bykomstighede](https://my.home-assistant.io/redirect/helpers/)**.
 2. Verwyder die integrasie via HACS of vee die gids handmatig uit:
 
 ```text
 /config/custom_components/smart_plug_multilevel_light
 ```
 
-3. Kontrolee&#x72;**[Instellings → Panele → ⋮ → Hulpbronne](https://my.home-assistant.io/redirect/lovelace_resources/)**&#x65;n vee die kaarthulpbron handmatig uit as dit oorbly:
+3. Kontroleer **[Instellings → Panele → ⋮ → Hulpbronne](https://my.home-assistant.io/redirect/lovelace_resources/)** en vee die kaarthulpbron handmatig uit as dit oorbly:
 
 ```text
 /api/smart_plug_multilevel_light/smart-plug-multilevel-light-card.js?v=0.10.9
@@ -354,8 +355,9 @@ In YAML-modus[hulpbron handmatig byvoeg](#yaml-lovelace-mode).
 
 ## 📄 Lisensie
 
-Die projek word onder lisensie versprei[MET](../LICENSE).
+Die projek word onder lisensie versprei [MET](../LICENSE).
 
 <br />
 
-> \[!WENK]**Het jy van die oplossing gehou?**&#x4B;yk 🏠<a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_af.md">my ander produkte vir Home Assistant</a>
+> \[!WENK]
+> **Het jy van die oplossing gehou?** Kyk 🏠 <a href="https://github.com/LanKing/ha-tools/blob/main/docs/README_af.md">my ander produkte vir Home Assistant</a>
