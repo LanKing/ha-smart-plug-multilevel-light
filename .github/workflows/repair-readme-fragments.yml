@@ -73,7 +73,7 @@ jobs:
 
           FOOTER_PARTS = [
               "License",
-              "This project is distributed under the ZXQMITQXZ license.",
+              "This project is distributed under the 731948731948 license.",
               "Like this solution?",
               "Take a look at",
               "my other Home Assistant products",
@@ -190,7 +190,7 @@ jobs:
               if table_count != 1:
                   raise RuntimeError(f"Parameter table not found in {path}")
 
-              license_sentence = footer[1].replace("ZXQMITQXZ", "[MIT](../LICENSE)")
+              license_sentence = footer[1].replace("731948731948", "[MIT](../LICENSE)")
               footer_block = (
                   f"## 📄 {footer[0]}\n\n"
                   f"{license_sentence}\n\n"
