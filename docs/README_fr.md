@@ -125,10 +125,10 @@ La carte est incluse dans l'intégration, donc HACS n'est pas nécessaire pour l
    * **Nom de l’éclairage (Light name)**— le nom de l'entité en cours de création, par exemple`FloorLamp`;
    * **Power sensor**- capteur de puissance de prise ;
 
-5. Dans la rubrique**ZUI003Z**ajoutez au moins un mode de luminosité en cliquant sur**Ajouter**.<br /> <img src="modes-edit.png" width="50%"/><br />Allumez la lampe avec son bouton physique, entrez le nom du mode et démarrez**Test stable power**. Après avoir obtenu une valeur stable, appuyez sur**Appliquer**.
+5. Dans la rubrique**ZUI003Z**ajoutez au moins un mode de luminosité en cliquant sur**Ajouter**.<br /> <img src="modes-edit.png" width="465"/><br />Allumez la lampe avec son bouton physique, entrez le nom du mode et démarrez**Test stable power**. Après avoir obtenu une valeur stable, appuyez sur**Appliquer**.
 
 6. Après avoir ajouté le premier mode, ajoutez les modes restants en répétant ces étapes. Vous devriez obtenir quelque chose comme :<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Enregistrez l'objet d'assistance. Home Assistant va créer une nouvelle entité`light`, Par exemple`light.FloorLamp`.
 

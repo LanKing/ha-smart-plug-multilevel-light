@@ -125,10 +125,10 @@ De kaart is opnommen yn 'e yntegraasje, dus HACS is net ferplicht om it te ynsta
    * **Ljochtnamme (Light name)**- bygelyks de namme fan 'e oanmakke entiteit`FloorLamp`;
    * **Power sensor**- socket macht sensor;
 
-5. Yn de seksje**ZUI003Z**foegje op syn minst ien helderheidsmodus ta troch te klikken**Add**.<br /> <img src="modes-edit.png" width="50%"/><br />Skeakelje de lampe mei syn fysike knop, fier de namme fan 'e modus yn en start**Test stable power**. Nei it krijen fan in stabile wearde, druk op**Tapasse**.
+5. Yn de seksje**ZUI003Z**foegje op syn minst ien helderheidsmodus ta troch te klikken**Add**.<br /> <img src="modes-edit.png" width="465"/><br />Skeakelje de lampe mei syn fysike knop, fier de namme fan 'e modus yn en start**Test stable power**. Nei it krijen fan in stabile wearde, druk op**Tapasse**.
 
 6. Nei it tafoegjen fan de earste modus, foegje de oerbleaune modi ta troch dizze stappen te werheljen. Jo moatte einigje mei wat as:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Bewarje it helperobjekt. Home Assistant sil in nije entiteit oanmeitsje`light`, Bygelyks`light.FloorLamp`.
 

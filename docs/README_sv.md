@@ -125,10 +125,10 @@ Kortet ingår i integrationen, så HACS krävs inte för att installera det. Eft
    * **Ljusnamn (Light name)**— Namnet på den enhet som skapas, till exempel`FloorLamp`;
    * **Power sensor**- uttagsströmsensor;
 
-5. I avsnittet**ZUI003Z**lägg till minst ett ljusstyrkeläge genom att klicka**Tillägga**.<br /> <img src="modes-edit.png" width="50%"/><br />Byt lampan med dess fysiska knapp, ange namnet på läget och starta**Test stable power**. Efter att ha erhållit ett stabilt värde, tryck**Tillämpas**.
+5. I avsnittet**ZUI003Z**lägg till minst ett ljusstyrkeläge genom att klicka**Tillägga**.<br /> <img src="modes-edit.png" width="465"/><br />Byt lampan med dess fysiska knapp, ange namnet på läget och starta**Test stable power**. Efter att ha erhållit ett stabilt värde, tryck**Tillämpas**.
 
 6. När du har lagt till det första läget, lägg till de återstående lägena genom att upprepa dessa steg. Du borde sluta med något i stil med:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Spara hjälpobjektet. Home Assistant kommer att skapa en ny enhet`light`, Till exempel`light.FloorLamp`.
 

@@ -126,11 +126,11 @@ Kortti on osa integraatiota, joten HACS sitä ei tarvita asennuksessa. Kun olet 
    * **Valon nimi (Light name)** — esimerkiksi luotavan kokonaisuuden nimi `FloorLamp`;
    * **Power sensor** - pistorasiaanturi;
 
-5. osiossa **🔅 Kirkkaustilat (🔅 Brightness modes)** lisää vähintään yksi kirkkaustila napsauttamalla **Lisätä**.<br /> <img src="modes-edit.png" width="50%"/><br />
+5. osiossa **🔅 Kirkkaustilat (🔅 Brightness modes)** lisää vähintään yksi kirkkaustila napsauttamalla **Lisätä**.<br /> <img src="modes-edit.png" width="465"/><br />
    Vaihda lamppua sen fyysisellä painikkeella, syötä tilan nimi ja käynnistä **Test stable power**. Kun olet saanut vakaan arvon, paina **Käytä**.
 
 6. Kun olet lisännyt ensimmäisen tilan, lisää loput tilat toistamalla nämä vaiheet. Sinun pitäisi päätyä johonkin tällaiseen:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Tallenna apuobjekti. Home Assistant luo uuden kokonaisuuden `light`, Esimerkiksi `light.FloorLamp`.
 

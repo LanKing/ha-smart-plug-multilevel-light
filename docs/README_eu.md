@@ -126,11 +126,11 @@ Txartela integrazioaren parte da, beraz HACS ez da beharrezkoa instalatzeko. Fit
    * **Argiaren izena (Light name)** — sortzen ari den entitatearen izena, adibidez `FloorLamp`;
    * **Power sensor** - entxufearen potentzia sentsorea;
 
-5. atalean **🔅 Distira-moduak (🔅 Brightness modes)** gehitu gutxienez distira modu bat klik eginez **Gehitu**.<br /> <img src="modes-edit.png" width="50%"/><br />
+5. atalean **🔅 Distira-moduak (🔅 Brightness modes)** gehitu gutxienez distira modu bat klik eginez **Gehitu**.<br /> <img src="modes-edit.png" width="465"/><br />
    Aldatu lanpara bere botoi fisikoarekin, sartu moduaren izena eta hasi **Test stable power**. Balio egonkorra lortu ondoren, sakatu **Aplikatu**.
 
 6. Lehenengo modua gehitu ondoren, gehitu gainerako moduak urrats hauek errepikatuz. Horrelako zerbait lortu beharko zenuke:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Gorde laguntzailea objektua. Home Assistant entitate berri bat sortuko du `light`, Adibidez `light.FloorLamp`.
 

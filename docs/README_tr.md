@@ -125,10 +125,10 @@ Kart entegrasyona dahil olduğundan, kurulumu için HACS'a gerek yoktur. Dosyala
    * **Işık adı (Light name)**— örneğin, oluşturulan varlığın adı`FloorLamp`;
    * **Power sensor**- soket güç sensörü;
 
-5. Bölümde**ZUI003Z**tıklayarak en az bir parlaklık modu ekleyin**Eklemek**.<br /> <img src="modes-edit.png" width="50%"/><br />Lambayı fiziksel düğmesiyle açın, modun adını girin ve başlatın**Test stable power**. Kararlı bir değer elde ettikten sonra tuşuna basın.**Uygula**.
+5. Bölümde**ZUI003Z**tıklayarak en az bir parlaklık modu ekleyin**Eklemek**.<br /> <img src="modes-edit.png" width="465"/><br />Lambayı fiziksel düğmesiyle açın, modun adını girin ve başlatın**Test stable power**. Kararlı bir değer elde ettikten sonra tuşuna basın.**Uygula**.
 
 6. İlk modu ekledikten sonra bu adımları tekrarlayarak kalan modları ekleyin. Sonunda şöyle bir şey elde etmelisin:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Yardımcı nesneyi kaydedin. Ev Asistanı yeni bir varlık oluşturacak`light`, Örneğin`light.FloorLamp`.
 

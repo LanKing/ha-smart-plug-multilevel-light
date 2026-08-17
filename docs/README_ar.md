@@ -126,11 +126,11 @@ custom_components/smart_plug_multilevel_light
    * **اسم الإضاءة (Light name)** — اسم الكيان الذي يتم إنشاؤه، على سبيل المثال `FloorLamp`;
    * **Power sensor** - مستشعر طاقة المقبس؛
 
-5. في القسم **🔅 أوضاع السطوع (🔅 Brightness modes)** قم بإضافة وضع سطوع واحد على الأقل عن طريق النقر **يضيف**.<br /> <img src="modes-edit.png" width="50%"/><br />
+5. في القسم **🔅 أوضاع السطوع (🔅 Brightness modes)** قم بإضافة وضع سطوع واحد على الأقل عن طريق النقر **يضيف**.<br /> <img src="modes-edit.png" width="465"/><br />
    قم بتبديل المصباح بزره الفعلي، وأدخل اسم الوضع وابدأ **Test stable power**. بعد الحصول على قيمة ثابتة، اضغط على **يتقدم**.
 
 6. بعد إضافة الوضع الأول، قم بإضافة الأوضاع المتبقية من خلال تكرار هذه الخطوات. يجب أن ينتهي بك الأمر بشيء مثل:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. احفظ الكائن المساعد. Home Assistant سيتم إنشاء كيان جديد `light`، على سبيل المثال `light.FloorLamp`.
 

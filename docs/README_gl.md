@@ -125,10 +125,10 @@ A tarxeta está incluída na integración, polo que non é necesario HACS para i
    * **Nome da luz (Light name)**— o nome da entidade que se está a crear, por exemplo`FloorLamp`;
    * **Power sensor**- sensor de potencia da toma;
 
-5. Na sección**ZUI003Z**engade polo menos un modo de brillo facendo clic**Engadir**.<br /> <img src="modes-edit.png" width="50%"/><br />Cambia a lámpada co seu botón físico, introduce o nome do modo e comeza**Test stable power**. Despois de obter un valor estable, prema**Solicitar**.
+5. Na sección**ZUI003Z**engade polo menos un modo de brillo facendo clic**Engadir**.<br /> <img src="modes-edit.png" width="465"/><br />Cambia a lámpada co seu botón físico, introduce o nome do modo e comeza**Test stable power**. Despois de obter un valor estable, prema**Solicitar**.
 
 6. Despois de engadir o primeiro modo, engade os modos restantes repetindo estes pasos. Deberías acabar con algo como:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Garda o obxecto auxiliar. Home Assistant creará unha nova entidade`light`, Por exemplo`light.FloorLamp`.
 

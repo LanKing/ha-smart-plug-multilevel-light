@@ -125,10 +125,10 @@ Cardul este inclus în integrare, deci nu este necesar HACS pentru a-l instala. 
    * **Numele luminii (Light name)**— numele entității care este creată, de exemplu`FloorLamp`;
    * **Power sensor**- senzor de putere priza;
 
-5. In sectiunea**ZUI003Z**adăugați cel puțin un mod de luminozitate făcând clic**Adăuga**.<br /> <img src="modes-edit.png" width="50%"/><br />Comutați lampa cu butonul fizic, introduceți numele modului și începeți**Test stable power**. După obținerea unei valori stabile, apăsați**Aplicați**.
+5. In sectiunea**ZUI003Z**adăugați cel puțin un mod de luminozitate făcând clic**Adăuga**.<br /> <img src="modes-edit.png" width="465"/><br />Comutați lampa cu butonul fizic, introduceți numele modului și începeți**Test stable power**. După obținerea unei valori stabile, apăsați**Aplicați**.
 
 6. După adăugarea primului mod, adăugați modurile rămase repetând acești pași. Ar trebui să ajungi cu ceva de genul:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Salvați obiectul helper. Home Assistant va crea o nouă entitate`light`, De exemplu`light.FloorLamp`.
 

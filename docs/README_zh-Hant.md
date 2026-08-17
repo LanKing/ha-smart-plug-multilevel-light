@@ -125,10 +125,10 @@ custom_components/smart_plug_multilevel_light
    * **燈光名稱 (Light name)**— 例如，正在建立的實體的名稱`FloorLamp`;
    * **Power sensor**- 插座功率感測器；
 
-5. 在本節中**ZUI003Z**點選新增至少一種亮度模式**添加**.<br /> <img src="modes-edit.png" width="50%"/><br />用實體按鈕開關燈，輸入模式名稱並啟動**Test stable power**。獲得穩定值後，按**申請**.
+5. 在本節中**ZUI003Z**點選新增至少一種亮度模式**添加**.<br /> <img src="modes-edit.png" width="465"/><br />用實體按鈕開關燈，輸入模式名稱並啟動**Test stable power**。獲得穩定值後，按**申請**.
 
 6. 新增第一個模式後，重複這些步驟以新增其餘模式。你最終應該得到類似的結果：<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. 保存輔助對象。 Home Assistant 將建立一個新實體`light`， 例如`light.FloorLamp`.
 

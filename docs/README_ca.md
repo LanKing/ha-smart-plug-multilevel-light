@@ -126,11 +126,11 @@ La targeta forma part de la integració, per tant HACS no és necessari per a la
    * **Nom de la llum (Light name)** — el nom de l'entitat que es crea, per exemple `FloorLamp`;
    * **Power sensor** - sensor de potència de presa;
 
-5. A la secció **🔅 Modes de brillantor (🔅 Brightness modes)** afegeix almenys un mode de brillantor fent clic **Afegeix**.<br /> <img src="modes-edit.png" width="50%"/><br />
+5. A la secció **🔅 Modes de brillantor (🔅 Brightness modes)** afegeix almenys un mode de brillantor fent clic **Afegeix**.<br /> <img src="modes-edit.png" width="465"/><br />
    Canvia el llum amb el seu botó físic, introdueix el nom del mode i comença **Test stable power**. Després d'obtenir un valor estable, premeu **Aplicar**.
 
 6. Després d'afegir el primer mode, afegiu els modes restants repetint aquests passos. Hauríeu d'acabar amb alguna cosa com:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Deseu l'objecte auxiliar. Home Assistant crearà una nova entitat `light`, Per exemple `light.FloorLamp`.
 

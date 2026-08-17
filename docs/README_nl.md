@@ -125,10 +125,10 @@ De kaart is inbegrepen in de integratie, dus HACS hoeft deze niet te installeren
    * **Lichtnaam (Light name)**— bijvoorbeeld de naam van de entiteit die wordt opgericht`FloorLamp`;
    * **Power sensor**- stopcontact-voedingssensor;
 
-5. In de sectie**ZUI003Z**voeg ten minste één helderheidsmodus toe door te klikken**Toevoegen**.<br /> <img src="modes-edit.png" width="50%"/><br />Schakel de lamp met de fysieke knop, voer de naam van de modus in en begin**Test stable power**. Nadat u een stabiele waarde heeft verkregen, drukt u op**Toepassen**.
+5. In de sectie**ZUI003Z**voeg ten minste één helderheidsmodus toe door te klikken**Toevoegen**.<br /> <img src="modes-edit.png" width="465"/><br />Schakel de lamp met de fysieke knop, voer de naam van de modus in en begin**Test stable power**. Nadat u een stabiele waarde heeft verkregen, drukt u op**Toepassen**.
 
 6. Nadat u de eerste modus hebt toegevoegd, voegt u de overige modi toe door deze stappen te herhalen. Je zou moeten eindigen met zoiets als:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Bewaar het helperobject. Home Assistant zal een nieuwe entiteit creëren`light`, Bijvoorbeeld`light.FloorLamp`.
 

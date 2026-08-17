@@ -125,10 +125,10 @@ Karta je súčasťou integrácie, takže na jej inštaláciu nie je potrebný HA
    * **Názov svetla (Light name)**— napríklad názov vytváranej entity`FloorLamp`;
    * **Power sensor**- zásuvkový snímač napájania;
 
-5. V sekcii**ZUI003Z**kliknutím pridajte aspoň jeden režim jasu**Pridať**.<br /> <img src="modes-edit.png" width="50%"/><br />Prepnite lampu jej fyzickým tlačidlom, zadajte názov režimu a spustite**Test stable power**. Po získaní stabilnej hodnoty stlačte**Použiť**.
+5. V sekcii**ZUI003Z**kliknutím pridajte aspoň jeden režim jasu**Pridať**.<br /> <img src="modes-edit.png" width="465"/><br />Prepnite lampu jej fyzickým tlačidlom, zadajte názov režimu a spustite**Test stable power**. Po získaní stabilnej hodnoty stlačte**Použiť**.
 
 6. Po pridaní prvého režimu pridajte zvyšné režimy opakovaním týchto krokov. Mali by ste skončiť s niečím ako:<br />
-   <img src="modes-list.png" width="50%"/>
+   <img src="modes-list.png" width="457"/>
 
 7. Uložte objekt pomocníka. Asistent domova vytvorí novú entitu`light`, Napríklad`light.FloorLamp`.
 
