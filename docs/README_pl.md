@@ -4,7 +4,7 @@
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
 <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a>
 <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a>
-<a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
+<a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a> <a href="https://github.com/sponsors/LanKing"><img src="https://img.shields.io/badge/☕-Wesprzyj%20moj%C4%85%20prac%C4%99-ea4aaa" alt="Wesprzyj moją pracę"></a>
 
 > Integracja łączy lampę bez sterowania cyfrowego i inteligentne gniazdko w jedną encję Home Assistant. Określa stan lampy i jej bieżący tryb jasności na podstawie poboru mocy, wyświetla je na karcie oraz potrafi włączyć lampę wyłączoną jej własnym przyciskiem, krótko odcinając i ponownie podając zasilanie przez gniazdko.
 
@@ -342,6 +342,9 @@ W trybie YAML [dodaj zasób ręcznie](#yaml-lovelace-mode).
 ## 📄 Licencja
 
 Projekt jest udostępniany na licencji [MIT](../LICENSE).
+
+## 👋 Twoje wsparcie
+Jeśli ten projekt pozwolił Ci zaoszczędzić trochę czasu, możesz to zrobić [wesprzyj moje eksperymenty pod numerem GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
 
 <br />
 

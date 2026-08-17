@@ -4,7 +4,7 @@
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Integration-41BDF5" alt="HACS"></a>
 <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a>
 <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a>
-<a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
+<a href="../LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a> <a href="https://github.com/sponsors/LanKing"><img src="https://img.shields.io/badge/☕-%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D1%82%D0%B5%20%D0%BC%D0%BE%D1%8E%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83-ea4aaa" alt="Поддержите мою работу"></a>
 
 > Интеграция объединяет светильник без цифрового управления и умную розетку в одну сущность Home Assistant. Она определяет состояние и текущий режим яркости по потребляемой мощности, отображает их в карточке и позволяет включить лампу, выключенную собственной кнопкой, кратко отключив и снова подав питание через розетку.
  
@@ -338,6 +338,9 @@ lovelace:
 ## 📄 Лицензия
 
 Проект распространяется по лицензии [MIT](../LICENSE).
+
+## 👋 Ваша поддержка
+Если этот проект сэкономил вам время, вы можете [поддержите мои эксперименты по номеру GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
 
 <br />
 
