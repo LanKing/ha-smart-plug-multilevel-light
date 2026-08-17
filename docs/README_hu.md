@@ -357,7 +357,7 @@ YAML módban[manuálisan adja hozzá az erőforrást](#yaml-lovelace-mode).
 Ezt a projektet a [MIT](../LICENSE) licenc alatt terjesztik.
 
 ## 👋 Az Ön támogatása
-Ha ezzel a projekttel időt takarított meg, megteheti [támogassa kísérleteimet a GitHub Sponsors telefonszámon](https://github.com/sponsors/LanKing). ☕🔧
+[Ha ezzel a projekttel időt takarított meg, támogathatja a kísérleteimet](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

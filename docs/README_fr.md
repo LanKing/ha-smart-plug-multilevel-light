@@ -357,7 +357,7 @@ En mode YAML[ajouter une ressource manuellement](#yaml-lovelace-mode).
 Ce projet est distribué sous la [licence MIT](../LICENSE).
 
 ## 👋 Votre soutien
-Si ce projet vous a fait gagner du temps, vous pouvez [soutenez mes expériences sur GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Si ce projet vous a fait gagner du temps, vous pouvez soutenir mes expériences](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

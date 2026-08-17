@@ -344,7 +344,7 @@ lovelace:
 Проєкт поширюється за ліцензією [MIT](../LICENSE).
 
 ## 👋 Ваша підтримка
-Якщо цей проект заощадив вам час, ви можете [підтримайте мої експерименти на GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Якщо цей проект заощадив вам час, ви можете підтримати мої експерименти](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

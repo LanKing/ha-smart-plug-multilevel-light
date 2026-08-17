@@ -359,7 +359,7 @@ YAML moduan [gehitu baliabidea eskuz](#yaml-lovelace-mode).
 Proiektu hau [MIT](../LICENSE) lizentziapean banatzen da.
 
 ## 👋 Zure laguntza
-Proiektu honek denbora pixka bat aurreztu bazenu, egin dezakezu [lagundu nire esperimentuak GitHub Sponsors telefonoan](https://github.com/sponsors/LanKing). ☕🔧
+[Proiektu honek denbora pixka bat aurreztu bazenu, nire esperimentuak onar ditzakezu](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

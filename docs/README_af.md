@@ -359,7 +359,7 @@ In YAML-modus [hulpbron handmatig byvoeg](#yaml-lovelace-mode).
 Hierdie projek word onder die [MIT](../LICENSE)-lisensie versprei.
 
 ## 👋 Jou ondersteuning
-As hierdie projek jou tyd gespaar het, kan jy [ondersteun my eksperimente op GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[As hierdie projek jou tyd gespaar het, kan jy my eksperimente ondersteun](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

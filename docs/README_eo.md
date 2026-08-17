@@ -359,7 +359,7 @@ En YAML-reĝimo [aldoni rimedon permane](#yaml-lovelace-mode).
 Ĉi tiu projekto estas distribuita sub la permesilo [MIT](../LICENSE).
 
 ## 👋 Via subteno
-Se ĉi tiu projekto ŝparis al vi iom da tempo, vi povas [subtenu miajn eksperimentojn pri GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Se ĉi tiu projekto ŝparis al vi iom da tempo, vi povas subteni miajn eksperimentojn](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

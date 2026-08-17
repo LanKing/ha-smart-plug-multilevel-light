@@ -359,7 +359,7 @@ YAML-tilassa [lisää resurssit manuaalisesti](#yaml-lovelace-mode).
 Tätä projektia jaetaan lisenssillä [MIT](../LICENSE).
 
 ## 👋 Sinun tukesi
-Jos tämä projekti säästää sinulta aikaa, voit tehdä sen [tue kokeitani numerossa GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Jos tämä projekti säästää aikaasi, voit tukea kokeiluani](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

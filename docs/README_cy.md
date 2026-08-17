@@ -359,7 +359,7 @@ Yn y modd YAML [ychwanegu adnodd â llaw](#yaml-lovelace-mode).
 Mae'r prosiect hwn yn cael ei ddosbarthu o dan y drwydded [MIT](../LICENSE).
 
 ## 👋 Eich cefnogaeth
-Pe bai'r prosiect hwn yn arbed peth amser i chi, gallwch chi [cefnogi fy arbrofion ar GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Pe bai'r prosiect hwn yn arbed peth amser i chi, gallwch gefnogi fy arbrofion](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

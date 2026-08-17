@@ -357,7 +357,7 @@ Në modalitetin YAML[shtoni burimin me dorë](#yaml-lovelace-mode).
 Ky projekt shpërndahet nën licencën [MIT](../LICENSE).
 
 ## 👋 Mbështetja juaj
-Nëse ky projekt ju kurseu pak kohë, mundeni [mbështetni eksperimentet e mia në GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Nëse ky projekt ju kurseu pak kohë, ju mund të mbështesni eksperimentet e mia](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

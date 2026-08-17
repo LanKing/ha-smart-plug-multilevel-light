@@ -357,7 +357,7 @@ Yn YAML modus[add boarne hânmjittich](#yaml-lovelace-mode).
 Dit projekt is ferspraat ûnder de lisinsje [MIT](../LICENSE).
 
 ## 👋 Jo stipe
-As dit projekt jo wat tiid hat bewarre, kinne jo [stypje myn eksperiminten op GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[As dit projekt jo wat tiid hat bewarre, kinne jo myn eksperiminten stypje](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

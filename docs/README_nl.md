@@ -357,7 +357,7 @@ In YAML-modus[handmatig een bron toevoegen](#yaml-lovelace-mode).
 Dit project wordt gedistribueerd onder de licentie [MIT](../LICENSE).
 
 ## 👋 Jouw steun
-Als dit project je wat tijd heeft bespaard, dan kan dat [steun mijn experimenten op GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Als dit project u wat tijd heeft bespaard, kunt u mijn experimenten steunen](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

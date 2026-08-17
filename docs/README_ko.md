@@ -357,7 +357,7 @@ YAML 모드에서[수동으로 리소스 추가](#yaml-lovelace-mode).
 이 프로젝트는 [MIT](../LICENSE) 라이센스에 따라 배포됩니다.
 
 ## 👋 귀하의 지원
-이 프로젝트로 시간이 절약되었다면 다음을 수행할 수 있습니다. [GitHub Sponsors에 대한 내 실험을 지원해 주세요](https://github.com/sponsors/LanKing). ☕🔧
+[이 프로젝트로 시간이 절약되었다면 제 실험을 지원해 주세요](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

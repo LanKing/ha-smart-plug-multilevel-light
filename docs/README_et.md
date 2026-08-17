@@ -359,7 +359,7 @@ YAML-režiimis [lisage ressurss käsitsi](#yaml-lovelace-mode).
 Seda projekti levitatakse litsentsi [MIT](../LICENSE) all.
 
 ## 👋 Teie toetus
-Kui see projekt säästis aega, saate seda teha [toetage minu katseid numbril GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Kui see projekt säästis aega, saate minu katseid toetada](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

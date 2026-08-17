@@ -357,7 +357,7 @@ I mód YAML[cuir acmhainn leis de láimh](#yaml-lovelace-mode).
 Déantar an tionscadal seo a dháileadh faoin gceadúnas [MIT](../LICENSE).
 
 ## 👋 Do thacaíocht
-Má shábháil an tionscadal seo roinnt ama duit, is féidir leat [tacú le mo thurgnaimh ar GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Má shábháil an tionscadal seo roinnt ama duit, is féidir leat tacú le mo thurgnaimh](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

@@ -357,7 +357,7 @@ Kiểm tr&#x61;**[Cài đặt → Bảng điều khiển → ⋮ → Tài nguyê
 Dự án này được phân phối theo giấy phép [MIT](../LICENSE).
 
 ## 👋 Hỗ trợ của bạn
-Nếu dự án này giúp bạn tiết kiệm thời gian, bạn có thể [hỗ trợ thí nghiệm của tôi trên GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Nếu dự án này giúp bạn tiết kiệm thời gian, bạn có thể hỗ trợ các thử nghiệm của tôi](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

@@ -357,7 +357,7 @@ lovelace:
 該項目根據 [MIT](../LICENSE) 許可證分發。
 
 ## 👋 您的支持
-如果这个项目为您节省了一些时间，您可以 [支持我在GitHub Sponsors上的實驗](https://github.com/sponsors/LanKing). ☕🔧
+[如果這個專案節省了您一些時間，您可以支持我的實驗。](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

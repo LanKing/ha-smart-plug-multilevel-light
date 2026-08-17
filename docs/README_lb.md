@@ -357,7 +357,7 @@ Am YAML Modus[Ressource manuell addéieren](#yaml-lovelace-mode).
 Dëse Projet gëtt ënner der Lizenz [MIT](../LICENSE) verdeelt.
 
 ## 👋 Är Ënnerstëtzung
-Wann dëse Projet Iech Zäit gespuert huet, kënnt Dir [Ënnerstëtzt meng Experimenter op GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Wann dëse Projet Iech Zäit gespuert huet, kënnt Dir meng Experimenter ënnerstëtzen](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

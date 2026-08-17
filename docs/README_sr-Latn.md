@@ -357,7 +357,7 @@ lovelace:
 Ovaj projekat se distribuira pod licencom [MIT](../LICENSE).
 
 ## 👋 Vaša podrška
-Ako vam je ovaj projekat uštedeo vreme, možete [podržite moje eksperimente na GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Ako vam je ovaj projekat uštedeo vreme, možete podržati moje eksperimente](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

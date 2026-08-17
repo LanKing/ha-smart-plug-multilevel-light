@@ -359,7 +359,7 @@ lovelace:
 این پروژه تحت مجوز [MIT](../LICENSE) توزیع شده است.
 
 ## 👋 حمایت شما
-اگر این پروژه در زمان شما صرفه جویی کرد، می توانید [از آزمایشات من در GitHub Sponsors پشتیبانی کنید](https://github.com/sponsors/LanKing). ☕🔧
+[اگر این پروژه در زمان شما صرفه جویی کرد، می توانید از آزمایشات من حمایت کنید](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

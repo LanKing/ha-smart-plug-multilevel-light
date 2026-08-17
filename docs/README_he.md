@@ -357,7 +357,7 @@ lovelace:
 פרויקט זה מופץ תחת הרישיון [MIT](../LICENSE).
 
 ## 👋 התמיכה שלך
-אם הפרויקט הזה חסך לך זמן, אתה יכול [תמכו בניסויים שלי ב-GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[אם הפרויקט הזה חסך לך זמן, אתה יכול לתמוך בניסויים שלי](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

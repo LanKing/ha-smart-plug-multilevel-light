@@ -357,7 +357,7 @@ YAML modunda[kaynağı manuel olarak ekle](#yaml-lovelace-mode).
 Bu proje [MIT](../LICENSE) lisansı altında dağıtılmaktadır.
 
 ## 👋 Desteğiniz
-Bu proje size biraz zaman kazandırdıysa şunları yapabilirsiniz: [GitHub Sponsors numaralı telefondaki deneylerimi destekleyin](https://github.com/sponsors/LanKing). ☕🔧
+[Bu proje size zaman kazandırdıysa deneylerime destek olabilirsiniz](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

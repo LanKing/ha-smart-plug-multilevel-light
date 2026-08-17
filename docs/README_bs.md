@@ -359,7 +359,7 @@ U YAML modu [ručno dodajte resurs](#yaml-lovelace-mode).
 Ovaj projekat se distribuira pod licencom [MIT](../LICENSE).
 
 ## 👋 Vaša podrška
-Ako vam je ovaj projekat uštedio malo vremena, možete [podržite moje eksperimente na GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Ako vam je ovaj projekat uštedio malo vremena, možete podržati moje eksperimente](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

@@ -357,7 +357,7 @@ Athugað&#x75;**[Stillingar → Spjöld → ⋮ → Tilföng](https://my.home-as
 Þessu verkefni er dreift undir [MIT](../LICENSE) leyfinu.
 
 ## 👋 Stuðningur þinn
-Ef þetta verkefni sparaði þér tíma geturðu það [styðja tilraunir mínar á GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Ef þetta verkefni sparaði þér tíma geturðu stutt tilraunir mínar](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

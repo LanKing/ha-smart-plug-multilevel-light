@@ -357,7 +357,7 @@ Verific&#x61;**[Setări → Panouri → ⋮ → Resurse](https://my.home-assista
 Acest proiect este distribuit sub licența [MIT](../LICENSE).
 
 ## 👋 Sprijinul dumneavoastră
-Dacă acest proiect ți-a economisit ceva timp, poți [susține-mi experimentele pe GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Dacă acest proiect v-a economisit ceva timp, puteți susține experimentele mele](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 

@@ -357,7 +357,7 @@ YAML režimu[pridėti išteklių rankiniu būdu](#yaml-lovelace-mode).
 Šis projektas platinamas pagal [MIT](../LICENSE) licenciją.
 
 ## 👋 Jūsų palaikymas
-Jei šis projektas sutaupė šiek tiek laiko, galite [palaikykite mano eksperimentus GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
+[Jei šis projektas jums sutaupė laiko, galite paremti mano eksperimentus](https://github.com/sponsors/LanKing) (GitHub Sponsors). ☕🔧
 
 <br />
 
