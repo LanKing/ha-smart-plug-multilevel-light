@@ -126,7 +126,7 @@ Kartica je dio integracije, dakle HACS nije potrebno za instalaciju. Nakon ručn
    * **Naziv svjetla (Light name)** — naziv entiteta koji se kreira, na primjer `FloorLamp`;
    * **Power sensor** - senzor snage utičnice;
 
-5. U sekciji **🔅 Režimi svjetline (🔅 Brightness modes)** dodajte barem jedan način osvjetljenja klikom **Dodaj**.<br /> <img src="modes-edit.png" width="465"/><br />
+5. U sekciji **🔅 Režimi svjetline (🔅 Brightness modes)** dodajte barem jedan način osvjetljenja klikom **Dodaj**.<br /> <img src="modes-edit.png" width="465"/>
    Uključite lampu pomoću njenog fizičkog dugmeta, unesite naziv režima i pokrenite **Test stable power**. Nakon što dobijete stabilnu vrijednost, pritisnite **Prijavite se**.
 
 6. Nakon što dodate prvi način rada, dodajte preostale načine ponavljanjem ovih koraka. Trebalo bi da završite sa nečim poput:<br />

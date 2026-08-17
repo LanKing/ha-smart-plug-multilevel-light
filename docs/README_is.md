@@ -125,7 +125,7 @@ Kortið er innifalið í samþættingunni, svo HACS þarf ekki að setja það u
    * **Heiti ljóss (Light name)**— nafn einingar sem verið er að stofna til, til dæmis`FloorLamp`;
    * **Power sensor**- rafmagnsskynjari fyrir innstungu;
 
-5. Í kaflanum**ZUI003Z**bættu við að minnsta kosti einum birtustillingu með því að smella**Bæta við**.<br /> <img src="modes-edit.png" width="465"/><br />Skiptu um lampann með líkamlegum hnappi hans, sláðu inn heiti stillingarinnar og byrjaðu**Test stable power**. Eftir að hafa fengið stöðugt gildi, ýttu á**Sækja um**.
+5. Í kaflanum**ZUI003Z**bættu við að minnsta kosti einum birtustillingu með því að smella**Bæta við**.<br /> <img src="modes-edit.png" width="465"/>Skiptu um lampann með líkamlegum hnappi hans, sláðu inn heiti stillingarinnar og byrjaðu**Test stable power**. Eftir að hafa fengið stöðugt gildi, ýttu á**Sækja um**.
 
 6. Eftir að fyrstu stillingunni hefur verið bætt við skaltu bæta við þeim stillingum sem eftir eru með því að endurtaka þessi skref. Þú ættir að enda með eitthvað eins og:<br />
    <img src="modes-list.png" width="457"/>

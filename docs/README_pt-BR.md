@@ -125,7 +125,7 @@ A placa está incluída na integração, portanto não é necessário o HACS par
    * **Nome da luz (Light name)**— o nome da entidade que está sendo criada, por exemplo`FloorLamp`;
    * **Power sensor**- sensor de potência da tomada;
 
-5. Na seção**ZUI003Z**adicione pelo menos um modo de brilho clicando em**Adicionar**.<br /> <img src="modes-edit.png" width="465"/><br />Troque a lâmpada com seu botão físico, digite o nome do modo e inicie**Test stable power**. Após obter um valor estável, pressione**Aplicar**.
+5. Na seção**ZUI003Z**adicione pelo menos um modo de brilho clicando em**Adicionar**.<br /> <img src="modes-edit.png" width="465"/>Troque a lâmpada com seu botão físico, digite o nome do modo e inicie**Test stable power**. Após obter um valor estável, pressione**Aplicar**.
 
 6. Depois de adicionar o primeiro modo, adicione os modos restantes repetindo estas etapas. Você deve terminar com algo como:<br />
    <img src="modes-list.png" width="457"/>

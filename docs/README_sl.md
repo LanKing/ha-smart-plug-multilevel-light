@@ -125,7 +125,7 @@ Kartica je vključena v integracijo, zato HACS ni potreben za njeno namestitev. 
    * **Ime luči (Light name)**— na primer ime subjekta, ki se ustvarja`FloorLamp`;
    * **Power sensor**- senzor moči vtičnice;
 
-5. V razdelku**ZUI003Z**dodajte vsaj en način svetlosti s klikom**Dodaj**.<br /> <img src="modes-edit.png" width="465"/><br />Preklopite svetilko s fizičnim gumbom, vnesite ime načina in zaženite**Test stable power**. Ko dobite stabilno vrednost, pritisnite**Prijavite se**.
+5. V razdelku**ZUI003Z**dodajte vsaj en način svetlosti s klikom**Dodaj**.<br /> <img src="modes-edit.png" width="465"/>Preklopite svetilko s fizičnim gumbom, vnesite ime načina in zaženite**Test stable power**. Ko dobite stabilno vrednost, pritisnite**Prijavite se**.
 
 6. Ko dodate prvi način, dodajte preostale načine tako, da ponovite te korake. Na koncu bi morali dobiti nekaj takega:<br />
    <img src="modes-list.png" width="457"/>

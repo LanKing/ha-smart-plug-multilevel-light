@@ -125,7 +125,7 @@ Kartu tersebut termasuk dalam integrasi, jadi HACS tidak diperlukan untuk mengin
    * **Nama lampu (Light name)**— nama entitas yang dibuat, misalnya`FloorLamp`;
    * **Power sensor**- sensor daya soket;
 
-5. Di bagian**ZUI003Z**tambahkan setidaknya satu mode kecerahan dengan mengklik**Menambahkan**.<br /> <img src="modes-edit.png" width="465"/><br />Ganti lampu dengan tombol fisiknya, masukkan nama mode dan mulai**Test stable power**. Setelah mendapatkan nilai stabil, tekan**Menerapkan**.
+5. Di bagian**ZUI003Z**tambahkan setidaknya satu mode kecerahan dengan mengklik**Menambahkan**.<br /> <img src="modes-edit.png" width="465"/>Ganti lampu dengan tombol fisiknya, masukkan nama mode dan mulai**Test stable power**. Setelah mendapatkan nilai stabil, tekan**Menerapkan**.
 
 6. Setelah menambahkan mode pertama, tambahkan mode lainnya dengan mengulangi langkah-langkah ini. Anda akan mendapatkan sesuatu seperti:<br />
    <img src="modes-list.png" width="457"/>

@@ -125,7 +125,7 @@ Karte ir iekļauta integrācijā, tāpēc tās instalēšanai HACS nav nepiecie�
    * **Gaismas nosaukums (Light name)**— piemēram, veidojamās entītijas nosaukums`FloorLamp`;
    * **Power sensor**- kontaktligzdas strāvas sensors;
 
-5. Sadaļā**ZUI003Z**pievienojiet vismaz vienu spilgtuma režīmu, noklikšķinot**Pievienot**.<br /> <img src="modes-edit.png" width="465"/><br />Pārslēdziet lampu ar tās fizisko pogu, ievadiet režīma nosaukumu un sāciet**Test stable power**. Pēc stabilas vērtības iegūšanas nospiediet**Pieteikties**.
+5. Sadaļā**ZUI003Z**pievienojiet vismaz vienu spilgtuma režīmu, noklikšķinot**Pievienot**.<br /> <img src="modes-edit.png" width="465"/>Pārslēdziet lampu ar tās fizisko pogu, ievadiet režīma nosaukumu un sāciet**Test stable power**. Pēc stabilas vērtības iegūšanas nospiediet**Pieteikties**.
 
 6. Pēc pirmā režīma pievienošanas pievienojiet atlikušos režīmus, atkārtojot šīs darbības. Jums vajadzētu beigties ar kaut ko līdzīgu:<br />
    <img src="modes-list.png" width="457"/>

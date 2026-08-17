@@ -126,7 +126,7 @@ Die Karte ist also Teil der Integration HACS es ist für die Installation nicht 
    * **Lichtname (Light name)** – zum Beispiel der Name der zu erstellenden Entität `FloorLamp`;
    * **Power sensor** - Steckdosen-Leistungssensor;
 
-5. Im Abschnitt **🔅 Helligkeitsmodi (🔅 Brightness modes)** Fügen Sie durch Klicken mindestens einen Helligkeitsmodus hinzu **Hinzufügen**.<br /> <img src="modes-edit.png" width="465"/><br />
+5. Im Abschnitt **🔅 Helligkeitsmodi (🔅 Brightness modes)** Fügen Sie durch Klicken mindestens einen Helligkeitsmodus hinzu **Hinzufügen**.<br /> <img src="modes-edit.png" width="465"/>
    Schalten Sie die Lampe mit der physischen Taste ein, geben Sie den Namen des Modus ein und starten Sie **Test stable power**. Nachdem Sie einen stabilen Wert erreicht haben, drücken Sie **Anwenden**.
 
 6. Nachdem Sie den ersten Modus hinzugefügt haben, fügen Sie die restlichen Modi hinzu, indem Sie diese Schritte wiederholen. Am Ende sollten Sie so etwas erhalten:<br />

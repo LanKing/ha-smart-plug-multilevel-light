@@ -123,7 +123,7 @@ Karta jest częścią integracji, więc HACS nie jest potrzebny do jej instalacj
    - **Nazwa światła** — nazwa tworzonej encji, na przykład `FloorLamp`;
    - **Czujnik mocy** — czujnik mocy gniazdka.
 5. W sekcji **🔅 Tryby jasności** dodaj co najmniej jeden tryb jasności, klikając **Dodaj**.<br />
-<img src="modes-edit.png" width="465"/><br />
+<img src="modes-edit.png" width="465"/>
 Przełącz lampę jej fizycznym przyciskiem, wpisz nazwę trybu i uruchom **Test stable power**. Po uzyskaniu stabilnej wartości kliknij **Zastosuj**.
 
 6. Po dodaniu pierwszego trybu dodaj pozostałe, powtarzając te czynności. Rezultat powinien wyglądać mniej więcej tak:<br />

@@ -126,7 +126,7 @@ Die kaart is deel van die integrasie, dus HACS dit is nie nodig vir installasie 
    * **Lignaam (Light name)** — die naam van die entiteit wat geskep word, byvoorbeeld `FloorLamp`;
    * **Power sensor** - sok krag sensor;
 
-5. In die afdeling **🔅 Helderheidsmodusse (🔅 Brightness modes)** voeg ten minste een helderheidsmodus by deur te klik **Voeg by**.<br /> <img src="modes-edit.png" width="465"/><br />
+5. In die afdeling **🔅 Helderheidsmodusse (🔅 Brightness modes)** voeg ten minste een helderheidsmodus by deur te klik **Voeg by**.<br /> <img src="modes-edit.png" width="465"/>
    Skakel die lamp met sy fisiese knoppie, voer die naam van die modus in en begin **Test stable power**. Nadat u 'n stabiele waarde verkry het, druk **Doen aansoek**.
 
 6. Nadat u die eerste modus bygevoeg het, voeg die oorblywende modusse by deur hierdie stappe te herhaal. Jy moet eindig met iets soos:<br />

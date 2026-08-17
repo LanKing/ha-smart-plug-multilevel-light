@@ -126,7 +126,7 @@ Kaart on osa integratsioonist, seega HACS see pole paigaldamiseks vajalik. Pära
    * **Valguse nimi (Light name)** — näiteks loodava üksuse nimi `FloorLamp`;
    * **Power sensor** - pistikupesa võimsusandur;
 
-5. Jaotises **🔅 Heledusrežiimid (🔅 Brightness modes)** lisage klõpsuga vähemalt üks heledusrežiim **Lisa**.<br /> <img src="modes-edit.png" width="465"/><br />
+5. Jaotises **🔅 Heledusrežiimid (🔅 Brightness modes)** lisage klõpsuga vähemalt üks heledusrežiim **Lisa**.<br /> <img src="modes-edit.png" width="465"/>
    Lülitage lamp selle füüsilise nupuga, sisestage režiimi nimi ja käivitage **Test stable power**. Pärast stabiilse väärtuse saamist vajutage nuppu **Rakenda**.
 
 6. Pärast esimese režiimi lisamist lisage neid samme korrates ülejäänud režiimid. Peaksite lõppema millegi sellisega:<br />

@@ -125,7 +125,7 @@ Kortet er inkludert i integrasjonen, så HACS er ikke nødvendig for å installe
    * **Lysnamn (Light name)**– navnet på enheten som opprettes, for eksempel`FloorLamp`;
    * **Power sensor**- strømsensor for stikkontakt;
 
-5. I seksjonen**ZUI003Z**legg til minst én lysstyrkemodus ved å klikke**Legge til**.<br /> <img src="modes-edit.png" width="465"/><br />Bytt lampen med den fysiske knappen, skriv inn navnet på modusen og start**Test stable power**. Etter å ha oppnådd en stabil verdi, trykk**Søke**.
+5. I seksjonen**ZUI003Z**legg til minst én lysstyrkemodus ved å klikke**Legge til**.<br /> <img src="modes-edit.png" width="465"/>Bytt lampen med den fysiske knappen, skriv inn navnet på modusen og start**Test stable power**. Etter å ha oppnådd en stabil verdi, trykk**Søke**.
 
 6. Etter å ha lagt til den første modusen, legg til de resterende modusene ved å gjenta disse trinnene. Du bør ende opp med noe sånt som:<br />
    <img src="modes-list.png" width="457"/>

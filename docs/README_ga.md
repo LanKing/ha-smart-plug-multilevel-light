@@ -125,7 +125,7 @@ Tá an cárta san áireamh sa chomhtháthú, mar sin ní gá HACS a shuiteáil. 
    * **Ainm an tsolais (Light name)**— ainm an eintitis atá á chruthú, mar shampla`FloorLamp`;
    * **Power sensor**- braiteoir cumhachta soicéad;
 
-5. Sa rannóg**ZUI003Z**cuir modh gile amháin ar a laghad trí chliceáil**Cuir**.<br /> <img src="modes-edit.png" width="465"/><br />Athraigh an lampa lena cnaipe fisiceach, cuir isteach ainm an mhodha agus tús a chur leis**Test stable power**. Tar éis luach cobhsaí a fháil, brúigh**Cuir iarratas isteach**.
+5. Sa rannóg**ZUI003Z**cuir modh gile amháin ar a laghad trí chliceáil**Cuir**.<br /> <img src="modes-edit.png" width="465"/>Athraigh an lampa lena cnaipe fisiceach, cuir isteach ainm an mhodha agus tús a chur leis**Test stable power**. Tar éis luach cobhsaí a fháil, brúigh**Cuir iarratas isteach**.
 
 6. Tar éis an chéad mhodh a chur leis, cuir na modhanna atá fágtha leis trí na céimeanna seo a athrá. Ba cheart duit deireadh a chur le rud éigin mar:<br />
    <img src="modes-list.png" width="457"/>
