@@ -1,0 +1,53 @@
+name: Fix README image widths
+
+on:
+  push:
+    paths:
+      - ".github/workflows/fix-readme-image-widths.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set fixed half-size image widths
+        run: |
+          python <<'PY'
+          from pathlib import Path
+
+          paths = [Path("README.md"), *sorted(Path("docs").glob("README_*.md"))]
+          replacements = {
+              'modes-edit.png" width="50%"': 'modes-edit.png" width="465"',
+              'modes-list.png" width="50%"': 'modes-list.png" width="457"',
+          }
+
+          changed = []
+          for path in paths:
+              text = path.read_text(encoding="utf-8")
+              original = text
+              for old, new in replacements.items():
+                  text = text.replace(old, new)
+              if text != original:
+                  path.write_text(text, encoding="utf-8")
+                  changed.append(str(path))
+
+          print(f"Changed {len(changed)} README files")
+          for path in changed:
+              print(path)
+          PY
+
+      - name: Commit README changes and remove one-off workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/fix-readme-image-widths.yml
+          git add README.md docs/README_*.md
+          git commit -m "Use fixed pixel widths for README images"
+          git pull --rebase origin main
+          git push
