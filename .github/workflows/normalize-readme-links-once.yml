@@ -1,0 +1,32 @@
+name: Normalize README links once
+
+on:
+  push:
+    paths:
+      - ".github/workflows/normalize-readme-links-once.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Normalize README navigation links
+        run: python scripts/normalize_readme_links.py
+      - name: Commit normalized README files
+        run: |
+          if git diff --quiet -- README.md docs/README_*.md; then
+            echo "README navigation links are already normalized."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md docs/README_*.md
+          git commit -m "Use absolute README navigation links"
+          git pull --rebase
+          git push
