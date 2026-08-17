@@ -1,0 +1,50 @@
+name: Remove localized README image break
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/remove-localized-readme-image-break.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove br after localized modes-edit image
+        run: |
+          python <<'PY'
+          from pathlib import Path
+
+          paths = sorted(Path("docs").glob("README_*.md"))
+          old = '<img src="modes-edit.png" width="465"/><br />'
+          new = '<img src="modes-edit.png" width="465"/>'
+
+          changed = []
+          for path in paths:
+              text = path.read_text(encoding="utf-8")
+              updated = text.replace(old, new)
+              if updated != text:
+                  path.write_text(updated, encoding="utf-8")
+                  changed.append(str(path))
+
+          print(f"Changed {len(changed)} localized README files")
+          for path in changed:
+              print(path)
+          PY
+
+      - name: Commit README changes and remove one-off workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/remove-localized-readme-image-break.yml
+          git add docs/README_*.md
+          git commit -m "Remove line break after localized README mode image"
+          git pull --rebase origin main
+          git push
