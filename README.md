@@ -6,6 +6,7 @@
 <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-smart-plug-multilevel-light?label=release&cacheSeconds=300" alt="Latest release"></a>
 <a href="https://github.com/LanKing/ha-smart-plug-multilevel-light/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-smart-plug-multilevel-light/total?label=downloads&color=95991a&cacheSeconds=300" alt="Downloads"></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-smart-plug-multilevel-light?cacheSeconds=300" alt="License"></a>
+<a href="https://github.com/sponsors/LanKing"><img src="https://img.shields.io/badge/☕-Support%20my%20work-ea4aaa" alt="Support my work"></a>
 
 > This integration combines a lamp without digital controls and a smart plug into a single Home Assistant entity. It determines the lamp's state and current brightness mode from power consumption, displays them in a card, and can turn on a lamp that was switched off with its own button by briefly cutting and restoring power through the smart plug.
 
@@ -348,6 +349,9 @@ In YAML mode, [add the resource manually](#yaml-lovelace-mode).
 ## 📄 License
 
 This project is distributed under the [MIT License](LICENSE).
+
+## 👋 Your support
+If this project saved you some time, you can [support my experiments on GitHub Sponsors](https://github.com/sponsors/LanKing). ☕🔧
 
 <br />
 
