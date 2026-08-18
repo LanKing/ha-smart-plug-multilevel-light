@@ -1,0 +1,49 @@
+name: Recreate HACS test prerelease 4
+
+on:
+  push:
+    paths:
+      - .github/workflows/recreate-test-prerelease-4-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  recreate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Delete previous prerelease and tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete v0.10.11-test.3 --yes --cleanup-tag || true
+
+      - name: Create new prerelease and HACS asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git tag v0.10.11-test.4
+          git push origin v0.10.11-test.4
+          cd custom_components/smart_plug_multilevel_light
+          zip -r "$GITHUB_WORKSPACE/smart-plug-multilevel-light.zip" .
+          cd "$GITHUB_WORKSPACE"
+          gh release create v0.10.11-test.4 \
+            smart-plug-multilevel-light.zip \
+            --title "v0.10.11-test.4" \
+            --notes "Temporary HACS cache-bypass prerelease." \
+            --prerelease
+
+      - name: Remove this one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/recreate-test-prerelease-4-once.yml
+          git commit -m "Remove one-time prerelease 4 workflow"
+          git push
