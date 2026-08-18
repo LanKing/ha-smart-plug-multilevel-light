@@ -46,7 +46,87 @@ Esta descripción es relevante solo para propietarios de enchufes conectados a t
 2. Ir a la sección **Dispositivos**.
 3. Seleccione la salida requerida.
 4. Abre la pestaña **Configuración (específica)**.
-5. los cambios **Intervalo de sondeo de medición** en 1 s. <a id="installation"></a> ## 📦 Instalación ### 🛍 Instalación mediante HACS ℹ️ [Qué ha pasado HACS y como instalarlo?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_es.md) 🚀 [Intente agregar un repositorio en el enlace](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Si su HA admite este método, haga clic en **Agregar** en la ventana que se abre, y luego el botón **Descargar** en la esquina inferior derecha. Si la instalación se completó correctamente, puede omitir pasos adicionales. Saltar directamente a la sección [inicio rápido](#getting-started). #### 1. Agregar un repositorio El repositorio aún no está incluido en el directorio estándar. HACS, agréguelo como personalizado: 1. Abierto **HACS → Integraciones**. 2. Abra el menú en la esquina superior derecha y seleccione **Repositorios personalizados**. 3. Agregar: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Seleccionar tipo **Integración** y presione **Agregar**. > Agregar un repositorio solo hace que la integración esté disponible en HACS. Para instalar, debe abrir su tarjeta por separado y hacer clic **Descargar**. #### 2. Instalación de integración 1. encontrar en HACS: Smart Plug Multi-Level Light. 2. Abra la integración y haga clic **Descargar**. 3. Después de la instalación, reinicie completamente Home Assistant. <a id="manual-installation"></a> ### 🧑‍💻 Instalación sin HACS 1. En la página del repositorio, haga clic en **Código → Descargar ZIP**. 2. Desempaquete el archivo. 3. Copia la carpeta: ```text custom_components/smart_plug_multilevel_light ``` al directorio de configuración Home Assistant: ```text /config/custom_components/smart_plug_multilevel_light ``` Ruta del archivo final `manifest.json` debería verse así: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. reiniciar completamente Home Assistant. > No copie toda la carpeta del repositorio externo a `custom_components`. Adentro `custom_components` la carpeta debe estar ubicada directamente `smart_plug_multilevel_light`. La tarjeta es parte de la integración, por lo que HACS no es necesario para la instalación. Después de copiar archivos manualmente, reiniciar Home Assistant y creando el primer objeto auxiliar, la integración publica el archivo de tarjeta JavaScript y lo registra automáticamente con los recursos del panel en modo estándar `storage`. En el modo de recursos YAML, la tarjeta debe registrarse manualmente, como se describe a continuación. <a id="getting-started"></a> ## 🚀 Inicio rápido después de la instalación ### 🛠 Configuración 1. Abierto **[Ajustes → Dispositivos y servicios → Accesorios](https://my.home-assistant.io/redirect/helpers/)** y presione **Crear objeto auxiliar**. 2. Seleccionar **Smart Plug Multi-Level Light**. 3. Seleccione el enchufe inteligente al que está conectada la lámpara. La lista muestra sólo los enchufes que tienen Home Assistant ve el sensor de potencia en el mismo dispositivo. 4. En el siguiente paso, configure los parámetros de la lámpara: * **Nombre de la luz (Light name)** — el nombre de la entidad que se está creando, por ejemplo `FloorLamp`; * **Power sensor** - sensor de potencia del enchufe; 5. en la sección **🔅 Modos de brillo (🔅 Brightness modes)** agregue al menos un modo de brillo haciendo clic **Agregar**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Cambie la lámpara con su botón físico, ingrese el nombre del modo y comience **Test stable power**. Después de obtener un valor estable, presione **Aplicar**.<br />&nbsp;
+5. los cambios **Intervalo de sondeo de medición** en 1 s.
+
+<a id="installation"></a>
+
+## 📦 Instalación
+
+### 🛍 Instalación mediante HACS
+
+ℹ️ [Qué ha pasado HACS y como instalarlo?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_es.md)
+
+🚀 [Intente agregar un repositorio en el enlace](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Si su HA admite este método, haga clic en **Agregar** en la ventana que se abre, y luego el botón **Descargar** en la esquina inferior derecha. Si la instalación se completó correctamente, puede omitir pasos adicionales. Saltar directamente a la sección [inicio rápido](#getting-started).
+
+#### 1. Agregar un repositorio
+
+El repositorio aún no está incluido en el directorio estándar. HACS, agréguelo como personalizado:
+
+1. Abierto **HACS → Integraciones**.
+2. Abra el menú en la esquina superior derecha y seleccione **Repositorios personalizados**.
+3. Agregar:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Seleccionar tipo **Integración** y presione **Agregar**.
+
+> Agregar un repositorio solo hace que la integración esté disponible en HACS. Para instalar, debe abrir su tarjeta por separado y hacer clic **Descargar**.
+
+#### 2. Instalación de integración
+
+1. encontrar en HACS: Smart Plug Multi-Level Light.
+2. Abra la integración y haga clic **Descargar**.
+3. Después de la instalación, reinicie completamente Home Assistant.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Instalación sin HACS
+
+1. En la página del repositorio, haga clic en **Código → Descargar ZIP**.
+2. Desempaquete el archivo.
+3. Copia la carpeta:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+al directorio de configuración Home Assistant:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Ruta del archivo final `manifest.json` debería verse así:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. reiniciar completamente Home Assistant.
+
+> No copie toda la carpeta del repositorio externo a `custom_components`. Adentro `custom_components` la carpeta debe estar ubicada directamente `smart_plug_multilevel_light`.
+
+La tarjeta es parte de la integración, por lo que HACS no es necesario para la instalación. Después de copiar archivos manualmente, reiniciar Home Assistant y creando el primer objeto auxiliar, la integración publica el archivo de tarjeta JavaScript y lo registra automáticamente con los recursos del panel en modo estándar `storage`. En el modo de recursos YAML, la tarjeta debe registrarse manualmente, como se describe a continuación.
+
+<a id="getting-started"></a>
+
+## 🚀 Inicio rápido después de la instalación
+
+### 🛠 Configuración
+
+1. Abierto **[Ajustes → Dispositivos y servicios → Accesorios](https://my.home-assistant.io/redirect/helpers/)** y presione **Crear objeto auxiliar**.
+
+2. Seleccionar **Smart Plug Multi-Level Light**.
+
+3. Seleccione el enchufe inteligente al que está conectada la lámpara. La lista muestra sólo los enchufes que tienen Home Assistant ve el sensor de potencia en el mismo dispositivo.
+
+4. En el siguiente paso, configure los parámetros de la lámpara:
+   * **Nombre de la luz (Light name)** — el nombre de la entidad que se está creando, por ejemplo `FloorLamp`;
+   * **Power sensor** - sensor de potencia del enchufe;
+
+5. en la sección **🔅 Modos de brillo (🔅 Brightness modes)** agregue al menos un modo de brillo haciendo clic **Agregar**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Cambie la lámpara con su botón físico, ingrese el nombre del modo y comience **Test stable power**. Después de obtener un valor estable, presione **Aplicar**.<br />&nbsp;
 6. Después de agregar el primer modo, agregue los modos restantes repitiendo estos pasos. Deberías terminar con algo como:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Guarde el objeto auxiliar. Home Assistant creará una nueva entidad `light`, Por ejemplo `light.FloorLamp`.
 

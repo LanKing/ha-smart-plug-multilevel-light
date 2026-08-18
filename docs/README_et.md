@@ -46,7 +46,87 @@ See kirjeldus kehtib ainult kaudu ühendatud pistikupesade omanike jaoks Z2M. Te
 2. Mine jaotisse **Seadmed**.
 3. Valige vajalik pistikupesa.
 4. Avage vahekaart **Seaded (konkreetsed)**.
-5. Muutused **Mõõtmise küsitluse intervall** 1 s peal. <a id="installation"></a> ## 📦 Paigaldamine ### 🛍 Paigaldamine läbi HACS ℹ️ [Mis juhtus HACS ja kuidas seda paigaldada?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_et.md) 🚀 [Proovige lingil hoidla lisada](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Kui teie HA toetab seda meetodit, klõpsake nuppu **Lisa** avanevas aknas ja seejärel nuppu **Laadi alla** paremas alanurgas. Kui installimine lõppes edukalt, võite edasised sammud vahele jätta. Liikuge otse jaotisse [kiire algus](#getting-started). #### 1. Hoidla lisamine Hoidla ei ole veel standardkataloogi lisatud HACS, lisage see kohandatud kujul: 1. Avatud **HACS → Integratsioonid**. 2. Avage paremas ülanurgas menüü ja valige **Kohandatud hoidlad**. 3. Lisa: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Valige tüüp **Integratsioon** ja vajutage **Lisa**. > Hoidla lisamine muudab integratsiooni kättesaadavaks ainult HACS. Installimiseks peate selle kaardi eraldi avama ja klõpsama **Laadi alla**. #### 2. Integratsiooni paigaldamine 1. Otsi sisse HACS: Smart Plug Multi-Level Light. 2. Avage integreerimine ja klõpsake nuppu **Laadi alla**. 3. Pärast installimist taaskäivitage täielikult Home Assistant. <a id="manual-installation"></a> ### 🧑‍💻 Paigaldamine ilma HACS 1. Hoidla lehel klõpsake nuppu **Kood → Laadi ZIP alla**. 2. Pakkige arhiiv lahti. 3. Kopeerige kaust: ```text custom_components/smart_plug_multilevel_light ``` konfiguratsioonikataloogi Home Assistant: ```text /config/custom_components/smart_plug_multilevel_light ``` Lõplik failitee `manifest.json` peaks välja nägema selline: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Täielikult taaskäivitage Home Assistant. > Ärge kopeerige kogu välise hoidla kausta `custom_components`. Sees `custom_components` kaust peab asuma otse `smart_plug_multilevel_light`. Kaart on osa integratsioonist, seega HACS see pole paigaldamiseks vajalik. Pärast failide käsitsi kopeerimist taaskäivitage Home Assistant ja esimese abiobjekti loomisel avaldab integratsioon JavaScripti kaardi faili ja registreerib selle automaatselt paneeli ressurssidega standardrežiimis `storage`. YAML-i ressursirežiimis tuleb kaart registreerida käsitsi, nagu allpool kirjeldatud. <a id="getting-started"></a> ## 🚀 Kiire käivitamine pärast paigaldamist ### 🛠 Konfiguratsioon 1. Avatud **[Seaded → Seadmed ja teenused → Tarvikud](https://my.home-assistant.io/redirect/helpers/)** ja vajutage **Abiobjekti loomine**. 2. Valige **Smart Plug Multi-Level Light**. 3. Valige nutikas pistik, millega lamp on ühendatud. Loendis kuvatakse ainult pistikupesad, millel on Home Assistant näeb samas seadmes võimsusandurit. 4. Järgmises etapis määrake lambi parameetrid: * **Valguse nimi (Light name)** — näiteks loodava üksuse nimi `FloorLamp`; * **Power sensor** - pistikupesa võimsusandur; 5. Jaotises **🔅 Heledusrežiimid (🔅 Brightness modes)** lisage klõpsuga vähemalt üks heledusrežiim **Lisa**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Lülitage lamp selle füüsilise nupuga, sisestage režiimi nimi ja käivitage **Test stable power**. Pärast stabiilse väärtuse saamist vajutage nuppu **Rakenda**.<br />&nbsp;
+5. Muutused **Mõõtmise küsitluse intervall** 1 s peal.
+
+<a id="installation"></a>
+
+## 📦 Paigaldamine
+
+### 🛍 Paigaldamine läbi HACS
+
+ℹ️ [Mis juhtus HACS ja kuidas seda paigaldada?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_et.md)
+
+🚀 [Proovige lingil hoidla lisada](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Kui teie HA toetab seda meetodit, klõpsake nuppu **Lisa** avanevas aknas ja seejärel nuppu **Laadi alla** paremas alanurgas. Kui installimine lõppes edukalt, võite edasised sammud vahele jätta. Liikuge otse jaotisse [kiire algus](#getting-started).
+
+#### 1. Hoidla lisamine
+
+Hoidla ei ole veel standardkataloogi lisatud HACS, lisage see kohandatud kujul:
+
+1. Avatud **HACS → Integratsioonid**.
+2. Avage paremas ülanurgas menüü ja valige **Kohandatud hoidlad**.
+3. Lisa:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Valige tüüp **Integratsioon** ja vajutage **Lisa**.
+
+> Hoidla lisamine muudab integratsiooni kättesaadavaks ainult HACS. Installimiseks peate selle kaardi eraldi avama ja klõpsama **Laadi alla**.
+
+#### 2. Integratsiooni paigaldamine
+
+1. Otsi sisse HACS: Smart Plug Multi-Level Light.
+2. Avage integreerimine ja klõpsake nuppu **Laadi alla**.
+3. Pärast installimist taaskäivitage täielikult Home Assistant.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Paigaldamine ilma HACS
+
+1. Hoidla lehel klõpsake nuppu **Kood → Laadi ZIP alla**.
+2. Pakkige arhiiv lahti.
+3. Kopeerige kaust:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+konfiguratsioonikataloogi Home Assistant:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Lõplik failitee `manifest.json` peaks välja nägema selline:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Täielikult taaskäivitage Home Assistant.
+
+> Ärge kopeerige kogu välise hoidla kausta `custom_components`. Sees `custom_components` kaust peab asuma otse `smart_plug_multilevel_light`.
+
+Kaart on osa integratsioonist, seega HACS see pole paigaldamiseks vajalik. Pärast failide käsitsi kopeerimist taaskäivitage Home Assistant ja esimese abiobjekti loomisel avaldab integratsioon JavaScripti kaardi faili ja registreerib selle automaatselt paneeli ressurssidega standardrežiimis `storage`. YAML-i ressursirežiimis tuleb kaart registreerida käsitsi, nagu allpool kirjeldatud.
+
+<a id="getting-started"></a>
+
+## 🚀 Kiire käivitamine pärast paigaldamist
+
+### 🛠 Konfiguratsioon
+
+1. Avatud **[Seaded → Seadmed ja teenused → Tarvikud](https://my.home-assistant.io/redirect/helpers/)** ja vajutage **Abiobjekti loomine**.
+
+2. Valige **Smart Plug Multi-Level Light**.
+
+3. Valige nutikas pistik, millega lamp on ühendatud. Loendis kuvatakse ainult pistikupesad, millel on Home Assistant näeb samas seadmes võimsusandurit.
+
+4. Järgmises etapis määrake lambi parameetrid:
+   * **Valguse nimi (Light name)** — näiteks loodava üksuse nimi `FloorLamp`;
+   * **Power sensor** - pistikupesa võimsusandur;
+
+5. Jaotises **🔅 Heledusrežiimid (🔅 Brightness modes)** lisage klõpsuga vähemalt üks heledusrežiim **Lisa**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Lülitage lamp selle füüsilise nupuga, sisestage režiimi nimi ja käivitage **Test stable power**. Pärast stabiilse väärtuse saamist vajutage nuppu **Rakenda**.<br />&nbsp;
 6. Pärast esimese režiimi lisamist lisage neid samme korrates ülejäänud režiimid. Peaksite lõppema millegi sellisega:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Salvestage abiobjekt. Home Assistant loob uue üksuse `light`, Näiteks `light.FloorLamp`.
 

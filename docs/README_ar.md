@@ -46,7 +46,87 @@
 2. اذهب إلى القسم **الأجهزة**.
 3. حدد المنفذ المطلوب.
 4. افتح علامة التبويب **الإعدادات (محددة)**.
-5. التغييرات **الفاصل الزمني لاستقصاء القياس** في 1 ثانية. <a id="installation"></a> ## 📦 التثبيت ### 🛍 التثبيت عن طريق HACS ℹ️ [ماذا حدث HACS وكيفية تثبيته؟](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ar.md) 🚀 [حاول إضافة مستودع على الرابط](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). إذا كان HA الخاص بك يدعم هذه الطريقة، فانقر فوق **يضيف** في النافذة التي تفتح، ثم الزر **تحميل** في الزاوية اليمنى السفلى. إذا تم التثبيت بنجاح، يمكنك تخطي الخطوات الإضافية. انتقل مباشرة إلى القسم [بداية سريعة](#getting-started). #### 1. إضافة مستودع لم يتم تضمين المستودع بعد في الدليل القياسي HACS، قم بإضافته حسب الطلب: 1. يفتح **HACS → التكامل**. 2. افتح القائمة في الزاوية اليمنى العليا واختر **المستودعات المخصصة**. 3. يضيف: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. اختر النوع **اندماج** واضغط **يضيف**. > تؤدي إضافة مستودع إلى جعل التكامل متاحًا فقط في HACS. للتثبيت، تحتاج إلى فتح بطاقتها بشكل منفصل والنقر عليها **تحميل**. #### 2. تركيب التكامل 1. تجد في HACS: Smart Plug Multi-Level Light. 2. افتح التكامل وانقر **تحميل**. 3. بعد التثبيت، أعد التشغيل بالكامل Home Assistant. <a id="manual-installation"></a> ### 🧑‍💻التركيب بدون HACS 1. في صفحة المستودع، انقر فوق **الكود → تنزيل ZIP**. 2. قم بفك ضغط الأرشيف. 3. انسخ المجلد: ```text custom_components/smart_plug_multilevel_light ``` إلى دليل التكوين Home Assistant: ```text /config/custom_components/smart_plug_multilevel_light ``` المسار النهائي للملف `manifest.json` يجب أن يبدو مثل هذا: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. إعادة التشغيل بالكامل Home Assistant. > لا تقم بنسخ مجلد المستودع الخارجي بأكمله إلى `custom_components`. داخل `custom_components` يجب أن يكون المجلد موجودا مباشرة `smart_plug_multilevel_light`. البطاقة جزء من التكامل، لذلك HACS ليس مطلوبا للتثبيت. بعد نسخ الملفات يدويًا، قم بإعادة التشغيل Home Assistant وإنشاء أول كائن مساعد، يقوم التكامل بنشر ملف بطاقة JavaScript وتسجيله تلقائيًا مع موارد اللوحة في الوضع القياسي `storage`. في وضع موارد YAML، يجب تسجيل البطاقة يدويًا، كما هو موضح أدناه. <a id="getting-started"></a> ## 🚀 بداية سريعة بعد التثبيت ### 🛠 التكوين 1. يفتح **[الإعدادات ← الأجهزة والخدمات ← الملحقات](https://my.home-assistant.io/redirect/helpers/)** واضغط **إنشاء كائن مساعد**. 2. يختار **Smart Plug Multi-Level Light**. 3. حدد القابس الذكي الذي يتصل به المصباح. تعرض القائمة فقط المقابس التي تحتوي على Home Assistant يرى مستشعر الطاقة في نفس الجهاز. 4. في الخطوة التالية، قم بتعيين معلمات المصباح: * **اسم الإضاءة (Light name)** — اسم الكيان الذي يتم إنشاؤه، على سبيل المثال `FloorLamp`; * **Power sensor** - مستشعر طاقة المقبس؛ 5. في القسم **🔅 أوضاع السطوع (🔅 Brightness modes)** قم بإضافة وضع سطوع واحد على الأقل عن طريق النقر **يضيف**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />قم بتبديل المصباح بزره الفعلي، وأدخل اسم الوضع وابدأ **Test stable power**. بعد الحصول على قيمة ثابتة، اضغط على **يتقدم**.<br />&nbsp;
+5. التغييرات **الفاصل الزمني لاستقصاء القياس** في 1 ثانية.
+
+<a id="installation"></a>
+
+## 📦 التثبيت
+
+### 🛍 التثبيت عن طريق HACS
+
+ℹ️ [ماذا حدث HACS وكيفية تثبيته؟](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ar.md)
+
+🚀 [حاول إضافة مستودع على الرابط](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). إذا كان HA الخاص بك يدعم هذه الطريقة، فانقر فوق **يضيف** في النافذة التي تفتح، ثم الزر **تحميل** في الزاوية اليمنى السفلى. إذا تم التثبيت بنجاح، يمكنك تخطي الخطوات الإضافية. انتقل مباشرة إلى القسم [بداية سريعة](#getting-started).
+
+#### 1. إضافة مستودع
+
+لم يتم تضمين المستودع بعد في الدليل القياسي HACS، قم بإضافته حسب الطلب:
+
+1. يفتح **HACS → التكامل**.
+2. افتح القائمة في الزاوية اليمنى العليا واختر **المستودعات المخصصة**.
+3. يضيف:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. اختر النوع **اندماج** واضغط **يضيف**.
+
+> تؤدي إضافة مستودع إلى جعل التكامل متاحًا فقط في HACS. للتثبيت، تحتاج إلى فتح بطاقتها بشكل منفصل والنقر عليها **تحميل**.
+
+#### 2. تركيب التكامل
+
+1. تجد في HACS: Smart Plug Multi-Level Light.
+2. افتح التكامل وانقر **تحميل**.
+3. بعد التثبيت، أعد التشغيل بالكامل Home Assistant.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻التركيب بدون HACS
+
+1. في صفحة المستودع، انقر فوق **الكود → تنزيل ZIP**.
+2. قم بفك ضغط الأرشيف.
+3. انسخ المجلد:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+إلى دليل التكوين Home Assistant:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+المسار النهائي للملف `manifest.json` يجب أن يبدو مثل هذا:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. إعادة التشغيل بالكامل Home Assistant.
+
+> لا تقم بنسخ مجلد المستودع الخارجي بأكمله إلى `custom_components`. داخل `custom_components` يجب أن يكون المجلد موجودا مباشرة `smart_plug_multilevel_light`.
+
+البطاقة جزء من التكامل، لذلك HACS ليس مطلوبا للتثبيت. بعد نسخ الملفات يدويًا، قم بإعادة التشغيل Home Assistant وإنشاء أول كائن مساعد، يقوم التكامل بنشر ملف بطاقة JavaScript وتسجيله تلقائيًا مع موارد اللوحة في الوضع القياسي `storage`. في وضع موارد YAML، يجب تسجيل البطاقة يدويًا، كما هو موضح أدناه.
+
+<a id="getting-started"></a>
+
+## 🚀 بداية سريعة بعد التثبيت
+
+### 🛠 التكوين
+
+1. يفتح **[الإعدادات ← الأجهزة والخدمات ← الملحقات](https://my.home-assistant.io/redirect/helpers/)** واضغط **إنشاء كائن مساعد**.
+
+2. يختار **Smart Plug Multi-Level Light**.
+
+3. حدد القابس الذكي الذي يتصل به المصباح. تعرض القائمة فقط المقابس التي تحتوي على Home Assistant يرى مستشعر الطاقة في نفس الجهاز.
+
+4. في الخطوة التالية، قم بتعيين معلمات المصباح:
+   * **اسم الإضاءة (Light name)** — اسم الكيان الذي يتم إنشاؤه، على سبيل المثال `FloorLamp`;
+   * **Power sensor** - مستشعر طاقة المقبس؛
+
+5. في القسم **🔅 أوضاع السطوع (🔅 Brightness modes)** قم بإضافة وضع سطوع واحد على الأقل عن طريق النقر **يضيف**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />قم بتبديل المصباح بزره الفعلي، وأدخل اسم الوضع وابدأ **Test stable power**. بعد الحصول على قيمة ثابتة، اضغط على **يتقدم**.<br />&nbsp;
 6. بعد إضافة الوضع الأول، قم بإضافة الأوضاع المتبقية من خلال تكرار هذه الخطوات. يجب أن ينتهي بك الأمر بشيء مثل:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. احفظ الكائن المساعد. Home Assistant سيتم إنشاء كيان جديد `light`، على سبيل المثال `light.FloorLamp`.
 

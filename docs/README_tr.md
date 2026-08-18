@@ -45,7 +45,87 @@ Bu açıklama yalnızca Z2M aracılığıyla bağlanan priz sahipleri için geç
 2. Bölüme git**Cihazlar**.
 3. Gerekli çıkışı seçin.
 4. Sekmeyi aç**Ayarlar (belirli)**.
-5. Değişiklikler**Ölçüm anket aralığı**1 sn. <a id="installation"></a> ## 📦 Kurulum ### 🛍 HACS üzerinden kurulum ℹ️[HACS nedir ve nasıl kurulur?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_tr.md) 🚀[Bağlantıya bir depo eklemeyi deneyin](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). HA'nız bu yöntemi destekliyorsa,**Eklemek**Açılan pencerede ve ardından düğme**İndirmek**sağ alt köşede. Kurulum başarıyla tamamlandıysa diğer adımları atlayabilirsiniz. Doğrudan bölüme atla[hızlı başlangıç](#getting-started). #### 1. Depo ekleme Depo standart HACS dizininde yer almasa da onu özel bir dizin olarak ekleyin: 1. Açık**HACS → Entegrasyonlar**. 2. Sağ üst köşedeki menüyü açın ve**Özel Depolar**. 3. Eklemek: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Tür seçin**Entegrasyon**ve tuşuna basın**Eklemek**. > Depo eklenmesi, entegrasyonun yalnızca HACS'ta kullanılabilir olmasını sağlar. Yüklemek için kartını ayrı olarak açmanız ve tıklamanız gerekir.**İndirmek**. #### 2. Entegrasyonun kurulumu 1. HACS'ta ara:`Smart Plug Multi-Level Light`. 2. Entegrasyonu açın ve tıklayın**İndirmek**. 3. Kurulumdan sonra Home Assistant'ı tamamen yeniden başlatın. <a id="manual-installation"></a> ### 🧑‍💻 HACS'sız kurulum 1. Depo sayfasında, öğesine tıklayın.**Kod → ZIP'i İndir**. 2. Arşivi paketinden çıkarın. 3. Klasörü kopyalayın: ```text custom_components/smart_plug_multilevel_light ``` Ev Asistanı yapılandırma dizinine: ```text /config/custom_components/smart_plug_multilevel_light ``` Son dosya yolu`manifest.json`şöyle görünmeli: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Home Assistant'ı tamamen yeniden başlatın. > Harici depo klasörünün tamamını şuraya kopyalamayın:`custom_components`. İçeri`custom_components`klasör doğrudan bulunmalıdır`smart_plug_multilevel_light`. Kart entegrasyona dahil olduğundan, kurulumu için HACS'a gerek yoktur. Dosyaları manuel olarak kopyaladıktan, Home Assistant'ı yeniden başlattıktan ve ilk yardımcı nesneyi oluşturduktan sonra entegrasyon, JavaScript kart dosyasını yayınlar ve bunu standart modda panel kaynaklarına otomatik olarak kaydeder.`storage`. YAML kaynak modunda kartın aşağıda açıklandığı gibi manuel olarak kaydedilmesi gerekir. <a id="getting-started"></a> ## 🚀 Kurulumdan sonra hızlı başlangıç ### 🛠 Yapılandırma 1. Açı&#x6B;**[Ayarlar → Cihazlar ve hizmetler → Aksesuarlar](https://my.home-assistant.io/redirect/helpers/)**&#x76;e tuşuna basın**Yardımcı Nesne Oluştur**. 2. Seçme**Akıllı Fiş Çok Seviyeli Işık**. 3. Lambanın bağlı olduğu akıllı fişi seçin. Liste yalnızca Home Assistant'ın aynı cihazda güç sensörü gördüğü prizleri gösterir. 4. Bir sonraki adımda lamba parametrelerini ayarlayın: * **Işık adı (Light name)**— örneğin, oluşturulan varlığın adı`FloorLamp`; * **Power sensor**- soket güç sensörü; 5. Bölümde**ZUI003Z**tıklayarak en az bir parlaklık modu ekleyin**Eklemek**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Lambayı fiziksel düğmesiyle açın, modun adını girin ve başlatın**Test stable power**. Kararlı bir değer elde ettikten sonra tuşuna basın.**Uygula**.<br />&nbsp;
+5. Değişiklikler**Ölçüm anket aralığı**1 sn.
+
+<a id="installation"></a>
+
+## 📦 Kurulum
+
+### 🛍 HACS üzerinden kurulum
+
+ℹ️[HACS nedir ve nasıl kurulur?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_tr.md)
+
+🚀[Bağlantıya bir depo eklemeyi deneyin](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). HA'nız bu yöntemi destekliyorsa,**Eklemek**Açılan pencerede ve ardından düğme**İndirmek**sağ alt köşede. Kurulum başarıyla tamamlandıysa diğer adımları atlayabilirsiniz. Doğrudan bölüme atla[hızlı başlangıç](#getting-started).
+
+#### 1. Depo ekleme
+
+Depo standart HACS dizininde yer almasa da onu özel bir dizin olarak ekleyin:
+
+1. Açık**HACS → Entegrasyonlar**.
+2. Sağ üst köşedeki menüyü açın ve**Özel Depolar**.
+3. Eklemek:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Tür seçin**Entegrasyon**ve tuşuna basın**Eklemek**.
+
+> Depo eklenmesi, entegrasyonun yalnızca HACS'ta kullanılabilir olmasını sağlar. Yüklemek için kartını ayrı olarak açmanız ve tıklamanız gerekir.**İndirmek**.
+
+#### 2. Entegrasyonun kurulumu
+
+1. HACS'ta ara:`Smart Plug Multi-Level Light`.
+2. Entegrasyonu açın ve tıklayın**İndirmek**.
+3. Kurulumdan sonra Home Assistant'ı tamamen yeniden başlatın.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 HACS'sız kurulum
+
+1. Depo sayfasında, öğesine tıklayın.**Kod → ZIP'i İndir**.
+2. Arşivi paketinden çıkarın.
+3. Klasörü kopyalayın:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+Ev Asistanı yapılandırma dizinine:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Son dosya yolu`manifest.json`şöyle görünmeli:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Home Assistant'ı tamamen yeniden başlatın.
+
+> Harici depo klasörünün tamamını şuraya kopyalamayın:`custom_components`. İçeri`custom_components`klasör doğrudan bulunmalıdır`smart_plug_multilevel_light`.
+
+Kart entegrasyona dahil olduğundan, kurulumu için HACS'a gerek yoktur. Dosyaları manuel olarak kopyaladıktan, Home Assistant'ı yeniden başlattıktan ve ilk yardımcı nesneyi oluşturduktan sonra entegrasyon, JavaScript kart dosyasını yayınlar ve bunu standart modda panel kaynaklarına otomatik olarak kaydeder.`storage`. YAML kaynak modunda kartın aşağıda açıklandığı gibi manuel olarak kaydedilmesi gerekir.
+
+<a id="getting-started"></a>
+
+## 🚀 Kurulumdan sonra hızlı başlangıç
+
+### 🛠 Yapılandırma
+
+1. Açı&#x6B;**[Ayarlar → Cihazlar ve hizmetler → Aksesuarlar](https://my.home-assistant.io/redirect/helpers/)**&#x76;e tuşuna basın**Yardımcı Nesne Oluştur**.
+
+2. Seçme**Akıllı Fiş Çok Seviyeli Işık**.
+
+3. Lambanın bağlı olduğu akıllı fişi seçin. Liste yalnızca Home Assistant'ın aynı cihazda güç sensörü gördüğü prizleri gösterir.
+
+4. Bir sonraki adımda lamba parametrelerini ayarlayın:
+   * **Işık adı (Light name)**— örneğin, oluşturulan varlığın adı`FloorLamp`;
+   * **Power sensor**- soket güç sensörü;
+
+5. Bölümde**ZUI003Z**tıklayarak en az bir parlaklık modu ekleyin**Eklemek**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Lambayı fiziksel düğmesiyle açın, modun adını girin ve başlatın**Test stable power**. Kararlı bir değer elde ettikten sonra tuşuna basın.**Uygula**.<br />&nbsp;
 6. İlk modu ekledikten sonra bu adımları tekrarlayarak kalan modları ekleyin. Sonunda şöyle bir şey elde etmelisin:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Yardımcı nesneyi kaydedin. Ev Asistanı yeni bir varlık oluşturacak`light`, Örneğin`light.FloorLamp`.
 

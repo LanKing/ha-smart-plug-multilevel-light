@@ -45,7 +45,87 @@ Jums būs nepieciešams:
 2. Dodieties uz sadaļu**Ierīces**.
 3. Izvēlieties vajadzīgo kontaktligzdu.
 4. Atveriet cilni**Iestatījumi (konkrēti)**.
-5. Izmaiņas**Mērījumu aptaujas intervāls**uz 1 s. <a id="installation"></a> ## 📦 Uzstādīšana ### 🛍 Uzstādīšana caur HACS ℹ️[Kas ir HACS un kā to instalēt?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_lv.md) 🚀[Mēģiniet pievienot repozitoriju saitē](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Ja jūsu HA atbalsta šo metodi, noklikšķiniet uz**Pievienot**atvērtajā logā un pēc tam pogu**Lejupielādēt**apakšējā labajā stūrī. Ja instalēšana ir pabeigta veiksmīgi, varat izlaist turpmākās darbības. Pāriet tieši uz sadaļu[ātrs sākums](#getting-started). #### 1. Repozitorija pievienošana Lai gan repozitorijs nav iekļauts standarta HACS direktorijā, pievienojiet to kā pielāgotu: 1. Atvērt**HACS → Integrācijas**. 2. Atveriet izvēlni augšējā labajā stūrī un atlasiet**Pielāgotas krātuves**. 3. Pievienot: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Izvēlieties veidu**Integrācija**un nospiediet**Pievienot**. > Pievienojot repozitoriju, integrācija kļūst pieejama tikai HACS. Lai instalētu, jums atsevišķi jāatver tā karte un jānoklikšķina**Lejupielādēt**. #### 2. Integrācijas uzstādīšana 1. Meklēt HACS:`Smart Plug Multi-Level Light`. 2. Atveriet integrāciju un noklikšķiniet uz**Lejupielādēt**. 3. Pēc instalēšanas pilnībā restartējiet Home Assistant. <a id="manual-installation"></a> ### 🧑‍💻 Uzstādīšana bez HACS 1. Repozitorija lapā noklikšķiniet uz**Kods → Lejupielādēt ZIP**. 2. Izsaiņojiet arhīvu. 3. Kopēt mapi: ```text custom_components/smart_plug_multilevel_light ``` uz Home Assistant konfigurācijas direktoriju: ```text /config/custom_components/smart_plug_multilevel_light ``` Galīgais faila ceļš`manifest.json`vajadzētu izskatīties šādi: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Pilnībā restartējiet Home Assistant. > Nekopējiet visu ārējā repozitorija mapi uz`custom_components`. Iekšā`custom_components`mapei ir jāatrodas tieši`smart_plug_multilevel_light`. Karte ir iekļauta integrācijā, tāpēc tās instalēšanai HACS nav nepieciešams. Pēc failu manuālas kopēšanas, Home Assistant restartēšanas un pirmā palīga objekta izveidošanas integrācija publicē JavaScript kartes failu un automātiski reģistrē to paneļa resursos standarta režīmā.`storage`. YAML resursu režīmā karte ir jāreģistrē manuāli, kā aprakstīts tālāk. <a id="getting-started"></a> ## 🚀 Ātra palaišana pēc instalēšanas ### 🛠 Konfigurācija 1. Atvēr&#x74;**[Iestatījumi → Ierīces un pakalpojumi → Piederumi](https://my.home-assistant.io/redirect/helpers/)**&#x75;n nospiediet**Izveidojiet palīga objektu**. 2. Izvēlieties**Smart Plug daudzlīmeņu apgaismojums**. 3. Atlasiet viedo spraudni, ar kuru ir pievienota lampa. Sarakstā ir redzamas tikai tās kontaktligzdas, kurās Home Assistant redz strāvas sensoru tajā pašā ierīcē. 4. Nākamajā darbībā iestatiet lampas parametrus: * **Gaismas nosaukums (Light name)**— piemēram, veidojamās entītijas nosaukums`FloorLamp`; * **Power sensor**- kontaktligzdas strāvas sensors; 5. Sadaļā**ZUI003Z**pievienojiet vismaz vienu spilgtuma režīmu, noklikšķinot**Pievienot**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Pārslēdziet lampu ar tās fizisko pogu, ievadiet režīma nosaukumu un sāciet**Test stable power**. Pēc stabilas vērtības iegūšanas nospiediet**Pieteikties**.<br />&nbsp;
+5. Izmaiņas**Mērījumu aptaujas intervāls**uz 1 s.
+
+<a id="installation"></a>
+
+## 📦 Uzstādīšana
+
+### 🛍 Uzstādīšana caur HACS
+
+ℹ️[Kas ir HACS un kā to instalēt?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_lv.md)
+
+🚀[Mēģiniet pievienot repozitoriju saitē](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Ja jūsu HA atbalsta šo metodi, noklikšķiniet uz**Pievienot**atvērtajā logā un pēc tam pogu**Lejupielādēt**apakšējā labajā stūrī. Ja instalēšana ir pabeigta veiksmīgi, varat izlaist turpmākās darbības. Pāriet tieši uz sadaļu[ātrs sākums](#getting-started).
+
+#### 1. Repozitorija pievienošana
+
+Lai gan repozitorijs nav iekļauts standarta HACS direktorijā, pievienojiet to kā pielāgotu:
+
+1. Atvērt**HACS → Integrācijas**.
+2. Atveriet izvēlni augšējā labajā stūrī un atlasiet**Pielāgotas krātuves**.
+3. Pievienot:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Izvēlieties veidu**Integrācija**un nospiediet**Pievienot**.
+
+> Pievienojot repozitoriju, integrācija kļūst pieejama tikai HACS. Lai instalētu, jums atsevišķi jāatver tā karte un jānoklikšķina**Lejupielādēt**.
+
+#### 2. Integrācijas uzstādīšana
+
+1. Meklēt HACS:`Smart Plug Multi-Level Light`.
+2. Atveriet integrāciju un noklikšķiniet uz**Lejupielādēt**.
+3. Pēc instalēšanas pilnībā restartējiet Home Assistant.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Uzstādīšana bez HACS
+
+1. Repozitorija lapā noklikšķiniet uz**Kods → Lejupielādēt ZIP**.
+2. Izsaiņojiet arhīvu.
+3. Kopēt mapi:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+uz Home Assistant konfigurācijas direktoriju:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Galīgais faila ceļš`manifest.json`vajadzētu izskatīties šādi:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Pilnībā restartējiet Home Assistant.
+
+> Nekopējiet visu ārējā repozitorija mapi uz`custom_components`. Iekšā`custom_components`mapei ir jāatrodas tieši`smart_plug_multilevel_light`.
+
+Karte ir iekļauta integrācijā, tāpēc tās instalēšanai HACS nav nepieciešams. Pēc failu manuālas kopēšanas, Home Assistant restartēšanas un pirmā palīga objekta izveidošanas integrācija publicē JavaScript kartes failu un automātiski reģistrē to paneļa resursos standarta režīmā.`storage`. YAML resursu režīmā karte ir jāreģistrē manuāli, kā aprakstīts tālāk.
+
+<a id="getting-started"></a>
+
+## 🚀 Ātra palaišana pēc instalēšanas
+
+### 🛠 Konfigurācija
+
+1. Atvēr&#x74;**[Iestatījumi → Ierīces un pakalpojumi → Piederumi](https://my.home-assistant.io/redirect/helpers/)**&#x75;n nospiediet**Izveidojiet palīga objektu**.
+
+2. Izvēlieties**Smart Plug daudzlīmeņu apgaismojums**.
+
+3. Atlasiet viedo spraudni, ar kuru ir pievienota lampa. Sarakstā ir redzamas tikai tās kontaktligzdas, kurās Home Assistant redz strāvas sensoru tajā pašā ierīcē.
+
+4. Nākamajā darbībā iestatiet lampas parametrus:
+   * **Gaismas nosaukums (Light name)**— piemēram, veidojamās entītijas nosaukums`FloorLamp`;
+   * **Power sensor**- kontaktligzdas strāvas sensors;
+
+5. Sadaļā**ZUI003Z**pievienojiet vismaz vienu spilgtuma režīmu, noklikšķinot**Pievienot**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Pārslēdziet lampu ar tās fizisko pogu, ievadiet režīma nosaukumu un sāciet**Test stable power**. Pēc stabilas vērtības iegūšanas nospiediet**Pieteikties**.<br />&nbsp;
 6. Pēc pirmā režīma pievienošanas pievienojiet atlikušos režīmus, atkārtojot šīs darbības. Jums vajadzētu beigties ar kaut ko līdzīgu:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Saglabājiet palīga objektu. Mājas palīgs izveidos jaunu entītiju`light`, Piemēram`light.FloorLamp`.
 

@@ -45,7 +45,87 @@ Deskripsi ini hanya relevan untuk pemilik soket yang terhubung melalui Z2M. Peng
 2. Pergi ke bagian**Perangkat**.
 3. Pilih outlet yang diperlukan.
 4. Buka tabnya**Pengaturan (khusus)**.
-5. Perubahannya**Interval jajak pendapat pengukuran**pada 1 detik. <a id="installation"></a> ## 📦 Instalasi ### 🛍 Instalasi melalui HACS ℹ️[Apa itu HACS dan bagaimana cara menginstalnya?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_id.md) 🚀[Coba tambahkan repositori di tautan](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Jika HA Anda mendukung metode ini, klik**Menambahkan**di jendela yang terbuka, lalu tombol**Unduh**di pojok kanan bawah. Jika instalasi berhasil diselesaikan, Anda dapat melewati langkah selanjutnya. Lewati langsung ke bagian[mulai cepat](#getting-started). #### 1. Menambahkan repositori Meskipun repositori tidak termasuk dalam direktori HACS standar, tambahkan sebagai direktori khusus: 1. Membuka**HACS → Integrasi**. 2. Buka menu di pojok kanan atas dan pilih**Repositori Khusus**. 3. Menambahkan: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Pilih jenis**Integrasi**dan tekan**Menambahkan**. > Menambahkan repositori hanya membuat integrasi tersedia di HACS. Untuk menginstal, Anda perlu membuka kartunya secara terpisah dan klik**Unduh**. #### 2. Pemasangan integrasi 1. Cari di HACS:`Smart Plug Multi-Level Light`. 2. Buka integrasi dan klik**Unduh**. 3. Setelah instalasi, restart Home Assistant sepenuhnya. <a id="manual-installation"></a> ### 🧑‍💻 Instalasi tanpa HACS 1. Pada halaman repositori, klik**Kode → Unduh ZIP**. 2. Buka kemasan arsip. 3. Salin foldernya: ```text custom_components/smart_plug_multilevel_light ``` ke direktori konfigurasi Home Assistant: ```text /config/custom_components/smart_plug_multilevel_light ``` Jalur file terakhir`manifest.json`akan terlihat seperti ini: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Mulai ulang Home Assistant sepenuhnya. > Jangan menyalin seluruh folder repositori eksternal ke`custom_components`. Di dalam`custom_components`foldernya harus ditempatkan secara langsung`smart_plug_multilevel_light`. Kartu tersebut termasuk dalam integrasi, jadi HACS tidak diperlukan untuk menginstalnya. Setelah menyalin file secara manual, memulai ulang Home Assistant, dan membuat objek pembantu pertama, integrasi menerbitkan file kartu JavaScript dan secara otomatis mendaftarkannya dengan sumber daya panel dalam mode standar`storage`. Dalam mode sumber daya YAML, kartu harus didaftarkan secara manual, seperti dijelaskan di bawah. <a id="getting-started"></a> ## 🚀 Mulai cepat setelah instalasi ### 🛠 Konfigurasi 1. Membuk&#x61;**[Pengaturan → Perangkat dan layanan → Aksesori](https://my.home-assistant.io/redirect/helpers/)**&#x64;an tekan**Buat Objek Pembantu**. 2. Memilih**Lampu Multi-Level Steker Cerdas**. 3. Pilih smart plug yang terhubung dengan lampu. Daftar tersebut hanya menampilkan outlet tempat Home Assistant melihat sensor daya di perangkat yang sama. 4. Pada langkah selanjutnya, atur parameter lampu: * **Nama lampu (Light name)**— nama entitas yang dibuat, misalnya`FloorLamp`; * **Power sensor**- sensor daya soket; 5. Di bagian**ZUI003Z**tambahkan setidaknya satu mode kecerahan dengan mengklik**Menambahkan**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Ganti lampu dengan tombol fisiknya, masukkan nama mode dan mulai**Test stable power**. Setelah mendapatkan nilai stabil, tekan**Menerapkan**.<br />&nbsp;
+5. Perubahannya**Interval jajak pendapat pengukuran**pada 1 detik.
+
+<a id="installation"></a>
+
+## 📦 Instalasi
+
+### 🛍 Instalasi melalui HACS
+
+ℹ️[Apa itu HACS dan bagaimana cara menginstalnya?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_id.md)
+
+🚀[Coba tambahkan repositori di tautan](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Jika HA Anda mendukung metode ini, klik**Menambahkan**di jendela yang terbuka, lalu tombol**Unduh**di pojok kanan bawah. Jika instalasi berhasil diselesaikan, Anda dapat melewati langkah selanjutnya. Lewati langsung ke bagian[mulai cepat](#getting-started).
+
+#### 1. Menambahkan repositori
+
+Meskipun repositori tidak termasuk dalam direktori HACS standar, tambahkan sebagai direktori khusus:
+
+1. Membuka**HACS → Integrasi**.
+2. Buka menu di pojok kanan atas dan pilih**Repositori Khusus**.
+3. Menambahkan:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Pilih jenis**Integrasi**dan tekan**Menambahkan**.
+
+> Menambahkan repositori hanya membuat integrasi tersedia di HACS. Untuk menginstal, Anda perlu membuka kartunya secara terpisah dan klik**Unduh**.
+
+#### 2. Pemasangan integrasi
+
+1. Cari di HACS:`Smart Plug Multi-Level Light`.
+2. Buka integrasi dan klik**Unduh**.
+3. Setelah instalasi, restart Home Assistant sepenuhnya.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Instalasi tanpa HACS
+
+1. Pada halaman repositori, klik**Kode → Unduh ZIP**.
+2. Buka kemasan arsip.
+3. Salin foldernya:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+ke direktori konfigurasi Home Assistant:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Jalur file terakhir`manifest.json`akan terlihat seperti ini:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Mulai ulang Home Assistant sepenuhnya.
+
+> Jangan menyalin seluruh folder repositori eksternal ke`custom_components`. Di dalam`custom_components`foldernya harus ditempatkan secara langsung`smart_plug_multilevel_light`.
+
+Kartu tersebut termasuk dalam integrasi, jadi HACS tidak diperlukan untuk menginstalnya. Setelah menyalin file secara manual, memulai ulang Home Assistant, dan membuat objek pembantu pertama, integrasi menerbitkan file kartu JavaScript dan secara otomatis mendaftarkannya dengan sumber daya panel dalam mode standar`storage`. Dalam mode sumber daya YAML, kartu harus didaftarkan secara manual, seperti dijelaskan di bawah.
+
+<a id="getting-started"></a>
+
+## 🚀 Mulai cepat setelah instalasi
+
+### 🛠 Konfigurasi
+
+1. Membuk&#x61;**[Pengaturan → Perangkat dan layanan → Aksesori](https://my.home-assistant.io/redirect/helpers/)**&#x64;an tekan**Buat Objek Pembantu**.
+
+2. Memilih**Lampu Multi-Level Steker Cerdas**.
+
+3. Pilih smart plug yang terhubung dengan lampu. Daftar tersebut hanya menampilkan outlet tempat Home Assistant melihat sensor daya di perangkat yang sama.
+
+4. Pada langkah selanjutnya, atur parameter lampu:
+   * **Nama lampu (Light name)**— nama entitas yang dibuat, misalnya`FloorLamp`;
+   * **Power sensor**- sensor daya soket;
+
+5. Di bagian**ZUI003Z**tambahkan setidaknya satu mode kecerahan dengan mengklik**Menambahkan**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Ganti lampu dengan tombol fisiknya, masukkan nama mode dan mulai**Test stable power**. Setelah mendapatkan nilai stabil, tekan**Menerapkan**.<br />&nbsp;
 6. Setelah menambahkan mode pertama, tambahkan mode lainnya dengan mengulangi langkah-langkah ini. Anda akan mendapatkan sesuatu seperti:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Simpan objek pembantu. Home Assistant akan membuat entitas baru`light`, Misalnya`light.FloorLamp`.
 

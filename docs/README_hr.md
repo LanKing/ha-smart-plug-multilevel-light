@@ -45,7 +45,87 @@ Ovaj opis je relevantan samo za vlasnike utičnica povezanih putem Z2M. Ostali k
 2. Idi na odjeljak**Uređaji**.
 3. Odaberite željenu utičnicu.
 4. Otvorite karticu**Postavke (specifične)**.
-5. Promjene**Interval ankete mjerenja**na 1 s. <a id="installation"></a> ## 📦 Montaža ### 🛍 Instalacija putem HACS-a ℹ️[Što je HACS i kako ga instalirati?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_hr.md) 🚀[Pokušajte dodati spremište na vezu](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Ako vaš HA podržava ovu metodu, kliknite**Dodati**u prozoru koji se otvori, a zatim gumb**preuzimanje**u donjem desnom kutu. Ako je instalacija uspješno dovršena, možete preskočiti daljnje korake. Preskočite ravno na odjeljak[brz početak](#getting-started). #### 1. Dodavanje repozitorija Iako repozitorij nije uključen u standardni HACS direktorij, dodajte ga kao prilagođeni: 1. Otvoriti**HACS → Integracije**. 2. Otvorite izbornik u gornjem desnom kutu i odaberite**Prilagođena spremišta**. 3. Dodati: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Odaberite vrstu**Integracija**i pritisnite**Dodati**. > Dodavanjem repozitorija integracija postaje dostupna samo u HACS-u. Za instalaciju morate zasebno otvoriti njegovu karticu i kliknuti**preuzimanje**. #### 2. Instalacija integracije 1. Traži u HACS-u:`Smart Plug Multi-Level Light`. 2. Otvorite integraciju i kliknite**preuzimanje**. 3. Nakon instalacije potpuno ponovno pokrenite Home Assistant. <a id="manual-installation"></a> ### 🧑‍💻 Instalacija bez HACS-a 1. Kliknite na stranici spremišta**Kod → Preuzmi ZIP**. 2. Raspakirajte arhivu. 3. Kopiraj mapu: ```text custom_components/smart_plug_multilevel_light ``` u konfiguracijski direktorij kućnog pomoćnika: ```text /config/custom_components/smart_plug_multilevel_light ``` Konačna staza datoteke`manifest.json`trebao bi izgledati ovako: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Potpuno ponovno pokrenite Home Assistant. > Nemojte kopirati cijelu mapu vanjskog spremišta u`custom_components`. Unutra`custom_components`mapa se mora nalaziti izravno`smart_plug_multilevel_light`. Kartica je uključena u integraciju, tako da HACS nije potreban za njezinu instalaciju. Nakon ručnog kopiranja datoteka, ponovnog pokretanja Home Assistant-a i stvaranja prvog pomoćnog objekta, integracija objavljuje datoteku JavaScript kartice i automatski je registrira s resursima ploče u standardnom načinu rada`storage`. U načinu rada YAML resursa, kartica se mora registrirati ručno, kao što je opisano u nastavku. <a id="getting-started"></a> ## 🚀 Brzi početak nakon instalacije ### 🛠 Konfiguracija 1. Otvorit&#x69;**[Postavke → Uređaji i usluge → Pribor](https://my.home-assistant.io/redirect/helpers/)**&#x69; pritisnite**Stvorite pomoćni objekt**. 2. Odaberite**Smart Plug višeslojno svjetlo**. 3. Odaberite pametni utikač na koji je lampa spojena. Popis prikazuje samo utičnice u kojima Home Assistant vidi senzor napajanja u istom uređaju. 4. U sljedećem koraku postavite parametre lampe: * **Naziv svjetla (Light name)**— ime entiteta koji se stvara, na primjer`FloorLamp`; * **Power sensor**- senzor snage utičnice; 5. U odjeljku**ZUI003Z**dodajte barem jedan način svjetline klikom**Dodati**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Uključite svjetiljku fizičkim gumbom, unesite naziv moda i pokrenite**Test stable power**. Nakon dobivanja stabilne vrijednosti, pritisnite**primijeniti**.<br />&nbsp;
+5. Promjene**Interval ankete mjerenja**na 1 s.
+
+<a id="installation"></a>
+
+## 📦 Montaža
+
+### 🛍 Instalacija putem HACS-a
+
+ℹ️[Što je HACS i kako ga instalirati?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_hr.md)
+
+🚀[Pokušajte dodati spremište na vezu](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Ako vaš HA podržava ovu metodu, kliknite**Dodati**u prozoru koji se otvori, a zatim gumb**preuzimanje**u donjem desnom kutu. Ako je instalacija uspješno dovršena, možete preskočiti daljnje korake. Preskočite ravno na odjeljak[brz početak](#getting-started).
+
+#### 1. Dodavanje repozitorija
+
+Iako repozitorij nije uključen u standardni HACS direktorij, dodajte ga kao prilagođeni:
+
+1. Otvoriti**HACS → Integracije**.
+2. Otvorite izbornik u gornjem desnom kutu i odaberite**Prilagođena spremišta**.
+3. Dodati:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Odaberite vrstu**Integracija**i pritisnite**Dodati**.
+
+> Dodavanjem repozitorija integracija postaje dostupna samo u HACS-u. Za instalaciju morate zasebno otvoriti njegovu karticu i kliknuti**preuzimanje**.
+
+#### 2. Instalacija integracije
+
+1. Traži u HACS-u:`Smart Plug Multi-Level Light`.
+2. Otvorite integraciju i kliknite**preuzimanje**.
+3. Nakon instalacije potpuno ponovno pokrenite Home Assistant.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Instalacija bez HACS-a
+
+1. Kliknite na stranici spremišta**Kod → Preuzmi ZIP**.
+2. Raspakirajte arhivu.
+3. Kopiraj mapu:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+u konfiguracijski direktorij kućnog pomoćnika:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Konačna staza datoteke`manifest.json`trebao bi izgledati ovako:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Potpuno ponovno pokrenite Home Assistant.
+
+> Nemojte kopirati cijelu mapu vanjskog spremišta u`custom_components`. Unutra`custom_components`mapa se mora nalaziti izravno`smart_plug_multilevel_light`.
+
+Kartica je uključena u integraciju, tako da HACS nije potreban za njezinu instalaciju. Nakon ručnog kopiranja datoteka, ponovnog pokretanja Home Assistant-a i stvaranja prvog pomoćnog objekta, integracija objavljuje datoteku JavaScript kartice i automatski je registrira s resursima ploče u standardnom načinu rada`storage`. U načinu rada YAML resursa, kartica se mora registrirati ručno, kao što je opisano u nastavku.
+
+<a id="getting-started"></a>
+
+## 🚀 Brzi početak nakon instalacije
+
+### 🛠 Konfiguracija
+
+1. Otvorit&#x69;**[Postavke → Uređaji i usluge → Pribor](https://my.home-assistant.io/redirect/helpers/)**&#x69; pritisnite**Stvorite pomoćni objekt**.
+
+2. Odaberite**Smart Plug višeslojno svjetlo**.
+
+3. Odaberite pametni utikač na koji je lampa spojena. Popis prikazuje samo utičnice u kojima Home Assistant vidi senzor napajanja u istom uređaju.
+
+4. U sljedećem koraku postavite parametre lampe:
+   * **Naziv svjetla (Light name)**— ime entiteta koji se stvara, na primjer`FloorLamp`;
+   * **Power sensor**- senzor snage utičnice;
+
+5. U odjeljku**ZUI003Z**dodajte barem jedan način svjetline klikom**Dodati**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Uključite svjetiljku fizičkim gumbom, unesite naziv moda i pokrenite**Test stable power**. Nakon dobivanja stabilne vrijednosti, pritisnite**primijeniti**.<br />&nbsp;
 6. Nakon dodavanja prvog načina, dodajte preostale načine ponavljanjem ovih koraka. Trebali biste završiti s nečim poput:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Spremite pomoćni objekt. Kućni pomoćnik će stvoriti novi entitet`light`, Na primjer`light.FloorLamp`.
 

@@ -45,7 +45,87 @@ Deze beschrijving is alleen relevant voor eigenaren van stopcontacten aangeslote
 2. Ga naar sectie**Apparaten**.
 3. Selecteer het gewenste stopcontact.
 4. Open het tabblad**Instellingen (specifiek)**.
-5. De veranderingen**Meting poll-interval**op 1 sec. <a id="installation"></a> ## 📦 Installatie ### 🛍 Installatie via HACS ℹ️[Wat is HACS en hoe installeer je het?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_nl.md) 🚀[Probeer een repository toe te voegen via de link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Als uw HA deze methode ondersteunt, klikt u op**Toevoegen**in het venster dat wordt geopend, en vervolgens op de knop**Downloaden**in de rechter benedenhoek. Als de installatie succesvol is afgerond, kunt u verdere stappen overslaan. Ga direct naar de sectie[snel begin](#getting-started). #### 1. Een repository toevoegen Hoewel de repository niet is opgenomen in de standaard HACS-directory, kunt u deze wel als een aangepaste directory toevoegen: 1. Open**HACS → Integraties**. 2. Open het menu in de rechterbovenhoek en selecteer**Aangepaste opslagplaatsen**. 3. Toevoegen: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Selecteer type**Integratie**en druk op**Toevoegen**. > Door een repository toe te voegen, wordt de integratie alleen beschikbaar in HACS. Om te installeren, moet u de kaart afzonderlijk openen en klikken**Downloaden**. #### 2. Installatie van integratie 1. Zoeken in HACS:`Smart Plug Multi-Level Light`. 2. Open de integratie en klik**Downloaden**. 3. Start Home Assistant na de installatie volledig opnieuw op. <a id="manual-installation"></a> ### 🧑‍💻 Installatie zonder HACS 1. Klik op de repositorypagina**Code → ZIP downloaden**. 2. Pak het archief uit. 3. Kopieer de map: ```text custom_components/smart_plug_multilevel_light ``` naar de Home Assistant-configuratiemap: ```text /config/custom_components/smart_plug_multilevel_light ``` Uiteindelijk bestandspad`manifest.json`zou er zo uit moeten zien: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Start Home Assistant volledig opnieuw op. > Kopieer niet de gehele externe repositorymap naar`custom_components`. Binnen`custom_components`de map moet zich direct bevinden`smart_plug_multilevel_light`. De kaart is inbegrepen in de integratie, dus HACS hoeft deze niet te installeren. Na het handmatig kopiëren van de bestanden, het opnieuw starten van Home Assistant en het aanmaken van het eerste helperobject, publiceert de integratie het JavaScript-kaartbestand en registreert het automatisch bij paneelbronnen in de standaardmodus`storage`. In de YAML-bronmodus moet de kaart handmatig worden geregistreerd, zoals hieronder beschreven. <a id="getting-started"></a> ## 🚀 Snelle start na installatie ### 🛠 Configuratie 1. Ope&#x6E;**[Instellingen → Apparaten en diensten → Accessoires](https://my.home-assistant.io/redirect/helpers/)**&#x65;n druk op**Helperobject maken**. 2. Selecteer**Smart Plug-licht op meerdere niveaus**. 3. Selecteer de slimme stekker waar de lamp op is aangesloten. De lijst toont alleen stopcontacten waar Home Assistant een stroomsensor in hetzelfde apparaat ziet. 4. Stel in de volgende stap de lampparameters in: * **Lichtnaam (Light name)**— bijvoorbeeld de naam van de entiteit die wordt opgericht`FloorLamp`; * **Power sensor**- stopcontact-voedingssensor; 5. In de sectie**ZUI003Z**voeg ten minste één helderheidsmodus toe door te klikken**Toevoegen**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Schakel de lamp met de fysieke knop, voer de naam van de modus in en begin**Test stable power**. Nadat u een stabiele waarde heeft verkregen, drukt u op**Toepassen**.<br />&nbsp;
+5. De veranderingen**Meting poll-interval**op 1 sec.
+
+<a id="installation"></a>
+
+## 📦 Installatie
+
+### 🛍 Installatie via HACS
+
+ℹ️[Wat is HACS en hoe installeer je het?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_nl.md)
+
+🚀[Probeer een repository toe te voegen via de link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Als uw HA deze methode ondersteunt, klikt u op**Toevoegen**in het venster dat wordt geopend, en vervolgens op de knop**Downloaden**in de rechter benedenhoek. Als de installatie succesvol is afgerond, kunt u verdere stappen overslaan. Ga direct naar de sectie[snel begin](#getting-started).
+
+#### 1. Een repository toevoegen
+
+Hoewel de repository niet is opgenomen in de standaard HACS-directory, kunt u deze wel als een aangepaste directory toevoegen:
+
+1. Open**HACS → Integraties**.
+2. Open het menu in de rechterbovenhoek en selecteer**Aangepaste opslagplaatsen**.
+3. Toevoegen:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Selecteer type**Integratie**en druk op**Toevoegen**.
+
+> Door een repository toe te voegen, wordt de integratie alleen beschikbaar in HACS. Om te installeren, moet u de kaart afzonderlijk openen en klikken**Downloaden**.
+
+#### 2. Installatie van integratie
+
+1. Zoeken in HACS:`Smart Plug Multi-Level Light`.
+2. Open de integratie en klik**Downloaden**.
+3. Start Home Assistant na de installatie volledig opnieuw op.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Installatie zonder HACS
+
+1. Klik op de repositorypagina**Code → ZIP downloaden**.
+2. Pak het archief uit.
+3. Kopieer de map:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+naar de Home Assistant-configuratiemap:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Uiteindelijk bestandspad`manifest.json`zou er zo uit moeten zien:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Start Home Assistant volledig opnieuw op.
+
+> Kopieer niet de gehele externe repositorymap naar`custom_components`. Binnen`custom_components`de map moet zich direct bevinden`smart_plug_multilevel_light`.
+
+De kaart is inbegrepen in de integratie, dus HACS hoeft deze niet te installeren. Na het handmatig kopiëren van de bestanden, het opnieuw starten van Home Assistant en het aanmaken van het eerste helperobject, publiceert de integratie het JavaScript-kaartbestand en registreert het automatisch bij paneelbronnen in de standaardmodus`storage`. In de YAML-bronmodus moet de kaart handmatig worden geregistreerd, zoals hieronder beschreven.
+
+<a id="getting-started"></a>
+
+## 🚀 Snelle start na installatie
+
+### 🛠 Configuratie
+
+1. Ope&#x6E;**[Instellingen → Apparaten en diensten → Accessoires](https://my.home-assistant.io/redirect/helpers/)**&#x65;n druk op**Helperobject maken**.
+
+2. Selecteer**Smart Plug-licht op meerdere niveaus**.
+
+3. Selecteer de slimme stekker waar de lamp op is aangesloten. De lijst toont alleen stopcontacten waar Home Assistant een stroomsensor in hetzelfde apparaat ziet.
+
+4. Stel in de volgende stap de lampparameters in:
+   * **Lichtnaam (Light name)**— bijvoorbeeld de naam van de entiteit die wordt opgericht`FloorLamp`;
+   * **Power sensor**- stopcontact-voedingssensor;
+
+5. In de sectie**ZUI003Z**voeg ten minste één helderheidsmodus toe door te klikken**Toevoegen**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Schakel de lamp met de fysieke knop, voer de naam van de modus in en begin**Test stable power**. Nadat u een stabiele waarde heeft verkregen, drukt u op**Toepassen**.<br />&nbsp;
 6. Nadat u de eerste modus hebt toegevoegd, voegt u de overige modi toe door deze stappen te herhalen. Je zou moeten eindigen met zoiets als:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Bewaar het helperobject. Home Assistant zal een nieuwe entiteit creëren`light`, Bijvoorbeeld`light.FloorLamp`.
 

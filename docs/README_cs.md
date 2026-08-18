@@ -46,7 +46,87 @@ Tento popis je relevantní pouze pro majitele zásuvek připojených přes Z2M. 
 2. Přejděte do sekce **Zařízení**.
 3. Vyberte požadovanou zásuvku.
 4. Otevřete kartu **Nastavení (konkrétní)**.
-5. Změny **Interval dotazování měření** na 1 s <a id="installation"></a> ## 📦 Instalace ### 🛍 Instalace přes HACS ℹ️ [Co se stalo HACS a jak to nainstalovat?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cs.md) 🚀 [Zkuste přidat úložiště na odkaz](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Pokud vaše HA tuto metodu podporuje, klikněte **Přidat** v okně, které se otevře, a poté na tlačítko **Stáhnout** v pravém dolním rohu. Pokud byla instalace úspěšně dokončena, můžete další kroky přeskočit. Přejít přímo do sekce [rychlý start](#getting-started). #### 1. Přidání úložiště Úložiště ještě není zahrnuto ve standardním adresáři HACS, přidejte jej jako vlastní: 1. OTEVŘENO **HACS → Integrace**. 2. Otevřete nabídku v pravém horním rohu a vyberte **Vlastní úložiště**. 3. Přidat: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Vyberte typ **Integrace** a stiskněte **Přidat**. > Přidání úložiště zpřístupní integraci pouze v HACS. Chcete-li nainstalovat, musíte samostatně otevřít jeho kartu a kliknout **Stáhnout**. #### 2. Instalace integrace 1. Najít v HACS: Smart Plug Multi-Level Light. 2. Otevřete integraci a klikněte **Stáhnout**. 3. Po instalaci restartujte úplně Home Assistant. <a id="manual-installation"></a> ### 🧑‍💻 Instalace bez HACS 1. Na stránce úložiště klikněte na **Kód → Stáhnout ZIP**. 2. Rozbalte archiv. 3. Zkopírujte složku: ```text custom_components/smart_plug_multilevel_light ``` do konfiguračního adresáře Home Assistant: ```text /config/custom_components/smart_plug_multilevel_light ``` Konečná cesta k souboru `manifest.json` by měl vypadat takto: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Úplně restartujte Home Assistant. > Nekopírujte celou složku externího úložiště do `custom_components`. Uvnitř `custom_components` složka musí být umístěna přímo `smart_plug_multilevel_light`. Karta je součástí integrace, takže HACS pro instalaci není potřeba. Po ručním zkopírování souborů restartujte Home Assistant a vytvoření prvního pomocného objektu integrace publikuje soubor karty JavaScript a automaticky jej zaregistruje do zdrojů panelu ve standardním režimu `storage`. V režimu prostředků YAML musí být karta zaregistrována ručně, jak je popsáno níže. <a id="getting-started"></a> ## 🚀 Rychlý start po instalaci ### 🛠 Konfigurace 1. OTEVŘENO **[Nastavení → Zařízení a služby → Příslušenství](https://my.home-assistant.io/redirect/helpers/)** a stiskněte **Vytvořit objekt pomocníka**. 2. Vybrat **Smart Plug Multi-Level Light**. 3. Vyberte chytrou zástrčku, ke které je lampa připojena. Seznam zobrazuje pouze zásuvky, které mají Home Assistant vidí snímač výkonu ve stejném zařízení. 4. V dalším kroku nastavte parametry lampy: * **Název světla (Light name)** — například název vytvářené entity `FloorLamp`; * **Power sensor** - zásuvkové čidlo napájení; 5. V sekci **🔅 Režimy jasu (🔅 Brightness modes)** kliknutím přidejte alespoň jeden režim jasu **Přidat**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Přepněte lampu jejím fyzickým tlačítkem, zadejte název režimu a spusťte **Test stable power**. Po získání stabilní hodnoty stiskněte **Použít**.<br />&nbsp;
+5. Změny **Interval dotazování měření** na 1 s
+
+<a id="installation"></a>
+
+## 📦 Instalace
+
+### 🛍 Instalace přes HACS
+
+ℹ️ [Co se stalo HACS a jak to nainstalovat?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cs.md)
+
+🚀 [Zkuste přidat úložiště na odkaz](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Pokud vaše HA tuto metodu podporuje, klikněte **Přidat** v okně, které se otevře, a poté na tlačítko **Stáhnout** v pravém dolním rohu. Pokud byla instalace úspěšně dokončena, můžete další kroky přeskočit. Přejít přímo do sekce [rychlý start](#getting-started).
+
+#### 1. Přidání úložiště
+
+Úložiště ještě není zahrnuto ve standardním adresáři HACS, přidejte jej jako vlastní:
+
+1. OTEVŘENO **HACS → Integrace**.
+2. Otevřete nabídku v pravém horním rohu a vyberte **Vlastní úložiště**.
+3. Přidat:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Vyberte typ **Integrace** a stiskněte **Přidat**.
+
+> Přidání úložiště zpřístupní integraci pouze v HACS. Chcete-li nainstalovat, musíte samostatně otevřít jeho kartu a kliknout **Stáhnout**.
+
+#### 2. Instalace integrace
+
+1. Najít v HACS: Smart Plug Multi-Level Light.
+2. Otevřete integraci a klikněte **Stáhnout**.
+3. Po instalaci restartujte úplně Home Assistant.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Instalace bez HACS
+
+1. Na stránce úložiště klikněte na **Kód → Stáhnout ZIP**.
+2. Rozbalte archiv.
+3. Zkopírujte složku:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+do konfiguračního adresáře Home Assistant:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Konečná cesta k souboru `manifest.json` by měl vypadat takto:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Úplně restartujte Home Assistant.
+
+> Nekopírujte celou složku externího úložiště do `custom_components`. Uvnitř `custom_components` složka musí být umístěna přímo `smart_plug_multilevel_light`.
+
+Karta je součástí integrace, takže HACS pro instalaci není potřeba. Po ručním zkopírování souborů restartujte Home Assistant a vytvoření prvního pomocného objektu integrace publikuje soubor karty JavaScript a automaticky jej zaregistruje do zdrojů panelu ve standardním režimu `storage`. V režimu prostředků YAML musí být karta zaregistrována ručně, jak je popsáno níže.
+
+<a id="getting-started"></a>
+
+## 🚀 Rychlý start po instalaci
+
+### 🛠 Konfigurace
+
+1. OTEVŘENO **[Nastavení → Zařízení a služby → Příslušenství](https://my.home-assistant.io/redirect/helpers/)** a stiskněte **Vytvořit objekt pomocníka**.
+
+2. Vybrat **Smart Plug Multi-Level Light**.
+
+3. Vyberte chytrou zástrčku, ke které je lampa připojena. Seznam zobrazuje pouze zásuvky, které mají Home Assistant vidí snímač výkonu ve stejném zařízení.
+
+4. V dalším kroku nastavte parametry lampy:
+   * **Název světla (Light name)** — například název vytvářené entity `FloorLamp`;
+   * **Power sensor** - zásuvkové čidlo napájení;
+
+5. V sekci **🔅 Režimy jasu (🔅 Brightness modes)** kliknutím přidejte alespoň jeden režim jasu **Přidat**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Přepněte lampu jejím fyzickým tlačítkem, zadejte název režimu a spusťte **Test stable power**. Po získání stabilní hodnoty stiskněte **Použít**.<br />&nbsp;
 6. Po přidání prvního režimu přidejte zbývající režimy opakováním těchto kroků. Měli byste skončit s něčím jako:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Uložte pomocný objekt. Home Assistant vytvoří novou entitu `light`, Například `light.FloorLamp`.
 

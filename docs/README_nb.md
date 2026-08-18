@@ -45,7 +45,87 @@ Denne beskrivelsen er kun relevant for eiere av stikkontakter tilkoblet via Z2M.
 2. Gå til seksjon**Enheter**.
 3. Velg ønsket uttak.
 4. Åpne fanen**Innstillinger (spesifikke)**.
-5. Endringene**Måleundersøkelsesintervall**på 1 s. <a id="installation"></a> ## 📦 Installasjon ### 🛍 Installasjon via HACS ℹ️[Hva er HACS og hvordan installerer jeg det?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_nb.md) 🚀[Prøv å legge til et depot på lenken](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Hvis din HA støtter denne metoden, klikk**Legge til**i vinduet som åpnes, og deretter knappen**Last ned**i nedre høyre hjørne. Hvis installasjonen ble fullført, kan du hoppe over flere trinn. Hopp rett til seksjonen[rask start](#getting-started). #### 1. Legge til et depot Mens depotet ikke er inkludert i standard HACS-katalogen, legg det til som en tilpasset: 1. Åpne**HACS → Integrasjoner**. 2. Åpne menyen øverst til høyre og velg**Egendefinerte arkiver**. 3. Legge til: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Velg type**Integrering**og trykk**Legge til**. > Å legge til et depot gjør integrasjonen bare tilgjengelig i HACS. For å installere, må du åpne kortet separat og klikke**Last ned**. #### 2. Installasjon av integrasjon 1. Søk i HACS:`Smart Plug Multi-Level Light`. 2. Åpne integrasjonen og klikk**Last ned**. 3. Etter installasjonen starter du Home Assistant helt på nytt. <a id="manual-installation"></a> ### 🧑‍💻 Installasjon uten HACS 1. På repository-siden klikker du**Kode → Last ned ZIP**. 2. Pakk ut arkivet. 3. Kopier mappen: ```text custom_components/smart_plug_multilevel_light ``` til Home Assistant-konfigurasjonskatalogen: ```text /config/custom_components/smart_plug_multilevel_light ``` Endelig filbane`manifest.json`skal se slik ut: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Start Home Assistant helt på nytt. > Ikke kopier hele den eksterne depotmappen til`custom_components`. Inni`custom_components`mappen må være plassert direkte`smart_plug_multilevel_light`. Kortet er inkludert i integrasjonen, så HACS er ikke nødvendig for å installere det. Etter å ha kopiert filene manuelt, startet Home Assistant på nytt og opprettet det første hjelpeobjektet, publiserer integrasjonen JavaScript-kortfilen og registrerer den automatisk med panelressurser i standardmodus`storage`. I YAML-ressursmodus må kortet registreres manuelt, som beskrevet nedenfor. <a id="getting-started"></a> ## 🚀 Rask start etter installasjon ### 🛠 Konfigurasjon 1. Åpn&#x65;**[Innstillinger → Enheter og tjenester → Tilbehør](https://my.home-assistant.io/redirect/helpers/)**&#x6F;g trykk**Lag hjelpeobjekt**. 2. Velge**Smart Plug Multi-Level Light**. 3. Velg smartpluggen som lampen er koblet til. Listen viser kun uttak der Home Assistant ser en strømsensor i samme enhet. 4. I neste trinn angir du lampeparametrene: * **Lysnavn (Light name)**– navnet på enheten som opprettes, for eksempel`FloorLamp`; * **Power sensor**- strømsensor for stikkontakt; 5. I seksjonen**ZUI003Z**legg til minst én lysstyrkemodus ved å klikke**Legge til**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Bytt lampen med den fysiske knappen, skriv inn navnet på modusen og start**Test stable power**. Etter å ha oppnådd en stabil verdi, trykk**Søke**.<br />&nbsp;
+5. Endringene**Måleundersøkelsesintervall**på 1 s.
+
+<a id="installation"></a>
+
+## 📦 Installasjon
+
+### 🛍 Installasjon via HACS
+
+ℹ️[Hva er HACS og hvordan installerer jeg det?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_nb.md)
+
+🚀[Prøv å legge til et depot på lenken](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Hvis din HA støtter denne metoden, klikk**Legge til**i vinduet som åpnes, og deretter knappen**Last ned**i nedre høyre hjørne. Hvis installasjonen ble fullført, kan du hoppe over flere trinn. Hopp rett til seksjonen[rask start](#getting-started).
+
+#### 1. Legge til et depot
+
+Mens depotet ikke er inkludert i standard HACS-katalogen, legg det til som en tilpasset:
+
+1. Åpne**HACS → Integrasjoner**.
+2. Åpne menyen øverst til høyre og velg**Egendefinerte arkiver**.
+3. Legge til:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Velg type**Integrering**og trykk**Legge til**.
+
+> Å legge til et depot gjør integrasjonen bare tilgjengelig i HACS. For å installere, må du åpne kortet separat og klikke**Last ned**.
+
+#### 2. Installasjon av integrasjon
+
+1. Søk i HACS:`Smart Plug Multi-Level Light`.
+2. Åpne integrasjonen og klikk**Last ned**.
+3. Etter installasjonen starter du Home Assistant helt på nytt.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Installasjon uten HACS
+
+1. På repository-siden klikker du**Kode → Last ned ZIP**.
+2. Pakk ut arkivet.
+3. Kopier mappen:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+til Home Assistant-konfigurasjonskatalogen:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Endelig filbane`manifest.json`skal se slik ut:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Start Home Assistant helt på nytt.
+
+> Ikke kopier hele den eksterne depotmappen til`custom_components`. Inni`custom_components`mappen må være plassert direkte`smart_plug_multilevel_light`.
+
+Kortet er inkludert i integrasjonen, så HACS er ikke nødvendig for å installere det. Etter å ha kopiert filene manuelt, startet Home Assistant på nytt og opprettet det første hjelpeobjektet, publiserer integrasjonen JavaScript-kortfilen og registrerer den automatisk med panelressurser i standardmodus`storage`. I YAML-ressursmodus må kortet registreres manuelt, som beskrevet nedenfor.
+
+<a id="getting-started"></a>
+
+## 🚀 Rask start etter installasjon
+
+### 🛠 Konfigurasjon
+
+1. Åpn&#x65;**[Innstillinger → Enheter og tjenester → Tilbehør](https://my.home-assistant.io/redirect/helpers/)**&#x6F;g trykk**Lag hjelpeobjekt**.
+
+2. Velge**Smart Plug Multi-Level Light**.
+
+3. Velg smartpluggen som lampen er koblet til. Listen viser kun uttak der Home Assistant ser en strømsensor i samme enhet.
+
+4. I neste trinn angir du lampeparametrene:
+   * **Lysnavn (Light name)**– navnet på enheten som opprettes, for eksempel`FloorLamp`;
+   * **Power sensor**- strømsensor for stikkontakt;
+
+5. I seksjonen**ZUI003Z**legg til minst én lysstyrkemodus ved å klikke**Legge til**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Bytt lampen med den fysiske knappen, skriv inn navnet på modusen og start**Test stable power**. Etter å ha oppnådd en stabil verdi, trykk**Søke**.<br />&nbsp;
 6. Etter å ha lagt til den første modusen, legg til de resterende modusene ved å gjenta disse trinnene. Du bør ende opp med noe sånt som:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Lagre hjelpeobjektet. Home Assistant vil opprette en ny enhet`light`, For eksempel`light.FloorLamp`.
 

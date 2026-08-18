@@ -46,7 +46,87 @@ Mae'r disgrifiad hwn yn berthnasol yn unig i berchnogion socedi sydd wedi'u cysy
 2. Ewch i adran **Dyfeisiau**.
 3. Dewiswch yr allfa ofynnol.
 4. Agorwch y tab **Gosodiadau (penodol)**.
-5. Y newidiadau **Cyfwng pôl mesur** ar 1 s. <a id="installation"></a> ## 📦 Gosod ### 🛍 Gosod trwy HACS ℹ️ [Beth sydd wedi digwydd HACS a sut i'w osod?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cy.md) 🚀 [Ceisiwch ychwanegu ystorfa yn y ddolen](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Os yw'ch HA yn cefnogi'r dull hwn, cliciwch **Ychwanegu** yn y ffenestr sy'n agor, ac yna'r botwm **Lawrlwythwch** yn y gornel dde isaf. Os cwblhawyd y gosodiad yn llwyddiannus, gallwch hepgor camau pellach. Ewch yn syth i'r adran [cychwyn cyflym](#getting-started). #### 1. Ychwanegu ystorfa Nid yw'r ystorfa wedi'i chynnwys yn y cyfeiriadur safonol eto HACS, ychwanegwch ef fel arfer: 1. Agored **HACS → Integreiddiadau**. 2. Agorwch y ddewislen yn y gornel dde uchaf a dewiswch **Storfeydd Personol**. 3. Ychwanegu: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Dewiswch fath **Integreiddio** a gwasg **Ychwanegu**. > Mae ychwanegu ystorfa yn golygu bod yr integreiddio ar gael i mewn HACS. I osod, mae angen ichi agor ei gerdyn ar wahân a chlicio **Lawrlwythwch**. #### 2. Gosod integreiddio 1. Dod o hyd i mewn HACS: Smart Plug Multi-Level Light. 2. Agorwch yr integreiddiad a chliciwch **Lawrlwythwch**. 3. Ar ôl gosod, ailgychwyn yn gyfan gwbl Home Assistant. <a id="manual-installation"></a> ### 🧑‍💻 Gosod heb HACS 1. Ar dudalen y storfa, cliciwch **Cod → Lawrlwythwch ZIP**. 2. Dadbacio'r archif. 3. Copïwch y ffolder: ```text custom_components/smart_plug_multilevel_light ``` i'r cyfeiriadur cyfluniad Home Assistant: ```text /config/custom_components/smart_plug_multilevel_light ``` Llwybr ffeil terfynol `manifest.json` dylai edrych fel hyn: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Ailgychwyn yn llwyr Home Assistant. > Peidiwch â chopïo'r ffolder ystorfa allanol gyfan i `custom_components`. Y tu mewn `custom_components` rhaid lleoli'r ffolder yn uniongyrchol `smart_plug_multilevel_light`. Mae'r cerdyn yn rhan o'r integreiddio, felly HACS nid yw'n ofynnol ar gyfer gosod. Ar ôl copïo ffeiliau â llaw, ailgychwyn Home Assistant a chreu'r gwrthrych ategol cyntaf, mae'r integreiddiad yn cyhoeddi'r ffeil cerdyn JavaScript ac yn ei gofrestru'n awtomatig gydag adnoddau'r panel yn y modd safonol `storage`. Yn y modd adnoddau YAML, rhaid i'r cerdyn gael ei gofrestru â llaw, fel y disgrifir isod. <a id="getting-started"></a> ## 🚀 Cychwyn cyflym ar ôl ei osod ### 🛠 Ffurfwedd 1. Agored **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)** a gwasg **Creu Gwrthrych Helper**. 2. Dewiswch **Smart Plug Multi-Level Light**. 3. Dewiswch y plwg smart y mae'r lamp wedi'i gysylltu ag ef. Mae'r rhestr yn dangos dim ond socedi sydd wedi Home Assistant yn gweld y synhwyrydd pŵer yn yr un ddyfais. 4. Yn y cam nesaf, gosodwch baramedrau'r lampau: * **Enw'r golau (Light name)** — enw'r endid sy'n cael ei greu, er enghraifft `FloorLamp`; * **Power sensor** - synhwyrydd pŵer soced; 5. Yn yr adran **🔅 Moddau disgleirdeb (🔅 Brightness modes)** ychwanegu o leiaf un modd disgleirdeb trwy glicio **Ychwanegu**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Newidiwch y lamp gyda'i botwm corfforol, rhowch enw'r modd a chychwyn **Test stable power**. Ar ôl cael gwerth sefydlog, pwyswch **Ymgeisiwch**.<br />&nbsp;
+5. Y newidiadau **Cyfwng pôl mesur** ar 1 s.
+
+<a id="installation"></a>
+
+## 📦 Gosod
+
+### 🛍 Gosod trwy HACS
+
+ℹ️ [Beth sydd wedi digwydd HACS a sut i'w osod?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cy.md)
+
+🚀 [Ceisiwch ychwanegu ystorfa yn y ddolen](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-smart-plug-multilevel-light&category=integration). Os yw'ch HA yn cefnogi'r dull hwn, cliciwch **Ychwanegu** yn y ffenestr sy'n agor, ac yna'r botwm **Lawrlwythwch** yn y gornel dde isaf. Os cwblhawyd y gosodiad yn llwyddiannus, gallwch hepgor camau pellach. Ewch yn syth i'r adran [cychwyn cyflym](#getting-started).
+
+#### 1. Ychwanegu ystorfa
+
+Nid yw'r ystorfa wedi'i chynnwys yn y cyfeiriadur safonol eto HACS, ychwanegwch ef fel arfer:
+
+1. Agored **HACS → Integreiddiadau**.
+2. Agorwch y ddewislen yn y gornel dde uchaf a dewiswch **Storfeydd Personol**.
+3. Ychwanegu:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Dewiswch fath **Integreiddio** a gwasg **Ychwanegu**.
+
+> Mae ychwanegu ystorfa yn golygu bod yr integreiddio ar gael i mewn HACS. I osod, mae angen ichi agor ei gerdyn ar wahân a chlicio **Lawrlwythwch**.
+
+#### 2. Gosod integreiddio
+
+1. Dod o hyd i mewn HACS: Smart Plug Multi-Level Light.
+2. Agorwch yr integreiddiad a chliciwch **Lawrlwythwch**.
+3. Ar ôl gosod, ailgychwyn yn gyfan gwbl Home Assistant.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Gosod heb HACS
+
+1. Ar dudalen y storfa, cliciwch **Cod → Lawrlwythwch ZIP**.
+2. Dadbacio'r archif.
+3. Copïwch y ffolder:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+i'r cyfeiriadur cyfluniad Home Assistant:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Llwybr ffeil terfynol `manifest.json` dylai edrych fel hyn:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Ailgychwyn yn llwyr Home Assistant.
+
+> Peidiwch â chopïo'r ffolder ystorfa allanol gyfan i `custom_components`. Y tu mewn `custom_components` rhaid lleoli'r ffolder yn uniongyrchol `smart_plug_multilevel_light`.
+
+Mae'r cerdyn yn rhan o'r integreiddio, felly HACS nid yw'n ofynnol ar gyfer gosod. Ar ôl copïo ffeiliau â llaw, ailgychwyn Home Assistant a chreu'r gwrthrych ategol cyntaf, mae'r integreiddiad yn cyhoeddi'r ffeil cerdyn JavaScript ac yn ei gofrestru'n awtomatig gydag adnoddau'r panel yn y modd safonol `storage`. Yn y modd adnoddau YAML, rhaid i'r cerdyn gael ei gofrestru â llaw, fel y disgrifir isod.
+
+<a id="getting-started"></a>
+
+## 🚀 Cychwyn cyflym ar ôl ei osod
+
+### 🛠 Ffurfwedd
+
+1. Agored **[Gosodiadau → Dyfeisiau a gwasanaethau → Ategolion](https://my.home-assistant.io/redirect/helpers/)** a gwasg **Creu Gwrthrych Helper**.
+
+2. Dewiswch **Smart Plug Multi-Level Light**.
+
+3. Dewiswch y plwg smart y mae'r lamp wedi'i gysylltu ag ef. Mae'r rhestr yn dangos dim ond socedi sydd wedi Home Assistant yn gweld y synhwyrydd pŵer yn yr un ddyfais.
+
+4. Yn y cam nesaf, gosodwch baramedrau'r lampau:
+   * **Enw'r golau (Light name)** — enw'r endid sy'n cael ei greu, er enghraifft `FloorLamp`;
+   * **Power sensor** - synhwyrydd pŵer soced;
+
+5. Yn yr adran **🔅 Moddau disgleirdeb (🔅 Brightness modes)** ychwanegu o leiaf un modd disgleirdeb trwy glicio **Ychwanegu**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Newidiwch y lamp gyda'i botwm corfforol, rhowch enw'r modd a chychwyn **Test stable power**. Ar ôl cael gwerth sefydlog, pwyswch **Ymgeisiwch**.<br />&nbsp;
 6. Ar ôl ychwanegu'r modd cyntaf, ychwanegwch y moddau sy'n weddill trwy ailadrodd y camau hyn. Dylech chi gael rhywbeth fel:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Arbedwch y gwrthrych helpwr. Home Assistant yn creu endid newydd `light`, Er enghraifft `light.FloorLamp`.
 

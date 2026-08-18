@@ -45,7 +45,87 @@
 2. 转到部分**设备**.
 3. 选择所需的插座。
 4. 打开选项卡**设置（具体）**.
-5. 变化**测量轮询间隔**1 秒。 <a id="installation"></a> ## 📦 安装 ### 🛍 通过 HACS 安装 ℹ️[什么是 HACS 以及如何安装它？](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_zh-Hans.md) 🚀[尝试在链接中添加存储库](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration)。如果您的 HA 支持此方法，请单击**添加**在打开的窗口中，然后单击按钮**下载**在右下角。如果安装成功完成，您可以跳过后续步骤。直接跳至章节[快速启动](#getting-started). #### 1.添加存储库 虽然该存储库未包含在标准 HACS 目录中，但请将其添加为自定义目录： 1. 打开**HACS → 集成**. 2. 打开右上角的菜单并选择**自定义存储库**. 3. 添加： ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. 选择类型**一体化**并按**添加**. > 添加存储库只会使集成在 HACS 中可用。安装时需要单独打开其卡并点击**下载**. #### 2.集成安装 1. 在 HACS 中搜索：`Smart Plug Multi-Level Light`. 2. 打开集成并单击**下载**. 3. 安装完成后，完全重新启动Home Assistant。 <a id="manual-installation"></a> ### 🧑‍💻 无需 HACS 的安装 1. 在存储库页面上，单击**代码 → 下载 ZIP**. 2. 解压缩存档。 3. 复制文件夹： ```text custom_components/smart_plug_multilevel_light ``` 到 Home Assistant 配置目录： ```text /config/custom_components/smart_plug_multilevel_light ``` 最终文件路径`manifest.json`应该看起来像这样： ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. 完全重新启动家庭助理。 > 不要将整个外部存储库文件夹复制到`custom_components`。里面`custom_components`该文件夹必须直接位于`smart_plug_multilevel_light`. 该卡包含在集成中，因此不需要安装 HACS。手动复制文件、重新启动 Home Assistant 并创建第一个帮助程序对象后，集成会发布 JavaScript 卡文件并在标准模式下自动将其注册到面板资源`storage`。在YAML资源模式下，必须手动注册卡，如下所述。 <a id="getting-started"></a> ## 🚀 安装后快速启动 ### 🛠 配置 1. 打&#x5F00;**[设置 → 设备和服务 → 配件](https://my.home-assistant.io/redirect/helpers/)**&#x5E76;按**创建辅助对象**. 2. 选择**智能插头多级灯**. 3. 选择灯所连接的智能插头。该列表仅显示 Home Assistant 在同一设备中看到功率传感器的插座。 4. 在下一步中，设置灯参数： * **灯光名称 (Light name)**— 例如，正在创建的实体的名称`FloorLamp`; * **Power sensor**- 插座功率传感器； 5. 在本节中**ZUI003Z**单击添加至少一种亮度模式**添加**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />用物理按钮开关灯，输入模式名称并启动**Test stable power**。获得稳定值后，按**申请**.<br />&nbsp;
+5. 变化**测量轮询间隔**1 秒。
+
+<a id="installation"></a>
+
+## 📦 安装
+
+### 🛍 通过 HACS 安装
+
+ℹ️[什么是 HACS 以及如何安装它？](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_zh-Hans.md)
+
+🚀[尝试在链接中添加存储库](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration)。如果您的 HA 支持此方法，请单击**添加**在打开的窗口中，然后单击按钮**下载**在右下角。如果安装成功完成，您可以跳过后续步骤。直接跳至章节[快速启动](#getting-started).
+
+#### 1.添加存储库
+
+虽然该存储库未包含在标准 HACS 目录中，但请将其添加为自定义目录：
+
+1. 打开**HACS → 集成**.
+2. 打开右上角的菜单并选择**自定义存储库**.
+3. 添加：
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. 选择类型**一体化**并按**添加**.
+
+> 添加存储库只会使集成在 HACS 中可用。安装时需要单独打开其卡并点击**下载**.
+
+#### 2.集成安装
+
+1. 在 HACS 中搜索：`Smart Plug Multi-Level Light`.
+2. 打开集成并单击**下载**.
+3. 安装完成后，完全重新启动Home Assistant。
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 无需 HACS 的安装
+
+1. 在存储库页面上，单击**代码 → 下载 ZIP**.
+2. 解压缩存档。
+3. 复制文件夹：
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+到 Home Assistant 配置目录：
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+最终文件路径`manifest.json`应该看起来像这样：
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. 完全重新启动家庭助理。
+
+> 不要将整个外部存储库文件夹复制到`custom_components`。里面`custom_components`该文件夹必须直接位于`smart_plug_multilevel_light`.
+
+该卡包含在集成中，因此不需要安装 HACS。手动复制文件、重新启动 Home Assistant 并创建第一个帮助程序对象后，集成会发布 JavaScript 卡文件并在标准模式下自动将其注册到面板资源`storage`。在YAML资源模式下，必须手动注册卡，如下所述。
+
+<a id="getting-started"></a>
+
+## 🚀 安装后快速启动
+
+### 🛠 配置
+
+1. 打&#x5F00;**[设置 → 设备和服务 → 配件](https://my.home-assistant.io/redirect/helpers/)**&#x5E76;按**创建辅助对象**.
+
+2. 选择**智能插头多级灯**.
+
+3. 选择灯所连接的智能插头。该列表仅显示 Home Assistant 在同一设备中看到功率传感器的插座。
+
+4. 在下一步中，设置灯参数：
+   * **灯光名称 (Light name)**— 例如，正在创建的实体的名称`FloorLamp`;
+   * **Power sensor**- 插座功率传感器；
+
+5. 在本节中**ZUI003Z**单击添加至少一种亮度模式**添加**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />用物理按钮开关灯，输入模式名称并启动**Test stable power**。获得稳定值后，按**申请**.<br />&nbsp;
 6. 添加第一个模式后，重复这些步骤添加其余模式。你最终应该得到类似的结果：<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. 保存辅助对象。 Home Assistant 将创建一个新实体`light`， 例如`light.FloorLamp`.
 

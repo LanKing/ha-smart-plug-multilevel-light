@@ -45,7 +45,87 @@ Níl an cur síos seo ábhartha ach amháin d’úinéirí soicéid atá nasctha
 2. Téigh go dtí alt**Gléasanna**.
 3. Roghnaigh an t-asraon riachtanach.
 4. Oscail an cluaisín**Socruithe (ar leith)**.
-5. Na hathruithe**Eatramh vótaíochta tomhais**ar 1 s. <a id="installation"></a> ## 📦 Suiteáil ### 🛍 Suiteáil trí HACS ℹ️[Cad é HACS agus conas é a shuiteáil?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ga.md) 🚀[Bain triail as stór a chur leis ag an nasc](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Má thacaíonn do HA leis an modh seo, cliceáil**Cuir**sa fhuinneog a osclaíonn, agus ansin an cnaipe**Íosluchtaigh**sa chúinne íochtair ar dheis. Má cuireadh an tsuiteáil i gcrích go rathúil, is féidir leat céimeanna breise a scipeáil. Léim díreach chuig an gcuid[tús tapa](#getting-started). #### 1. Ag cur stór Cé nach bhfuil an stór san áireamh sa ghnáth-eolaire HACS, cuir leis mar cheann saincheaptha é: 1. Oscail**HACS → Comhtháthú**. 2. Oscail an roghchlár sa chúinne uachtarach ar dheis agus roghnaigh**Stórtha Saincheaptha**. 3. Cuir leis: ```text https://github.com/LanKing/ha-smart-plug-multilevel-light ``` 4. Roghnaigh cineál**Comhtháthú**agus brúigh**Cuir**. > Má chuirtear stór leis ní chuirtear an comhtháthú ar fáil ach in HACS. Chun a shuiteáil, ní mór duit a cárta a oscailt ar leithligh agus cliceáil**Íosluchtaigh**. #### 2. Comhtháthú a shuiteáil 1. Cuardaigh in HACS:`Smart Plug Multi-Level Light`. 2. Oscail an comhtháthú agus cliceáil**Íosluchtaigh**. 3. Tar éis a shuiteáil, atosaigh Cúntóir Baile go hiomlán. <a id="manual-installation"></a> ### 🧑‍💻 Suiteáil gan HACS 1. Ar an leathanach stór, cliceáil**dreziaz.tk → Íosluchtaigh cód zip**. 2. Díphacáil an chartlann. 3. Cóipeáil an fillteán: ```text custom_components/smart_plug_multilevel_light ``` chuig an eolaire cumraíochta Home Assistant: ```text /config/custom_components/smart_plug_multilevel_light ``` Conair comhad deiridh`manifest.json`chóir breathnú mar seo: ```text /config/custom_components/smart_plug_multilevel_light/manifest.json ``` 4. Atosaigh Cúntóir Baile go hiomlán. > Ná cóipeáil an fillteán taisclainne seachtrach iomlán chuig`custom_components`. Laistigh`custom_components`ní mór an fillteán a bheith suite go díreach`smart_plug_multilevel_light`. Tá an cárta san áireamh sa chomhtháthú, mar sin ní gá HACS a shuiteáil. Tar éis na comhaid a chóipeáil de láimh, Cúntóir Baile a atosú, agus an chéad rud cúnta a chruthú, foilsíonn an comhtháthú an comhad cárta JavaScript agus cláraíonn sé go huathoibríoch é le hacmhainní painéil sa mhód caighdeánach`storage`. I mód acmhainne YAML, ní mór an cárta a chlárú de láimh, mar a thuairiscítear thíos. <a id="getting-started"></a> ## 🚀 Tús tapa tar éis na suiteála ### 🛠 Cumraíocht 1. Oscai&#x6C;**[Socruithe → Gléasanna agus seirbhísí → Gabhálais](https://my.home-assistant.io/redirect/helpers/)**&#x61;gus brúigh**Cruthaigh Réad Cúntóra**. 2. Roghnaigh**Solas Il-Leibhéil Breiseán Cliste**. 3. Roghnaigh an breiseán cliste a bhfuil an lampa ceangailte leis. Ní thaispeánann an liosta ach asraonta ina bhfeiceann Cúntóir Baile braiteoir cumhachta sa ghléas céanna. 4. Sa chéad chéim eile, socraigh na paraiméadair lampa: * **Ainm an tsolais (Light name)**— ainm an eintitis atá á chruthú, mar shampla`FloorLamp`; * **Power sensor**- braiteoir cumhachta soicéad; 5. Sa rannóg**ZUI003Z**cuir modh gile amháin ar a laghad trí chliceáil**Cuir**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Athraigh an lampa lena cnaipe fisiceach, cuir isteach ainm an mhodha agus tús a chur leis**Test stable power**. Tar éis luach cobhsaí a fháil, brúigh**Cuir iarratas isteach**.<br />&nbsp;
+5. Na hathruithe**Eatramh vótaíochta tomhais**ar 1 s.
+
+<a id="installation"></a>
+
+## 📦 Suiteáil
+
+### 🛍 Suiteáil trí HACS
+
+ℹ️[Cad é HACS agus conas é a shuiteáil?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ga.md)
+
+🚀[Bain triail as stór a chur leis ag an nasc](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing\&repository=ha-smart-plug-multilevel-light\&category=integration). Má thacaíonn do HA leis an modh seo, cliceáil**Cuir**sa fhuinneog a osclaíonn, agus ansin an cnaipe**Íosluchtaigh**sa chúinne íochtair ar dheis. Má cuireadh an tsuiteáil i gcrích go rathúil, is féidir leat céimeanna breise a scipeáil. Léim díreach chuig an gcuid[tús tapa](#getting-started).
+
+#### 1. Ag cur stór
+
+Cé nach bhfuil an stór san áireamh sa ghnáth-eolaire HACS, cuir leis mar cheann saincheaptha é:
+
+1. Oscail**HACS → Comhtháthú**.
+2. Oscail an roghchlár sa chúinne uachtarach ar dheis agus roghnaigh**Stórtha Saincheaptha**.
+3. Cuir leis:
+
+```text
+https://github.com/LanKing/ha-smart-plug-multilevel-light
+```
+
+4. Roghnaigh cineál**Comhtháthú**agus brúigh**Cuir**.
+
+> Má chuirtear stór leis ní chuirtear an comhtháthú ar fáil ach in HACS. Chun a shuiteáil, ní mór duit a cárta a oscailt ar leithligh agus cliceáil**Íosluchtaigh**.
+
+#### 2. Comhtháthú a shuiteáil
+
+1. Cuardaigh in HACS:`Smart Plug Multi-Level Light`.
+2. Oscail an comhtháthú agus cliceáil**Íosluchtaigh**.
+3. Tar éis a shuiteáil, atosaigh Cúntóir Baile go hiomlán.
+
+<a id="manual-installation"></a>
+
+### 🧑‍💻 Suiteáil gan HACS
+
+1. Ar an leathanach stór, cliceáil**dreziaz.tk → Íosluchtaigh cód zip**.
+2. Díphacáil an chartlann.
+3. Cóipeáil an fillteán:
+
+```text
+custom_components/smart_plug_multilevel_light
+```
+
+chuig an eolaire cumraíochta Home Assistant:
+
+```text
+/config/custom_components/smart_plug_multilevel_light
+```
+
+Conair comhad deiridh`manifest.json`chóir breathnú mar seo:
+
+```text
+/config/custom_components/smart_plug_multilevel_light/manifest.json
+```
+
+4. Atosaigh Cúntóir Baile go hiomlán.
+
+> Ná cóipeáil an fillteán taisclainne seachtrach iomlán chuig`custom_components`. Laistigh`custom_components`ní mór an fillteán a bheith suite go díreach`smart_plug_multilevel_light`.
+
+Tá an cárta san áireamh sa chomhtháthú, mar sin ní gá HACS a shuiteáil. Tar éis na comhaid a chóipeáil de láimh, Cúntóir Baile a atosú, agus an chéad rud cúnta a chruthú, foilsíonn an comhtháthú an comhad cárta JavaScript agus cláraíonn sé go huathoibríoch é le hacmhainní painéil sa mhód caighdeánach`storage`. I mód acmhainne YAML, ní mór an cárta a chlárú de láimh, mar a thuairiscítear thíos.
+
+<a id="getting-started"></a>
+
+## 🚀 Tús tapa tar éis na suiteála
+
+### 🛠 Cumraíocht
+
+1. Oscai&#x6C;**[Socruithe → Gléasanna agus seirbhísí → Gabhálais](https://my.home-assistant.io/redirect/helpers/)**&#x61;gus brúigh**Cruthaigh Réad Cúntóra**.
+
+2. Roghnaigh**Solas Il-Leibhéil Breiseán Cliste**.
+
+3. Roghnaigh an breiseán cliste a bhfuil an lampa ceangailte leis. Ní thaispeánann an liosta ach asraonta ina bhfeiceann Cúntóir Baile braiteoir cumhachta sa ghléas céanna.
+
+4. Sa chéad chéim eile, socraigh na paraiméadair lampa:
+   * **Ainm an tsolais (Light name)**— ainm an eintitis atá á chruthú, mar shampla`FloorLamp`;
+   * **Power sensor**- braiteoir cumhachta soicéad;
+
+5. Sa rannóg**ZUI003Z**cuir modh gile amháin ar a laghad trí chliceáil**Cuir**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Athraigh an lampa lena cnaipe fisiceach, cuir isteach ainm an mhodha agus tús a chur leis**Test stable power**. Tar éis luach cobhsaí a fháil, brúigh**Cuir iarratas isteach**.<br />&nbsp;
 6. Tar éis an chéad mhodh a chur leis, cuir na modhanna atá fágtha leis trí na céimeanna seo a athrá. Ba cheart duit deireadh a chur le rud éigin mar:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />&nbsp;<br />
 7. Sábháil an réad cabhrach. Cruthóidh Cúntóir Baile eintiteas nua`light`, Mar shampla`light.FloorLamp`.
 
