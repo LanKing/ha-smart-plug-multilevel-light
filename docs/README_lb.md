@@ -125,10 +125,12 @@ D'Kaart ass an der Integratioun abegraff, sou datt HACS net erfuerderlech ass fi
    * **Spezifikatioune vun Numm vun der Luucht (Light name)**- den Numm vun der Entitéit déi erstallt gëtt, zum Beispill`FloorLamp`;
    * **Spezifikatioune vun Power sensor**- Socket Power Sensor;
 
-5. An der Rubrik**ZUI003Z**op d'mannst een Hellegkeetsmodus addéieren andeems Dir klickt**Addéieren**.<br /> <img src="modes-edit.png" width="465"/>Schalt d'Lampe mat sengem kierperleche Knäppchen, gitt den Numm vum Modus a fänkt un**Spezifikatioune vun Test stable power**. Nodeems Dir e stabile Wäert kritt hutt, dréckt**Bewerbung**.
+5. An der Rubrik**ZUI003Z**op d'mannst een Hellegkeetsmodus addéieren andeems Dir klickt**Addéieren**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+Schalt d'Lampe mat sengem kierperleche Knäppchen, gitt den Numm vum Modus a fänkt un**Spezifikatioune vun Test stable power**. Nodeems Dir e stabile Wäert kritt hutt, dréckt**Bewerbung**.
 
 6. Nodeems Dir den éischte Modus bäigefüügt hutt, füügt déi verbleiwen Modi un andeems Dir dës Schrëtt widderhëlt. Dir sollt mat eppes ophalen wéi:<br />
-   <img src="modes-list.png" width="457"/>
+   <img src="modes-list.png" width="457"/><br />
+
 
 7. Späichert den Hëllefsobjekt. Home Assistant wäert eng nei Entitéit erstellen`light`, Zum Beispill`light.FloorLamp`.
 

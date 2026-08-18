@@ -125,10 +125,12 @@ Karta është e përfshirë në integrim, kështu që HACS nuk kërkohet ta inst
    * **Emri i dritës (Light name)**— emri i entitetit që krijohet, për shembull`FloorLamp`;
    * **Power sensor**- sensori i fuqisë së prizës;
 
-5. Në seksionin**ZUI003Z**shtoni të paktën një mënyrë ndriçimi duke klikuar**Shtoni**.<br /> <img src="modes-edit.png" width="465"/>Ndërroni llambën me butonin e saj fizik, shkruani emrin e modalitetit dhe filloni**Test stable power**. Pasi të keni marrë një vlerë të qëndrueshme, shtypni**Aplikoni**.
+5. Në seksionin**ZUI003Z**shtoni të paktën një mënyrë ndriçimi duke klikuar**Shtoni**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+Ndërroni llambën me butonin e saj fizik, shkruani emrin e modalitetit dhe filloni**Test stable power**. Pasi të keni marrë një vlerë të qëndrueshme, shtypni**Aplikoni**.
 
 6. Pas shtimit të modalitetit të parë, shtoni modalitetet e mbetura duke përsëritur këto hapa. Ju duhet të përfundoni me diçka të tillë:<br />
-   <img src="modes-list.png" width="457"/>
+   <img src="modes-list.png" width="457"/><br />
+
 
 7. Ruani objektin ndihmës. Home Assistant do të krijojë një ent të ri`light`, Për shembull`light.FloorLamp`.
 

@@ -125,10 +125,12 @@ custom_components/smart_plug_multilevel_light
    * **ライト名 (Light name)**— 作成されるエンティティの名前。たとえば、`FloorLamp`;
    * **Power sensor**- ソケットパワーセンサー;
 
-5. セクション内**ZUI003Z**をクリックして少なくとも 1 つの明るさモードを追加します**追加**.<br /> <img src="modes-edit.png" width="465"/>物理ボタンでランプを切り替え、モード名を入力して開始します**Test stable power**。安定した値が得られたら、 を押します。**適用する**.
+5. セクション内**ZUI003Z**をクリックして少なくとも 1 つの明るさモードを追加します**追加**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+物理ボタンでランプを切り替え、モード名を入力して開始します**Test stable power**。安定した値が得られたら、 を押します。**適用する**.
 
 6. 最初のモードを追加した後、これらの手順を繰り返して残りのモードを追加します。最終的には次のようになります。<br />
-   <img src="modes-list.png" width="457"/>
+   <img src="modes-list.png" width="457"/><br />
+
 
 7. ヘルパー オブジェクトを保存します。ホーム アシスタントは新しいエンティティを作成します`light`、 例えば`light.FloorLamp`.
 

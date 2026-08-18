@@ -125,10 +125,12 @@ A kártya benne van az integrációban, így a HACS telepítéséhez nem szüks�
    * **Fény neve (Light name)**— például a létrehozandó entitás neve`FloorLamp`;
    * **Power sensor**- aljzati teljesítmény érzékelő;
 
-5. A szakaszban**ZUI003Z**kattintással adjon hozzá legalább egy fényerő-módot**Hozzáadás**.<br /> <img src="modes-edit.png" width="465"/>Kapcsolja át a lámpát a fizikai gombjával, írja be az üzemmód nevét és indítsa el**Test stable power**. A stabil érték elérése után nyomja meg a gombot**Alkalmazni**.
+5. A szakaszban**ZUI003Z**kattintással adjon hozzá legalább egy fényerő-módot**Hozzáadás**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+Kapcsolja át a lámpát a fizikai gombjával, írja be az üzemmód nevét és indítsa el**Test stable power**. A stabil érték elérése után nyomja meg a gombot**Alkalmazni**.
 
 6. Az első mód hozzáadása után adja hozzá a többi módot a fenti lépések megismétlésével. Valami ilyesmivel kell végeznie:<br />
-   <img src="modes-list.png" width="457"/>
+   <img src="modes-list.png" width="457"/><br />
+
 
 7. Mentse el a segítő objektumot. A Home Assistant új entitást hoz létre`light`, Például`light.FloorLamp`.
 

@@ -125,10 +125,12 @@ Kortelė įtraukta į integraciją, todėl HACS jai įdiegti nereikia. Rankiniu 
    * **Šviesos pavadinimas (Light name)**— pavyzdžiui, kuriamo subjekto pavadinimas`FloorLamp`;
    * **Power sensor**- lizdo maitinimo jutiklis;
 
-5. Skyriuje**ZUI003Z**pridėkite bent vieną ryškumo režimą spustelėdami**Pridėti**.<br /> <img src="modes-edit.png" width="465"/>Perjunkite lempą fiziniu mygtuku, įveskite režimo pavadinimą ir pradėkite**Test stable power**. Gavę stabilią vertę, paspauskite**Taikyti**.
+5. Skyriuje**ZUI003Z**pridėkite bent vieną ryškumo režimą spustelėdami**Pridėti**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+Perjunkite lempą fiziniu mygtuku, įveskite režimo pavadinimą ir pradėkite**Test stable power**. Gavę stabilią vertę, paspauskite**Taikyti**.
 
 6. Pridėję pirmąjį režimą, pridėkite likusius režimus kartodami šiuos veiksmus. Turėtumėte baigti kažką panašaus į:<br />
-   <img src="modes-list.png" width="457"/>
+   <img src="modes-list.png" width="457"/><br />
+
 
 7. Išsaugokite pagalbinį objektą. Namų asistentas sukurs naują objektą`light`, Pavyzdžiui`light.FloorLamp`.
 

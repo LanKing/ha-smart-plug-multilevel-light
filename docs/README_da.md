@@ -126,11 +126,13 @@ Kortet er en del af integrationen, så HACS det er ikke nødvendigt til installa
    * **Lysnavn (Light name)** — navnet på den enhed, der oprettes, f.eks `FloorLamp`;
    * **Power sensor** - socket strømsensor;
 
-5. I afsnittet **🔅 Lysstyrketilstande (🔅 Brightness modes)** tilføje mindst én lysstyrketilstand ved at klikke **Tilføje**.<br /> <img src="modes-edit.png" width="465"/>
+5. I afsnittet **🔅 Lysstyrketilstande (🔅 Brightness modes)** tilføje mindst én lysstyrketilstand ved at klikke **Tilføje**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+
    Skift lampen med dens fysiske knap, indtast navnet på tilstanden og start **Test stable power**. Efter at have opnået en stabil værdi, tryk på **Anvende**.
 
 6. Når du har tilføjet den første tilstand, skal du tilføje de resterende tilstande ved at gentage disse trin. Du burde ende med noget som:<br />
-   <img src="modes-list.png" width="457"/>
+   <img src="modes-list.png" width="457"/><br />
+
 
 7. Gem hjælpeobjektet. Home Assistant vil oprette en ny enhed `light`, F.eks `light.FloorLamp`.
 
