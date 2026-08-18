@@ -1,0 +1,32 @@
+name: Cleanup temporary branches once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/cleanup-temp-branches-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Delete temporary branches
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for branch in tmp-prerelease-trigger tmp-prerelease-trigger-2 tmp-prerelease-trigger-3 tmp-prerelease-trigger-4 tmp-prerelease-trigger-5; do
+            gh api -X DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$branch" || true
+          done
+
+      - name: Remove this workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/cleanup-temp-branches-once.yml
+          git commit -m "Remove one-time temp branch cleanup workflow"
+          git push
