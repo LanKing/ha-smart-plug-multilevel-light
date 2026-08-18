@@ -10,7 +10,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Приклад режимів у картці](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Приклад режимів у картці](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Можливості та особливості:**
 
@@ -123,11 +123,11 @@ custom_components/smart_plug_multilevel_light
    - **Назва світла** — ім’я створюваної сутності, наприклад `FloorLamp`;
    - **Power sensor** — датчик потужності розетки.
 5. У розділі **🔅 Режими яскравості** додайте щонайменше один режим яскравості, натиснувши **Додати**.<br />
-<img src="modes-edit.png" width="465"/><br /><br />
+<img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Перемкніть лампу її фізичною кнопкою, введіть назву режиму та запустіть **Test stable power**. Після отримання стабільного значення натисніть **Застосувати**.
 
 6. Після додавання першого режиму додайте решту, повторюючи ці дії. Має вийти приблизно так:<br />
-<img src="modes-list.png" width="457"/><br />
+<img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 7. Збережіть допоміжний об’єкт. Home Assistant створить нову сутність `light`, наприклад `light.FloorLamp`.
 

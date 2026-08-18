@@ -6,7 +6,7 @@
 
 # 🔌Luce multilivello Smart Plug
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Caratteristiche e caratteristiche:**
 
@@ -125,11 +125,11 @@ La scheda è inclusa nell'integrazione, quindi non è necessario installare HACS
    * **Nome della luce (Light name)**- il nome dell'entità in fase di creazione, ad esempio`FloorLamp`;
    * **Power sensor**- sensore di potenza presa;
 
-5. Nella sezione**ZUI003Z**aggiungere almeno una modalità di luminosità facendo clic**Aggiungere**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Nella sezione**ZUI003Z**aggiungere almeno una modalità di luminosità facendo clic**Aggiungere**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Cambia la lampada con il suo pulsante fisico, inserisci il nome della modalità e avvia**Test stable power**. Dopo aver ottenuto un valore stabile, premere**Fare domanda a**.
 
 6. Dopo aver aggiunto la prima modalità, aggiungi le modalità rimanenti ripetendo questi passaggi. Dovresti ritrovarti con qualcosa del tipo:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Salva l'oggetto helper. Home Assistant creerà una nuova entità`light`, Per esempio`light.FloorLamp`.

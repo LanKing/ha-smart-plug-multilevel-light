@@ -6,7 +6,7 @@
 
 # 🔌 Luz multinível com plugue inteligente
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Recursos e funcionalidades:**
 
@@ -125,11 +125,11 @@ A placa está incluída na integração, portanto não é necessário o HACS par
    * **Nome da luz (Light name)**— o nome da entidade que está sendo criada, por exemplo`FloorLamp`;
    * **Power sensor**- sensor de potência da tomada;
 
-5. Na seção**ZUI003Z**adicione pelo menos um modo de brilho clicando em**Adicionar**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Na seção**ZUI003Z**adicione pelo menos um modo de brilho clicando em**Adicionar**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Troque a lâmpada com seu botão físico, digite o nome do modo e inicie**Test stable power**. Após obter um valor estável, pressione**Aplicar**.
 
 6. Depois de adicionar o primeiro modo, adicione os modos restantes repetindo estas etapas. Você deve terminar com algo como:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Salve o objeto auxiliar. Home Assistant criará uma nova entidade`light`, Por exemplo`light.FloorLamp`.

@@ -6,7 +6,7 @@
 
 # 🔌 ஸ்மார்ட் பிளக் மல்டி-லெவல் லைட்
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ அம்சங்கள் மற்றும் அம்சங்கள்:**
 
@@ -125,11 +125,11 @@ custom_components/smart_plug_multilevel_light
    * **விளக்கின் பெயர் (Light name)**- எடுத்துக்காட்டாக, உருவாக்கப்படும் நிறுவனத்தின் பெயர்`FloorLamp`;
    * **Power sensor**- சாக்கெட் பவர் சென்சார்;
 
-5. பிரிவில்**ZUI003Z**கிளிக் செய்வதன் மூலம் குறைந்தது ஒரு பிரகாச பயன்முறையைச் சேர்க்கவும்**சேர்**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. பிரிவில்**ZUI003Z**கிளிக் செய்வதன் மூலம் குறைந்தது ஒரு பிரகாச பயன்முறையைச் சேர்க்கவும்**சேர்**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 விளக்கை அதன் இயற்பியல் பொத்தானைக் கொண்டு மாற்றவும், பயன்முறையின் பெயரை உள்ளிட்டு தொடங்கவும்**Test stable power**. நிலையான மதிப்பைப் பெற்ற பிறகு, அழுத்தவும்**விண்ணப்பிக்கவும்**.
 
 6. முதல் பயன்முறையைச் சேர்த்த பிறகு, இந்த படிகளை மீண்டும் செய்வதன் மூலம் மீதமுள்ள முறைகளைச் சேர்க்கவும். நீங்கள் இதைப் போன்ற ஒன்றை முடிக்க வேண்டும்:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. உதவி பொருளை சேமிக்கவும். வீட்டு உதவியாளர் புதிய நிறுவனத்தை உருவாக்குவார்`light`, உதாரணமாக`light.FloorLamp`.

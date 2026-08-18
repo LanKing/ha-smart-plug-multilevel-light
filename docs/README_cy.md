@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Nodweddion a nodweddion:**
 
@@ -126,11 +126,11 @@ Mae'r cerdyn yn rhan o'r integreiddio, felly HACS nid yw'n ofynnol ar gyfer goso
    * **Enw'r golau (Light name)** — enw'r endid sy'n cael ei greu, er enghraifft `FloorLamp`;
    * **Power sensor** - synhwyrydd pŵer soced;
 
-5. Yn yr adran **🔅 Moddau disgleirdeb (🔅 Brightness modes)** ychwanegu o leiaf un modd disgleirdeb trwy glicio **Ychwanegu**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Yn yr adran **🔅 Moddau disgleirdeb (🔅 Brightness modes)** ychwanegu o leiaf un modd disgleirdeb trwy glicio **Ychwanegu**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Newidiwch y lamp gyda'i botwm corfforol, rhowch enw'r modd a chychwyn **Test stable power**. Ar ôl cael gwerth sefydlog, pwyswch **Ymgeisiwch**.
 
 6. Ar ôl ychwanegu'r modd cyntaf, ychwanegwch y moddau sy'n weddill trwy ailadrodd y camau hyn. Dylech chi gael rhywbeth fel:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Arbedwch y gwrthrych helpwr. Home Assistant yn creu endid newydd `light`, Er enghraifft `light.FloorLamp`.

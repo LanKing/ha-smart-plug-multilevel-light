@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Omadused ja funktsioonid:**
 
@@ -126,11 +126,11 @@ Kaart on osa integratsioonist, seega HACS see pole paigaldamiseks vajalik. Pära
    * **Valguse nimi (Light name)** — näiteks loodava üksuse nimi `FloorLamp`;
    * **Power sensor** - pistikupesa võimsusandur;
 
-5. Jaotises **🔅 Heledusrežiimid (🔅 Brightness modes)** lisage klõpsuga vähemalt üks heledusrežiim **Lisa**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Jaotises **🔅 Heledusrežiimid (🔅 Brightness modes)** lisage klõpsuga vähemalt üks heledusrežiim **Lisa**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Lülitage lamp selle füüsilise nupuga, sisestage režiimi nimi ja käivitage **Test stable power**. Pärast stabiilse väärtuse saamist vajutage nuppu **Rakenda**.
 
 6. Pärast esimese režiimi lisamist lisage neid samme korrates ülejäänud režiimid. Peaksite lõppema millegi sellisega:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Salvestage abiobjekt. Home Assistant loob uue üksuse `light`, Näiteks `light.FloorLamp`.

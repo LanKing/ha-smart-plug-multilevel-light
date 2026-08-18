@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Vlastnosti a vlastnosti:**
 
@@ -126,11 +126,11 @@ Karta je součástí integrace, takže HACS pro instalaci není potřeba. Po ru�
    * **Název světla (Light name)** — například název vytvářené entity `FloorLamp`;
    * **Power sensor** - zásuvkové čidlo napájení;
 
-5. V sekci **🔅 Režimy jasu (🔅 Brightness modes)** kliknutím přidejte alespoň jeden režim jasu **Přidat**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. V sekci **🔅 Režimy jasu (🔅 Brightness modes)** kliknutím přidejte alespoň jeden režim jasu **Přidat**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Přepněte lampu jejím fyzickým tlačítkem, zadejte název režimu a spusťte **Test stable power**. Po získání stabilní hodnoty stiskněte **Použít**.
 
 6. Po přidání prvního režimu přidejte zbývající režimy opakováním těchto kroků. Měli byste skončit s něčím jako:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Uložte pomocný objekt. Home Assistant vytvoří novou entitu `light`, Například `light.FloorLamp`.

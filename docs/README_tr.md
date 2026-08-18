@@ -6,7 +6,7 @@
 
 # 🔌 Akıllı Fiş Çok Seviyeli Işık
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Özellikler ve özellikler:**
 
@@ -125,11 +125,11 @@ Kart entegrasyona dahil olduğundan, kurulumu için HACS'a gerek yoktur. Dosyala
    * **Işık adı (Light name)**— örneğin, oluşturulan varlığın adı`FloorLamp`;
    * **Power sensor**- soket güç sensörü;
 
-5. Bölümde**ZUI003Z**tıklayarak en az bir parlaklık modu ekleyin**Eklemek**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Bölümde**ZUI003Z**tıklayarak en az bir parlaklık modu ekleyin**Eklemek**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Lambayı fiziksel düğmesiyle açın, modun adını girin ve başlatın**Test stable power**. Kararlı bir değer elde ettikten sonra tuşuna basın.**Uygula**.
 
 6. İlk modu ekledikten sonra bu adımları tekrarlayarak kalan modları ekleyin. Sonunda şöyle bir şey elde etmelisin:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Yardımcı nesneyi kaydedin. Ev Asistanı yeni bir varlık oluşturacak`light`, Örneğin`light.FloorLamp`.

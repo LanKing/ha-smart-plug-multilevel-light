@@ -6,7 +6,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Eiginleikar og eiginleikar:**
 
@@ -125,11 +125,11 @@ Kortið er innifalið í samþættingunni, svo HACS þarf ekki að setja það u
    * **Heiti ljóss (Light name)**— nafn einingar sem verið er að stofna til, til dæmis`FloorLamp`;
    * **Power sensor**- rafmagnsskynjari fyrir innstungu;
 
-5. Í kaflanum**ZUI003Z**bættu við að minnsta kosti einum birtustillingu með því að smella**Bæta við**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Í kaflanum**ZUI003Z**bættu við að minnsta kosti einum birtustillingu með því að smella**Bæta við**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Skiptu um lampann með líkamlegum hnappi hans, sláðu inn heiti stillingarinnar og byrjaðu**Test stable power**. Eftir að hafa fengið stöðugt gildi, ýttu á**Sækja um**.
 
 6. Eftir að fyrstu stillingunni hefur verið bætt við skaltu bæta við þeim stillingum sem eftir eru með því að endurtaka þessi skref. Þú ættir að enda með eitthvað eins og:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Vistaðu hjálparhlutinn. Home Assistant mun búa til nýja aðila`light`, Til dæmis`light.FloorLamp`.

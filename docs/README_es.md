@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Funciones y características:**
 
@@ -126,11 +126,11 @@ La tarjeta es parte de la integración, por lo que HACS no es necesario para la 
    * **Nombre de la luz (Light name)** — el nombre de la entidad que se está creando, por ejemplo `FloorLamp`;
    * **Power sensor** - sensor de potencia del enchufe;
 
-5. en la sección **🔅 Modos de brillo (🔅 Brightness modes)** agregue al menos un modo de brillo haciendo clic **Agregar**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. en la sección **🔅 Modos de brillo (🔅 Brightness modes)** agregue al menos un modo de brillo haciendo clic **Agregar**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Cambie la lámpara con su botón físico, ingrese el nombre del modo y comience **Test stable power**. Después de obtener un valor estable, presione **Aplicar**.
 
 6. Después de agregar el primer modo, agregue los modos restantes repitiendo estos pasos. Deberías terminar con algo como:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Guarde el objeto auxiliar. Home Assistant creará una nueva entidad `light`, Por ejemplo `light.FloorLamp`.

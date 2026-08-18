@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Ominaisuudet ja ominaisuudet:**
 
@@ -126,11 +126,11 @@ Kortti on osa integraatiota, joten HACS sitä ei tarvita asennuksessa. Kun olet 
    * **Valon nimi (Light name)** — esimerkiksi luotavan kokonaisuuden nimi `FloorLamp`;
    * **Power sensor** - pistorasiaanturi;
 
-5. osiossa **🔅 Kirkkaustilat (🔅 Brightness modes)** lisää vähintään yksi kirkkaustila napsauttamalla **Lisätä**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. osiossa **🔅 Kirkkaustilat (🔅 Brightness modes)** lisää vähintään yksi kirkkaustila napsauttamalla **Lisätä**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Vaihda lamppua sen fyysisellä painikkeella, syötä tilan nimi ja käynnistä **Test stable power**. Kun olet saanut vakaan arvon, paina **Käytä**.
 
 6. Kun olet lisännyt ensimmäisen tilan, lisää loput tilat toistamalla nämä vaiheet. Sinun pitäisi päätyä johonkin tällaiseen:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Tallenna apuobjekti. Home Assistant luo uuden kokonaisuuden `light`, Esimerkiksi `light.FloorLamp`.

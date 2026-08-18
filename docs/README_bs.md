@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Karakteristike i karakteristike:**
 
@@ -126,11 +126,11 @@ Kartica je dio integracije, dakle HACS nije potrebno za instalaciju. Nakon ručn
    * **Naziv svjetla (Light name)** — naziv entiteta koji se kreira, na primjer `FloorLamp`;
    * **Power sensor** - senzor snage utičnice;
 
-5. U sekciji **🔅 Režimi svjetline (🔅 Brightness modes)** dodajte barem jedan način osvjetljenja klikom **Dodaj**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. U sekciji **🔅 Režimi svjetline (🔅 Brightness modes)** dodajte barem jedan način osvjetljenja klikom **Dodaj**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Uključite lampu pomoću njenog fizičkog dugmeta, unesite naziv režima i pokrenite **Test stable power**. Nakon što dobijete stabilnu vrijednost, pritisnite **Prijavite se**.
 
 6. Nakon što dodate prvi način rada, dodajte preostale načine ponavljanjem ovih koraka. Trebalo bi da završite sa nečim poput:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Sačuvajte pomoćni objekat. Home Assistant će kreirati novi entitet `light`, Na primjer `light.FloorLamp`.

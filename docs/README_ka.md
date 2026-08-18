@@ -6,7 +6,7 @@
 
 # 🔌 Smart Plug მრავალ დონის ნათურა
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ მახასიათებლები და მახასიათებლები:**
 
@@ -125,11 +125,11 @@ Home Assistant-ის კონფიგურაციის დირექტ
    * **ნათურის სახელი (Light name)**— მაგალითად, შექმნილი სუბიექტის სახელი`FloorLamp`;
    * **Power sensor**- სოკეტის დენის სენსორი;
 
-5. განყოფილებაში**ZUI003Z**დაამატეთ მინიმუმ ერთი სიკაშკაშის რეჟიმი დაწკაპუნებით**დამატება**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. განყოფილებაში**ZUI003Z**დაამატეთ მინიმუმ ერთი სიკაშკაშის რეჟიმი დაწკაპუნებით**დამატება**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 შეცვალეთ ნათურა მისი ფიზიკური ღილაკით, შეიყვანეთ რეჟიმის სახელი და დაიწყეთ**Test stable power**. სტაბილური მნიშვნელობის მიღების შემდეგ დააჭირეთ**მიმართეთ**.
 
 6. პირველი რეჟიმის დამატების შემდეგ დაამატეთ დარჩენილი რეჟიმები ამ ნაბიჯების გამეორებით. თქვენ უნდა დაასრულოთ მსგავსი რამ:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. შეინახეთ დამხმარე ობიექტი. Home Assistant შექმნის ახალ ერთეულს`light`, მაგალითად`light.FloorLamp`.

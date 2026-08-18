@@ -6,7 +6,7 @@
 
 # 🔌 智能插头多级灯
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ 特点及特点：**
 
@@ -125,11 +125,11 @@ custom_components/smart_plug_multilevel_light
    * **灯光名称 (Light name)**— 例如，正在创建的实体的名称`FloorLamp`;
    * **Power sensor**- 插座功率传感器；
 
-5. 在本节中**ZUI003Z**单击添加至少一种亮度模式**添加**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. 在本节中**ZUI003Z**单击添加至少一种亮度模式**添加**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 用物理按钮开关灯，输入模式名称并启动**Test stable power**。获得稳定值后，按**申请**.
 
 6. 添加第一个模式后，重复这些步骤添加其余模式。你最终应该得到类似的结果：<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. 保存辅助对象。 Home Assistant 将创建一个新实体`light`， 例如`light.FloorLamp`.

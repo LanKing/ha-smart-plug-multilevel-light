@@ -6,7 +6,7 @@
 
 # 🔌 Smart Plug višeslojno svjetlo
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Značajke i karakteristike:**
 
@@ -125,11 +125,11 @@ Kartica je uključena u integraciju, tako da HACS nije potreban za njezinu insta
    * **Naziv svjetla (Light name)**— ime entiteta koji se stvara, na primjer`FloorLamp`;
    * **Power sensor**- senzor snage utičnice;
 
-5. U odjeljku**ZUI003Z**dodajte barem jedan način svjetline klikom**Dodati**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. U odjeljku**ZUI003Z**dodajte barem jedan način svjetline klikom**Dodati**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Uključite svjetiljku fizičkim gumbom, unesite naziv moda i pokrenite**Test stable power**. Nakon dobivanja stabilne vrijednosti, pritisnite**primijeniti**.
 
 6. Nakon dodavanja prvog načina, dodajte preostale načine ponavljanjem ovih koraka. Trebali biste završiti s nečim poput:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Spremite pomoćni objekt. Kućni pomoćnik će stvoriti novi entitet`light`, Na primjer`light.FloorLamp`.

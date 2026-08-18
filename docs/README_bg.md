@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Характеристики и функции:**
 
@@ -126,11 +126,11 @@ custom_components/smart_plug_multilevel_light
    * **Име на светлината (Light name)** — например името на създавания обект `FloorLamp`;
    * **Power sensor** - сензор за мощност на гнездото;
 
-5. В секцията **🔅 Режими на яркост (🔅 Brightness modes)** добавете поне един режим на яркост, като щракнете **Добавете**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. В секцията **🔅 Режими на яркост (🔅 Brightness modes)** добавете поне един режим на яркост, като щракнете **Добавете**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Превключете лампата с нейния физически бутон, въведете името на режима и стартирайте **Test stable power**. След като получите стабилна стойност, натиснете **Кандидатствайте**.
 
 6. След като добавите първия режим, добавете останалите режими, като повторите тези стъпки. Трябва да завършите с нещо като:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Запазете помощния обект. Home Assistant ще създаде нов обект `light`, например `light.FloorLamp`.

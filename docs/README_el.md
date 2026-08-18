@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Χαρακτηριστικά και χαρακτηριστικά:**
 
@@ -126,11 +126,11 @@ custom_components/smart_plug_multilevel_light
    * **Όνομα φωτός (Light name)** — το όνομα της οντότητας που δημιουργείται, για παράδειγμα `FloorLamp`;
    * **Power sensor** - αισθητήρας ισχύος πρίζας
 
-5. Στην ενότητα **🔅 Λειτουργίες φωτεινότητας (🔅 Brightness modes)** προσθέστε τουλάχιστον μία λειτουργία φωτεινότητας κάνοντας κλικ **Προσθέτω**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Στην ενότητα **🔅 Λειτουργίες φωτεινότητας (🔅 Brightness modes)** προσθέστε τουλάχιστον μία λειτουργία φωτεινότητας κάνοντας κλικ **Προσθέτω**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Αλλάξτε τη λάμπα με το φυσικό της κουμπί, πληκτρολογήστε το όνομα της λειτουργίας και ξεκινήστε **Test stable power**. Αφού λάβετε μια σταθερή τιμή, πατήστε **Εφαρμόζω**.
 
 6. Αφού προσθέσετε την πρώτη λειτουργία, προσθέστε τις υπόλοιπες λειτουργίες επαναλαμβάνοντας αυτά τα βήματα. Θα πρέπει να καταλήξετε με κάτι σαν:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Αποθηκεύστε το αντικείμενο βοήθειας. Home Assistant θα δημιουργήσει μια νέα οντότητα `light`, Για παράδειγμα `light.FloorLamp`.

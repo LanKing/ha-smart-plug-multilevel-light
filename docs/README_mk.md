@@ -6,7 +6,7 @@
 
 # 🔌 Светло за повеќе нивоа на паметен приклучок
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Карактеристики и карактеристики:**
 
@@ -125,11 +125,11 @@ custom_components/smart_plug_multilevel_light
    * **Име на светлото (Light name)**— името на ентитетот што се создава, на пример`FloorLamp`;
    * **Power sensor**- сензор за напојување на приклучокот;
 
-5. Во делот**ZUI003Z**додадете барем еден режим на осветленост со кликнување**Додадете**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Во делот**ZUI003Z**додадете барем еден режим на осветленост со кликнување**Додадете**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Вклучете ја светилката со неговото физичко копче, внесете го името на режимот и стартувајте**Test stable power**. Откако ќе добиете стабилна вредност, притиснете**Пријавете се**.
 
 6. Откако ќе го додадете првиот режим, додајте ги преостанатите режими со повторување на овие чекори. Треба да завршите со нешто како:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Зачувајте го помошниот објект. Home Assistant ќе создаде нов ентитет`light`, На пример`light.FloorLamp`.

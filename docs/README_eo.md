@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Karakterizaĵoj kaj funkcioj:**
 
@@ -126,11 +126,11 @@ La karto estas parto de la integriĝo, do HACS ĝi ne estas postulata por instal
    * **Lumnomo (Light name)** — la nomo de la kreata ento, ekzemple `FloorLamp`;
    * **Power sensor** - inga potenco-sensilo;
 
-5. En la sekcio **🔅 Helecaj reĝimoj (🔅 Brightness modes)** aldonu almenaŭ unu brilreĝimon per klako **Aldoni**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. En la sekcio **🔅 Helecaj reĝimoj (🔅 Brightness modes)** aldonu almenaŭ unu brilreĝimon per klako **Aldoni**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Ŝaltu la lampon per ĝia fizika butono, enigu la nomon de la reĝimo kaj komencu **Test stable power**. Post akiri stabilan valoron, premu **Apliki**.
 
 6. Post aldoni la unuan reĝimon, aldonu la ceterajn modojn ripetante ĉi tiujn paŝojn. Vi devus fini kun io kiel:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Konservu la helpan objekton. Home Assistant kreos novan enton `light`, Ekzemple `light.FloorLamp`.

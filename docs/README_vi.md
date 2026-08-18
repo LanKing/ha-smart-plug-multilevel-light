@@ -6,7 +6,7 @@
 
 # 🔌 Ổ Cắm Thông Minh Đa Cấp Đèn
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Tính năng và đặc điểm:**
 
@@ -125,11 +125,11 @@ Thẻ đã được tích hợp sẵn nên không cần cài đặt HACS. Sau kh
    * **Tên đèn (Light name)**- tên của thực thể được tạo, ví dụ`FloorLamp`;
    * **Power sensor**- cảm biến nguồn ổ cắm;
 
-5. trong phần**ZUI003Z**thêm ít nhất một chế độ sáng bằng cách nhấp vào**Thêm vào**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. trong phần**ZUI003Z**thêm ít nhất một chế độ sáng bằng cách nhấp vào**Thêm vào**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Chuyển đổi đèn bằng nút vật lý, nhập tên chế độ và bắt đầu**Test stable power**. Sau khi đạt được giá trị ổn định, nhấn**Áp dụng**.
 
 6. Sau khi thêm chế độ đầu tiên, hãy thêm các chế độ còn lại bằng cách lặp lại các bước này. Bạn nên kết thúc với một cái gì đó như:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Lưu đối tượng trợ giúp. Home Assistant sẽ tạo một thực thể mới`light`, Ví dụ`light.FloorLamp`.

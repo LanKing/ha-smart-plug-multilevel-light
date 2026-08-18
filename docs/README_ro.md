@@ -6,7 +6,7 @@
 
 # 🔌 Smart Plug Lumină cu mai multe niveluri
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Caracteristici și caracteristici:**
 
@@ -125,11 +125,11 @@ Cardul este inclus în integrare, deci nu este necesar HACS pentru a-l instala. 
    * **Numele luminii (Light name)**— numele entității care este creată, de exemplu`FloorLamp`;
    * **Power sensor**- senzor de putere priza;
 
-5. In sectiunea**ZUI003Z**adăugați cel puțin un mod de luminozitate făcând clic**Adăuga**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. In sectiunea**ZUI003Z**adăugați cel puțin un mod de luminozitate făcând clic**Adăuga**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Comutați lampa cu butonul fizic, introduceți numele modului și începeți**Test stable power**. După obținerea unei valori stabile, apăsați**Aplicați**.
 
 6. După adăugarea primului mod, adăugați modurile rămase repetând acești pași. Ar trebui să ajungi cu ceva de genul:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Salvați obiectul helper. Home Assistant va crea o nouă entitate`light`, De exemplu`light.FloorLamp`.

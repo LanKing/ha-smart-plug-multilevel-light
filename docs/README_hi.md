@@ -6,7 +6,7 @@
 
 # 🔌 स्मार्ट प्लग मल्टी-लेवल लाइट
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ विशेषताएँ और विशेषताएँ:**
 
@@ -125,11 +125,11 @@ custom_components/smart_plug_multilevel_light
    * **लाइट का नाम (Light name)**- उदाहरण के लिए, बनाई जा रही इकाई का नाम`FloorLamp`;
    * **Power sensor**- सॉकेट पावर सेंसर;
 
-5. अनुभाग में**ZUI003Z**क्लिक करके कम से कम एक ब्राइटनेस मोड जोड़ें**जोड़ना**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. अनुभाग में**ZUI003Z**क्लिक करके कम से कम एक ब्राइटनेस मोड जोड़ें**जोड़ना**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 लैंप को उसके भौतिक बटन से स्विच करें, मोड का नाम दर्ज करें और प्रारंभ करें**Test stable power**. स्थिर मान प्राप्त करने के बाद दबाएँ**आवेदन करना**.
 
 6. पहला मोड जोड़ने के बाद, इन चरणों को दोहराकर शेष मोड जोड़ें। आपको कुछ इस तरह समाप्त करना चाहिए:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. सहायक वस्तु सहेजें. होम असिस्टेंट एक नई इकाई बनाएगा`light`, उदाहरण के लिए`light.FloorLamp`.

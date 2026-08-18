@@ -6,7 +6,7 @@
 
 # 🔌 Viacúrovňové svetlo Smart Plug
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Vlastnosti a vlastnosti:**
 
@@ -125,11 +125,11 @@ Karta je súčasťou integrácie, takže na jej inštaláciu nie je potrebný HA
    * **Názov svetla (Light name)**— napríklad názov vytváranej entity`FloorLamp`;
    * **Power sensor**- zásuvkový snímač napájania;
 
-5. V sekcii**ZUI003Z**kliknutím pridajte aspoň jeden režim jasu**Pridať**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. V sekcii**ZUI003Z**kliknutím pridajte aspoň jeden režim jasu**Pridať**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Prepnite lampu jej fyzickým tlačidlom, zadajte názov režimu a spustite**Test stable power**. Po získaní stabilnej hodnoty stlačte**Použiť**.
 
 6. Po pridaní prvého režimu pridajte zvyšné režimy opakovaním týchto krokov. Mali by ste skončiť s niečím ako:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Uložte objekt pomocníka. Asistent domova vytvorí novú entitu`light`, Napríklad`light.FloorLamp`.

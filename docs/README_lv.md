@@ -6,7 +6,7 @@
 
 # 🔌 Smart Plug daudzlīmeņu apgaismojums
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Funkcijas un funkcijas:**
 
@@ -125,11 +125,11 @@ Karte ir iekļauta integrācijā, tāpēc tās instalēšanai HACS nav nepiecie�
    * **Gaismas nosaukums (Light name)**— piemēram, veidojamās entītijas nosaukums`FloorLamp`;
    * **Power sensor**- kontaktligzdas strāvas sensors;
 
-5. Sadaļā**ZUI003Z**pievienojiet vismaz vienu spilgtuma režīmu, noklikšķinot**Pievienot**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Sadaļā**ZUI003Z**pievienojiet vismaz vienu spilgtuma režīmu, noklikšķinot**Pievienot**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Pārslēdziet lampu ar tās fizisko pogu, ievadiet režīma nosaukumu un sāciet**Test stable power**. Pēc stabilas vērtības iegūšanas nospiediet**Pieteikties**.
 
 6. Pēc pirmā režīma pievienošanas pievienojiet atlikušos režīmus, atkārtojot šīs darbības. Jums vajadzētu beigties ar kaut ko līdzīgu:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Saglabājiet palīga objektu. Mājas palīgs izveidos jaunu entītiju`light`, Piemēram`light.FloorLamp`.

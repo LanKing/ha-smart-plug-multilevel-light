@@ -6,7 +6,7 @@
 
 # 🔌 Lampu Multi-Level Smart Plug
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Fitur dan fitur:**
 
@@ -125,11 +125,11 @@ Kartu tersebut termasuk dalam integrasi, jadi HACS tidak diperlukan untuk mengin
    * **Nama lampu (Light name)**— nama entitas yang dibuat, misalnya`FloorLamp`;
    * **Power sensor**- sensor daya soket;
 
-5. Di bagian**ZUI003Z**tambahkan setidaknya satu mode kecerahan dengan mengklik**Menambahkan**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. Di bagian**ZUI003Z**tambahkan setidaknya satu mode kecerahan dengan mengklik**Menambahkan**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Ganti lampu dengan tombol fisiknya, masukkan nama mode dan mulai**Test stable power**. Setelah mendapatkan nilai stabil, tekan**Menerapkan**.
 
 6. Setelah menambahkan mode pertama, tambahkan mode lainnya dengan mengulangi langkah-langkah ini. Anda akan mendapatkan sesuatu seperti:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Simpan objek pembantu. Home Assistant akan membuat entitas baru`light`, Misalnya`light.FloorLamp`.

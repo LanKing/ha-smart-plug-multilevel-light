@@ -6,7 +6,7 @@
 
 # 🔌 Смарт Плуг вишеслојно светло
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Карактеристике и карактеристике:**
 
@@ -125,11 +125,11 @@ custom_components/smart_plug_multilevel_light
    * **КСКЗУИ001КСКЗ**— назив ентитета који се креира, на пример`FloorLamp`;
    * **КСКЗУИ002КСКЗ**- сензор снаге утичнице;
 
-5. У одељку**ЗУИ003З**додајте бар један режим осветљења кликом**Додај**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. У одељку**ЗУИ003З**додајте бар један режим осветљења кликом**Додај**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Укључите лампу помоћу њеног физичког дугмета, унесите назив режима и покрените**КСКЗУИ006КСКЗ**. Након добијања стабилне вредности, притисните**Пријавите се**.
 
 6. Након што додате први режим, додајте преостале режиме понављањем ових корака. Требало би да завршите са нечим попут:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Сачувајте помоћни објекат. Хоме Ассистант ће креирати нови ентитет`light`, На пример`light.FloorLamp`.

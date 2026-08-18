@@ -7,7 +7,7 @@
 
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Kenmerke en kenmerke:**
 
@@ -126,11 +126,11 @@ Die kaart is deel van die integrasie, dus HACS dit is nie nodig vir installasie 
    * **Lignaam (Light name)** — die naam van die entiteit wat geskep word, byvoorbeeld `FloorLamp`;
    * **Power sensor** - sok krag sensor;
 
-5. In die afdeling **🔅 Helderheidsmodusse (🔅 Brightness modes)** voeg ten minste een helderheidsmodus by deur te klik **Voeg by**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. In die afdeling **🔅 Helderheidsmodusse (🔅 Brightness modes)** voeg ten minste een helderheidsmodus by deur te klik **Voeg by**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
    Skakel die lamp met sy fisiese knoppie, voer die naam van die modus in en begin **Test stable power**. Nadat u 'n stabiele waarde verkry het, druk **Doen aansoek**.
 
 6. Nadat u die eerste modus bygevoeg het, voeg die oorblywende modusse by deur hierdie stappe te herhaal. Jy moet eindig met iets soos:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. Stoor die helper-voorwerp. Home Assistant sal 'n nuwe entiteit skep `light`, Byvoorbeeld `light.FloorLamp`.

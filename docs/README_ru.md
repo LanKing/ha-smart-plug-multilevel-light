@@ -10,7 +10,7 @@
  
 # 🔌 Smart Plug Multi-Level Light
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ Возможности и особенности:**
 
@@ -121,11 +121,11 @@ custom_components/smart_plug_multilevel_light
    - **Название светильника** — имя создаваемой сущности, например `FloorLamp`;
    - **Датчик мощности** — датчик мощности розетки;
 5. В разделе **🔅 Режимы яркости** добавьте минимум один режим яркости, нажав **Добавить**.<br />
-<img src="modes-edit.png" width="465"/><br /><br />
+<img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 Переключите лампу её физической кнопкой, впишите название режима и запустите **Проверить стабильную мощность**. После получения стабильного значения нажмите **Применить**.
 
 6. После добавления первого режима добавьте остальные режимы, повторяя эти действия. У вас должно получиться что-то вроде:<br />
-<img src="modes-list.png" width="457"/><br />
+<img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 7. Сохраните вспомогательный объект. Home Assistant создаст новую сущность `light`, например `light.FloorLamp`.
 

@@ -6,7 +6,7 @@
 
 # 🔌 اسمارٹ پلگ ملٹی لیول لائٹ
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ خصوصیات اور خصوصیات:**
 
@@ -125,11 +125,11 @@ custom_components/smart_plug_multilevel_light
    * **لائٹ کا نام (Light name)**— تخلیق ہونے والی ہستی کا نام، مثال کے طور پر`FloorLamp`;
    * **Power sensor**- ساکٹ پاور سینسر؛
 
-5. سیکشن میں**ZUI003Z**کلک کرکے کم از کم ایک چمک موڈ شامل کریں۔**شامل کریں۔**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. سیکشن میں**ZUI003Z**کلک کرکے کم از کم ایک چمک موڈ شامل کریں۔**شامل کریں۔**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 لیمپ کو اس کے فزیکل بٹن سے سوئچ کریں، موڈ کا نام درج کریں اور اسٹارٹ کریں۔**Test stable power**. ایک مستحکم قیمت حاصل کرنے کے بعد، دبائیں**لگائیں**.
 
 6. پہلا موڈ شامل کرنے کے بعد، ان مراحل کو دہراتے ہوئے بقیہ موڈز کو شامل کریں۔ آپ کو کچھ اس طرح ختم کرنا چاہئے:<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. مددگار آبجیکٹ کو محفوظ کریں۔ ہوم اسسٹنٹ ایک نیا ادارہ بنائے گا۔`light`، مثال کے طور پر`light.FloorLamp`.

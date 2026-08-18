@@ -6,7 +6,7 @@
 
 # 🔌 스마트 플러그 다단계 조명
 
-![Пример режимов на карточке](ha-smart-plug-multilevel-light-card-modes-v4.png)
+![Пример режимов на карточке](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
 **✨ 특징 및 특징:**
 
@@ -125,11 +125,11 @@ custom_components/smart_plug_multilevel_light
    * **조명 이름 (Light name)**— 생성되는 엔터티의 이름(예:`FloorLamp`;
    * **Power sensor**- 소켓 파워 센서;
 
-5. 섹션에서**ZUI003Z**클릭하여 하나 이상의 밝기 모드를 추가하세요.**추가하다**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
+5. 섹션에서**ZUI003Z**클릭하여 하나 이상의 밝기 모드를 추가하세요.**추가하다**.<br /> <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465"/><br /><br />
 물리적 버튼으로 램프를 전환하고 모드 이름을 입력한 후 시작하세요.**Test stable power**. 안정된 값을 얻은 후**적용하다**.
 
 6. 첫 번째 모드를 추가한 후 이 단계를 반복하여 나머지 모드를 추가합니다. 다음과 같이 끝나야 합니다.<br />
-   <img src="modes-list.png" width="457"/><br />
+   <img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457"/><br />
 
 
 7. 도우미 개체를 저장합니다. 홈어시스턴트가 새로운 엔터티를 생성합니다`light`, 예를 들어`light.FloorLamp`.
