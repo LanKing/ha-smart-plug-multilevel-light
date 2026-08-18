@@ -127,7 +127,6 @@ Kortti on osa integraatiota, joten HACS sitä ei tarvita asennuksessa. Kun olet 
    * **Power sensor** - pistorasiaanturi;
 
 5. osiossa **🔅 Kirkkaustilat (🔅 Brightness modes)** lisää vähintään yksi kirkkaustila napsauttamalla **Lisätä**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
-
    Vaihda lamppua sen fyysisellä painikkeella, syötä tilan nimi ja käynnistä **Test stable power**. Kun olet saanut vakaan arvon, paina **Käytä**.
 
 6. Kun olet lisännyt ensimmäisen tilan, lisää loput tilat toistamalla nämä vaiheet. Sinun pitäisi päätyä johonkin tällaiseen:<br />

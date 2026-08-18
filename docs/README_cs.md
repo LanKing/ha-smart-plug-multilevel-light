@@ -127,7 +127,6 @@ Karta je součástí integrace, takže HACS pro instalaci není potřeba. Po ru�
    * **Power sensor** - zásuvkové čidlo napájení;
 
 5. V sekci **🔅 Režimy jasu (🔅 Brightness modes)** kliknutím přidejte alespoň jeden režim jasu **Přidat**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
-
    Přepněte lampu jejím fyzickým tlačítkem, zadejte název režimu a spusťte **Test stable power**. Po získání stabilní hodnoty stiskněte **Použít**.
 
 6. Po přidání prvního režimu přidejte zbývající režimy opakováním těchto kroků. Měli byste skončit s něčím jako:<br />

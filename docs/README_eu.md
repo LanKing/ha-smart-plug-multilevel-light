@@ -127,7 +127,6 @@ Txartela integrazioaren parte da, beraz HACS ez da beharrezkoa instalatzeko. Fit
    * **Power sensor** - entxufearen potentzia sentsorea;
 
 5. atalean **🔅 Distira-moduak (🔅 Brightness modes)** gehitu gutxienez distira modu bat klik eginez **Gehitu**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
-
    Aldatu lanpara bere botoi fisikoarekin, sartu moduaren izena eta hasi **Test stable power**. Balio egonkorra lortu ondoren, sakatu **Aplikatu**.
 
 6. Lehenengo modua gehitu ondoren, gehitu gainerako moduak urrats hauek errepikatuz. Horrelako zerbait lortu beharko zenuke:<br />

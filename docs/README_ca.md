@@ -127,7 +127,6 @@ La targeta forma part de la integració, per tant HACS no és necessari per a la
    * **Power sensor** - sensor de potència de presa;
 
 5. A la secció **🔅 Modes de brillantor (🔅 Brightness modes)** afegeix almenys un mode de brillantor fent clic **Afegeix**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
-
    Canvia el llum amb el seu botó físic, introdueix el nom del mode i comença **Test stable power**. Després d'obtenir un valor estable, premeu **Aplicar**.
 
 6. Després d'afegir el primer mode, afegiu els modes restants repetint aquests passos. Hauríeu d'acabar amb alguna cosa com:<br />

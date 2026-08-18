@@ -127,7 +127,6 @@ Kortet er en del af integrationen, så HACS det er ikke nødvendigt til installa
    * **Power sensor** - socket strømsensor;
 
 5. I afsnittet **🔅 Lysstyrketilstande (🔅 Brightness modes)** tilføje mindst én lysstyrketilstand ved at klikke **Tilføje**.<br /> <img src="modes-edit.png" width="465"/><br /><br />
-
    Skift lampen med dens fysiske knap, indtast navnet på tilstanden og start **Test stable power**. Efter at have opnået en stabil værdi, tryk på **Anvende**.
 
 6. Når du har tilføjet den første tilstand, skal du tilføje de resterende tilstande ved at gentage disse trin. Du burde ende med noget som:<br />
