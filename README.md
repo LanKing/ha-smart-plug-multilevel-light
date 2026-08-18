@@ -126,10 +126,7 @@ The card is bundled with the integration, so HACS is not required to install it.
 4. On the next step, configure the lamp:
    - **Light name** — the name of the entity to be created, for example `FloorLamp`;
    - **Power sensor** — the plug's power sensor.
-5. Under **🔅 Brightness modes**, add at least one brightness mode by clicking **Add**.
-![Brightness mode editor](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png)
-Switch the lamp with its physical button, enter the mode name, and click **Test stable power**. Once a stable value has been measured, click **Apply**.
-
+5. Under **🔅 Brightness modes**, add at least one brightness mode by clicking **Add**.<br />![Brightness mode editor](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png)<br />Switch the lamp with its physical button, enter the mode name, and click **Test stable power**. Once a stable value has been measured, click **Apply**.
 6. After adding the first mode, repeat these steps for all remaining modes. The result should look similar to this:
 ![Brightness modes list](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png)
 
