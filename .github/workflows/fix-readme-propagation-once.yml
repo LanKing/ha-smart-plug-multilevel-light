@@ -1,0 +1,138 @@
+name: Fix localized README propagation
+
+on:
+  push:
+    paths:
+      - .github/workflows/fix-readme-propagation-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Revert broken propagation commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git revert --no-edit 2952b05c81e394e5c1d28dc7c5f7531dc1643ada
+
+      - name: Apply renderer-safe structure only around brightness-mode items
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path('README.md').read_text(encoding='utf-8')
+
+          def root_img(filename):
+              m = re.search(r'<img\b[^>]*' + re.escape(filename) + r'[^>]*>', root)
+              if not m:
+                  raise SystemExit(f'Root image not found: {filename}')
+              return m.group(0)
+
+          img5_root = root_img('modes-edit.png')
+          img6_root = root_img('modes-list.png')
+
+          def clean_edges(value):
+              value = re.sub(r'^(?:\s|<br\s*/?>|&nbsp;)+', '', value, flags=re.I)
+              value = re.sub(r'(?:\s|<br\s*/?>|&nbsp;)+$', '', value, flags=re.I)
+              value = re.sub(r'\s*\n\s*', ' ', value)
+              return value.strip()
+
+          def split_img(segment, filename):
+              m = re.search(r'<img\b[^>]*' + re.escape(filename) + r'[^>]*>', segment)
+              if not m:
+                  m = re.search(r'!\[[^\]]*\]\([^\n)]*' + re.escape(filename) + r'[^\n)]*\)', segment)
+              if not m:
+                  raise ValueError(filename)
+              return clean_edges(segment[:m.start()]), clean_edges(segment[m.end():])
+
+          changed = []
+          for path in sorted(Path('docs').glob('README_*.md')):
+              text = path.read_text(encoding='utf-8')
+
+              p_img5 = text.find('modes-edit.png')
+              p_img6 = text.find('modes-list.png')
+              if p_img5 < 0 or p_img6 < 0:
+                  raise SystemExit(f'{path}: brightness images missing')
+
+              s5 = text.rfind('\n5.', 0, p_img5)
+              if s5 < 0:
+                  raise SystemExit(f'{path}: item 5 before modes-edit not found')
+              s5 += 1
+
+              s6 = text.find('\n6.', p_img5)
+              if s6 < 0 or s6 > p_img6:
+                  raise SystemExit(f'{path}: item 6 near brightness images not found')
+              s6 += 1
+
+              s7 = text.find('\n7.', p_img6)
+              if s7 < 0:
+                  raise SystemExit(f'{path}: item 7 after modes-list not found')
+              s7 += 1
+
+              seg5 = text[s5:s6]
+              seg6 = text[s6:s7]
+
+              if not seg5.startswith('5.') or not seg6.startswith('6.'):
+                  raise SystemExit(f'{path}: unexpected item boundaries')
+
+              p5, a5 = split_img(seg5[2:], 'modes-edit.png')
+              p6, a6 = split_img(seg6[2:], 'modes-list.png')
+
+              new5 = f'5. {p5}<br />{img5_root}<br />'
+              if a5:
+                  new5 += a5
+              new5 += '<br />&nbsp;\n'
+
+              new6 = f'6. {p6}<br />{img6_root}'
+              if a6:
+                  new6 += f'<br />{a6}'
+              new6 += '<br />&nbsp;<br />\n'
+
+              new_text = text[:s5] + new5 + new6 + text[s7:]
+
+              line5 = next((x for x in new_text.splitlines() if x.startswith('5. ') and 'modes-edit.png' in x), None)
+              line6 = next((x for x in new_text.splitlines() if x.startswith('6. ') and 'modes-list.png' in x), None)
+              if not line5 or not line6:
+                  raise SystemExit(f'{path}: renderer-sensitive item split across lines')
+              if '<br /><br />' in line5 or '<br /><br />' in line6:
+                  raise SystemExit(f'{path}: consecutive br tags found')
+              if not line5.endswith('<br />&nbsp;'):
+                  raise SystemExit(f'{path}: item 5 spacing mismatch')
+              if not line6.endswith('<br />&nbsp;<br />'):
+                  raise SystemExit(f'{path}: item 6 spacing mismatch')
+
+              if new_text != text:
+                  path.write_text(new_text, encoding='utf-8')
+                  changed.append(str(path))
+
+          prompt = '''# README documentation authoring prompt\n\nUse the root `README.md` as the canonical source for renderer-sensitive Markdown/HTML structure. When editing or translating documentation, preserve these rules exactly:\n\n1. **Ordered-list items that contain inline HTML (especially `<img>` tags) must remain on one physical source line.** Do not split the list-item text, `<br />`, image tag, continuation text, or spacing helpers across source lines. HACS/Home Assistant Markdown rendering can lose the image or break the list when these fragments are separated.\n2. **Never emit two consecutive `<br />` tags.** When two visual line breaks are required, use `<br />&nbsp;<br />`. The non-breaking space is an intentional renderer workaround and must not be removed as cleanup.\n3. **Treat `<br />` placement as layout logic, not cosmetic formatting.** Preserve the exact number and position of `<br />` and `&nbsp;` tokens from the canonical root README. Do not prettify, wrap, reflow, normalize, or convert these renderer-sensitive lines.\n4. **For localized README files, translate only human-readable text.** Keep list numbering, inline HTML structure, image URLs, image widths, `<br />` positions, `&nbsp;`, anchors, and other technical tokens structurally identical to the root README unless a deliberate renderer fix is being made.\n5. **When an image belongs to a numbered-list step, keep the image inside the same list-item source line.** Do not move it to a standalone Markdown paragraph merely for readability.\n6. **Use absolute image URLs for README images rendered by HACS.** Preserve the existing `raw.githubusercontent.com` URLs and explicit pixel widths where present.\n7. Before committing documentation changes, compare the affected renderer-sensitive list items against the root README character-for-character for HTML/layout tokens, and verify that no `<br /><br />` sequence was introduced.\n\nCurrent canonical pattern for the two brightness-mode steps is intentionally shaped like this:\n\n```md\n5. ...<br /><img ... /><br />...<br />&nbsp;\n6. ...<br /><img ... /><br />&nbsp;<br />\n7. ...\n```\n\nDo not simplify this structure even if another Markdown renderer appears to accept a cleaner form.\n'''
+          Path('docs/README_AUTHORING_PROMPT.md').write_text(prompt, encoding='utf-8')
+
+          print(f'Updated localized READMEs: {len(changed)}')
+          for p in changed:
+              print(p)
+          PY
+
+      - name: Commit corrected propagation
+        run: |
+          git add docs/README_*.md docs/README_AUTHORING_PROMPT.md
+          git commit --amend --no-edit
+          git push
+
+      - name: Remove this one-time workflow
+        run: |
+          git pull --rebase
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/fix-readme-propagation-once.yml
+          git commit -m "Remove one-time README propagation fix workflow"
+          git push
