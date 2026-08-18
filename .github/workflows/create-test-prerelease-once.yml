@@ -1,0 +1,40 @@
+name: Create test prerelease once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/create-test-prerelease-once.yml'
+
+permissions:
+  contents: write
+
+env:
+  TAG: v0.10.11-test.1
+
+jobs:
+  create-prerelease:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "$TAG" \
+            --notes "Temporary prerelease for HACS README rendering tests." \
+            --prerelease
+
+      - name: Remove this workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/create-test-prerelease-once.yml
+          git commit -m "Remove one-time test prerelease workflow"
+          git push
