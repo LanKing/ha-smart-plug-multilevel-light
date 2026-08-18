@@ -10,7 +10,7 @@
 
 > This integration combines a lamp without digital controls and a smart plug into a single Home Assistant entity. It determines the lamp's state and current brightness mode from power consumption, displays them in a card, and can turn on a lamp that was switched off with its own button by briefly cutting and restoring power through the smart plug.
 
-# 🔌 Smart Plug Multi-Level Light 1
+# 🔌 Smart Plug Multi-Level Light
 
 ![Card mode examples](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
@@ -126,8 +126,8 @@ The card is bundled with the integration, so HACS is not required to install it.
 4. On the next step, configure the lamp:
    - **Light name** — the name of the entity to be created, for example `FloorLamp`;
    - **Power sensor** — the plug's power sensor.
-5. Under **🔅 Brightness modes**, add at least one brightness mode by clicking **Add**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br /><br />Switch the lamp with its physical button, enter the mode name, and click **Test stable power**. Once a stable value has been measured, click **Apply**.
-6. After adding the first mode, repeat these steps for all remaining modes. The result should look similar to this:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br />
+5. Under **🔅 Brightness modes**, add at least one brightness mode by clicking **Add**.<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-edit.png" width="465" /><br />Switch the lamp with its physical button, enter the mode name, and click **Test stable power**. Once a stable value has been measured, click **Apply**.<br />
+6. After adding the first mode, repeat these steps for all remaining modes. The result should look similar to this:<br /><img src="https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/modes-list.png" width="457" /><br /><br />
 7. Save the helper. Home Assistant creates a new `light` entity, for example `light.FloorLamp`.
 
 ### 🧩 Lovelace card
