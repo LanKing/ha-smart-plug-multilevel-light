@@ -1,0 +1,45 @@
+name: Create test prerelease once
+
+on:
+  push:
+    paths:
+      - .github/workflows/create-test-prerelease-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Build HACS archive
+        run: |
+          cd custom_components/smart_plug_multilevel_light
+          zip -r "$GITHUB_WORKSPACE/smart-plug-multilevel-light.zip" .
+
+      - name: Create prerelease and upload asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: v0.10.11-test.1
+        run: |
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" \
+              --title "$TAG" \
+              --notes "Temporary prerelease for HACS README rendering tests." \
+              --prerelease \
+              --target main
+          fi
+          gh release upload "$TAG" smart-plug-multilevel-light.zip --clobber
+
+      - name: Remove one-time workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/create-test-prerelease-once.yml
+          git commit -m "Remove one-time test prerelease workflow"
+          git push
