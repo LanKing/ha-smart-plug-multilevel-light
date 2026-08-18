@@ -10,7 +10,7 @@
 
 > This integration combines a lamp without digital controls and a smart plug into a single Home Assistant entity. It determines the lamp's state and current brightness mode from power consumption, displays them in a card, and can turn on a lamp that was switched off with its own button by briefly cutting and restoring power through the smart plug.
 
-# 🔌 Smart Plug Multi-Level Light
+# 🔌 Smart Plug Multi-Level Light 1
 
 ![Card mode examples](https://raw.githubusercontent.com/LanKing/ha-smart-plug-multilevel-light/main/docs/ha-smart-plug-multilevel-light-card-modes-v4.png)
 
